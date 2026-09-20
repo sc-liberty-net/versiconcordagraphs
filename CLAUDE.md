@@ -28,3 +28,9 @@ Read `README.md` for the run order and `DESIGN.md` for open decisions.
 - Read the "check by eye" list `build_graph.py` prints. A resolvable reference
   is not a correct one — a node can cite a real verse and summarise a different
   one, and only that list will surface it.
+
+- **A `nrsv_index.py` drift failure is a real failure.** It means this build of
+  the index is not the one the corpus was checked against. Do not re-record the
+  baseline to make it pass — `--record` is for when you have decided the new
+  build is the correct one, not for clearing a red. An index that loses verses
+  still answers confidently inside the range it kept.

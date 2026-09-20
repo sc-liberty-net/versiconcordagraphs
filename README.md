@@ -5,13 +5,30 @@ Everything needed to rebuild, verify and extend the graph.
 ## Run order
 
 ```
-pdftotext New_Revised_Standard_Version_Bible.pdf nrsv.txt
-python3 nrsv_index.py        # -> verses.json, chapters.json
+pdftotext "New Revised Standard Version Bible.pdf" nrsv.txt
+python3 nrsv_index.py        # -> verses.json, chapters.json; reconciles the count
 python3 build_graph.py       # validates the corpus, writes it into the HTML
 python3 attach_verses.py     # -> verses.js  (local only, see below)
 ```
 
 Then open `concordagraph.html`.
+
+**`nrsv_index.py` exits non-zero if the extraction has changed.** It reconciles
+its counts against `index-baseline.json` and prints what moved, per book. A
+failure there is not a formatting complaint — it means this build of the index
+is not the build the corpus was checked against, and references that used to
+resolve may now return nothing. Decide which build is right before going on. If
+the new one is correct, re-record it deliberately:
+
+```
+python3 nrsv_index.py --record
+```
+
+**Which `pdftotext` matters.** Two different programs ship under that name —
+Poppler's and Xpdf's — and they extract differently. The current baseline was
+produced with `pdftotext version 4.06 [www.xpdfreader.com]` (Xpdf, Glyph &
+Cog). Swapping implementations will move the counts, and the reconciliation is
+what will tell you.
 
 ## Files
 
@@ -23,7 +40,8 @@ Then open `concordagraph.html`.
 | `corpus_clusters.csv` | The 16 groups: key, name, light colour, dark colour, role. **Edit this.** |
 | `module.json` | Names this module — `slug` (the id namespace) and `title`. |
 | `build_graph.py` | Validates the corpus and writes it into the HTML. Refuses on any error. |
-| `nrsv_index.py` | Builds the verse index from extracted text. |
+| `nrsv_index.py` | Builds the verse index from extracted text, and reconciles its counts. |
+| `index-baseline.json` | The counts the index is reconciled against. Counts only, no scripture — commit it. |
 | `attach_verses.py` | Generates `verses.js` so the page shows full verse text. |
 | `extract_corpus.py` | Pulls the corpus back out of the HTML into CSVs. Recovery tool. |
 | `make_findings.py` | Regenerates `findings.pdf`. |
@@ -84,8 +102,23 @@ being right.
 Warrant tiers are `states`, `supports`, `spec`. Edge kinds are `lex` (shared
 wording), `ref` (one passage cites the other), `con` (same idea).
 
-## Known gap
+## Known gaps
 
 Matthew 6:12 cannot be addressed from this source — the Lord's Prayer is set
 without inline verse numbers, so verses 10–13 do not exist in the extracted
 text. That node points at 6:9, which carries the whole prayer.
+
+The current index also drops **114 verses in 110 isolated places** — a verse
+number glued onto the end of the previous verse, so the index skips it while
+keeping everything around it. Hebrews 7:19, 1 Kings 9:16, 2 Samuel 1:18 and 1
+Corinthians 7:11 are examples; `nrsv_index.py` prints the first twenty. None is
+cited by the corpus today, so nothing is currently wrong — but a node that
+cites one will be refused by `build_graph.py` with a message that reads like a
+bad citation when the citation is fine and the index is not.
+
+This is why the reconciliation exists. An earlier build of the same PDF
+produced 37,542 verses against today's 37,465, and nothing failed: an index
+that quietly loses verses answers every query inside the range it kept with
+undiminished confidence. Careful reading cannot find what the extraction
+dropped, because the dropped material is not there to be read. Only a count
+checked against an independent expectation can.
