@@ -19,8 +19,9 @@ Read `README.md` for the run order and `DESIGN.md` for open decisions.
 ## Always
 
 - Run `python3 build_graph.py` after any corpus change. It refuses to write on
-  a bad reference, a dangling edge, a duplicate id, or a misspelled warrant
-  tier. A refusal means the corpus is wrong, not the script.
+  a bad reference, a dangling edge, a duplicate id, a misspelled warrant
+  tier, the same verse cited twice in one module, or a malformed cluster
+  table. A refusal means the corpus is wrong, not the script.
 - Tag every proposed connection with its warrant tier: `states`, `supports`,
   `spec`. Never promote a speculation to a statement.
 - Summaries are paraphrase written for this project, never NRSV wording.

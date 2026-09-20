@@ -36,8 +36,13 @@ for p in (args.index, args.graph):
 index = {r['ref']: r['text'] for r in json.load(open(args.index))}
 html = open(args.graph, encoding='utf-8').read()
 
-# Pull the reference from each node record: ["id","Book C:V","cluster","gist"]
-refs = re.findall(r'^\s*\["[a-z]+\d+","((?:[1-4] )?[A-Z][A-Za-z]+ \d+:\d+)","', html, re.M)
+# Pull the reference from each node record:
+#   ["module:id","Book C:V","cluster","gist","module"]
+# The module prefix on the id is optional so this still reads a graph built
+# before ids were namespaced.
+refs = re.findall(
+    r'^\s*\["(?:[a-z][a-z0-9_-]*:)?[a-z]+\d+","((?:[1-4] )?[A-Z][A-Za-z]+ \d+:\d+)","',
+    html, re.M)
 if not refs:
     sys.exit('no node references found in the graph file — has its format changed?')
 

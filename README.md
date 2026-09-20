@@ -20,6 +20,8 @@ Then open `concordagraph.html`.
 | `concordagraph.html` | The graph. Self-contained; opens in any browser. |
 | `corpus_nodes.csv` | 151 passages: id, reference, group, summary. **Edit this.** |
 | `corpus_edges.csv` | 170 connections: source, target, kind, warrant, note. **Edit this.** |
+| `corpus_clusters.csv` | The 16 groups: key, name, light colour, dark colour, role. **Edit this.** |
+| `module.json` | Names this module — `slug` (the id namespace) and `title`. |
 | `build_graph.py` | Validates the corpus and writes it into the HTML. Refuses on any error. |
 | `nrsv_index.py` | Builds the verse index from extracted text. |
 | `attach_verses.py` | Generates `verses.js` so the page shows full verse text. |
@@ -57,9 +59,22 @@ where a wrong reference is invisible is a bad trade.
 
 Add a row to `corpus_nodes.csv`, add its connections to `corpus_edges.csv`, run
 `build_graph.py`. It will refuse to write if a reference does not resolve against
-the index, an edge points at a missing node, an id is duplicated, or a warrant
-tier is misspelled. An unresolved reference means the citation is wrong — fix it
-before trusting the node.
+the index, an edge points at a missing node, an id is duplicated, a warrant
+tier is misspelled, **the same verse is cited twice in this module**, or the
+cluster table is malformed. An unresolved reference means the citation is wrong
+— fix it before trusting the node.
+
+Ids in the CSVs are bare (`g1`). The build prefixes them with this module's
+slug from `module.json`, so they reach the page as `tithe:g1`. An id you write
+with a colon already in it is left alone — that is how an edge points at
+another module, and such edges are held back from this page until a master
+compile has something to attach them to.
+
+Groups are edited in `corpus_clusters.csv`. **Row order matters**: it sets both
+the legend order and where each group sits around the ring. Exactly one group
+may carry `hub` in the `role` column — that is the one drawn at the centre. The
+renderer looks up the role, so the hub can be renamed or moved without touching
+any code.
 
 The script also prints a "check by eye" list: nodes whose summary shares no
 wording with the verse it cites. Most are meta-summaries ("Mark's form of the
