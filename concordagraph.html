@@ -132,6 +132,16 @@ button.reset:hover{background:var(--sunk)}
 .booklab.mag{font-size:15px; font-weight:600; fill:var(--ink);
   paint-order:stroke; stroke:var(--paper); stroke-width:3.5px; stroke-linejoin:round}
 .hit{stroke:transparent; stroke-width:12; fill:none; cursor:pointer}
+/* Clicking an arc must not draw a focus ring. The browser draws that ring
+   around the element's bounding box, and an arc's bounding box is an enormous
+   rectangle spanning the canvas. :focus-visible scopes it to keyboard focus,
+   where it is the only thing telling you which arc you are on — the focus
+   event handlers below cannot be relied on for that, because some engines
+   dispatch no focus events at all for SVG elements even while
+   document.activeElement updates. Clicking is covered by the selection
+   itself: .esel thickens the chosen arc. */
+.hit:focus{outline:none}
+.hit:focus-visible{outline:2px solid var(--focus); outline-offset:0}
 
 /* The readout sits outside the SVG so it never scales with the zoom. */
 .readout{
@@ -949,7 +959,18 @@ function matches(n){
 // ---- focus: hover and selection share one treatment ------------------------
 // A hover wins while it lasts, otherwise the click-selection stands. Pointing
 // at something therefore previews exactly what selecting it would show.
-function focused(){ return hovered || picked; }
+function focused(){
+  // While nothing is selected, hovering an ARC must not re-light the graph.
+  // Sweeping the pointer across a dense arc field crosses dozens of 12px hit
+  // strokes and the empty canvas between them, and every crossing was toggling
+  // a full lit/dim pass over 151 nodes and 170 edges — which reads as flicker,
+  // not as feedback. So arc hover only drives the highlight once there is a
+  // selection to compare it against. The readout still names the arc either
+  // way, so nothing becomes undiscoverable. Passages and book labels are
+  // discrete targets and keep highlighting on hover as before.
+  if(isEdge(hovered) && !picked) return null;
+  return hovered || picked;
+}
 
 // A node lights itself and its neighbours; an arc lights its two ends; a book
 // lights every passage in it, and theirs.
