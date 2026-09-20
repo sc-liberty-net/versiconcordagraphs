@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tax and tithe — a concordagraph</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;1,400&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#E7E9E1; --surface:#F5F6F1; --sunk:#DDE0D6;
+  --ink:#1B2620; --ink-2:#4C564F; --ink-3:#7A8279; --line:#C6CABD;
+  --states:#14493A; --supports:#98620F; --spec:#8A8F96;
+  --anchor:#7C8B96; --bridge:#B4553C; --imperial:#52707F; --collector:#7E6E9B;
+  --critique:#6E8A5E; --hebrews:#9A8352; --giving:#5F8C86; --debt:#94707A; --market:#857A6A;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+:root:not([data-theme="light"]){ @media (prefers-color-scheme:dark){
+  --paper:#161A18; --surface:#1E2421; --sunk:#121614;
+  --ink:#E4E8E0; --ink-2:#A8B0A6; --ink-3:#757D74; --line:#333B36;
+  --states:#5FBF9F; --supports:#E0A552; --spec:#8A9199;
+  --anchor:#93A3AE; --bridge:#D97B60; --imperial:#7FA3B4; --collector:#A392C4;
+  --critique:#93B182; --hebrews:#C2A86E; --giving:#7FB5AE; --debt:#BE939D; --market:#A99B87;
+}}
+:root[data-theme="dark"]{
+  --paper:#161A18; --surface:#1E2421; --sunk:#121614;
+  --ink:#E4E8E0; --ink-2:#A8B0A6; --ink-3:#757D74; --line:#333B36;
+  --states:#5FBF9F; --supports:#E0A552; --spec:#8A9199;
+  --anchor:#93A3AE; --bridge:#D97B60; --imperial:#7FA3B4; --collector:#A392C4;
+  --critique:#93B182; --hebrews:#C2A86E; --giving:#7FB5AE; --debt:#BE939D; --market:#A99B87;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{height:100%; scroll-padding-top:env(safe-area-inset-top,0px)}
+body{
+  margin:0; height:100%; background:var(--paper); color:var(--ink);
+  font-family:Archivo,"Helvetica Neue",Arial,sans-serif; font-size:15px; line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{display:flex; flex-direction:column; height:100%; min-height:100vh}
+header{padding:18px 22px 14px; border-bottom:1px solid var(--line)}
+h1{font-family:Spectral,Georgia,serif; font-weight:600; font-size:26px; margin:0 0 4px; letter-spacing:-.01em}
+.sub{color:var(--ink-2); font-size:14px; max-width:68ch; margin:0}
+.main{display:flex; flex:1; min-height:0}
+.rail{width:236px; flex:none; border-right:1px solid var(--line); overflow-y:auto; padding:16px 16px 40px; background:var(--surface)}
+.stage{flex:1; position:relative; min-width:0; background:var(--paper)}
+svg#net{display:block; width:100%; height:100%; touch-action:none; cursor:grab}
+svg#net.drag{cursor:grabbing}
+.panel{
+  width:320px; flex:none; border-left:1px solid var(--line); background:var(--surface);
+  overflow-y:auto; padding:18px 18px 44px;
+}
+.grp{margin-bottom:20px}
+.grp h2{font-family:Archivo; font-size:12px; font-weight:600; letter-spacing:.04em; color:var(--ink-3); margin:0 0 9px; text-transform:none}
+input[type=search]{
+  width:100%; padding:8px 10px; border:1px solid var(--line); border-radius:7px;
+  background:var(--paper); color:var(--ink); font:inherit; font-size:14px;
+}
+input[type=search]:focus-visible,button:focus-visible,.row:focus-visible{outline:2px solid var(--bridge); outline-offset:2px}
+.row{display:flex; align-items:center; gap:8px; padding:3px 0; cursor:pointer; font-size:13.5px; color:var(--ink-2); user-select:none}
+.row input{accent-color:var(--ink-2); margin:0; flex:none}
+.dot{width:11px; height:11px; border-radius:50%; flex:none}
+.swatch{width:26px; height:0; border-top-width:2px; border-top-style:solid; flex:none}
+.count{margin-left:auto; color:var(--ink-3); font-size:12px; font-variant-numeric:tabular-nums}
+button.reset{
+  width:100%; margin-top:6px; padding:7px 10px; border:1px solid var(--line); border-radius:7px;
+  background:var(--paper); color:var(--ink-2); font:inherit; font-size:13px; cursor:pointer;
+}
+button.reset:hover{background:var(--sunk)}
+.ref{font-family:Spectral,Georgia,serif; font-size:21px; font-weight:600; margin:0 0 2px}
+.tag{display:inline-block; font-size:12px; color:var(--ink-2); border:1px solid var(--line); border-radius:99px; padding:1px 9px; margin-bottom:12px}
+.gist{font-family:Spectral,Georgia,serif; font-size:16.5px; line-height:1.55; color:var(--ink); margin:0 0 18px}
+.verse{
+  font-family:Spectral,Georgia,serif; font-size:16.5px; line-height:1.6; color:var(--ink);
+  margin:0 0 10px; padding:0 0 0 13px; border-left:2px solid var(--line);
+}
+.gist-sm{font-size:13.5px; line-height:1.5; color:var(--ink-2); margin:0 0 18px}
+.panel h3{font-size:12px; font-weight:600; color:var(--ink-3); margin:0 0 8px; letter-spacing:.04em}
+.link{
+  display:block; width:100%; text-align:left; border:0; background:none; padding:7px 0;
+  border-top:1px solid var(--line); color:var(--ink); font:inherit; cursor:pointer;
+}
+.link:hover .lref{text-decoration:underline}
+.lref{font-family:Spectral,Georgia,serif; font-size:15px}
+.lmeta{display:block; font-size:12.5px; color:var(--ink-2); margin-top:1px}
+.empty{color:var(--ink-2); font-size:14px}
+.note{font-size:12.5px; color:var(--ink-3); line-height:1.5; margin-top:22px; border-top:1px solid var(--line); padding-top:12px}
+.zoom{position:absolute; right:12px; bottom:12px; display:flex; gap:6px}
+.zoom button{
+  width:32px; height:32px; border:1px solid var(--line); border-radius:7px; background:var(--surface);
+  color:var(--ink-2); font-size:16px; line-height:1; cursor:pointer;
+}
+.zoom button:hover{background:var(--sunk)}
+.node circle{cursor:pointer}
+.node:focus{outline:none}
+.node:focus-visible circle,.node.sel circle{stroke:var(--ink); stroke-width:1.25}
+.seg{display:flex; border:1px solid var(--line); border-radius:7px; overflow:hidden}
+.seg button{
+  flex:1; padding:7px 8px; border:0; background:var(--paper); color:var(--ink-2);
+  font:inherit; font-size:13px; cursor:pointer; border-right:1px solid var(--line);
+}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed="true"]{background:var(--ink-2); color:var(--surface)}
+.hint{font-size:12.5px; color:var(--ink-3); line-height:1.45; margin:8px 0 0}
+.booklab{font-family:Archivo,sans-serif; font-size:10.5px; fill:var(--ink-2)}
+.tick{stroke:var(--line); stroke-width:1}
+.era{stroke:var(--ink-3); stroke-width:1; stroke-dasharray:3 4}
+.eralab{font-family:Archivo,sans-serif; font-size:10.5px; fill:var(--ink-3)}.node text{font-family:Spectral,Georgia,serif; font-size:11.5px; fill:var(--ink); pointer-events:none}
+.dim{opacity:.12}
+.hide{display:none}
+@media (max-width:900px){
+  .main{flex-direction:column}
+  .rail{width:auto; border-right:0; border-bottom:1px solid var(--line); max-height:none; padding-bottom:16px}
+  .panel{width:auto; border-left:0; border-top:1px solid var(--line)}
+  .stage{height:62vh; flex:none}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>Tax and tithe in the New Testament</h1>
+  <p class="sub">Eighty-nine passages, drawn from the NRSV and verified against a chapter-and-verse index. Every link names its kind and how much weight the text puts behind it. Click a passage to read its connections.</p>
+</header>
+<div class="main">
+  <div class="rail">
+    <div class="grp">
+      <h2>Arrangement</h2>
+      <div class="seg">
+        <button id="mGroup" aria-pressed="false">By group</button>
+        <button id="mCanon" aria-pressed="true">Bible order</button>
+      </div>
+      <p class="hint" id="modeHint"></p>
+    </div>
+    <div class="grp">
+      <h2>Find a passage</h2>
+      <input type="search" id="q" placeholder="Matthew 22, tithe, widow…" autocomplete="off">
+    </div>
+    <div class="grp">
+      <h2>Groups</h2>
+      <div id="clusters"></div>
+    </div>
+    <div class="grp">
+      <h2>How strong is the link</h2>
+      <div id="warrants"></div>
+    </div>
+    <div class="grp">
+      <h2>What kind of link</h2>
+      <div id="types"></div>
+      <button class="reset" id="reset">Show everything again</button>
+    </div>
+  </div>
+  <div class="stage">
+    <svg id="net" role="img" aria-label="Network of New Testament passages about tax and tithe"></svg>    <div class="zoom">
+      <button id="zin" title="Zoom in" aria-label="Zoom in">+</button>
+      <button id="zout" title="Zoom out" aria-label="Zoom out">−</button>
+      <button id="zfit" title="Fit to view" aria-label="Fit to view">⤢</button>
+    </div>
+  </div>
+  <div class="panel" id="panel"></div>
+</div>
+</div>
+
+<script src="verses.js" onerror="void 0"></script>
+<script>
+// <corpus>  generated by build_graph.py — edit the CSVs, not this block
+const CL = {
+  anchor:{name:"Tithe statutes",light:"#7C8B96",dark:"#93A3AE"},
+  bridge:{name:"The temple tax",light:"#B4553C",dark:"#D97B60"},
+  imperial:{name:"Imperial tax",light:"#2F6B84",dark:"#6FA8C4"},
+  collector:{name:"Tax collectors",light:"#7E6E9B",dark:"#A392C4"},
+  critique:{name:"Tithing rebuked",light:"#6E8A5E",dark:"#93B182"},
+  hebrews:{name:"The Hebrews 7 argument",light:"#9A8352",dark:"#C2A86E"},
+  giving:{name:"Treasury and alms",light:"#4E8E7A",dark:"#7FC0AC"},
+  debt:{name:"Debt and its parables",light:"#94707A",dark:"#BE939D"},
+  market:{name:"Money changers",light:"#857A6A",dark:"#A99B87"},
+  interest:{name:"Interest forbidden",light:"#8E2F4E",dark:"#C4708C"},
+  release:{name:"Remission and jubilee",light:"#3F8FA0",dark:"#77C0CE"},
+  entrusted:{name:"Money entrusted",light:"#8A6E3F",dark:"#C4A173"},
+  wages:{name:"Wages withheld",light:"#5A6390",dark:"#8F98C4"},
+  gleaning:{name:"Gleaning and the field's edge",light:"#7E9152",dark:"#AEC182"},
+  purse:{name:"The common purse",light:"#2F7D5E",dark:"#62B48F"},
+  price:{name:"Pricing a person",light:"#C08A2E",dark:"#E0B45E"},
+};
+const N = [
+  ["g1","Genesis 14:20","anchor","Abram gives a tenth of everything to Melchizedek after the rescue of Lot."],
+  ["g2","Genesis 28:22","anchor","Jacob vows a tenth at the place he names Bethel."],
+  ["l1","Leviticus 27:30","anchor","The tenth of seed and fruit belongs to God and is holy."],
+  ["n1","Numbers 18:21","anchor","Every tithe assigned to the Levites as wages, because they hold no land."],
+  ["n2","Numbers 18:26","anchor","The Levites owe a tenth of the tenth they receive."],
+  ["d1","Deuteronomy 14:29","anchor","Third-year tithe stored for the Levite, the alien, the orphan and the widow."],
+  ["e1","Exodus 30:13","anchor","A half-shekel census payment, the same from rich and poor alike."],
+  ["m1","Malachi 3:8","anchor","Withholding tithes and offerings named as robbing God."],
+  ["a1","Amos 4:4","anchor","Israel summoned to Bethel to transgress, tithes listed among the offerings."],
+  ["s1","1 Samuel 8:15","anchor","The king will take a tenth of grain and vineyards for his officers and courtiers."],
+  ["t1","Matthew 17:24","bridge","Collectors of the temple tax ask Peter whether his teacher pays it."],
+  ["t2","Matthew 17:25","bridge","Jesus asks from whom kings take toll or tribute — their children, or others."],
+  ["t3","Matthew 17:26","bridge","Peter answers 'from others', and Jesus concludes the children are free."],
+  ["t4","Matthew 17:27","bridge","He pays anyway, from a coin found in a fish, so as not to give offense."],
+  ["i1","Luke 2:1","imperial","Augustus decrees that all the world be registered."],
+  ["i2","Luke 2:3","imperial","Everyone travels to their own town to be registered."],
+  ["i3","Luke 3:1","imperial","The narrative dated by the reign of Tiberius and his governors."],
+  ["i4","Acts 5:37","imperial","Judas the Galilean raises a following at the time of the census, and perishes."],
+  ["i5","Matthew 22:17","imperial","Is it lawful to pay taxes to the emperor?"],
+  ["i6","Matthew 22:19","imperial","The coin used for the tax is produced — a denarius."],
+  ["i7","Matthew 22:21","imperial","Give the emperor what is the emperor's, and God what is God's."],
+  ["i8","Mark 12:14","imperial","Mark's form of the question, prefaced with flattery."],
+  ["i9","Mark 12:16","imperial","Whose head and title does the coin bear."],
+  ["i10","Mark 12:17","imperial","Mark's form of the ruling."],
+  ["i11","Luke 20:22","imperial","Luke's form of the question."],
+  ["i12","Luke 20:24","imperial","Luke's form of the coin inspection."],
+  ["i13","Luke 20:25","imperial","Luke's form of the ruling."],
+  ["i14","Luke 23:2","imperial","At trial, Jesus is accused of forbidding payment of taxes to the emperor."],
+  ["i15","John 19:12","imperial","Pilate pressed with the claim that releasing Jesus is disloyalty to Caesar."],
+  ["i16","Romans 13:6","imperial","Taxes are paid because the authorities are described as God's servants."],
+  ["i17","Romans 13:7","imperial","Pay what is due: taxes, revenue, respect, honor."],
+  ["i18","1 Peter 2:13","imperial","Accept the authority of human institutions, the emperor included."],
+  ["i19","1 Peter 2:17","imperial","Fear God; honor the emperor — two verbs, deliberately unequal."],
+  ["i20","Acts 25:10","imperial","Paul appeals to the emperor's tribunal as his right."],
+  ["i21","Acts 17:7","imperial","Believers accused of acting against the emperor's decrees."],
+  ["c1","Matthew 9:9","collector","Matthew called away from the tax booth."],
+  ["c2","Matthew 9:10","collector","Jesus at table with tax collectors and sinners."],
+  ["c3","Matthew 9:11","collector","The Pharisees object to the company he keeps."],
+  ["c4","Matthew 10:3","collector","Matthew listed among the twelve, identified by his former trade."],
+  ["c5","Matthew 11:19","collector","Called a glutton and a friend of tax collectors."],
+  ["c6","Matthew 18:17","collector","The unrepentant member treated as a Gentile and a tax collector."],
+  ["c7","Matthew 21:31","collector","Tax collectors enter the kingdom ahead of the religious leadership."],
+  ["c8","Mark 2:14","collector","Levi called from the tax booth."],
+  ["c9","Mark 2:16","collector","Scribes of the Pharisees challenge the shared meal."],
+  ["c10","Luke 3:12","collector","Tax collectors come to John for baptism and ask what to do."],
+  ["c11","Luke 3:13","collector","They are told to collect no more than the amount prescribed."],
+  ["c12","Luke 5:27","collector","Luke's account of Levi at the tax booth."],
+  ["c13","Luke 15:1","collector","Tax collectors and sinners gather to listen."],
+  ["c14","Luke 18:10","collector","A Pharisee and a tax collector go up to pray."],
+  ["c15","Luke 18:13","collector","The collector will not look up, and asks for mercy."],
+  ["c16","Luke 19:2","collector","Zacchaeus, a chief tax collector, and rich."],
+  ["c17","Luke 19:8","collector","He gives half his possessions away and restores fourfold what he took."],
+  ["k1","Matthew 23:23","critique","Woe for tithing mint, dill and cummin while neglecting justice, mercy and faith."],
+  ["k2","Luke 11:42","critique","Woe for tithing mint, rue and every herb while neglecting justice and the love of God."],
+  ["k3","Luke 18:12","critique","The Pharisee's boast: fasting twice a week and giving a tenth of all income."],
+  ["h1","Hebrews 7:2","hebrews","Abraham apportioned a tenth of everything to Melchizedek."],
+  ["h2","Hebrews 7:4","hebrews","Even the patriarch gave him a tenth of the spoils."],
+  ["h3","Hebrews 7:5","hebrews","Levi's priestly descendants are commanded by law to collect tithes."],
+  ["h4","Hebrews 7:6","hebrews","Melchizedek collected tithes without belonging to that lineage."],
+  ["h5","Hebrews 7:8","hebrews","In one case mortals receive tithes; in the other, one testified to be living."],
+  ["h6","Hebrews 7:9","hebrews","Levi, who receives tithes, paid tithes through Abraham."],
+  ["h7","Hebrews 7:11","hebrews","Perfection was not reached through the Levitical priesthood."],
+  ["h8","Hebrews 7:12","hebrews","A change of priesthood requires a change of law as well."],
+  ["v1","Mark 12:41","giving","He sits opposite the treasury and watches the crowd give."],
+  ["v2","Mark 12:42","giving","A poor widow puts in two small copper coins."],
+  ["v3","Mark 12:43","giving","She has put in more than all the others."],
+  ["v4","Mark 12:44","giving","They gave out of abundance; she gave everything she had to live on."],
+  ["v5","Luke 21:1","giving","Luke's account of the rich giving at the treasury."],
+  ["v6","Luke 21:4","giving","Luke's form of the verdict on the widow."],
+  ["v7","Matthew 6:2","giving","Give alms without sounding a trumpet."],
+  ["v8","Matthew 6:4","giving","Alms done in secret, seen by God."],
+  ["v9","Luke 11:41","giving","Give alms from what is within, and everything is clean."],
+  ["v10","Luke 12:33","giving","Sell possessions and give alms, for a treasure that does not fail."],
+  ["v11","Mark 7:11","giving","Corban: a dedication used to withhold support owed to parents."],
+  ["v12","Matthew 27:6","giving","Blood money cannot lawfully be put into the treasury."],
+  ["v13","1 Corinthians 16:1","giving","Instructions for the collection for the saints."],
+  ["v14","1 Corinthians 16:2","giving","Set aside weekly, in proportion to earnings."],
+  ["v15","2 Corinthians 9:7","giving","Give as decided, not reluctantly or under compulsion."],
+  ["v16","Romans 15:27","giving","Gentiles owe material help to those whose blessings they share."],
+  ["v17","Acts 24:17","giving","Paul returns bringing alms to his nation."],
+  ["b1","Matthew 18:24","debt","A servant owing ten thousand talents is brought to the reckoning."],
+  ["b2","Matthew 18:27","debt","The lord releases him and forgives the debt."],
+  ["b3","Matthew 18:34","debt","The unforgiving servant is handed over until he pays it all."],
+  ["b4","Luke 7:41","debt","Two debtors owe a creditor very unequal sums."],
+  ["b5","Luke 16:5","debt","The manager summons his master's debtors and reduces what they owe."],
+  ["b6","Romans 13:8","debt","Owe no one anything except to love one another."],
+  ["x1","Matthew 21:12","market","Jesus overturns the tables of the money changers in the temple."],
+  ["x2","Mark 11:15","market","Mark's account of the same action."],
+  ["x3","John 2:14","market","John places the money changers early, with a whip of cords."],
+  ["i22","Nehemiah 5:3","imperial","Fields, vineyards and houses pledged for grain during the famine."],
+  ["i23","Nehemiah 5:4","imperial","Money borrowed against fields and vineyards to pay the king's tax."],
+  ["i24","Nehemiah 5:5","imperial","Children forced into slavery, fields already in other hands."],
+  ["u1","Exodus 22:25","interest","Lend to the poor without acting as a creditor or charging interest."],
+  ["u2","Leviticus 25:36","interest","No interest taken in advance, no profit made from a neighbour in need."],
+  ["u3","Leviticus 25:37","interest","Money and food lent without interest or profit."],
+  ["u4","Deuteronomy 23:19","interest","No interest on anything lent to another Israelite."],
+  ["u5","Deuteronomy 23:20","interest","Interest allowed to a foreigner, forbidden to a fellow Israelite."],
+  ["u6","Psalm 15:5","interest","Lending without interest listed among the marks of the upright."],
+  ["u7","Ezekiel 18:8","interest","The righteous take no advance and no accrued interest."],
+  ["u8","Nehemiah 5:7","interest","Nehemiah charges the nobles with exacting interest from their own people."],
+  ["u9","Nehemiah 5:10","interest","He calls for the taking of interest to stop."],
+  ["u10","Nehemiah 5:11","interest","Fields, orchards and houses restored that very day, with the interest."],
+  ["r1","Deuteronomy 15:1","release","A remission of debts every seventh year."],
+  ["r2","Deuteronomy 15:2","release","Every creditor remits the claim held against a neighbour."],
+  ["r3","Deuteronomy 15:4","release","The promise that there will be no one in need."],
+  ["r4","Deuteronomy 15:9","release","Warning against refusing a loan because the year of release is near."],
+  ["r5","Leviticus 25:10","release","Liberty proclaimed; property and family returned in the fiftieth year."],
+  ["r6","Leviticus 25:13","release","In the jubilee everyone returns to their own property."],
+  ["r7","Luke 4:18","release","Good news to the poor and release to the captives."],
+  ["r8","Luke 4:19","release","The year of the Lord's favour proclaimed."],
+  ["r9","Matthew 6:9","release","The Lord's Prayer, carrying the petition to forgive debts as debts are forgiven."],
+  ["p1","Matthew 25:15","entrusted","Talents handed to three slaves, each according to ability."],
+  ["p2","Matthew 25:24","entrusted","The third slave calls the master harsh, reaping where he did not sow."],
+  ["p3","Matthew 25:27","entrusted","The master says the money should have gone to bankers, to earn interest."],
+  ["p4","Matthew 25:28","entrusted","The talent taken from the one who has least and given to the one with most."],
+  ["p5","Luke 19:11","entrusted","Told because the kingdom was expected to appear immediately."],
+  ["p6","Luke 19:13","entrusted","Ten pounds given, with orders to trade until the master returns."],
+  ["p7","Luke 19:22","entrusted","The master judged by his own words: taking what he did not deposit."],
+  ["p8","Luke 19:23","entrusted","Why was the money not put in the bank to collect interest."],
+  ["p9","Luke 19:27","entrusted","The king's enemies brought and slaughtered in his presence."],
+  ["w1","Leviticus 19:13","wages","A labourer's wages must not be kept back overnight."],
+  ["w2","Deuteronomy 24:14","wages","Nothing withheld from poor labourers, Israelite or alien."],
+  ["w3","Deuteronomy 24:15","wages","Wages paid the same day, before sunset."],
+  ["w4","James 5:4","wages","Withheld harvest wages cry out and are heard."],
+  ["w5","Matthew 20:2","wages","A day's labour agreed at the usual daily wage."],
+  ["w6","Matthew 20:13","wages","The householder insists the agreed wage wrongs no one."],
+  ["w7","Luke 10:7","wages","The labourer deserves to be paid."],
+  ["w8","1 Timothy 5:18","wages","The ox and the labourer cited together on payment due."],
+  ["q1","Leviticus 19:9","gleaning","The edges of the field are not reaped."],
+  ["q2","Leviticus 19:10","gleaning","The vineyard not stripped bare; leavings for the poor and the alien."],
+  ["q3","Leviticus 23:22","gleaning","The same instruction repeated in the festival calendar."],
+  ["q4","Deuteronomy 24:19","gleaning","The forgotten sheaf left for the alien, the orphan and the widow."],
+  ["q5","Deuteronomy 24:21","gleaning","Grapes not gleaned twice, for the same three."],
+  ["q6","Ruth 2:2","gleaning","Ruth goes out to glean behind the harvesters."],
+  ["y1","Acts 2:44","purse","Believers hold all things in common."],
+  ["y2","Acts 2:45","purse","Possessions sold and distributed as any had need."],
+  ["y3","Acts 4:32","purse","No one claims private ownership of possessions."],
+  ["y4","Acts 4:34","purse","Lands and houses sold, the proceeds brought to the apostles."],
+  ["y5","Acts 4:37","purse","Barnabas sells a field and lays the money at their feet."],
+  ["y6","Acts 5:2","purse","Ananias keeps back part of the proceeds."],
+  ["y7","Acts 5:4","purse","The property and its proceeds were his to dispose of freely."],
+  ["y8","2 Corinthians 8:14","purse","Present abundance meeting present need, for a fair balance."],
+  ["z1","Leviticus 27:2","price","Vows made concerning the monetary equivalent of a person."],
+  ["z2","Leviticus 27:3","price","Fifty shekels set as the equivalent for an adult male."],
+  ["z3","Leviticus 27:8","price","Those too poor to pay are valued by the priest according to means."],
+  ["z4","Numbers 18:15","price","The firstborn of humans redeemed rather than offered."],
+  ["z5","Numbers 18:16","price","The redemption price fixed at five shekels."],
+  ["z6","Exodus 13:13","price","Every firstborn son redeemed."],
+  ["z7","Exodus 21:32","price","Thirty shekels paid to the owner of a slave killed by an ox."],
+  ["z8","Zechariah 11:12","price","Thirty shekels weighed out as the shepherd's wage."],
+  ["z9","Matthew 26:15","price","Thirty pieces of silver agreed for handing Jesus over."],
+];
+const E = [
+  ["t1","e1","ref","supports","The half-shekel of Exodus is the statutory ancestor of the tax being collected here."],
+  ["t2","s1","con","supports","Both ask what a king takes and from whom — Samuel answers with a tenth."],
+  ["t2","i5","con","supports","Toll and tribute in one scene, imperial tax in the other: the same category, two claimants."],
+  ["t3","h3","con","spec","If the children are free, the commandment to collect tithes has lost its addressee."],
+  ["t3","i7","con","supports","Both rulings distinguish what is owed from who is exempt, and both stop short of refusal."],
+  ["t4","v12","con","spec","Two coins that trouble the temple treasury — one paid in, one refused."],
+  ["t4","x1","con","supports","Money changers existed to convert coin acceptable to the temple; the same economy."],
+  ["t1","v1","con","supports","Temple revenue viewed from collection and from donation."],
+  ["t1","t2","con","states",""],
+  ["t2","t3","con","states",""],
+  ["t3","t4","con","states",""],
+  ["h1","g1","ref","states","Hebrews quotes the Genesis scene directly."],
+  ["h2","g1","ref","states","The same episode, cited again for Abraham's rank."],
+  ["h3","n1","ref","states","The commandment referred to is the Levitical assignment in Numbers."],
+  ["h6","n1","ref","states","Levi 'receives tithes' because Numbers says so."],
+  ["h1","h2","con","states",""],
+  ["h2","h3","con","states",""],
+  ["h3","h4","con","states",""],
+  ["h4","h5","con","states",""],
+  ["h5","h6","con","states",""],
+  ["h6","h7","con","states",""],
+  ["h7","h8","con","states",""],
+  ["h8","l1","con","spec","If the law changes with the priesthood, the statute making the tenth holy is in question."],
+  ["h3","v16","con","spec","Both frame support of a religious class as an obligation owed, not a gift given."],
+  ["k1","k2","lex","states","Near-identical woes: tithed herbs set against neglected justice."],
+  ["k1","l1","ref","supports","Tithing garden herbs presumes the produce statute."],
+  ["k1","d1","con","supports","The weightier matters name the people the third-year tithe was for."],
+  ["k2","d1","con","supports","Justice and love of God against the same background."],
+  ["k3","k1","con","supports","The boast and the woe describe the same practice from inside and outside."],
+  ["k3","c14","con","states","One parable: the boast belongs to the Pharisee in the temple."],
+  ["k3","g2","con","spec","A vowed tenth of all increase, now recited as self-commendation."],
+  ["k1","a1","con","spec","Amos also indicts tithes offered faithfully at the wrong center of gravity."],
+  ["k1","m1","con","spec","Malachi faults too little tithe, Matthew too much attention to it."],
+  ["v11","k1","con","supports","Both describe a religious payment used to escape a weightier obligation."],
+  ["i5","i8","lex","states","Synoptic parallel."],
+  ["i5","i11","lex","states","Synoptic parallel."],
+  ["i6","i9","lex","states","Synoptic parallel."],
+  ["i6","i12","lex","states","Synoptic parallel."],
+  ["i7","i10","lex","states","Synoptic parallel."],
+  ["i7","i13","lex","states","Synoptic parallel."],
+  ["i5","i6","con","states",""],
+  ["i6","i7","con","states",""],
+  ["i14","i7","con","states","The charge at trial inverts the ruling he actually gave."],
+  ["i14","i15","con","supports","Both convert a tax question into a loyalty charge."],
+  ["i1","i2","con","states",""],
+  ["i1","i4","ref","supports","Acts names a revolt at the census Luke uses to date the birth."],
+  ["i1","e1","con","spec","Registration and head-count payment: counting people as a fiscal act."],
+  ["i16","i17","con","states",""],
+  ["i17","i7","con","supports","Paul turns the ruling into a standing instruction."],
+  ["i18","i17","con","supports",""],
+  ["i19","i7","con","supports","Fear and honor kept unequal, as God and emperor are in the ruling."],
+  ["i20","i21","con","supports","Imperial authority as protection and as accusation."],
+  ["i17","b6","lex","states","Adjacent verses: pay what is owed, then owe nothing but love."],
+  ["c1","c8","lex","states","The same call story."],
+  ["c1","c12","lex","states","The same call story."],
+  ["c2","c3","con","states",""],
+  ["c2","c9","lex","states","Parallel objection."],
+  ["c5","c7","con","supports","Contempt for the company, and the reversal it produces."],
+  ["c10","c11","con","states",""],
+  ["c11","c17","con","supports","The instruction to collect no more, and a collector who returns far more."],
+  ["c14","c15","con","states",""],
+  ["c16","c17","con","states",""],
+  ["c16","c6","con","spec","The trade used as a byword, and a man of the trade named and welcomed."],
+  ["c7","c14","con","supports","Both reverse the standing of the pious and the collector."],
+  ["c17","b5","con","spec","Two stewards of other people's money, both revising the ledger downward."],
+  ["v1","v2","con","states",""],
+  ["v2","v3","con","states",""],
+  ["v3","v4","con","states",""],
+  ["v5","v6","con","states",""],
+  ["v2","v5","lex","states","Parallel accounts of the treasury scene."],
+  ["v4","d1","con","supports","A widow giving her living, against the tithe kept for widows."],
+  ["v7","v8","con","states",""],
+  ["v9","v10","con","supports",""],
+  ["v12","v1","con","spec","What may and may not enter the same treasury."],
+  ["v13","v14","con","states",""],
+  ["v14","e1","con","spec","Proportional weekly giving against a flat head payment."],
+  ["v15","v14","con","supports","Proportion set by the giver, not by statute."],
+  ["v16","v17","con","supports",""],
+  ["b1","b2","con","states",""],
+  ["b2","b3","con","states",""],
+  ["b4","b2","con","supports","Cancelled debt as the measure of returned love."],
+  ["x1","x2","lex","states","Parallel accounts."],
+  ["x1","x3","lex","states","Parallel accounts."],
+  ["g1","g2","con","supports","Two pre-legal tenths, both vowed rather than commanded."],
+  ["l1","n1","con","states",""],
+  ["n1","n2","con","states",""],
+  ["n1","d1","con","supports","Both direct the tithe to those without an allotment."],
+  ["s1","l1","lex","supports","The same fraction, claimed by the king instead of by God."],
+  ["p3","u4","ref","supports","The master faults the slave for not doing what Deuteronomy forbids."],
+  ["p8","u4","ref","supports","The same rebuke, against the same prohibition."],
+  ["p8","u9","con","supports","Nehemiah stops the taking of interest; the king demands it."],
+  ["p7","s1","con","supports","A ruler who takes what he did not deposit, as Samuel warned."],
+  ["p9","s1","con","supports","The king's power ends in violence against his own people."],
+  ["p5","c16","con","states","Luke tells this parable immediately after Zacchaeus."],
+  ["p5","c17","con","supports","Restitution, then a master who demands increase."],
+  ["p4","b1","con","spec","Taking from the one who has least, in two different registers."],
+  ["p1","p2","con","states",""],
+  ["p2","p3","con","states",""],
+  ["p3","p4","con","states",""],
+  ["p5","p6","con","states",""],
+  ["p6","p7","con","states",""],
+  ["p7","p8","con","states",""],
+  ["p8","p9","con","states",""],
+  ["p1","p5","lex","states","Matthew's talents and Luke's pounds are the same parable type."],
+  ["p2","p7","lex","states","Nearly identical accusation against the master."],
+  ["p3","p8","lex","states","Nearly identical rebuke about the bank."],
+  ["u1","u2","con","states",""],
+  ["u2","u3","con","states",""],
+  ["u4","u5","con","states",""],
+  ["u1","u4","lex","states","The same prohibition in two codes."],
+  ["u6","u4","con","supports","Lending without interest as a mark of the upright."],
+  ["u7","u4","con","supports","The prohibition restated as a test of righteousness."],
+  ["u8","u9","con","states",""],
+  ["u9","u10","con","states",""],
+  ["u8","i23","con","states","The same crisis: the tax paid by borrowing at interest."],
+  ["u10","i24","con","states","Restoration answering the enslavement."],
+  ["u5","i5","con","spec","Interest permitted to the foreigner; tribute owed to one."],
+  ["r1","r2","con","states",""],
+  ["r2","r3","con","supports",""],
+  ["r2","r4","con","states",""],
+  ["r5","r6","con","states",""],
+  ["r1","r5","con","supports","Seventh-year remission and fiftieth-year return."],
+  ["r7","r8","con","states",""],
+  ["r7","r5","ref","supports","Jubilee language stands behind the proclamation."],
+  ["r9","b2","con","supports","Debt forgiven as the pattern for being forgiven."],
+  ["r9","b3","con","states","The parable turns on the petition."],
+  ["r2","u10","con","supports","Remission commanded; Nehemiah enacts the restoration."],
+  ["r4","u1","con","supports","Both guard against lending withheld from the poor."],
+  ["r3","y4","con","spec","The promise of no one in need, reported as accomplished."],
+  ["w1","w2","lex","supports","The same rule in two codes."],
+  ["w2","w3","con","states",""],
+  ["w4","w3","ref","supports","James echoes the same-day payment rule."],
+  ["w5","w6","con","states",""],
+  ["w5","i6","lex","supports","A day's wage and the tax coin are the same denarius."],
+  ["w7","w8","ref","states","The saying cited as scripture."],
+  ["w8","n1","con","spec","Support for those who serve, argued from law."],
+  ["w4","q4","con","supports","Both protect people dependent on someone else's harvest."],
+  ["q1","q2","con","states",""],
+  ["q2","q3","lex","states","The instruction repeated verbatim."],
+  ["q4","q5","con","states",""],
+  ["q1","q4","lex","supports","Two codes, one provision."],
+  ["q4","d1","lex","states","The same three named: alien, orphan, widow."],
+  ["q6","q1","ref","supports","Ruth gleans under this provision."],
+  ["q2","v4","con","spec","Leavings kept for the poor, and a poor woman giving her last."],
+  ["y1","y2","con","states",""],
+  ["y3","y4","con","states",""],
+  ["y1","y3","lex","states","The same arrangement described twice."],
+  ["y4","y5","con","states",""],
+  ["y5","y6","con","states",""],
+  ["y6","y7","con","states",""],
+  ["y6","m1","con","supports","Withholding from the fund, and withholding tithes called robbery."],
+  ["y7","v15","con","supports","Both insist the gift was never compelled."],
+  ["y8","d1","con","supports","A fair balance, and the tithe stored for those without land."],
+  ["y2","v10","con","supports","Sell possessions and give."],
+  ["z1","z2","con","states",""],
+  ["z2","z3","con","states",""],
+  ["z1","l1","con","states","One chapter: persons priced, then the tenth made holy."],
+  ["z4","z5","con","states",""],
+  ["z4","n1","con","states","Three verses before the tithe assignment."],
+  ["z6","z4","ref","supports","The redemption of the firstborn, stated earlier."],
+  ["z7","z8","lex","supports","Thirty shekels in both."],
+  ["z8","z9","ref","supports","Matthew's thirty pieces echo the weighed wage."],
+  ["z9","v12","con","states","The same silver, refused by the treasury."],
+  ["z3","e1","con","supports","Ability to pay accommodated, against a flat head payment."],
+  ["z2","z7","con","spec","Fifty shekels for a vow, thirty for a killed slave."],
+  ["z5","t1","con","spec","A fixed redemption price, and a fixed temple levy."],
+  ["i22","i23","con","states",""],
+  ["i23","i24","con","states",""],
+  ["i23","s1","con","supports","A levy that costs people their fields."],
+  ["i24","z7","con","spec","Children sold, and a price fixed for a slave."],
+];
+// </corpus>
+
+// Not generated — build_graph.py must not touch these.
+const WA = {
+  states:  {name:"The text says it", v:"--states"},
+  supports:{name:"The text supports it", v:"--supports"},
+  spec:    {name:"My speculation", v:"--spec"}
+};
+const TY = {
+  lex:{name:"Shared wording", dash:""},
+  ref:{name:"One cites the other", dash:"7 4"},
+  con:{name:"Same idea", dash:"1.5 4"}
+};
+
+const nodes = N.map(([id,ref,cl,gist])=>({id,ref,cl,gist,x:0,y:0,vx:0,vy:0}));
+const byId = Object.fromEntries(nodes.map(n=>[n.id,n]));
+const edges = E.map(([s,t,ty,wa,note])=>({s:byId[s],t:byId[t],ty,wa,note}));
+const deg = {}; edges.forEach(e=>{deg[e.s.id]=(deg[e.s.id]||0)+1; deg[e.t.id]=(deg[e.t.id]||0)+1});
+
+// ---- layout: cluster anchors, then relax -----------------------------------
+const order = Object.keys(CL);
+const W=1180, H=880;
+const anchors = {};
+order.forEach((k,i)=>{
+  const ang = (i/order.length)*Math.PI*2 - Math.PI/2;
+  const rad = k==='bridge' ? 0 : 320;          // the bridge sits in the middle
+  anchors[k] = {x: W/2 + Math.cos(ang)*rad*1.28, y: H/2 + Math.sin(ang)*rad};
+});
+nodes.forEach((n,i)=>{
+  const a = anchors[n.cl];
+  n.x = a.x + Math.cos(i*2.4)*70; n.y = a.y + Math.sin(i*2.4)*70;
+});
+function relax(steps){
+  for(let s=0;s<steps;s++){
+    for(let i=0;i<nodes.length;i++){
+      const a=nodes[i];
+      for(let j=i+1;j<nodes.length;j++){
+        const b=nodes[j];
+        let dx=b.x-a.x, dy=b.y-a.y, d2=dx*dx+dy*dy||0.01;
+        if(d2<30000){
+          const f=900/d2, d=Math.sqrt(d2);
+          const fx=dx/d*f, fy=dy/d*f;
+          a.vx-=fx; a.vy-=fy; b.vx+=fx; b.vy+=fy;
+        }
+      }
+    }
+    edges.forEach(e=>{
+      const dx=e.t.x-e.s.x, dy=e.t.y-e.s.y, d=Math.hypot(dx,dy)||0.01;
+      const f=(d-110)*0.012;
+      e.s.vx+=dx/d*f; e.s.vy+=dy/d*f; e.t.vx-=dx/d*f; e.t.vy-=dy/d*f;
+    });
+    nodes.forEach(n=>{
+      const a=anchors[n.cl];
+      n.vx+=(a.x-n.x)*0.020; n.vy+=(a.y-n.y)*0.020;
+      n.vx*=0.80; n.vy*=0.80;
+      n.x+=n.vx; n.y+=n.vy;
+    });
+  }
+}
+relax(420);
+nodes.forEach(n=>{ n.gx=n.x; n.gy=n.y; });
+
+// ---- layout 2: canonical order along a baseline ----------------------------
+const BOOKS = ["Genesis","Exodus","Leviticus","Numbers","Deuteronomy","1 Samuel",
+  "Amos","Malachi","Matthew","Mark","Luke","John","Acts","Romans",
+  "1 Corinthians","2 Corinthians","Hebrews","1 Peter"];
+const ABBR = {"Genesis":"Gen","Exodus":"Exod","Leviticus":"Lev","Numbers":"Num",
+  "Deuteronomy":"Deut","1 Samuel":"1 Sam","Amos":"Amos","Malachi":"Mal",
+  "Matthew":"Matt","Mark":"Mark","Luke":"Luke","John":"John","Acts":"Acts",
+  "Romans":"Rom","1 Corinthians":"1 Cor","2 Corinthians":"2 Cor",
+  "Hebrews":"Heb","1 Peter":"1 Pet"};
+const NT_FIRST = "Matthew";
+nodes.forEach(n=>{
+  const m = n.ref.match(/^((?:[1-4] )?[A-Za-z]+) (\d+):(\d+)$/);
+  n.book = m[1]; n.chap = +m[2]; n.vers = +m[3];
+  n.ord = BOOKS.indexOf(n.book);
+});
+const CANON_W = 2600;
+const BASE_Y = 520, X0 = 70, X1 = CANON_W - 70;
+const canon = nodes.slice().sort((a,b)=> a.ord-b.ord || a.chap-b.chap || a.vers-b.vers);
+canon.forEach((n,i)=>{
+  n.ax = X0 + (X1-X0) * (canon.length>1 ? i/(canon.length-1) : .5);
+  n.ay = BASE_Y;
+});
+// Two arcs that share a stretch of baseline and sit at the same height trace
+// the same curve. Walk the edges shortest-reach first and lift each one until
+// its apex clears every arc it overlaps, so no two ever lie on top of another.
+const ARC_BASE=44, ARC_K=0.55, ARC_STEP=14, ARC_GAP=11;
+(function assignLanes(){
+  const placed=[];
+  edges.slice().sort((a,b)=>Math.abs(a.s.ax-a.t.ax)-Math.abs(b.s.ax-b.t.ax))
+    .forEach(e=>{
+      const lo=Math.min(e.s.ax,e.t.ax), hi=Math.max(e.s.ax,e.t.ax), span=hi-lo;
+      let lane=0, apex;
+      for(;lane<=40;lane++){
+        apex=0.75*(ARC_BASE+span*ARC_K+lane*ARC_STEP);
+        if(!placed.some(p=>!(hi<p.lo||lo>p.hi) && Math.abs(apex-p.apex)<ARC_GAP)) break;
+      }
+      e.lane=lane; placed.push({lo,hi,apex});
+    });
+})();
+const arcH = e => ARC_BASE + Math.abs(e.s.ax-e.t.ax)*ARC_K + e.lane*ARC_STEP;
+const MAX_APEX = Math.max(0, ...edges.map(e=>arcH(e)*0.75));
+
+// ---- render ----------------------------------------------------------------
+const svg = document.getElementById('net');
+const NS='http://www.w3.org/2000/svg';
+const gRoot = document.createElementNS(NS,'g');
+const gAxis = document.createElementNS(NS,'g');
+const gEdge = document.createElementNS(NS,'g');
+const gNode = document.createElementNS(NS,'g');
+gRoot.append(gAxis,gEdge,gNode); svg.append(gRoot);
+
+const css = getComputedStyle(document.documentElement);
+const col = v => css.getPropertyValue(v).trim();
+
+const darkQ = matchMedia('(prefers-color-scheme: dark)');
+function isDark(){
+  const t=document.documentElement.getAttribute('data-theme');
+  return t==='dark' || (t!=='light' && darkQ.matches);
+}
+function clCol(k){ return isDark() ? CL[k].dark : CL[k].light; }
+function repaint(){
+  nodes.forEach(n=>n.circle.setAttribute('fill', clCol(n.cl)));
+  document.querySelectorAll('#clusters .dot').forEach((d,i)=>{
+    d.style.background = clCol(Object.keys(CL)[i]);
+  });
+}
+darkQ.addEventListener('change', repaint);
+
+edges.forEach(e=>{
+  const p=document.createElementNS(NS,'path');
+  p.setAttribute('fill','none');
+  p.setAttribute('stroke',`var(${WA[e.wa].v})`);
+  p.setAttribute('stroke-width', e.wa==='states'?1.6:e.wa==='supports'?1.3:1);
+  p.setAttribute('stroke-opacity', e.wa==='states'?.75:e.wa==='supports'?.6:.45);
+  if(TY[e.ty].dash) p.setAttribute('stroke-dasharray',TY[e.ty].dash);
+  p.setAttribute('stroke-linecap','round');
+  e.el=p; gEdge.append(p);
+});
+
+nodes.forEach(n=>{
+  const g=document.createElementNS(NS,'g'); g.setAttribute('class','node');
+  const r = n.cl==='bridge' ? 9.5 : 4.5 + Math.min(4,(deg[n.id]||1)*0.7);
+  n.r = r;
+  const c=document.createElementNS(NS,'circle');
+  c.setAttribute('r',r);
+  c.setAttribute('fill', clCol(n.cl));
+  c.setAttribute('stroke','var(--paper)'); c.setAttribute('stroke-width',1.5);
+  const t=document.createElementNS(NS,'text');
+  t.textContent=n.ref.replace(/^(\d )?(\w{3})\w*/, (m,a,b)=>(a||'')+b);
+  g.append(c,t); g.tabIndex=0; g.setAttribute('role','button');
+  g.setAttribute('aria-label',n.ref);
+  g.addEventListener('click',()=>select(n));
+  g.addEventListener('keydown',ev=>{if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();select(n);}});
+  n.el=g; n.circle=c; n.label=t; gNode.append(g);
+});
+
+// ---- book axis, drawn only in canonical mode -------------------------------
+(function buildAxis(){
+  const spine=document.createElementNS(NS,'line');
+  spine.setAttribute('x1',X0-14); spine.setAttribute('y1',BASE_Y);
+  spine.setAttribute('x2',X1+14); spine.setAttribute('y2',BASE_Y);
+  spine.setAttribute('class','tick'); gAxis.append(spine);
+  const groups={};
+  canon.forEach(n=>{ (groups[n.book] ||= []).push(n.ax); });
+  BOOKS.forEach(b=>{
+    const xs=groups[b]; if(!xs) return;
+    const lo=Math.min(...xs), hi=Math.max(...xs), mid=(lo+hi)/2;
+    const tk=document.createElementNS(NS,'line');
+    tk.setAttribute('x1',lo-5); tk.setAttribute('y1',BASE_Y+78);
+    tk.setAttribute('x2',hi+5); tk.setAttribute('y2',BASE_Y+78);
+    tk.setAttribute('class','tick'); gAxis.append(tk);
+    const lb=document.createElementNS(NS,'text');
+    lb.setAttribute('class','booklab');
+    lb.setAttribute('transform',`translate(${mid},${BASE_Y+89}) rotate(-45)`);
+    lb.setAttribute('text-anchor','end'); lb.textContent=ABBR[b];
+    gAxis.append(lb);
+  });
+  const first=canon.find(n=>n.book===NT_FIRST);
+  if(first){
+    const prev=canon[canon.indexOf(first)-1];
+    const x=prev ? (prev.ax+first.ax)/2 : first.ax-8;
+    const sep=document.createElementNS(NS,'line');
+    sep.setAttribute('x1',x); sep.setAttribute('y1',BASE_Y-MAX_APEX-24);
+    sep.setAttribute('x2',x); sep.setAttribute('y2',BASE_Y+81);
+    sep.setAttribute('class','era'); gAxis.append(sep);
+    const el=document.createElementNS(NS,'text');
+    el.setAttribute('class','eralab'); el.setAttribute('x',x+6);
+    el.setAttribute('y',BASE_Y-MAX_APEX-24); el.textContent='New Testament begins';
+    gAxis.append(el);
+  }
+  gAxis.style.display='none';
+})();
+
+// ---- placement -------------------------------------------------------------
+let mode='canon';
+
+function place(arcs){
+  nodes.forEach(n=>{
+    n.circle.setAttribute('cx',n.x); n.circle.setAttribute('cy',n.y);
+    if(arcs){
+      n.label.setAttribute('x',0); n.label.setAttribute('y',0);
+      n.label.setAttribute('transform',`translate(${n.x},${n.y+n.r+7}) rotate(-90)`);
+      n.label.setAttribute('text-anchor','end');
+    } else {
+      n.label.removeAttribute('transform'); n.label.removeAttribute('text-anchor');
+      n.label.setAttribute('x',n.x+n.r+4); n.label.setAttribute('y',n.y+3.5);
+    }
+  });
+  edges.forEach(e=>{
+    if(arcs){
+      const [a,b] = e.s.x<=e.t.x ? [e.s,e.t] : [e.t,e.s];
+      const hh = arcH(e);
+      e.el.setAttribute('d',
+        `M ${a.x} ${a.y} C ${a.x} ${a.y-hh}, ${b.x} ${b.y-hh}, ${b.x} ${b.y}`);
+    } else {
+      e.el.setAttribute('d',`M ${e.s.x} ${e.s.y} L ${e.t.x} ${e.t.y}`);
+    }
+  });
+}
+
+const hint=document.getElementById('modeHint');
+const HINTS={
+  group:'Distance and angle mean nothing here — only which group a node belongs to, and its size, which tracks how many connections it has.',
+  canon:'Left to right is the order of the books. An arc\u2019s width and height both track how far the connection reaches across the canon.'
+};
+function setMode(next){
+  if(next===mode) return;
+  mode=next;
+  document.getElementById('mGroup').setAttribute('aria-pressed',String(mode==='group'));
+  document.getElementById('mCanon').setAttribute('aria-pressed',String(mode==='canon'));
+  hint.textContent=HINTS[mode];
+  gAxis.style.display = mode==='canon' ? '' : 'none';
+  const from=nodes.map(n=>({x:n.x,y:n.y}));
+  const to=nodes.map(n=> mode==='canon' ? {x:n.ax,y:n.ay} : {x:n.gx,y:n.gy});
+  const t0=performance.now(), dur=matchMedia('(prefers-reduced-motion: reduce)').matches?0:520;
+  (function step(now){
+    const k=dur? Math.min(1,(now-t0)/dur) : 1;
+    const e=k<.5 ? 4*k*k*k : 1-Math.pow(-2*k+2,3)/2;
+    nodes.forEach((n,i)=>{ n.x=from[i].x+(to[i].x-from[i].x)*e; n.y=from[i].y+(to[i].y-from[i].y)*e; });
+    place(k===1 && mode==='canon');
+    if(k<1) requestAnimationFrame(step); else fit();
+  })(performance.now());
+}
+document.getElementById('mGroup').onclick=()=>setMode('group');
+document.getElementById('mCanon').onclick=()=>setMode('canon');
+hint.textContent=HINTS.canon;
+nodes.forEach(n=>{ n.x=n.ax; n.y=n.ay; });
+gAxis.style.display='';
+place(true);
+
+// ---- viewport --------------------------------------------------------------
+let vx=0, vy=0, vs=1;
+function apply(){ gRoot.setAttribute('transform',`translate(${vx},${vy}) scale(${vs})`); }
+function fit(){
+  const bb=gRoot.getBBox(), r=svg.getBoundingClientRect();
+  vs=Math.min(r.width/(bb.width+90), r.height/(bb.height+90));
+  vx=(r.width-bb.width*vs)/2-bb.x*vs; vy=(r.height-bb.height*vs)/2-bb.y*vs; apply();
+}
+window.addEventListener('resize',fit);
+document.getElementById('zin').onclick=()=>{vs*=1.25;apply()};
+document.getElementById('zout').onclick=()=>{vs/=1.25;apply()};
+document.getElementById('zfit').onclick=fit;
+let pan=null;
+svg.addEventListener('pointerdown',e=>{if(e.target.closest('.node'))return;pan={x:e.clientX-vx,y:e.clientY-vy};svg.classList.add('drag');svg.setPointerCapture(e.pointerId)});
+svg.addEventListener('pointermove',e=>{if(!pan)return;vx=e.clientX-pan.x;vy=e.clientY-pan.y;apply()});
+svg.addEventListener('pointerup',()=>{pan=null;svg.classList.remove('drag')});
+svg.addEventListener('wheel',e=>{e.preventDefault();const k=e.deltaY<0?1.1:1/1.1;const r=svg.getBoundingClientRect();
+  const mx=e.clientX-r.left, my=e.clientY-r.top; vx=mx-(mx-vx)*k; vy=my-(my-vy)*k; vs*=k; apply();},{passive:false});
+
+// ---- filters ---------------------------------------------------------------
+const onCl=new Set(Object.keys(CL)), onWa=new Set(Object.keys(WA)), onTy=new Set(Object.keys(TY));
+let query='', picked=null;
+
+function build(host, map, set, kind){
+  Object.entries(map).forEach(([k,o])=>{
+    const lab=document.createElement('label'); lab.className='row'; lab.tabIndex=0;
+    const cb=document.createElement('input'); cb.type='checkbox'; cb.checked=true;
+    const mark=document.createElement('span');
+    if(kind==='cl'){ mark.className='dot'; mark.style.background=clCol(k); }
+    else if(kind==='wa'){ mark.className='swatch'; mark.style.borderTopColor=`var(${o.v})`; }
+    else { mark.className='swatch'; mark.style.borderTopColor='var(--ink-3)';
+           if(o.dash) mark.style.borderTopStyle = o.dash==='7 4' ? 'dashed' : 'dotted'; }
+    const txt=document.createElement('span'); txt.textContent=o.name;
+    lab.append(cb,mark,txt);
+    if(kind==='cl'){ const c=document.createElement('span'); c.className='count';
+      c.textContent=nodes.filter(n=>n.cl===k).length; lab.append(c); }
+    cb.addEventListener('change',()=>{cb.checked?set.add(k):set.delete(k);draw()});
+    lab.addEventListener('keydown',e=>{if(e.key==='Enter'){cb.checked=!cb.checked;cb.dispatchEvent(new Event('change'));}});
+    host.append(lab);
+  });
+}
+build(document.getElementById('clusters'),CL,onCl,'cl');
+build(document.getElementById('warrants'),WA,onWa,'wa');
+build(document.getElementById('types'),TY,onTy,'ty');
+
+document.getElementById('q').addEventListener('input',e=>{query=e.target.value.toLowerCase().trim();draw()});
+document.getElementById('reset').onclick=()=>{
+  document.querySelectorAll('.rail input[type=checkbox]').forEach(c=>{if(!c.checked){c.checked=true;c.dispatchEvent(new Event('change'))}});
+  document.getElementById('q').value=''; query=''; picked=null; setMode('canon'); draw(); fit();
+};
+
+function matches(n){
+  if(!onCl.has(n.cl)) return false;
+  if(query && !(n.ref.toLowerCase().includes(query)||n.gist.toLowerCase().includes(query))) return false;
+  return true;
+}
+function draw(){
+  const near = picked ? new Set([picked.id,...edges.filter(e=>e.s===picked||e.t===picked).map(e=>e.s===picked?e.t.id:e.s.id)]) : null;
+  nodes.forEach(n=>{
+    const ok=matches(n);
+    n.el.classList.toggle('hide',!ok);
+    n.el.classList.toggle('dim', ok && near ? !near.has(n.id) : false);
+    n.el.classList.toggle('sel', n===picked);
+  });
+  edges.forEach(e=>{
+    const ok = onWa.has(e.wa) && onTy.has(e.ty) && matches(e.s) && matches(e.t);
+    e.el.classList.toggle('hide',!ok);
+    e.el.classList.toggle('dim', ok && picked ? (e.s!==picked&&e.t!==picked) : false);
+  });
+}
+
+// ---- detail panel ----------------------------------------------------------
+const panel=document.getElementById('panel');
+function select(n){ picked = (picked===n?null:n); render(); draw(); }
+function render(){
+  panel.innerHTML='';
+  if(!picked){
+    const p=document.createElement('p'); p.className='empty';
+    p.textContent='Pick a passage on the graph to see what it connects to and why.';
+    const note=document.createElement('p'); note.className='note';
+    note.textContent = window.NRSV
+      ? 'Verse text is read from verses.js on this machine. Line color shows how much weight the text puts behind a link; line style shows what kind of link it is. Dotted grey lines are my own readings and carry no textual claim.'
+      : 'This copy shows references and summaries. To read full verses here, run attach_verses.py against your own index and drop verses.js beside this file. Line color shows how much weight the text puts behind a link; line style shows what kind of link it is. Dotted grey lines are my own readings and carry no textual claim.';
+    panel.append(p,note); return;
+  }
+  const h=document.createElement('p'); h.className='ref'; h.textContent=picked.ref;
+  const tg=document.createElement('span'); tg.className='tag'; tg.textContent=CL[picked.cl].name;
+  panel.append(h,tg);
+  const full = (window.NRSV||{})[picked.ref];
+  if(full){
+    const q=document.createElement('blockquote'); q.className='verse'; q.textContent=full;
+    const g2=document.createElement('p'); g2.className='gist-sm'; g2.textContent=picked.gist;
+    panel.append(q,g2);
+  } else {
+    const g=document.createElement('p'); g.className='gist'; g.textContent=picked.gist;
+    panel.append(g);
+  }
+  const mine=edges.filter(e=>e.s===picked||e.t===picked)
+    .filter(e=>onWa.has(e.wa)&&onTy.has(e.ty));
+  const h3=document.createElement('h3');
+  h3.textContent = mine.length===1 ? '1 connection' : mine.length+' connections';
+  panel.append(h3);
+  mine.sort((a,b)=>['states','supports','spec'].indexOf(a.wa)-['states','supports','spec'].indexOf(b.wa));
+  mine.forEach(e=>{
+    const other = e.s===picked ? e.t : e.s;
+    const b=document.createElement('button'); b.className='link';
+    const r=document.createElement('span'); r.className='lref'; r.textContent=other.ref;
+    const m=document.createElement('span'); m.className='lmeta';
+    m.textContent = TY[e.ty].name+' · '+WA[e.wa].name + (e.note? ' — '+e.note : '');
+    m.style.color = `var(${WA[e.wa].v})`;
+    b.append(r,m); b.onclick=()=>select(other);
+    panel.append(b);
+  });
+}
+render(); draw();
+requestAnimationFrame(fit);
+</script>
+</body>
+</html>

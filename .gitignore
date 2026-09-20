@@ -1,0 +1,12 @@
+# NRSV text — copyrighted, must never leave this machine
+verses.js
+verses.json
+chapters.json
+nrsv.txt
+*.pdf
+!findings.pdf
+
+# scratch
+__pycache__/
+.DS_Store
+desktop.ini

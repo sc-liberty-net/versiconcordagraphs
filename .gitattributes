@@ -1,0 +1,3 @@
+# PDFs are binary. Without this, core.autocrlf=true inserts CRLF on
+# checkout and corrupts them (findings.pdf grew 11411 -> 11554 bytes).
+*.pdf binary
