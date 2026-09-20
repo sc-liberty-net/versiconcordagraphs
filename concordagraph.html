@@ -9,8 +9,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;1,400&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --paper:#E7E9E1; --surface:#F5F6F1; --sunk:#DDE0D6;
-  --ink:#1B2620; --ink-2:#4C564F; --ink-3:#7A8279; --line:#C6CABD;
+  /* Chrome: theme-factory "Modern Minimalist" — Charcoal #36454f, Slate Gray
+     #708090, Light Gray #d3d3d3, White #ffffff. Four colours have to cover
+     seven tokens, so the in-between tones are derived in the same cool-grey
+     hue family. Every text pair is measured: ink 9.90:1, ink-2 6.80:1 and
+     ink-3 5.50:1 on surface (the old ink-3 was 3.65:1 and failed AA).
+     The warrant colours below and the sixteen cluster colours in
+     corpus_clusters.csv are NOT themed — they carry meaning, not style. */
+  --paper:#EEF0F2; --surface:#FFFFFF; --sunk:#D3D3D3;
+  --ink:#36454F; --ink-2:#4E5D68; --ink-3:#5C6B76; --line:#C3C9CE;
+  --focus:#36454F;
   --states:#14493A; --supports:#98620F; --spec:#8A8F96;
   --anchor:#7C8B96; --bridge:#B4553C; --imperial:#52707F; --collector:#7E6E9B;
   --critique:#6E8A5E; --hebrews:#9A8352; --giving:#5F8C86; --debt:#94707A; --market:#857A6A;
@@ -18,15 +26,17 @@
   padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
 }
 :root:not([data-theme="light"]){ @media (prefers-color-scheme:dark){
-  --paper:#161A18; --surface:#1E2421; --sunk:#121614;
-  --ink:#E4E8E0; --ink-2:#A8B0A6; --ink-3:#757D74; --line:#333B36;
+  --paper:#1B2228; --surface:#242D34; --sunk:#151A1F;
+  --ink:#ECEFF1; --ink-2:#B4C0C8; --ink-3:#96A4AD; --line:#3C4750;
+  --focus:#C2CED6;
   --states:#5FBF9F; --supports:#E0A552; --spec:#8A9199;
   --anchor:#93A3AE; --bridge:#D97B60; --imperial:#7FA3B4; --collector:#A392C4;
   --critique:#93B182; --hebrews:#C2A86E; --giving:#7FB5AE; --debt:#BE939D; --market:#A99B87;
 }}
 :root[data-theme="dark"]{
-  --paper:#161A18; --surface:#1E2421; --sunk:#121614;
-  --ink:#E4E8E0; --ink-2:#A8B0A6; --ink-3:#757D74; --line:#333B36;
+  --paper:#1B2228; --surface:#242D34; --sunk:#151A1F;
+  --ink:#ECEFF1; --ink-2:#B4C0C8; --ink-3:#96A4AD; --line:#3C4750;
+  --focus:#C2CED6;
   --states:#5FBF9F; --supports:#E0A552; --spec:#8A9199;
   --anchor:#93A3AE; --bridge:#D97B60; --imperial:#7FA3B4; --collector:#A392C4;
   --critique:#93B182; --hebrews:#C2A86E; --giving:#7FB5AE; --debt:#BE939D; --market:#A99B87;
@@ -57,7 +67,7 @@ input[type=search]{
   width:100%; padding:8px 10px; border:1px solid var(--line); border-radius:7px;
   background:var(--paper); color:var(--ink); font:inherit; font-size:14px;
 }
-input[type=search]:focus-visible,button:focus-visible,.row:focus-visible{outline:2px solid var(--bridge); outline-offset:2px}
+input[type=search]:focus-visible,button:focus-visible,.row:focus-visible{outline:2px solid var(--focus); outline-offset:2px}
 .row{display:flex; align-items:center; gap:8px; padding:3px 0; cursor:pointer; font-size:13.5px; color:var(--ink-2); user-select:none}
 .row input{accent-color:var(--ink-2); margin:0; flex:none}
 .dot{width:11px; height:11px; border-radius:50%; flex:none}
@@ -139,7 +149,7 @@ button.reset:hover{background:var(--sunk)}
 /* The reference in the panel opens the chapter on Bible Gateway. */
 .ref a{color:inherit; text-decoration:none; border-bottom:1px solid var(--line)}
 .ref a:hover{border-bottom-color:var(--ink-2)}
-.ref a:focus-visible{outline:2px solid var(--bridge); outline-offset:3px; border-radius:3px}
+.ref a:focus-visible{outline:2px solid var(--focus); outline-offset:3px; border-radius:3px}
 .ref .ext{font-family:Archivo,sans-serif; font-size:11px; color:var(--ink-3); margin-left:7px; letter-spacing:.02em}
 .ref .arrow{display:block; font-family:Archivo,sans-serif; font-size:12px; color:var(--ink-2); margin:3px 0 1px; letter-spacing:.04em}
 path.esel{stroke-width:3; stroke-opacity:.95}
