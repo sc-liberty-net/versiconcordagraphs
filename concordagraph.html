@@ -106,9 +106,41 @@ button.reset:hover{background:var(--sunk)}
 .booklab{font-family:Archivo,sans-serif; font-size:10.5px; fill:var(--ink-2)}
 .tick{stroke:var(--line); stroke-width:1}
 .era{stroke:var(--ink-3); stroke-width:1; stroke-dasharray:3 4}
-.eralab{font-family:Archivo,sans-serif; font-size:10.5px; fill:var(--ink-3)}.node text{font-family:Spectral,Georgia,serif; font-size:11.5px; fill:var(--ink); pointer-events:none}
+.eralab{font-family:Archivo,sans-serif; font-size:10.5px; fill:var(--ink-3)}.node text{font-family:Spectral,Georgia,serif; font-size:11.5px; fill:var(--ink); pointer-events:auto; cursor:pointer}
 .dim{opacity:.12}
 .hide{display:none}
+
+/* Hover magnification on the spine. The label grows about its own anchor, so
+   a crowded run of references can be read one at a time without the rest
+   shifting. transform-box keeps the origin on the glyph, not the canvas. */
+.node text.mag{
+  font-size:18px; font-weight:600; fill:var(--ink);
+  paint-order:stroke; stroke:var(--paper); stroke-width:3.5px; stroke-linejoin:round;
+}
+.node.lit circle{stroke:var(--ink); stroke-width:1.25}
+.booklab{cursor:pointer}
+.booklab.mag{font-size:15px; font-weight:600; fill:var(--ink);
+  paint-order:stroke; stroke:var(--paper); stroke-width:3.5px; stroke-linejoin:round}
+.hit{stroke:transparent; stroke-width:12; fill:none; cursor:pointer}
+
+/* The readout sits outside the SVG so it never scales with the zoom. */
+.readout{
+  position:absolute; left:50%; bottom:12px; transform:translateX(-50%);
+  max-width:calc(100% - 96px); padding:7px 14px; border-radius:8px;
+  background:var(--surface); border:1px solid var(--line);
+  font-family:Spectral,Georgia,serif; font-size:19px; line-height:1.25; color:var(--ink);
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+  opacity:0; pointer-events:none; transition:opacity .12s ease;
+}
+.readout.on{opacity:1}
+.readout .rk{font-family:Archivo,sans-serif; font-size:12.5px; color:var(--ink-2); margin-left:9px}
+@media (prefers-reduced-motion:reduce){ .readout{transition:none} }
+
+/* The reference in the panel opens the chapter on Bible Gateway. */
+.ref a{color:inherit; text-decoration:none; border-bottom:1px solid var(--line)}
+.ref a:hover{border-bottom-color:var(--ink-2)}
+.ref a:focus-visible{outline:2px solid var(--bridge); outline-offset:3px; border-radius:3px}
+.ref .ext{font-family:Archivo,sans-serif; font-size:11px; color:var(--ink-3); margin-left:7px; letter-spacing:.02em}
 @media (max-width:900px){
   .main{flex-direction:column}
   .rail{width:auto; border-right:0; border-bottom:1px solid var(--line); max-height:none; padding-bottom:16px}
@@ -152,7 +184,8 @@ button.reset:hover{background:var(--sunk)}
     </div>
   </div>
   <div class="stage">
-    <svg id="net" role="img" aria-label="Network of New Testament passages about tax and tithe"></svg>    <div class="zoom">
+    <svg id="net" role="img" aria-label="Network of New Testament passages about tax and tithe"></svg>    <div class="readout" id="readout" aria-live="polite"></div>
+    <div class="zoom">
       <button id="zin" title="Zoom in" aria-label="Zoom in">+</button>
       <button id="zout" title="Zoom out" aria-label="Zoom out">−</button>
       <button id="zfit" title="Fit to view" aria-label="Fit to view">⤢</button>
@@ -634,8 +667,9 @@ const NS='http://www.w3.org/2000/svg';
 const gRoot = document.createElementNS(NS,'g');
 const gAxis = document.createElementNS(NS,'g');
 const gEdge = document.createElementNS(NS,'g');
-const gNode = document.createElementNS(NS,'g');
-gRoot.append(gAxis,gEdge,gNode); svg.append(gRoot);
+const gHit  = document.createElementNS(NS,'g');   // invisible wide strokes, so a
+const gNode = document.createElementNS(NS,'g');   // 1px arc is actually hoverable
+gRoot.append(gAxis,gEdge,gHit,gNode); svg.append(gRoot);
 
 const css = getComputedStyle(document.documentElement);
 const col = v => css.getPropertyValue(v).trim();
@@ -663,6 +697,13 @@ edges.forEach(e=>{
   if(TY[e.ty].dash) p.setAttribute('stroke-dasharray',TY[e.ty].dash);
   p.setAttribute('stroke-linecap','round');
   e.el=p; gEdge.append(p);
+
+  const h=document.createElementNS(NS,'path');
+  h.setAttribute('class','hit');
+  h.addEventListener('pointerenter',()=>hover(e));
+  h.addEventListener('pointerleave',()=>hover(null));
+  h.addEventListener('click',()=>select(e.s));
+  e.hit=h; gHit.append(h);
 });
 
 nodes.forEach(n=>{
@@ -674,15 +715,21 @@ nodes.forEach(n=>{
   c.setAttribute('fill', clCol(n.cl));
   c.setAttribute('stroke','var(--paper)'); c.setAttribute('stroke-width',1.5);
   const t=document.createElementNS(NS,'text');
-  t.textContent=n.ref.replace(/^(\d )?(\w{3})\w*/, (m,a,b)=>(a||'')+b);
+  n.abbr=n.ref.replace(/^(\d )?(\w{3})\w*/, (m,a,b)=>(a||'')+b);
+  t.textContent=n.abbr;
   g.append(c,t); g.tabIndex=0; g.setAttribute('role','button');
   g.setAttribute('aria-label',n.ref);
   g.addEventListener('click',()=>select(n));
   g.addEventListener('keydown',ev=>{if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();select(n);}});
+  g.addEventListener('pointerenter',()=>hover(n));
+  g.addEventListener('pointerleave',()=>hover(null));
+  g.addEventListener('focus',()=>hover(n));      // keyboard gets the same readout
+  g.addEventListener('blur',()=>hover(null));
   n.el=g; n.circle=c; n.label=t; gNode.append(g);
 });
 
 // ---- book axis, drawn only in canonical mode -------------------------------
+const bookLabels = {};
 (function buildAxis(){
   const spine=document.createElementNS(NS,'line');
   spine.setAttribute('x1',X0-14); spine.setAttribute('y1',BASE_Y);
@@ -701,7 +748,10 @@ nodes.forEach(n=>{
     lb.setAttribute('class','booklab');
     lb.setAttribute('transform',`translate(${mid},${BASE_Y+89}) rotate(-45)`);
     lb.setAttribute('text-anchor','end'); lb.textContent=ABBR[b];
+    lb.addEventListener('pointerenter',()=>hover({kind:'book',book:b}));
+    lb.addEventListener('pointerleave',()=>hover(null));
     gAxis.append(lb);
+    bookLabels[b]=lb;
   });
   const first=canon.find(n=>n.book===NT_FIRST);
   if(first){
@@ -735,14 +785,16 @@ function place(arcs){
     }
   });
   edges.forEach(e=>{
+    let d;
     if(arcs){
       const [a,b] = e.s.x<=e.t.x ? [e.s,e.t] : [e.t,e.s];
       const hh = arcH(e);
-      e.el.setAttribute('d',
-        `M ${a.x} ${a.y} C ${a.x} ${a.y-hh}, ${b.x} ${b.y-hh}, ${b.x} ${b.y}`);
+      d = `M ${a.x} ${a.y} C ${a.x} ${a.y-hh}, ${b.x} ${b.y-hh}, ${b.x} ${b.y}`;
     } else {
-      e.el.setAttribute('d',`M ${e.s.x} ${e.s.y} L ${e.t.x} ${e.t.y}`);
+      d = `M ${e.s.x} ${e.s.y} L ${e.t.x} ${e.t.y}`;
     }
+    e.el.setAttribute('d',d);
+    e.hit.setAttribute('d',d);          // the hit stroke tracks the drawn one
   });
 }
 
@@ -797,7 +849,7 @@ svg.addEventListener('wheel',e=>{e.preventDefault();const k=e.deltaY<0?1.1:1/1.1
 
 // ---- filters ---------------------------------------------------------------
 const onCl=new Set(Object.keys(CL)), onWa=new Set(Object.keys(WA)), onTy=new Set(Object.keys(TY));
-let query='', picked=null;
+let query='', picked=null, hovered=null;
 
 function build(host, map, set, kind){
   Object.entries(map).forEach(([k,o])=>{
@@ -832,19 +884,92 @@ function matches(n){
   if(query && !(n.ref.toLowerCase().includes(query)||n.gist.toLowerCase().includes(query))) return false;
   return true;
 }
+// ---- focus: hover and selection share one treatment ------------------------
+// A hover wins while it lasts, otherwise the click-selection stands. Pointing
+// at something therefore previews exactly what selecting it would show.
+function focused(){ return hovered || picked; }
+
+// A node lights itself and its neighbours; an arc lights its two ends; a book
+// lights every passage in it, and theirs.
+// A focus is a book ({kind:'book'}), an edge (has .s and .t) or a node. The
+// kind tag is not decoration: nodes carry their own .book property, so testing
+// f.book would read every node hover as a hover on its whole book.
+const isBook = f => !!f && f.kind==='book';
+const isEdge = f => !!f && !!f.s && !!f.t;
+
+function litNodes(f){
+  if(!f) return null;
+  if(isBook(f)){
+    const ids=new Set(nodes.filter(n=>n.book===f.book).map(n=>n.id));
+    edges.forEach(e=>{ if(ids.has(e.s.id)||ids.has(e.t.id)){ ids.add(e.s.id); ids.add(e.t.id); } });
+    return ids;
+  }
+  if(isEdge(f)) return new Set([f.s.id, f.t.id]);
+  return new Set([f.id, ...edges.filter(e=>e.s===f||e.t===f)
+                               .map(e=> e.s===f ? e.t.id : e.s.id)]);
+}
+function litEdge(e,f){
+  if(!f) return true;
+  if(isBook(f)) return e.s.book===f.book || e.t.book===f.book;
+  if(isEdge(f)) return e===f;
+  return e.s===f || e.t===f;
+}
+// The thing itself, as opposed to what it reaches — this gets the outline.
+function isCore(n,f){
+  if(!f) return false;
+  if(isBook(f)) return n.book===f.book;
+  if(isEdge(f)) return n===f.s || n===f.t;
+  return n===f;
+}
+
+const readout=document.getElementById('readout');
+function showReadout(f){
+  if(!f){ readout.classList.remove('on'); readout.textContent=''; return; }
+  let main, kind;
+  if(isBook(f)){
+    const c=nodes.filter(n=>n.book===f.book).length;
+    main=f.book; kind=c===1 ? '1 passage' : c+' passages';
+  } else if(isEdge(f)){
+    main=`${f.s.ref}  →  ${f.t.ref}`;
+    kind=`${TY[f.ty].name} · ${WA[f.wa].name}`;
+  } else {
+    main=f.ref; kind=CL[f.cl].name;
+  }
+  readout.textContent=main;
+  const k=document.createElement('span'); k.className='rk'; k.textContent=kind;
+  readout.append(k);
+  readout.classList.add('on');
+}
+function hover(f){
+  hovered=f; showReadout(f);
+  // SVG has no z-index: the magnified label would be painted under whichever
+  // neighbours happen to come after it. Re-appending lifts it to the front.
+  if(f && f.el && f.el.parentNode===gNode) gNode.append(f.el);
+  draw();
+}
+
 function draw(){
-  const near = picked ? new Set([picked.id,...edges.filter(e=>e.s===picked||e.t===picked).map(e=>e.s===picked?e.t.id:e.s.id)]) : null;
+  const f=focused(), near=litNodes(f);
   nodes.forEach(n=>{
     const ok=matches(n);
     n.el.classList.toggle('hide',!ok);
     n.el.classList.toggle('dim', ok && near ? !near.has(n.id) : false);
     n.el.classList.toggle('sel', n===picked);
+    n.el.classList.toggle('lit', ok && isCore(n,f));
+    // Magnified, the label spells the reference out; the spine is too crowded
+    // to carry the full form at rest, which is the whole reason to magnify it.
+    const mag = n===hovered;
+    n.label.classList.toggle('mag', mag);
+    const want = mag ? n.ref : n.abbr;
+    if(n.label.textContent!==want) n.label.textContent=want;
   });
   edges.forEach(e=>{
     const ok = onWa.has(e.wa) && onTy.has(e.ty) && matches(e.s) && matches(e.t);
     e.el.classList.toggle('hide',!ok);
-    e.el.classList.toggle('dim', ok && picked ? (e.s!==picked&&e.t!==picked) : false);
+    e.hit.classList.toggle('hide',!ok);
+    e.el.classList.toggle('dim', ok && f ? !litEdge(e,f) : false);
   });
+  for(const b in bookLabels) bookLabels[b].classList.toggle('mag', isBook(f) && f.book===b);
 }
 
 // ---- detail panel ----------------------------------------------------------
@@ -861,7 +986,22 @@ function render(){
       : 'This copy shows references and summaries. To read full verses here, run attach_verses.py against your own index and drop verses.js beside this file. Line color shows how much weight the text puts behind a link; line style shows what kind of link it is. Dotted grey lines are my own readings and carry no textual claim.';
     panel.append(p,note); return;
   }
-  const h=document.createElement('p'); h.className='ref'; h.textContent=picked.ref;
+  // The reference opens the whole CHAPTER on Bible Gateway, not the single
+  // verse: a verse-level link crops the surrounding context out of view, which
+  // is the context this corpus is about. Bible Gateway offers no way to scroll
+  // to or highlight one verse from the URL — its verse ids are opaque
+  // per-version numbers (en-NRSVUE-23888) and it does not style :target — so
+  // the verse to look for is named on the link instead. Note also that it no
+  // longer serves plain NRSV; a NRSV request redirects to NRSVUE.
+  const h=document.createElement('p'); h.className='ref';
+  const a=document.createElement('a');
+  a.href='https://www.biblegateway.com/passage/?search='
+        + encodeURIComponent(picked.book+' '+picked.chap) + '&version=NRSVUE';
+  a.target='_blank'; a.rel='noopener noreferrer';
+  a.textContent=picked.ref;
+  a.title=`Open ${picked.book} ${picked.chap} on Bible Gateway (NRSVUE) — look for verse ${picked.vers}`;
+  const ext=document.createElement('span'); ext.className='ext'; ext.textContent='ch. ↗';
+  h.append(a,ext);
   const tg=document.createElement('span'); tg.className='tag'; tg.textContent=CL[picked.cl].name;
   panel.append(h,tg);
   const full = (window.NRSV||{})[picked.ref];
