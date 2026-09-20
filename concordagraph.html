@@ -141,6 +141,9 @@ button.reset:hover{background:var(--sunk)}
 .ref a:hover{border-bottom-color:var(--ink-2)}
 .ref a:focus-visible{outline:2px solid var(--bridge); outline-offset:3px; border-radius:3px}
 .ref .ext{font-family:Archivo,sans-serif; font-size:11px; color:var(--ink-3); margin-left:7px; letter-spacing:.02em}
+.ref .arrow{display:block; font-family:Archivo,sans-serif; font-size:12px; color:var(--ink-2); margin:3px 0 1px; letter-spacing:.04em}
+path.esel{stroke-width:3; stroke-opacity:.95}
+.booklab.sel{font-weight:600; fill:var(--ink)}
 @media (max-width:900px){
   .main{flex-direction:column}
   .rail{width:auto; border-right:0; border-bottom:1px solid var(--line); max-height:none; padding-bottom:16px}
@@ -559,6 +562,11 @@ const TY = {
   con:{name:"Same idea", dash:"1.5 4"}
 };
 
+// The "by group" arrangement is HIDDEN, not removed. Everything behind it is
+// still here and still runs — the relax() layout, each node's gx/gy, the group
+// hint, setMode('group'). Flip this to true to put the control back.
+const SHOW_GROUP_LENS = false;
+
 const nodes = N.map(([id,ref,cl,gist,mod])=>({id,ref,cl,gist,mod,x:0,y:0,vx:0,vy:0}));
 const byId = Object.fromEntries(nodes.map(n=>[n.id,n]));
 const edges = E.map(([s,t,ty,wa,note])=>({s:byId[s],t:byId[t],ty,wa,note}));
@@ -702,7 +710,13 @@ edges.forEach(e=>{
   h.setAttribute('class','hit');
   h.addEventListener('pointerenter',()=>hover(e));
   h.addEventListener('pointerleave',()=>hover(null));
-  h.addEventListener('click',()=>select(e.s));
+  h.addEventListener('click',()=>select(e));
+  h.tabIndex=0; h.setAttribute('role','button');
+  h.setAttribute('aria-label',`${e.s.ref} to ${e.t.ref} — ${TY[e.ty].name}, ${WA[e.wa].name}`);
+  h.addEventListener('keydown',ev=>{
+    if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();select(e);}});
+  h.addEventListener('focus',()=>hover(e));
+  h.addEventListener('blur',()=>hover(null));
   e.hit=h; gHit.append(h);
 });
 
@@ -730,6 +744,9 @@ nodes.forEach(n=>{
 
 // ---- book axis, drawn only in canonical mode -------------------------------
 const bookLabels = {};
+// One stable focus object per book. Selection toggles by identity, so a fresh
+// {kind:'book'} per event would make a second click fail to deselect.
+const bookFocus = {};
 (function buildAxis(){
   const spine=document.createElementNS(NS,'line');
   spine.setAttribute('x1',X0-14); spine.setAttribute('y1',BASE_Y);
@@ -748,8 +765,16 @@ const bookLabels = {};
     lb.setAttribute('class','booklab');
     lb.setAttribute('transform',`translate(${mid},${BASE_Y+89}) rotate(-45)`);
     lb.setAttribute('text-anchor','end'); lb.textContent=ABBR[b];
-    lb.addEventListener('pointerenter',()=>hover({kind:'book',book:b}));
+    const bf = bookFocus[b] = {kind:'book', book:b};
+    lb.addEventListener('pointerenter',()=>hover(bf));
     lb.addEventListener('pointerleave',()=>hover(null));
+    lb.addEventListener('click',()=>select(bf));
+    lb.tabIndex=0; lb.setAttribute('role','button');
+    lb.setAttribute('aria-label',`${b} — all passages in this book`);
+    lb.addEventListener('keydown',ev=>{
+      if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();select(bf);}});
+    lb.addEventListener('focus',()=>hover(bf));
+    lb.addEventListener('blur',()=>hover(null));
     gAxis.append(lb);
     bookLabels[b]=lb;
   });
@@ -804,6 +829,7 @@ const HINTS={
   canon:'Left to right is the order of the books. An arc\u2019s width and height both track how far the connection reaches across the canon.'
 };
 function setMode(next){
+  if(next==='group' && !SHOW_GROUP_LENS) return;   // hidden lens stays unreachable
   if(next===mode) return;
   mode=next;
   document.getElementById('mGroup').setAttribute('aria-pressed',String(mode==='group'));
@@ -823,6 +849,7 @@ function setMode(next){
 }
 document.getElementById('mGroup').onclick=()=>setMode('group');
 document.getElementById('mCanon').onclick=()=>setMode('canon');
+if(!SHOW_GROUP_LENS) document.getElementById('mGroup').classList.add('hide');
 hint.textContent=HINTS.canon;
 nodes.forEach(n=>{ n.x=n.ax; n.y=n.ay; });
 gAxis.style.display='';
@@ -876,7 +903,8 @@ build(document.getElementById('types'),TY,onTy,'ty');
 document.getElementById('q').addEventListener('input',e=>{query=e.target.value.toLowerCase().trim();draw()});
 document.getElementById('reset').onclick=()=>{
   document.querySelectorAll('.rail input[type=checkbox]').forEach(c=>{if(!c.checked){c.checked=true;c.dispatchEvent(new Event('change'))}});
-  document.getElementById('q').value=''; query=''; picked=null; setMode('canon'); draw(); fit();
+  document.getElementById('q').value=''; query=''; picked=null; hovered=null;
+  setMode('canon'); render(); draw(); fit();   // render() too, or the panel keeps the cleared selection
 };
 
 function matches(n){
@@ -954,7 +982,7 @@ function draw(){
     const ok=matches(n);
     n.el.classList.toggle('hide',!ok);
     n.el.classList.toggle('dim', ok && near ? !near.has(n.id) : false);
-    n.el.classList.toggle('sel', n===picked);
+    n.el.classList.toggle('sel', isCore(n,picked));
     n.el.classList.toggle('lit', ok && isCore(n,f));
     // Magnified, the label spells the reference out; the spine is too crowded
     // to carry the full form at rest, which is the whole reason to magnify it.
@@ -968,67 +996,118 @@ function draw(){
     e.el.classList.toggle('hide',!ok);
     e.hit.classList.toggle('hide',!ok);
     e.el.classList.toggle('dim', ok && f ? !litEdge(e,f) : false);
+    e.el.classList.toggle('esel', e===picked);
   });
-  for(const b in bookLabels) bookLabels[b].classList.toggle('mag', isBook(f) && f.book===b);
+  for(const b in bookLabels){
+    bookLabels[b].classList.toggle('mag', isBook(f) && f.book===b);
+    bookLabels[b].classList.toggle('sel', isBook(picked) && picked.book===b);
+  }
 }
 
 // ---- detail panel ----------------------------------------------------------
 const panel=document.getElementById('panel');
-function select(n){ picked = (picked===n?null:n); render(); draw(); }
-function render(){
-  panel.innerHTML='';
-  if(!picked){
-    const p=document.createElement('p'); p.className='empty';
-    p.textContent='Pick a passage on the graph to see what it connects to and why.';
-    const note=document.createElement('p'); note.className='note';
-    note.textContent = window.NRSV
-      ? 'Verse text is read from verses.js on this machine. Line color shows how much weight the text puts behind a link; line style shows what kind of link it is. Dotted grey lines are my own readings and carry no textual claim.'
-      : 'This copy shows references and summaries. To read full verses here, run attach_verses.py against your own index and drop verses.js beside this file. Line color shows how much weight the text puts behind a link; line style shows what kind of link it is. Dotted grey lines are my own readings and carry no textual claim.';
-    panel.append(p,note); return;
-  }
-  // The reference opens the whole CHAPTER on Bible Gateway, not the single
-  // verse: a verse-level link crops the surrounding context out of view, which
-  // is the context this corpus is about. Bible Gateway offers no way to scroll
-  // to or highlight one verse from the URL — its verse ids are opaque
-  // per-version numbers (en-NRSVUE-23888) and it does not style :target — so
-  // the verse to look for is named on the link instead. Note also that it no
-  // longer serves plain NRSV; a NRSV request redirects to NRSVUE.
-  const h=document.createElement('p'); h.className='ref';
+// A passage, an arc or a book can all be selected, and all three toggle off
+// when picked again. draw() already treats the three alike; the panel below
+// is what differs.
+function select(f){ picked = (picked===f ? null : f); render(); draw(); }
+
+// The reference opens the whole CHAPTER on Bible Gateway, not the single
+// verse: a verse-level link crops the surrounding context out of view, which
+// is the context this corpus is about. Bible Gateway offers no way to scroll
+// to or highlight one verse from the URL — its verse ids are opaque
+// per-version numbers (en-NRSVUE-23888) and it does not style :target — so
+// the verse to look for is named on the link instead. Note also that it no
+// longer serves plain NRSV; a NRSV request redirects to NRSVUE.
+function chapterLink(n){
   const a=document.createElement('a');
   a.href='https://www.biblegateway.com/passage/?search='
-        + encodeURIComponent(picked.book+' '+picked.chap) + '&version=NRSVUE';
+        + encodeURIComponent(n.book+' '+n.chap) + '&version=NRSVUE';
   a.target='_blank'; a.rel='noopener noreferrer';
-  a.textContent=picked.ref;
-  a.title=`Open ${picked.book} ${picked.chap} on Bible Gateway (NRSVUE) — look for verse ${picked.vers}`;
-  const ext=document.createElement('span'); ext.className='ext'; ext.textContent='ch. ↗';
-  h.append(a,ext);
-  const tg=document.createElement('span'); tg.className='tag'; tg.textContent=CL[picked.cl].name;
+  a.textContent=n.ref;
+  a.title=`Open ${n.book} ${n.chap} on Bible Gateway (NRSVUE) — look for verse ${n.vers}`;
+  const s=document.createElement('span'); s.className='ext'; s.textContent='ch. ↗';
+  return [a,s];
+}
+function linkRow(ref, meta, colourVar, onClick){
+  const b=document.createElement('button'); b.className='link';
+  const r=document.createElement('span'); r.className='lref'; r.textContent=ref;
+  const m=document.createElement('span'); m.className='lmeta'; m.textContent=meta;
+  if(colourVar) m.style.color=`var(${colourVar})`;
+  b.append(r,m); b.onclick=onClick;
+  return b;
+}
+function renderEmpty(){
+  const p=document.createElement('p'); p.className='empty';
+  p.textContent='Pick a passage, an arc or a book on the graph to see what it connects to and why.';
+  const note=document.createElement('p'); note.className='note';
+  note.textContent = window.NRSV
+    ? 'Verse text is read from verses.js on this machine. Line color shows how much weight the text puts behind a link; line style shows what kind of link it is. Dotted grey lines are my own readings and carry no textual claim.'
+    : 'This copy shows references and summaries. To read full verses here, run attach_verses.py against your own index and drop verses.js beside this file. Line color shows how much weight the text puts behind a link; line style shows what kind of link it is. Dotted grey lines are my own readings and carry no textual claim.';
+  panel.append(p,note);
+}
+
+function renderNode(n){
+  const h=document.createElement('p'); h.className='ref';
+  h.append(...chapterLink(n));
+  const tg=document.createElement('span'); tg.className='tag'; tg.textContent=CL[n.cl].name;
   panel.append(h,tg);
-  const full = (window.NRSV||{})[picked.ref];
+  const full = (window.NRSV||{})[n.ref];
   if(full){
     const q=document.createElement('blockquote'); q.className='verse'; q.textContent=full;
-    const g2=document.createElement('p'); g2.className='gist-sm'; g2.textContent=picked.gist;
+    const g2=document.createElement('p'); g2.className='gist-sm'; g2.textContent=n.gist;
     panel.append(q,g2);
   } else {
-    const g=document.createElement('p'); g.className='gist'; g.textContent=picked.gist;
+    const g=document.createElement('p'); g.className='gist'; g.textContent=n.gist;
     panel.append(g);
   }
-  const mine=edges.filter(e=>e.s===picked||e.t===picked)
+  const mine=edges.filter(e=>e.s===n||e.t===n)
     .filter(e=>onWa.has(e.wa)&&onTy.has(e.ty));
   const h3=document.createElement('h3');
   h3.textContent = mine.length===1 ? '1 connection' : mine.length+' connections';
   panel.append(h3);
   mine.sort((a,b)=>['states','supports','spec'].indexOf(a.wa)-['states','supports','spec'].indexOf(b.wa));
   mine.forEach(e=>{
-    const other = e.s===picked ? e.t : e.s;
-    const b=document.createElement('button'); b.className='link';
-    const r=document.createElement('span'); r.className='lref'; r.textContent=other.ref;
-    const m=document.createElement('span'); m.className='lmeta';
-    m.textContent = TY[e.ty].name+' · '+WA[e.wa].name + (e.note? ' — '+e.note : '');
-    m.style.color = `var(${WA[e.wa].v})`;
-    b.append(r,m); b.onclick=()=>select(other);
-    panel.append(b);
+    const other = e.s===n ? e.t : e.s;
+    panel.append(linkRow(other.ref,
+      TY[e.ty].name+' · '+WA[e.wa].name + (e.note? ' — '+e.note : ''),
+      WA[e.wa].v, ()=>select(e)));   // clicking a connection selects the ARC
   });
+}
+
+const JOIN = {lex:'shares wording with', ref:'cites', con:'connects to'};
+function renderEdge(e){
+  const h=document.createElement('p'); h.className='ref';
+  h.append(...chapterLink(e.s));
+  const ar=document.createElement('span'); ar.className='arrow'; ar.textContent=JOIN[e.ty];
+  h.append(ar);
+  h.append(...chapterLink(e.t));
+  const tg=document.createElement('span'); tg.className='tag';
+  tg.textContent = TY[e.ty].name+' · '+WA[e.wa].name;
+  panel.append(h,tg);
+  if(e.note){
+    const g=document.createElement('p'); g.className='gist'; g.textContent=e.note;
+    panel.append(g);
+  }
+  const h3=document.createElement('h3'); h3.textContent='Both ends'; panel.append(h3);
+  [e.s,e.t].forEach(n=> panel.append(linkRow(n.ref, n.gist, null, ()=>select(n))));
+}
+
+function renderBook(f){
+  const own = nodes.filter(n=>n.book===f.book).sort((a,b)=>a.chap-b.chap||a.vers-b.vers);
+  const h=document.createElement('p'); h.className='ref'; h.textContent=f.book;
+  const tg=document.createElement('span'); tg.className='tag';
+  tg.textContent = own.length===1 ? '1 passage' : own.length+' passages';
+  panel.append(h,tg);
+  const h3=document.createElement('h3'); h3.textContent='Passages'; panel.append(h3);
+  own.forEach(n=> panel.append(linkRow(n.ref, n.gist, null, ()=>select(n))));
+}
+
+function render(){
+  panel.innerHTML='';
+  if(!picked) return renderEmpty();
+  if(isBook(picked)) return renderBook(picked);
+  if(isEdge(picked)) return renderEdge(picked);
+  renderNode(picked);
 }
 render(); draw();
 requestAnimationFrame(fit);
