@@ -867,10 +867,34 @@ window.addEventListener('resize',fit);
 document.getElementById('zin').onclick=()=>{vs*=1.25;apply()};
 document.getElementById('zout').onclick=()=>{vs/=1.25;apply()};
 document.getElementById('zfit').onclick=fit;
-let pan=null;
-svg.addEventListener('pointerdown',e=>{if(e.target.closest('.node'))return;pan={x:e.clientX-vx,y:e.clientY-vy};svg.classList.add('drag');svg.setPointerCapture(e.pointerId)});
-svg.addEventListener('pointermove',e=>{if(!pan)return;vx=e.clientX-pan.x;vy=e.clientY-pan.y;apply()});
-svg.addEventListener('pointerup',()=>{pan=null;svg.classList.remove('drag')});
+// Panning must not call svg.setPointerCapture on pointerdown. Capturing the
+// pointer retargets the following click to the <svg>, so a click on an arc or
+// a book label never reaches that element's own handler — which is exactly how
+// selecting them broke. Instead: remember where the press started, begin
+// panning only once the pointer has actually moved, and track the drag on
+// window so it survives leaving the SVG. A press that never moves stays a
+// click; a press that does move pans, and its trailing click is swallowed.
+const DRAG_SLOP = 4;
+let panFrom=null, panning=false, swallowClick=false;
+svg.addEventListener('pointerdown',e=>{
+  if(e.target.closest('.node')) return;          // nodes are for selecting, not panning
+  panFrom={x:e.clientX, y:e.clientY, vx, vy};
+});
+window.addEventListener('pointermove',e=>{
+  if(!panFrom) return;
+  if(!panning){
+    if(Math.hypot(e.clientX-panFrom.x, e.clientY-panFrom.y) < DRAG_SLOP) return;
+    panning=true; svg.classList.add('drag');
+  }
+  vx=panFrom.vx+(e.clientX-panFrom.x); vy=panFrom.vy+(e.clientY-panFrom.y); apply();
+});
+window.addEventListener('pointerup',()=>{
+  if(panning) swallowClick=true;
+  panFrom=null; panning=false; svg.classList.remove('drag');
+});
+svg.addEventListener('click',e=>{
+  if(swallowClick){ swallowClick=false; e.stopPropagation(); e.preventDefault(); }
+}, true);
 svg.addEventListener('wheel',e=>{e.preventDefault();const k=e.deltaY<0?1.1:1/1.1;const r=svg.getBoundingClientRect();
   const mx=e.clientX-r.left, my=e.clientY-r.top; vx=mx-(mx-vx)*k; vy=my-(my-vy)*k; vs*=k; apply();},{passive:false});
 
@@ -970,9 +994,14 @@ function showReadout(f){
 }
 function hover(f){
   hovered=f; showReadout(f);
-  // SVG has no z-index: the magnified label would be painted under whichever
-  // neighbours happen to come after it. Re-appending lifts it to the front.
-  if(f && f.el && f.el.parentNode===gNode) gNode.append(f.el);
+  // Do NOT re-append the hovered node to lift it above its neighbours. SVG has
+  // no z-index, so that was the obvious way to raise the magnified label — but
+  // detaching and re-inserting the group happens under the cursor, and the
+  // browser then never synthesises the click at all: pointerdown, mousedown,
+  // pointerup and mouseup all arrive on the circle and no click follows. That
+  // is what stopped passages being selectable. The label's paper-coloured halo
+  // (paint-order:stroke) keeps it readable over its neighbours instead, and the
+  // readout below the spine carries the full reference regardless.
   draw();
 }
 
