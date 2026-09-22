@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Tax and tithe — a concordagraph</title>
+<title>Concordagraph - Taxes &amp; Tithes</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;1,400&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
@@ -131,7 +131,7 @@ button.reset:hover{background:var(--sunk)}
 .booklab{cursor:pointer}
 .booklab.mag{font-size:15px; font-weight:600; fill:var(--ink);
   paint-order:stroke; stroke:var(--paper); stroke-width:3.5px; stroke-linejoin:round}
-.hit{stroke:transparent; stroke-width:12; fill:none; cursor:pointer}
+.hit{stroke:transparent; stroke-width:16; fill:none; cursor:pointer}
 /* Clicking an arc must not draw a focus ring. The browser draws that ring
    around the element's bounding box, and an arc's bounding box is an enormous
    rectangle spanning the canvas. :focus-visible scopes it to keyboard focus,
@@ -162,7 +162,14 @@ button.reset:hover{background:var(--sunk)}
 .ref a:focus-visible{outline:2px solid var(--focus); outline-offset:3px; border-radius:3px}
 .ref .ext{font-family:Archivo,sans-serif; font-size:11px; color:var(--ink-3); margin-left:7px; letter-spacing:.02em}
 .ref .arrow{display:block; font-family:Archivo,sans-serif; font-size:12px; color:var(--ink-2); margin:3px 0 1px; letter-spacing:.04em}
-path.esel{stroke-width:3; stroke-opacity:.95}
+/* Arc strokes are measured in SCREEN pixels, not in the drawing's own units.
+   Without this they scale with the zoom, and the graph opens fitted at roughly
+   a fifth of full size — so a 1.6-unit line was landing at under a third of a
+   pixel and the dash patterns collapsed into apparent solid lines, taking the
+   lex/ref/con distinction with them. Non-scaling-stroke keeps both the weight
+   and the dashes constant however far out you are. */
+.edge, .hit{vector-effect:non-scaling-stroke}
+path.esel{stroke-width:4; stroke-opacity:1}
 .booklab.sel{font-weight:600; fill:var(--ink)}
 @media (max-width:900px){
   .main{flex-direction:column}
@@ -175,8 +182,11 @@ path.esel{stroke-width:3; stroke-opacity:.95}
 <body>
 <div class="wrap">
 <header>
-  <h1>Tax and tithe in the New Testament</h1>
-  <p class="sub">Eighty-nine passages, drawn from the NRSV and verified against a chapter-and-verse index. Every link names its kind and how much weight the text puts behind it. Click a passage to read its connections.</p>
+  <!-- Both of these are written by the script from the generated block, so the
+       page cannot misstate its own size or scope again. The static text below
+       is a placeholder that makes no numeric claim. -->
+  <h1 id="hTitle">Tax, tithe and tribute</h1>
+  <p class="sub" id="hSub">Drawn from the NRSV and verified against a chapter-and-verse index. Every link names its kind and how much weight the text puts behind it.</p>
 </header>
 <div class="main">
   <div class="rail">
@@ -224,6 +234,35 @@ path.esel{stroke-width:3; stroke-opacity:.95}
 const MOD = "tithe";
 const MODS = {
   tithe:{title:"Tax, tithe and tribute"},
+};
+const META = {nodes:151,edges:170,books:25};
+const BOOKS = ["Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy", "Ruth", "1 Samuel", "Nehemiah", "Psalm", "Ezekiel", "Amos", "Zechariah", "Malachi", "Matthew", "Mark", "Luke", "John", "Acts", "Romans", "1 Corinthians", "2 Corinthians", "1 Timothy", "Hebrews", "James", "1 Peter"];
+const ABBR = {
+  "Genesis":"Gen",
+  "Exodus":"Exod",
+  "Leviticus":"Lev",
+  "Numbers":"Num",
+  "Deuteronomy":"Deut",
+  "Ruth":"Ruth",
+  "1 Samuel":"1 Sam",
+  "Nehemiah":"Neh",
+  "Psalm":"Ps",
+  "Ezekiel":"Ezek",
+  "Amos":"Amos",
+  "Zechariah":"Zech",
+  "Malachi":"Mal",
+  "Matthew":"Matt",
+  "Mark":"Mark",
+  "Luke":"Luke",
+  "John":"John",
+  "Acts":"Acts",
+  "Romans":"Rom",
+  "1 Corinthians":"1 Cor",
+  "2 Corinthians":"2 Cor",
+  "1 Timothy":"1 Tim",
+  "Hebrews":"Heb",
+  "James":"Jas",
+  "1 Peter":"1 Pet",
 };
 const CL = {
   anchor:{name:"Tithe statutes",light:"#7C8B96",dark:"#93A3AE",role:""},
@@ -604,6 +643,17 @@ const activeMods = [...new Set(nodes.map(n=>n.mod))];
 // gets a ring with nothing in the middle.
 const HUB = Object.keys(CL).find(k=>CL[k].role==='hub') || null;
 
+// The header states the corpus's size, so it is written from the generated
+// counts rather than typed. It had drifted to "Eighty-nine passages ... in the
+// New Testament" against 151 passages across 25 books, 46 of them Old
+// Testament.
+document.getElementById('hTitle').textContent = (MODS[MOD]||{}).title || 'Concordagraph';
+document.getElementById('hSub').textContent =
+  `${META.nodes} passages across ${META.books} books, joined by ${META.edges} connections — `
+  + 'drawn from the NRSV and verified against a chapter-and-verse index. Every link names '
+  + 'its kind and how much weight the text puts behind it. Click a passage, an arc or a '
+  + 'book label to read what it connects to.';
+
 // ---- layout: cluster anchors, then relax -----------------------------------
 const order = Object.keys(CL);
 const W=1180, H=880;
@@ -648,14 +698,12 @@ relax(420);
 nodes.forEach(n=>{ n.gx=n.x; n.gy=n.y; });
 
 // ---- layout 2: canonical order along a baseline ----------------------------
-const BOOKS = ["Genesis","Exodus","Leviticus","Numbers","Deuteronomy","1 Samuel",
-  "Amos","Malachi","Matthew","Mark","Luke","John","Acts","Romans",
-  "1 Corinthians","2 Corinthians","Hebrews","1 Peter"];
-const ABBR = {"Genesis":"Gen","Exodus":"Exod","Leviticus":"Lev","Numbers":"Num",
-  "Deuteronomy":"Deut","1 Samuel":"1 Sam","Amos":"Amos","Malachi":"Mal",
-  "Matthew":"Matt","Mark":"Mark","Luke":"Luke","John":"John","Acts":"Acts",
-  "Romans":"Rom","1 Corinthians":"1 Cor","2 Corinthians":"2 Cor",
-  "Hebrews":"Heb","1 Peter":"1 Pet"};
+// BOOKS and ABBR are GENERATED into the corpus block above, in the order the
+// NRSV itself puts them, derived from the verse index. They used to be
+// hardcoded here as eighteen books, which the corpus outgrew: seven cited
+// books were absent, indexOf returned -1 for each, and their twelve nodes
+// sorted ahead of Genesis with no tick or label on the axis. build_graph.py
+// now refuses to write if a cited book cannot be placed.
 const NT_FIRST = "Matthew";
 nodes.forEach(n=>{
   const m = n.ref.match(/^((?:[1-4] )?[A-Za-z]+) (\d+):(\d+)$/);
@@ -718,10 +766,13 @@ darkQ.addEventListener('change', repaint);
 
 edges.forEach(e=>{
   const p=document.createElementNS(NS,'path');
+  p.setAttribute('class','edge');
   p.setAttribute('fill','none');
   p.setAttribute('stroke',`var(${WA[e.wa].v})`);
-  p.setAttribute('stroke-width', e.wa==='states'?1.6:e.wa==='supports'?1.3:1);
-  p.setAttribute('stroke-opacity', e.wa==='states'?.75:e.wa==='supports'?.6:.45);
+  // Screen pixels, because of non-scaling-stroke above. The three tiers stay
+  // ranked by weight and by opacity, which is what carries the warrant.
+  p.setAttribute('stroke-width', e.wa==='states'?2.4:e.wa==='supports'?1.9:1.4);
+  p.setAttribute('stroke-opacity', e.wa==='states'?.9:e.wa==='supports'?.75:.6);
   if(TY[e.ty].dash) p.setAttribute('stroke-dasharray',TY[e.ty].dash);
   p.setAttribute('stroke-linecap','round');
   e.el=p; gEdge.append(p);
