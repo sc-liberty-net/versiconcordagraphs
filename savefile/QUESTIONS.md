@@ -169,12 +169,40 @@ deliberate boundary marker; the corpus does not say which.
 *Needs:* Ethan. Cheaper to settle at 151 nodes than at 400. Room task 58.
 </details>
 
-**Q5 · Can two passages carry more than one connection between them?**
+**~~Q5 · Can two passages carry more than one connection between them?~~
+ANSWERED 25 September 2026 — yes. One edge per pair, per kind.**
+
+Ethan's ruling. `build_graph.py` now keys its duplicate check on the node pair
+**plus the kind**, so a pair may carry up to three edges — one `lex`, one `ref`,
+one `con` — and a second edge of the same kind is still refused. Two `con` edges
+between one pair would assert the same relation at two warrants, which is a
+contradiction rather than a finding.
+
+**The renderer needed no change.** `assignLanes` already lifts each arc until it
+clears every arc it overlaps, so two edges with identical endpoints are drawn as
+two stacked arcs, styled by their own kind and warrant. The picture was ready
+before the validator was.
+
+**Proved both ways before it was trusted**, on the build where each must hold: a
+second `con` edge on a pair that already had one was refused (exit 1, *"duplicate
+con edge"*); a `con` edge on a pair carrying only a `lex` edge was accepted. The
+probes were appended, built against, and rolled back — the corpus is unchanged by
+them.
+
+**It was costing a real edge, and that edge is now split.** Matthew 9:9 to Mark
+2:14 had been carrying two claims in one note: a `lex`/`states` claim that the call
+narratives are one scene, and a `con`/`spec` claim about whether Levi and Matthew
+are one man. They are different kinds at different warrants and now sit in
+different rows. Room task 59.
+
+<details><summary>The question as it stood</summary>
+
 The duplicate check keys on the node pair alone — undirected, kind-blind — so a
 finding that two verses *both* share wording and make the same argument cannot be
 recorded. Zero pairs collide today, so nothing has been lost yet. One line either way.
 *Needs:* Ethan. It is a decision about what the corpus can say, and it should be
 written into `DESIGN.md` whichever way it goes. Room task 59.
+</details>
 
 **Q6 · Compare, or compile?**
 The settled module decisions hold under a real second module — that is proven. What is

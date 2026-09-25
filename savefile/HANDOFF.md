@@ -96,6 +96,29 @@ Confidence levels used below, and the distinction is load-bearing:
 
 ## Decisions Already Made — Do Not Re-Litigate
 
+**A pair of passages may carry one edge per KIND — up to three, one `lex`, one
+`ref`, one `con`.** Settled 25 Sept by Ethan, answering QUESTIONS.md Q5.
+`build_graph.py`'s duplicate key is now the sorted node pair plus the kind. A
+second edge of the same kind is still refused: two `con` edges on one pair would
+assert the same relation at two warrants, which is a contradiction, not a finding.
+
+The renderer needed no change — `assignLanes` already lifts each arc until it
+clears every arc it overlaps, so two edges with identical endpoints draw as two
+stacked arcs. Proved in both directions before being trusted: a duplicate `con`
+was refused, a `con` alongside an existing `lex` was accepted, and both probes
+were rolled back.
+
+First use: Matthew 9:9 to Mark 2:14, which had been carrying a `lex`/`states`
+claim about the shared call narrative and a `con`/`spec` claim about whether Levi
+and Matthew are one man, crammed into a single note. Now two rows.
+
+**Hebrews 7 is in the corpus as a complete argument, not a sample.** 25 Sept.
+Six verses added — 7:3, 7:7, 7:10, 7:16, 7:17, 7:18 — because Ethan's reading of
+Q10 depends on the chain rather than on isolated verses, and 7:7 ("the inferior is
+blessed by the superior") is its hinge. Note that **7:19 cannot be cited**: it is
+one of the 114 extraction holes, swallowed into 7:18, and `README.md` names it as
+the worked example.
+
 **Matthew 23:23 and Luke 11:42 affirm tithing while relativising it. They do not
 rebuke it.** Settled 25 Sept by Ethan, answering QUESTIONS.md Q1. *Weightier* is a
 comparative and so presupposes lighter matters **of the law**; "these" and "the

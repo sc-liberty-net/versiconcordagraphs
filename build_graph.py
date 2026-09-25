@@ -117,10 +117,26 @@ for i, e in enumerate(edges):
             fail.append(f"edge {end} missing: {v}")
     if e['kind'] not in ('lex','ref','con'): fail.append(f"bad kind: {e['kind']}")
     if e['warrant'] not in ('states','supports','spec'): fail.append(f"bad warrant: {e['warrant']}")
+# One edge per pair PER KIND. Settled 25 Sept 2026 as QUESTIONS.md Q5.
+#
+# The key used to be the node pair alone — sorted, so undirected, and with the
+# kind left out — which meant a pair could hold exactly one edge. A finding
+# that two passages BOTH share wording and make the same argument could not be
+# recorded; one of the two had to be dropped into the other's note. That was
+# costing a real edge: Matthew 9:9 to Mark 2:14 carried a `lex`/`states` claim
+# about the shared call narrative and a `con`/`spec` claim about whether Levi
+# and Matthew are one man, crammed into one note.
+#
+# Adding the kind lets a pair carry up to three edges, one of each kind, and
+# still refuses a genuine duplicate — two `con` edges between the same pair
+# would be a contradiction, not a finding, since they would assert the same
+# relation at two warrants. The renderer needed no change: assignLanes lifts
+# each arc until it clears every arc it overlaps, so two edges with identical
+# endpoints are drawn as two stacked arcs.
 seen = set()
 for e in edges:
-    k = tuple(sorted((e['source'], e['target'])))
-    if k in seen: fail.append(f'duplicate edge: {k[0]}–{k[1]}')
+    k = tuple(sorted((e['source'], e['target']))) + (e['kind'],)
+    if k in seen: fail.append(f'duplicate {k[2]} edge: {k[0]}–{k[1]}')
     seen.add(k)
 external = [e for i, e in enumerate(edges) if i in is_external]
 local = [e for i, e in enumerate(edges) if i not in is_external]

@@ -239,7 +239,7 @@ const MOD = "tithe";
 const MODS = {
   tithe:{title:"Tax, tithe and tribute"},
 };
-const META = {nodes:158,edges:187,books:25};
+const META = {nodes:164,edges:199,books:25};
 const BOOKS = ["Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy", "Ruth", "1 Samuel", "Nehemiah", "Psalm", "Ezekiel", "Amos", "Zechariah", "Malachi", "Matthew", "Mark", "Luke", "John", "Acts", "Romans", "1 Corinthians", "2 Corinthians", "1 Timothy", "Hebrews", "James", "1 Peter"];
 const ABBR = {
   "Genesis":"Gen",
@@ -445,6 +445,12 @@ const N = [
   ["tithe:l3","Leviticus 27:33","anchor","No sorting good from bad and no swapping; the tenth stands as it falls.","tithe"],
   ["tithe:n3","Numbers 18:29","anchor","From everything received, the portion set aside for God is to be the best of it.","tithe"],
   ["tithe:n4","Numbers 18:30","anchor","Once the best is lifted out, the remainder counts as ordinary produce for the Levites.","tithe"],
+  ["tithe:h9","Hebrews 7:3","hebrews","No lineage, no recorded birth or death; he stands as priest continually, in the Son's likeness.","tithe"],
+  ["tithe:h10","Hebrews 7:7","hebrews","Not in dispute: the superior blesses, and the inferior is the one blessed.","tithe"],
+  ["tithe:h11","Hebrews 7:10","hebrews","Levi was unborn, still in his forefather, when that meeting took place.","tithe"],
+  ["tithe:h12","Hebrews 7:16","hebrews","Appointed not by a rule about descent but by a life death cannot end.","tithe"],
+  ["tithe:h13","Hebrews 7:17","hebrews","Sworn of him: a priest for ever, after Melchizedek's order.","tithe"],
+  ["tithe:h14","Hebrews 7:18","hebrews","An earlier command set aside as weak and unable to accomplish anything.","tithe"],
 ];
 const E = [
   ["tithe:t1","tithe:e1","ref","supports","The half-shekel of Exodus is the statutory ancestor of the tax being collected here."],
@@ -500,7 +506,7 @@ const E = [
   ["tithe:i19","tithe:i7","con","supports","Fear and honor kept unequal, as God and emperor are in the ruling."],
   ["tithe:i20","tithe:i21","con","supports","Imperial authority as protection and as accusation."],
   ["tithe:i17","tithe:b6","lex","states","Adjacent verses: pay what is owed, then owe nothing but love."],
-  ["tithe:c1","tithe:c8","lex","states","The same call story, told of two names: Mark's collector is Levi son of Alphaeus, Matthew's is Matthew. Whether they are one man named twice is old and unsettled - and no apostle list anywhere names Levi."],
+  ["tithe:c1","tithe:c8","lex","states","The same call story: one scene, told in near-identical wording."],
   ["tithe:c1","tithe:c12","lex","states","The same call story."],
   ["tithe:c2","tithe:c3","con","states",""],
   ["tithe:c2","tithe:c9","lex","states","Parallel objection."],
@@ -631,9 +637,21 @@ const E = [
   ["tithe:c4","tithe:c1","lex","states","The call and the roster name the same man, and the roster keeps the trade attached."],
   ["tithe:c13","tithe:c2","lex","states","The fixed pairing: tax collectors and sinners, gathered at the table and on the road."],
   ["tithe:c4","tithe:c8","lex","spec","Both are sons of Alphaeus: James the apostle here, Levi the called collector there. One man, two brothers, or a common name? Levi is in no apostle list; James is in every one."],
-  ["tithe:k1","tithe:h8","con","spec","Q10, and the tenth LAPSES: the lighter matters were affirmed as law, and this says the law changed with the priesthood. Contradicts the edge into Hebrews 7:5, which holds the tenth was never what changed."],
-  ["tithe:k1","tithe:v14","con","spec","Q10, downstream of either answer: the affirmed practice keeps its proportion and loses its rate — weekly, as one can afford, under no compulsion. Contradicts neither Hebrews edge; it says what giving becomes, not whether the tenth lapsed."],
-  ["tithe:k1","tithe:h3","con","spec","Q10, and the tenth STANDS: this verse commands the collector, not the giver, so what the change of priesthood retires is Levi's right to collect. Contradicts the edge into Hebrews 7:12, which holds the tenth lapsed with the law."],
+  ["tithe:k1","tithe:h8","con","spec","Q10, step 2: a change of priesthood changes the law, and 7:16 names which law — appointment by descent. Not the tenth. So the affirmation is not touched here."],
+  ["tithe:k1","tithe:v14","con","spec","Q10, step 3: what the giving becomes once no tribe collects it — weekly, as one can afford, under no compulsion."],
+  ["tithe:k1","tithe:h3","con","spec","Q10, step 1 of the chain: this records the Levitical arrangement as it stood — a commandment binding the COLLECTOR, not the giver."],
+  ["tithe:h1","tithe:h9","con","states",""],
+  ["tithe:h9","tithe:h2","con","states",""],
+  ["tithe:h4","tithe:h10","con","states",""],
+  ["tithe:h10","tithe:h5","con","states",""],
+  ["tithe:h6","tithe:h11","con","states",""],
+  ["tithe:h11","tithe:h7","con","states",""],
+  ["tithe:h8","tithe:h12","con","states",""],
+  ["tithe:h12","tithe:h13","con","states",""],
+  ["tithe:h13","tithe:h14","con","states",""],
+  ["tithe:h13","tithe:h9","con","supports","A priest continually in one verse, a priest for ever in the other; the oath states what 7:3 described."],
+  ["tithe:k1","tithe:h14","con","spec","Q10, and the seam: this sets aside \"an earlier commandment\" without saying which. Read narrowly it is the descent rule of 7:16 and the tenth is untouched; read broadly it could carry the tithe statute with it. The disagreement lives here, not at 7:12."],
+  ["tithe:c1","tithe:c8","con","spec","Whether Mark's Levi and Matthew's Matthew are one man named twice is old and unsettled. No apostle list anywhere names Levi. Split from the wording edge on the same pair, which claims only that the scene is one scene."],
 ];
 // </corpus>
 
