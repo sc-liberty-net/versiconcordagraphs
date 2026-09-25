@@ -24,7 +24,7 @@ contain them.
 | Branch | Topic |
 |---|---|
 | `main` | This note. No corpus. |
-| `taxes-and-tithes` | Tax, tithe and tribute — 158 passages across 25 books, 180 connections. **[Read it](https://sc-liberty-net.github.io/versiconcordagraphs/taxes-and-tithes/)** |
+| `taxes-and-tithes` | Taxes, Tithes, & Tribute — 184 passages across 26 books, 223 connections. **[Read it](https://sc-liberty-net.github.io/versiconcordagraphs/taxes-and-tithes/)** |
 | `gh-pages` | The built pages. Generated output, not a topic. |
 
 Ethan asked for the branch to be called *Taxes & Tithes*. Git will not accept a
