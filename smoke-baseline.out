@@ -14,7 +14,7 @@ rail group lens hidden: True
 header: 184 passages across 26 books, joined by 223 connections — drawn 
 title: Concordagraph - Taxes & Tithes
 graph bbox w: 2490
-graph bbox h: 1340
+graph bbox h: 1360
 NRSV payload present: False
 empty panel note: This copy shows references and summaries. To r
 panel found node: True
@@ -28,9 +28,21 @@ kinds on that pair: con,lex
 distinct arc lanes on that pair: 2
 filter hid: 18
 filter restored: 0
+zoom floor: 0.3271
+zoom fitted: 0.3271
+zoom afterButtons: 0.3271
+zoom afterWheel: 0.3271
+zoom zoomedIn: 0.4089
+page heading: Taxes, Tithes, & Tribute
+arrangement group hidden: True
+reset sits over the canvas: True
+era label font-size: 34px
+arc stroke-width states: 1.7
+groups carrying a note: 18
+group row tooltips: 18
 motif rows: 10
 motif keys: treasure,silver,coin,tithe,tax,collector,debt,gift,poor,blessing
-motif nodes covered: 96
+motif nodes covered: 95
 motif treasure dims: 170
 motif treasure lights: 14
 motif treasure dims edges: 214

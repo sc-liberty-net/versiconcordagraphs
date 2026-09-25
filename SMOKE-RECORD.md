@@ -64,3 +64,8 @@ source: C:/Users/ethan/AppData/Local/Temp/new.out -> smoke-baseline.out
 cause: motif filter added: a fourth rail group keyed on Strong's lemmas rather than on cluster. Seven new gated lines cover it. Ticking Treasure dims 170 and lights 14, which is exactly the node list corpus_motifs.csv records for that motif.
 moved: 0 changed, 7 new, 0 gone (0 allowed, not counted)
 source: C:/Users/ethan/AppData/Local/Temp/mo.out -> smoke-baseline.out
+
+## 2026-09-25 - baseline refreshed: smoke-baseline.out
+cause: UI pass: zoom clamped to the fitted view, title capitalised, dead arrangement control hidden, era label 10.5px to 34px, arcs thinned, group notes added for tooltips, reset moved over the canvas, motifs became pills in a bar. Twelve new gated lines. The tax motif lost Hebrews 7:3 because telos means end as well as toll.
+moved: 2 changed, 12 new, 0 gone (0 allowed, not counted)
+source: C:/Users/ethan/AppData/Local/Temp/ui.out -> smoke-baseline.out

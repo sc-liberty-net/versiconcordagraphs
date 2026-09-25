@@ -37,7 +37,13 @@ MOTIFS = [
      "A day's wage, the tax coin and the debt unit are one piece of silver."),
     ('tithe', 'The tenth', ['G0586', 'G1183', 'G1181', 'H4643', 'H6237'],
      'Every word for a tenth, given or collected.'),
-    ('tax', 'Tax and tribute', ['G2778', 'G5411', 'G5056', 'G1323', 'H4522', 'H4061'],
+    # G5056 telos was here and is deliberately gone. It means toll - the NRSV
+    # uses that word for it in Matthew 17:25 - but it also means END, and it
+    # was pulling Hebrews 7:3, 'neither beginning of days nor end of life',
+    # into a fiscal motif. Both genuine fiscal verses are already caught:
+    # Matthew 17:25 by kensos, Romans 13:7 by phoros. A lemma that resolves
+    # is not a lemma in the right sense.
+    ('tax', 'Tax and tribute', ['G2778', 'G5411', 'G1323', 'H4522', 'H4061'],
      'The fiscal vocabulary proper, across two Greek words and two Hebrew.'),
     ('collector', 'The collector', ['G5057', 'G0754', 'G5058'],
      'The trade, the office, and the booth.'),

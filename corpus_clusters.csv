@@ -1,19 +1,19 @@
-key,name,light,dark,role
-anchor,Tithe statutes,#7C8B96,#93A3AE,
-bridge,The temple tax,#B4553C,#D97B60,hub
-imperial,Imperial tax,#2F6B84,#6FA8C4,
-collector,Tax collectors,#7E6E9B,#A392C4,
-critique,Tithing weighed,#6E8A5E,#93B182,
-hebrews,The Hebrews 7 argument,#9A8352,#C2A86E,
-giving,Treasury and alms,#4E8E7A,#7FC0AC,
-debt,Debt and its parables,#94707A,#BE939D,
-market,Money changers,#857A6A,#A99B87,
-interest,Interest forbidden,#8E2F4E,#C4708C,
-release,Remission and jubilee,#3F8FA0,#77C0CE,
-entrusted,Money entrusted,#8A6E3F,#C4A173,
-wages,Wages withheld,#5A6390,#8F98C4,
-gleaning,Gleaning and the field's edge,#7E9152,#AEC182,
-purse,The common purse,#2F7D5E,#62B48F,
-price,Pricing a person,#C08A2E,#E0B45E,
-treasure,Treasure in heaven,#B08A3E,#D8B36A,
-metal,"Gold, silver and the fire",#8A7F6B,#B5A88F,
+key,name,light,dark,role,note
+anchor,Tithe statutes,#7C8B96,#93A3AE,,"The laws that command a tenth, and say whose it is."
+bridge,The temple tax,#B4553C,#D97B60,hub,"The half-shekel levy for the temple, and the one scene where anyone reasons about paying it."
+imperial,Imperial tax,#2F6B84,#6FA8C4,,"Rome and the empires before it: census, tribute, and whether paying is lawful."
+collector,Tax collectors,#7E6E9B,#A392C4,,"The trade, the men who worked it, and how they were treated."
+critique,Tithing weighed,#6E8A5E,#93B182,,"The two woes and a boast, where tithing is set against the weightier matters and found lighter."
+hebrews,The Hebrews 7 argument,#9A8352,#C2A86E,,"The argument of Hebrews 7: Melchizedek outranks Levi, so the priesthood changes and the law with it."
+giving,Treasury and alms,#4E8E7A,#7FC0AC,,"The temple treasury, and alms given openly or in secret."
+debt,Debt and its parables,#94707A,#BE939D,,"What is owed between people, and the parables built on it."
+market,Money changers,#857A6A,#A99B87,,"The money changers in the temple, and the tables overturned."
+interest,Interest forbidden,#8E2F4E,#C4708C,,"The prohibition on lending at interest to your own, repeated as a test of righteousness."
+release,Remission and jubilee,#3F8FA0,#77C0CE,,"The seventh-year remission and the fiftieth-year jubilee: debts cancelled, land returned."
+entrusted,Money entrusted,#8A6E3F,#C4A173,,"Money handed over to be traded with, and the reckoning that follows."
+wages,Wages withheld,#5A6390,#8F98C4,,"Pay owed to a labourer, and the rule that it must not be held overnight."
+gleaning,Gleaning and the field's edge,#7E9152,#AEC182,,"The corners of the field and the second pass of the vineyard, left for those with no land."
+purse,The common purse,#2F7D5E,#62B48F,,"The Jerusalem community holding property in common, and what happened when someone held back."
+price,Pricing a person,#C08A2E,#E0B45E,,"What a person is worth in shekels: vows, redemption, and thirty pieces of silver."
+treasure,Treasure in heaven,#B08A3E,#D8B36A,,"Where wealth is stored, and what storing it in heaven is said to cost."
+metal,"Gold, silver and the fire",#8A7F6B,#B5A88F,,"Gold and silver offered, refined, tested by fire, and finally named the wrong medium of ransom."

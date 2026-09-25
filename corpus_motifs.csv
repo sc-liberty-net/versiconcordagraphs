@@ -3,7 +3,7 @@ treasure,Treasure,f6 k10 k11 k4 k5 k6 k7 k8 k9 v1 v10 v14 v3 v5,96,"What is stor
 silver,Silver and gold,f2 f3 f6 f7 g3 p10 p3 p8 v12 y9 z10 z9,370,"The metal itself, as price, offering and ransom."
 coin,The daily coin,b4 i12 i6 t4 w5 w6,16,"A day's wage, the tax coin and the debt unit are one piece of silver."
 tithe,The tenth,a1 g1 g2 h3 h4 h6 k1 k2 k3 l1 l2 m1 n1 n2 s1,37,"Every word for a tenth, given or collected."
-tax,Tax and tribute,h9 i11 i14 i16 i17 i5 i6 i8 t1 t2,74,"The fiscal vocabulary proper, across two Greek words and two Hebrew."
+tax,Tax and tribute,i11 i14 i16 i17 i5 i6 i8 t1 t2,35,"The fiscal vocabulary proper, across two Greek words and two Hebrew."
 collector,The collector,c1 c10 c12 c13 c14 c15 c16 c2 c3 c4 c5 c6 c7 c8 c9,23,"The trade, the office, and the booth."
 debt,Debt and what is owed,b1 b3 b4 b5 b6 i17 v16,46,"Owing, and the one who owes."
 gift,Gift and offering,v10 v11 v12 v17 v5 v6 v7 v8 v9,31,What is handed over as a gift rather than as a payment.

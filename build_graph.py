@@ -67,11 +67,16 @@ if not os.path.exists(a.clusters):
 CLUSTERS = []
 for row in csv.DictReader(open(a.clusters, encoding='utf-8')):
     CLUSTERS.append((row['key'].strip(), row['name'], row['light'].strip(),
-                     row['dark'].strip(), (row.get('role') or '').strip()))
-for k, name, lt, dk, role in CLUSTERS:
+                     row['dark'].strip(), (row.get('role') or '').strip(),
+                     (row.get('note') or '').strip()))
+for k, name, lt, dk, role, note in CLUSTERS:
     if role not in ('', 'hub'):
         fail.append(f'cluster {k}: unknown role {role!r} — use "hub" or leave it blank')
-hubs = [k for k, _, _, _, role in CLUSTERS if role == 'hub']
+hubs = [k for k, _, _, _, role, _n in CLUSTERS if role == 'hub']
+nonote = [k for k, _, _, _, _, note in CLUSTERS if not note]
+if nonote:
+    notes.append('cluster(s) with no note, so the page can name them but not\n'
+                 '   explain them: ' + ', '.join(nonote))
 if len(hubs) > 1:
     fail.append(f'more than one cluster marked hub: {", ".join(hubs)}')
 dupcl = [k for k, c in Counter(k for k, *_ in CLUSTERS).items() if c > 1]
@@ -260,8 +265,9 @@ for b in BOOKS:
     out.append(f'  {j(b)}:{j(abbrev(b))},')
 out.append('};')
 out.append('const CL = {')
-for k, name, lt, dk, role in CLUSTERS:
-    out.append(f'  {k}:{{name:{j(name)},light:{j(lt)},dark:{j(dk)},role:{j(role)}}},')
+for k, name, lt, dk, role, note in CLUSTERS:
+    out.append(f'  {k}:{{name:{j(name)},light:{j(lt)},dark:{j(dk)},'
+               f'role:{j(role)},note:{j(note)}}},')
 out.append('};')
 # The key is quoted here deliberately. The cluster table above emits {k}: bare,
 # which ships a blank page for any key that is not a single lowercase word -

@@ -202,6 +202,54 @@ try:
         if pick(filt, 'hiddenWhenUnticked') in (0, 'MISSING'):
             fatal.append('unticking a cluster hid nothing')
 
+        # --- the zoom floor ---------------------------------------------------
+        # There is nothing to see past the fitted view: further out is empty
+        # canvas around a shrinking blob. Both the buttons and the wheel must
+        # stop there, and zooming IN must still work.
+        z = ev(page, '''() => {
+            document.getElementById('zfit').click();
+            const fitted = vs;
+            for (let i = 0; i < 8; i++) document.getElementById('zout').click();
+            const afterButtons = vs;
+            for (let i = 0; i < 3; i++) svg.dispatchEvent(new WheelEvent('wheel',
+                {deltaY: 200, clientX: 300, clientY: 300, bubbles: true, cancelable: true}));
+            const afterWheel = vs;
+            document.getElementById('zin').click();
+            const zoomedIn = vs;
+            document.getElementById('zfit').click();
+            const r4 = x => Math.round(x * 10000) / 10000;
+            return {
+                floor: r4(minScale),
+                fitted: r4(fitted),
+                afterButtons: r4(afterButtons),
+                afterWheel: r4(afterWheel),
+                zoomedIn: r4(zoomedIn)
+            };
+        }''', {})
+        for key in ('floor', 'fitted', 'afterButtons', 'afterWheel', 'zoomedIn'):
+            P('zoom %s' % key, pick(z, key))
+        floor, ab, aw = pick(z, 'floor'), pick(z, 'afterButtons'), pick(z, 'afterWheel')
+        if not isinstance(floor, (int, float)) or ab < floor - 1e-6 or aw < floor - 1e-6:
+            fatal.append('zoom-out went below the fitted floor: floor %s, buttons %s, wheel %s'
+                         % (floor, ab, aw))
+
+        # --- the chrome -------------------------------------------------------
+        P('page heading', ev(page, '() => document.getElementById("hTitle").textContent'))
+        P('arrangement group hidden', ev(page,
+            '() => document.querySelector(".grp").classList.contains("hide")'))
+        P('reset sits over the canvas', ev(page,
+            '() => !!document.querySelector(".canvas > .reset.floating")'))
+        P('era label font-size', ev(page,
+            '() => getComputedStyle(document.querySelector(".eralab")).fontSize'))
+        P('arc stroke-width states', ev(page,
+            '() => { const e = edges.find(x => x.wa === "states");'
+            ' return e && e.el.getAttribute("stroke-width"); }'))
+        P('groups carrying a note', ev(page,
+            '() => Object.values(CL).filter(c => c.note && c.note.length).length'))
+        P('group row tooltips', ev(page,
+            '() => [...document.querySelectorAll("#clusters .row")]'
+            '.filter(r => r.title && r.title.length > 20).length'))
+
         # --- the motif axis ---------------------------------------------------
         P('motif rows', ev(page, '() => document.querySelectorAll("#motifs .row").length'))
         P('motif keys', ev(page,
