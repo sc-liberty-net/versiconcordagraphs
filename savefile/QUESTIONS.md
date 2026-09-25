@@ -11,8 +11,31 @@ point of this file.
 
 ## Blocking the research finding
 
-**Q1 · Do Matthew 23:23 and Luke 11:42 rebuke tithing, or affirm it while
-relativising it?**
+**~~Q1 · Do Matthew 23:23 and Luke 11:42 rebuke tithing, or affirm it while
+relativising it?~~ ANSWERED 25 September 2026 — affirmed but relativised.**
+
+Ethan's ruling, in his words: it is not a pure rebuke of tithing; it acknowledges
+that tithing is a matter of law, but not equivalent to the weightier matters of
+love, justice, mercy and faith. Affirmed, and subordinated.
+
+The reasoning, because it is better than the question anticipated: *weightier* is a
+comparative, so the phrase presupposes lighter matters **of the law**. "These" and
+"the others" are therefore two species of one genus, not two unrelated referents —
+and "the others", the lighter matters, is what the closing clause tells them to keep
+doing. The affirmation is in the sentence.
+
+Applied the same day: the `critique` cluster is renamed **"Tithing weighed"** (the key
+stays `critique`, so Q3's unquoted-key bug is untouched); the `k1` and `k2` gists were
+rewritten to carry the closing clause and the weightier/lighter structure, taking
+verse-word coverage from 14/40 to 19/40 and 16/36 to 18/36. The decision is recorded
+in `HANDOFF.md`.
+
+Left open, and noted here rather than struck: whether the affirmation says anything
+about what binds **after** the change of priesthood argued in Hebrews 7. That is a
+separate question from what the sentence means, and the corpus's path runs straight
+through it.
+
+<details><summary>The question as it stood</summary>
 The summary of Matthew 23:23 accounts for 13 of the verse's 40 words and stops at the
 woe; Luke 11:42's covers 16 of 36. Nobody has read what the remaining words say — this
 was deliberately not guessed. The cluster is named "Tithing rebuked" and sits directly
@@ -22,6 +45,68 @@ node appears on the check-by-eye list, because that heuristic only fires when a
 summary shares **no** content word with its verse.
 *Needs:* Ethan, reading the two verses. This is his research, not a measurement.
 Room task 54.
+</details>
+
+**Q10 · Does the affirmation in Matthew 23:23 survive Hebrews 7:12?**
+Opened 25 September 2026, the moment Q1 was answered. Q1 settled what the woes
+*mean* — tithing is affirmed as a lighter matter of the law. It did not settle what
+that affirmation *obliges now*, and the two are different questions. Jesus speaks
+under the Mosaic covenant, while the Temple stands and Levi collects. Hebrews 7:12
+says a change of priesthood requires a change of law as well.
+
+Answering Q1 sharpened this rather than resolving it. While the cluster read
+"Tithing rebuked", Hebrews 7 was finishing what the woes started. Now that the woes
+affirm, Hebrews 7 is arguing out of force something Jesus upheld.
+
+Three positions, each already fully supported by nodes in this corpus:
+
+1. **The affirmation lapsed with the law it belonged to.** Covenant-specific.
+   `k1` Matthew 23:23, against `h7` Hebrews 7:11 and `h8` Hebrews 7:12.
+2. **The affirmation was of a principle that outlived its statutory form**, and
+   Paul's collection is what it became — weekly, proportionate, uncompelled, no
+   rate. `k1`, against `v13`–`v16` (1 Corinthians 16:1–2, 2 Corinthians 9:7,
+   Romans 15:27).
+3. **The question is malformed.** Hebrews 7:5 argues about who may *receive* —
+   Levi's descendants "have a commandment in the law **to collect** tithes from the
+   people" — not about whether the giver owes. On that reading the change of
+   priesthood retires the collector and says nothing about the tenth. `h3` Hebrews
+   7:5 and `t3` Matthew 17:26, against `n1` Numbers 18:21.
+
+**The corpus needs no new verses for any of this.** Every passage the three
+positions turn on is already a node. Checked 25 Sept: all twelve resolve.
+
+**DRAWN 25 September 2026 — all three, not one.** Ethan's call, and the right one.
+The three readings target three different nodes, so Q5's one-edge-per-pair refusal
+does not apply, and an edge at `spec` records a connection rather than asserting a
+conclusion. All three connections hold whichever reading eventually wins. The format
+was built for this: speculative edges render differently and are never silently
+promoted, so the graph can carry a live dispute visibly instead of burying it behind
+one chosen answer.
+
+- `k1`→`h8`, `con`/`spec` — reading 1
+- `k1`→`v14`, `con`/`spec` — reading 2
+- `k1`→`h3`, `con`/`spec` — reading 3
+
+**They are not three rivals, and the notes were corrected the same day to say so.**
+Ethan caught it: readings 1 and 3 genuinely contradict — did the tenth lapse with
+the law, or was the tenth never what Hebrews was arguing about? Reading 2
+contradicts neither. It answers a different question, *what does giving look like
+now*, and sits downstream of whichever of 1 or 3 holds. If the tenth lapsed, Paul's
+collection is what replaced it; if Hebrews only retired the collector, Hebrews is
+silent on the giver and Paul is where that gets answered.
+
+So the shape is **one disagreement (1 against 3), plus one consequence (2) that
+attaches to either.** The notes now say exactly that.
+
+All three sit at `spec` on purpose: no text links Matthew 23:23 to any of them, and
+pre-weighting one by warrant would decide the question the edges exist to keep
+open.
+
+Matthew 23:23 now has eleven connections and reaches `hebrews` for the first time.
+
+**The question itself stays open.** What was settled is how the corpus represents
+it, not which reading is true. That is still Ethan's, and it is the one place here
+where the answer is a theological judgement rather than a measurement. Room task 66.
 
 **Q2 · Should the 22 summaries that reuse NRSV wording be rewritten?**
 22 of 151 contain a run of five or more consecutive words lifted from the verse; the
@@ -44,11 +129,45 @@ Until it lands, any group name that is not a single lowercase word ships a blank
 on a green build.
 *Needs:* Ethan's go-ahead. Room task 57, and it blocks Q6.
 
-**Q4 · `i3`, `c4`, `c13` carry no connection at all — connect, remove, or keep?**
+**~~Q4 · `i3`, `c4`, `c13` carry no connection at all — connect, remove, or keep?~~
+ANSWERED 25 September 2026 — connect. All three.**
+
+None was a boundary marker; each had a neighbour already in the corpus sharing a
+word rare enough to check. Four edges added, not three:
+
+- `i3`→`i1` (Luke 3:1 → Luke 2:1), `lex`/`states` — Luke's two imperial dating
+  formulae share a form of *Caesar* occurring in two verses.
+- `c4`→`c1` (Matthew 10:3 → Matthew 9:9), `lex`/`states` — *Matthaios*, five verses.
+- `c13`→`c2` (Luke 15:1 → Matthew 9:10), `lex`/`states` — the fixed
+  tax-collectors-and-sinners pairing.
+- `c4`→`c8` (Matthew 10:3 → Mark 2:14), `lex`/`spec` — *Alphaios*, five verses.
+
+The fourth carries a question of its own, recorded on the edge. Alphaeus fathers
+**James** in Matthew 10:3 and **Levi** in Mark 2:14 — so the open question there is
+whether *James and Levi* are one man, two brothers, or two men who happen to share
+a common patronymic. Levi appears in no apostle list; James appears in all four.
+
+That is a different question from whether *Matthew and Levi* are one man, which
+turns on the near-identical call narratives rather than on the name. That note went
+on `c1`→`c8`, the pair where Matthew and Levi are the same figure, which already
+existed tagged only "The same call story."
+
+Checked and left out: STEPBible's apparatus records **no manuscript variant** on
+"Levi" in Mark 2:14 — every word of the verse is attested across the Nestlé-Aland,
+Traditional and Other traditions alike. A half-remembered Bezae reading of "James"
+there could not be confirmed from the data, so it is not in the note.
+
+Not done, and worth considering: Mark 3:18, Luke 6:15 and Acts 1:13 each list
+Matthew and James son of Alphaeus as separate men, which is the other half of that
+puzzle. None is a node.
+
+<details><summary>The question as it stood</summary>
+
 Luke 3:1, Matthew 10:3, Luke 15:1. Each has obvious neighbours. A concordagraph is a
 claim about connections, and a node with none is either an unfinished thought or a
 deliberate boundary marker; the corpus does not say which.
 *Needs:* Ethan. Cheaper to settle at 151 nodes than at 400. Room task 58.
+</details>
 
 **Q5 · Can two passages carry more than one connection between them?**
 The duplicate check keys on the node pair alone — undirected, kind-blind — so a
