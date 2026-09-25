@@ -2,6 +2,15 @@
 
 Scriptural concordagraphs. **One topic per branch.**
 
+## Read them here
+
+### → **[sc-liberty-net.github.io/versiconcordagraphs](https://sc-liberty-net.github.io/versiconcordagraphs/)**
+
+The built pages, live. Deployed from the `gh-pages` branch, which holds one
+directory per topic and nothing else. Each topic's page is generated from its
+own branch by that branch's `build_graph.py`; `gh-pages` is the shelf, not the
+workshop.
+
 ## The rule
 
 **Each branch holds a different concordagraph, on a different scriptural
@@ -15,7 +24,8 @@ contain them.
 | Branch | Topic |
 |---|---|
 | `main` | This note. No corpus. |
-| `taxes-and-tithes` | Tax, tithe and tribute — 151 passages across 25 books, 170 connections. |
+| `taxes-and-tithes` | Tax, tithe and tribute — 158 passages across 25 books, 180 connections. **[Read it](https://sc-liberty-net.github.io/versiconcordagraphs/taxes-and-tithes/)** |
+| `gh-pages` | The built pages. Generated output, not a topic. |
 
 Ethan asked for the branch to be called *Taxes & Tithes*. Git will not accept a
 space in a branch name, so it is `taxes-and-tithes` on disk. The topic's own
