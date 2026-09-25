@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Concordagraph - Taxes &amp; Tithes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;1,400&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Chrome: theme-factory "Modern Minimalist" — Charcoal #36454f, Slate Gray
+     #708090, Light Gray #d3d3d3, White #ffffff. Four colours have to cover
+     seven tokens, so the in-between tones are derived in the same cool-grey
+     hue family. Every text pair is measured: ink 9.90:1, ink-2 6.80:1 and
+     ink-3 5.50:1 on surface (the old ink-3 was 3.65:1 and failed AA).
+     The warrant colours below and the sixteen cluster colours in
+     corpus_clusters.csv are NOT themed — they carry meaning, not style. */
+  --paper:#EEF0F2; --surface:#FFFFFF; --sunk:#D3D3D3;
+  --ink:#36454F; --ink-2:#4E5D68; --ink-3:#5C6B76; --line:#C3C9CE;
+  --focus:#36454F;
+  --states:#14493A; --supports:#98620F; --spec:#8A8F96;
+  --anchor:#7C8B96; --bridge:#B4553C; --imperial:#52707F; --collector:#7E6E9B;
+  --critique:#6E8A5E; --hebrews:#9A8352; --giving:#5F8C86; --debt:#94707A; --market:#857A6A;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+:root:not([data-theme="light"]){ @media (prefers-color-scheme:dark){
+  --paper:#1B2228; --surface:#242D34; --sunk:#151A1F;
+  --ink:#ECEFF1; --ink-2:#B4C0C8; --ink-3:#96A4AD; --line:#3C4750;
+  --focus:#C2CED6;
+  --states:#5FBF9F; --supports:#E0A552; --spec:#8A9199;
+  --anchor:#93A3AE; --bridge:#D97B60; --imperial:#7FA3B4; --collector:#A392C4;
+  --critique:#93B182; --hebrews:#C2A86E; --giving:#7FB5AE; --debt:#BE939D; --market:#A99B87;
+}}
+:root[data-theme="dark"]{
+  --paper:#1B2228; --surface:#242D34; --sunk:#151A1F;
+  --ink:#ECEFF1; --ink-2:#B4C0C8; --ink-3:#96A4AD; --line:#3C4750;
+  --focus:#C2CED6;
+  --states:#5FBF9F; --supports:#E0A552; --spec:#8A9199;
+  --anchor:#93A3AE; --bridge:#D97B60; --imperial:#7FA3B4; --collector:#A392C4;
+  --critique:#93B182; --hebrews:#C2A86E; --giving:#7FB5AE; --debt:#BE939D; --market:#A99B87;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{height:100%; scroll-padding-top:env(safe-area-inset-top,0px)}
+body{
+  margin:0; height:100%; background:var(--paper); color:var(--ink);
+  font-family:Archivo,"Helvetica Neue",Arial,sans-serif; font-size:15px; line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{display:flex; flex-direction:column; height:100%; min-height:100vh}
+header{padding:18px 22px 14px; border-bottom:1px solid var(--line)}
+h1{font-family:Spectral,Georgia,serif; font-weight:600; font-size:26px; margin:0 0 4px; letter-spacing:-.01em}
+.sub{color:var(--ink-2); font-size:14px; max-width:68ch; margin:0}
+.main{display:flex; flex:1; min-height:0}
+.rail{width:236px; flex:none; border-right:1px solid var(--line); overflow-y:auto; padding:16px 16px 40px; background:var(--surface)}
+.stage{flex:1; position:relative; min-width:0; background:var(--paper)}
+svg#net{display:block; width:100%; height:100%; touch-action:none; cursor:grab}
+svg#net.drag{cursor:grabbing}
+.panel{
+  width:320px; flex:none; border-left:1px solid var(--line); background:var(--surface);
+  overflow-y:auto; padding:18px 18px 44px;
+}
+.grp{margin-bottom:20px}
+.grp h2{font-family:Archivo; font-size:12px; font-weight:600; letter-spacing:.04em; color:var(--ink-3); margin:0 0 9px; text-transform:none}
+input[type=search]{
+  width:100%; padding:8px 10px; border:1px solid var(--line); border-radius:7px;
+  background:var(--paper); color:var(--ink); font:inherit; font-size:14px;
+}
+input[type=search]:focus-visible,button:focus-visible,.row:focus-visible{outline:2px solid var(--focus); outline-offset:2px}
+.row{display:flex; align-items:center; gap:8px; padding:3px 0; cursor:pointer; font-size:13.5px; color:var(--ink-2); user-select:none}
+.row input{accent-color:var(--ink-2); margin:0; flex:none}
+.dot{width:11px; height:11px; border-radius:50%; flex:none}
+.swatch{width:26px; height:0; border-top-width:2px; border-top-style:solid; flex:none}
+.count{margin-left:auto; color:var(--ink-3); font-size:12px; font-variant-numeric:tabular-nums}
+button.reset{
+  width:100%; margin-top:6px; padding:7px 10px; border:1px solid var(--line); border-radius:7px;
+  background:var(--paper); color:var(--ink-2); font:inherit; font-size:13px; cursor:pointer;
+}
+button.reset:hover{background:var(--sunk)}
+.ref{font-family:Spectral,Georgia,serif; font-size:21px; font-weight:600; margin:0 0 2px}
+.tag{display:inline-block; font-size:12px; color:var(--ink-2); border:1px solid var(--line); border-radius:99px; padding:1px 9px; margin-bottom:12px}
+.gist{font-family:Spectral,Georgia,serif; font-size:16.5px; line-height:1.55; color:var(--ink); margin:0 0 18px}
+.verse{
+  font-family:Spectral,Georgia,serif; font-size:16.5px; line-height:1.6; color:var(--ink);
+  margin:0 0 10px; padding:0 0 0 13px; border-left:2px solid var(--line);
+}
+.gist-sm{font-size:13.5px; line-height:1.5; color:var(--ink-2); margin:0 0 18px}
+.panel h3{font-size:12px; font-weight:600; color:var(--ink-3); margin:0 0 8px; letter-spacing:.04em}
+.link{
+  display:block; width:100%; text-align:left; border:0; background:none; padding:7px 0;
+  border-top:1px solid var(--line); color:var(--ink); font:inherit; cursor:pointer;
+}
+.link:hover .lref{text-decoration:underline}
+.lref{font-family:Spectral,Georgia,serif; font-size:15px}
+.lmeta{display:block; font-size:12.5px; color:var(--ink-2); margin-top:1px}
+.empty{color:var(--ink-2); font-size:14px}
+.note{font-size:12.5px; color:var(--ink-3); line-height:1.5; margin-top:22px; border-top:1px solid var(--line); padding-top:12px}
+.zoom{position:absolute; right:12px; bottom:12px; display:flex; gap:6px}
+.zoom button{
+  width:32px; height:32px; border:1px solid var(--line); border-radius:7px; background:var(--surface);
+  color:var(--ink-2); font-size:16px; line-height:1; cursor:pointer;
+}
+.zoom button:hover{background:var(--sunk)}
+.node circle{cursor:pointer}
+.node:focus{outline:none}
+.node:focus-visible circle,.node.sel circle{stroke:var(--ink); stroke-width:1.25}
+.seg{display:flex; border:1px solid var(--line); border-radius:7px; overflow:hidden}
+.seg button{
+  flex:1; padding:7px 8px; border:0; background:var(--paper); color:var(--ink-2);
+  font:inherit; font-size:13px; cursor:pointer; border-right:1px solid var(--line);
+}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed="true"]{background:var(--ink-2); color:var(--surface)}
+.hint{font-size:12.5px; color:var(--ink-3); line-height:1.45; margin:8px 0 0}
+.booklab{font-family:Archivo,sans-serif; font-size:10.5px; fill:var(--ink-2)}
+.tick{stroke:var(--line); stroke-width:1}
+.era{stroke:var(--ink-3); stroke-width:1; stroke-dasharray:3 4}
+.eralab{font-family:Archivo,sans-serif; font-size:10.5px; fill:var(--ink-3)}.node text{font-family:Spectral,Georgia,serif; font-size:11.5px; fill:var(--ink); pointer-events:auto; cursor:pointer}
+.dim{opacity:.12}
+.hide{display:none}
+
+/* Hover magnification on the spine. The label grows about its own anchor, so
+   a crowded run of references can be read one at a time without the rest
+   shifting. transform-box keeps the origin on the glyph, not the canvas. */
+.node text.mag{
+  font-size:18px; font-weight:600; fill:var(--ink);
+  paint-order:stroke; stroke:var(--paper); stroke-width:3.5px; stroke-linejoin:round;
+}
+.node.lit circle{stroke:var(--ink); stroke-width:1.25}
+.booklab{cursor:pointer}
+.booklab.mag{font-size:15px; font-weight:600; fill:var(--ink);
+  paint-order:stroke; stroke:var(--paper); stroke-width:3.5px; stroke-linejoin:round}
+.hit{stroke:transparent; stroke-width:16; fill:none; cursor:pointer}
+/* Clicking an arc must not draw a focus ring. The browser draws that ring
+   around the element's bounding box, and an arc's bounding box is an enormous
+   rectangle spanning the canvas. :focus-visible scopes it to keyboard focus,
+   where it is the only thing telling you which arc you are on — the focus
+   event handlers below cannot be relied on for that, because some engines
+   dispatch no focus events at all for SVG elements even while
+   document.activeElement updates. Clicking is covered by the selection
+   itself: .esel thickens the chosen arc. */
+.hit:focus{outline:none}
+.hit:focus-visible{outline:2px solid var(--focus); outline-offset:0}
+
+/* The readout sits outside the SVG so it never scales with the zoom. */
+.readout{
+  position:absolute; left:50%; bottom:12px; transform:translateX(-50%);
+  max-width:calc(100% - 96px); padding:7px 14px; border-radius:8px;
+  background:var(--surface); border:1px solid var(--line);
+  font-family:Spectral,Georgia,serif; font-size:19px; line-height:1.25; color:var(--ink);
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+  opacity:0; pointer-events:none; transition:opacity .12s ease;
+}
+.readout.on{opacity:1}
+.readout .rk{font-family:Archivo,sans-serif; font-size:12.5px; color:var(--ink-2); margin-left:9px}
+@media (prefers-reduced-motion:reduce){ .readout{transition:none} }
+
+/* The reference in the panel opens the chapter on Bible Gateway. */
+.ref a{color:inherit; text-decoration:none; border-bottom:1px solid var(--line)}
+.ref a:hover{border-bottom-color:var(--ink-2)}
+.ref a:focus-visible{outline:2px solid var(--focus); outline-offset:3px; border-radius:3px}
+.ref .ext{font-family:Archivo,sans-serif; font-size:11px; color:var(--ink-3); margin-left:7px; letter-spacing:.02em}
+.ref .arrow{display:block; font-family:Archivo,sans-serif; font-size:12px; color:var(--ink-2); margin:3px 0 1px; letter-spacing:.04em}
+/* Arc strokes are measured in SCREEN pixels, not in the drawing's own units.
+   Without this they scale with the zoom, and the graph opens fitted at roughly
+   a fifth of full size — so a 1.6-unit line was landing at under a third of a
+   pixel and the dash patterns collapsed into apparent solid lines, taking the
+   lex/ref/con distinction with them. Non-scaling-stroke keeps both the weight
+   and the dashes constant however far out you are. */
+.edge, .hit{vector-effect:non-scaling-stroke}
+path.esel{stroke-width:4; stroke-opacity:1}
+.booklab.sel{font-weight:600; fill:var(--ink)}
+@media (max-width:900px){
+  .main{flex-direction:column}
+  .rail{width:auto; border-right:0; border-bottom:1px solid var(--line); max-height:none; padding-bottom:16px}
+  .panel{width:auto; border-left:0; border-top:1px solid var(--line)}
+  .stage{height:62vh; flex:none}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <!-- Both of these are written by the script from the generated block, so the
+       page cannot misstate its own size or scope again. The static text below
+       is a placeholder that makes no numeric claim. -->
+  <h1 id="hTitle">Tax, tithe and tribute</h1>
+  <p class="sub" id="hSub">Drawn from the NRSV and verified against a chapter-and-verse index. Every link names its kind and how much weight the text puts behind it.</p>
+</header>
+<div class="main">
+  <div class="rail">
+    <div class="grp">
+      <h2>Arrangement</h2>
+      <div class="seg">
+        <button id="mGroup" aria-pressed="false">By group</button>
+        <button id="mCanon" aria-pressed="true">Bible order</button>
+      </div>
+      <p class="hint" id="modeHint"></p>
+    </div>
+    <div class="grp">
+      <h2>Find a passage</h2>
+      <input type="search" id="q" placeholder="Matthew 22, tithe, widow…" autocomplete="off">
+    </div>
+    <div class="grp">
+      <h2>Groups</h2>
+      <div id="clusters"></div>
+    </div>
+    <div class="grp">
+      <h2>How strong is the link</h2>
+      <div id="warrants"></div>
+    </div>
+    <div class="grp">
+      <h2>What kind of link</h2>
+      <div id="types"></div>
+      <button class="reset" id="reset">Show everything again</button>
+    </div>
+  </div>
+  <div class="stage">
+    <svg id="net" role="img" aria-label="Network of New Testament passages about tax and tithe"></svg>    <div class="readout" id="readout" aria-live="polite"></div>
+    <div class="zoom">
+      <button id="zin" title="Zoom in" aria-label="Zoom in">+</button>
+      <button id="zout" title="Zoom out" aria-label="Zoom out">−</button>
+      <button id="zfit" title="Fit to view" aria-label="Fit to view">⤢</button>
+    </div>
+  </div>
+  <div class="panel" id="panel"></div>
+</div>
+</div>
+
+<script src="verses.js" onerror="void 0"></script>
+<script>
+// <corpus>  generated by build_graph.py — edit the CSVs, not this block
+const MOD = "tithe";
+const MODS = {
+  tithe:{title:"Tax, tithe and tribute"},
+};
+const META = {nodes:158,edges:180,books:25};
+const BOOKS = ["Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy", "Ruth", "1 Samuel", "Nehemiah", "Psalm", "Ezekiel", "Amos", "Zechariah", "Malachi", "Matthew", "Mark", "Luke", "John", "Acts", "Romans", "1 Corinthians", "2 Corinthians", "1 Timothy", "Hebrews", "James", "1 Peter"];
+const ABBR = {
+  "Genesis":"Gen",
+  "Exodus":"Exod",
+  "Leviticus":"Lev",
+  "Numbers":"Num",
+  "Deuteronomy":"Deut",
+  "Ruth":"Ruth",
+  "1 Samuel":"1 Sam",
+  "Nehemiah":"Neh",
+  "Psalm":"Ps",
+  "Ezekiel":"Ezek",
+  "Amos":"Amos",
+  "Zechariah":"Zech",
+  "Malachi":"Mal",
+  "Matthew":"Matt",
+  "Mark":"Mark",
+  "Luke":"Luke",
+  "John":"John",
+  "Acts":"Acts",
+  "Romans":"Rom",
+  "1 Corinthians":"1 Cor",
+  "2 Corinthians":"2 Cor",
+  "1 Timothy":"1 Tim",
+  "Hebrews":"Heb",
+  "James":"Jas",
+  "1 Peter":"1 Pet",
+};
+const CL = {
+  anchor:{name:"Tithe statutes",light:"#7C8B96",dark:"#93A3AE",role:""},
+  bridge:{name:"The temple tax",light:"#B4553C",dark:"#D97B60",role:"hub"},
+  imperial:{name:"Imperial tax",light:"#2F6B84",dark:"#6FA8C4",role:""},
+  collector:{name:"Tax collectors",light:"#7E6E9B",dark:"#A392C4",role:""},
+  critique:{name:"Tithing rebuked",light:"#6E8A5E",dark:"#93B182",role:""},
+  hebrews:{name:"The Hebrews 7 argument",light:"#9A8352",dark:"#C2A86E",role:""},
+  giving:{name:"Treasury and alms",light:"#4E8E7A",dark:"#7FC0AC",role:""},
+  debt:{name:"Debt and its parables",light:"#94707A",dark:"#BE939D",role:""},
+  market:{name:"Money changers",light:"#857A6A",dark:"#A99B87",role:""},
+  interest:{name:"Interest forbidden",light:"#8E2F4E",dark:"#C4708C",role:""},
+  release:{name:"Remission and jubilee",light:"#3F8FA0",dark:"#77C0CE",role:""},
+  entrusted:{name:"Money entrusted",light:"#8A6E3F",dark:"#C4A173",role:""},
+  wages:{name:"Wages withheld",light:"#5A6390",dark:"#8F98C4",role:""},
+  gleaning:{name:"Gleaning and the field's edge",light:"#7E9152",dark:"#AEC182",role:""},
+  purse:{name:"The common purse",light:"#2F7D5E",dark:"#62B48F",role:""},
+  price:{name:"Pricing a person",light:"#C08A2E",dark:"#E0B45E",role:""},
+};
+const N = [
+  ["tithe:g1","Genesis 14:20","anchor","Abram gives a tenth of everything to Melchizedek after the rescue of Lot.","tithe"],
+  ["tithe:g2","Genesis 28:22","anchor","Jacob vows a tenth at the place he names Bethel.","tithe"],
+  ["tithe:l1","Leviticus 27:30","anchor","The tenth of seed and fruit belongs to God and is holy.","tithe"],
+  ["tithe:n1","Numbers 18:21","anchor","Every tithe assigned to the Levites as wages, because they hold no land.","tithe"],
+  ["tithe:n2","Numbers 18:26","anchor","The Levites owe a tenth of the tenth they receive.","tithe"],
+  ["tithe:d1","Deuteronomy 14:29","anchor","Third-year tithe stored for the Levite, the alien, the orphan and the widow.","tithe"],
+  ["tithe:e1","Exodus 30:13","anchor","A half-shekel census payment, the same from rich and poor alike.","tithe"],
+  ["tithe:m1","Malachi 3:8","anchor","Withholding tithes and offerings named as robbing God.","tithe"],
+  ["tithe:a1","Amos 4:4","anchor","Israel summoned to Bethel to transgress, tithes listed among the offerings.","tithe"],
+  ["tithe:s1","1 Samuel 8:15","anchor","The king will take a tenth of grain and vineyards for his officers and courtiers.","tithe"],
+  ["tithe:t1","Matthew 17:24","bridge","Collectors of the temple tax ask Peter whether his teacher pays it.","tithe"],
+  ["tithe:t2","Matthew 17:25","bridge","Jesus asks from whom kings take toll or tribute — their children, or others.","tithe"],
+  ["tithe:t3","Matthew 17:26","bridge","Peter answers 'from others', and Jesus concludes the children are free.","tithe"],
+  ["tithe:t4","Matthew 17:27","bridge","He pays anyway, from a coin found in a fish, so as not to give offense.","tithe"],
+  ["tithe:i1","Luke 2:1","imperial","Augustus decrees that all the world be registered.","tithe"],
+  ["tithe:i2","Luke 2:3","imperial","Everyone travels to their own town to be registered.","tithe"],
+  ["tithe:i3","Luke 3:1","imperial","The narrative dated by the reign of Tiberius and his governors.","tithe"],
+  ["tithe:i4","Acts 5:37","imperial","Judas the Galilean raises a following at the time of the census, and perishes.","tithe"],
+  ["tithe:i5","Matthew 22:17","imperial","Is it lawful to pay taxes to the emperor?","tithe"],
+  ["tithe:i6","Matthew 22:19","imperial","The coin used for the tax is produced — a denarius.","tithe"],
+  ["tithe:i7","Matthew 22:21","imperial","Give the emperor what is the emperor's, and God what is God's.","tithe"],
+  ["tithe:i8","Mark 12:14","imperial","Mark's form of the question, prefaced with flattery.","tithe"],
+  ["tithe:i9","Mark 12:16","imperial","Whose head and title does the coin bear.","tithe"],
+  ["tithe:i10","Mark 12:17","imperial","Mark's form of the ruling.","tithe"],
+  ["tithe:i11","Luke 20:22","imperial","Luke's form of the question.","tithe"],
+  ["tithe:i12","Luke 20:24","imperial","Luke's form of the coin inspection.","tithe"],
+  ["tithe:i13","Luke 20:25","imperial","Luke's form of the ruling.","tithe"],
+  ["tithe:i14","Luke 23:2","imperial","At trial, Jesus is accused of forbidding payment of taxes to the emperor.","tithe"],
+  ["tithe:i15","John 19:12","imperial","Pilate pressed with the claim that releasing Jesus is disloyalty to Caesar.","tithe"],
+  ["tithe:i16","Romans 13:6","imperial","Taxes are paid because the authorities are described as God's servants.","tithe"],
+  ["tithe:i17","Romans 13:7","imperial","Pay what is due: taxes, revenue, respect, honor.","tithe"],
+  ["tithe:i18","1 Peter 2:13","imperial","Accept the authority of human institutions, the emperor included.","tithe"],
+  ["tithe:i19","1 Peter 2:17","imperial","Fear God; honor the emperor — two verbs, deliberately unequal.","tithe"],
+  ["tithe:i20","Acts 25:10","imperial","Paul appeals to the emperor's tribunal as his right.","tithe"],
+  ["tithe:i21","Acts 17:7","imperial","Believers accused of acting against the emperor's decrees.","tithe"],
+  ["tithe:c1","Matthew 9:9","collector","Matthew called away from the tax booth.","tithe"],
+  ["tithe:c2","Matthew 9:10","collector","Jesus at table with tax collectors and sinners.","tithe"],
+  ["tithe:c3","Matthew 9:11","collector","The Pharisees object to the company he keeps.","tithe"],
+  ["tithe:c4","Matthew 10:3","collector","Matthew listed among the twelve, identified by his former trade.","tithe"],
+  ["tithe:c5","Matthew 11:19","collector","Called a glutton and a friend of tax collectors.","tithe"],
+  ["tithe:c6","Matthew 18:17","collector","The unrepentant member treated as a Gentile and a tax collector.","tithe"],
+  ["tithe:c7","Matthew 21:31","collector","Tax collectors enter the kingdom ahead of the religious leadership.","tithe"],
+  ["tithe:c8","Mark 2:14","collector","Levi called from the tax booth.","tithe"],
+  ["tithe:c9","Mark 2:16","collector","Scribes of the Pharisees challenge the shared meal.","tithe"],
+  ["tithe:c10","Luke 3:12","collector","Tax collectors come to John for baptism and ask what to do.","tithe"],
+  ["tithe:c11","Luke 3:13","collector","They are told to collect no more than the amount prescribed.","tithe"],
+  ["tithe:c12","Luke 5:27","collector","Luke's account of Levi at the tax booth.","tithe"],
+  ["tithe:c13","Luke 15:1","collector","Tax collectors and sinners gather to listen.","tithe"],
+  ["tithe:c14","Luke 18:10","collector","A Pharisee and a tax collector go up to pray.","tithe"],
+  ["tithe:c15","Luke 18:13","collector","The collector will not look up, and asks for mercy.","tithe"],
+  ["tithe:c16","Luke 19:2","collector","Zacchaeus, a chief tax collector, and rich.","tithe"],
+  ["tithe:c17","Luke 19:8","collector","He gives half his possessions away and restores fourfold what he took.","tithe"],
+  ["tithe:k1","Matthew 23:23","critique","Woe for tithing mint, dill and cummin while neglecting justice, mercy and faith.","tithe"],
+  ["tithe:k2","Luke 11:42","critique","Woe for tithing mint, rue and every herb while neglecting justice and the love of God.","tithe"],
+  ["tithe:k3","Luke 18:12","critique","The Pharisee's boast: fasting twice a week and giving a tenth of all income.","tithe"],
+  ["tithe:h1","Hebrews 7:2","hebrews","Abraham apportioned a tenth of everything to Melchizedek.","tithe"],
+  ["tithe:h2","Hebrews 7:4","hebrews","Even the patriarch gave him a tenth of the spoils.","tithe"],
+  ["tithe:h3","Hebrews 7:5","hebrews","Levi's priestly descendants are commanded by law to collect tithes.","tithe"],
+  ["tithe:h4","Hebrews 7:6","hebrews","Melchizedek collected tithes without belonging to that lineage.","tithe"],
+  ["tithe:h5","Hebrews 7:8","hebrews","In one case mortals receive tithes; in the other, one testified to be living.","tithe"],
+  ["tithe:h6","Hebrews 7:9","hebrews","Levi, who receives tithes, paid tithes through Abraham.","tithe"],
+  ["tithe:h7","Hebrews 7:11","hebrews","Perfection was not reached through the Levitical priesthood.","tithe"],
+  ["tithe:h8","Hebrews 7:12","hebrews","A change of priesthood requires a change of law as well.","tithe"],
+  ["tithe:v1","Mark 12:41","giving","He sits opposite the treasury and watches the crowd give.","tithe"],
+  ["tithe:v2","Mark 12:42","giving","A poor widow puts in two small copper coins.","tithe"],
+  ["tithe:v3","Mark 12:43","giving","She has put in more than all the others.","tithe"],
+  ["tithe:v4","Mark 12:44","giving","They gave out of abundance; she gave everything she had to live on.","tithe"],
+  ["tithe:v5","Luke 21:1","giving","Luke's account of the rich giving at the treasury.","tithe"],
+  ["tithe:v6","Luke 21:4","giving","Luke's form of the verdict on the widow.","tithe"],
+  ["tithe:v7","Matthew 6:2","giving","Give alms without sounding a trumpet.","tithe"],
+  ["tithe:v8","Matthew 6:4","giving","Alms done in secret, seen by God.","tithe"],
+  ["tithe:v9","Luke 11:41","giving","Give alms from what is within, and everything is clean.","tithe"],
+  ["tithe:v10","Luke 12:33","giving","Sell possessions and give alms, for a treasure that does not fail.","tithe"],
+  ["tithe:v11","Mark 7:11","giving","Corban: a dedication used to withhold support owed to parents.","tithe"],
+  ["tithe:v12","Matthew 27:6","giving","Blood money cannot lawfully be put into the treasury.","tithe"],
+  ["tithe:v13","1 Corinthians 16:1","giving","Instructions for the collection for the saints.","tithe"],
+  ["tithe:v14","1 Corinthians 16:2","giving","Set aside weekly, in proportion to earnings.","tithe"],
+  ["tithe:v15","2 Corinthians 9:7","giving","Give as decided, not reluctantly or under compulsion.","tithe"],
+  ["tithe:v16","Romans 15:27","giving","Gentiles owe material help to those whose blessings they share.","tithe"],
+  ["tithe:v17","Acts 24:17","giving","Paul returns bringing alms to his nation.","tithe"],
+  ["tithe:b1","Matthew 18:24","debt","A servant owing ten thousand talents is brought to the reckoning.","tithe"],
+  ["tithe:b2","Matthew 18:27","debt","The lord releases him and forgives the debt.","tithe"],
+  ["tithe:b3","Matthew 18:34","debt","The unforgiving servant is handed over until he pays it all.","tithe"],
+  ["tithe:b4","Luke 7:41","debt","Two debtors owe a creditor very unequal sums.","tithe"],
+  ["tithe:b5","Luke 16:5","debt","The manager summons his master's debtors and reduces what they owe.","tithe"],
+  ["tithe:b6","Romans 13:8","debt","Owe no one anything except to love one another.","tithe"],
+  ["tithe:x1","Matthew 21:12","market","Jesus overturns the tables of the money changers in the temple.","tithe"],
+  ["tithe:x2","Mark 11:15","market","Mark's account of the same action.","tithe"],
+  ["tithe:x3","John 2:14","market","John places the money changers early, with a whip of cords.","tithe"],
+  ["tithe:i22","Nehemiah 5:3","imperial","Fields, vineyards and houses pledged for grain during the famine.","tithe"],
+  ["tithe:i23","Nehemiah 5:4","imperial","Money borrowed against fields and vineyards to pay the king's tax.","tithe"],
+  ["tithe:i24","Nehemiah 5:5","imperial","Children forced into slavery, fields already in other hands.","tithe"],
+  ["tithe:u1","Exodus 22:25","interest","Lend to the poor without acting as a creditor or charging interest.","tithe"],
+  ["tithe:u2","Leviticus 25:36","interest","No interest taken in advance, no profit made from a neighbour in need.","tithe"],
+  ["tithe:u3","Leviticus 25:37","interest","Money and food lent without interest or profit.","tithe"],
+  ["tithe:u4","Deuteronomy 23:19","interest","No interest on anything lent to another Israelite.","tithe"],
+  ["tithe:u5","Deuteronomy 23:20","interest","Interest allowed to a foreigner, forbidden to a fellow Israelite.","tithe"],
+  ["tithe:u6","Psalm 15:5","interest","Lending without interest listed among the marks of the upright.","tithe"],
+  ["tithe:u7","Ezekiel 18:8","interest","The righteous take no advance and no accrued interest.","tithe"],
+  ["tithe:u8","Nehemiah 5:7","interest","Nehemiah charges the nobles with exacting interest from their own people.","tithe"],
+  ["tithe:u9","Nehemiah 5:10","interest","He calls for the taking of interest to stop.","tithe"],
+  ["tithe:u10","Nehemiah 5:11","interest","Fields, orchards and houses restored that very day, with the interest.","tithe"],
+  ["tithe:r1","Deuteronomy 15:1","release","A remission of debts every seventh year.","tithe"],
+  ["tithe:r2","Deuteronomy 15:2","release","Every creditor remits the claim held against a neighbour.","tithe"],
+  ["tithe:r3","Deuteronomy 15:4","release","The promise that there will be no one in need.","tithe"],
+  ["tithe:r4","Deuteronomy 15:9","release","Warning against refusing a loan because the year of release is near.","tithe"],
+  ["tithe:r5","Leviticus 25:10","release","Liberty proclaimed; property and family returned in the fiftieth year.","tithe"],
+  ["tithe:r6","Leviticus 25:13","release","In the jubilee everyone returns to their own property.","tithe"],
+  ["tithe:r7","Luke 4:18","release","Good news to the poor and release to the captives.","tithe"],
+  ["tithe:r8","Luke 4:19","release","The year of the Lord's favour proclaimed.","tithe"],
+  ["tithe:r9","Matthew 6:9","release","The Lord's Prayer, carrying the petition to forgive debts as debts are forgiven.","tithe"],
+  ["tithe:p1","Matthew 25:15","entrusted","Talents handed to three slaves, each according to ability.","tithe"],
+  ["tithe:p2","Matthew 25:24","entrusted","The third slave calls the master harsh, reaping where he did not sow.","tithe"],
+  ["tithe:p3","Matthew 25:27","entrusted","The master says the money should have gone to bankers, to earn interest.","tithe"],
+  ["tithe:p4","Matthew 25:28","entrusted","The talent taken from the one who has least and given to the one with most.","tithe"],
+  ["tithe:p5","Luke 19:11","entrusted","Told because the kingdom was expected to appear immediately.","tithe"],
+  ["tithe:p6","Luke 19:13","entrusted","Ten pounds given, with orders to trade until the master returns.","tithe"],
+  ["tithe:p7","Luke 19:22","entrusted","The master judged by his own words: taking what he did not deposit.","tithe"],
+  ["tithe:p8","Luke 19:23","entrusted","Why was the money not put in the bank to collect interest.","tithe"],
+  ["tithe:p9","Luke 19:27","entrusted","The king's enemies brought and slaughtered in his presence.","tithe"],
+  ["tithe:w1","Leviticus 19:13","wages","A labourer's wages must not be kept back overnight.","tithe"],
+  ["tithe:w2","Deuteronomy 24:14","wages","Nothing withheld from poor labourers, Israelite or alien.","tithe"],
+  ["tithe:w3","Deuteronomy 24:15","wages","Wages paid the same day, before sunset.","tithe"],
+  ["tithe:w4","James 5:4","wages","Withheld harvest wages cry out and are heard.","tithe"],
+  ["tithe:w5","Matthew 20:2","wages","A day's labour agreed at the usual daily wage.","tithe"],
+  ["tithe:w6","Matthew 20:13","wages","The householder insists the agreed wage wrongs no one.","tithe"],
+  ["tithe:w7","Luke 10:7","wages","The labourer deserves to be paid.","tithe"],
+  ["tithe:w8","1 Timothy 5:18","wages","The ox and the labourer cited together on payment due.","tithe"],
+  ["tithe:q1","Leviticus 19:9","gleaning","The edges of the field are not reaped.","tithe"],
+  ["tithe:q2","Leviticus 19:10","gleaning","The vineyard not stripped bare; leavings for the poor and the alien.","tithe"],
+  ["tithe:q3","Leviticus 23:22","gleaning","The same instruction repeated in the festival calendar.","tithe"],
+  ["tithe:q4","Deuteronomy 24:19","gleaning","The forgotten sheaf left for the alien, the orphan and the widow.","tithe"],
+  ["tithe:q5","Deuteronomy 24:21","gleaning","Grapes not gleaned twice, for the same three.","tithe"],
+  ["tithe:q6","Ruth 2:2","gleaning","Ruth goes out to glean behind the harvesters.","tithe"],
+  ["tithe:y1","Acts 2:44","purse","Believers hold all things in common.","tithe"],
+  ["tithe:y2","Acts 2:45","purse","Possessions sold and distributed as any had need.","tithe"],
+  ["tithe:y3","Acts 4:32","purse","No one claims private ownership of possessions.","tithe"],
+  ["tithe:y4","Acts 4:34","purse","Lands and houses sold, the proceeds brought to the apostles.","tithe"],
+  ["tithe:y5","Acts 4:37","purse","Barnabas sells a field and lays the money at their feet.","tithe"],
+  ["tithe:y6","Acts 5:2","purse","Ananias keeps back part of the proceeds.","tithe"],
+  ["tithe:y7","Acts 5:4","purse","The property and its proceeds were his to dispose of freely.","tithe"],
+  ["tithe:y8","2 Corinthians 8:14","purse","Present abundance meeting present need, for a fair balance.","tithe"],
+  ["tithe:z1","Leviticus 27:2","price","Vows made concerning the monetary equivalent of a person.","tithe"],
+  ["tithe:z2","Leviticus 27:3","price","Fifty shekels set as the equivalent for an adult male.","tithe"],
+  ["tithe:z3","Leviticus 27:8","price","Those too poor to pay are valued by the priest according to means.","tithe"],
+  ["tithe:z4","Numbers 18:15","price","The firstborn of humans redeemed rather than offered.","tithe"],
+  ["tithe:z5","Numbers 18:16","price","The redemption price fixed at five shekels.","tithe"],
+  ["tithe:z6","Exodus 13:13","price","Every firstborn son redeemed.","tithe"],
+  ["tithe:z7","Exodus 21:32","price","Thirty shekels paid to the owner of a slave killed by an ox.","tithe"],
+  ["tithe:z8","Zechariah 11:12","price","Thirty shekels weighed out as the shepherd's wage.","tithe"],
+  ["tithe:z9","Matthew 26:15","price","Thirty pieces of silver agreed for handing Jesus over.","tithe"],
+  ["tithe:m2","Malachi 1:8","anchor","Defective animals brought to the altar, when no governor would accept such a gift.","tithe"],
+  ["tithe:m3","Malachi 1:13","anchor","Worship called wearisome, and what is damaged or stolen brought as the offering.","tithe"],
+  ["tithe:m4","Malachi 1:14","anchor","A curse on the man who vows a sound animal and then sacrifices a flawed one.","tithe"],
+  ["tithe:l2","Leviticus 27:32","anchor","Every tenth animal from herd and flock, counted as it passes the staff.","tithe"],
+  ["tithe:l3","Leviticus 27:33","anchor","No sorting good from bad and no swapping; the tenth stands as it falls.","tithe"],
+  ["tithe:n3","Numbers 18:29","anchor","From everything received, the portion set aside for God is to be the best of it.","tithe"],
+  ["tithe:n4","Numbers 18:30","anchor","Once the best is lifted out, the remainder counts as ordinary produce for the Levites.","tithe"],
+];
+const E = [
+  ["tithe:t1","tithe:e1","ref","supports","The half-shekel of Exodus is the statutory ancestor of the tax being collected here."],
+  ["tithe:t2","tithe:s1","con","supports","Both ask what a king takes and from whom — Samuel answers with a tenth."],
+  ["tithe:t2","tithe:i5","con","supports","Toll and tribute in one scene, imperial tax in the other: the same category, two claimants."],
+  ["tithe:t3","tithe:h3","con","spec","If the children are free, the commandment to collect tithes has lost its addressee."],
+  ["tithe:t3","tithe:i7","con","supports","Both rulings distinguish what is owed from who is exempt, and both stop short of refusal."],
+  ["tithe:t4","tithe:v12","con","spec","Two coins that trouble the temple treasury — one paid in, one refused."],
+  ["tithe:t4","tithe:x1","con","supports","Money changers existed to convert coin acceptable to the temple; the same economy."],
+  ["tithe:t1","tithe:v1","con","supports","Temple revenue viewed from collection and from donation."],
+  ["tithe:t1","tithe:t2","con","states",""],
+  ["tithe:t2","tithe:t3","con","states",""],
+  ["tithe:t3","tithe:t4","con","states",""],
+  ["tithe:h1","tithe:g1","ref","states","Hebrews quotes the Genesis scene directly."],
+  ["tithe:h2","tithe:g1","ref","states","The same episode, cited again for Abraham's rank."],
+  ["tithe:h3","tithe:n1","ref","states","The commandment referred to is the Levitical assignment in Numbers."],
+  ["tithe:h6","tithe:n1","ref","states","Levi 'receives tithes' because Numbers says so."],
+  ["tithe:h1","tithe:h2","con","states",""],
+  ["tithe:h2","tithe:h3","con","states",""],
+  ["tithe:h3","tithe:h4","con","states",""],
+  ["tithe:h4","tithe:h5","con","states",""],
+  ["tithe:h5","tithe:h6","con","states",""],
+  ["tithe:h6","tithe:h7","con","states",""],
+  ["tithe:h7","tithe:h8","con","states",""],
+  ["tithe:h8","tithe:l1","con","spec","If the law changes with the priesthood, the statute making the tenth holy is in question."],
+  ["tithe:h3","tithe:v16","con","spec","Both frame support of a religious class as an obligation owed, not a gift given."],
+  ["tithe:k1","tithe:k2","lex","states","Near-identical woes: tithed herbs set against neglected justice."],
+  ["tithe:k1","tithe:l1","ref","supports","Tithing garden herbs presumes the produce statute."],
+  ["tithe:k1","tithe:d1","con","supports","The weightier matters name the people the third-year tithe was for."],
+  ["tithe:k2","tithe:d1","con","supports","Justice and love of God against the same background."],
+  ["tithe:k3","tithe:k1","con","supports","The boast and the woe describe the same practice from inside and outside."],
+  ["tithe:k3","tithe:c14","con","states","One parable: the boast belongs to the Pharisee in the temple."],
+  ["tithe:k3","tithe:g2","con","spec","A vowed tenth of all increase, now recited as self-commendation."],
+  ["tithe:k1","tithe:a1","con","spec","Amos also indicts tithes offered faithfully at the wrong center of gravity."],
+  ["tithe:k1","tithe:m1","con","spec","Malachi faults too little tithe, Matthew too much attention to it."],
+  ["tithe:v11","tithe:k1","con","supports","Both describe a religious payment used to escape a weightier obligation."],
+  ["tithe:i5","tithe:i8","lex","states","Synoptic parallel."],
+  ["tithe:i5","tithe:i11","lex","states","Synoptic parallel."],
+  ["tithe:i6","tithe:i9","lex","states","Synoptic parallel."],
+  ["tithe:i6","tithe:i12","lex","states","Synoptic parallel."],
+  ["tithe:i7","tithe:i10","lex","states","Synoptic parallel."],
+  ["tithe:i7","tithe:i13","lex","states","Synoptic parallel."],
+  ["tithe:i5","tithe:i6","con","states",""],
+  ["tithe:i6","tithe:i7","con","states",""],
+  ["tithe:i14","tithe:i7","con","states","The charge at trial inverts the ruling he actually gave."],
+  ["tithe:i14","tithe:i15","con","supports","Both convert a tax question into a loyalty charge."],
+  ["tithe:i1","tithe:i2","con","states",""],
+  ["tithe:i1","tithe:i4","ref","supports","Acts names a revolt at the census Luke uses to date the birth."],
+  ["tithe:i1","tithe:e1","con","spec","Registration and head-count payment: counting people as a fiscal act."],
+  ["tithe:i16","tithe:i17","con","states",""],
+  ["tithe:i17","tithe:i7","con","supports","Paul turns the ruling into a standing instruction."],
+  ["tithe:i18","tithe:i17","con","supports",""],
+  ["tithe:i19","tithe:i7","con","supports","Fear and honor kept unequal, as God and emperor are in the ruling."],
+  ["tithe:i20","tithe:i21","con","supports","Imperial authority as protection and as accusation."],
+  ["tithe:i17","tithe:b6","lex","states","Adjacent verses: pay what is owed, then owe nothing but love."],
+  ["tithe:c1","tithe:c8","lex","states","The same call story."],
+  ["tithe:c1","tithe:c12","lex","states","The same call story."],
+  ["tithe:c2","tithe:c3","con","states",""],
+  ["tithe:c2","tithe:c9","lex","states","Parallel objection."],
+  ["tithe:c5","tithe:c7","con","supports","Contempt for the company, and the reversal it produces."],
+  ["tithe:c10","tithe:c11","con","states",""],
+  ["tithe:c11","tithe:c17","con","supports","The instruction to collect no more, and a collector who returns far more."],
+  ["tithe:c14","tithe:c15","con","states",""],
+  ["tithe:c16","tithe:c17","con","states",""],
+  ["tithe:c16","tithe:c6","con","spec","The trade used as a byword, and a man of the trade named and welcomed."],
+  ["tithe:c7","tithe:c14","con","supports","Both reverse the standing of the pious and the collector."],
+  ["tithe:c17","tithe:b5","con","spec","Two stewards of other people's money, both revising the ledger downward."],
+  ["tithe:v1","tithe:v2","con","states",""],
+  ["tithe:v2","tithe:v3","con","states",""],
+  ["tithe:v3","tithe:v4","con","states",""],
+  ["tithe:v5","tithe:v6","con","states",""],
+  ["tithe:v2","tithe:v5","lex","states","Parallel accounts of the treasury scene."],
+  ["tithe:v4","tithe:d1","con","supports","A widow giving her living, against the tithe kept for widows."],
+  ["tithe:v7","tithe:v8","con","states",""],
+  ["tithe:v9","tithe:v10","con","supports",""],
+  ["tithe:v12","tithe:v1","con","spec","What may and may not enter the same treasury."],
+  ["tithe:v13","tithe:v14","con","states",""],
+  ["tithe:v14","tithe:e1","con","spec","Proportional weekly giving against a flat head payment."],
+  ["tithe:v15","tithe:v14","con","supports","Proportion set by the giver, not by statute."],
+  ["tithe:v16","tithe:v17","con","supports",""],
+  ["tithe:b1","tithe:b2","con","states",""],
+  ["tithe:b2","tithe:b3","con","states",""],
+  ["tithe:b4","tithe:b2","con","supports","Cancelled debt as the measure of returned love."],
+  ["tithe:x1","tithe:x2","lex","states","Parallel accounts."],
+  ["tithe:x1","tithe:x3","lex","states","Parallel accounts."],
+  ["tithe:g1","tithe:g2","con","supports","Two pre-legal tenths, both vowed rather than commanded."],
+  ["tithe:l1","tithe:n1","con","states",""],
+  ["tithe:n1","tithe:n2","con","states",""],
+  ["tithe:n1","tithe:d1","con","supports","Both direct the tithe to those without an allotment."],
+  ["tithe:s1","tithe:l1","lex","supports","The same fraction, claimed by the king instead of by God."],
+  ["tithe:p3","tithe:u4","ref","supports","The master faults the slave for not doing what Deuteronomy forbids."],
+  ["tithe:p8","tithe:u4","ref","supports","The same rebuke, against the same prohibition."],
+  ["tithe:p8","tithe:u9","con","supports","Nehemiah stops the taking of interest; the king demands it."],
+  ["tithe:p7","tithe:s1","con","supports","A ruler who takes what he did not deposit, as Samuel warned."],
+  ["tithe:p9","tithe:s1","con","supports","The king's power ends in violence against his own people."],
+  ["tithe:p5","tithe:c16","con","states","Luke tells this parable immediately after Zacchaeus."],
+  ["tithe:p5","tithe:c17","con","supports","Restitution, then a master who demands increase."],
+  ["tithe:p4","tithe:b1","con","spec","Taking from the one who has least, in two different registers."],
+  ["tithe:p1","tithe:p2","con","states",""],
+  ["tithe:p2","tithe:p3","con","states",""],
+  ["tithe:p3","tithe:p4","con","states",""],
+  ["tithe:p5","tithe:p6","con","states",""],
+  ["tithe:p6","tithe:p7","con","states",""],
+  ["tithe:p7","tithe:p8","con","states",""],
+  ["tithe:p8","tithe:p9","con","states",""],
+  ["tithe:p1","tithe:p5","con","states","Matthew's talents and Luke's pounds are the same parable type."],
+  ["tithe:p2","tithe:p7","lex","states","Nearly identical accusation against the master."],
+  ["tithe:p3","tithe:p8","lex","states","Nearly identical rebuke about the bank."],
+  ["tithe:u1","tithe:u2","con","states",""],
+  ["tithe:u2","tithe:u3","con","states",""],
+  ["tithe:u4","tithe:u5","con","states",""],
+  ["tithe:u1","tithe:u4","lex","states","The same prohibition in two codes."],
+  ["tithe:u6","tithe:u4","con","supports","Lending without interest as a mark of the upright."],
+  ["tithe:u7","tithe:u4","con","supports","The prohibition restated as a test of righteousness."],
+  ["tithe:u8","tithe:u9","con","states",""],
+  ["tithe:u9","tithe:u10","con","states",""],
+  ["tithe:u8","tithe:i23","con","states","The same crisis: the tax paid by borrowing at interest."],
+  ["tithe:u10","tithe:i24","con","states","Restoration answering the enslavement."],
+  ["tithe:u5","tithe:i5","con","spec","Interest permitted to the foreigner; tribute owed to one."],
+  ["tithe:r1","tithe:r2","con","states",""],
+  ["tithe:r2","tithe:r3","con","supports",""],
+  ["tithe:r2","tithe:r4","con","states",""],
+  ["tithe:r5","tithe:r6","con","states",""],
+  ["tithe:r1","tithe:r5","con","supports","Seventh-year remission and fiftieth-year return."],
+  ["tithe:r7","tithe:r8","con","states",""],
+  ["tithe:r7","tithe:r5","ref","supports","Jubilee language stands behind the proclamation."],
+  ["tithe:r9","tithe:b2","con","supports","Debt forgiven as the pattern for being forgiven."],
+  ["tithe:r9","tithe:b3","con","states","The parable turns on the petition."],
+  ["tithe:r2","tithe:u10","con","supports","Remission commanded; Nehemiah enacts the restoration."],
+  ["tithe:r4","tithe:u1","con","supports","Both guard against lending withheld from the poor."],
+  ["tithe:r3","tithe:y4","con","spec","The promise of no one in need, reported as accomplished."],
+  ["tithe:w1","tithe:w2","lex","supports","The same rule in two codes."],
+  ["tithe:w2","tithe:w3","con","states",""],
+  ["tithe:w4","tithe:w3","ref","supports","James echoes the same-day payment rule."],
+  ["tithe:w5","tithe:w6","con","states",""],
+  ["tithe:w5","tithe:i6","lex","supports","A day's wage and the tax coin are the same denarius."],
+  ["tithe:w7","tithe:w8","ref","states","The saying cited as scripture."],
+  ["tithe:w8","tithe:n1","con","spec","Support for those who serve, argued from law."],
+  ["tithe:w4","tithe:q4","con","supports","Both protect people dependent on someone else's harvest."],
+  ["tithe:q1","tithe:q2","con","states",""],
+  ["tithe:q2","tithe:q3","lex","states","The instruction repeated verbatim."],
+  ["tithe:q4","tithe:q5","con","states",""],
+  ["tithe:q1","tithe:q4","lex","supports","Two codes, one provision."],
+  ["tithe:q4","tithe:d1","lex","states","The same three named: alien, orphan, widow."],
+  ["tithe:q6","tithe:q1","ref","supports","Ruth gleans under this provision."],
+  ["tithe:q2","tithe:v4","con","spec","Leavings kept for the poor, and a poor woman giving her last."],
+  ["tithe:y1","tithe:y2","con","states",""],
+  ["tithe:y3","tithe:y4","con","states",""],
+  ["tithe:y1","tithe:y3","lex","states","The same arrangement described twice."],
+  ["tithe:y4","tithe:y5","con","states",""],
+  ["tithe:y5","tithe:y6","con","states",""],
+  ["tithe:y6","tithe:y7","con","states",""],
+  ["tithe:y6","tithe:m1","con","supports","Withholding from the fund, and withholding tithes called robbery."],
+  ["tithe:y7","tithe:v15","con","supports","Both insist the gift was never compelled."],
+  ["tithe:y8","tithe:d1","con","supports","A fair balance, and the tithe stored for those without land."],
+  ["tithe:y2","tithe:v10","con","supports","Sell possessions and give."],
+  ["tithe:z1","tithe:z2","con","states",""],
+  ["tithe:z2","tithe:z3","con","states",""],
+  ["tithe:z1","tithe:l1","con","states","One chapter: persons priced, then the tenth made holy."],
+  ["tithe:z4","tithe:z5","con","states",""],
+  ["tithe:z4","tithe:n1","con","states","Three verses before the tithe assignment."],
+  ["tithe:z6","tithe:z4","ref","supports","The redemption of the firstborn, stated earlier."],
+  ["tithe:z7","tithe:z8","lex","supports","Thirty shekels in both."],
+  ["tithe:z8","tithe:z9","ref","supports","Matthew's thirty pieces echo the weighed wage."],
+  ["tithe:z9","tithe:v12","con","states","The same silver, refused by the treasury."],
+  ["tithe:z3","tithe:e1","con","supports","Ability to pay accommodated, against a flat head payment."],
+  ["tithe:z2","tithe:z7","con","spec","Fifty shekels for a vow, thirty for a killed slave."],
+  ["tithe:z5","tithe:t1","con","spec","A fixed redemption price, and a fixed temple levy."],
+  ["tithe:i22","tithe:i23","con","states",""],
+  ["tithe:i23","tithe:i24","con","states",""],
+  ["tithe:i23","tithe:s1","con","supports","A levy that costs people their fields."],
+  ["tithe:i24","tithe:z7","con","spec","Children sold, and a price fixed for a slave."],
+  ["tithe:m2","tithe:m3","lex","states","One oracle: the same damaged animals named again as what is brought."],
+  ["tithe:m3","tithe:m4","con","states","The complaint becomes a curse: the flawed offering is not weariness but fraud."],
+  ["tithe:m4","tithe:m1","con","supports","One prophet, two charges about what is handed over: the flawed gift and the withheld tithe."],
+  ["tithe:m4","tithe:k1","con","spec","Reader's link: Malachi curses the cheap offering, and the woe is read as the same fault in the tithe. Matthew does not cite Malachi."],
+  ["tithe:l2","tithe:l3","con","states","One statute in two verses: the tenth is counted off, then fixed against exchange."],
+  ["tithe:l2","tithe:l1","con","states","The same chapter carries the tithe from seed and fruit across to herd and flock."],
+  ["tithe:l3","tithe:m4","con","spec","Reader's tension: the best is demanded of the offering, while the tithe is forbidden to be sorted at all."],
+  ["tithe:n3","tithe:n4","con","states","One instruction in two verses: lift out the best, and the rest is ordinary."],
+  ["tithe:n3","tithe:n2","con","states","The tenth the Levites owe on what they receive is the portion that must be the best."],
+  ["tithe:n3","tithe:l3","con","supports","The best-of rule governs the offering lifted out of the tithe, not the counting of the tithe."],
+];
+// </corpus>
+
+// Not generated — build_graph.py must not touch these.
+const WA = {
+  states:  {name:"The text says it", v:"--states"},
+  supports:{name:"The text supports it", v:"--supports"},
+  spec:    {name:"My speculation", v:"--spec"}
+};
+const TY = {
+  lex:{name:"Shared wording", dash:""},
+  ref:{name:"One cites the other", dash:"7 4"},
+  con:{name:"Same idea", dash:"1.5 4"}
+};
+
+// The "by group" arrangement is HIDDEN, not removed. Everything behind it is
+// still here and still runs — the relax() layout, each node's gx/gy, the group
+// hint, setMode('group'). Flip this to true to put the control back.
+const SHOW_GROUP_LENS = false;
+
+const nodes = N.map(([id,ref,cl,gist,mod])=>({id,ref,cl,gist,mod,x:0,y:0,vx:0,vy:0}));
+const byId = Object.fromEntries(nodes.map(n=>[n.id,n]));
+const edges = E.map(([s,t,ty,wa,note])=>({s:byId[s],t:byId[t],ty,wa,note}));
+const deg = {}; edges.forEach(e=>{deg[e.s.id]=(deg[e.s.id]||0)+1; deg[e.t.id]=(deg[e.t.id]||0)+1});
+
+// Reference is identity: the same verse may appear once per module, each with
+// its own cluster and its own summary. byRef groups those readings; with one
+// module active every bucket holds exactly one node.
+const byRef = {};
+nodes.forEach(n=>{ (byRef[n.ref] = byRef[n.ref] || []).push(n); });
+const activeMods = [...new Set(nodes.map(n=>n.mod))];
+
+// The centre of the layout is a ROLE, not a cluster called "bridge". A module
+// that names its hub something else still gets a centre; one that marks none
+// gets a ring with nothing in the middle.
+const HUB = Object.keys(CL).find(k=>CL[k].role==='hub') || null;
+
+// The header states the corpus's size, so it is written from the generated
+// counts rather than typed. It had drifted to "Eighty-nine passages ... in the
+// New Testament" against 151 passages across 25 books, 46 of them Old
+// Testament.
+document.getElementById('hTitle').textContent = (MODS[MOD]||{}).title || 'Concordagraph';
+document.getElementById('hSub').textContent =
+  `${META.nodes} passages across ${META.books} books, joined by ${META.edges} connections — `
+  + 'drawn from the NRSV and verified against a chapter-and-verse index. Every link names '
+  + 'its kind and how much weight the text puts behind it. Click a passage, an arc or a '
+  + 'book label to read what it connects to.';
+
+// ---- layout: cluster anchors, then relax -----------------------------------
+const order = Object.keys(CL);
+const W=1180, H=880;
+const anchors = {};
+order.forEach((k,i)=>{
+  const ang = (i/order.length)*Math.PI*2 - Math.PI/2;
+  const rad = k===HUB ? 0 : 320;               // the hub cluster sits in the middle
+  anchors[k] = {x: W/2 + Math.cos(ang)*rad*1.28, y: H/2 + Math.sin(ang)*rad};
+});
+nodes.forEach((n,i)=>{
+  const a = anchors[n.cl];
+  n.x = a.x + Math.cos(i*2.4)*70; n.y = a.y + Math.sin(i*2.4)*70;
+});
+function relax(steps){
+  for(let s=0;s<steps;s++){
+    for(let i=0;i<nodes.length;i++){
+      const a=nodes[i];
+      for(let j=i+1;j<nodes.length;j++){
+        const b=nodes[j];
+        let dx=b.x-a.x, dy=b.y-a.y, d2=dx*dx+dy*dy||0.01;
+        if(d2<30000){
+          const f=900/d2, d=Math.sqrt(d2);
+          const fx=dx/d*f, fy=dy/d*f;
+          a.vx-=fx; a.vy-=fy; b.vx+=fx; b.vy+=fy;
+        }
+      }
+    }
+    edges.forEach(e=>{
+      const dx=e.t.x-e.s.x, dy=e.t.y-e.s.y, d=Math.hypot(dx,dy)||0.01;
+      const f=(d-110)*0.012;
+      e.s.vx+=dx/d*f; e.s.vy+=dy/d*f; e.t.vx-=dx/d*f; e.t.vy-=dy/d*f;
+    });
+    nodes.forEach(n=>{
+      const a=anchors[n.cl];
+      n.vx+=(a.x-n.x)*0.020; n.vy+=(a.y-n.y)*0.020;
+      n.vx*=0.80; n.vy*=0.80;
+      n.x+=n.vx; n.y+=n.vy;
+    });
+  }
+}
+relax(420);
+nodes.forEach(n=>{ n.gx=n.x; n.gy=n.y; });
+
+// ---- layout 2: canonical order along a baseline ----------------------------
+// BOOKS and ABBR are GENERATED into the corpus block above, in the order the
+// NRSV itself puts them, derived from the verse index. They used to be
+// hardcoded here as eighteen books, which the corpus outgrew: seven cited
+// books were absent, indexOf returned -1 for each, and their twelve nodes
+// sorted ahead of Genesis with no tick or label on the axis. build_graph.py
+// now refuses to write if a cited book cannot be placed.
+const NT_FIRST = "Matthew";
+nodes.forEach(n=>{
+  const m = n.ref.match(/^((?:[1-4] )?[A-Za-z]+) (\d+):(\d+)$/);
+  n.book = m[1]; n.chap = +m[2]; n.vers = +m[3];
+  n.ord = BOOKS.indexOf(n.book);
+});
+const CANON_W = 2600;
+const BASE_Y = 520, X0 = 70, X1 = CANON_W - 70;
+const canon = nodes.slice().sort((a,b)=> a.ord-b.ord || a.chap-b.chap || a.vers-b.vers);
+canon.forEach((n,i)=>{
+  n.ax = X0 + (X1-X0) * (canon.length>1 ? i/(canon.length-1) : .5);
+  n.ay = BASE_Y;
+});
+// Two arcs that share a stretch of baseline and sit at the same height trace
+// the same curve. Walk the edges shortest-reach first and lift each one until
+// its apex clears every arc it overlaps, so no two ever lie on top of another.
+const ARC_BASE=44, ARC_K=0.55, ARC_STEP=14, ARC_GAP=11;
+(function assignLanes(){
+  const placed=[];
+  edges.slice().sort((a,b)=>Math.abs(a.s.ax-a.t.ax)-Math.abs(b.s.ax-b.t.ax))
+    .forEach(e=>{
+      const lo=Math.min(e.s.ax,e.t.ax), hi=Math.max(e.s.ax,e.t.ax), span=hi-lo;
+      let lane=0, apex;
+      for(;lane<=40;lane++){
+        apex=0.75*(ARC_BASE+span*ARC_K+lane*ARC_STEP);
+        if(!placed.some(p=>!(hi<p.lo||lo>p.hi) && Math.abs(apex-p.apex)<ARC_GAP)) break;
+      }
+      e.lane=lane; placed.push({lo,hi,apex});
+    });
+})();
+const arcH = e => ARC_BASE + Math.abs(e.s.ax-e.t.ax)*ARC_K + e.lane*ARC_STEP;
+const MAX_APEX = Math.max(0, ...edges.map(e=>arcH(e)*0.75));
+
+// ---- render ----------------------------------------------------------------
+const svg = document.getElementById('net');
+const NS='http://www.w3.org/2000/svg';
+const gRoot = document.createElementNS(NS,'g');
+const gAxis = document.createElementNS(NS,'g');
+const gEdge = document.createElementNS(NS,'g');
+const gHit  = document.createElementNS(NS,'g');   // invisible wide strokes, so a
+const gNode = document.createElementNS(NS,'g');   // 1px arc is actually hoverable
+gRoot.append(gAxis,gEdge,gHit,gNode); svg.append(gRoot);
+
+const css = getComputedStyle(document.documentElement);
+const col = v => css.getPropertyValue(v).trim();
+
+const darkQ = matchMedia('(prefers-color-scheme: dark)');
+function isDark(){
+  const t=document.documentElement.getAttribute('data-theme');
+  return t==='dark' || (t!=='light' && darkQ.matches);
+}
+function clCol(k){ return isDark() ? CL[k].dark : CL[k].light; }
+function repaint(){
+  nodes.forEach(n=>n.circle.setAttribute('fill', clCol(n.cl)));
+  document.querySelectorAll('#clusters .dot').forEach((d,i)=>{
+    d.style.background = clCol(Object.keys(CL)[i]);
+  });
+}
+darkQ.addEventListener('change', repaint);
+
+edges.forEach(e=>{
+  const p=document.createElementNS(NS,'path');
+  p.setAttribute('class','edge');
+  p.setAttribute('fill','none');
+  p.setAttribute('stroke',`var(${WA[e.wa].v})`);
+  // Screen pixels, because of non-scaling-stroke above. The three tiers stay
+  // ranked by weight and by opacity, which is what carries the warrant.
+  p.setAttribute('stroke-width', e.wa==='states'?2.4:e.wa==='supports'?1.9:1.4);
+  p.setAttribute('stroke-opacity', e.wa==='states'?.9:e.wa==='supports'?.75:.6);
+  if(TY[e.ty].dash) p.setAttribute('stroke-dasharray',TY[e.ty].dash);
+  p.setAttribute('stroke-linecap','round');
+  e.el=p; gEdge.append(p);
+
+  const h=document.createElementNS(NS,'path');
+  h.setAttribute('class','hit');
+  h.addEventListener('pointerenter',()=>hover(e));
+  h.addEventListener('pointerleave',()=>hover(null));
+  h.addEventListener('click',()=>select(e));
+  h.tabIndex=0; h.setAttribute('role','button');
+  h.setAttribute('aria-label',`${e.s.ref} to ${e.t.ref} — ${TY[e.ty].name}, ${WA[e.wa].name}`);
+  h.addEventListener('keydown',ev=>{
+    if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();select(e);}});
+  h.addEventListener('focus',()=>hover(e));
+  h.addEventListener('blur',()=>hover(null));
+  e.hit=h; gHit.append(h);
+});
+
+nodes.forEach(n=>{
+  const g=document.createElementNS(NS,'g'); g.setAttribute('class','node');
+  const r = n.cl===HUB ? 9.5 : 4.5 + Math.min(4,(deg[n.id]||1)*0.7);
+  n.r = r;
+  const c=document.createElementNS(NS,'circle');
+  c.setAttribute('r',r);
+  c.setAttribute('fill', clCol(n.cl));
+  c.setAttribute('stroke','var(--paper)'); c.setAttribute('stroke-width',1.5);
+  const t=document.createElementNS(NS,'text');
+  n.abbr=n.ref.replace(/^(\d )?(\w{3})\w*/, (m,a,b)=>(a||'')+b);
+  t.textContent=n.abbr;
+  g.append(c,t); g.tabIndex=0; g.setAttribute('role','button');
+  g.setAttribute('aria-label',n.ref);
+  g.addEventListener('click',()=>select(n));
+  g.addEventListener('keydown',ev=>{if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();select(n);}});
+  g.addEventListener('pointerenter',()=>hover(n));
+  g.addEventListener('pointerleave',()=>hover(null));
+  g.addEventListener('focus',()=>hover(n));      // keyboard gets the same readout
+  g.addEventListener('blur',()=>hover(null));
+  n.el=g; n.circle=c; n.label=t; gNode.append(g);
+});
+
+// ---- book axis, drawn only in canonical mode -------------------------------
+const bookLabels = {};
+// One stable focus object per book. Selection toggles by identity, so a fresh
+// {kind:'book'} per event would make a second click fail to deselect.
+const bookFocus = {};
+(function buildAxis(){
+  const spine=document.createElementNS(NS,'line');
+  spine.setAttribute('x1',X0-14); spine.setAttribute('y1',BASE_Y);
+  spine.setAttribute('x2',X1+14); spine.setAttribute('y2',BASE_Y);
+  spine.setAttribute('class','tick'); gAxis.append(spine);
+  const groups={};
+  canon.forEach(n=>{ (groups[n.book] ||= []).push(n.ax); });
+  BOOKS.forEach(b=>{
+    const xs=groups[b]; if(!xs) return;
+    const lo=Math.min(...xs), hi=Math.max(...xs), mid=(lo+hi)/2;
+    const tk=document.createElementNS(NS,'line');
+    tk.setAttribute('x1',lo-5); tk.setAttribute('y1',BASE_Y+78);
+    tk.setAttribute('x2',hi+5); tk.setAttribute('y2',BASE_Y+78);
+    tk.setAttribute('class','tick'); gAxis.append(tk);
+    const lb=document.createElementNS(NS,'text');
+    lb.setAttribute('class','booklab');
+    lb.setAttribute('transform',`translate(${mid},${BASE_Y+89}) rotate(-45)`);
+    lb.setAttribute('text-anchor','end'); lb.textContent=ABBR[b];
+    const bf = bookFocus[b] = {kind:'book', book:b};
+    lb.addEventListener('pointerenter',()=>hover(bf));
+    lb.addEventListener('pointerleave',()=>hover(null));
+    lb.addEventListener('click',()=>select(bf));
+    lb.tabIndex=0; lb.setAttribute('role','button');
+    lb.setAttribute('aria-label',`${b} — all passages in this book`);
+    lb.addEventListener('keydown',ev=>{
+      if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();select(bf);}});
+    lb.addEventListener('focus',()=>hover(bf));
+    lb.addEventListener('blur',()=>hover(null));
+    gAxis.append(lb);
+    bookLabels[b]=lb;
+  });
+  const first=canon.find(n=>n.book===NT_FIRST);
+  if(first){
+    const prev=canon[canon.indexOf(first)-1];
+    const x=prev ? (prev.ax+first.ax)/2 : first.ax-8;
+    const sep=document.createElementNS(NS,'line');
+    sep.setAttribute('x1',x); sep.setAttribute('y1',BASE_Y-MAX_APEX-24);
+    sep.setAttribute('x2',x); sep.setAttribute('y2',BASE_Y+81);
+    sep.setAttribute('class','era'); gAxis.append(sep);
+    const el=document.createElementNS(NS,'text');
+    el.setAttribute('class','eralab'); el.setAttribute('x',x+6);
+    el.setAttribute('y',BASE_Y-MAX_APEX-24); el.textContent='New Testament begins';
+    gAxis.append(el);
+  }
+  gAxis.style.display='none';
+})();
+
+// ---- placement -------------------------------------------------------------
+let mode='canon';
+
+function place(arcs){
+  nodes.forEach(n=>{
+    n.circle.setAttribute('cx',n.x); n.circle.setAttribute('cy',n.y);
+    if(arcs){
+      n.label.setAttribute('x',0); n.label.setAttribute('y',0);
+      n.label.setAttribute('transform',`translate(${n.x},${n.y+n.r+7}) rotate(-90)`);
+      n.label.setAttribute('text-anchor','end');
+    } else {
+      n.label.removeAttribute('transform'); n.label.removeAttribute('text-anchor');
+      n.label.setAttribute('x',n.x+n.r+4); n.label.setAttribute('y',n.y+3.5);
+    }
+  });
+  edges.forEach(e=>{
+    let d;
+    if(arcs){
+      const [a,b] = e.s.x<=e.t.x ? [e.s,e.t] : [e.t,e.s];
+      const hh = arcH(e);
+      d = `M ${a.x} ${a.y} C ${a.x} ${a.y-hh}, ${b.x} ${b.y-hh}, ${b.x} ${b.y}`;
+    } else {
+      d = `M ${e.s.x} ${e.s.y} L ${e.t.x} ${e.t.y}`;
+    }
+    e.el.setAttribute('d',d);
+    e.hit.setAttribute('d',d);          // the hit stroke tracks the drawn one
+  });
+}
+
+const hint=document.getElementById('modeHint');
+const HINTS={
+  group:'Distance and angle mean nothing here — only which group a node belongs to, and its size, which tracks how many connections it has.',
+  canon:'Left to right is the order of the books. An arc\u2019s width and height both track how far the connection reaches across the canon.'
+};
+function setMode(next){
+  if(next==='group' && !SHOW_GROUP_LENS) return;   // hidden lens stays unreachable
+  if(next===mode) return;
+  mode=next;
+  document.getElementById('mGroup').setAttribute('aria-pressed',String(mode==='group'));
+  document.getElementById('mCanon').setAttribute('aria-pressed',String(mode==='canon'));
+  hint.textContent=HINTS[mode];
+  gAxis.style.display = mode==='canon' ? '' : 'none';
+  const from=nodes.map(n=>({x:n.x,y:n.y}));
+  const to=nodes.map(n=> mode==='canon' ? {x:n.ax,y:n.ay} : {x:n.gx,y:n.gy});
+  const t0=performance.now(), dur=matchMedia('(prefers-reduced-motion: reduce)').matches?0:520;
+  (function step(now){
+    const k=dur? Math.min(1,(now-t0)/dur) : 1;
+    const e=k<.5 ? 4*k*k*k : 1-Math.pow(-2*k+2,3)/2;
+    nodes.forEach((n,i)=>{ n.x=from[i].x+(to[i].x-from[i].x)*e; n.y=from[i].y+(to[i].y-from[i].y)*e; });
+    place(k===1 && mode==='canon');
+    if(k<1) requestAnimationFrame(step); else fit();
+  })(performance.now());
+}
+document.getElementById('mGroup').onclick=()=>setMode('group');
+document.getElementById('mCanon').onclick=()=>setMode('canon');
+if(!SHOW_GROUP_LENS) document.getElementById('mGroup').classList.add('hide');
+hint.textContent=HINTS.canon;
+nodes.forEach(n=>{ n.x=n.ax; n.y=n.ay; });
+gAxis.style.display='';
+place(true);
+
+// ---- viewport --------------------------------------------------------------
+let vx=0, vy=0, vs=1;
+function apply(){ gRoot.setAttribute('transform',`translate(${vx},${vy}) scale(${vs})`); }
+function fit(){
+  const bb=gRoot.getBBox(), r=svg.getBoundingClientRect();
+  vs=Math.min(r.width/(bb.width+90), r.height/(bb.height+90));
+  vx=(r.width-bb.width*vs)/2-bb.x*vs; vy=(r.height-bb.height*vs)/2-bb.y*vs; apply();
+}
+window.addEventListener('resize',fit);
+document.getElementById('zin').onclick=()=>{vs*=1.25;apply()};
+document.getElementById('zout').onclick=()=>{vs/=1.25;apply()};
+document.getElementById('zfit').onclick=fit;
+// Panning must not call svg.setPointerCapture on pointerdown. Capturing the
+// pointer retargets the following click to the <svg>, so a click on an arc or
+// a book label never reaches that element's own handler — which is exactly how
+// selecting them broke. Instead: remember where the press started, begin
+// panning only once the pointer has actually moved, and track the drag on
+// window so it survives leaving the SVG. A press that never moves stays a
+// click; a press that does move pans, and its trailing click is swallowed.
+const DRAG_SLOP = 4;
+let panFrom=null, panning=false, swallowClick=false;
+svg.addEventListener('pointerdown',e=>{
+  if(e.target.closest('.node')) return;          // nodes are for selecting, not panning
+  panFrom={x:e.clientX, y:e.clientY, vx, vy};
+});
+window.addEventListener('pointermove',e=>{
+  if(!panFrom) return;
+  if(!panning){
+    if(Math.hypot(e.clientX-panFrom.x, e.clientY-panFrom.y) < DRAG_SLOP) return;
+    panning=true; svg.classList.add('drag');
+  }
+  vx=panFrom.vx+(e.clientX-panFrom.x); vy=panFrom.vy+(e.clientY-panFrom.y); apply();
+});
+window.addEventListener('pointerup',()=>{
+  if(panning) swallowClick=true;
+  panFrom=null; panning=false; svg.classList.remove('drag');
+});
+svg.addEventListener('click',e=>{
+  if(swallowClick){ swallowClick=false; e.stopPropagation(); e.preventDefault(); }
+}, true);
+svg.addEventListener('wheel',e=>{e.preventDefault();const k=e.deltaY<0?1.1:1/1.1;const r=svg.getBoundingClientRect();
+  const mx=e.clientX-r.left, my=e.clientY-r.top; vx=mx-(mx-vx)*k; vy=my-(my-vy)*k; vs*=k; apply();},{passive:false});
+
+// ---- filters ---------------------------------------------------------------
+const onCl=new Set(Object.keys(CL)), onWa=new Set(Object.keys(WA)), onTy=new Set(Object.keys(TY));
+let query='', picked=null, hovered=null;
+
+function build(host, map, set, kind){
+  Object.entries(map).forEach(([k,o])=>{
+    const lab=document.createElement('label'); lab.className='row'; lab.tabIndex=0;
+    const cb=document.createElement('input'); cb.type='checkbox'; cb.checked=true;
+    const mark=document.createElement('span');
+    if(kind==='cl'){ mark.className='dot'; mark.style.background=clCol(k); }
+    else if(kind==='wa'){ mark.className='swatch'; mark.style.borderTopColor=`var(${o.v})`; }
+    else { mark.className='swatch'; mark.style.borderTopColor='var(--ink-3)';
+           if(o.dash) mark.style.borderTopStyle = o.dash==='7 4' ? 'dashed' : 'dotted'; }
+    const txt=document.createElement('span'); txt.textContent=o.name;
+    lab.append(cb,mark,txt);
+    if(kind==='cl'){ const c=document.createElement('span'); c.className='count';
+      c.textContent=nodes.filter(n=>n.cl===k).length; lab.append(c); }
+    cb.addEventListener('change',()=>{cb.checked?set.add(k):set.delete(k);draw()});
+    lab.addEventListener('keydown',e=>{if(e.key==='Enter'){cb.checked=!cb.checked;cb.dispatchEvent(new Event('change'));}});
+    host.append(lab);
+  });
+}
+build(document.getElementById('clusters'),CL,onCl,'cl');
+build(document.getElementById('warrants'),WA,onWa,'wa');
+build(document.getElementById('types'),TY,onTy,'ty');
+
+document.getElementById('q').addEventListener('input',e=>{query=e.target.value.toLowerCase().trim();draw()});
+document.getElementById('reset').onclick=()=>{
+  document.querySelectorAll('.rail input[type=checkbox]').forEach(c=>{if(!c.checked){c.checked=true;c.dispatchEvent(new Event('change'))}});
+  document.getElementById('q').value=''; query=''; picked=null; hovered=null;
+  setMode('canon'); render(); draw(); fit();   // render() too, or the panel keeps the cleared selection
+};
+
+function matches(n){
+  if(!onCl.has(n.cl)) return false;
+  if(query && !(n.ref.toLowerCase().includes(query)||n.gist.toLowerCase().includes(query))) return false;
+  return true;
+}
+// ---- focus: hover and selection share one treatment ------------------------
+// A hover wins while it lasts, otherwise the click-selection stands. Pointing
+// at something therefore previews exactly what selecting it would show.
+function focused(){
+  // While nothing is selected, hovering an ARC must not re-light the graph.
+  // Sweeping the pointer across a dense arc field crosses dozens of 12px hit
+  // strokes and the empty canvas between them, and every crossing was toggling
+  // a full lit/dim pass over 151 nodes and 170 edges — which reads as flicker,
+  // not as feedback. So arc hover only drives the highlight once there is a
+  // selection to compare it against. The readout still names the arc either
+  // way, so nothing becomes undiscoverable. Passages and book labels are
+  // discrete targets and keep highlighting on hover as before.
+  if(isEdge(hovered) && !picked) return null;
+  return hovered || picked;
+}
+
+// A node lights itself and its neighbours; an arc lights its two ends; a book
+// lights every passage in it, and theirs.
+// A focus is a book ({kind:'book'}), an edge (has .s and .t) or a node. The
+// kind tag is not decoration: nodes carry their own .book property, so testing
+// f.book would read every node hover as a hover on its whole book.
+const isBook = f => !!f && f.kind==='book';
+const isEdge = f => !!f && !!f.s && !!f.t;
+
+function litNodes(f){
+  if(!f) return null;
+  if(isBook(f)){
+    const ids=new Set(nodes.filter(n=>n.book===f.book).map(n=>n.id));
+    edges.forEach(e=>{ if(ids.has(e.s.id)||ids.has(e.t.id)){ ids.add(e.s.id); ids.add(e.t.id); } });
+    return ids;
+  }
+  if(isEdge(f)) return new Set([f.s.id, f.t.id]);
+  return new Set([f.id, ...edges.filter(e=>e.s===f||e.t===f)
+                               .map(e=> e.s===f ? e.t.id : e.s.id)]);
+}
+function litEdge(e,f){
+  if(!f) return true;
+  if(isBook(f)) return e.s.book===f.book || e.t.book===f.book;
+  if(isEdge(f)) return e===f;
+  return e.s===f || e.t===f;
+}
+// The thing itself, as opposed to what it reaches — this gets the outline.
+function isCore(n,f){
+  if(!f) return false;
+  if(isBook(f)) return n.book===f.book;
+  if(isEdge(f)) return n===f.s || n===f.t;
+  return n===f;
+}
+
+const readout=document.getElementById('readout');
+function showReadout(f){
+  if(!f){ readout.classList.remove('on'); readout.textContent=''; return; }
+  let main, kind;
+  if(isBook(f)){
+    const c=nodes.filter(n=>n.book===f.book).length;
+    main=f.book; kind=c===1 ? '1 passage' : c+' passages';
+  } else if(isEdge(f)){
+    main=`${f.s.ref}  →  ${f.t.ref}`;
+    kind=`${TY[f.ty].name} · ${WA[f.wa].name}`;
+  } else {
+    main=f.ref; kind=CL[f.cl].name;
+  }
+  readout.textContent=main;
+  const k=document.createElement('span'); k.className='rk'; k.textContent=kind;
+  readout.append(k);
+  readout.classList.add('on');
+}
+function hover(f){
+  hovered=f; showReadout(f);
+  // Do NOT re-append the hovered node to lift it above its neighbours. SVG has
+  // no z-index, so that was the obvious way to raise the magnified label — but
+  // detaching and re-inserting the group happens under the cursor, and the
+  // browser then never synthesises the click at all: pointerdown, mousedown,
+  // pointerup and mouseup all arrive on the circle and no click follows. That
+  // is what stopped passages being selectable. The label's paper-coloured halo
+  // (paint-order:stroke) keeps it readable over its neighbours instead, and the
+  // readout below the spine carries the full reference regardless.
+  draw();
+}
+
+function draw(){
+  const f=focused(), near=litNodes(f);
+  nodes.forEach(n=>{
+    const ok=matches(n);
+    n.el.classList.toggle('hide',!ok);
+    n.el.classList.toggle('dim', ok && near ? !near.has(n.id) : false);
+    n.el.classList.toggle('sel', isCore(n,picked));
+    n.el.classList.toggle('lit', ok && isCore(n,f));
+    // Magnified, the label spells the reference out; the spine is too crowded
+    // to carry the full form at rest, which is the whole reason to magnify it.
+    const mag = n===hovered;
+    n.label.classList.toggle('mag', mag);
+    const want = mag ? n.ref : n.abbr;
+    if(n.label.textContent!==want) n.label.textContent=want;
+  });
+  edges.forEach(e=>{
+    const ok = onWa.has(e.wa) && onTy.has(e.ty) && matches(e.s) && matches(e.t);
+    e.el.classList.toggle('hide',!ok);
+    e.hit.classList.toggle('hide',!ok);
+    e.el.classList.toggle('dim', ok && f ? !litEdge(e,f) : false);
+    e.el.classList.toggle('esel', e===picked);
+  });
+  for(const b in bookLabels){
+    bookLabels[b].classList.toggle('mag', isBook(f) && f.book===b);
+    bookLabels[b].classList.toggle('sel', isBook(picked) && picked.book===b);
+  }
+}
+
+// ---- detail panel ----------------------------------------------------------
+const panel=document.getElementById('panel');
+// A passage, an arc or a book can all be selected, and all three toggle off
+// when picked again. draw() already treats the three alike; the panel below
+// is what differs.
+function select(f){ picked = (picked===f ? null : f); render(); draw(); }
+
+// The reference opens the whole CHAPTER on Bible Gateway, not the single
+// verse: a verse-level link crops the surrounding context out of view, which
+// is the context this corpus is about. Bible Gateway offers no way to scroll
+// to or highlight one verse from the URL — its verse ids are opaque
+// per-version numbers (en-NRSVUE-23888) and it does not style :target — so
+// the verse to look for is named on the link instead. Note also that it no
+// longer serves plain NRSV; a NRSV request redirects to NRSVUE.
+function chapterLink(n){
+  const a=document.createElement('a');
+  a.href='https://www.biblegateway.com/passage/?search='
+        + encodeURIComponent(n.book+' '+n.chap) + '&version=NRSVUE';
+  a.target='_blank'; a.rel='noopener noreferrer';
+  a.textContent=n.ref;
+  a.title=`Open ${n.book} ${n.chap} on Bible Gateway (NRSVUE) — look for verse ${n.vers}`;
+  const s=document.createElement('span'); s.className='ext'; s.textContent='ch. ↗';
+  return [a,s];
+}
+function linkRow(ref, meta, colourVar, onClick){
+  const b=document.createElement('button'); b.className='link';
+  const r=document.createElement('span'); r.className='lref'; r.textContent=ref;
+  const m=document.createElement('span'); m.className='lmeta'; m.textContent=meta;
+  if(colourVar) m.style.color=`var(${colourVar})`;
+  b.append(r,m); b.onclick=onClick;
+  return b;
+}
+function renderEmpty(){
+  const p=document.createElement('p'); p.className='empty';
+  p.textContent='Pick a passage, an arc or a book on the graph to see what it connects to and why.';
+  const note=document.createElement('p'); note.className='note';
+  note.textContent = window.NRSV
+    ? 'Verse text is read from verses.js on this machine. Line color shows how much weight the text puts behind a link; line style shows what kind of link it is. Dotted grey lines are my own readings and carry no textual claim.'
+    : 'This copy shows references and summaries. To read full verses here, run attach_verses.py against your own index and drop verses.js beside this file. Line color shows how much weight the text puts behind a link; line style shows what kind of link it is. Dotted grey lines are my own readings and carry no textual claim.';
+  panel.append(p,note);
+}
+
+function renderNode(n){
+  const h=document.createElement('p'); h.className='ref';
+  h.append(...chapterLink(n));
+  const tg=document.createElement('span'); tg.className='tag'; tg.textContent=CL[n.cl].name;
+  panel.append(h,tg);
+  const full = (window.NRSV||{})[n.ref];
+  if(full){
+    const q=document.createElement('blockquote'); q.className='verse'; q.textContent=full;
+    const g2=document.createElement('p'); g2.className='gist-sm'; g2.textContent=n.gist;
+    panel.append(q,g2);
+  } else {
+    const g=document.createElement('p'); g.className='gist'; g.textContent=n.gist;
+    panel.append(g);
+  }
+  const mine=edges.filter(e=>e.s===n||e.t===n)
+    .filter(e=>onWa.has(e.wa)&&onTy.has(e.ty));
+  const h3=document.createElement('h3');
+  h3.textContent = mine.length===1 ? '1 connection' : mine.length+' connections';
+  panel.append(h3);
+  mine.sort((a,b)=>['states','supports','spec'].indexOf(a.wa)-['states','supports','spec'].indexOf(b.wa));
+  mine.forEach(e=>{
+    const other = e.s===n ? e.t : e.s;
+    panel.append(linkRow(other.ref,
+      TY[e.ty].name+' · '+WA[e.wa].name + (e.note? ' — '+e.note : ''),
+      WA[e.wa].v, ()=>select(e)));   // clicking a connection selects the ARC
+  });
+}
+
+const JOIN = {lex:'shares wording with', ref:'cites', con:'connects to'};
+function renderEdge(e){
+  const h=document.createElement('p'); h.className='ref';
+  h.append(...chapterLink(e.s));
+  const ar=document.createElement('span'); ar.className='arrow'; ar.textContent=JOIN[e.ty];
+  h.append(ar);
+  h.append(...chapterLink(e.t));
+  const tg=document.createElement('span'); tg.className='tag';
+  tg.textContent = TY[e.ty].name+' · '+WA[e.wa].name;
+  panel.append(h,tg);
+  if(e.note){
+    const g=document.createElement('p'); g.className='gist'; g.textContent=e.note;
+    panel.append(g);
+  }
+  const h3=document.createElement('h3'); h3.textContent='Both ends'; panel.append(h3);
+  [e.s,e.t].forEach(n=> panel.append(linkRow(n.ref, n.gist, null, ()=>select(n))));
+}
+
+function renderBook(f){
+  const own = nodes.filter(n=>n.book===f.book).sort((a,b)=>a.chap-b.chap||a.vers-b.vers);
+  const h=document.createElement('p'); h.className='ref'; h.textContent=f.book;
+  const tg=document.createElement('span'); tg.className='tag';
+  tg.textContent = own.length===1 ? '1 passage' : own.length+' passages';
+  panel.append(h,tg);
+  const h3=document.createElement('h3'); h3.textContent='Passages'; panel.append(h3);
+  own.forEach(n=> panel.append(linkRow(n.ref, n.gist, null, ()=>select(n))));
+}
+
+function render(){
+  panel.innerHTML='';
+  if(!picked) return renderEmpty();
+  if(isBook(picked)) return renderBook(picked);
+  if(isEdge(picked)) return renderEdge(picked);
+  renderNode(picked);
+}
+render(); draw();
+requestAnimationFrame(fit);
+</script>
+</body>
+</html>

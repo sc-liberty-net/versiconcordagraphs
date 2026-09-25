@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Versiconcordagraphs</title>
+<meta name="description" content="Scriptural concordagraphs — traversable networks of verse references in which every link names its kind and how much weight the text puts behind it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;1,400&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#EEF0F2; --surface:#FFFFFF;
+  --ink:#36454F; --ink-2:#4E5D68; --ink-3:#5C6B76; --line:#C3C9CE;
+  --focus:#36454F;
+  --states:#14493A; --supports:#98620F; --spec:#8A8F96;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+:root:not([data-theme="light"]){ @media (prefers-color-scheme:dark){
+  --paper:#1B2228; --surface:#242D34;
+  --ink:#ECEFF1; --ink-2:#B4C0C8; --ink-3:#96A4AD; --line:#3C4750;
+  --focus:#C2CED6;
+  --states:#5FBF9F; --supports:#E0A552; --spec:#8A9199;
+}}
+:root[data-theme="dark"]{
+  --paper:#1B2228; --surface:#242D34;
+  --ink:#ECEFF1; --ink-2:#B4C0C8; --ink-3:#96A4AD; --line:#3C4750;
+  --focus:#C2CED6;
+  --states:#5FBF9F; --supports:#E0A552; --spec:#8A9199;
+}
+*,*::before,*::after{box-sizing:inherit}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:Archivo,"Helvetica Neue",Arial,sans-serif; font-size:16px; line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:62ch; margin:0 auto; padding:56px 16px 72px}
+h1{font-family:Spectral,Georgia,serif; font-weight:600; font-size:34px; margin:0 0 6px; letter-spacing:-.01em; line-height:1.15}
+.sub{color:var(--ink-2); margin:0 0 40px; font-size:16.5px}
+h2{font-family:Archivo; font-size:12px; font-weight:600; letter-spacing:.06em;
+   text-transform:uppercase; color:var(--ink-3); margin:40px 0 14px}
+.card{
+  display:block; background:var(--surface); border:1px solid var(--line);
+  border-radius:10px; padding:20px 22px; text-decoration:none; color:inherit;
+}
+.card:hover{border-color:var(--ink-3)}
+.card:focus-visible{outline:2px solid var(--focus); outline-offset:3px}
+.card .t{font-family:Spectral,Georgia,serif; font-size:23px; font-weight:600; display:block; margin-bottom:3px}
+.card .d{color:var(--ink-2); font-size:15px; display:block}
+.card .n{color:var(--ink-3); font-size:13px; display:block; margin-top:10px; font-variant-numeric:tabular-nums}
+p{margin:0 0 15px}
+dl{margin:0}
+dt{font-family:Spectral,Georgia,serif; font-size:17px; margin-top:16px}
+dd{margin:2px 0 0; color:var(--ink-2); font-size:15px}
+.k{display:inline-block; width:14px; border-top:2px solid var(--ink-3); vertical-align:middle; margin-right:8px}
+.k.r{border-top-style:dashed}
+.k.c{border-top-style:dotted}
+.w{display:inline-block; width:14px; border-top:3px solid; vertical-align:middle; margin-right:8px}
+.note{
+  font-size:14.5px; color:var(--ink-3); border-top:1px solid var(--line);
+  margin-top:44px; padding-top:18px;
+}
+a{color:inherit}
+.note a{text-decoration-color:var(--line)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>Versiconcordagraphs</h1>
+<p class="sub">Scriptural concordagraphs. One topic per branch.</p>
+
+<p>A <strong>concordagraph</strong> is a traversable network of source references.
+Each node is a locatable citation. Each link names two things: what <em>kind</em>
+of connection it is, and how much weight the text actually puts behind it.</p>
+
+<p>That second part is the point. A graph that draws every connection the same
+way launders one reader's speculation into settled reference. Here the
+distinction is visible on the page, so you can always tell what scripture says
+from what someone thought about it.</p>
+
+<h2>Concordagraphs</h2>
+
+<a class="card" href="taxes-and-tithes/">
+  <span class="t">Tax, tithe and tribute</span>
+  <span class="d">The tithe statutes, the temple tax, the imperial tax, tax
+    collectors, the Hebrews 7 argument, and what happens to all of it in the
+    gospels.</span>
+  <span class="n">158 passages across 25 books · 180 connections</span>
+</a>
+
+<h2>How to read a link</h2>
+<dl>
+  <dt><span class="k"></span>Shared wording</dt>
+  <dd>The two passages use the same words.</dd>
+  <dt><span class="k r"></span>One cites the other</dt>
+  <dd>One passage explicitly invokes the other.</dd>
+  <dt><span class="k c"></span>Same idea</dt>
+  <dd>A thematic or structural parallel, with no shared wording.</dd>
+</dl>
+
+<h2>How much weight it carries</h2>
+<dl>
+  <dt><span class="w" style="border-color:var(--states)"></span>The text says it</dt>
+  <dd>Stated outright in the passage.</dd>
+  <dt><span class="w" style="border-color:var(--supports)"></span>The text supports it</dt>
+  <dd>A reasonable reading, but inferred.</dd>
+  <dt><span class="w" style="border-color:var(--spec)"></span>Speculation</dt>
+  <dd>Constructed by the reader. The text does not link these.</dd>
+</dl>
+
+<p class="note">
+  <strong>No scripture text here, on any page.</strong> These pages carry verse
+  references and summaries written for this project — never the wording of a
+  copyrighted translation. Every reference is verified against a verse index
+  built and kept locally; the index itself is never published. Each reference
+  links out to the chapter on Bible Gateway so you can read it in full.
+  <br><br>
+  Source and method:
+  <a href="https://github.com/sc-liberty-net/versiconcordagraphs">github.com/sc-liberty-net/versiconcordagraphs</a>
+</p>
+
+</div>
+</body>
+</html>
