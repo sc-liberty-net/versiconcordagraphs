@@ -161,6 +161,10 @@ button.reset:hover{background:var(--sunk)}
 .ref a:hover{border-bottom-color:var(--ink-2)}
 .ref a:focus-visible{outline:2px solid var(--focus); outline-offset:3px; border-radius:3px}
 .ref .ext{font-family:Archivo,sans-serif; font-size:11px; color:var(--ink-3); margin-left:7px; letter-spacing:.02em}
+.ref .chap{display:block; font-family:Archivo,sans-serif; font-size:12px;
+  color:var(--ink-2); margin:4px 0 2px; letter-spacing:.02em; border-bottom:0;
+  text-decoration:none}
+.ref .chap:hover{color:var(--ink); text-decoration:underline}
 .ref .arrow{display:block; font-family:Archivo,sans-serif; font-size:12px; color:var(--ink-2); margin:3px 0 1px; letter-spacing:.04em}
 /* Arc strokes are measured in SCREEN pixels, not in the drawing's own units.
    Without this they scale with the zoom, and the graph opens fitted at roughly
@@ -235,7 +239,7 @@ const MOD = "tithe";
 const MODS = {
   tithe:{title:"Tax, tithe and tribute"},
 };
-const META = {nodes:158,edges:180,books:25};
+const META = {nodes:158,edges:187,books:25};
 const BOOKS = ["Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy", "Ruth", "1 Samuel", "Nehemiah", "Psalm", "Ezekiel", "Amos", "Zechariah", "Malachi", "Matthew", "Mark", "Luke", "John", "Acts", "Romans", "1 Corinthians", "2 Corinthians", "1 Timothy", "Hebrews", "James", "1 Peter"];
 const ABBR = {
   "Genesis":"Gen",
@@ -269,7 +273,7 @@ const CL = {
   bridge:{name:"The temple tax",light:"#B4553C",dark:"#D97B60",role:"hub"},
   imperial:{name:"Imperial tax",light:"#2F6B84",dark:"#6FA8C4",role:""},
   collector:{name:"Tax collectors",light:"#7E6E9B",dark:"#A392C4",role:""},
-  critique:{name:"Tithing rebuked",light:"#6E8A5E",dark:"#93B182",role:""},
+  critique:{name:"Tithing weighed",light:"#6E8A5E",dark:"#93B182",role:""},
   hebrews:{name:"The Hebrews 7 argument",light:"#9A8352",dark:"#C2A86E",role:""},
   giving:{name:"Treasury and alms",light:"#4E8E7A",dark:"#7FC0AC",role:""},
   debt:{name:"Debt and its parables",light:"#94707A",dark:"#BE939D",role:""},
@@ -335,8 +339,8 @@ const N = [
   ["tithe:c15","Luke 18:13","collector","The collector will not look up, and asks for mercy.","tithe"],
   ["tithe:c16","Luke 19:2","collector","Zacchaeus, a chief tax collector, and rich.","tithe"],
   ["tithe:c17","Luke 19:8","collector","He gives half his possessions away and restores fourfold what he took.","tithe"],
-  ["tithe:k1","Matthew 23:23","critique","Woe for tithing mint, dill and cummin while neglecting justice, mercy and faith.","tithe"],
-  ["tithe:k2","Luke 11:42","critique","Woe for tithing mint, rue and every herb while neglecting justice and the love of God.","tithe"],
+  ["tithe:k1","Matthew 23:23","critique","Woe for tithing garden herbs while neglecting justice, mercy and faith — the weightier matters, to be done without leaving the lighter undone.","tithe"],
+  ["tithe:k2","Luke 11:42","critique","Woe for tithing mint, rue and every garden herb while neglecting justice and God's love — these to be done without leaving the others undone.","tithe"],
   ["tithe:k3","Luke 18:12","critique","The Pharisee's boast: fasting twice a week and giving a tenth of all income.","tithe"],
   ["tithe:h1","Hebrews 7:2","hebrews","Abraham apportioned a tenth of everything to Melchizedek.","tithe"],
   ["tithe:h2","Hebrews 7:4","hebrews","Even the patriarch gave him a tenth of the spoils.","tithe"],
@@ -496,7 +500,7 @@ const E = [
   ["tithe:i19","tithe:i7","con","supports","Fear and honor kept unequal, as God and emperor are in the ruling."],
   ["tithe:i20","tithe:i21","con","supports","Imperial authority as protection and as accusation."],
   ["tithe:i17","tithe:b6","lex","states","Adjacent verses: pay what is owed, then owe nothing but love."],
-  ["tithe:c1","tithe:c8","lex","states","The same call story."],
+  ["tithe:c1","tithe:c8","lex","states","The same call story, told of two names: Mark's collector is Levi son of Alphaeus, Matthew's is Matthew. Whether they are one man named twice is old and unsettled - and no apostle list anywhere names Levi."],
   ["tithe:c1","tithe:c12","lex","states","The same call story."],
   ["tithe:c2","tithe:c3","con","states",""],
   ["tithe:c2","tithe:c9","lex","states","Parallel objection."],
@@ -623,6 +627,13 @@ const E = [
   ["tithe:n3","tithe:n4","con","states","One instruction in two verses: lift out the best, and the rest is ordinary."],
   ["tithe:n3","tithe:n2","con","states","The tenth the Levites owe on what they receive is the portion that must be the best."],
   ["tithe:n3","tithe:l3","con","supports","The best-of rule governs the offering lifted out of the tithe, not the counting of the tithe."],
+  ["tithe:i3","tithe:i1","lex","states","Luke's two dating formulae: the census under Augustus, the ministry under Tiberius."],
+  ["tithe:c4","tithe:c1","lex","states","The call and the roster name the same man, and the roster keeps the trade attached."],
+  ["tithe:c13","tithe:c2","lex","states","The fixed pairing: tax collectors and sinners, gathered at the table and on the road."],
+  ["tithe:c4","tithe:c8","lex","spec","Both are sons of Alphaeus: James the apostle here, Levi the called collector there. One man, two brothers, or a common name? Levi is in no apostle list; James is in every one."],
+  ["tithe:k1","tithe:h8","con","spec","Q10, and the tenth LAPSES: the lighter matters were affirmed as law, and this says the law changed with the priesthood. Contradicts the edge into Hebrews 7:5, which holds the tenth was never what changed."],
+  ["tithe:k1","tithe:v14","con","spec","Q10, downstream of either answer: the affirmed practice keeps its proportion and loses its rate — weekly, as one can afford, under no compulsion. Contradicts neither Hebrews edge; it says what giving becomes, not whether the tenth lapsed."],
+  ["tithe:k1","tithe:h3","con","spec","Q10, and the tenth STANDS: this verse commands the collector, not the giver, so what the change of priesthood retires is Levi's right to collect. Contradicts the edge into Hebrews 7:12, which holds the tenth lapsed with the law."],
 ];
 // </corpus>
 
@@ -1139,22 +1150,43 @@ const panel=document.getElementById('panel');
 // is what differs.
 function select(f){ picked = (picked===f ? null : f); render(); draw(); }
 
-// The reference opens the whole CHAPTER on Bible Gateway, not the single
-// verse: a verse-level link crops the surrounding context out of view, which
-// is the context this corpus is about. Bible Gateway offers no way to scroll
-// to or highlight one verse from the URL — its verse ids are opaque
-// per-version numbers (en-NRSVUE-23888) and it does not style :target — so
-// the verse to look for is named on the link instead. Note also that it no
-// longer serves plain NRSV; a NRSV request redirects to NRSVUE.
+// Two links per reference, because they answer two different questions.
+//
+// The reference itself opens Bible Hub's VERSE page, which stacks every major
+// translation of that one verse. That is the page you want when the question
+// is what the English is doing — and in this corpus it often is: one Greek
+// word can arrive as two English words (Matthew 17:25 and 22:17 are both
+// κῆνσος, rendered "tribute" and "taxes"), and two Greek words can arrive as
+// one (Matthew 22:17 and Romans 13:6 read alike in English and share no Greek
+// at all). A single translation cannot show either.
+//
+// Beneath it, a link to the whole CHAPTER on Bible Gateway, for reading the
+// verse in its context. Bible Gateway offers no way to scroll to or highlight
+// one verse from a URL — its verse ids are opaque per-version numbers
+// (en-NRSVUE-23888) and it does not style :target — so the chapter is the
+// honest unit there. Note it no longer serves plain NRSV; NRSV redirects to
+// NRSVUE.
+//
+// Bible Hub slugs are the book lowercased with spaces as underscores, with a
+// few of its own spellings. Every book this corpus cites was checked against
+// a live request; HUB holds the ones that differ.
+const HUB = {'Psalm':'psalms', 'Song of Solomon':'songs'};
+function hubSlug(book){ return HUB[book] || book.toLowerCase().replace(/ /g,'_'); }
+
 function chapterLink(n){
   const a=document.createElement('a');
-  a.href='https://www.biblegateway.com/passage/?search='
-        + encodeURIComponent(n.book+' '+n.chap) + '&version=NRSVUE';
+  a.href='https://biblehub.com/'+hubSlug(n.book)+'/'+n.chap+'-'+n.vers+'.htm';
   a.target='_blank'; a.rel='noopener noreferrer';
   a.textContent=n.ref;
-  a.title=`Open ${n.book} ${n.chap} on Bible Gateway (NRSVUE) — look for verse ${n.vers}`;
-  const s=document.createElement('span'); s.className='ext'; s.textContent='ch. ↗';
-  return [a,s];
+  a.title=`${n.ref} on Bible Hub — every major translation of this verse, side by side`;
+  const s=document.createElement('span'); s.className='ext'; s.textContent='compare ↗';
+  const g=document.createElement('a'); g.className='chap';
+  g.href='https://www.biblegateway.com/passage/?search='
+        + encodeURIComponent(n.book+' '+n.chap) + '&version=NRSVUE';
+  g.target='_blank'; g.rel='noopener noreferrer';
+  g.textContent=`read ${n.book} ${n.chap} in full ↗`;
+  g.title=`Open the whole of ${n.book} ${n.chap} on Bible Gateway (NRSVUE)`;
+  return [a,s,g];
 }
 function linkRow(ref, meta, colourVar, onClick){
   const b=document.createElement('button'); b.className='link';
