@@ -1187,9 +1187,15 @@ function select(f){ picked = (picked===f ? null : f); render(); draw(); }
 //
 // Bible Hub slugs are the book lowercased with spaces as underscores, with a
 // few of its own spellings. Every book this corpus cites was checked against
-// a live request; HUB holds the ones that differ.
-const HUB = {'Psalm':'psalms', 'Song of Solomon':'songs'};
-function hubSlug(book){ return HUB[book] || book.toLowerCase().replace(/ /g,'_'); }
+// a live request; BIBLEHUB_SLUG holds the ones that differ.
+//
+// NOT named HUB: that identifier is already taken further up for the hub
+// CLUSTER, and reusing it threw "Identifier 'HUB' has already been declared"
+// at parse time, which killed the whole script and left the page blank.
+const BIBLEHUB_SLUG = {'Psalm':'psalms', 'Song of Solomon':'songs'};
+function hubSlug(book){
+  return BIBLEHUB_SLUG[book] || book.toLowerCase().replace(/ /g,'_');
+}
 
 function chapterLink(n){
   const a=document.createElement('a');
