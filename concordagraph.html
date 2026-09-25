@@ -235,7 +235,7 @@ const MOD = "tithe";
 const MODS = {
   tithe:{title:"Tax, tithe and tribute"},
 };
-const META = {nodes:151,edges:170,books:25};
+const META = {nodes:158,edges:180,books:25};
 const BOOKS = ["Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy", "Ruth", "1 Samuel", "Nehemiah", "Psalm", "Ezekiel", "Amos", "Zechariah", "Malachi", "Matthew", "Mark", "Luke", "John", "Acts", "Romans", "1 Corinthians", "2 Corinthians", "1 Timothy", "Hebrews", "James", "1 Peter"];
 const ABBR = {
   "Genesis":"Gen",
@@ -434,6 +434,13 @@ const N = [
   ["tithe:z7","Exodus 21:32","price","Thirty shekels paid to the owner of a slave killed by an ox.","tithe"],
   ["tithe:z8","Zechariah 11:12","price","Thirty shekels weighed out as the shepherd's wage.","tithe"],
   ["tithe:z9","Matthew 26:15","price","Thirty pieces of silver agreed for handing Jesus over.","tithe"],
+  ["tithe:m2","Malachi 1:8","anchor","Defective animals brought to the altar, when no governor would accept such a gift.","tithe"],
+  ["tithe:m3","Malachi 1:13","anchor","Worship called wearisome, and what is damaged or stolen brought as the offering.","tithe"],
+  ["tithe:m4","Malachi 1:14","anchor","A curse on the man who vows a sound animal and then sacrifices a flawed one.","tithe"],
+  ["tithe:l2","Leviticus 27:32","anchor","Every tenth animal from herd and flock, counted as it passes the staff.","tithe"],
+  ["tithe:l3","Leviticus 27:33","anchor","No sorting good from bad and no swapping; the tenth stands as it falls.","tithe"],
+  ["tithe:n3","Numbers 18:29","anchor","From everything received, the portion set aside for God is to be the best of it.","tithe"],
+  ["tithe:n4","Numbers 18:30","anchor","Once the best is lifted out, the remainder counts as ordinary produce for the Levites.","tithe"],
 ];
 const E = [
   ["tithe:t1","tithe:e1","ref","supports","The half-shekel of Exodus is the statutory ancestor of the tax being collected here."],
@@ -539,7 +546,7 @@ const E = [
   ["tithe:p6","tithe:p7","con","states",""],
   ["tithe:p7","tithe:p8","con","states",""],
   ["tithe:p8","tithe:p9","con","states",""],
-  ["tithe:p1","tithe:p5","lex","states","Matthew's talents and Luke's pounds are the same parable type."],
+  ["tithe:p1","tithe:p5","con","states","Matthew's talents and Luke's pounds are the same parable type."],
   ["tithe:p2","tithe:p7","lex","states","Nearly identical accusation against the master."],
   ["tithe:p3","tithe:p8","lex","states","Nearly identical rebuke about the bank."],
   ["tithe:u1","tithe:u2","con","states",""],
@@ -606,6 +613,16 @@ const E = [
   ["tithe:i23","tithe:i24","con","states",""],
   ["tithe:i23","tithe:s1","con","supports","A levy that costs people their fields."],
   ["tithe:i24","tithe:z7","con","spec","Children sold, and a price fixed for a slave."],
+  ["tithe:m2","tithe:m3","lex","states","One oracle: the same damaged animals named again as what is brought."],
+  ["tithe:m3","tithe:m4","con","states","The complaint becomes a curse: the flawed offering is not weariness but fraud."],
+  ["tithe:m4","tithe:m1","con","supports","One prophet, two charges about what is handed over: the flawed gift and the withheld tithe."],
+  ["tithe:m4","tithe:k1","con","spec","Reader's link: Malachi curses the cheap offering, and the woe is read as the same fault in the tithe. Matthew does not cite Malachi."],
+  ["tithe:l2","tithe:l3","con","states","One statute in two verses: the tenth is counted off, then fixed against exchange."],
+  ["tithe:l2","tithe:l1","con","states","The same chapter carries the tithe from seed and fruit across to herd and flock."],
+  ["tithe:l3","tithe:m4","con","spec","Reader's tension: the best is demanded of the offering, while the tithe is forbidden to be sorted at all."],
+  ["tithe:n3","tithe:n4","con","states","One instruction in two verses: lift out the best, and the rest is ordinary."],
+  ["tithe:n3","tithe:n2","con","states","The tenth the Levites owe on what they receive is the portion that must be the best."],
+  ["tithe:n3","tithe:l3","con","supports","The best-of rule governs the offering lifted out of the tithe, not the counting of the tithe."],
 ];
 // </corpus>
 

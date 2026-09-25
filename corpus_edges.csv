@@ -102,7 +102,7 @@ p5,p6,con,states,
 p6,p7,con,states,
 p7,p8,con,states,
 p8,p9,con,states,
-p1,p5,lex,states,Matthew's talents and Luke's pounds are the same parable type.
+p1,p5,con,states,Matthew's talents and Luke's pounds are the same parable type.
 p2,p7,lex,states,Nearly identical accusation against the master.
 p3,p8,lex,states,Nearly identical rebuke about the bank.
 u1,u2,con,states,
@@ -169,3 +169,13 @@ i22,i23,con,states,
 i23,i24,con,states,
 i23,s1,con,supports,A levy that costs people their fields.
 i24,z7,con,spec,"Children sold, and a price fixed for a slave."
+m2,m3,lex,states,One oracle: the same damaged animals named again as what is brought.
+m3,m4,con,states,The complaint becomes a curse: the flawed offering is not weariness but fraud.
+m4,m1,con,supports,"One prophet, two charges about what is handed over: the flawed gift and the withheld tithe."
+m4,k1,con,spec,"Reader's link: Malachi curses the cheap offering, and the woe is read as the same fault in the tithe. Matthew does not cite Malachi."
+l2,l3,con,states,"One statute in two verses: the tenth is counted off, then fixed against exchange."
+l2,l1,con,states,The same chapter carries the tithe from seed and fruit across to herd and flock.
+l3,m4,con,spec,"Reader's tension: the best is demanded of the offering, while the tithe is forbidden to be sorted at all."
+n3,n4,con,states,"One instruction in two verses: lift out the best, and the rest is ordinary."
+n3,n2,con,states,The tenth the Levites owe on what they receive is the portion that must be the best.
+n3,l3,con,supports,"The best-of rule governs the offering lifted out of the tithe, not the counting of the tithe."
