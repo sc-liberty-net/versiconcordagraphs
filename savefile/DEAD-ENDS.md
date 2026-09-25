@@ -128,3 +128,93 @@ That is the modularity problem stated properly, and it is not a plumbing problem
 
 *Where:* the write-up was delivered to Ethan as a file on 22 Sept and is not in the
 repository. The durable record is this entry plus Room tasks 57–59.
+
+---
+
+## Reading the corpus through NASB, NIV and ESV — 25 September 2026
+
+*Tried:* Ethan asked for the corpus read through KJV, NASB and NIV alongside the NRSV,
+to cross-examine vocabulary.
+
+*Abandoned for NASB, NIV and ESV.* Not on effort — on sourcing. 158 verses is inside
+every one of those publishers' free-use quotas, but **a quota is permission to quote,
+not a source to download from**, and scraping Bible Hub or Bible Gateway breaches their
+terms. The permission pages were read directly, not recalled:
+
+- **ESV** excludes reference works outright — *"and the verses are not being quoted in a
+  commentary or other biblical reference work"* — so the verse count never comes into
+  play for a concordagraph.
+- **NASB** allows 1,000 verses but adds *"nor may more than 1,000 verses be stored in an
+  electronic retrieval system."* `verses.json` holds 37,465. The index could not be built.
+- **NIV** is the least restrictive, and its free Express licence excludes anything with
+  *"artificial intelligence or machine learning features."*
+- **NRSV** gratis use *"does not apply to Phone Applications, or other New Media
+  Platforms (web sites, apps)"*, and counts *"all verses that can be accessed from the
+  website."* Also: the NRSV 1989 is closed to new licences; only NRSVue is available.
+
+*Does the reason still hold:* yes, unless Ethan obtains an API key from api.bible or
+Crossway. `crossexam.py` takes a new version the moment one exists.
+
+*Salvage:* seven **public domain** versions were used instead — KJV, Geneva 1599,
+Douay-Rheims, JPS 1917, ASV, YLT, BSB — chosen for disagreement rather than coverage.
+They produced the finding that NASB and NIV would not have: English **merges** two Greek
+words (Matthew 22:17 and Romans 13:6 read alike in 6 of 6 versions and share no Greek at
+all) and **splits** one (Matthew 17:25 and 22:17 are both *kensos*, rendered "tribute"
+and "taxes").
+
+---
+
+## Compiling our own translation from the copyrighted ones — 25 September 2026
+
+*Proposed:* Ethan asked whether the project could build its own edition by
+cross-referencing ESV, NASB, NIV and KJV, on the reasoning that individual words are not
+copyrightable.
+
+*Abandoned.* The premise is right and the inference is not. Individual words are not
+protected; the **selection and arrangement of renderings across a whole text** is, and a
+translation is a copyrightable derivative work. Compiling from four copyrighted
+translations produces a work derived from all four — which is one of the exclusive rights
+the holders retain — and a work substantially derived from infringing material may not be
+the compiler's copyright either.
+
+*The legitimate version, if it is ever wanted:* translate from public-domain source texts
+(Westminster Leningrad Codex, Westcott-Hort, Tischendorf, SBLGNT, with Strong's, BDB,
+Thayer and Gesenius). That is a multi-year scholarly project and needs Hebrew and Greek,
+not a concordance. Strong's gives a lemma and a gloss range, not syntax or context, and
+driving a translation from it produces the wooden concordant-translation artefact.
+
+*Does the reason still hold:* yes. But the thing the project actually wanted from it —
+knowing whether a shared English word reflects a shared source word — was delivered by
+the lemma layer instead, at a fraction of the cost and with no licensing exposure.
+
+---
+
+## G5056 *telos* in the tax motif — 25 September 2026
+
+*Tried:* including *telos* in the `tax` motif, because the NRSV renders it "toll" in
+Matthew 17:25 and "revenue" in Romans 13:7.
+
+*Abandoned the same day.* It also means **end**, and it pulled Hebrews 7:3 — "neither
+beginning of days nor end of life" — into a motif about taxation. Both genuine fiscal
+verses are already caught by *kensos* and *phoros*, so removing it lost nothing and the
+motif's Bible-wide scope fell from 74 verses to 35.
+
+*Does the reason still hold:* yes, and it generalises. The lemma index cannot
+disambiguate senses. A motif built on a polysemous lemma will catch the wrong verses, and
+the only detector is reading what it caught.
+
+---
+
+## Making "treasure" a cluster — 25 September 2026
+
+*Considered and rejected before building.* Ethan asked why there was no tick-box for
+treasure, gold and silver, or gems.
+
+*Why not a cluster:* a node belongs to exactly one cluster because a cluster is a topic.
+These are motifs, and they cut across topics by construction — *argyrion* runs through
+four clusters, *denarion* through three. Making treasure a cluster would mean pulling
+those verses **out** of the topics they belong to.
+
+*What was built instead:* a fourth axis. `corpus_motifs.csv`, generated from the lemma
+index, with its own filter that emphasises rather than filters. Plus two clusters for the
+parts that genuinely were topics — `treasure` and `metal`.

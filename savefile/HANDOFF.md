@@ -33,7 +33,22 @@ vocabulary. See `LESSONS.md` before writing anything addressed to him.
 
 ---
 
-## State Of Play — 22 September 2026
+## State Of Play — 25 September 2026
+
+**What changed on 25 September, in one paragraph.** The corpus went from 151 nodes and
+170 edges to **184 and 223**, across 26 books. Three open questions were answered by
+Ethan (Q1, Q4, Q5) and one was opened (Q10). A **lemma layer** was built, keying every
+verse to its Hebrew or Greek Strong's numbers, which made "shared wording" checkable for
+the first time. Seven public-domain translations were added for cross-examination. The
+page gained Bible Hub verse links, a motif filter, an About panel, a zoom floor and
+group tooltips. It was published publicly at
+https://sc-liberty-net.github.io/versiconcordagraphs/taxes-and-tithes/ — and shipped
+**blank** for three pushes before anyone ran it, which is why `check_page.py` exists.
+
+**The definition of done is now three commands, not two.** `python nrsv_index.py`,
+`python build_graph.py`, `python attach_verses.py`, **then `python check_page.py`**.
+The fourth loads the built page in Chromium and gates all 32 printed lines against
+`smoke-baseline.out`. Do not publish without it.
 
 Confidence levels used below, and the distinction is load-bearing:
 
@@ -47,8 +62,31 @@ Confidence levels used below, and the distinction is load-bearing:
 ### Done and verified
 
 - **The pipeline runs end to end.** `nrsv_index.py` → `build_graph.py` →
-  `attach_verses.py`. 151 nodes, 170 edges, 151 verses attached, 0 unresolved.
-  **Proven** — twelve validation rules were each run against a build that must fail
+  `attach_verses.py` → `check_page.py`. **184 nodes, 223 edges**, 184 verses attached,
+  0 unresolved, no index drift, 11 nodes on the check-by-eye list. *Proven* — the page
+  check has been seen to fail on a deliberately reintroduced defect.
+
+- **A lemma layer covers 83% of the index.** `fetch_lemmas.py` pulls STEPBible's
+  TAHOT/TAGNT (CC BY 4.0, and its references use **NRSV versification**, which is why it
+  aligns); `build_lemmas.py` writes `strongs_index.json`; `lemma.py` queries it. All 184
+  corpus nodes carry lemma data. *Proven* — `lemma.py audit` checks every `lex` edge for
+  a shared lemma and all 26 pass.
+
+- **Seven public-domain translations** in `translations.json` for the 184 cited verses —
+  KJV, Geneva 1599, Douay-Rheims, JPS 1917, ASV, YLT, BSB. `crossexam.py` asks three
+  questions of them: links the English hides, links the English invents, and existing
+  `lex` edges whose English support is thin. *Proven* on its own findings.
+
+- **A motif axis.** `build_motifs.py` generates `corpus_motifs.csv` from the lemma index —
+  ten motifs over 95 nodes, each carrying its Bible-wide denominator. The page filters on
+  it as a fourth control. *Proven* — gated, and ticking Treasure lights exactly the 14
+  nodes the table names.
+
+- **The page is public.** Deployed from the `gh-pages` branch of
+  github.com/sc-liberty-net/versiconcordagraphs, one directory per topic, at
+  https://sc-liberty-net.github.io/versiconcordagraphs/taxes-and-tithes/. The whole git
+  history was scanned before it went public: no verse-text file was ever committed.
+  *Proven* — the live page is fetched and checked after every deploy.  **Proven** — twelve validation rules were each run against a build that must fail
   them, and each refused (see `LESSONS.md`, "prove it red").
 - **The index reconciles against a recorded baseline.** `nrsv_index.py` exits non-zero
   on any drift in markers, verses, isolated holes, or per-book counts. **Proven** —

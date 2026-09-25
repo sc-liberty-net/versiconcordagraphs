@@ -133,3 +133,55 @@ list. It has printed the same eleven ids on every build this session.
 **The Mission Control Room is the task list**, not this savefile. Room tasks 49–59 are
 Biblography's. `TODO.md` here ranks them by what they block; the Room holds the full
 record of each.
+
+---
+
+## Appended 25 September 2026
+
+**Ethan takes the blame for your errors. Do not let him.** Twice in one session he
+wrote "I misspoke" about a mislabel that was mine. I had called the Alphaeus link "the
+Matthew/Levi question" when the shared name is James and Levi; he adopted my wrong
+label, then caught it and attributed the slip to himself. The same shape recurred with
+"you said the three readings are rivals" — again my framing, not his. *Why it matters:*
+if you accept the correction as his, the wrong label stays in your head and goes into
+the next note. Check whose sentence it was before agreeing. 25 Sept.
+
+**He argues back on substance, and he is often right.** He rejected "the three Hebrews
+readings are rivals" and was correct: readings 1 and 3 contradict, reading 2 is
+downstream of either. He rejected the cheap-herbs pushback twice and forced a reading of
+Hebrews 7 that held up. *Do:* when he disagrees, read the chapter before restating your
+position. The two times this session the disagreement was resolved by reading rather
+than arguing, he was right and the corpus got better.
+
+**"Can we not do all of the above?" is usually the right answer.** Offered a three-way
+choice about which reading to encode as an edge, he asked why not all three. He was
+right: the three targeted different nodes, so the one-edge-per-pair rule did not apply,
+and an edge at `spec` records a connection rather than asserting a conclusion. *Do:*
+before presenting a forced choice, check whether the format actually forces it.
+
+**Verify by running the artifact, not by reading it.** Three consecutive "verified
+live" reports were false because they grepped the served HTML for strings. See the
+blank-page hazard. The general form: a check that reads a representation of the thing
+proves something about the representation. 25 Sept.
+
+**Print the population a check examined, never its verdict.** A boolean cannot say why
+it is false. Two checks this session failed for reasons invisible until they were
+rewritten to print numbers — a float comparison at 1e-9, and a motif probe measuring
+selection dimming and motif dimming at once. Both looked like page bugs and were probe
+bugs. This is the smoke-gate rule and it earned its place twice in one day.
+
+**Prove a new assertion red on the build where it must fail.** The Q5 duplicate-edge
+rule and the whole smoke suite were both proved by deliberately reintroducing the defect
+and confirming the check fails. `prove_smoke.py` and `prove_q5.py` are the artefacts. An assertion nobody has seen fail proves nothing — and proving it caught a
+real flaw in the suite, which crashed rather than reporting on the broken page.
+
+**Trust the project's own checker over one you wrote to predict it.** A hand-rolled
+gist checker passed a summary that `build_graph.py` then flagged, because the build
+compares content words and the checker compared all words. If you write a pre-check,
+say which instrument is weaker.
+
+**Use `asserted-patch` for text files, and a CSV parser for the corpus tables.** Four
+hand-rolled "count occurrences, refuse if not one" guards were written this session
+before reaching for the skill that is exactly that. Its `zero` and `many` refusals
+caught two real errors. It is the wrong tool for the corpus tables — Python's csv writer quotes fields
+and a string patch then matches nothing, which is how one patch failed.

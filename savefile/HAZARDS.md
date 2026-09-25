@@ -83,6 +83,45 @@ the old passage.
 *Do:* when state has two renderers, clear through both. Pre-existing; fixed in
 `f083569`.
 
+**The page is blank and the HTML is perfect.**
+*You see:* the served file contains every string you thought to check — the right
+URLs, the right counts in `META`, all 25 book slugs resolving — and the page renders
+nothing. No graph, no rail, no panel.
+*Why:* a second `const HUB` collided with the hub-cluster constant further up the same
+inline script. A duplicate `const` is a **parse** error, so not one line of the script
+ran. Nothing that reads HTML as text can see this, and three separate verifications
+passed against it across three pushes on 25 Sept. Ethan found it by opening the page.
+*Do:* verify by **running** the page, not by reading it — `python check_page.py`. That
+suite exists because of this incident, and `prove_smoke.py` reintroduces the defect to
+prove the suite still catches it. Fixed in `dc5f849`.
+
+**You fixed the blank page, deployed, and it is still blank.**
+*You see:* your own re-check reports the old broken content minutes after a successful
+deploy.
+*Why:* GitHub Pages caches for about ten minutes and the browser caches on top of
+that. A `curl` immediately after the push already showed the fix; the browser did not.
+*Do:* append a cache-buster (`?v=2`) when checking, and tell Ethan to hard-refresh.
+Do not re-fix a bug you have already fixed. 25 Sept.
+
+**The header is enormous and the title wraps to four lines.**
+*You see:* a 193px header where you expected 76px.
+*Why:* measured inside the Claude browser pane, which was 468px wide. At desktop width
+the title is one line. This was reported to Ethan as a defect before being checked at a
+real width, which cost a round trip.
+*Do:* measure layout at a stated viewport. `smoke_concordagraph.py` fixes 1400x900 for
+exactly this reason. 25 Sept.
+
+**A control does nothing in your test and works fine for a user.**
+*You see:* clicking a group name appears to toggle its checkbox, which the code
+explicitly prevents.
+*Why:* the probe dispatched `new MouseEvent('click', {bubbles:true})`. That event is
+**not cancelable** by default, so the handler's `preventDefault()` was a no-op and the
+label's default activation fired. A real click is cancelable.
+*Do:* `{bubbles:true, cancelable:true}` in any synthetic click testing a handler that
+calls `preventDefault`. 25 Sept.
+
+---
+
 ---
 
 ## What the data does
@@ -122,6 +161,46 @@ the verse; the longest are nine, at nodes `i5` and `h2`. `CLAUDE.md` forbids NRS
 wording in summaries and nothing enforces it. These are in the files that **ship**,
 while the copyright machinery guards only the payload that never leaves.
 *Do:* Room task 51. Check a new summary against its verse before committing it.
+
+**A motif catches a verse with nothing to do with it.**
+*You see:* Hebrews 7:3 — "neither beginning of days nor end of life" — inside a motif
+about tax and tribute.
+*Why:* G5056 *telos* means **toll**, which is how the NRSV renders it in Matthew 17:25,
+and it also means **end**. The lemma resolved; the sense did not. A Strong's number is
+not a sense.
+*Do:* when a motif catches something surprising, read the verse before defending the
+lemma. Dropped from the tax motif in `8b9ccb1`; both genuine fiscal verses were already
+caught by *kensos* and *phoros*, so nothing was lost. 25 Sept.
+
+**Your gist checker passes and `build_graph.py` still flags the node.**
+*You see:* a hand-rolled check reports the summary shares five words with its verse;
+the build puts it on the check-by-eye list anyway.
+*Why:* `build_graph.py` compares **content** words. A checker comparing all words counts
+stopwords and reports a match that the build does not see. 1 Peter 1:18 shared only
+"you", "not", "with".
+*Do:* trust the build's list over your own. If you write a pre-check, exclude stopwords
+or expect it to be the weaker instrument. 25 Sept.
+
+**A whole book's verses are unreachable and every count looks right.**
+*You see:* `Galatians` has 124 verses and `Galations` has 24; `Psalm` has 2,455 and
+`Psalms` has 6. Both totals are correct.
+*Why:* the extractor read a running head or heading variant as a second book name. The
+verses are all present, filed under two spellings, and the ~30 in the smaller bucket
+cannot be cited by any sanely written reference.
+*Do:* do not add a node citing one. Room task 63. Fixing it means re-extracting and
+deliberately re-recording `index-baseline.json`, which is Ethan's call. 25 Sept.
+
+**One reference, two rows, and the lookup silently keeps the second.**
+*You see:* `verses.json` holds 37,465 records but only 37,304 distinct references.
+*Why:* 161 duplicates, every one in Esther, because the NRSV prints both the Hebrew
+Esther and the Greek. `attach_verses.py` builds its lookup as a dict comprehension, and
+a repeated key keeps the last value — so an Esther lookup returns one of two different
+texts with no error anywhere. `nrsv_index.py` counts records, not distinct references,
+so its reconciliation cannot see it either.
+*Do:* no node cites Esther today. Room task 64 proposes asserting
+`len(set(refs)) == len(records)` so the collision becomes a red. 25 Sept.
+
+---
 
 ---
 
@@ -171,6 +250,41 @@ at all.
 and scale. Verify with `elementFromPoint` before clicking.
 
 ---
+
+**A multi-line patch matches nothing, and the text is plainly there.**
+*You see:* `asserted-patch` refuses with `zero` on a pattern you can see in the file.
+*Why:* `concordagraph.html` is **CRLF**; the patch was written with LF newlines. Single-line
+patterns still match, so the failure looks arbitrary until you check. `build_graph.py`
+and the Python files are LF, so the same patch file works on one and not the other.
+*Do:* check the file's line endings first, then convert the patch's text fields.
+`tools_crlfify.py` does exactly that, and did it for every page patch on 25 Sept.
+
+**A test crashes and leaves its probe row in the real corpus.**
+*You see:* `corpus_edges.csv` has 199 rows where it should have 198, and one of them
+says `probe`.
+*Why:* the red/green proof for the Q5 rule appended a deliberate duplicate, ran the
+build, and restored from a snapshot — but the restore was after the print, and the
+print died on a `UnicodeEncodeError` first.
+*Do:* restore in a `finally`, not on the happy path. Any probe that mutates a real file
+should be unable to leave it dirty. Caught and restored the same minute; the corpus was
+verified back at 198. 25 Sept.
+
+**An equality assertion fails on two numbers that are equal.**
+*You see:* `zoom buttonsHeld: False` where the scales print identically to four decimals.
+*Why:* the check asserted `Math.abs(a - b) < 1e-9` on floating-point scale factors that
+agree to about 1e-4. A **verdict cannot say why it is false** — it took rewriting the
+check to print the five scales before the cause was visible.
+*Do:* print the numbers a check examined, not its opinion of them. That is the
+smoke-gate rule and this is what it is for. 25 Sept.
+
+**A probe returns a string and everything below it explodes.**
+*You see:* `TypeError: string indices must be integers` halfway through the smoke
+suite's own report, on a page that had already failed.
+*Why:* the suite degrades a failed `page.evaluate` to a printed string, and the next
+line did `box['w']`. On a dead page `#net g` does not exist, so `getBBox()` threw and
+the suite died while reporting the very failure it exists to report.
+*Do:* `ev()` degrades and `pick()` reads a key from either a dict or a string. A suite
+that crashes gives the gate nothing to diff. 25 Sept.
 
 ## The pattern behind most of these
 
