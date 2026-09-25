@@ -69,3 +69,8 @@ source: C:/Users/ethan/AppData/Local/Temp/mo.out -> smoke-baseline.out
 cause: UI pass: zoom clamped to the fitted view, title capitalised, dead arrangement control hidden, era label 10.5px to 34px, arcs thinned, group notes added for tooltips, reset moved over the canvas, motifs became pills in a bar. Twelve new gated lines. The tax motif lost Hebrews 7:3 because telos means end as well as toll.
 moved: 2 changed, 12 new, 0 gone (0 allowed, not counted)
 source: C:/Users/ethan/AppData/Local/Temp/ui.out -> smoke-baseline.out
+
+## 2026-09-25 - baseline refreshed: smoke-baseline.out
+cause: second UI pass: clicking a group name shows its passages in the panel, select-all and clear buttons above the group list, the opening view backed off by a 0.86 fit margin, and the header paragraph moved into an About dialog. Zoom floor moves 0.3271 to 0.2812 because the margin applies to the floor as well - the two are the same view by design.
+moved: 5 changed, 14 new, 0 gone (0 allowed, not counted)
+source: C:/Users/ethan/AppData/Local/Temp/ui2.out -> smoke-baseline.out

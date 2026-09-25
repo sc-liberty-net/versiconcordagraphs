@@ -209,6 +209,11 @@ try:
         z = ev(page, '''() => {
             document.getElementById('zfit').click();
             const fitted = vs;
+            // Read the floor HERE. The probe used to read minScale after a
+            // final zfit, and fit() recomputes it from the live canvas size -
+            // so the comparison was against a floor from a different moment
+            // and reported a 0.0002 breach that had not happened.
+            const floorThen = minScale;
             for (let i = 0; i < 8; i++) document.getElementById('zout').click();
             const afterButtons = vs;
             for (let i = 0; i < 3; i++) svg.dispatchEvent(new WheelEvent('wheel',
@@ -219,7 +224,7 @@ try:
             document.getElementById('zfit').click();
             const r4 = x => Math.round(x * 10000) / 10000;
             return {
-                floor: r4(minScale),
+                floor: r4(floorThen),
                 fitted: r4(fitted),
                 afterButtons: r4(afterButtons),
                 afterWheel: r4(afterWheel),
@@ -249,6 +254,61 @@ try:
         P('group row tooltips', ev(page,
             '() => [...document.querySelectorAll("#clusters .row")]'
             '.filter(r => r.title && r.title.length > 20).length'))
+
+        # --- the header, now that the paragraph moved into About ---------------
+        P('header height px', ev(page,
+            '() => Math.round(document.querySelector("header").getBoundingClientRect().height)'))
+        ab = ev(page, '''() => {
+            const dlg = document.getElementById('about');
+            document.getElementById('aboutBtn').click();
+            const opened = !dlg.hidden;
+            const sub = document.getElementById('hSub').textContent.slice(0, 40);
+            const headings = document.querySelectorAll('#about h3').length;
+            document.getElementById('scrim').click();
+            const closedByScrim = dlg.hidden;
+            document.getElementById('aboutBtn').click();
+            document.getElementById('aboutX').click();
+            const closedByX = dlg.hidden;
+            return {opened, sub, headings, closedByScrim, closedByX};
+        }''', {})
+        for key, label in (('opened', 'opens'), ('closedByScrim', 'closes on click-off'),
+                           ('closedByX', 'closes on X'), ('headings', 'sections'),
+                           ('sub', 'size sentence')):
+            P('about %s' % label, pick(ab, key))
+        if pick(ab, 'opened') is not True or pick(ab, 'closedByScrim') is not True \
+           or pick(ab, 'closedByX') is not True:
+            fatal.append('the About panel does not open and close')
+
+        # --- select all / clear, and selecting a group by its name -------------
+        gr = ev(page, '''() => {
+            document.getElementById('clNone').click();
+            const hiddenAfterClear = document.querySelectorAll('.node.hide').length;
+            document.getElementById('clAll').click();
+            const hiddenAfterAll = document.querySelectorAll('.node.hide').length;
+            const gn = [...document.querySelectorAll('#clusters .gname')]
+                .find(g => g.textContent === 'Tithe statutes');
+            const tickBefore = gn.parentElement.querySelector('input').checked;
+            gn.dispatchEvent(new MouseEvent('click', {bubbles: true, cancelable: true}));
+            const out = {
+                hiddenAfterClear, hiddenAfterAll,
+                tickUnchanged: gn.parentElement.querySelector('input').checked === tickBefore,
+                ref: (document.querySelector('.panel .ref') || {}).textContent,
+                tag: (document.querySelector('.panel .tag') || {}).textContent,
+                rows: document.querySelectorAll('.panel .link').length,
+                lit: document.querySelectorAll('.node.lit').length
+            };
+            gn.dispatchEvent(new MouseEvent('click', {bubbles: true, cancelable: true}));
+            out.deselects = !document.querySelector('.panel .link');
+            return out;
+        }''', {})
+        for key, label in (('hiddenAfterClear', 'clear hides'), ('hiddenAfterAll', 'select all hides'),
+                           ('tickUnchanged', 'name click leaves tick alone'),
+                           ('ref', 'group panel ref'), ('tag', 'group panel tag'),
+                           ('rows', 'group panel rows'), ('lit', 'group lights'),
+                           ('deselects', 'second click deselects')):
+            P('group %s' % label, pick(gr, key))
+        if pick(gr, 'rows') in (0, 'MISSING') or pick(gr, 'tickUnchanged') is not True:
+            fatal.append('clicking a group name did not show its passages cleanly')
 
         # --- the motif axis ---------------------------------------------------
         P('motif rows', ev(page, '() => document.querySelectorAll("#motifs .row").length'))

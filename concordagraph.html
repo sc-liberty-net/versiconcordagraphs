@@ -51,7 +51,43 @@ body{
 .wrap{display:flex; flex-direction:column; height:100%; min-height:100vh}
 header{padding:18px 22px 14px; border-bottom:1px solid var(--line)}
 h1{font-family:Spectral,Georgia,serif; font-weight:600; font-size:26px; margin:0 0 4px; letter-spacing:-.01em}
-.sub{color:var(--ink-2); font-size:14px; max-width:68ch; margin:0}
+.sub{color:var(--ink-2); font-size:14px; max-width:68ch; margin:0}header{display:flex; align-items:baseline; gap:14px}
+#aboutBtn{
+  margin-left:auto; flex:none; padding:5px 13px; border:1px solid var(--line);
+  border-radius:99px; background:var(--surface); color:var(--ink-2);
+  font:inherit; font-size:13px; cursor:pointer;
+}
+#aboutBtn:hover{border-color:var(--ink-3); color:var(--ink)}
+.scrim{position:fixed; inset:0; background:rgba(0,0,0,.34); z-index:20}
+.about{
+  position:fixed; z-index:21; top:50%; left:50%; transform:translate(-50%,-50%);
+  width:min(680px, calc(100vw - 32px)); max-height:min(82vh, 900px); overflow-y:auto;
+  background:var(--surface); border:1px solid var(--line); border-radius:12px;
+  padding:26px 30px 30px; box-shadow:0 12px 40px rgba(0,0,0,.28);
+}
+.about h2{font-family:Spectral,Georgia,serif; font-size:23px; font-weight:600; margin:0 0 14px; color:var(--ink)}
+.about h3{font-family:Archivo,sans-serif; font-size:11.5px; font-weight:600; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--ink-3); margin:22px 0 8px}
+.about p{margin:0 0 11px; font-size:14.5px; line-height:1.6; color:var(--ink)}
+.about .sub{font-size:15px; color:var(--ink-2); margin-bottom:4px}
+.about .note{font-size:13px; color:var(--ink-3); border-top:1px solid var(--line);
+  margin-top:22px; padding-top:14px}
+.about .x{
+  position:absolute; top:12px; right:14px; width:30px; height:30px; padding:0;
+  border:1px solid var(--line); border-radius:50%; background:var(--paper);
+  color:var(--ink-2); font-size:19px; line-height:1; cursor:pointer;
+}
+.about .x:hover{background:var(--sunk); color:var(--ink)}
+.bulk{display:flex; gap:6px; margin:0 0 8px}
+.bulk button{
+  flex:1; padding:4px 8px; border:1px solid var(--line); border-radius:6px;
+  background:var(--paper); color:var(--ink-2); font:inherit; font-size:12px; cursor:pointer;
+}
+.bulk button:hover{background:var(--sunk); color:var(--ink)}
+.gname{cursor:pointer; border-bottom:1px dotted var(--line)}
+.gname:hover{color:var(--ink); border-bottom-color:var(--ink-3)}
+.gname:focus-visible{outline:2px solid var(--focus); outline-offset:2px; border-radius:2px}
+
 .main{display:flex; flex:1; min-height:0}
 .rail{width:236px; flex:none; border-right:1px solid var(--line); overflow-y:auto; padding:16px 16px 40px; background:var(--surface)}
 .stage{flex:1; min-width:0; background:var(--paper); display:flex; flex-direction:column}
@@ -217,12 +253,61 @@ path.esel{stroke-width:4; stroke-opacity:1}
 <body>
 <div class="wrap">
 <header>
-  <!-- Both of these are written by the script from the generated block, so the
-       page cannot misstate its own size or scope again. The static text below
-       is a placeholder that makes no numeric claim. -->
-  <h1 id="hTitle">Tax, tithe and tribute</h1>
-  <p class="sub" id="hSub">Drawn from the NRSV and verified against a chapter-and-verse index. Every link names its kind and how much weight the text puts behind it.</p>
+  <!-- The title is written by the script from module.json, and the size
+       sentence inside About is written from the generated counts, so the page
+       cannot misstate its own scope. Neither is typed here. -->
+  <h1 id="hTitle">Taxes, Tithes, &amp; Tribute</h1>
+  <button type="button" id="aboutBtn" aria-haspopup="dialog" aria-expanded="false">About</button>
 </header>
+
+<div class="scrim" id="scrim" hidden></div>
+<div class="about" id="about" role="dialog" aria-modal="true" aria-labelledby="aboutH" hidden>
+  <button type="button" class="x" id="aboutX" aria-label="Close">&times;</button>
+  <h2 id="aboutH">About this concordagraph</h2>
+  <p class="sub" id="hSub"></p>
+
+  <h3>How to read it</h3>
+  <p>Every dot is a passage; every arc is a claim that two passages are connected.
+     An arc says two things about itself, and both are visible without clicking.</p>
+  <p><b>What kind of link.</b> A solid line means the two passages share wording.
+     A dashed line means one of them cites the other. A dotted line means they
+     make the same move in different words.</p>
+  <p><b>How much weight the text puts behind it.</b> Green means the text says so
+     outright. Amber means it is a reasonable reading, but inferred. Grey means
+     it was constructed by a reader and the text does not link them.</p>
+  <p>That last distinction is the point of the whole exercise. A graph that draws
+     every connection the same way launders one reader's speculation into settled
+     reference, and there is no way to tell afterwards which was which.</p>
+
+  <h3>Groups and motifs are different axes</h3>
+  <p>A <b>group</b> is a topic, and a passage belongs to exactly one. A
+     <b>motif</b> is a Hebrew or Greek word, and a passage carries as many as it
+     has words &mdash; so a motif cuts across groups by construction. The number
+     beside each motif is how many verses in the whole Bible use that word: one
+     shared with four verses is evidence, one shared with four hundred is
+     vocabulary.</p>
+
+  <h3>The Versiconcordagraphs project</h3>
+  <p>A <b>concordagraph</b> is a traversable network of source references in
+     which the nodes are locatable citations and every edge carries both a type
+     and a warrant. This page is one of them. Each topic lives on its own branch
+     of the repository, with its own passages, its own connections and its own
+     built page; a branch is not a version of the same work.</p>
+  <p>Every reference here resolves against a verse index built and checked
+     locally. The build refuses to write the page if a reference does not
+     resolve, an edge points at a missing passage, or a warrant tier is
+     misspelled.</p>
+
+  <h3>No scripture text</h3>
+  <p>These pages carry verse references and summaries written for this project,
+     never the wording of a copyrighted translation. The index itself is never
+     published. Each reference links out to Bible Hub, where every major
+     translation of that verse sits side by side, and to Bible Gateway for the
+     chapter in full.</p>
+
+  <p class="note">Source and method:
+    <a href="https://github.com/sc-liberty-net/versiconcordagraphs" target="_blank" rel="noopener noreferrer">github.com/sc-liberty-net/versiconcordagraphs</a></p>
+</div>
 <div class="main">
   <div class="rail">
     <div class="grp hide">
@@ -239,6 +324,10 @@ path.esel{stroke-width:4; stroke-opacity:1}
     </div>
     <div class="grp">
       <h2>Groups</h2>
+      <div class="bulk">
+        <button type="button" id="clAll">Select all</button>
+        <button type="button" id="clNone">Clear</button>
+      </div>
       <div id="clusters"></div>
     </div>
     <div class="grp">
@@ -1081,10 +1170,14 @@ function apply(){ gRoot.setAttribute('transform',`translate(${vx},${vy}) scale($
 // that same view.
 let minScale = 0.05;
 const MIN_PAD = 90;
+// The fitted scale put the graph hard against the window edge. This is the
+// breathing room, applied to BOTH the opening view and the zoom floor so the
+// two stay the same thing: as far out as there is anything to see.
+const FIT_MARGIN = 0.86;
 function fitScale(){
   const bb=gRoot.getBBox(), r=svg.getBoundingClientRect();
   if(!bb.width || !bb.height) return minScale;
-  return Math.min(r.width/(bb.width+MIN_PAD), r.height/(bb.height+MIN_PAD));
+  return Math.min(r.width/(bb.width+MIN_PAD), r.height/(bb.height+MIN_PAD)) * FIT_MARGIN;
 }
 function clamp(s){ return Math.max(minScale, s); }
 function fit(){
@@ -1143,6 +1236,11 @@ const MO_IDS = Object.fromEntries(
         .map(([k,o]) => [k, new Set(o.nodes.split(' '))]));
 let query='', picked=null, hovered=null;
 
+// Selection toggles by identity, so a fresh {kind:'cluster'} per click would
+// make a second click fail to deselect. Same reason bookFocus exists.
+const clusterFocus = Object.fromEntries(
+  Object.keys(CL).map(k => [k, {kind:'cluster', cl:k}]));
+
 function build(host, map, set, kind){
   Object.entries(map).forEach(([k,o])=>{
     const lab=document.createElement('label'); lab.className='row'; lab.tabIndex=0;
@@ -1155,6 +1253,18 @@ function build(host, map, set, kind){
     const txt=document.createElement('span'); txt.textContent=o.name;
     // Until now the rail named eighteen groups and explained none of them.
     if(o.note) lab.title = o.name + ' \u2014 ' + o.note;
+    if(kind==='cl'){
+      // The row is a <label>, so any click inside it toggles the checkbox.
+      // The NAME has to do something else - select the group and show its
+      // passages - so it stops the event before the label sees it.
+      txt.className='gname'; txt.tabIndex=0; txt.setAttribute('role','button');
+      txt.title='Show the passages in ' + o.name;
+      const pick=ev=>{ ev.preventDefault(); ev.stopPropagation();
+                       select(clusterFocus[k]); };
+      txt.addEventListener('click',pick);
+      txt.addEventListener('keydown',ev=>{
+        if(ev.key==='Enter'||ev.key===' '){ pick(ev); }});
+    }
     lab.append(cb,mark,txt);
     if(kind==='cl'){ const c=document.createElement('span'); c.className='count';
       c.textContent=nodes.filter(n=>n.cl===k).length; lab.append(c); }
@@ -1164,6 +1274,14 @@ function build(host, map, set, kind){
   });
 }
 build(document.getElementById('clusters'),CL,onCl,'cl');
+(function bulkGroups(){
+  const setAll = on => {
+    document.querySelectorAll('#clusters input[type=checkbox]').forEach(c=>{
+      if(c.checked!==on){ c.checked=on; c.dispatchEvent(new Event('change')); }});
+  };
+  document.getElementById('clAll').onclick  = ()=> setAll(true);
+  document.getElementById('clNone').onclick = ()=> setAll(false);
+})();
 build(document.getElementById('warrants'),WA,onWa,'wa');
 build(document.getElementById('types'),TY,onTy,'ty');
 
@@ -1228,12 +1346,21 @@ function focused(){
 // kind tag is not decoration: nodes carry their own .book property, so testing
 // f.book would read every node hover as a hover on its whole book.
 const isBook = f => !!f && f.kind==='book';
+// A group focus is {kind:'cluster', cl:key}. Nodes carry their own .cl, so the
+// kind tag matters here for the same reason it does for books: without it,
+// every node focus would read as a focus on its whole group.
+const isCluster = f => !!f && f.kind==='cluster';
 const isEdge = f => !!f && !!f.s && !!f.t;
 
 function litNodes(f){
   if(!f) return null;
   if(isBook(f)){
     const ids=new Set(nodes.filter(n=>n.book===f.book).map(n=>n.id));
+    edges.forEach(e=>{ if(ids.has(e.s.id)||ids.has(e.t.id)){ ids.add(e.s.id); ids.add(e.t.id); } });
+    return ids;
+  }
+  if(isCluster(f)){
+    const ids=new Set(nodes.filter(n=>n.cl===f.cl).map(n=>n.id));
     edges.forEach(e=>{ if(ids.has(e.s.id)||ids.has(e.t.id)){ ids.add(e.s.id); ids.add(e.t.id); } });
     return ids;
   }
@@ -1244,6 +1371,7 @@ function litNodes(f){
 function litEdge(e,f){
   if(!f) return true;
   if(isBook(f)) return e.s.book===f.book || e.t.book===f.book;
+  if(isCluster(f)) return e.s.cl===f.cl || e.t.cl===f.cl;
   if(isEdge(f)) return e===f;
   return e.s===f || e.t===f;
 }
@@ -1251,6 +1379,7 @@ function litEdge(e,f){
 function isCore(n,f){
   if(!f) return false;
   if(isBook(f)) return n.book===f.book;
+  if(isCluster(f)) return n.cl===f.cl;
   if(isEdge(f)) return n===f.s || n===f.t;
   return n===f;
 }
@@ -1262,6 +1391,9 @@ function showReadout(f){
   if(isBook(f)){
     const c=nodes.filter(n=>n.book===f.book).length;
     main=f.book; kind=c===1 ? '1 passage' : c+' passages';
+  } else if(isCluster(f)){
+    const c=nodes.filter(n=>n.cl===f.cl).length;
+    main=CL[f.cl].name; kind=c===1 ? '1 passage' : c+' passages';
   } else if(isEdge(f)){
     main=`${f.s.ref}  →  ${f.t.ref}`;
     kind=`${TY[f.ty].name} · ${WA[f.wa].name}`;
@@ -1451,13 +1583,45 @@ function renderBook(f){
   own.forEach(n=> panel.append(linkRow(n.ref, n.gist, null, ()=>select(n))));
 }
 
+function renderCluster(f){
+  const o = CL[f.cl];
+  const own = nodes.filter(n=>n.cl===f.cl)
+                   .sort((a,b)=> a.ord-b.ord || a.chap-b.chap || a.vers-b.vers);
+  const h=document.createElement('p'); h.className='ref'; h.textContent=o.name;
+  const tg=document.createElement('span'); tg.className='tag';
+  tg.textContent = own.length===1 ? '1 passage' : own.length+' passages';
+  panel.append(h,tg);
+  if(o.note){
+    const g=document.createElement('p'); g.className='gist'; g.textContent=o.note;
+    panel.append(g);
+  }
+  const h3=document.createElement('h3'); h3.textContent='Passages'; panel.append(h3);
+  own.forEach(n=> panel.append(linkRow(n.ref, n.gist, null, ()=>select(n))));
+}
+
 function render(){
   panel.innerHTML='';
   if(!picked) return renderEmpty();
   if(isBook(picked)) return renderBook(picked);
+  if(isCluster(picked)) return renderCluster(picked);
   if(isEdge(picked)) return renderEdge(picked);
   renderNode(picked);
 }
+// ---- the About panel -------------------------------------------------------
+(function about(){
+  const dlg=document.getElementById('about'), scrim=document.getElementById('scrim'),
+        btn=document.getElementById('aboutBtn'), x=document.getElementById('aboutX');
+  function show(on){
+    dlg.hidden=!on; scrim.hidden=!on;
+    btn.setAttribute('aria-expanded', String(on));
+    if(on) x.focus(); else btn.focus();
+  }
+  btn.onclick=()=>show(true);
+  x.onclick=()=>show(false);
+  scrim.onclick=()=>show(false);
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape' && !dlg.hidden) show(false); });
+})();
+
 render(); draw();
 requestAnimationFrame(fit);
 </script>

@@ -28,11 +28,11 @@ kinds on that pair: con,lex
 distinct arc lanes on that pair: 2
 filter hid: 18
 filter restored: 0
-zoom floor: 0.3271
-zoom fitted: 0.3271
-zoom afterButtons: 0.3271
-zoom afterWheel: 0.3271
-zoom zoomedIn: 0.4089
+zoom floor: 0.2812
+zoom fitted: 0.2812
+zoom afterButtons: 0.2812
+zoom afterWheel: 0.2812
+zoom zoomedIn: 0.3515
 page heading: Taxes, Tithes, & Tribute
 arrangement group hidden: True
 reset sits over the canvas: True
@@ -40,6 +40,20 @@ era label font-size: 34px
 arc stroke-width states: 1.7
 groups carrying a note: 18
 group row tooltips: 18
+header height px: 76
+about opens: True
+about closes on click-off: True
+about closes on X: True
+about sections: 4
+about size sentence: 184 passages across 26 books, joined by 
+group clear hides: 184
+group select all hides: 0
+group name click leaves tick alone: True
+group group panel ref: Tithe statutes
+group group panel tag: 18 passages
+group group panel rows: 18
+group group lights: 18
+group second click deselects: True
 motif rows: 10
 motif keys: treasure,silver,coin,tithe,tax,collector,debt,gift,poor,blessing
 motif nodes covered: 95
