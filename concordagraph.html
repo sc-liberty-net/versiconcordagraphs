@@ -239,8 +239,8 @@ const MOD = "tithe";
 const MODS = {
   tithe:{title:"Tax, tithe and tribute"},
 };
-const META = {nodes:164,edges:199,books:25};
-const BOOKS = ["Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy", "Ruth", "1 Samuel", "Nehemiah", "Psalm", "Ezekiel", "Amos", "Zechariah", "Malachi", "Matthew", "Mark", "Luke", "John", "Acts", "Romans", "1 Corinthians", "2 Corinthians", "1 Timothy", "Hebrews", "James", "1 Peter"];
+const META = {nodes:184,edges:223,books:26};
+const BOOKS = ["Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy", "Ruth", "1 Samuel", "Nehemiah", "Psalm", "Ezekiel", "Amos", "Haggai", "Zechariah", "Malachi", "Matthew", "Mark", "Luke", "John", "Acts", "Romans", "1 Corinthians", "2 Corinthians", "1 Timothy", "Hebrews", "James", "1 Peter"];
 const ABBR = {
   "Genesis":"Gen",
   "Exodus":"Exod",
@@ -253,6 +253,7 @@ const ABBR = {
   "Psalm":"Ps",
   "Ezekiel":"Ezek",
   "Amos":"Amos",
+  "Haggai":"Hagg",
   "Zechariah":"Zech",
   "Malachi":"Mal",
   "Matthew":"Matt",
@@ -285,6 +286,8 @@ const CL = {
   gleaning:{name:"Gleaning and the field's edge",light:"#7E9152",dark:"#AEC182",role:""},
   purse:{name:"The common purse",light:"#2F7D5E",dark:"#62B48F",role:""},
   price:{name:"Pricing a person",light:"#C08A2E",dark:"#E0B45E",role:""},
+  treasure:{name:"Treasure in heaven",light:"#B08A3E",dark:"#D8B36A",role:""},
+  metal:{name:"Gold, silver and the fire",light:"#8A7F6B",dark:"#B5A88F",role:""},
 };
 const N = [
   ["tithe:g1","Genesis 14:20","anchor","Abram gives a tenth of everything to Melchizedek after the rescue of Lot.","tithe"],
@@ -451,6 +454,26 @@ const N = [
   ["tithe:h12","Hebrews 7:16","hebrews","Appointed not by a rule about descent but by a life death cannot end.","tithe"],
   ["tithe:h13","Hebrews 7:17","hebrews","Sworn of him: a priest for ever, after Melchizedek's order.","tithe"],
   ["tithe:h14","Hebrews 7:18","hebrews","An earlier command set aside as weak and unable to accomplish anything.","tithe"],
+  ["tithe:k4","Matthew 6:19","treasure","Wealth piled up here is eaten by moth and rust, and dug out by thieves.","tithe"],
+  ["tithe:k5","Matthew 6:20","treasure","Pile it in heaven instead, past moth, rust and the reach of thieves.","tithe"],
+  ["tithe:k6","Matthew 6:21","treasure","Where the treasure lies, the heart follows it.","tithe"],
+  ["tithe:k7","Luke 12:34","treasure","Luke's form of the same saying about heart and treasure.","tithe"],
+  ["tithe:k8","Matthew 13:44","treasure","A find buried in a field, worth selling everything to obtain.","tithe"],
+  ["tithe:k9","Matthew 19:21","treasure","Sell what you own, give it to the poor, and hold wealth in heaven instead.","tithe"],
+  ["tithe:k10","Mark 10:21","treasure","Mark's form of the same demand, with one thing still lacking.","tithe"],
+  ["tithe:k11","Luke 18:22","treasure","Luke's form: sell everything, distribute it, and follow.","tithe"],
+  ["tithe:f1","Malachi 3:2","metal","Who stands when he comes? He is a refiner's fire, a launderer's lye.","tithe"],
+  ["tithe:f2","Malachi 3:3","metal","He sits to refine Levi like precious metal, until their offerings are made rightly.","tithe"],
+  ["tithe:f3","1 Corinthians 3:12","metal","Building with gold and gems, or with wood, hay and straw.","tithe"],
+  ["tithe:f4","1 Corinthians 3:13","metal","Fire will show what each has built and test what it is worth.","tithe"],
+  ["tithe:f5","James 5:2","metal","Riches rotted through, and garments eaten.","tithe"],
+  ["tithe:f6","James 5:3","metal","Corroded metal testifies against the one who hoarded it, and eats like fire.","tithe"],
+  ["tithe:f7","1 Peter 1:18","metal","Ransomed, but not with perishable silver or gold.","tithe"],
+  ["tithe:f8","1 Peter 1:19","metal","But with blood, of a lamb without flaw.","tithe"],
+  ["tithe:g3","Haggai 2:8","anchor","The silver and the gold are God's already.","tithe"],
+  ["tithe:p10","Matthew 25:18","entrusted","The third slave digs a hole and buries what he was given.","tithe"],
+  ["tithe:z10","Matthew 27:3","price","Remorse, and the silver carried back to the priests.","tithe"],
+  ["tithe:y9","Acts 3:6","purse","No coin to give; what he has is given instead.","tithe"],
 ];
 const E = [
   ["tithe:t1","tithe:e1","ref","supports","The half-shekel of Exodus is the statutory ancestor of the tax being collected here."],
@@ -652,6 +675,30 @@ const E = [
   ["tithe:h13","tithe:h9","con","supports","A priest continually in one verse, a priest for ever in the other; the oath states what 7:3 described."],
   ["tithe:k1","tithe:h14","con","spec","Q10, and the seam: this sets aside \"an earlier commandment\" without saying which. Read narrowly it is the descent rule of 7:16 and the tenth is untouched; read broadly it could carry the tithe statute with it. The disagreement lives here, not at 7:12."],
   ["tithe:c1","tithe:c8","con","spec","Whether Mark's Levi and Matthew's Matthew are one man named twice is old and unsettled. No apostle list anywhere names Levi. Split from the wording edge on the same pair, which claims only that the scene is one scene."],
+  ["tithe:k4","tithe:k5","con","states",""],
+  ["tithe:k5","tithe:k6","con","states",""],
+  ["tithe:k6","tithe:k7","lex","states","The same sentence in both Gospels, word for word."],
+  ["tithe:k9","tithe:k10","lex","states","Synoptic parallel."],
+  ["tithe:k10","tithe:k11","lex","states","Synoptic parallel."],
+  ["tithe:k8","tithe:k5","con","supports","Treasure found and hidden again, against treasure deliberately stored out of reach."],
+  ["tithe:k5","tithe:v10","lex","states","The same promise: a store in heaven that nothing wears out or steals."],
+  ["tithe:k9","tithe:v10","con","supports","Sell, give to the poor, and the wealth is held elsewhere."],
+  ["tithe:k11","tithe:c16","con","supports","The ruler told to sell everything, and the collector who gives half unasked."],
+  ["tithe:k4","tithe:f6","lex","supports","Moth and rust eating a hoard, in the Gospel as a warning and in James as a verdict."],
+  ["tithe:f1","tithe:f2","con","states",""],
+  ["tithe:f3","tithe:f4","con","states",""],
+  ["tithe:f5","tithe:f6","con","states",""],
+  ["tithe:f7","tithe:f8","con","states",""],
+  ["tithe:f2","tithe:f4","con","supports","Fire that refines and fire that tests; one purifies the priest, the other the work."],
+  ["tithe:f3","tithe:m4","con","supports","What is brought is weighed for worth, in the offering and in the building alike."],
+  ["tithe:f2","tithe:m1","con","states","One oracle: Levi refined five verses before the charge of robbing God."],
+  ["tithe:f7","tithe:z9","con","spec","A price paid in silver, and a ransom declared not to have been paid in silver."],
+  ["tithe:f6","tithe:w4","con","states","Adjacent verses: the corroded hoard, then the wages it was made of."],
+  ["tithe:g3","tithe:l1","con","supports","If the metal is already his, the tenth returns what was never otherwise held."],
+  ["tithe:p10","tithe:p3","con","states","The hole in the ground, and the bank it should have been."],
+  ["tithe:z10","tithe:z9","con","states","The price agreed, then carried back."],
+  ["tithe:z10","tithe:v12","con","states","Brought back to the priests, and refused by the treasury."],
+  ["tithe:y9","tithe:y2","con","supports","A fellowship that sold what it had, and an apostle with no coin on him."],
 ];
 // </corpus>
 

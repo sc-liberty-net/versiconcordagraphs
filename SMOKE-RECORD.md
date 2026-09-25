@@ -54,3 +54,8 @@ runs against an isolated copy with no `verses.js`, which is what gets published.
 identical run and fails on a single hand-edited digit (`drawn nodes: 164` →
 `163`). `dead_selector_lint.py` checks 22 call sites and 19 distinct tokens
 against the page and finds no dead selector.
+
+## 2026-09-25 - baseline refreshed: smoke-baseline.out
+cause: treasure and metal material added: 2 clusters, 20 nodes, 24 edges. Haggai is a new book, hence one more tick and label; the two new clusters add two rail rows; bbox height grows with the extra arcs. Search still matches the same 8 verses (184-176 = 164-156 = 8).
+moved: 13 changed, 0 new, 0 gone (0 allowed, not counted)
+source: C:/Users/ethan/AppData/Local/Temp/new.out -> smoke-baseline.out

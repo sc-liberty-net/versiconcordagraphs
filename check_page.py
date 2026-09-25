@@ -31,6 +31,11 @@ The guard refuses a refresh with no cause, and the cause is the point.
 """
 import os, sys, subprocess, tempfile
 
+# The console here is cp1252 and the guards print box-drawing and dash
+# characters. Without this the runner dies mid-report on a UnicodeEncodeError
+# while telling you what moved - which is the least useful moment to crash.
+sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+
 SKILL = os.path.expanduser(r'~\.claude\skills\smoke-gate\scripts')
 BASELINE = 'smoke-baseline.out'
 PAGE = 'concordagraph.html'
