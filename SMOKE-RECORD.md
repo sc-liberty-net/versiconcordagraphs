@@ -1,0 +1,56 @@
+# Smoke baseline record
+
+Every line `smoke_concordagraph.py` prints is gated against `smoke-baseline.out`.
+A line that moves fails the run until the cause is written here. Append only —
+each entry is the evidence for why a number is what it is.
+
+Move the baseline with `baseline_guard.py`, never by overwriting the file:
+
+```
+python <skills>/smoke-gate/scripts/baseline_guard.py \
+    --baseline smoke-baseline.out --new new.out \
+    --cause "<what changed, and why the new value is right>" \
+    --record SMOKE-RECORD.md
+```
+
+---
+
+## 2026-09-25 — first baseline, 32 lines
+
+Recorded after the page shipped blank three times running.
+
+**The defect this exists to catch.** The Bible Hub link change declared
+`const HUB` for its slug overrides. That identifier was already taken further up
+the same inline script for the hub *cluster*. A duplicate `const` is a **parse**
+error, so the whole script died before its first line: no graph, no panel, no
+filters, on a page whose HTML contained every string anyone thought to check.
+
+Three separate verifications passed against that broken page — the biblehub URLs
+were present, 25 of 25 book slugs resolved live, `META` held the right counts.
+All three read the served HTML **as text**. None of them ran it. Ethan found the
+blank page by opening it.
+
+**Proved before it was trusted.** `prove_smoke.py` reintroduces the exact `HUB`
+collision into a copy of the page and asserts the suite fails on it:
+
+```
+RED   exit 1, console errors: 1, drawn nodes: 0, drawn arcs: 0, fatal: 4
+GREEN exit 0, console errors: 0, drawn nodes: 164, drawn arcs: 199, fatal: 0
+```
+
+The first version of the suite *crashed* on the red page rather than reporting —
+`#net g` does not exist when the script has not run, so `getBBox()` threw and the
+suite died halfway through its own output. A crashed suite gives the gate nothing
+to diff. Fixed by routing every probe through `ev()` and every dict read through
+`pick()`.
+
+**The baseline at this commit:** 164 nodes, 199 edges, 25 books, 16 clusters,
+3 warrants, 3 kinds. Matthew 23:23 shows 12 connections. Matthew 9:9 to
+Mark 2:14 carries 2 edges of kinds `con,lex` on 2 distinct arc lanes — the
+first use of the Q5 change. `NRSV payload present: False`, because the suite
+runs against an isolated copy with no `verses.js`, which is what gets published.
+
+**Guards confirmed working at record time:** `smoke_diff.py` passes on an
+identical run and fails on a single hand-edited digit (`drawn nodes: 164` →
+`163`). `dead_selector_lint.py` checks 22 call sites and 19 distinct tokens
+against the page and finds no dead selector.

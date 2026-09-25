@@ -1,0 +1,32 @@
+console errors: 0
+META: {"books": 25, "edges": 199, "nodes": 164}
+corpus N length: 164
+corpus E length: 199
+drawn nodes: 164
+drawn arcs: 199
+drawn hits: 199
+drawn labels: 25
+drawn ticks: 26
+rail clusters: 16
+rail warrants: 3
+rail kinds: 3
+rail group lens hidden: True
+header: 164 passages across 25 books, joined by 199 connections — drawn 
+title: Concordagraph - Taxes & Tithes
+graph bbox w: 2490
+graph bbox h: 1280
+NRSV payload present: False
+empty panel note: This copy shows references and summaries. To r
+panel found node: True
+panel ref: Matthew 23:23
+panel verse href: https://biblehub.com/matthew/23-23.htm
+panel chapter href: https://www.biblegateway.com/passage/?search=Matthew%2023&version=NRSVUE
+panel connections: 12
+panel heading: 12 connections
+edges on Matthew 9:9 to Mark 2:14: 2
+kinds on that pair: con,lex
+distinct arc lanes on that pair: 2
+filter hid: 17
+filter restored: 0
+search "tithe" hides: 156
+fatal: 0
