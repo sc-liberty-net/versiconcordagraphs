@@ -96,6 +96,23 @@ Confidence levels used below, and the distinction is load-bearing:
 
 ## Decisions Already Made — Do Not Re-Litigate
 
+**Matthew 23:23 and Luke 11:42 affirm tithing while relativising it. They do not
+rebuke it.** Settled 25 Sept by Ethan, answering QUESTIONS.md Q1. *Weightier* is a
+comparative and so presupposes lighter matters **of the law**; "these" and "the
+others" in the closing clause are two species of that one genus, and "the others"
+— the lighter matters, tithing among them — is what the clause tells them to keep
+doing. The affirmation is in the sentence, not inferred around it.
+
+Applied the same day: the `critique` cluster renamed from "Tithing rebuked" to
+**"Tithing weighed"** (key unchanged, so Q3's unquoted-key bug is untouched), and
+the `k1` and `k2` gists rewritten to carry the closing clause rather than stopping
+at the woe. Verse-word coverage went 14/40 to 19/40 and 16/36 to 18/36; longest run
+lifted from the NRSV is 3 words, under Q2's threshold of 5.
+
+Still open, and not part of this ruling: whether that affirmation binds after the
+change of priesthood argued in Hebrews 7. What the sentence means and what it
+obliges now are two decisions, and only the first is made.
+
 **Ids are namespaced from `module.json` at build time; a bare id gets the module
 prefix, an id already containing a colon passes through.** Settled 20 Sept. The
 original plan prefixed everything unconditionally, which would have made a
