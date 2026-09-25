@@ -54,7 +54,8 @@ h1{font-family:Spectral,Georgia,serif; font-weight:600; font-size:26px; margin:0
 .sub{color:var(--ink-2); font-size:14px; max-width:68ch; margin:0}
 .main{display:flex; flex:1; min-height:0}
 .rail{width:236px; flex:none; border-right:1px solid var(--line); overflow-y:auto; padding:16px 16px 40px; background:var(--surface)}
-.stage{flex:1; position:relative; min-width:0; background:var(--paper)}
+.stage{flex:1; min-width:0; background:var(--paper); display:flex; flex-direction:column}
+.canvas{flex:1; position:relative; min-height:0}
 svg#net{display:block; width:100%; height:100%; touch-action:none; cursor:grab}
 svg#net.drag{cursor:grabbing}
 .panel{
@@ -99,7 +100,34 @@ button.reset:hover{background:var(--sunk)}
 .lmeta{display:block; font-size:12.5px; color:var(--ink-2); margin-top:1px}
 .empty{color:var(--ink-2); font-size:14px}
 .note{font-size:12.5px; color:var(--ink-3); line-height:1.5; margin-top:22px; border-top:1px solid var(--line); padding-top:12px}
-.zoom{position:absolute; right:12px; bottom:12px; display:flex; gap:6px}
+.zoom{position:absolute; right:12px; bottom:12px; display:flex; gap:6px}.motifbar{
+  display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  padding:9px 14px; border-bottom:1px solid var(--line); background:var(--surface);
+}
+.motifbar .mlabel{
+  font-family:Archivo,sans-serif; font-size:11.5px; font-weight:600;
+  letter-spacing:.04em; color:var(--ink-3); cursor:help; flex:none;
+}
+#motifs{display:flex; flex-wrap:wrap; gap:6px}
+#motifs .row{
+  display:inline-flex; align-items:center; gap:6px; padding:3px 11px;
+  border:1px solid var(--line); border-radius:99px; background:var(--paper);
+  font-size:12.5px; color:var(--ink-2); cursor:pointer; user-select:none;
+}
+#motifs .row:hover{border-color:var(--ink-3); color:var(--ink)}
+#motifs .row input{position:absolute; opacity:0; width:0; height:0}
+#motifs .row.on{background:var(--ink-2); border-color:var(--ink-2); color:var(--surface); font-weight:500}
+#motifs .row.on .scope{color:var(--surface); opacity:.75}
+#motifs .scope{margin-left:0; font-size:11px}
+.reset.floating{
+  position:absolute; left:12px; top:12px; width:auto; margin:0; z-index:2;
+  padding:6px 12px; background:var(--surface); box-shadow:0 1px 3px rgba(0,0,0,.14);
+}
+@media (max-width:900px){
+  .motifbar{padding:8px 12px}
+  .motifbar .mlabel{width:100%}
+}
+
 .zoom button{
   width:32px; height:32px; border:1px solid var(--line); border-radius:7px; background:var(--surface);
   color:var(--ink-2); font-size:16px; line-height:1; cursor:pointer;
@@ -119,7 +147,7 @@ button.reset:hover{background:var(--sunk)}
 .booklab{font-family:Archivo,sans-serif; font-size:10.5px; fill:var(--ink-2)}
 .tick{stroke:var(--line); stroke-width:1}
 .era{stroke:var(--ink-3); stroke-width:1; stroke-dasharray:3 4}
-.eralab{font-family:Archivo,sans-serif; font-size:10.5px; fill:var(--ink-3)}.node text{font-family:Spectral,Georgia,serif; font-size:11.5px; fill:var(--ink); pointer-events:auto; cursor:pointer}
+.eralab{font-family:Archivo,sans-serif; font-size:34px; font-weight:600; letter-spacing:.02em; fill:var(--ink-2)}.node text{font-family:Spectral,Georgia,serif; font-size:11.5px; fill:var(--ink); pointer-events:auto; cursor:pointer}
 .dim{opacity:.12}
 .hide{display:none}
 
@@ -197,7 +225,7 @@ path.esel{stroke-width:4; stroke-opacity:1}
 </header>
 <div class="main">
   <div class="rail">
-    <div class="grp">
+    <div class="grp hide">
       <h2>Arrangement</h2>
       <div class="seg">
         <button id="mGroup" aria-pressed="false">By group</button>
@@ -222,18 +250,22 @@ path.esel{stroke-width:4; stroke-opacity:1}
       <div id="types"></div>
     </div>
     <div class="grp">
-      <h2>Trace a motif</h2>
-      <p class="hint" id="motifHint">A motif is a Hebrew or Greek word, not a group. Tick one to light every passage that uses it, wherever it sits. The number beside each is how many verses in the whole Bible carry that word &mdash; a motif shared with four is evidence, one shared with four hundred is vocabulary.</p>
-      <div id="motifs"></div>
-      <button class="reset" id="reset">Show everything again</button>
     </div>
   </div>
   <div class="stage">
-    <svg id="net" role="img" aria-label="Network of New Testament passages about tax and tithe"></svg>    <div class="readout" id="readout" aria-live="polite"></div>
-    <div class="zoom">
-      <button id="zin" title="Zoom in" aria-label="Zoom in">+</button>
-      <button id="zout" title="Zoom out" aria-label="Zoom out">−</button>
-      <button id="zfit" title="Fit to view" aria-label="Fit to view">⤢</button>
+    <div class="motifbar">
+      <span class="mlabel" title="A motif is a Hebrew or Greek word, not a group. A passage belongs to one group but carries as many motifs as it has words. The second number is how many verses in the whole Bible use that word: shared with four is evidence, shared with four hundred is vocabulary.">Trace a motif</span>
+      <div id="motifs"></div>
+    </div>
+    <div class="canvas">
+      <button class="reset floating" id="reset">Show everything again</button>
+      <svg id="net" role="img" aria-label="Network of New Testament passages about tax and tithe"></svg>
+      <div class="readout" id="readout" aria-live="polite"></div>
+      <div class="zoom">
+        <button id="zin" title="Zoom in" aria-label="Zoom in">+</button>
+        <button id="zout" title="Zoom out" aria-label="Zoom out">−</button>
+        <button id="zfit" title="Fit to view" aria-label="Fit to view">⤢</button>
+      </div>
     </div>
   </div>
   <div class="panel" id="panel"></div>
@@ -245,7 +277,7 @@ path.esel{stroke-width:4; stroke-opacity:1}
 // <corpus>  generated by build_graph.py — edit the CSVs, not this block
 const MOD = "tithe";
 const MODS = {
-  tithe:{title:"Tax, tithe and tribute"},
+  tithe:{title:"Taxes, Tithes, & Tribute"},
 };
 const META = {nodes:184,edges:223,books:26};
 const BOOKS = ["Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy", "Ruth", "1 Samuel", "Nehemiah", "Psalm", "Ezekiel", "Amos", "Haggai", "Zechariah", "Malachi", "Matthew", "Mark", "Luke", "John", "Acts", "Romans", "1 Corinthians", "2 Corinthians", "1 Timothy", "Hebrews", "James", "1 Peter"];
@@ -278,31 +310,31 @@ const ABBR = {
   "1 Peter":"1 Pet",
 };
 const CL = {
-  anchor:{name:"Tithe statutes",light:"#7C8B96",dark:"#93A3AE",role:""},
-  bridge:{name:"The temple tax",light:"#B4553C",dark:"#D97B60",role:"hub"},
-  imperial:{name:"Imperial tax",light:"#2F6B84",dark:"#6FA8C4",role:""},
-  collector:{name:"Tax collectors",light:"#7E6E9B",dark:"#A392C4",role:""},
-  critique:{name:"Tithing weighed",light:"#6E8A5E",dark:"#93B182",role:""},
-  hebrews:{name:"The Hebrews 7 argument",light:"#9A8352",dark:"#C2A86E",role:""},
-  giving:{name:"Treasury and alms",light:"#4E8E7A",dark:"#7FC0AC",role:""},
-  debt:{name:"Debt and its parables",light:"#94707A",dark:"#BE939D",role:""},
-  market:{name:"Money changers",light:"#857A6A",dark:"#A99B87",role:""},
-  interest:{name:"Interest forbidden",light:"#8E2F4E",dark:"#C4708C",role:""},
-  release:{name:"Remission and jubilee",light:"#3F8FA0",dark:"#77C0CE",role:""},
-  entrusted:{name:"Money entrusted",light:"#8A6E3F",dark:"#C4A173",role:""},
-  wages:{name:"Wages withheld",light:"#5A6390",dark:"#8F98C4",role:""},
-  gleaning:{name:"Gleaning and the field's edge",light:"#7E9152",dark:"#AEC182",role:""},
-  purse:{name:"The common purse",light:"#2F7D5E",dark:"#62B48F",role:""},
-  price:{name:"Pricing a person",light:"#C08A2E",dark:"#E0B45E",role:""},
-  treasure:{name:"Treasure in heaven",light:"#B08A3E",dark:"#D8B36A",role:""},
-  metal:{name:"Gold, silver and the fire",light:"#8A7F6B",dark:"#B5A88F",role:""},
+  anchor:{name:"Tithe statutes",light:"#7C8B96",dark:"#93A3AE",role:"",note:"The laws that command a tenth, and say whose it is."},
+  bridge:{name:"The temple tax",light:"#B4553C",dark:"#D97B60",role:"hub",note:"The half-shekel levy for the temple, and the one scene where anyone reasons about paying it."},
+  imperial:{name:"Imperial tax",light:"#2F6B84",dark:"#6FA8C4",role:"",note:"Rome and the empires before it: census, tribute, and whether paying is lawful."},
+  collector:{name:"Tax collectors",light:"#7E6E9B",dark:"#A392C4",role:"",note:"The trade, the men who worked it, and how they were treated."},
+  critique:{name:"Tithing weighed",light:"#6E8A5E",dark:"#93B182",role:"",note:"The two woes and a boast, where tithing is set against the weightier matters and found lighter."},
+  hebrews:{name:"The Hebrews 7 argument",light:"#9A8352",dark:"#C2A86E",role:"",note:"The argument of Hebrews 7: Melchizedek outranks Levi, so the priesthood changes and the law with it."},
+  giving:{name:"Treasury and alms",light:"#4E8E7A",dark:"#7FC0AC",role:"",note:"The temple treasury, and alms given openly or in secret."},
+  debt:{name:"Debt and its parables",light:"#94707A",dark:"#BE939D",role:"",note:"What is owed between people, and the parables built on it."},
+  market:{name:"Money changers",light:"#857A6A",dark:"#A99B87",role:"",note:"The money changers in the temple, and the tables overturned."},
+  interest:{name:"Interest forbidden",light:"#8E2F4E",dark:"#C4708C",role:"",note:"The prohibition on lending at interest to your own, repeated as a test of righteousness."},
+  release:{name:"Remission and jubilee",light:"#3F8FA0",dark:"#77C0CE",role:"",note:"The seventh-year remission and the fiftieth-year jubilee: debts cancelled, land returned."},
+  entrusted:{name:"Money entrusted",light:"#8A6E3F",dark:"#C4A173",role:"",note:"Money handed over to be traded with, and the reckoning that follows."},
+  wages:{name:"Wages withheld",light:"#5A6390",dark:"#8F98C4",role:"",note:"Pay owed to a labourer, and the rule that it must not be held overnight."},
+  gleaning:{name:"Gleaning and the field's edge",light:"#7E9152",dark:"#AEC182",role:"",note:"The corners of the field and the second pass of the vineyard, left for those with no land."},
+  purse:{name:"The common purse",light:"#2F7D5E",dark:"#62B48F",role:"",note:"The Jerusalem community holding property in common, and what happened when someone held back."},
+  price:{name:"Pricing a person",light:"#C08A2E",dark:"#E0B45E",role:"",note:"What a person is worth in shekels: vows, redemption, and thirty pieces of silver."},
+  treasure:{name:"Treasure in heaven",light:"#B08A3E",dark:"#D8B36A",role:"",note:"Where wealth is stored, and what storing it in heaven is said to cost."},
+  metal:{name:"Gold, silver and the fire",light:"#8A7F6B",dark:"#B5A88F",role:"",note:"Gold and silver offered, refined, tested by fire, and finally named the wrong medium of ransom."},
 };
 const MO = {
   "treasure":{name:"Treasure",nodes:"tithe:f6 tithe:k10 tithe:k11 tithe:k4 tithe:k5 tithe:k6 tithe:k7 tithe:k8 tithe:k9 tithe:v1 tithe:v10 tithe:v14 tithe:v3 tithe:v5",scope:96,note:"What is stored, and where."},
   "silver":{name:"Silver and gold",nodes:"tithe:f2 tithe:f3 tithe:f6 tithe:f7 tithe:g3 tithe:p10 tithe:p3 tithe:p8 tithe:v12 tithe:y9 tithe:z10 tithe:z9",scope:370,note:"The metal itself, as price, offering and ransom."},
   "coin":{name:"The daily coin",nodes:"tithe:b4 tithe:i12 tithe:i6 tithe:t4 tithe:w5 tithe:w6",scope:16,note:"A day's wage, the tax coin and the debt unit are one piece of silver."},
   "tithe":{name:"The tenth",nodes:"tithe:a1 tithe:g1 tithe:g2 tithe:h3 tithe:h4 tithe:h6 tithe:k1 tithe:k2 tithe:k3 tithe:l1 tithe:l2 tithe:m1 tithe:n1 tithe:n2 tithe:s1",scope:37,note:"Every word for a tenth, given or collected."},
-  "tax":{name:"Tax and tribute",nodes:"tithe:h9 tithe:i11 tithe:i14 tithe:i16 tithe:i17 tithe:i5 tithe:i6 tithe:i8 tithe:t1 tithe:t2",scope:74,note:"The fiscal vocabulary proper, across two Greek words and two Hebrew."},
+  "tax":{name:"Tax and tribute",nodes:"tithe:i11 tithe:i14 tithe:i16 tithe:i17 tithe:i5 tithe:i6 tithe:i8 tithe:t1 tithe:t2",scope:35,note:"The fiscal vocabulary proper, across two Greek words and two Hebrew."},
   "collector":{name:"The collector",nodes:"tithe:c1 tithe:c10 tithe:c12 tithe:c13 tithe:c14 tithe:c15 tithe:c16 tithe:c2 tithe:c3 tithe:c4 tithe:c5 tithe:c6 tithe:c7 tithe:c8 tithe:c9",scope:23,note:"The trade, the office, and the booth."},
   "debt":{name:"Debt and what is owed",nodes:"tithe:b1 tithe:b3 tithe:b4 tithe:b5 tithe:b6 tithe:i17 tithe:v16",scope:46,note:"Owing, and the one who owes."},
   "gift":{name:"Gift and offering",nodes:"tithe:v10 tithe:v11 tithe:v12 tithe:v17 tithe:v5 tithe:v6 tithe:v7 tithe:v8 tithe:v9",scope:31,note:"What is handed over as a gift rather than as a payment."},
@@ -884,7 +916,7 @@ edges.forEach(e=>{
   p.setAttribute('stroke',`var(${WA[e.wa].v})`);
   // Screen pixels, because of non-scaling-stroke above. The three tiers stay
   // ranked by weight and by opacity, which is what carries the warrant.
-  p.setAttribute('stroke-width', e.wa==='states'?2.4:e.wa==='supports'?1.9:1.4);
+  p.setAttribute('stroke-width', e.wa==='states'?1.7:e.wa==='supports'?1.35:1.05);
   p.setAttribute('stroke-opacity', e.wa==='states'?.9:e.wa==='supports'?.75:.6);
   if(TY[e.ty].dash) p.setAttribute('stroke-dasharray',TY[e.ty].dash);
   p.setAttribute('stroke-linecap','round');
@@ -1042,14 +1074,28 @@ place(true);
 // ---- viewport --------------------------------------------------------------
 let vx=0, vy=0, vs=1;
 function apply(){ gRoot.setAttribute('transform',`translate(${vx},${vy}) scale(${vs})`); }
+// The floor on zoom. Below this the graph is smaller than the window and you
+// are looking at empty canvas around a shrinking blob - there is nothing to
+// see further out, so the control should not go there. MIN_PAD is the
+// breathing room: the fitted view leaves a little margin, and the floor is
+// that same view.
+let minScale = 0.05;
+const MIN_PAD = 90;
+function fitScale(){
+  const bb=gRoot.getBBox(), r=svg.getBoundingClientRect();
+  if(!bb.width || !bb.height) return minScale;
+  return Math.min(r.width/(bb.width+MIN_PAD), r.height/(bb.height+MIN_PAD));
+}
+function clamp(s){ return Math.max(minScale, s); }
 function fit(){
   const bb=gRoot.getBBox(), r=svg.getBoundingClientRect();
-  vs=Math.min(r.width/(bb.width+90), r.height/(bb.height+90));
+  minScale = fitScale();
+  vs = minScale;
   vx=(r.width-bb.width*vs)/2-bb.x*vs; vy=(r.height-bb.height*vs)/2-bb.y*vs; apply();
 }
 window.addEventListener('resize',fit);
-document.getElementById('zin').onclick=()=>{vs*=1.25;apply()};
-document.getElementById('zout').onclick=()=>{vs/=1.25;apply()};
+document.getElementById('zin').onclick=()=>{vs=clamp(vs*1.25);apply()};
+document.getElementById('zout').onclick=()=>{vs=clamp(vs/1.25);apply()};
 document.getElementById('zfit').onclick=fit;
 // Panning must not call svg.setPointerCapture on pointerdown. Capturing the
 // pointer retargets the following click to the <svg>, so a click on an arc or
@@ -1080,7 +1126,9 @@ svg.addEventListener('click',e=>{
   if(swallowClick){ swallowClick=false; e.stopPropagation(); e.preventDefault(); }
 }, true);
 svg.addEventListener('wheel',e=>{e.preventDefault();const k=e.deltaY<0?1.1:1/1.1;const r=svg.getBoundingClientRect();
-  const mx=e.clientX-r.left, my=e.clientY-r.top; vx=mx-(mx-vx)*k; vy=my-(my-vy)*k; vs*=k; apply();},{passive:false});
+  const mx=e.clientX-r.left, my=e.clientY-r.top;
+  const want=clamp(vs*k), actual=want/vs;
+  vx=mx-(mx-vx)*actual; vy=my-(my-vy)*actual; vs=want; apply();},{passive:false});
 
 // ---- filters ---------------------------------------------------------------
 const onCl=new Set(Object.keys(CL)), onWa=new Set(Object.keys(WA)), onTy=new Set(Object.keys(TY));
@@ -1105,6 +1153,8 @@ function build(host, map, set, kind){
     else { mark.className='swatch'; mark.style.borderTopColor='var(--ink-3)';
            if(o.dash) mark.style.borderTopStyle = o.dash==='7 4' ? 'dashed' : 'dotted'; }
     const txt=document.createElement('span'); txt.textContent=o.name;
+    // Until now the rail named eighteen groups and explained none of them.
+    if(o.note) lab.title = o.name + ' \u2014 ' + o.note;
     lab.append(cb,mark,txt);
     if(kind==='cl'){ const c=document.createElement('span'); c.className='count';
       c.textContent=nodes.filter(n=>n.cl===k).length; lab.append(c); }
