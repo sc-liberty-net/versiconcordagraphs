@@ -6,6 +6,16 @@ nrsv.txt
 *.pdf
 !findings.pdf
 
+# STEPBible TAHOT/TAGNT source data — CC BY 4.0, but 100 MB, and STEPBible
+# ask that it be fetched from github.com/STEPBible rather than redistributed.
+# Re-fetch with fetch_lemmas.py; never commit.
+lemma-data/
+
+# Derived from the above by build_lemmas.py in a few seconds. No scripture
+# text in it, but it is STEPBible's data reshaped, so it is not ours to
+# redistribute either.
+strongs_index.json
+
 # scratch
 __pycache__/
 .DS_Store
