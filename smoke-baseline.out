@@ -28,5 +28,12 @@ kinds on that pair: con,lex
 distinct arc lanes on that pair: 2
 filter hid: 18
 filter restored: 0
+motif rows: 10
+motif keys: treasure,silver,coin,tithe,tax,collector,debt,gift,poor,blessing
+motif nodes covered: 96
+motif treasure dims: 170
+motif treasure lights: 14
+motif treasure dims edges: 214
+motif unticked restores to: 0
 search "tithe" hides: 176
 fatal: 0

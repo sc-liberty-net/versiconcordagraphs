@@ -202,6 +202,39 @@ try:
         if pick(filt, 'hiddenWhenUnticked') in (0, 'MISSING'):
             fatal.append('unticking a cluster hid nothing')
 
+        # --- the motif axis ---------------------------------------------------
+        P('motif rows', ev(page, '() => document.querySelectorAll("#motifs .row").length'))
+        P('motif keys', ev(page,
+            '() => (typeof MO !== "undefined" ? Object.keys(MO).join(",") : "NONE")'))
+        P('motif nodes covered', ev(page,
+            '() => (typeof MO === "undefined") ? -1 : new Set('
+            'Object.values(MO).flatMap(o => o.nodes.split(" "))).size'))
+        mo = ev(page, '''() => {
+            // Clear any selection left by an earlier probe. Without this the
+            // node picked further up keeps its own neighbours lit, and the
+            // counts below measure selection dimming and motif dimming
+            // together - which is stable, but is not what the label says.
+            picked = null; hovered = null; draw();
+            const row = [...document.querySelectorAll('#motifs .row')]
+                .find(r => r.textContent.startsWith('Treasure'));
+            if (!row) return {found: false};
+            const cb = row.querySelector('input');
+            cb.checked = true; cb.dispatchEvent(new Event('change'));
+            const dimmed = document.querySelectorAll('.node.dim').length;
+            const lit = document.querySelectorAll('.node:not(.dim):not(.hide)').length;
+            const edgesDimmed = document.querySelectorAll('path.edge.dim').length;
+            cb.checked = false; cb.dispatchEvent(new Event('change'));
+            return {found: true, dimmed: dimmed, lit: lit,
+                    edgesDimmed: edgesDimmed,
+                    restored: document.querySelectorAll('.node.dim').length};
+        }''', {})
+        P('motif treasure dims', pick(mo, 'dimmed'))
+        P('motif treasure lights', pick(mo, 'lit'))
+        P('motif treasure dims edges', pick(mo, 'edgesDimmed'))
+        P('motif unticked restores to', pick(mo, 'restored'))
+        if pick(mo, 'found') is not True or pick(mo, 'lit') in (0, 'MISSING'):
+            fatal.append('the motif filter lit nothing')
+
         # --- search -----------------------------------------------------------
         P('search "tithe" hides', ev(page, '''() => {
             const q = document.getElementById('q');

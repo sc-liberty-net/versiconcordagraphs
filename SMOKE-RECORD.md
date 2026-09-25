@@ -59,3 +59,8 @@ against the page and finds no dead selector.
 cause: treasure and metal material added: 2 clusters, 20 nodes, 24 edges. Haggai is a new book, hence one more tick and label; the two new clusters add two rail rows; bbox height grows with the extra arcs. Search still matches the same 8 verses (184-176 = 164-156 = 8).
 moved: 13 changed, 0 new, 0 gone (0 allowed, not counted)
 source: C:/Users/ethan/AppData/Local/Temp/new.out -> smoke-baseline.out
+
+## 2026-09-25 - baseline refreshed: smoke-baseline.out
+cause: motif filter added: a fourth rail group keyed on Strong's lemmas rather than on cluster. Seven new gated lines cover it. Ticking Treasure dims 170 and lights 14, which is exactly the node list corpus_motifs.csv records for that motif.
+moved: 0 changed, 7 new, 0 gone (0 allowed, not counted)
+source: C:/Users/ethan/AppData/Local/Temp/mo.out -> smoke-baseline.out

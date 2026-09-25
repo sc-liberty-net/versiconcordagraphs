@@ -72,7 +72,10 @@ input[type=search]:focus-visible,button:focus-visible,.row:focus-visible{outline
 .row input{accent-color:var(--ink-2); margin:0; flex:none}
 .dot{width:11px; height:11px; border-radius:50%; flex:none}
 .swatch{width:26px; height:0; border-top-width:2px; border-top-style:solid; flex:none}
-.count{margin-left:auto; color:var(--ink-3); font-size:12px; font-variant-numeric:tabular-nums}
+.count{margin-left:auto; color:var(--ink-3); font-size:12px; font-variant-numeric:tabular-nums}.scope{margin-left:auto; color:var(--ink-3); font-size:11.5px; font-variant-numeric:tabular-nums; flex:none}
+.row .mn{overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+#motifs .row.on{color:var(--ink); font-weight:500}
+
 button.reset{
   width:100%; margin-top:6px; padding:7px 10px; border:1px solid var(--line); border-radius:7px;
   background:var(--paper); color:var(--ink-2); font:inherit; font-size:13px; cursor:pointer;
@@ -217,6 +220,11 @@ path.esel{stroke-width:4; stroke-opacity:1}
     <div class="grp">
       <h2>What kind of link</h2>
       <div id="types"></div>
+    </div>
+    <div class="grp">
+      <h2>Trace a motif</h2>
+      <p class="hint" id="motifHint">A motif is a Hebrew or Greek word, not a group. Tick one to light every passage that uses it, wherever it sits. The number beside each is how many verses in the whole Bible carry that word &mdash; a motif shared with four is evidence, one shared with four hundred is vocabulary.</p>
+      <div id="motifs"></div>
       <button class="reset" id="reset">Show everything again</button>
     </div>
   </div>
@@ -288,6 +296,18 @@ const CL = {
   price:{name:"Pricing a person",light:"#C08A2E",dark:"#E0B45E",role:""},
   treasure:{name:"Treasure in heaven",light:"#B08A3E",dark:"#D8B36A",role:""},
   metal:{name:"Gold, silver and the fire",light:"#8A7F6B",dark:"#B5A88F",role:""},
+};
+const MO = {
+  "treasure":{name:"Treasure",nodes:"tithe:f6 tithe:k10 tithe:k11 tithe:k4 tithe:k5 tithe:k6 tithe:k7 tithe:k8 tithe:k9 tithe:v1 tithe:v10 tithe:v14 tithe:v3 tithe:v5",scope:96,note:"What is stored, and where."},
+  "silver":{name:"Silver and gold",nodes:"tithe:f2 tithe:f3 tithe:f6 tithe:f7 tithe:g3 tithe:p10 tithe:p3 tithe:p8 tithe:v12 tithe:y9 tithe:z10 tithe:z9",scope:370,note:"The metal itself, as price, offering and ransom."},
+  "coin":{name:"The daily coin",nodes:"tithe:b4 tithe:i12 tithe:i6 tithe:t4 tithe:w5 tithe:w6",scope:16,note:"A day's wage, the tax coin and the debt unit are one piece of silver."},
+  "tithe":{name:"The tenth",nodes:"tithe:a1 tithe:g1 tithe:g2 tithe:h3 tithe:h4 tithe:h6 tithe:k1 tithe:k2 tithe:k3 tithe:l1 tithe:l2 tithe:m1 tithe:n1 tithe:n2 tithe:s1",scope:37,note:"Every word for a tenth, given or collected."},
+  "tax":{name:"Tax and tribute",nodes:"tithe:h9 tithe:i11 tithe:i14 tithe:i16 tithe:i17 tithe:i5 tithe:i6 tithe:i8 tithe:t1 tithe:t2",scope:74,note:"The fiscal vocabulary proper, across two Greek words and two Hebrew."},
+  "collector":{name:"The collector",nodes:"tithe:c1 tithe:c10 tithe:c12 tithe:c13 tithe:c14 tithe:c15 tithe:c16 tithe:c2 tithe:c3 tithe:c4 tithe:c5 tithe:c6 tithe:c7 tithe:c8 tithe:c9",scope:23,note:"The trade, the office, and the booth."},
+  "debt":{name:"Debt and what is owed",nodes:"tithe:b1 tithe:b3 tithe:b4 tithe:b5 tithe:b6 tithe:i17 tithe:v16",scope:46,note:"Owing, and the one who owes."},
+  "gift":{name:"Gift and offering",nodes:"tithe:v10 tithe:v11 tithe:v12 tithe:v17 tithe:v5 tithe:v6 tithe:v7 tithe:v8 tithe:v9",scope:31,note:"What is handed over as a gift rather than as a payment."},
+  "poor":{name:"The poor and the landless",nodes:"tithe:c17 tithe:d1 tithe:k10 tithe:k11 tithe:k9 tithe:q2 tithe:q3 tithe:q4 tithe:q5 tithe:r3 tithe:r4 tithe:r7 tithe:u1 tithe:v2 tithe:v3 tithe:w2 tithe:w3",scope:260,note:"The alien, the orphan, the widow and the poor."},
+  "blessing":{name:"Blessing",nodes:"tithe:d1 tithe:g1 tithe:h10 tithe:h4 tithe:q4 tithe:r3 tithe:u5",scope:340,note:"Who blesses whom, which Hebrews 7:7 turns into an argument about rank."},
 };
 const N = [
   ["tithe:g1","Genesis 14:20","anchor","Abram gives a tenth of everything to Melchizedek after the rescue of Lot.","tithe"],
@@ -1064,6 +1084,15 @@ svg.addEventListener('wheel',e=>{e.preventDefault();const k=e.deltaY<0?1.1:1/1.1
 
 // ---- filters ---------------------------------------------------------------
 const onCl=new Set(Object.keys(CL)), onWa=new Set(Object.keys(WA)), onTy=new Set(Object.keys(TY));
+// Motifs are a different kind of control and start EMPTY on purpose. The three
+// sets above are filters: everything ticked, unticking hides. This one is an
+// emphasis: nothing ticked, ticking dims whatever does not carry the word. A
+// node belongs to one cluster but carries any number of motifs, so a motif
+// cannot restrict the way a cluster does without hiding most of the graph.
+const onMo = new Set();
+const MO_IDS = Object.fromEntries(
+  Object.entries(typeof MO !== 'undefined' ? MO : {})
+        .map(([k,o]) => [k, new Set(o.nodes.split(' '))]));
 let query='', picked=null, hovered=null;
 
 function build(host, map, set, kind){
@@ -1088,9 +1117,36 @@ build(document.getElementById('clusters'),CL,onCl,'cl');
 build(document.getElementById('warrants'),WA,onWa,'wa');
 build(document.getElementById('types'),TY,onTy,'ty');
 
+(function buildMotifs(){
+  const host = document.getElementById('motifs');
+  if(!host) return;
+  const keys = Object.keys(MO_IDS);
+  if(!keys.length){ host.parentElement.classList.add('hide'); return; }
+  keys.forEach(k=>{
+    const o = MO[k];
+    const lab=document.createElement('label'); lab.className='row'; lab.tabIndex=0;
+    const cb=document.createElement('input'); cb.type='checkbox'; cb.checked=false;
+    const txt=document.createElement('span'); txt.className='mn';
+    txt.textContent=o.name;
+    const sc=document.createElement('span'); sc.className='scope';
+    sc.textContent=MO_IDS[k].size+' / '+o.scope;
+    lab.title=o.note+'  This corpus: '+MO_IDS[k].size+' passages. Whole Bible: '+o.scope+' verses.';
+    lab.append(cb,txt,sc);
+    cb.addEventListener('change',()=>{
+      cb.checked?onMo.add(k):onMo.delete(k);
+      lab.classList.toggle('on',cb.checked);
+      draw();
+    });
+    lab.addEventListener('keydown',e=>{if(e.key==='Enter'){cb.checked=!cb.checked;cb.dispatchEvent(new Event('change'));}});
+    host.append(lab);
+  });
+})();
+
 document.getElementById('q').addEventListener('input',e=>{query=e.target.value.toLowerCase().trim();draw()});
 document.getElementById('reset').onclick=()=>{
   document.querySelectorAll('.rail input[type=checkbox]').forEach(c=>{if(!c.checked){c.checked=true;c.dispatchEvent(new Event('change'))}});
+  document.querySelectorAll('#motifs input[type=checkbox]').forEach(c=>{
+    if(c.checked){ c.checked=false; c.dispatchEvent(new Event('change')); }});
   document.getElementById('q').value=''; query=''; picked=null; hovered=null;
   setMode('canon'); render(); draw(); fit();   // render() too, or the panel keeps the cleared selection
 };
@@ -1180,12 +1236,23 @@ function hover(f){
   draw();
 }
 
+// A node carries a motif if any TICKED motif lists it. With none ticked this is
+// null and nothing is dimmed on that account, which is why the set starts empty.
+function motifIds(){
+  if(!onMo.size) return null;
+  const s = new Set();
+  onMo.forEach(k => MO_IDS[k].forEach(id => s.add(id)));
+  return s;
+}
+
 function draw(){
   const f=focused(), near=litNodes(f);
+  const mo=motifIds();
   nodes.forEach(n=>{
     const ok=matches(n);
     n.el.classList.toggle('hide',!ok);
-    n.el.classList.toggle('dim', ok && near ? !near.has(n.id) : false);
+    n.el.classList.toggle('dim', ok && ((near ? !near.has(n.id) : false)
+                                        || (mo ? !mo.has(n.id) : false)));
     n.el.classList.toggle('sel', isCore(n,picked));
     n.el.classList.toggle('lit', ok && isCore(n,f));
     // Magnified, the label spells the reference out; the spine is too crowded
@@ -1199,7 +1266,8 @@ function draw(){
     const ok = onWa.has(e.wa) && onTy.has(e.ty) && matches(e.s) && matches(e.t);
     e.el.classList.toggle('hide',!ok);
     e.hit.classList.toggle('hide',!ok);
-    e.el.classList.toggle('dim', ok && f ? !litEdge(e,f) : false);
+    e.el.classList.toggle('dim', ok && ((f ? !litEdge(e,f) : false)
+                          || (mo ? !(mo.has(e.s.id) && mo.has(e.t.id)) : false)));
     e.el.classList.toggle('esel', e===picked);
   });
   for(const b in bookLabels){
