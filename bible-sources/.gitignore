@@ -1,0 +1,20 @@
+# Everything in this folder stays on this machine except this file, the
+# README, the rules and the parser script. The materials are large (one BDB
+# folder alone is ~96 MB, and GitHub rejects any file over 100 MB), and
+# several providers ask to be fetched from their own home rather than
+# re-hosted. The README records where each one came from, so the folder
+# can be rebuilt.
+*
+!.gitignore
+!README.md
+!RULES.md
+!KICKOFF-gesenius.md
+# Our own code, no source text in it.
+!parse_thayer.py
+!gesenius_pages.py
+# Gesenius page transcripts, PROGRESS.md and runs.jsonl: our own work from a
+# public-domain book, and small.
+!lexicons/
+!lexicons/gesenius/
+!lexicons/gesenius/transcript/
+!lexicons/gesenius/transcript/**
