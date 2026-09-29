@@ -1,0 +1,34 @@
+RUNNING HEADS: כי־ככה | CCCXCIV | כי־כידוד
+*that*.] A similar transposition occurs in לְמִן for מִן לְ *inde* (for *de—in*); מִבַּלְעֲדֵי; לְבַד מִן and מִלְּבַד[?], Syr. [Syriac]; כִּי אִם for אִם כִּי (see כִּי אִם letter C, No. 2), and in Gr. ὅτι τι for τι ὅτι. The opinion of Winer cannot be assented to, who (Simonis Lex. page 474), tries to show, with more toil than success, that with the exception of one example, 2 Sa. 18:20, this phrase is always to be rendered *for therefore*. See Sal. b. Melech on Gen. 18:5, כי על כן כמו על אשר וכן כל כי על כן שבמקרא.
+
+A remarkable example of the various significations of כִּי is found in Josh. 17:18, "Thou shalt not have one lot only, but (כִּי) thou shalt have the mountain, since (כִּי) it is a forest, thou shalt cut it down, and its whole extent shall be thine; for (כִּי) thou must drive out the Canaanite, because (כִּי) they have chariots of iron, and because (כִּי) they are strong," i. e. they are so troublesome and injurious to you; comp. Josh. 14:3.
+
+כִּי אִם is used—(A) so that אִם may refer to an interposed or parenthetic clause, and each particle retain its own native force.—(1) *that, if*, daß, wenn. 1 Sa. 20:9, "God forbid כִּי (אִם יָדֹעַ אֵדַע כִּי כָלְתָה הָרָעָה מֵעִם אָבִי לָבוֹא עָלֶיךָ) וְלֹא אֹתָהּ אַגִּיד לָךְ that, if I knew assuredly that evil were determined from my father to come upon thee, I should not shew it to thee." Here, after the parenthetic sentence, the other words are adjoined with וְ copulative. In other cases כִּי itself is repeated, Jer. 26:15, "know ye, כִּי אִם מְמִתִים אַתֶּם אֹתִי כִּי דָם נָקִי וְגוֹ׳ that if ye slay me, ye will bring upon yourselves innocent blood;" Germ. ihr sollt wissen, daß, wenn ihr mich tödtet, so werdet ihr u. s. w.
+
+(2) *that since*, that inasmuch as (compare אִם No. 5), Gen. 47:18.
+
+(3) *for, if*, Ex. 8:17; Josh. 23:12; Ecc. 11:8.
+
+(4) *but, if* (sondern, wenn), Lam. 3:32, "but if (God) cause grief, yet will he have compassion."
+
+(B) so that the particles are closely conjoined, and refer to the same clause.—(1) *but if* (sondern wenn), after a negation. Ps. 1:1, "blessed is the man who walketh not ... (if he walk not ...). 2. but if his delight is in the law;" and simply *but* (sondern), i. q. כִּי No. 6. Gen. 32:29, "thou shalt no more be called Jacob, but (כִּי אִם) Israel." 1 Sa. 8:19, "nay, but (כִּי אִם) a king shall be over us." Psa. 1:4; 1 Ki. 18:18; 2 Ki. 23:23; Jer. 7:23; 16:15; Deu. 12:14. Sometimes the negation is only implied in the sentence (comp. כִּי No. 6, *b*). 2 Sa. 13:33, "let not the king take it to heart, because they say that all the king's sons are dead; (not so) but (כִּי אִם) Amnon only is dead."
+=== RIGHT COLUMN ===
+(2) *unless* (außer wenn), also after a negation: (Germ. sondern, formerly was also i. q. *nisi, unless*).—(*a*) followed by a verb, Gen. 32:27, "I will not let thee go, unless (כִּי אִם) thou bless me." Lev. 22:6; Est. 2:14; 2 Sam. 5:6.—(*b*) followed by a noun, Gen. 39:9, "he keeps back nothing from me, except (כִּי אִם) thee, because thou art his wife;" 28:17; Est. 2:15. Instead of the preceding negative there is sometimes an interrogation with a negative force, Isa. 42:19, "who is blind (i. e. no one is to be called blind), כִּי אִם עַבְדִּי except my servant?"
+
+(3) without a previous negation; *but*, Germ. aber, Gen. 40:14, כִּי אִם זְכַרְתַּנִי וְגוֹ׳ "but remember me when it shall be well with thee;" Num. 24:22. Some have denied this sense of כִּי אִם, but it is clear that it is also found in the simple כִּי (see No. 6, *c*); and it is not to be wondered at, as also the Germ. sondern was formerly used without a negation, see Frisch's Glossary.
+
+(C) In some passages one of the two particles seems to be redundant. It is then—(1) i. q. כִּי B, 1, *c*, *that*, after forms of swearing, 2 Sam. 15:21; 2 Ki. 5:20; Jer. 51:14.
+
+(2) i. q. כִּי of time (No. 3); *when, if*, Ex. 22:22, "if (אִם) thou afflictest him (the orphan), כִּי אִם צָעֹק יִצְעַק אֵלַי שָׁמֹעַ אֶשְׁמַע צַעֲקָתוֹ and if he shall cry to me, I will hearken to him." With this agrees the old Germ. wenn daß for wenn, prop. wenn (es ist) daß, and כִּי אִם appears to me to be transposed for אִם כִּי *if* (it be) *that*.
+
+(3) i. q. כִּי causal (No. 5); *for*, Job 42:8; Prov. 23:18.
+
+כִּי־עַל־כֵּן *on this account that*, dieweil, see כִּי, letter B, No. 7.
+
+II. כִּי subst. ἅπ. λεγ. Isa. 3:24, contr. from כִּוִי, from the root כָּוָה (compare אִי from אָוָה, עִי from the root עָוָה) *a mark branded*, or *burnt in*. Arab. کی id., from the root کوی.
+
+כִּיד an unused root. Arab. کاد Med. Ye, *to use deceit*, prop., I believe, *to ensnare*, so that it is cognate to the verbs אָכַד[?], אָנַד[?], and others, with which it is compared under that root. Hence کید deceit, snares; also destruction, ruin, war. So the Hebr.—
+
+כִּיד m. *destruction, calamity*, Job 21:20. See also כִּידוֹן.
+
+כִּידוֹד m. ἅπαξ λεγόμ. Job 41:11, *a spark*, from the root כָּדַד, which see. (Arab. کید *a striking of fire*.)
