@@ -1,0 +1,26 @@
+RUNNING HEADS: זבח־זהר [?] | CCXXXVIII | זבח־זה [?]
+(2) specially *to slay in sacrifice, to sacrifice, to immolate*, 1 Sa. 1:4; followed by לְ (1 Ki. 8:63), and לִפְנֵי (ibid. verse 62; 2 Ch. 7:4; Lev. 9:4), before the name of him to whom the sacrifice is offered. It is not used of priests slaying victims, but of private persons who brought sacrifices at their own charge.
+PIEL זִבַּח fut יְזַבֵּחַ *to sacrifice*, i. q. Kal No. 2, 1 Ki. 12:32; 2 Ki. 12:4. It is frequently used iteratively of the custom of sacrificing (like the Arab. ذبّح to sacrifice much or frequently), 1 Ki. 3:2, 3; 11:8; Hos. 4:14, etc.
+Derivatives, מִזְבֵּחַ and—
+זֶבַח m. with suff. זִבְחִי, pl. זְבָחִים, const. זִבְחֵי once זְבָחוֹת Hos. 4:19.
+(1) pr. *a slaying*; hence *the flesh of slain animals, feasts*, Gen. 31:54; Eze. 39:17; Pro. 17:1, זִבְחֵי־רִיב *contentious feasts.*
+(2) *a sacrifice* ["whether the act of sacrificing or"], *an offering, a victim.* Opposed both to מִנְחָה a bloodless offering [when so contrasted], 1 Sa. 2:29; Psal. 40:7, and to עֹלָה a burnt offering, holocaust; so that זֶבַח denotes sacrifices of which but a part were consumed, such as expiatory or eucharistic offerings, etc., Ex. 10:25; Lev. 17:8; Nu. 15:5, זֶבַח שְׁלָמִים a eucharistic offering, Lev. 3:1; 4:10, etc. It is also used in speaking generally of great and solemn sacrifices, and sacrificial feasts. זֶבַח הַיָּמִים an annual sacrifice, 1 Sam. 1:21; 20:6. זֶבַח מִשְׁפָּחָה a family sacrifice, 20:29; compare 9:12, 13; 16:3.
+(3) [*Zebah*], pr. n. of a Midianite king, Jud. 8:5; Ps. 83:12.
+זַבַּי [*Zabbai*], pr. n. m., Ezr. 10:28; Neh. 3:20 כתיב perhaps it is erroneously written for זַכַּי [?], which is found Ezr. 2:9; Neh. 7:14.
+זְבִידָה see זְבוּדָה.
+זְבִינָה ("bought"), [*Zebinah*], pr. n. m., Ezr. 10:43.
+זָבַל—(1) properly in my opinion, i. q. דָּבַל TO BE ROUND, TO MAKE ROUND, whence the Talmudic זֶבֶל, זָבָל [?] round or globular dung, such as that of goats, or camels, Syr. and Arab. [Syriac], زبلة.
+(2) *to inhabit* [to dwell with], (comp. דּוּר No. 2). Gen. 30:20, יִזְבְּלֵנִי "he will inhabit (together with) me," i. e. he (my husband) will dwell with me; the idea of conjugal intercourse being conjoined: for verbs of dwelling joined with an accusative, imply dwelling together, see גּוּר, שָׁכַן.
+Derivatives, זְבוּל, זְבוּלוּן [?].
+
+=== RIGHT COLUMN ===
+זְבֻל see זְבוּל.
+זְבֻלוּן see זְבוּלוּן.
+זְבַן Chald. to procure for oneself, TO BUY (so Syr. and Samar.). Dan. 2:8, דִּי עִדָּנָא אַנְתּוּן זָבְנִין "that ye will gain the time," i. e. ye seek delay (compare זְמַן). Hence pr. n. זְבִינָא.
+זָג m. Nu. 6:4, *the skin of a grape*, clear and transparent. Its root is the following word.
+זָגַג [an unused root] TO BE CLEAR, TRANSPARENT, compare Samar. זנג i. q. זכך *to be pure*, the Arabic زجاج *glass*, i. q. זְכוּכִית, Ch. זגג [?] to be clear, transparent. [Derivative זָג.]
+זֵד m. (verb. adj. from זוּד, זִיד) *proud* (properly swelling up, *inflated*), with the connected idea of insolence and impiety (compare הלל No. 3, 4). Isa. 13:11; Jer. 43:2; Psal. 19:14; 119:21, 51, 69, 78, 85, 122.
+זָדוֹן constr. זְדוֹן (as if from the root זָדָה=זִיד), with suff. זְדֹנְךָ, 1 Sa. 17:28; Jer. 49:16, *swelling, pride*; as joined with insolence and arrogance, *haughtiness.* Prov. 11:2; 13:10; 21:24, זְדוֹן לִבֶּךָ "the haughtiness of the heart;" Jer. 49:16; Obad. 3; Deut. 17:12. As a concrete used of Babylon, as the most haughty, Jer. 50:31, 32.
+זֶה with prefix בָּזֶה, לָזֶה, f. זֹאת, more rarely זֹה Ecc. 2:2; 5:15, 18; 7:23; 9:13; זוּ Hosea 7:16; Psal. 132:12 (and in this place instead of the relative), once זֹאתָה Jer. 26:6 כתיב, plur. אֵלֶּה (which see).
+(1) *this*, a demonstrative pronoun, *hic, hæc, hoc.* Arabic ذا, هذا hic, Syr. [Syriac] hæc, Æth. [Ethiopic] fem. [Ethiopic] Hence have sprung the Aramæan דִּי, דְּ and Æth. [Ethiopic], which have become relatives. Corresponding to the Sanscrit *sas, sa, tat.* With regard to demonstratives generally beginning with the demonstrative letter *d*, or with the same sound sibilated, see above p. xc, A. [in the note after אֲשֶׁר] and to these may be added the German da.
+זֶה is placed either separately, or with a substantive; if the latter, it commonly, like an adjective, follows the substantive, and it has the article prefixed whenever the substantive itself has; as הַדָּבָר הַזֶּה this word; בַּיּוֹם הַזֶּה "in this day," Gen. 7:11. In other places זֶה without the article is prefixed to a noun, and this takes place—(a) where the predicate of a proposition is contained in this pronoun, זֶה הַדָּבָר "this (is) the word, Ex. 35:4; Jud. 4:14.—(b) where the pronoun is
