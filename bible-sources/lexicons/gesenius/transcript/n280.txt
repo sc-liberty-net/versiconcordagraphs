@@ -1,0 +1,33 @@
+RUNNING HEADS: חגר–חדל | CCLXI | חבת–חדל[?]
+חָגַר fut. יַחְגֹּר TO GIRD. ["Cognate roots, Arab. حجر to restrain. Syr. [Syriac] to lame."] Construed variously—(*a*) with an acc. of the member girded, 2 Ki. 4:29; 9:1; also with בְּ before that *with* which one is girded. So figuratively, Prov. 31:17, "she girdeth her loins with strength."—(*b*) with an acc. of the garment or girdle, e. g. חָגַר אֶת־הַחֶרֶב "he girded (himself with) a sword." 1 Sa. 17:39; 25:13; Ps. 45:4, חָגַר שָׂק *to gird* himself *with sackcloth*, Isa. 15:3; Jer. 49:3. Part. act. 2 Kings 3:21, מִכֹּל חֹגֵר חֲגֹרָה "of all that were girded with a girdle," i. e. who bare arms. Part. pass. חָגוּר אֵפוֹד 1 Sam. 2:18, girded with an ephod; followed by a gen. Joel 1:8, חֲגוּרַת שָׂק[?] "girded with sackcloth;" sometimes used elliptically Joel 1:13, חִגְרוּ "gird yourselves (with sackcloth)." 2 Sa. 21:16, וְהוּא חָגוּר חֲדָשָׁה "he being girded with a new (sword)." Metaph. Ps. 65:13, גִּיל גְּבָעוֹת תַּחְגֹּרְנָה "the hills are girded with joy" (compare verse 14). Ps. 76:11—(*c*) with a double acc. of the person and of the girdle, Ex. 29:9; Lev. 8:13; and with בְּ of the girdle *with* which, Lev. 8:7; 16:4.—(*d*) absol. *to gird oneself*, Eze. 44:18; 1 Ki. 20:11. Here belongs 2 Sa. 22:46, וְיַחְגְּרוּ מִמִּסְגְּרוֹתָם "and they shall gird themselves (and go out) from their fortresses;" unless the Syriac usage be preferred for explaining this passage, "they creep forth from their fortresses," compare Mic. 7:17; Hos. 11:11.
+Derivatives, חָגוֹר, חֲגוֹרָה, מַחֲגֹרֶת.
+
+חַד m. חֲדָא, חֲדָה f. Ch. *one*, for the Heb. אֶחָד, the א being cast away by aphæresis. It is used—(*a*) often for the indefinite article, Dan. 2:31, צְלֵם חַד "an image," ein Bild; comp. Dan. 6:18; Ezra 4:8.—(*b*) fem. חֲדָה is used for the ordinal number, especially in the enumeration of years; שְׁנַת חֲדָה לְכֹרֶשׁ Germ. das Jahr Eins des Cyrus, Ezr. 5:13; 6:3; Dan. 7:1.—(*c*) חַד prefixed to numerals, serves as a circumlocution for expressing a multifold or proportional sense. Dan. 3:19, חַד־שִׁבְעָה עַל דִּי "seven-fold more than" (in the same manner as the Syr. [Syriac]).—(*d*) כַּחֲדָה *like as one, at once*, i. e. *together* (Heb. כְּאֶחָד), Dan. 2:35.
+
+I. חַד fem. חַדָּה (from the root חָדַד), *sharp* (used of a sword), Eze. 5:1; Ps. 57:5; Pro. 5:4.
+
+II. חַד i. q. Ch. חַד, Heb. אֶחָד *one*, Eze. 33:30.
+
+חָדַד [future יֵחַד]—(1) TO BE SHARP, TO BE SHARPENED. (Arab. حد fut. I. Kindred roots, גָּדַד[?], and the words there cited.) Prov. 27:17 (see Hiphil.)
+=== RIGHT COLUMN ===
+(2) *to be swift*, like many other words signifying sharpness, which are used also in the sense of swiftness, see Gr. ὀξύς, θοός, Lat. *acer*, Syr. [Syriac] Hab. 1:8. Comp. חָרַץ.
+HIPHIL, *to sharpen*. Pro. 27:17, בַּרְזֶל בְּבַרְזֶל יָחַד וְאִישׁ יַחַד פְּנֵי־רֵעֵהוּ " as iron is sharpened on iron, so a man sharpens the face of another." יָחַד is fut. A. Kal for יֶחְדַּד[?], יַחַד fut. Hiphil, formed in the Chaldee manner for יַחֲדֵד, יַחֵד[?], like יָחֵל Num. 30:3, אָחֵל Eze. 39:7. See Lehrg. § 38, 1; 103, note 14.
+HOPHAL הוּחַד *to be sharpened*, spoken of a sword, Eze. 21:14, 15, 16.
+Derivatives, חַד No. I, חַדּוּדִים, pr. n. חָדִיד.
+
+חֲדַד ("sharpness"), [*Hadad*], pr. n. of one of the twelve sons of Ishmael, Gen. 25:15; 1 Ch. 1:30. [" חֲדַר is probably the true reading in both places." There is a tribe in Yemen probably sprung from this person. See Forster, i. 204, 286.]
+
+חָדָה fut. apoc. יַחְדְּ TO BE GLAD. (Syriac [Syriac], חֲדָא id. In the western languages there accord with this, γηθέω, γαθέω, to rejoice.) Ex. 18:9. Job 3:6, אַל יִחַדְּ בִּימֵי שָׁנָה "let it not rejoice amongst the days of the year."
+PIEL, *to make glad*, Ps. 21:7.
+Derivatives, חֶדְוָה [pr. n. יַחְדִּיאֵל, יַחְדִּיָּהוּ].
+
+חַדּוּד (from the root חָדַד), *sharp*, and perhaps as a subst. *sharpness, a point*, Job 41:22, חַדּוּדֵי חֶרֶשׂ *sharpnesses of a potsherd, sharp potsherds*, used of the scales of a crocodile; comp. Ælian. Hist. Anim. x. 24.
+
+חֶדְוָה f. *joy, gladness*, 1 Ch. 16:27; Neh. 8:10; from the root חָדָה. In the Chaldee portion of the Scripture, Ezr. 6:16.
+
+חָדִיד ("sharp"), [*Hadid*], pr. n. of a town of the Benjamites, situated on a mountain, Ezr. 2:33; Neh. 7:37; 11:34; Ἀδιδά, 1 Macc. 12:38; compare Joseph. Antt. xiii. 6, § 5.
+
+חֲדִין Ch. pl. *breast*; Heb. חָזֶה Dan. 2:32. (In the Targums the sing. חֲדִי occurs.)
+
+חָדֵל & חָדַל fut. יֶחְדַּל.
+(1) TO LEAVE OFF, TO CEASE, TO DESIST. (Arab. خذل id.; also, *to forsake, to leave*, see Scheid on the Song of Hezekiah, page 53; Schultens on Job, page 72. The primary idea lies in becoming loose, flaccid, which is referred to slackening from labour. It belongs to the family of roots cited at the word דָּלַל, which have the meaning of being pendulous and flaccid.)
