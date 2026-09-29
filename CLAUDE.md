@@ -2,6 +2,12 @@
 
 Read `README.md` for the run order and `DESIGN.md` for open decisions.
 
+Read `bible-sources/RULES.md` before using any original-language text or
+lexicon in `bible-sources/`. Gesenius (Tregelles, 1857) is one of our
+Hebrew sources and references: consult it alongside BDB for any claim about
+what a Hebrew word means, reading its pages on demand as that file
+describes.
+
 ## Never
 
 - **Never add a verse reference from memory.** Every reference must resolve in
