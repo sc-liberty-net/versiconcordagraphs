@@ -2,7 +2,8 @@
 
 Original-language texts and lexicons for building our own translation.
 Downloaded 2026-09-25. Nothing here is committed except this README,
-`RULES.md`, `parse_thayer.py` and `.gitignore`.
+`RULES.md`, the scripts (`parse_thayer.py`, `parse_gesenius.py`,
+`gesenius_pages.py`), the Gesenius transcripts and `.gitignore`.
 
 Standing rules for using these sources, including how to consult
 Gesenius, are in `RULES.md`.
@@ -109,6 +110,38 @@ neighbour's number. `thayer-report.txt` lists those 446.
 
 Credit if published: Thayer's text is public domain. The Greek headwords and
 Strong's numbers come from STEPBible (CC BY): credit "STEP Bible".
+
+#### Gesenius, parsed — `lexicons/gesenius/gesenius-entries.json`
+
+Built by `parse_gesenius.py` (in this folder; run `python parse_gesenius.py`,
+about 10 seconds) from our own page transcripts in
+`lexicons/gesenius/transcript/`, not from the machine-read text. One record
+per Gesenius entry, in the book's order:
+
+| Field | Meaning |
+|---|---|
+| `kind` | `entry`, or `letter` for the introduction to each of the 22 letters |
+| `headword`, `homonym` | The headword as transcribed, and Gesenius's I., II. where he numbers words spelled alike |
+| `strongs`, `estrong`, `lemma` | Strong's number, STEPBible's extended number and lemma; empty for words Strong's lacks |
+| `page`, `image`, `url` | Printed page and scan image where the entry starts, and the scan link |
+| `text` | The whole entry, joined across columns and pages. Hebrew is pointed as printed; [?] marks the transcriber's doubts |
+| `found_by` | How the pairing was made: `points` (exact pointed match), `letters` (letters only), `bdb` (BDB's spelling), `out of order`; `+bdb` where BDB's own map agrees |
+| `english_overlap` | Share of the entry's English found in STEPBible's definition |
+| `check` | `true` where the pairing is doubtful — read these by eye |
+| `unsure` | How many [?] marks the entry holds |
+
+Result (2026-09-30): 9,223 records; 7,250 entries carry a Strong's number,
+covering 7,250 of the 8,674 numbers H0001–H8674; 1,951 entries have none,
+mostly unused roots, cross-references ("see ...") and forms Strong's files
+under another word. Each number goes to one entry at most. 1,692 entries hold
+[?] marks. In two random spot-checks of 30 pairings, 1 in 30 was wrong each
+time; the kind that remains is two words spelled alike taking each other's
+number. `gesenius-report.txt` lists the 154 pairings marked `check: true`.
+The Grammatical and Analytical Index (images 896–903) is left out.
+
+Credit if published: Gesenius's text is public domain and the transcripts
+are our own. The lemmas and Strong's pairings come from STEPBible (CC BY):
+credit "STEP Bible". BDB's map is from unfoldingWord (CC BY).
 
 ### stepbible/
 

@@ -12,6 +12,7 @@
 # Our own code, no source text in it.
 !parse_thayer.py
 !gesenius_pages.py
+!parse_gesenius.py
 # Gesenius page transcripts, PROGRESS.md and runs.jsonl: our own work from a
 # public-domain book, and small.
 !lexicons/

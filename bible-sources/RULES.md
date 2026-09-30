@@ -10,9 +10,18 @@ one of our Hebrew sources and references. Consult it alongside BDB whenever
 a claim rests on what a Hebrew word means. Where the two disagree, report
 both; do not pick one silently.
 
-There is no parsed copy, by decision (2026-09-25). The machine-read text in
-`lexicons/gesenius/` has garbled Hebrew and mixed columns: use it only to
-search the English. Read the entry itself from the page scan:
+**Look the word up first in `lexicons/gesenius/gesenius-entries.json`**,
+built by `parse_gesenius.py` from our own page transcripts (2026-09-30; see
+`README.md`, "Gesenius, parsed"). It is keyed to Strong's numbers, carries
+each entry's page and scan link, and marks doubtful pairings `check: true`.
+The transcripts were checked by script, and only a few pages by eye: where
+an entry matters, or holds [?] marks, **the page scan decides.** This
+replaces the decision of 2026-09-25 that there be no parsed copy, which was
+made when the only text was the machine-read one.
+
+The machine-read text in `lexicons/gesenius/` has garbled Hebrew and mixed
+columns: use it only to search the English. To read an entry from the page
+scan:
 
 1. **Page image address.** Image n is at
    `https://archive.org/download/hebrewchaldeelex00geseuoft/page/n{n}_w1400.jpg`
@@ -44,15 +53,11 @@ search the English. Read the entry itself from the page scan:
 5. **Keep what you read.** Add each entry read to
    `lexicons/gesenius/lookups.md`: Strong's number, headword, printed page,
    image number, and the entry as read. Check that file first, so a page is
-   never read twice. Also check `lexicons/gesenius/transcript/`: whole pages
-   already transcribed are there (`n###.txt`, listed in `PROGRESS.md`;
-   pages I–XXV as of 2026-09-25). `gesenius_pages.py` prepares crops,
-   checks a transcript and logs progress; `python gesenius_pages.py run
-   COUNT [PER_RUN]` transcribes the next unread pages with the lean reader
-   (`.claude/agents/gesenius-reader.md`) and logs token use to
-   `transcript/runs.jsonl`. Transcribing the whole book costs roughly a
-   week or more of Ethan's plan allowance: run it only in batches he has
-   approved.
+   never read twice. Every page is transcribed in
+   `lexicons/gesenius/transcript/` (`n###.txt`, images 20–903, listed in
+   `PROGRESS.md`; finished 2026-09-29). `gesenius_pages.py` prepares crops
+   and checks a transcript; re-reading a page with the lean reader
+   (`.claude/agents/gesenius-reader.md`) costs about $0.50 of plan usage
+   per page. If you correct a transcript, rerun `python parse_gesenius.py`.
 
-Never download the full scan (110 MB PDF, 675 MB images) or transcribe
-Gesenius wholesale unless Ethan asks for it.
+Never download the full scan (110 MB PDF, 675 MB images).
