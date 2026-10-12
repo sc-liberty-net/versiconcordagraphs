@@ -2,58 +2,567 @@
  "id": "q6",
  "en": [
   "And ",
-  {"t": "Ruth", "w": ["02"]}, " ",
-  {"t": "the Moabite woman", "w": ["03"]}, " ",
-  {"t": "said", "w": ["01"]}, " ",
-  {"t": "to", "w": ["04"]}, " ",
-  {"t": "Naomi", "w": ["05"]}, ", ‘",
-  {"t": "Let me go", "w": ["06"]}, ", ",
-  {"t": "please", "w": ["07"]}, ", ",
-  {"t": "to the field", "w": ["08"]}, " ",
-  {"t": "and gather", "w": ["09"]}, " ",
-  {"t": "among the ears of grain", "w": ["10"]}, " ",
-  {"t": "behind", "w": ["11"]}, " ",
-  {"t": "the one in whose eyes", "w": ["15", "12"]}, " ",
-  {"t": "I may find", "w": ["13"]}, " ",
-  {"t": "favour", "w": ["14"]}, ".’ ",
-  {"t": "And she said", "w": ["16"]}, " ",
-  {"t": "to her", "w": ["17"]}, ", ‘",
-  {"t": "Go", "w": ["18"]}, ", ",
-  {"t": "my daughter", "w": ["19"]}, ".’"
+  {
+   "t": "Ruth",
+   "w": [
+    "02"
+   ]
+  },
+  " ",
+  {
+   "t": "the Moabite woman",
+   "w": [
+    "03"
+   ]
+  },
+  " ",
+  {
+   "t": "said",
+   "w": [
+    "01"
+   ]
+  },
+  " ",
+  {
+   "t": "to",
+   "w": [
+    "04"
+   ]
+  },
+  " ",
+  {
+   "t": "Naomi",
+   "w": [
+    "05"
+   ]
+  },
+  ", ‘",
+  {
+   "t": "Let me go",
+   "w": [
+    "06"
+   ]
+  },
+  ", ",
+  {
+   "t": "please",
+   "w": [
+    "07"
+   ]
+  },
+  ", ",
+  {
+   "t": "to the field",
+   "w": [
+    "08"
+   ]
+  },
+  " ",
+  {
+   "t": "and gather",
+   "w": [
+    "09"
+   ]
+  },
+  " ",
+  {
+   "t": "among the ears of grain",
+   "w": [
+    "10"
+   ]
+  },
+  " ",
+  {
+   "t": "behind",
+   "w": [
+    "11"
+   ]
+  },
+  " ",
+  {
+   "t": "the one in whose eyes",
+   "w": [
+    "15",
+    "12"
+   ]
+  },
+  " ",
+  {
+   "t": "I may find",
+   "w": [
+    "13"
+   ]
+  },
+  " ",
+  {
+   "t": "favour",
+   "w": [
+    "14"
+   ]
+  },
+  ".’ ",
+  {
+   "t": "And she said",
+   "w": [
+    "16"
+   ]
+  },
+  " ",
+  {
+   "t": "to her",
+   "w": [
+    "17"
+   ]
+  },
+  ", ‘",
+  {
+   "t": "Go",
+   "w": [
+    "18"
+   ]
+  },
+  ", ",
+  {
+   "t": "my daughter",
+   "w": [
+    "19"
+   ]
+  },
+  ".’"
  ],
  "words": {
-  "01": {"s": ["said", "spoke", "asked"], "r": "Ruth speaks first, offering to go out.", "n": "The Hebrew verb, 'and she said', stands first, before Ruth's name; English puts the subject first, so the verb's 'and' opens the sentence on its own. This is the ordinary form for telling a story, one event after another.", "t": ["And ... said", "And ... said", "And ... said", "And ... said", "And ... said", "And ... saith", "And ... said"]},
-  "02": {"s": ["Ruth"], "r": "Naomi's daughter-in-law, a woman from Moab.", "n": "Gesenius records two proposed derivations of the name, 'appearance, beauty' or 'friend', without deciding between them.", "t": ["Ruth", "Ruth", "Ruth", "Ruth", "Ruth", "Ruth", "Ruth"]},
-  "03": {"s": ["the Moabite woman", "the Moabitess", "the woman from Moab"], "r": "Names Ruth as a foreigner, from the land of Moab.", "n": "A feminine form with the article, 'the Moabite (woman)'. It marks Ruth as one of the outsiders the gleaning laws provide for; that link is our reading, not something the verse states.", "t": ["the Moabitess", "ye Moabitesse", "the Moabitess", "the Moabitess", "the Moabitess", "the Moabitess", "the Moabitess"]},
-  "04": {"s": ["to", "unto"], "r": "Marks Naomi as the one spoken to.", "t": ["unto", "vnto", "to", "unto", "unto", "unto", "to"]},
-  "05": {"s": ["Naomi"], "r": "Ruth's mother-in-law, to whom she speaks.", "n": "Gesenius gives the name's meaning as 'my pleasantness'. The DRC says 'her mother in law' instead of the name.", "t": ["Naomi", "Naomi", "her mother in law", "Naomi", "Naomi", "Naomi", "Naomi"]},
-  "06": {"s": ["let me go", "I will go", "may I go"], "r": "Ruth asks leave to go out to work.", "n": "The form is a first-person wish or request, 'let me go'. The brief's grammar tag calls it an infinitive, which does not fit its first-person form; we read it as a request, as every translation here does except the DRC.", "t": ["Let me ... go", "Let mee goe", "I will go", "Let me ... go", "Let me ... go", "Let me go", "let me go"]},
-  "07": {"s": ["please", "now", "I pray", "do let me"], "r": "Softens the request: Ruth asks, she does not announce.", "n": "Gesenius: a particle used in submissive and modest request, which in English may be rendered 'now', as a word of entreaty. The KJV's 'now' is that use, not a word of time.", "t": ["now", "I pray thee", "If thou wilt", "now", "now", "I pray thee", "Please"]},
-  "08": {"s": ["to the field", "into the field", "to the fields", "out to the country"], "r": "The open farmland around the town, where the harvest is under way.", "n": "Hebrew has no 'to' here: the noun alone, after a verb of going, gives the direction. Gesenius gives the primary sense as a plain, a level tract; BDB gives open field, country.", "t": ["to the field", "to the fielde", "into the field", "to the field", "to the field", "into the field", "into the fields"]},
-  "09": {"s": ["and gather", "and glean", "and pick up", "so that I may gather"], "r": "Ruth means to pick up the stalks the reapers leave behind.", "n": "The same verb as 'gather' in the gleaning laws: Gesenius cites this chapter for it, to gather things lying on the ground, such as ears of grain. As with 'let me go', the brief tags it an infinitive, but the form is a first-person request, 'and let me gather' or 'so that I may gather'. Most translations say 'glean' here; YLT and Geneva keep 'gather'.", "t": ["and glean", "and gather", "and glean", "and glean", "and glean", "and I gather", "and glean"]},
-  "10": {"s": ["among the ears of grain", "among the heads of grain", "ears of grain"], "r": "The heads of grain dropped or missed in the cutting.", "n": "The brief's lexicon gives ear or head of grain; BDB gives 'ear'. The Gesenius entry matched to this word, 'a branch', belongs to a word spelled alike and does not apply here. The KJV's 'corn' meant grain in older English.", "t": ["ears of corn", "eares of corne", "the ears of corn", "among the ears of corn", "among the ears of grain", "among the ears of corn", "heads of grain"]},
-  "11": {"s": ["behind", "after", "following"], "r": "Following behind the reapers as they work.", "n": "Gesenius gives the base sense as what is behind, the hinder part.", "t": ["after", "after", null, "after", "after", "after", "after"]},
-  "12": {"s": ["the one whom", "him who", "whoever", "someone who"], "r": "Whichever landowner proves willing; Ruth names no one.", "n": "BDB notes that this word can include its own antecedent, so here it means 'the one who'. Literally 'behind who I find favour in his eyes': the 'his' on 'eyes' finishes the relative clause, so English writes 'in whose eyes'. The DRC follows the Latin and spells out 'a householder'.", "t": ["him", "him", "wheresoever", "him", "him", "him", "someone"]},
-  "13": {"s": ["I may find", "I find", "I shall find", "I gain"], "r": "Ruth hopes, not assumes, that someone will be kind to her.", "n": "The verb is imperfect, open as to time: 'I may find' fits her uncertainty about who that will be.", "t": ["I shall find", "I finde", "I shall find", "I shall find", "I shall find", "I find", "I may find"]},
-  "14": {"s": ["favour", "grace", "kindness", "acceptance"], "r": "Goodwill from the owner of the field.", "n": "Gesenius gives grace, favour, goodwill, and lists this very phrase, to find favour in someone's eyes, as meaning to be acceptable to him.", "t": ["grace", "fauour", "grace", "favour", "favor", "grace", "favor"]},
-  "15": {"s": ["in his eyes", "in his sight", "with him"], "r": "In the landowner's own judgment.", "n": "Literally 'in his eyes', a dual form for the pair of eyes. Most translations say 'in whose sight'; YLT keeps 'eyes'.", "t": ["in whose sight", "in whose sight", "with a householder", "in whose sight", "in whose sight", "in whose eyes", "in whose sight"]},
-  "16": {"s": ["and she said", "and she answered", "and she replied"], "r": "Naomi answers.", "t": ["And she said", "And she said", "And she answered", "And she said", "And she said", "and she saith", "Naomi replied"]},
-  "17": {"s": ["to her", "unto her"], "r": "Ruth.", "t": ["unto her", "vnto her", "her", "unto her", "unto her", "to her", null]},
-  "18": {"s": ["go", "go ahead", "go on"], "r": "Naomi gives her consent.", "n": "A feminine singular command, addressed to Ruth.", "t": ["Go", "Goe", "Go", "Go", "Go", "Go", "Go ahead"]},
-  "19": {"s": ["my daughter", "daughter", "my dear"], "r": "A warm address to her daughter-in-law.", "n": "BDB notes that 'daughter' is used in kindly address; the brief's lexicon includes daughter-in-law among its senses. Ruth is Naomi's daughter-in-law, not her daughter.", "t": ["my daughter", "my daughter", "my daughter", "my daughter", "my daughter", "my daughter", "my daughter"]}
+  "01": {
+   "s": [
+    "said",
+    "spoke",
+    "asked"
+   ],
+   "r": "Ruth speaks first, offering to go out.",
+   "n": "The Hebrew verb, 'and she said', stands first, before Ruth's name; English puts the subject first, so the verb's 'and' opens the sentence on its own. This is the ordinary form for telling a story, one event after another.",
+   "t": [
+    "And ... said",
+    "And ... said",
+    "And ... said",
+    "And ... said",
+    "And ... said",
+    "And ... saith",
+    "And ... said"
+   ]
+  },
+  "02": {
+   "s": [
+    "Ruth"
+   ],
+   "r": "Naomi's daughter-in-law, a woman from Moab.",
+   "n": "Gesenius records two proposed derivations of the name, 'appearance, beauty' or 'friend', without deciding between them.",
+   "t": [
+    "Ruth",
+    "Ruth",
+    "Ruth",
+    "Ruth",
+    "Ruth",
+    "Ruth",
+    "Ruth"
+   ]
+  },
+  "03": {
+   "s": [
+    "the Moabite woman",
+    "the Moabitess",
+    "the woman from Moab"
+   ],
+   "r": "Names Ruth as a foreigner, from the land of Moab.",
+   "n": "A feminine form with the article, 'the Moabite (woman)'. It marks Ruth as one of the outsiders the gleaning laws provide for; that link is our reading, not something the verse states.",
+   "t": [
+    "the Moabitess",
+    "ye Moabitesse",
+    "the Moabitess",
+    "the Moabitess",
+    "the Moabitess",
+    "the Moabitess",
+    "the Moabitess"
+   ]
+  },
+  "04": {
+   "s": [
+    "to",
+    "unto"
+   ],
+   "r": "Marks Naomi as the one spoken to.",
+   "t": [
+    "unto",
+    "vnto",
+    "to",
+    "unto",
+    "unto",
+    "unto",
+    "to"
+   ]
+  },
+  "05": {
+   "s": [
+    "Naomi"
+   ],
+   "r": "Ruth's mother-in-law, to whom she speaks.",
+   "n": "Gesenius gives the name's meaning as 'my pleasantness'. The DRC says 'her mother in law' instead of the name.",
+   "t": [
+    "Naomi",
+    "Naomi",
+    "her mother in law",
+    "Naomi",
+    "Naomi",
+    "Naomi",
+    "Naomi"
+   ]
+  },
+  "06": {
+   "s": [
+    "let me go",
+    "I will go",
+    "may I go"
+   ],
+   "r": "Ruth asks leave to go out to work.",
+   "n": "The form is a first-person wish or request, 'let me go'. A cohortative, as STEPBible's tag says; every translation here reads it as a request except the DRC.",
+   "t": [
+    "Let me ... go",
+    "Let mee goe",
+    "I will go",
+    "Let me ... go",
+    "Let me ... go",
+    "Let me go",
+    "let me go"
+   ]
+  },
+  "07": {
+   "s": [
+    "please",
+    "now",
+    "I pray",
+    "do let me"
+   ],
+   "r": "Softens the request: Ruth asks, she does not announce.",
+   "n": "Gesenius: a particle used in submissive and modest request, which in English may be rendered 'now', as a word of entreaty. The KJV's 'now' is that use, not a word of time.",
+   "t": [
+    "now",
+    "I pray thee",
+    "If thou wilt",
+    "now",
+    "now",
+    "I pray thee",
+    "Please"
+   ]
+  },
+  "08": {
+   "s": [
+    "to the field",
+    "into the field",
+    "to the fields",
+    "out to the country"
+   ],
+   "r": "The open farmland around the town, where the harvest is under way.",
+   "n": "Hebrew has no 'to' here: the noun alone, after a verb of going, gives the direction. Gesenius gives the primary sense as a plain, a level tract; BDB gives open field, country.",
+   "t": [
+    "to the field",
+    "to the fielde",
+    "into the field",
+    "to the field",
+    "to the field",
+    "into the field",
+    "into the fields"
+   ]
+  },
+  "09": {
+   "s": [
+    "and gather",
+    "and glean",
+    "and pick up",
+    "so that I may gather"
+   ],
+   "r": "Ruth means to pick up the stalks the reapers leave behind.",
+   "n": "The same verb as 'gather' in the gleaning laws: Gesenius cites this chapter for it, to gather things lying on the ground, such as ears of grain. As with 'let me go', the form is a cohortative, a first-person request, 'and let me gather' or 'so that I may gather'. Most translations say 'glean' here; YLT and Geneva keep 'gather'.",
+   "t": [
+    "and glean",
+    "and gather",
+    "and glean",
+    "and glean",
+    "and glean",
+    "and I gather",
+    "and glean"
+   ]
+  },
+  "10": {
+   "s": [
+    "among the ears of grain",
+    "among the heads of grain",
+    "ears of grain"
+   ],
+   "r": "The heads of grain dropped or missed in the cutting.",
+   "n": "The brief's lexicon gives ear or head of grain; BDB gives 'ear'. The Gesenius entry matched to this word, 'a branch', belongs to a word spelled alike and does not apply here. The KJV's 'corn' meant grain in older English.",
+   "t": [
+    "ears of corn",
+    "eares of corne",
+    "the ears of corn",
+    "among the ears of corn",
+    "among the ears of grain",
+    "among the ears of corn",
+    "heads of grain"
+   ]
+  },
+  "11": {
+   "s": [
+    "behind",
+    "after",
+    "following"
+   ],
+   "r": "Following behind the reapers as they work.",
+   "n": "Gesenius gives the base sense as what is behind, the hinder part.",
+   "t": [
+    "after",
+    "after",
+    null,
+    "after",
+    "after",
+    "after",
+    "after"
+   ]
+  },
+  "12": {
+   "s": [
+    "the one whom",
+    "him who",
+    "whoever",
+    "someone who"
+   ],
+   "r": "Whichever landowner proves willing; Ruth names no one.",
+   "n": "BDB notes that this word can include its own antecedent, so here it means 'the one who'. Literally 'behind who I find favour in his eyes': the 'his' on 'eyes' finishes the relative clause, so English writes 'in whose eyes'. The DRC follows the Latin and spells out 'a householder'.",
+   "t": [
+    "him",
+    "him",
+    "wheresoever",
+    "him",
+    "him",
+    "him",
+    "someone"
+   ]
+  },
+  "13": {
+   "s": [
+    "I may find",
+    "I find",
+    "I shall find",
+    "I gain"
+   ],
+   "r": "Ruth hopes, not assumes, that someone will be kind to her.",
+   "n": "The verb is imperfect, open as to time: 'I may find' fits her uncertainty about who that will be.",
+   "t": [
+    "I shall find",
+    "I finde",
+    "I shall find",
+    "I shall find",
+    "I shall find",
+    "I find",
+    "I may find"
+   ]
+  },
+  "14": {
+   "s": [
+    "favour",
+    "grace",
+    "kindness",
+    "acceptance"
+   ],
+   "r": "Goodwill from the owner of the field.",
+   "n": "Gesenius gives grace, favour, goodwill, and lists this very phrase, to find favour in someone's eyes, as meaning to be acceptable to him.",
+   "t": [
+    "grace",
+    "fauour",
+    "grace",
+    "favour",
+    "favor",
+    "grace",
+    "favor"
+   ]
+  },
+  "15": {
+   "s": [
+    "in his eyes",
+    "in his sight",
+    "with him"
+   ],
+   "r": "In the landowner's own judgment.",
+   "n": "Literally 'in his eyes', a dual form for the pair of eyes. Most translations say 'in whose sight'; YLT keeps 'eyes'.",
+   "t": [
+    "in whose sight",
+    "in whose sight",
+    "with a householder",
+    "in whose sight",
+    "in whose sight",
+    "in whose eyes",
+    "in whose sight"
+   ]
+  },
+  "16": {
+   "s": [
+    "and she said",
+    "and she answered",
+    "and she replied"
+   ],
+   "r": "Naomi answers.",
+   "t": [
+    "And she said",
+    "And she said",
+    "And she answered",
+    "And she said",
+    "And she said",
+    "and she saith",
+    "Naomi replied"
+   ]
+  },
+  "17": {
+   "s": [
+    "to her",
+    "unto her"
+   ],
+   "r": "Ruth.",
+   "t": [
+    "unto her",
+    "vnto her",
+    "her",
+    "unto her",
+    "unto her",
+    "to her",
+    null
+   ]
+  },
+  "18": {
+   "s": [
+    "go",
+    "go ahead",
+    "go on"
+   ],
+   "r": "Naomi gives her consent.",
+   "n": "A feminine singular command, addressed to Ruth.",
+   "t": [
+    "Go",
+    "Goe",
+    "Go",
+    "Go",
+    "Go",
+    "Go",
+    "Go ahead"
+   ]
+  },
+  "19": {
+   "s": [
+    "my daughter",
+    "daughter",
+    "my dear"
+   ],
+   "r": "A warm address to her daughter-in-law.",
+   "n": "BDB notes that 'daughter' is used in kindly address; the brief's lexicon includes daughter-in-law among its senses. Ruth is Naomi's daughter-in-law, not her daughter.",
+   "t": [
+    "my daughter",
+    "my daughter",
+    "my daughter",
+    "my daughter",
+    "my daughter",
+    "my daughter",
+    "my daughter"
+   ]
+  }
  },
  "lxx": {
-  "01": {"i": [0], "m": 0, "n": "Only καὶ, 'and', survives here in our Greek text. There is no Greek for 'said Ruth'; the words have likely been lost from the digital text. That is an inference: the brief cannot show what Swete prints."},
-  "03": {"i": [1, 2], "m": 2, "n": "Μωαβῖτις, 'the Moabite woman'. After it our Greek text jumps straight to 'among the ears', with nothing for 'to Naomi, let me go, please, to the field and gather': another apparent gap in the digital text."},
-  "10": {"i": [3, 4], "m": 4, "n": "στάχυς, 'ear of grain'."},
-  "11": {"i": [5], "m": 5, "n": "κατόπισθεν, 'behind'."},
-  "12": {"i": [6], "m": 6},
-  "13": {"i": [7, 8], "m": 8, "lemma": "εὑρίσκω", "strong": "G2147", "n": "Dictionary form supplied by hand: the matched form is marked loose. οὗ ἐὰν εὕρω, 'whoever I may find'."},
-  "14": {"i": [9], "m": 9, "n": "χάρις, 'grace, favour', the word the New Testament uses for grace."},
-  "15": {"i": [10, 11, 12], "m": 11, "n": "ἐν ὀφθαλμοῖς αὐτοῦ, 'in his eyes', exactly as the Hebrew."},
-  "16": {"i": [13, 14], "m": 13, "lemma": "εἶπον", "strong": "G2036", "n": "Dictionary form supplied by hand: the brief gives none. εἶπεν δέ, 'and she said'."},
-  "17": {"i": [15], "m": 15},
-  "18": {"i": [16], "m": 16, "n": "πορεύομαι, 'to go on one's way'."},
-  "19": {"i": [17], "m": 17, "n": "θυγάτηρ, 'daughter', without 'my'; the Greek uses the bare noun as a form of address."}
+  "01": {
+   "i": [
+    0
+   ],
+   "m": 0,
+   "n": "Only καὶ, 'and', survives here in our Greek text. There is no Greek for 'said Ruth'; the words have likely been lost from the digital text. That is an inference: the brief cannot show what Swete prints."
+  },
+  "03": {
+   "i": [
+    1,
+    2
+   ],
+   "m": 2,
+   "n": "Μωαβῖτις, 'the Moabite woman'. After it our Greek text jumps straight to 'among the ears', with nothing for 'to Naomi, let me go, please, to the field and gather': another apparent gap in the digital text."
+  },
+  "10": {
+   "i": [
+    3,
+    4
+   ],
+   "m": 4,
+   "n": "στάχυς, 'ear of grain'."
+  },
+  "11": {
+   "i": [
+    5
+   ],
+   "m": 5,
+   "n": "κατόπισθεν, 'behind'."
+  },
+  "12": {
+   "i": [
+    6
+   ],
+   "m": 6
+  },
+  "13": {
+   "i": [
+    7,
+    8
+   ],
+   "m": 8,
+   "lemma": "εὑρίσκω",
+   "strong": "G2147",
+   "n": "Dictionary form supplied by hand: the matched form is marked loose. οὗ ἐὰν εὕρω, 'whoever I may find'."
+  },
+  "14": {
+   "i": [
+    9
+   ],
+   "m": 9,
+   "n": "χάρις, 'grace, favour', the word the New Testament uses for grace."
+  },
+  "15": {
+   "i": [
+    10,
+    11,
+    12
+   ],
+   "m": 11,
+   "n": "ἐν ὀφθαλμοῖς αὐτοῦ, 'in his eyes', exactly as the Hebrew."
+  },
+  "16": {
+   "i": [
+    13,
+    14
+   ],
+   "m": 13,
+   "lemma": "εἶπον",
+   "strong": "G2036",
+   "n": "Dictionary form supplied by hand: the brief gives none. εἶπεν δέ, 'and she said'."
+  },
+  "17": {
+   "i": [
+    15
+   ],
+   "m": 15
+  },
+  "18": {
+   "i": [
+    16
+   ],
+   "m": 16,
+   "n": "πορεύομαι, 'to go on one's way'."
+  },
+  "19": {
+   "i": [
+    17
+   ],
+   "m": 17,
+   "n": "θυγάτηρ, 'daughter', without 'my'; the Greek uses the bare noun as a form of address."
+  }
  }
 }

@@ -1,66 +1,360 @@
 {
  "id": "i22",
  "en": [
-  {"t": "And there were", "w": ["01"]}, " ",
-  {"t": "those who", "w": ["02"]}, " ",
-  {"t": "were saying", "w": ["03"]}, ", ‘",
-  {"t": "Our fields", "w": ["04"]}, " ",
-  {"t": "and our vineyards", "w": ["05"]}, " ",
-  {"t": "and our houses", "w": ["06"]}, " ",
-  {"t": "we", "w": ["07"]}, " ",
-  {"t": "are pledging", "w": ["08"]}, "; ",
-  {"t": "and let us get", "w": ["09"]}, " ",
-  {"t": "grain", "w": ["10"]}, " ",
-  {"t": "in the famine", "w": ["11"]}, ".’"
+  {
+   "t": "And there were",
+   "w": [
+    "01"
+   ]
+  },
+  " ",
+  {
+   "t": "those who",
+   "w": [
+    "02"
+   ]
+  },
+  " ",
+  {
+   "t": "were saying",
+   "w": [
+    "03"
+   ]
+  },
+  ", ‘",
+  {
+   "t": "Our fields",
+   "w": [
+    "04"
+   ]
+  },
+  " ",
+  {
+   "t": "and our vineyards",
+   "w": [
+    "05"
+   ]
+  },
+  " ",
+  {
+   "t": "and our houses",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "we",
+   "w": [
+    "07"
+   ]
+  },
+  " ",
+  {
+   "t": "are pledging",
+   "w": [
+    "08"
+   ]
+  },
+  "; ",
+  {
+   "t": "and let us get",
+   "w": [
+    "09"
+   ]
+  },
+  " ",
+  {
+   "t": "grain",
+   "w": [
+    "10"
+   ]
+  },
+  " ",
+  {
+   "t": "in the famine",
+   "w": [
+    "11"
+   ]
+  },
+  ".’"
  ],
  "words": {
-  "01": {"s": ["and there were", "and there are", "there were also"], "r": "Introduces one group among the complaining people.",
-         "n": "The word is a noun meaning being or existence, used for 'there is'. Gesenius calls its use for the verb 'to be', without distinction of number or tense, by far the most common; the past tense here comes from the story.",
-         "t": ["also there were", "And there were", "And there were", "also there were", "also there were", "And there are", null]},
-  "02": {"s": ["those who", "who", "some who"], "r": "Marks the people who spoke.",
-         "n": "BDB notes that this particle can include its own antecedent, so 'who' here means 'those who'.",
-         "t": ["Some ... that", "that", "some that", "Some ... that", "Some ... that", "who", "Others"]},
-  "03": {"s": ["were saying", "said", "kept saying"], "r": "What this group was saying at the time.",
-         "n": "A participle: a description of what they were saying, not a single remark.",
-         "t": ["said", "saide", "said", "said", "said", "are saying", "were saying"]},
-  "04": {"s": ["our fields", "our land", "our farmland"], "r": "The ground they farm.",
-         "n": "The KJV and Geneva say 'lands'. The Hebrew order puts the property first, before the verb, for emphasis.",
-         "t": ["our lands", "our landes", "our lands", "our fields", "our fields", "Our fields", "our fields"]},
-  "05": {"s": ["and our vineyards", "and our vines"], "r": "Their planted vineyards, a second kind of property.",
-         "n": "Gesenius gives the first sense as a field set with plants of nobler quality, cultivated as a garden or orchard.",
-         "t": ["vineyards", "and our vineyardes", "and our vineyards", "and our vineyards", "and our vineyards", "and our vineyards", "our vineyards"]},
-  "06": {"s": ["and our houses", "and our homes"], "r": "The houses they live in.",
-         "t": ["and houses", "and our houses", "and our houses", "and our houses", "and our houses", "and our houses", "and our homes"]},
-  "07": {"s": ["we", "we ourselves"], "r": "The speakers themselves.",
-         "n": "The pronoun is written out, which the brief's lexicon notes is usually for emphasis.",
-         "t": ["We", "We", null, "We", "We", "we", "We"]},
-  "08": {"s": ["are pledging", "are mortgaging", "are giving as security", "are putting up"], "r": "They are putting their property up as security for loans.",
-         "n": "BDB: take on pledge, give in pledge, exchange, and go surety for. The translations' 'mortgaging' gives the sense: the land stands behind a debt. A participle, so something going on at the time; YLT keeps it with 'we are pledging'.",
-         "t": ["have mortgaged", "must gage", "Let us mortgage", "are mortgaging", "are mortgaging", "are pledging", "are mortgaging"]},
-  "09": {"s": ["and let us get", "so that we may get", "and we will take", "and let us buy"], "r": "Their resolve: to get grain with what the pledges raise.",
-         "n": "Our word data tags this form as an infinitive, but its prefix נ and ending ה make it the first person plural 'let us take', a form of resolve. The verb is the common 'take', as wide as English 'take' or 'get'; the KJV makes it 'buy'.",
-         "t": ["that we might buy", "and take vp", "and let us take", "let us get", "let us get", "and we receive", "to get"]},
-  "10": {"s": ["grain", "corn", "wheat", "cereal"], "r": "Grain for food.",
-         "n": "Gesenius: corn, and used of bread. 'Corn' in older English meant grain of any kind.",
-         "t": ["corn", "corne", "corn", "corn", "grain", "corn", "grain"]},
-  "11": {"s": ["in the famine", "during the famine", "because of the famine"], "r": "The time of scarcity in which they speak.",
-         "n": "Gesenius: hunger, famine, whether of individuals or of whole provinces, scarcity of grain. The Hebrew has 'in', of the time; the KJV and others make it the cause, 'because of the dearth'.",
-         "t": ["because of the dearth", "for the famine", "because of the famine", "because of the dearth", "because of the dearth", "for the famine", "during the famine"]}
+  "01": {
+   "s": [
+    "and there were",
+    "and there are",
+    "there were also"
+   ],
+   "r": "Introduces one group among the complaining people.",
+   "n": "The word is a noun meaning being or existence, used for 'there is'. Gesenius calls its use for the verb 'to be', without distinction of number or tense, by far the most common; the past tense here comes from the story.",
+   "t": [
+    "also there were",
+    "And there were",
+    "And there were",
+    "also there were",
+    "also there were",
+    "And there are",
+    null
+   ]
+  },
+  "02": {
+   "s": [
+    "those who",
+    "who",
+    "some who"
+   ],
+   "r": "Marks the people who spoke.",
+   "n": "BDB notes that this particle can include its own antecedent, so 'who' here means 'those who'.",
+   "t": [
+    "Some ... that",
+    "that",
+    "some that",
+    "Some ... that",
+    "Some ... that",
+    "who",
+    "Others"
+   ]
+  },
+  "03": {
+   "s": [
+    "were saying",
+    "said",
+    "kept saying"
+   ],
+   "r": "What this group was saying at the time.",
+   "n": "A participle: a description of what they were saying, not a single remark.",
+   "t": [
+    "said",
+    "saide",
+    "said",
+    "said",
+    "said",
+    "are saying",
+    "were saying"
+   ]
+  },
+  "04": {
+   "s": [
+    "our fields",
+    "our land",
+    "our farmland"
+   ],
+   "r": "The ground they farm.",
+   "n": "The KJV and Geneva say 'lands'. The Hebrew order puts the property first, before the verb, for emphasis.",
+   "t": [
+    "our lands",
+    "our landes",
+    "our lands",
+    "our fields",
+    "our fields",
+    "Our fields",
+    "our fields"
+   ]
+  },
+  "05": {
+   "s": [
+    "and our vineyards",
+    "and our vines"
+   ],
+   "r": "Their planted vineyards, a second kind of property.",
+   "n": "Gesenius gives the first sense as a field set with plants of nobler quality, cultivated as a garden or orchard.",
+   "t": [
+    "vineyards",
+    "and our vineyardes",
+    "and our vineyards",
+    "and our vineyards",
+    "and our vineyards",
+    "and our vineyards",
+    "our vineyards"
+   ]
+  },
+  "06": {
+   "s": [
+    "and our houses",
+    "and our homes"
+   ],
+   "r": "The houses they live in.",
+   "t": [
+    "and houses",
+    "and our houses",
+    "and our houses",
+    "and our houses",
+    "and our houses",
+    "and our houses",
+    "and our homes"
+   ]
+  },
+  "07": {
+   "s": [
+    "we",
+    "we ourselves"
+   ],
+   "r": "The speakers themselves.",
+   "n": "The pronoun is written out, which the brief's lexicon notes is usually for emphasis.",
+   "t": [
+    "We",
+    "We",
+    null,
+    "We",
+    "We",
+    "we",
+    "We"
+   ]
+  },
+  "08": {
+   "s": [
+    "are pledging",
+    "are mortgaging",
+    "are giving as security",
+    "are putting up"
+   ],
+   "r": "They are putting their property up as security for loans.",
+   "n": "BDB: take on pledge, give in pledge, exchange, and go surety for. The translations' 'mortgaging' gives the sense: the land stands behind a debt. A participle, so something going on at the time; YLT keeps it with 'we are pledging'.",
+   "t": [
+    "have mortgaged",
+    "must gage",
+    "Let us mortgage",
+    "are mortgaging",
+    "are mortgaging",
+    "are pledging",
+    "are mortgaging"
+   ]
+  },
+  "09": {
+   "s": [
+    "and let us get",
+    "so that we may get",
+    "and we will take",
+    "and let us buy"
+   ],
+   "r": "Their resolve: to get grain with what the pledges raise.",
+   "n": "A cohortative, first person plural: 'let us take', a form of resolve; the prefix נ and the ending ה mark it. The verb is the common 'take', as wide as English 'take' or 'get'; the KJV makes it 'buy'.",
+   "t": [
+    "that we might buy",
+    "and take vp",
+    "and let us take",
+    "let us get",
+    "let us get",
+    "and we receive",
+    "to get"
+   ]
+  },
+  "10": {
+   "s": [
+    "grain",
+    "corn",
+    "wheat",
+    "cereal"
+   ],
+   "r": "Grain for food.",
+   "n": "Gesenius: corn, and used of bread. 'Corn' in older English meant grain of any kind.",
+   "t": [
+    "corn",
+    "corne",
+    "corn",
+    "corn",
+    "grain",
+    "corn",
+    "grain"
+   ]
+  },
+  "11": {
+   "s": [
+    "in the famine",
+    "during the famine",
+    "because of the famine"
+   ],
+   "r": "The time of scarcity in which they speak.",
+   "n": "Gesenius: hunger, famine, whether of individuals or of whole provinces, scarcity of grain. The Hebrew has 'in', of the time; the KJV and others make it the cause, 'because of the dearth'.",
+   "t": [
+    "because of the dearth",
+    "for the famine",
+    "because of the famine",
+    "because of the dearth",
+    "because of the dearth",
+    "for the famine",
+    "during the famine"
+   ]
+  }
  },
  "lxx": {
   "_extra": {
    "17": "καὶ (and): begins a phrase added in the Greek, 'and we shall eat'.",
    "18": "φαγόμεθα (we shall eat): the Greek ends 'and we shall eat' where the Hebrew has 'in the famine'. Our Greek text gives no dictionary form; it is the future of ἐσθίω, to eat."
   },
-  "01": {"i": [0, 1], "m": 1},
-  "02": {"i": [2], "m": 2, "n": "τινες, 'some': 'there are some saying'."},
-  "03": {"i": [3], "m": 3},
-  "04": {"i": [4, 5], "m": 4},
-  "05": {"i": [6, 7, 8], "m": 7},
-  "06": {"i": [9, 10, 11], "m": 10},
-  "07": {"i": [12], "m": 12},
-  "08": {"i": [13], "m": 13, "n": "διεγγυάω, to give as security, to pledge."},
-  "09": {"i": [14, 15], "m": 15, "lemma": "λαμβάνω", "strong": "G2983", "n": "Dictionary form supplied; the brief gives none. λημψόμεθα, 'we shall take', the future of λαμβάνω."},
-  "10": {"i": [16], "m": 16, "n": "σῖτος, grain, especially wheat."}
+  "01": {
+   "i": [
+    0,
+    1
+   ],
+   "m": 1
+  },
+  "02": {
+   "i": [
+    2
+   ],
+   "m": 2,
+   "n": "τινες, 'some': 'there are some saying'."
+  },
+  "03": {
+   "i": [
+    3
+   ],
+   "m": 3
+  },
+  "04": {
+   "i": [
+    4,
+    5
+   ],
+   "m": 4
+  },
+  "05": {
+   "i": [
+    6,
+    7,
+    8
+   ],
+   "m": 7
+  },
+  "06": {
+   "i": [
+    9,
+    10,
+    11
+   ],
+   "m": 10
+  },
+  "07": {
+   "i": [
+    12
+   ],
+   "m": 12
+  },
+  "08": {
+   "i": [
+    13
+   ],
+   "m": 13,
+   "n": "διεγγυάω, to give as security, to pledge."
+  },
+  "09": {
+   "i": [
+    14,
+    15
+   ],
+   "m": 15,
+   "lemma": "λαμβάνω",
+   "strong": "G2983",
+   "n": "Dictionary form supplied; the brief gives none. λημψόμεθα, 'we shall take', the future of λαμβάνω."
+  },
+  "10": {
+   "i": [
+    16
+   ],
+   "m": 16,
+   "n": "σῖτος, grain, especially wheat."
+  }
  }
 }

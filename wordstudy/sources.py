@@ -127,7 +127,10 @@ H_STEM = {"q": "Qal", "N": "Niphal", "p": "Piel", "P": "Pual", "h": "Hiphil", "H
           "Q": "Qal passive", "l": "Pilpel", "L": "Polpal", "f": "Hithpalpel", "D": "Nithpael", "j": "Pealal",
           "i": "Pilel", "u": "Hothpaal", "c": "Tiphil", "v": "Hishtaphel", "w": "Nithpalel", "y": "Nithpoel",
           "z": "Hithpoel", "a": "Peal", "e": "Pael", "E": "Ithpaal", "b": "Peil", "s": "Haphel", "T": "Ithpeel"}
-H_FORM = {"p": "perfect", "q": "perfect with and (sequential)", "i": "imperfect", "w": "imperfect with and (sequential)",
+# Verb forms as STEPBible's own key (TEHMC) defines them. STEP's letters differ from OpenScriptures':
+# "c" with a person is the cohortative imperfect ("let us ..."); "c" with no person is the infinitive construct.
+H_FORM = {"p": "perfect", "q": "perfect with and (sequential)", "i": "imperfect (or cohortative)",
+          "n": "imperfect", "u": "imperfect with and", "w": "imperfect with and (sequential)",
           "h": "cohortative", "j": "jussive", "v": "imperative", "r": "participle", "s": "passive participle",
           "a": "infinitive absolute", "c": "infinitive construct"}
 H_PERS = {"1": "first person", "2": "second person", "3": "third person"}
@@ -146,8 +149,14 @@ def heb_part(code):
         return ""
     k = code[0]
     if k == "V" and len(code) >= 3:
-        rest = "" if code[2] in "ac" else code[3:]  # infinitives carry no person, gender or number
-        bits = [H_STEM.get(code[1], code[1]), H_FORM.get(code[2], code[2])]
+        form, rest = code[2], code[3:]
+        if form == "c" and rest[:1] in H_PERS:
+            label = "imperfect, cohortative (let me / let us)"
+        else:
+            label = H_FORM.get(form, form)
+            if form in "ac":
+                rest = ""  # infinitives carry no person, gender or number
+        bits = [H_STEM.get(code[1], code[1]), label]
         if rest and rest[0] in H_PERS:
             bits.append(H_PERS[rest[0]]); rest = rest[1:]
         bits += [H_GEN[ch] if ch in H_GEN else H_NUM.get(ch, ch) for ch in rest]
