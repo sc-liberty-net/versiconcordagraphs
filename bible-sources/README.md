@@ -22,6 +22,7 @@ dataset that carries them.
 | Open Scriptures Hebrew Bible | "Open Scriptures Hebrew Bible", CC BY 4.0 | Anything using OSHB lemma or morphology data |
 | unfoldingWord BDB-Enhanced | link to github.com/unfoldingWord/Brown-Driver-Briggs-Enhanced, CC BY | Anything using their corrections or additions to BDB |
 | Swete Septuagint digitization | "Open Greek and Latin Project, First1KGreek (github.com/OpenGreekAndLatin/First1KGreek), prepared by github.com/nathans/lxx-swete", CC BY-SA 4.0 | Any use of the Greek text in `greek/lxx-swete/` |
+| Open Scriptures Septuagint Project | "Open Scriptures Septuagint Project", CC BY 4.0 | Septuagint lemmas and Strong's numbers, from `greek/lxx-lemmas/` or `greek/lxx-swete-lemmas.json` |
 
 Credit asked for, not required: the Groves Center (WLC) and Tanach.us (UXLC).
 
@@ -63,6 +64,30 @@ Credit asked for, not required: the Groves Center (WLC) and Tanach.us (UXLC).
 | `tr-stephanus-1550/` | Textus Receptus, Stephanus 1550, parsed | github.com/byztxt/greektext-stephens | Public domain |
 | `textus-receptus/` | Maurice Robinson's Textus Receptus edition, parsed | github.com/byztxt/greektext-textus-receptus | Public domain |
 | `lxx-swete/` | Septuagint (Greek Old Testament), Swete's edition 1909–1930, one word per line with chapter and verse | github.com/nathans/lxx-swete, from github.com/OpenGreekAndLatin/First1KGreek (`data/tlg0527`) | Swete public domain; digital text CC BY-SA 4.0; build scripts MIT |
+| `lxx-lemmas/` | Open Scriptures GreekResources: a lemma for every word of the Septuagint, in the word order of Rahlfs's edition (the CATSS text), without the Greek words; and a Greek Word List giving Strong's numbers for words also in the New Testament. Downloaded 2026-10-01 | github.com/openscriptures/GreekResources (master, zip) | CC BY 4.0 |
+
+#### Swete, lemmatised — `greek/lxx-swete-lemmas.json`
+
+Built by `align_lxx.py` (in this folder; run `python align_lxx.py`, a few
+minutes). Swete's text has no lemmas and no public lemmatised Swete exists;
+every Septuagint lemma dataset descends from CATSS's tagging of Rahlfs, whose
+licence forbids republishing it. So each Swete verse is aligned against the
+GreekResources lemma list for the same verse, by spelling, with gaps where
+the two editions differ. A Swete word with no plausible partner gets no
+lemma. Keyed `Book.chapter.verse` (`Deut.24.19`); one record per Swete word:
+`w` (the word as printed), `lemma`, `key`, `strong` (New Testament words
+only) and `fit` (0–1).
+
+Result (2026-10-01): 582,206 words; 85.1% given a lemma, 86.9% within the
+verses both editions number alike. 779 verses (12,439 words) have no lemma
+list at the same reference, mostly where the editions number verses
+differently (Proverbs 24–31, Odes, Psalms of Solomon, Joel). In a spot-check
+of 50 matches with fit 0.7 or more, 49 were right; of 25 with fit under 0.7
+(2.6% of words), about 22. **Treat a fit under 0.7 as a guess.** Accents are
+ignored when matching, so words spelled alike apart from accents (εἷς and
+εἰς) can swap. The Swete digital text has machine-reading typos of its own
+(ἀνταλλάγμστα for ἀλλάγματα). Swete's Ecclesiastes is not in
+`lxx-swete/data/`. `lxx-swete-lemmas-report.txt` has the figures by book.
 
 The SBLGNT copy at github.com/morphgnt/sblgnt was left out on purpose. Its
 parsing layer is CC BY-SA, and its README still points to the SBLGNT licence

@@ -1,0 +1,476 @@
+<title>Biblography Word Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+Hebrew:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a reading column of verses, each set as an interlinear line, beside a sticky study
+   panel for the selected word; on phones the panel becomes a bottom sheet. Lapis on cool paper. */
+:root {
+  --paper: #eef0f3;
+  --sheet: #f9fafc;
+  --ink: #1a2030;
+  --muted: #566074;
+  --rule: #d5dae3;
+  --accent: #2c4c9c;
+  --accent-ink: #ffffff;
+  --accent-soft: #dfe6f6;
+  --caution: #7a4e00;
+  --caution-soft: #f6ead2;
+  --shadow: 0 1px 2px rgb(26 32 48 / .06), 0 8px 24px rgb(26 32 48 / .08);
+
+  --serif: "EB Garamond", Georgia, "Times New Roman", serif;
+  --hebrew: "Noto Serif Hebrew", "SBL Hebrew", "Times New Roman", serif;
+  --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+
+  --t-xs: .78rem; --t-s: .875rem; --t-m: 1rem; --t-l: 1.2rem; --t-xl: 1.6rem; --t-xxl: 2.6rem;
+  --radius: 10px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #11151d; --sheet: #181d27; --ink: #e3e7ee; --muted: #9aa4b6; --rule: #2a3140;
+    --accent: #93abf0; --accent-ink: #11151d; --accent-soft: #1f2a46;
+    --caution: #e5b664; --caution-soft: #2e2615;
+    --shadow: 0 1px 2px rgb(0 0 0 / .3), 0 10px 30px rgb(0 0 0 / .35);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #11151d; --sheet: #181d27; --ink: #e3e7ee; --muted: #9aa4b6; --rule: #2a3140;
+  --accent: #93abf0; --accent-ink: #11151d; --accent-soft: #1f2a46;
+  --caution: #e5b664; --caution-soft: #2e2615;
+  --shadow: 0 1px 2px rgb(0 0 0 / .3), 0 10px 30px rgb(0 0 0 / .35);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body { background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: var(--t-m); line-height: 1.55; }
+.page { max-width: 1320px; margin: 0 auto; padding-inline: 16px; padding-block: 28px 48px; }
+@media (min-width: 768px) { .page { padding-inline: 32px; } }
+a { color: var(--accent); text-underline-offset: 2px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* masthead */
+.mast { display: grid; gap: 20px; padding-bottom: 24px; border-bottom: 1px solid var(--rule); margin-bottom: 28px; }
+@media (min-width: 900px) { .mast { grid-template-columns: minmax(0, 1fr) auto; align-items: end; } }
+.kicker { margin: 0 0 6px; font-size: var(--t-xs); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+h1 { margin: 0; font-family: var(--serif); font-weight: 500; font-size: var(--t-xxl); line-height: 1.05; letter-spacing: -.01em; text-wrap: balance; }
+.lede { margin: 10px 0 0; max-width: 60ch; color: var(--muted); }
+.howto { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 6px 12px; font-size: var(--t-s); align-items: baseline; }
+.howto dt { font-family: var(--mono); font-size: var(--t-xs); color: var(--accent); }
+.howto dd { margin: 0; color: var(--muted); }
+
+/* two columns */
+.layout { display: grid; gap: 32px; }
+@media (min-width: 1024px) { .layout { grid-template-columns: minmax(0, 1fr) 420px; align-items: start; } }
+
+/* verses */
+.verses { display: grid; gap: 44px; min-width: 0; }
+.verse { min-width: 0; }
+.vhead { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; }
+.vhead h2 { margin: 0; font-family: var(--serif); font-weight: 500; font-size: var(--t-xl); line-height: 1.2; }
+.vmeta { margin: 0; display: flex; flex-wrap: wrap; gap: 8px; font-size: var(--t-xs); }
+.pill { border: 1px solid var(--rule); border-radius: 999px; padding: 2px 10px; color: var(--muted); background: var(--sheet); }
+.gist { margin: 8px 0 0; font-size: var(--t-s); color: var(--muted); max-width: 70ch; }
+.gist b { font-weight: 500; color: var(--ink); }
+.reading { margin: 18px 0 0; font-family: var(--serif); font-size: 1.5rem; line-height: 1.85; max-width: 40ch; text-wrap: pretty; }
+@media (max-width: 560px) { .reading { font-size: 1.3rem; } }
+.reading small { display: block; margin-bottom: 4px; font-family: var(--sans); font-size: var(--t-xs); line-height: 1.4; color: var(--muted); letter-spacing: .02em; }
+.e { appearance: none; border: 0; margin: 0; padding: 0 2px; font: inherit; color: inherit; background: transparent; cursor: pointer;
+  border-radius: 4px; text-decoration: underline; text-decoration-color: var(--rule); text-decoration-thickness: 2px; text-underline-offset: 6px;
+  transition: background-color .18s ease, color .18s ease; }
+.e:hover { background: var(--accent-soft); text-decoration-color: var(--accent); }
+.e[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); text-decoration-color: transparent; }
+.sup { font-style: italic; color: var(--muted); cursor: help; }
+
+.orig { margin-top: 14px; }
+.orig > summary, .compare summary { cursor: pointer; font-size: var(--t-s); color: var(--accent); width: fit-content; }
+.line { list-style: none; margin: 12px 0 0; padding: 18px 12px; display: flex; flex-wrap: wrap; gap: 4px 2px;
+  background: var(--sheet); border: 1px solid var(--rule); border-radius: var(--radius); }
+.line li { display: flex; }
+.w { appearance: none; border: 0; background: transparent; color: inherit; font: inherit; cursor: pointer;
+  display: grid; justify-items: center; gap: 1px; padding: 8px 9px 9px; border-radius: 8px; text-align: center;
+  transition: background-color .18s ease, transform .18s cubic-bezier(.16, 1, .3, 1); }
+.w:hover { background: var(--accent-soft); }
+.w:active { transform: translateY(1px); }
+.w[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
+.w[aria-pressed="true"] .tr, .w[aria-pressed="true"] .gl { color: var(--accent-ink); }
+.w .o { font-family: var(--serif); font-size: 1.55rem; line-height: 1.25; }
+.verse[data-lang="H"] .w .o { font-family: var(--hebrew); font-size: 1.45rem; line-height: 1.5; }
+.w .tr { font-family: var(--mono); font-size: .7rem; color: var(--muted); }
+.w .gl { font-size: var(--t-xs); color: var(--ink); max-width: 13ch; line-height: 1.3; }
+.w.minor .o { color: var(--muted); }
+.w.minor[aria-pressed="true"] .o { color: var(--accent-ink); }
+.w.minor .gl { color: var(--muted); }
+.punct { align-self: start; padding-top: 10px; font-family: var(--serif); font-size: 1.4rem; color: var(--muted); }
+.dirnote { margin: 6px 0 0; font-size: var(--t-xs); color: var(--muted); }
+
+.compare { margin-top: 10px; }
+.compare dl { margin: 12px 0 0; display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 10px 18px; }
+.compare dt { font-size: var(--t-xs); color: var(--muted); padding-top: 3px; }
+.compare dd { margin: 0; font-family: var(--serif); font-size: 1.06rem; line-height: 1.45; }
+@media (max-width: 560px) { .compare dl { grid-template-columns: minmax(0, 1fr); gap: 2px; } .compare dd { margin-bottom: 10px; } }
+
+/* study panel */
+.study { min-width: 0; background: var(--sheet); border: 1px solid var(--rule); border-radius: 14px; box-shadow: var(--shadow); }
+@media (min-width: 1024px) {
+  .study { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 16px); max-height: calc(100vh - 32px); overflow: auto; }
+}
+@media (max-width: 1023px) {
+  .study { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; max-height: 82vh; overflow: auto;
+    border-radius: 16px 16px 0 0; padding-bottom: env(safe-area-inset-bottom, 0px);
+    transform: translateY(105%); transition: transform .32s cubic-bezier(.16, 1, .3, 1); }
+  .study.open { transform: none; }
+}
+.s-bar { position: sticky; top: 0; display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  padding: 12px 18px; background: var(--sheet); border-bottom: 1px solid var(--rule); z-index: 1; }
+.s-ref { margin: 0; font-size: var(--t-xs); color: var(--muted); }
+.s-nav { display: flex; gap: 6px; }
+.btn { appearance: none; border: 1px solid var(--rule); background: var(--paper); color: var(--ink); font: inherit; font-size: var(--t-xs);
+  border-radius: 999px; padding: 4px 11px; cursor: pointer; }
+.btn:hover { border-color: var(--accent); color: var(--accent); }
+.btn:active { transform: translateY(1px); }
+.close { display: none; }
+@media (max-width: 1023px) { .close { display: inline-block; } }
+.s-body { padding: 18px 20px 26px; display: grid; gap: 24px; }
+@media (prefers-reduced-motion: no-preference) { .s-body.fresh { animation: rise .26s cubic-bezier(.16, 1, .3, 1); } }
+@keyframes rise { from { opacity: .35; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+
+.s-orig { margin: 0; font-family: var(--serif); font-size: 2.6rem; line-height: 1.15; }
+.s-orig[lang="he"] { font-family: var(--hebrew); font-size: 2.4rem; line-height: 1.4; }
+.s-lemma { margin: 4px 0 0; font-size: var(--t-s); color: var(--muted); }
+.s-lemma b { font-family: var(--serif); font-size: 1.15rem; font-weight: 500; color: var(--ink); }
+.s-lemma b[lang="he"] { font-family: var(--hebrew); font-size: 1.05rem; }
+.facts { margin: 14px 0 0; display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 6px 14px; font-size: var(--t-s); }
+.facts dt { color: var(--muted); }
+.facts dd { margin: 0; }
+.mono { font-family: var(--mono); font-size: .82rem; }
+
+h3 { margin: 0 0 10px; font-size: var(--t-xs); text-transform: uppercase; letter-spacing: .1em; color: var(--muted); font-weight: 600; }
+.draft { border-left: 3px solid var(--accent); padding-left: 14px; }
+.draft .badge { display: inline-block; margin-bottom: 10px; font-size: var(--t-xs); color: var(--accent); background: var(--accent-soft); border-radius: 999px; padding: 2px 10px; }
+.draft p { margin: 0; }
+.sense { font-family: var(--serif); font-size: 1.12rem; line-height: 1.45; }
+.syn { list-style: none; margin: 12px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.syn li { border: 1px solid var(--accent); color: var(--accent); border-radius: 999px; padding: 3px 11px; font-size: var(--t-s); }
+.note { margin-top: 12px !important; font-size: var(--t-s); color: var(--ink); }
+
+.renders table { width: 100%; border-collapse: collapse; font-size: var(--t-s); }
+.renders td { padding: 6px 0; vertical-align: top; }
+.renders tr + tr td { border-top: 1px solid var(--rule); }
+.renders td:first-child { color: var(--muted); width: 44%; padding-right: 12px; }
+.renders td:last-child { font-family: var(--serif); font-size: 1.05rem; }
+.renders .none { font-family: var(--sans); font-size: var(--t-xs); color: var(--muted); font-style: italic; }
+.renders tr.ours td { color: var(--accent); font-weight: 500; }
+.covers { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 12px 0 0; font-size: var(--t-xs); color: var(--muted); }
+.covers .btn[aria-current="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.covers .btn span { font-size: .95rem; }
+
+.built ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.built li { display: grid; grid-template-columns: 4.5rem minmax(0, 1fr); gap: 10px; align-items: baseline; font-size: var(--t-s); }
+.built .h { font-family: var(--hebrew); font-size: 1.25rem; text-align: right; direction: rtl; }
+.built .m { color: var(--muted); font-size: var(--t-xs); display: block; }
+.built li.main .h { color: var(--accent); }
+
+.lxx-g { margin: 0; font-family: var(--serif); font-size: 1.6rem; line-height: 1.3; }
+.lxx-d { margin: 4px 0 0; font-size: var(--t-s); color: var(--muted); }
+.lxx-d b { font-family: var(--serif); font-size: 1.1rem; font-weight: 500; color: var(--ink); }
+.lxx .note { margin-top: 10px; }
+.links ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.links li { display: grid; gap: 4px; justify-items: start; font-size: var(--t-xs); color: var(--muted); }
+.links [lang="he"] { font-family: var(--hebrew); font-size: 1.05rem; }
+.links [lang="grc"] { font-family: var(--serif); font-size: 1.05rem; }
+.lxx-verse { margin-top: 14px; }
+.lxx-verse small { display: block; font-size: var(--t-xs); color: var(--muted); }
+.lxx-verse p[lang] { margin: 4px 0 0; font-family: var(--serif); font-size: 1.25rem; line-height: 1.55; max-width: 60ch; }
+.lex { display: grid; gap: 10px; }
+.lex details { border: 1px solid var(--rule); border-radius: var(--radius); background: var(--paper); }
+.lex summary { cursor: pointer; padding: 10px 14px; display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; }
+.lex summary b { font-weight: 600; font-size: var(--t-s); }
+.lex summary span { font-size: var(--t-xs); color: var(--muted); }
+.lex .body { padding: 0 14px 14px; font-size: var(--t-s); line-height: 1.6; overflow-wrap: anywhere; }
+.lex .body p { margin: 0 0 8px; }
+.lex .src { font-family: var(--serif); font-size: 1.02rem; line-height: 1.55; }
+.lex .src :lang(he), .lex .he { font-family: var(--hebrew); font-size: .95em; }
+.flag { display: block; margin: 0 0 10px; padding: 8px 10px; border-radius: 8px; background: var(--caution-soft); color: var(--caution); font-size: var(--t-xs); line-height: 1.45; }
+mark.q { background: var(--caution-soft); color: var(--caution); border-radius: 3px; padding: 0 2px; }
+.lex ul { margin: 6px 0 0; padding-left: 18px; }
+
+/* tooltip */
+.tip { position: fixed; z-index: 30; max-width: 280px; pointer-events: none; background: var(--ink); color: var(--paper);
+  border-radius: 10px; padding: 10px 12px; font-size: var(--t-s); line-height: 1.4; box-shadow: var(--shadow); }
+.tip .tl { font-family: var(--serif); font-size: 1.05rem; }
+.tip .tl [lang="he"] { font-family: var(--hebrew); font-size: .95rem; }
+.tip .ts { margin-top: 4px; }
+.tip .th { margin-top: 6px; font-size: .72rem; }
+@media (prefers-reduced-motion: no-preference) { .tip { animation: fade .12s ease-out; } }
+@keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+
+footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--rule); font-size: var(--t-xs); color: var(--muted); display: grid; gap: 8px; max-width: 90ch; }
+footer p { margin: 0; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+
+<div class="page">
+  <header class="mast">
+    <div>
+      <p class="kicker">Biblography study layer, pilot</p>
+      <h1>Word Study</h1>
+      <p class="lede">Three verses drawn at random from the Taxes &amp; Tithes concordagraph, in a literal English rendering where every word opens onto the Hebrew or Greek behind it.</p>
+    </div>
+    <dl class="howto">
+      <dt>hover</dt><dd>other English words that fit here</dd>
+      <dt>select</dt><dd>the Hebrew or Greek, the translations, the lexicons</dd>
+      <dt><i>italic</i></dt><dd>supplied in English, not in the original</dd>
+    </dl>
+  </header>
+
+  <div class="layout">
+    <main class="verses" id="verses"></main>
+    <aside class="study" id="study" aria-label="Word study"></aside>
+  </div>
+
+  <footer>
+    <p>Word divisions, lemmas, grammar tags, Bible-wide counts and the brief lexicons (including Abbott-Smith's Greek lexicon) are from <a href="https://www.STEPBible.org" target="_blank" rel="noopener">STEP Bible</a>, Tyndale House Cambridge, CC BY 4.0. BDB entries are from <a href="https://github.com/unfoldingWord/Brown-Driver-Briggs-Enhanced" target="_blank" rel="noopener">unfoldingWord's Brown-Driver-Briggs Enhanced</a>, CC BY. Gesenius (Tregelles, 1857) is read from this project's own transcripts of the <a href="https://archive.org/details/hebrewchaldeelex00geseuoft" target="_blank" rel="noopener">archive.org scan</a>; Thayer (1889) is machine-read from <a href="https://archive.org/details/greekenglishlexi00grimuoft" target="_blank" rel="noopener">its scan</a>. Both are public domain. The Septuagint is Swete's edition (1909-1930) as digitised by the Open Greek and Latin Project's <a href="https://github.com/OpenGreekAndLatin/First1KGreek" target="_blank" rel="noopener">First1KGreek</a>, prepared by <a href="https://github.com/nathans/lxx-swete" target="_blank" rel="noopener">nathans/lxx-swete</a>, CC BY-SA 4.0; its dictionary forms and Strong's numbers are from the <a href="https://github.com/openscriptures/GreekResources" target="_blank" rel="noopener">Open Scriptures Septuagint Project</a>, CC BY 4.0, matched to Swete's words by this project.</p>
+    <p>All other translations shown are public domain. Hebrew is shown with vowel points but without cantillation marks. The verse summaries are this project's own paraphrase. The English rendering and everything under "In this verse" are drafts written for this pilot and have not been reviewed.</p>
+  </footer>
+</div>
+<div class="tip" id="tip" role="tooltip" hidden></div>
+
+<script>
+const VERSES = /*DATA*/[];
+
+const $ = (s, el = document) => el.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
+const HEB = /[֐-׿]/;
+const wrapHeb = s => s.replace(/([֐-׿][֐-׿\s־]*[֐-׿]|[֐-׿])/g, '<span lang="he" dir="rtl">$1</span>');
+const fmtSource = s => wrapHeb(esc(s))
+  .replace(/\*([^*\n]+)\*/g, "<em>$1</em>")
+  .replace(/\[\?\]/g, '<mark class="q" title="The transcriber was unsure of this reading">[?]</mark>')
+  .replace(/\n/g, "<br>");
+const MINOR = /^(CONJ|PRT|PRT-N|T-|P-)|^H?(Tc|Tn)$/;
+const byId = new Map();
+VERSES.forEach(v => v.words.forEach((w, i) => byId.set(w.id, { v, w, i })));
+
+function countText(w) {
+  const n = w.count, all = w.countAll;
+  const one = k => `${k.toLocaleString()} verse${k === 1 ? "" : "s"}`;
+  return n === all ? one(n) : `${one(n)} in this sense, ${one(all)} in all`;
+}
+
+/* ---- verses ---- */
+const LANG = { G: "Greek", H: "Hebrew" };
+$("#verses").innerHTML = VERSES.map(v => {
+  const heb = v.lang === "H";
+  const tiles = v.words.map(w => `
+    <li><button class="w${MINOR.test(w.code) ? " minor" : ""}" type="button" id="w-${w.id}" data-id="${w.id}" aria-pressed="false"
+      aria-label="${esc(w.orig)}, ${esc(w.gloss)}">
+      <span class="o" lang="${heb ? "he" : "grc"}">${esc(w.orig)}</span>
+      <span class="tr" dir="ltr">${esc(w.tr)}</span>
+      <span class="gl" dir="ltr">${esc(w.gloss.replace(/[<>]/g, ""))}</span>
+    </button>${w.punct ? `<span class="punct" aria-hidden="true">${esc(w.punct)}</span>` : ""}</li>`).join("");
+  return `<section class="verse" data-lang="${v.lang}" aria-labelledby="h-${v.id}">
+    <header class="vhead">
+      <h2 id="h-${v.id}">${esc(v.ref)}</h2>
+      <p class="vmeta"><span class="pill">${LANG[v.lang]}</span><span class="pill">${esc(v.cluster)}</span></p>
+    </header>
+    <p class="gist"><b>In the concordagraph:</b> ${esc(v.gist)}</p>
+    <p class="reading"><small>This edition, literal draft</small>${v.en.map(s =>
+      typeof s === "string" ? esc(s)
+      : s.w ? `<button class="e" type="button" data-id="${s.w[0]}" data-ids="${s.w.join(" ")}">${esc(s.t)}</button>`
+      : `<span class="sup" title="${esc(s.sup)}" tabindex="0">${esc(s.t)}</span>`).join("")}</p>
+    <details class="orig"><summary>Show the ${LANG[v.lang]}${v.lxx ? " and the Septuagint" : ""}</summary>
+      <ol class="line" ${heb ? 'dir="rtl"' : ""}>${tiles}</ol>
+      ${heb ? '<p class="dirnote">Hebrew reads right to left: the first word is at the top right.</p>' : ""}
+      ${v.lxx ? `<div class="lxx-verse"><small>Septuagint, Swete's edition: the Greek translation the New Testament writers knew</small>
+        <p lang="grc">${esc(v.lxx.text)}</p>
+        ${v.lxx.extra.map(e => `<p class="dirnote">${esc(e)}</p>`).join("")}</div>` : ""}
+    </details>
+    <details class="compare"><summary>Compare ${v.translations.length} translations</summary>
+      <dl>${v.translations.map(t => `<dt>${esc(t.t)}</dt><dd>${esc(t.r)}</dd>`).join("")}</dl>
+    </details>
+  </section>`;
+}).join("");
+
+/* ---- study panel ---- */
+const study = $("#study");
+let current = null;
+
+function lexHTML(v, w) {
+  const L = w.lex, out = [];
+  if (v.lang === "H") {
+    if (L.ges) {
+      const flags = [];
+      if (L.ges.partial) flags.push("Our parsed copy matched this word to a cross-reference or to part of a longer entry. Check the page scan for the full entry.");
+      if (L.ges.check) flags.push("This word-to-entry match is marked doubtful in our parsed copy.");
+      if (L.ges.unsure) flags.push(`The transcript holds ${L.ges.unsure} uncertain reading${L.ges.unsure > 1 ? "s" : ""}, marked [?]. The scan decides.`);
+      out.push(`<details open><summary><b>Gesenius</b><span>Tregelles 1857, page ${esc(L.ges.page)}</span></summary><div class="body">
+        ${flags.map(f => `<span class="flag">${esc(f)}</span>`).join("")}
+        <p class="src">${fmtSource(L.ges.text)}</p>
+        <p><a href="${esc(L.ges.url)}" target="_blank" rel="noopener">${L.ges.more ? "Read the rest on the page scan" : "See the page scan"}</a></p></div></details>`);
+    } else {
+      out.push(`<details open><summary><b>Gesenius</b><span>no entry matched</span></summary><div class="body">
+        <span class="flag">No Gesenius entry is matched to this word in our parsed copy. It may sit under a related headword.</span></div></details>`);
+    }
+    if (L.bdb) {
+      out.push(`<details${L.ges ? "" : " open"}><summary><b>Brown-Driver-Briggs</b><span>1906, ${esc(L.bdb.id)}</span></summary><div class="body">
+        <p><span class="he" lang="he">${esc(L.bdb.head)}</span> ${esc(L.bdb.pos || "")}</p>
+        ${L.bdb.primary ? `<p class="src"><em>${esc(L.bdb.primary)}</em>${L.bdb.desc ? `; ${esc(L.bdb.desc)}` : ""}</p>` : ""}
+        ${L.bdb.senses.length ? `<ul>${L.bdb.senses.map(s => `<li>${wrapHeb(esc(s))}</li>`).join("")}</ul>` : ""}
+      </div></details>`);
+    }
+    if (L.brief) out.push(`<details><summary><b>STEPBible brief lexicon</b><span>${esc(L.brief.gloss)}</span></summary><div class="body"><p>${fmtSource(L.brief.def)}</p></div></details>`);
+  } else {
+    if (L.brief) out.push(`<details open><summary><b>Abbott-Smith</b><span>Manual Greek Lexicon, 1922, via STEPBible</span></summary><div class="body"><p class="src">${fmtSource(L.brief.def)}</p></div></details>`);
+    if (L.thayer) out.push(`<details><summary><b>Thayer</b><span>1889, machine-read</span></summary><div class="body">
+      <span class="flag">Read by machine from a scan. The English is reliable; the Greek letters inside the entry came out garbled.${L.thayer.check ? " This entry's match to the word is also marked doubtful." : ""}</span>
+      <p>${esc(L.thayer.text)}</p></div></details>`);
+  }
+  return out.join("");
+}
+
+const bareG = s => (s || "").match(/^G\d{4}/)?.[0] || null;
+
+function lxxHTML(w) {
+  const x = w.lxx;
+  if (!x) return "";
+  const flag = x.fit < 0.7 && !x.fixed ? '<span class="flag">Loose match between Swete\'s word and the dictionary data. Read the dictionary form as a guess.</span>' : "";
+  return `<section class="lxx"><h3>In the Septuagint</h3>
+    ${flag}
+    <p class="lxx-g" lang="grc">${esc(x.greek)}</p>
+    <p class="lxx-d">Dictionary form <b lang="grc">${esc(x.lemma)}</b>${x.gloss ? `, ${esc(x.gloss)}` : ""}${x.strong ? ` <span class="mono">${esc(x.strong)}</span>` : ""}</p>
+    <p class="lxx-d">${x.strong ? `In the New Testament: ${x.nt.toLocaleString()} verse${x.nt === 1 ? "" : "s"}` : "Not used in the New Testament"}</p>
+    ${x.note ? `<p class="note">${wrapHeb(esc(x.note))}</p>` : ""}
+  </section>`;
+}
+
+/* words elsewhere on this page that share a Greek word with this one, via the Septuagint */
+function linksHTML(v, w) {
+  const mine = v.lang === "H" ? bareG(w.lxx?.strong) : bareG(w.strong);
+  if (!mine || MINOR.test(w.code)) return "";
+  const hits = [];
+  VERSES.forEach(o => o.words.forEach(x => {
+    if (x.id === w.id || MINOR.test(x.code)) return;
+    const theirs = o.lang === "H" ? bareG(x.lxx?.strong) : bareG(x.strong);
+    if (theirs === mine) {
+      const seg = o.en.find(s => s.w && s.w.includes(x.id));
+      hits.push(`<li><button class="btn" type="button" data-goto="${x.id}">${esc(o.ref)}: ${esc(seg ? seg.t : x.gloss)}</button>
+        <span>${o.lang === "H" ? `Hebrew <span lang="he">${esc(x.orig)}</span>, Greek <span lang="grc">${esc(x.lxx.word)}</span> in the Septuagint` : `Greek <span lang="grc">${esc(x.orig)}</span>`}</span></li>`);
+    }
+  }));
+  if (!hits.length) return "";
+  return `<section class="links"><h3>Same Greek word elsewhere on this page</h3><ul>${hits.join("")}</ul></section>`;
+}
+
+function render(id, { focusPanel = false } = {}) {
+  const hit = byId.get(id);
+  if (!hit) return;
+  const { v, w, i } = hit;
+  current = id;
+  document.querySelectorAll('[aria-pressed="true"]').forEach(b => b.setAttribute("aria-pressed", "false"));
+  document.getElementById("w-" + id)?.setAttribute("aria-pressed", "true");
+  document.querySelectorAll(".e").forEach(b => { if (b.dataset.ids.split(" ").includes(id)) b.setAttribute("aria-pressed", "true"); });
+  const heb = v.lang === "H";
+  const seg = v.en.find(s => s.w && s.w.includes(id));
+  const covers = seg && seg.w.length > 1 ? `<p class="covers">"${esc(seg.t)}" translates ${seg.w.length} words:
+    ${seg.w.map(x => { const o = byId.get(x).w; return `<button class="btn" type="button" data-goto="${x}" aria-current="${x === id}"><span lang="${heb ? "he" : "grc"}">${esc(o.orig)}</span> ${esc(o.lgloss)}</button>`; }).join("")}</p>` : "";
+  const renders = w.render.map(r => `<tr${r.ours ? ' class="ours"' : ""}><td>${esc(r.t)}</td><td>${r.r ? esc(r.r) : '<span class="none">not rendered</span>'}</td></tr>`).join("");
+  const built = heb && w.built && w.built.length > 1 ? `<section class="built"><h3>Built from</h3><ol>${w.built.map(p =>
+    `<li class="${p.main ? "main" : ""}"><span class="h" lang="he">${esc(p.heb)}</span><span>${esc(p.eng)}<span class="m">${esc(p.gram)}</span></span></li>`).join("")}</ol></section>` : "";
+  study.innerHTML = `
+    <div class="s-bar">
+      <p class="s-ref">${esc(v.ref)}, word ${i + 1} of ${v.words.length}</p>
+      <div class="s-nav">
+        <button class="btn" type="button" data-step="-1" aria-label="Previous word">Prev</button>
+        <button class="btn" type="button" data-step="1" aria-label="Next word">Next</button>
+        <button class="btn close" type="button" data-close aria-label="Close word study">Close</button>
+      </div>
+    </div>
+    <div class="s-body fresh">
+      <div>
+        <p class="s-orig" lang="${heb ? "he" : "grc"}" ${heb ? 'dir="rtl"' : ""}>${esc(w.orig)}</p>
+        <p class="s-lemma">Dictionary form <b lang="${heb ? "he" : "grc"}">${esc(w.lemma)}</b>, ${esc(w.lgloss)}</p>
+        <dl class="facts">
+          <dt>Sounds like</dt><dd class="mono">${esc(w.tr)}</dd>
+          <dt>Grammar</dt><dd>${esc(w.gram)}</dd>
+          <dt>Strong's</dt><dd class="mono">${esc(w.strong)}</dd>
+          <dt>In the Bible</dt><dd>${countText(w)}</dd>
+        </dl>
+        ${covers}
+      </div>
+      <section class="draft">
+        <h3>In this verse</h3>
+        <span class="badge">Draft by Claude, not yet reviewed</span>
+        <p class="sense">${esc(w.sense)}</p>
+        <ul class="syn" aria-label="Closest English">${w.syn.map(s => `<li>${esc(s)}</li>`).join("")}</ul>
+        ${w.note ? `<p class="note">${wrapHeb(esc(w.note))}</p>` : ""}
+      </section>
+      <section class="renders"><h3>How the translations render it</h3><table>${renders}</table></section>
+      ${built}
+      ${lxxHTML(w)}
+      ${linksHTML(v, w)}
+      <section class="lex"><h3>Lexicons</h3>${lexHTML(v, w)}</section>
+    </div>`;
+  if (focusPanel) study.scrollTop = 0;
+}
+
+function step(d) {
+  const hit = byId.get(current); if (!hit) return;
+  const next = hit.v.words[hit.i + d];
+  if (next) { render(next.id); document.getElementById("w-" + next.id)?.focus({ preventScroll: false }); }
+}
+
+const narrow = matchMedia("(max-width: 1023px)");
+document.addEventListener("click", e => {
+  const b = e.target.closest(".w, .e");
+  if (b) { render(b.dataset.id, { focusPanel: true }); hideTip(); if (narrow.matches) study.classList.add("open"); return; }
+  const g = e.target.closest("[data-goto]");
+  if (g) { render(g.dataset.goto); return; }
+  const sup = e.target.closest(".sup");
+  if (sup) { showTip(sup); return; }
+  hideTip();
+  const s = e.target.closest("[data-step]");
+  if (s) { step(+s.dataset.step); return; }
+  if (e.target.closest("[data-close]")) study.classList.remove("open");
+});
+document.addEventListener("keydown", e => {
+  if (!current) return;
+  const inLine = document.activeElement?.classList.contains("w");
+  if (!inLine) return;
+  const v = byId.get(current).v;
+  if (e.key === "ArrowRight") { e.preventDefault(); step(v.lang === "H" ? -1 : 1); }
+  if (e.key === "ArrowLeft") { e.preventDefault(); step(v.lang === "H" ? 1 : -1); }
+  if (e.key === "Escape") study.classList.remove("open");
+});
+
+/* ---- tooltip: hover and keyboard focus only; touch goes straight to the study ---- */
+const tip = $("#tip");
+const canHover = matchMedia("(hover: hover)");
+function showTip(btn) {
+  if (btn.classList.contains("sup")) {
+    tip.innerHTML = `<div class="ts">${esc(btn.title)}</div>`;
+  } else {
+    const hit = byId.get(btn.dataset.id); if (!hit) return;
+    const { v, w } = hit;
+    const he = v.lang === "H" ? 'lang="he"' : "";
+    tip.innerHTML = `<div class="tl"><span ${he}>${esc(w.orig)}</span>, ${esc(w.lgloss)}</div>
+      <div class="ts">${w.syn.slice(0, 5).map(esc).join(", ")}</div>
+      <div class="th">Select for the full study</div>`;
+  }
+  tip.hidden = false;
+  const r = btn.getBoundingClientRect(), t = tip.getBoundingClientRect();
+  let x = Math.min(Math.max(8, r.left + r.width / 2 - t.width / 2), innerWidth - t.width - 8);
+  let y = r.top - t.height - 8;
+  if (y < 8) y = r.bottom + 8;
+  tip.style.left = x + "px"; tip.style.top = y + "px";
+}
+function hideTip() { tip.hidden = true; }
+document.addEventListener("mouseover", e => { const b = e.target.closest(".w, .e, .sup"); if (b && canHover.matches) showTip(b); });
+document.addEventListener("mouseout", e => { if (e.target.closest(".w, .e, .sup")) hideTip(); });
+document.addEventListener("focusin", e => { const b = e.target.closest(".w, .e, .sup"); if (b && canHover.matches) showTip(b); else hideTip(); });
+document.addEventListener("focusout", hideTip);
+addEventListener("scroll", hideTip, { passive: true });
+
+/* open on a worked example so the panel is never empty */
+render("p2-14");
+</script>
