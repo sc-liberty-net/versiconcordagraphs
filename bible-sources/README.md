@@ -89,6 +89,12 @@ ignored when matching, so words spelled alike apart from accents (εἷς and
 (ἀνταλλάγμστα for ἀλλάγματα). Swete's Ecclesiastes is not in
 `lxx-swete/data/`. `lxx-swete-lemmas-report.txt` has the figures by book.
 
+### english/
+
+| Folder | What | Source | Status |
+|---|---|---|---|
+| `eng-kjv2006/` | King James Version, 1769 text, 66 books, in USFM: every word tagged with its Strong's number (`\w was|strong="H1961"\w*`), the KJV's italic supplied words marked `\add ...\add*`, words of Jesus `\wj`. The tagging is CrossWire's KJV2006 project. Downloaded 2026-10-12 as `eng-kjv2006_usfm.zip` (2.5 MB) | ebible.org/Scriptures/eng-kjv2006_usfm.zip (details: ebible.org/find/details.php?id=eng-kjv2006) | Public domain ("You may copy the King James Version of the Holy Bible freely"); courtesy of CrossWire Bible Society and eBible.org. In the UK, printing the KJV needs the Crown patent holders' permission |
+
 The SBLGNT copy at github.com/morphgnt/sblgnt was left out on purpose. Its
 parsing layer is CC BY-SA, and its README still points to the SBLGNT licence
 from before the 2022 change. STEPBible's TAGNT covers the same ground under
