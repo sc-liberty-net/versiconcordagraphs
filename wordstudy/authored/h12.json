@@ -1,0 +1,88 @@
+{
+ "id": "h12",
+ "en": [
+  {"t": "Who", "w": ["01"]}, " ",
+  {"t": "has become", "w": ["07"]}, " ",
+  {"t": "a priest", "sup": "Supplied in English, as the Geneva and BSB supply it. The Greek says only 'has become'; the priesthood under discussion supplies the rest."}, ", ",
+  {"t": "not", "w": ["02"]}, " ",
+  {"t": "according to", "w": ["03"]}, " a ",
+  {"t": "law", "w": ["04"]}, " ",
+  {"t": "of a commandment", "w": ["05"]}, " ",
+  {"t": "of flesh", "w": ["06"]}, ", ",
+  {"t": "but", "w": ["08"]}, " ",
+  {"t": "according to", "w": ["09"]}, " the ",
+  {"t": "power", "w": ["10"]}, " ",
+  {"t": "of a life", "w": ["11"]}, " ",
+  {"t": "indestructible", "w": ["12"]}, ","
+ ],
+ "words": {
+  "01": {
+   "s": ["who", "one who", "he who"],
+   "r": "The new priest of the order of Melchizedek.",
+   "t": ["Who", "Which", "Who", "who", "who", "one who"]
+  },
+  "02": {
+   "s": ["not"],
+   "r": "Denies the first basis before the second is given.",
+   "t": ["not", "not", "not", "not", "not", "not"]
+  },
+  "03": {
+   "s": ["according to", "by", "on the basis of", "after"],
+   "r": "Names the standard or basis of his becoming priest.",
+   "t": ["after", "after", "according to", "after", "according to", "by"]
+  },
+  "04": {
+   "s": ["law", "rule", "ordinance"],
+   "r": "A legal rule governing who may be priest.",
+   "n": "Abbott-Smith derives the noun from a verb meaning to deal out or distribute, and traces its sense from what is assigned to custom and then to law. No article: 'a law', a rule of a certain kind. The DRC's doubled 'the law of a law' is its own reading.",
+   "t": ["the law", "the Law", "the law", "the law", "the law", "a law"]
+  },
+  "05": {
+   "s": ["of a commandment", "of a command", "of a regulation"],
+   "r": "The particular command that law contains: who may serve as priest.",
+   "n": "Abbott-Smith's first sense is a charge, injunction, order, command, and he cites this verse under that sense. The BSB's 'law of succession' gives an interpretation of both this word and the next.",
+   "t": ["commandment", "commandement", "commandment", "commandment", "command", "of succession"]
+  },
+  "06": {
+   "s": ["of flesh", "fleshly", "physical", "bodily", "carnal"],
+   "r": "Concerned with the body: descent by physical birth.",
+   "n": "Abbott-Smith explains that the ending of this adjective denotes the substance or material of a thing, so its sense is 'made of flesh'. Applied to a commandment, the likely point is that it deals with bodily descent; that is an inference from the context of priestly lineage. The older translations' 'carnal' means 'of the flesh', not 'sensual'.",
+   "t": ["carnal", "carnal", "carnal", "carnal", "fleshly", null]
+  },
+  "07": {
+   "s": ["has become", "has been made", "has come to be", "has arisen"],
+   "r": "He has come to be priest, and remains one.",
+   "n": "A perfect: the becoming is complete and its result stands. Abbott-Smith's first sense of the verb is 'to come into being, be born, arise'. The older translations render it 'is made'.",
+   "t": ["is made", "is ... made Priest", "is made", "hath been made", "came", "has become a priest"]
+  },
+  "08": {
+   "s": ["but", "rather"],
+   "r": "Sets the true basis against the denied one.",
+   "n": "Abbott-Smith calls it an adversative particle stronger than δέ.",
+   "t": ["but", "but", "but", "but", "but", "but"]
+  },
+  "09": {
+   "s": ["according to", "by", "on the basis of"],
+   "r": "Introduces the true basis of his priesthood.",
+   "t": ["after", "after", "according to", "after", "according to", "by"]
+  },
+  "10": {
+   "s": ["power", "might", "strength", "ability"],
+   "r": "The power that belongs to his life.",
+   "n": "Abbott-Smith gives 'power, might, strength' and, relatively, 'ability, power to perform'.",
+   "t": ["the power", "the power", "the power", "the power", "the power", "the power"]
+  },
+  "11": {
+   "s": ["of a life", "of life"],
+   "r": "His life itself, as the ground of his priesthood.",
+   "t": ["life", "life", "life", "life", "life", "life"]
+  },
+  "12": {
+   "s": ["indestructible", "indissoluble", "that cannot be destroyed", "endless"],
+   "r": "A life that cannot be broken up or brought to an end.",
+   "n": "Abbott-Smith derives it from καταλύω, to dissolve or destroy, and gives 'indissoluble'; this is its only use in the New Testament. The KJV's 'endless' says what follows from the word rather than what it says. Our English keeps the Greek order, with the adjective after 'life', for its weight.",
+   "t": ["endless", "endlesse", "indissoluble", "endless", "endless", "indestructible"]
+  }
+ },
+ "tr_note": "The Textus Receptus reads σαρκικῆς for σαρκίνης. Both mean 'fleshly' and the KJV's 'carnal' renders either, so the difference does not show in English."
+}

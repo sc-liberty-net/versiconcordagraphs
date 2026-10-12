@@ -1,0 +1,332 @@
+{
+ "id": "t3",
+ "en": [
+  {
+   "t": "And",
+   "w": [
+    "02"
+   ]
+  },
+  " ",
+  {
+   "t": "when he said",
+   "w": [
+    "01"
+   ]
+  },
+  ", ‘",
+  {
+   "t": "From",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "strangers",
+   "w": [
+    "08",
+    "07"
+   ]
+  },
+  ",’ ",
+  {
+   "t": "Jesus",
+   "w": [
+    "12",
+    "11"
+   ]
+  },
+  " ",
+  {
+   "t": "said",
+   "w": [
+    "09"
+   ]
+  },
+  " ",
+  {
+   "t": "to him",
+   "w": [
+    "10"
+   ]
+  },
+  ", ‘",
+  {
+   "t": "Then",
+   "w": [
+    "13"
+   ]
+  },
+  " ",
+  {
+   "t": "indeed",
+   "w": [
+    "14"
+   ]
+  },
+  " ",
+  {
+   "t": "the",
+   "w": [
+    "17"
+   ]
+  },
+  " ",
+  {
+   "t": "sons",
+   "w": [
+    "18"
+   ]
+  },
+  " ",
+  {
+   "t": "are",
+   "w": [
+    "16"
+   ]
+  },
+  " ",
+  {
+   "t": "free",
+   "w": [
+    "15"
+   ]
+  },
+  ".’"
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "when he said",
+    "on his saying",
+    "when he answered"
+   ],
+   "r": "Peter gives his answer.",
+   "n": "An aorist participle in a construction of its own, literally 'he having said'; English makes it a 'when' clause. Peter is not named in our text.",
+   "t": [
+    "saith",
+    "sayd",
+    "said",
+    "when he said",
+    "saith",
+    "answered"
+   ]
+  },
+  "02": {
+   "s": [
+    "and",
+    "now"
+   ],
+   "r": "Moves from question to answer.",
+   "t": [
+    null,
+    null,
+    "And",
+    "And",
+    null,
+    null
+   ]
+  },
+  "06": {
+   "s": [
+    "from"
+   ],
+   "r": "Peter's answer takes up Jesus' 'from whom'.",
+   "t": [
+    "Of",
+    "Of",
+    "Of",
+    "From",
+    "From",
+    "From"
+   ]
+  },
+  "07": {
+   "s": [
+    "the"
+   ],
+   "r": "Strangers as a class.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    "the",
+    null
+   ]
+  },
+  "08": {
+   "s": [
+    "strangers",
+    "others",
+    "outsiders"
+   ],
+   "r": "People outside the king's family.",
+   "n": "The same word as in Jesus' question in Matthew 17:25, set against 'their sons'.",
+   "t": [
+    "strangers",
+    "strangers",
+    "strangers",
+    "strangers",
+    "strangers",
+    "others"
+   ]
+  },
+  "09": {
+   "s": [
+    "said",
+    "declared"
+   ],
+   "r": "Jesus draws the conclusion.",
+   "n": "Abbott-Smith: 'to declare, say', frequently in quoting the words of another.",
+   "t": [
+    "saith",
+    "said",
+    "said",
+    "said",
+    "said",
+    "declared"
+   ]
+  },
+  "10": {
+   "s": [
+    "to him"
+   ],
+   "r": "To Peter.",
+   "t": [
+    "unto him",
+    "vnto him",
+    "to him",
+    "unto him",
+    "to him",
+    null
+   ]
+  },
+  "11": {
+   "s": [
+    "the"
+   ],
+   "r": "Greek often puts the article before a personal name; English does not.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "12": {
+   "s": [
+    "Jesus"
+   ],
+   "r": "The speaker.",
+   "t": [
+    "Jesus",
+    "Iesus",
+    "Jesus",
+    "Jesus",
+    "Jesus",
+    "Jesus"
+   ]
+  },
+  "13": {
+   "s": [
+    "then",
+    "so",
+    "therefore",
+    "it follows"
+   ],
+   "r": "Draws the inference from Peter's answer.",
+   "n": "Abbott-Smith calls it an illative particle, expressing a more subjective or informal inference than οὖν: 'then'.",
+   "t": [
+    "Then",
+    "Then",
+    "Then",
+    "Therefore",
+    "Then",
+    "Then"
+   ]
+  },
+  "14": {
+   "s": [
+    "indeed",
+    "surely",
+    "at least"
+   ],
+   "r": "Gives weight to the conclusion.",
+   "n": "Abbott-Smith says it gives special prominence to the word it goes with, 'indeed, at least, even', but is not always translatable into English. None of the six translations renders it.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "15": {
+   "s": [
+    "free",
+    "exempt",
+    "under no obligation"
+   ],
+   "r": "Not bound to pay.",
+   "n": "Abbott-Smith's first sense is civil, 'not a slave'; he lists this verse under the second, freedom as regards restraint and obligation in general. The BSB's 'exempt' gives that sense.",
+   "t": [
+    "free",
+    "free",
+    "free",
+    "free",
+    "free",
+    "exempt"
+   ]
+  },
+  "16": {
+   "s": [
+    "are"
+   ],
+   "r": "States the sons' standing as a fact.",
+   "t": [
+    "are",
+    "are",
+    "are",
+    "are",
+    "are",
+    "are"
+   ]
+  },
+  "17": {
+   "s": [
+    "the"
+   ],
+   "r": "The sons just named.",
+   "t": [
+    "the",
+    "the",
+    "the",
+    "the",
+    "the",
+    "the"
+   ]
+  },
+  "18": {
+   "s": [
+    "sons",
+    "children"
+   ],
+   "r": "The king's own family, who do not pay.",
+   "n": "A reasonable reading is that Jesus applies this to himself as the Son, of the God whose temple the payment served; the verse itself states only the general rule.",
+   "t": [
+    "children",
+    "children",
+    "children",
+    "sons",
+    "sons",
+    "sons"
+   ]
+  }
+ },
+ "tr_note": "The Textus Receptus opens with Λέγει αὐτῷ ὁ Πέτρος, 'Peter says to him', where our text has εἰπόντος δέ, 'and when he said', and does not name Peter. That is the KJV's 'Peter saith unto him'. It also places ἄρα, 'then', differently, with no change in English."
+}

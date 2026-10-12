@@ -1,0 +1,33 @@
+{
+ "id": "s1",
+ "en": [
+  {"t": "And your seed", "w": ["01"]}, " ",
+  {"t": "and your vineyards", "w": ["02"]}, " ",
+  {"t": "he will tithe", "w": ["03"]}, ", ",
+  {"t": "and give", "w": ["04"]}, " ",
+  {"t": "to his eunuchs", "w": ["05"]}, " ",
+  {"t": "and to his servants", "w": ["06"]}, "."
+ ],
+ "words": {
+  "01": {"s": ["your seed", "your sown crops", "your grain"], "r": "The grain you sow and harvest.", "t": ["of your seed", "of your seede", "of your corn", "of your seed", "of your seed", "And your seed", "of your grain"],
+         "n": "The Hebrew is plural, 'your seeds', meaning the crops sown; Gesenius lists this very form, citing this verse. It stands first for emphasis, before the verb: 'your seed and your vineyards he will tithe'. The 'your' is plural, addressed to the whole people."},
+  "02": {"s": ["your vineyards"], "r": "The vines whose fruit he will also tithe.", "t": ["and of your vineyards", "and of your vineyards", "and of the revenues of your vineyards", "and of your vineyards", "and of your vineyards", "and your vineyards", "and grape harvest"],
+         "n": "Gesenius gives the first sense as a field set with plants of nobler quality, cultivated as a garden or orchard. The tenth would be taken from their yield; the Douay-Rheims says 'the revenues of your vineyards'."},
+  "03": {"s": ["he will tithe", "he will take a tenth of", "he will take the tithe of"], "r": "The king will take one tenth of your produce for himself.", "t": ["And he will take the tenth", "And he will take the tenth", "he will take the tenth", "And he will take the tenth", "And he will take the tenth", "he doth tithe", "He will take a tenth"],
+         "n": "Gesenius: to decimate, that is, to take the tenth part of produce, to tithe, citing this verse; this plain form means to take the tenth, while another form means to give it. So here the tithing is the king's taking, not the people's giving."},
+  "04": {"s": ["and give", "and hand over"], "r": "He will pass what he takes to his own men.", "t": ["and give", "and giue it", "to give", "and give", "and give", "and hath given", "and give it"],
+         "n": "A perfect with 'and', carrying on the future of the verb before it: 'and he will give'. YLT renders the perfect form literally, 'hath given'. The Hebrew gives no object; several translations add 'it'."},
+  "05": {"s": ["eunuchs", "court officials", "officers"], "r": "Officials of the royal court.", "t": ["to his officers", "to his Eunuches", "to his eunuchs", "to his officers", "to his officers", "to his eunuchs", "to his officials"],
+         "n": "Gesenius: a eunuch, such as Eastern kings set over their women and other offices of the court; the brief's lexicon gives official, eunuch. Whether the king's officials here were literally eunuchs the verse does not say; the KJV and ASV say 'officers'."},
+  "06": {"s": ["servants", "officials", "courtiers", "slaves"], "r": "The king's men who serve him at court.", "t": ["and to his servants", "and to his seruants", "and servants", "and to his servants", "and to his servants", "and to his servants", "and servants"],
+         "n": "The word means a slave or servant; Gesenius notes that it is applied to the servants of a king, that is, his ministers. Here the context is royal service, so 'servants' rather than 'slaves'."}
+ },
+ "lxx": {
+  "01": {"i": [0, 1, 2, 3], "m": 2, "n": "σπέρμα, seed, plural as in the Hebrew."},
+  "02": {"i": [4, 5, 6, 7], "m": 6, "n": "ἀμπελών, vineyard."},
+  "03": {"i": [8], "m": 8, "n": "ἀποδεκατόω, to tithe, take a tenth: the verb of Jacob's vow in Genesis 28:22 on this page, and of the tithing Pharisees in Matthew 23:23 on this page."},
+  "04": {"i": [9, 10], "m": 10},
+  "05": {"i": [11, 12, 13], "m": 12, "n": "εὐνοῦχος, eunuch, the source of the English word."},
+  "06": {"i": [14, 15, 16, 17], "m": 16, "n": "δοῦλος, slave."}
+ }
+}

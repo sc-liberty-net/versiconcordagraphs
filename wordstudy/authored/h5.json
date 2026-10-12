@@ -1,0 +1,293 @@
+{
+ "id": "h5",
+ "en": [
+  {
+   "t": "And",
+   "w": [
+    "01"
+   ]
+  },
+  " ",
+  {
+   "t": "here",
+   "w": [
+    "02"
+   ]
+  },
+  ", ",
+  {
+   "t": "on the one hand",
+   "w": [
+    "03"
+   ]
+  },
+  ", ",
+  {
+   "t": "dying",
+   "w": [
+    "05"
+   ]
+  },
+  " ",
+  {
+   "t": "men",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "receive",
+   "w": [
+    "07"
+   ]
+  },
+  " ",
+  {
+   "t": "tenths",
+   "w": [
+    "04"
+   ]
+  },
+  "; ",
+  {
+   "t": "but",
+   "w": [
+    "09"
+   ]
+  },
+  " ",
+  {
+   "t": "there",
+   "w": [
+    "08"
+   ]
+  },
+  ", ",
+  {
+   "t": "one",
+   "sup": "Supplied in English. The Greek leaves the subject of this half unstated."
+  },
+  " ",
+  {
+   "t": "who is testified",
+   "w": [
+    "10"
+   ]
+  },
+  " ",
+  {
+   "t": "that",
+   "w": [
+    "11"
+   ]
+  },
+  " ",
+  {
+   "t": "he lives",
+   "w": [
+    "12"
+   ]
+  },
+  "."
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "and",
+    "moreover"
+   ],
+   "r": "Adds the next step of the argument.",
+   "t": [
+    "And",
+    "And",
+    "And",
+    "And",
+    "and",
+    null
+   ]
+  },
+  "02": {
+   "s": [
+    "here",
+    "in this case",
+    "on this side"
+   ],
+   "r": "In the one case: the Levitical priests.",
+   "n": "The BSB writes 'In the case of the Levites', which names who 'here' means. That is a fair reading of the chapter, but the word itself is only 'here'.",
+   "t": [
+    "here",
+    "here",
+    "here",
+    "here",
+    "here",
+    "In the case of the Levites"
+   ]
+  },
+  "03": {
+   "s": [
+    "on the one hand",
+    "indeed"
+   ],
+   "r": "Sets up the contrast completed by 'but' in the second half.",
+   "n": "Abbott-Smith calls this particle 'generally untranslatable'. It pairs with δέ later in the verse: here on the one hand, there on the other. Most translations leave it out.",
+   "t": [
+    null,
+    null,
+    "indeed",
+    null,
+    "indeed",
+    null
+   ]
+  },
+  "04": {
+   "s": [
+    "tenths",
+    "tithes",
+    "the tenth"
+   ],
+   "r": "The tenth part paid to the priests.",
+   "n": "Abbott-Smith notes that the Septuagint uses this word for Hebrew מַעֲשֵׂר, the tithe, including at Genesis 14:20, where Abram gives the tenth to Melchizedek.",
+   "t": [
+    "tithes",
+    "tithes",
+    "tithes",
+    "tithes",
+    "tithes",
+    "the tenth"
+   ]
+  },
+  "05": {
+   "s": [
+    "mortal",
+    "who die",
+    "dying"
+   ],
+   "r": "Men subject to death, set against the one who lives.",
+   "n": "A present participle: literally 'dying men', men who are in the process of dying. The BSB's 'mortal' captures the contrast with 'he lives'.",
+   "t": [
+    "that die",
+    "that die",
+    "that die",
+    "that die",
+    "who die",
+    "mortal"
+   ]
+  },
+  "06": {
+   "s": [
+    "men",
+    "human beings",
+    "people"
+   ],
+   "r": "The Levitical priests, as humans.",
+   "t": [
+    "men",
+    "men",
+    "men",
+    "men",
+    "men",
+    "men"
+   ]
+  },
+  "07": {
+   "s": [
+    "receive",
+    "take",
+    "collect",
+    "accept"
+   ],
+   "r": "The priests take in the tithe.",
+   "n": "This is the same verb as 'having received' in Matthew 25:24 on this page. The BSB's 'collect' leans toward taxation language.",
+   "t": [
+    "receive",
+    "receiue",
+    "receive",
+    "receive",
+    "do receive",
+    "collect"
+   ]
+  },
+  "08": {
+   "s": [
+    "there",
+    "in that case",
+    "on that side"
+   ],
+   "r": "In the other case: Melchizedek.",
+   "n": "The Greek has no verb in this half. The KJV and Geneva supply 'he receiveth them', and the BSB names Melchizedek outright.",
+   "t": [
+    "there",
+    "there",
+    "there",
+    "there",
+    "there",
+    "in the case of Melchizedek"
+   ]
+  },
+  "09": {
+   "s": [
+    "but",
+    "on the other hand"
+   ],
+   "r": "Completes the contrast opened by μέν.",
+   "t": [
+    "but",
+    "but",
+    "but",
+    "but",
+    "and",
+    "but"
+   ]
+  },
+  "10": {
+   "s": [
+    "attested",
+    "witnessed",
+    "affirmed",
+    "on record"
+   ],
+   "r": "Testimony is given about him.",
+   "n": "The participle is passive: he is the one testified about. The writer does not say who testifies. The likeliest reading is the Scripture account of Melchizedek, but that is an inference.",
+   "t": [
+    "of whom it is witnessed",
+    "of whome it is witnessed",
+    "he hath witness",
+    "of whom it is witnessed",
+    "who is testified to",
+    "it is affirmed"
+   ]
+  },
+  "11": {
+   "s": [
+    "that"
+   ],
+   "r": "Introduces the content of the testimony.",
+   "t": [
+    "that",
+    "that",
+    "that",
+    "that",
+    "that",
+    "that"
+   ]
+  },
+  "12": {
+   "s": [
+    "lives",
+    "is alive",
+    "lives on"
+   ],
+   "r": "Present tense: he goes on living, set against the dying men.",
+   "n": "The YLT's 'he was living' departs from the present tense of the Greek. The BSB's 'lives on' brings out the continuing sense.",
+   "t": [
+    "liveth",
+    "liueth",
+    "liveth",
+    "liveth",
+    "he was living",
+    "he lives on"
+   ]
+  }
+ }
+}

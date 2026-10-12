@@ -1,0 +1,413 @@
+{
+ "id": "i10",
+ "en": [
+  {
+   "t": "And",
+   "w": [
+    "04"
+   ]
+  },
+  " ",
+  {
+   "t": "Jesus",
+   "w": [
+    "05",
+    "03"
+   ]
+  },
+  " ",
+  {
+   "t": "said",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "to them",
+   "w": [
+    "07"
+   ]
+  },
+  ", ‘",
+  {
+   "t": "The things",
+   "w": [
+    "08"
+   ]
+  },
+  " ",
+  {
+   "t": "of Caesar",
+   "w": [
+    "09"
+   ]
+  },
+  " ",
+  {
+   "t": "render",
+   "w": [
+    "10"
+   ]
+  },
+  " ",
+  {
+   "t": "to Caesar",
+   "w": [
+    "11"
+   ]
+  },
+  ", ",
+  {
+   "t": "and",
+   "w": [
+    "12"
+   ]
+  },
+  " ",
+  {
+   "t": "the things",
+   "w": [
+    "13"
+   ]
+  },
+  " ",
+  {
+   "t": "of God",
+   "w": [
+    "15",
+    "14"
+   ]
+  },
+  " ",
+  {
+   "t": "to God",
+   "w": [
+    "17",
+    "16"
+   ]
+  },
+  ".’ ",
+  {
+   "t": "And",
+   "w": [
+    "18"
+   ]
+  },
+  " ",
+  {
+   "t": "they were marvelling greatly",
+   "w": [
+    "19"
+   ]
+  },
+  " ",
+  {
+   "t": "at",
+   "w": [
+    "20"
+   ]
+  },
+  " ",
+  {
+   "t": "him",
+   "w": [
+    "21"
+   ]
+  },
+  "."
+ ],
+ "words": {
+  "03": {
+   "s": [
+    "the"
+   ],
+   "r": "Greek often puts the article before a personal name; English does not.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "04": {
+   "s": [
+    "and",
+    "then",
+    "but"
+   ],
+   "r": "Moves from the coin to Jesus' answer.",
+   "n": "The KJV's opening 'And' answers to a different word in its Greek text; see the note on the Textus Receptus.",
+   "t": [
+    null,
+    null,
+    "And",
+    "And",
+    "and",
+    "Then"
+   ]
+  },
+  "05": {
+   "s": [
+    "Jesus"
+   ],
+   "r": "The one being questioned.",
+   "t": [
+    "Jesus",
+    "Iesus",
+    "Jesus",
+    "Jesus",
+    "Jesus",
+    "Jesus"
+   ]
+  },
+  "06": {
+   "s": [
+    "said",
+    "told",
+    "answered"
+   ],
+   "r": "He gives his ruling.",
+   "t": [
+    "said",
+    "saide",
+    "said",
+    "said",
+    "said",
+    "told"
+   ]
+  },
+  "07": {
+   "s": [
+    "to them"
+   ],
+   "r": "To the questioners.",
+   "t": [
+    "unto them",
+    "vnto them",
+    "to them",
+    "unto them",
+    "to them",
+    "them"
+   ]
+  },
+  "08": {
+   "s": [
+    "the things",
+    "what belongs",
+    "what is"
+   ],
+   "r": "The neuter plural article: whatever belongs to Caesar.",
+   "n": "Mark puts 'the things of Caesar' first, ahead of the verb, which gives the phrase weight; this study keeps that order. The Greek has no noun: 'the things' stands for the neuter plural article.",
+   "t": [
+    "the things that are",
+    "the things that are",
+    "the things that are",
+    "the things that are",
+    "the things",
+    "what is"
+   ]
+  },
+  "09": {
+   "s": [
+    "of Caesar",
+    "Caesar's",
+    "belonging to Caesar"
+   ],
+   "r": "Caesar as owner of what is to be rendered to him.",
+   "t": [
+    "Cesar’s",
+    "Cesars",
+    "Caesar's",
+    "Cæsar’s",
+    "of Caesar",
+    "Caesar’s"
+   ]
+  },
+  "10": {
+   "s": [
+    "give back",
+    "render",
+    "pay",
+    "pay what is due"
+   ],
+   "r": "Give back what is owed, as a debt is paid.",
+   "n": "The question had been about 'giving' tribute; Jesus answers with ἀποδίδωμι, 'give back'. Abbott-Smith notes its special use of wages, debts and oaths: to render what is due, to pay. Following the register for an obligation, this study renders it 'render'; the YLT's 'Give back' brings out the 'back'.",
+   "t": [
+    "Render",
+    "Giue",
+    "Render",
+    "Render",
+    "Give back",
+    "Give"
+   ]
+  },
+  "11": {
+   "s": [
+    "to Caesar"
+   ],
+   "r": "The one to whom the debt is due.",
+   "t": [
+    "to Cesar",
+    "to Cesar",
+    "to Caesar",
+    "unto Cæsar",
+    "to Caesar",
+    "to Caesar"
+   ]
+  },
+  "12": {
+   "s": [
+    "and"
+   ],
+   "r": "Joins the second half of the ruling.",
+   "t": [
+    "and",
+    "and",
+    "and",
+    "and",
+    "and",
+    "and"
+   ]
+  },
+  "13": {
+   "s": [
+    "the things",
+    "what belongs",
+    "what is"
+   ],
+   "r": "Whatever belongs to God.",
+   "t": [
+    "the things that are",
+    "those that are",
+    "the things that are",
+    "the things that are",
+    "the things",
+    "what is"
+   ]
+  },
+  "14": {
+   "s": [
+    "the"
+   ],
+   "r": "The article with 'God'; English does not use it.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "15": {
+   "s": [
+    "of God",
+    "God's",
+    "belonging to God"
+   ],
+   "r": "God as owner of what is to be rendered to him.",
+   "t": [
+    "God’s",
+    "Gods",
+    "God's",
+    "God’s",
+    "of God",
+    "God’s"
+   ]
+  },
+  "16": {
+   "s": [
+    "the"
+   ],
+   "r": "The article with 'God'; English does not use it.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "17": {
+   "s": [
+    "to God"
+   ],
+   "r": "The one to whom the second debt is due.",
+   "n": "The verb 'render' is not repeated; it carries over from the first half.",
+   "t": [
+    "to God",
+    "to God",
+    "to God",
+    "unto God",
+    "to God",
+    "to God"
+   ]
+  },
+  "18": {
+   "s": [
+    "and"
+   ],
+   "r": "Introduces the hearers' reaction.",
+   "t": [
+    "And",
+    "and",
+    "And",
+    "And",
+    "and",
+    "And"
+   ]
+  },
+  "19": {
+   "s": [
+    "they were marvelling greatly",
+    "they were utterly amazed",
+    "they wondered greatly",
+    "they were astonished"
+   ],
+   "r": "Imperfect tense: their astonishment went on.",
+   "n": "Abbott-Smith calls this a strengthened form of the usual verb for wondering, 'to wonder greatly', and lists this verse as its only New Testament use. Of the six translations only the ASV, 'marvelled greatly', shows the strengthening.",
+   "t": [
+    "they marvelled",
+    "they marueiled",
+    "they marvelled",
+    "they marvelled greatly",
+    "they did wonder",
+    "they marveled"
+   ]
+  },
+  "20": {
+   "s": [
+    "at",
+    "over"
+   ],
+   "r": "Marks the cause of their wonder.",
+   "t": [
+    "at",
+    "at",
+    "at",
+    "at",
+    "at",
+    "at"
+   ]
+  },
+  "21": {
+   "s": [
+    "him"
+   ],
+   "r": "Jesus.",
+   "t": [
+    "him",
+    "him",
+    "him",
+    "him",
+    "him",
+    "Him"
+   ]
+  }
+ },
+ "tr_note": "The Textus Receptus opens with καὶ ἀποκριθεὶς, 'and answering', where our text has δέ, which is why the KJV reads 'And Jesus answering said'. It reads ἐθαύμασαν, 'they marvelled', for the stronger ἐξεθαύμαζον, 'they were marvelling greatly'. It also has ἀπόδοτε, 'render', at another place in the sentence."
+}

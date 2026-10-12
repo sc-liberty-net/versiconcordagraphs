@@ -1,0 +1,57 @@
+{
+ "id": "i23",
+ "en": [
+  {"t": "And there were", "w": ["01"]}, " ",
+  {"t": "those who", "w": ["02"]}, " ",
+  {"t": "were saying", "w": ["03"]}, ", ‘",
+  {"t": "We have borrowed", "w": ["04"]}, " ",
+  {"t": "silver", "w": ["05"]}, " ",
+  {"t": "for the tribute of", "w": ["06"]}, " ",
+  {"t": "the king", "w": ["07"]}, ", ",
+  {"t": "on", "sup": "Supplied in English. The Hebrew sets 'our fields and our vineyards' after the rest with no preposition; most likely the land stood as security for the loan."}, " ",
+  {"t": "our fields", "w": ["08"]}, " ",
+  {"t": "and our vineyards", "w": ["09"]}, "."
+ ],
+ "words": {
+  "01": {"s": ["and there were", "and there are", "there were also"], "r": "Introduces a second group among the complaining people.",
+         "n": "The same opening as the verse before: a noun of existence, 'there is', used for the verb 'to be' without a tense of its own.",
+         "t": ["There were also", "There were also", "And", "There were also", "There were also", "And there are", "Still"]},
+  "02": {"s": ["those who", "who", "some who"], "r": "Marks the people who spoke.",
+         "n": "BDB notes that this particle can include its own antecedent, so 'who' here means 'those who'.",
+         "t": ["that", "that", "others", "that", "that", "who", "others"]},
+  "03": {"s": ["were saying", "said", "kept saying"], "r": "What this second group was saying.",
+         "t": ["said", "said", "said", "said", "said", "are saying", "were saying"]},
+  "04": {"s": ["we have borrowed", "we borrowed", "we took loans of"], "r": "They have already taken loans.",
+         "n": "Gesenius gives a first sense, to adhere or be joined closely, and from it to borrow, to receive as a loan. He compares the Latin nexus, a debtor bound over to his creditor.",
+         "t": ["We have borrowed", "We haue borowed", "Let us borrow", "We have borrowed", "We have borrowed", "We have borrowed", "We have borrowed"]},
+  "05": {"s": ["silver", "money"], "r": "Silver, the money of the loan.",
+         "n": "Our register keeps 'silver' for this word where every translation here says 'money'. Gesenius: silver, so called from its pale colour; the brief's lexicon also gives money.",
+         "t": ["money", "money", "money", "money", "money", "money", "money"]},
+  "06": {"s": ["for the tribute of", "for the tax of", "to pay the levy of"], "r": "The payment owed to the king, which the loans were raised to meet.",
+         "n": "Our data finds this word in this verse only. BDB gives 'tribute', and the brief's lexicon names an Aramaic word for tribute as its equivalent. Gesenius derives the noun from the root 'to measure', with first senses length and measure; that the tribute was a measured levy is a reasonable reading, not something the lexicons state.",
+         "t": ["for ... tribute", "for ... tribute", "for ... tribute", "for ... tribute", "for ... tribute", "for the tribute of", "to pay ... tax"]},
+  "07": {"s": ["the king", "the ruler"], "r": "The king to whom the tribute is due.",
+         "t": ["the king’s", "the Kings", "the king's", "the king's", "the king’s", "the king", "the king’s"]},
+  "08": {"s": ["our fields", "our land"], "r": "The land standing behind the loans.",
+         "n": "There is no preposition before this word in the Hebrew; the translations supply 'upon' or 'on'.",
+         "t": ["upon our lands", "vpon our landes", "our fields", "upon our fields", "upon our fields", "on our fields", "on our fields"]},
+  "09": {"s": ["and our vineyards", "and our vines"], "r": "Their vineyards, pledged with the fields.",
+         "t": ["and vineyards", "and our vineyardes", "and vineyards", "and our vineyards", "and our vineyards", "and our vineyards", "and vineyards"]}
+ },
+ "lxx": {
+  "_extra": {
+   "15": "καὶ (and): begins a phrase added in the Greek, 'and our houses'.",
+   "16": "οἰκίαι (houses): the Greek adds houses to the fields and vineyards, as the verse before lists them; the Hebrew of this verse has none.",
+   "17": "ἡμῶν (our): part of the added phrase."
+  },
+  "01": {"i": [0, 1], "m": 1},
+  "02": {"i": [2], "m": 2},
+  "03": {"i": [3], "m": 3},
+  "04": {"i": [4], "m": 4, "lemma": "δανείζω", "strong": "G1155", "n": "Dictionary form supplied; the brief gives none. Ἐδανισάμεθα, 'we borrowed', the middle of δανείζω, to lend."},
+  "05": {"i": [5], "m": 5, "n": "ἀργύριον, silver, and so money: the word our register renders 'silver' in the New Testament."},
+  "06": {"i": [6, 7], "m": 7, "n": "εἰς φόρους, 'for tributes', plural. φόρος is the word our register renders 'tribute' in the New Testament."},
+  "07": {"i": [8, 9], "m": 9},
+  "08": {"i": [10, 11], "m": 10, "n": "The Greek has no 'on': 'our fields and our vineyards and our houses' stand as a list by themselves."},
+  "09": {"i": [12, 13, 14], "m": 13}
+ }
+}

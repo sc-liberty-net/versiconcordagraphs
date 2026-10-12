@@ -1,0 +1,531 @@
+{
+ "id": "u10",
+ "en": [
+  {
+   "t": "Return",
+   "w": [
+    "01"
+   ]
+  },
+  ", ",
+  {
+   "t": "please",
+   "w": [
+    "02"
+   ]
+  },
+  ", ",
+  {
+   "t": "to them",
+   "w": [
+    "03"
+   ]
+  },
+  ", ",
+  {
+   "t": "this very day",
+   "w": [
+    "04"
+   ]
+  },
+  ", ",
+  {
+   "t": "their fields",
+   "w": [
+    "05"
+   ]
+  },
+  ", ",
+  {
+   "t": "their vineyards",
+   "w": [
+    "06"
+   ]
+  },
+  ", ",
+  {
+   "t": "their olive trees",
+   "w": [
+    "07"
+   ]
+  },
+  ", ",
+  {
+   "t": "and their houses",
+   "w": [
+    "08"
+   ]
+  },
+  ", ",
+  {
+   "t": "and the hundredth of",
+   "w": [
+    "09"
+   ]
+  },
+  " ",
+  {
+   "t": "the silver",
+   "w": [
+    "10"
+   ]
+  },
+  " ",
+  {
+   "t": "and the grain",
+   "w": [
+    "11"
+   ]
+  },
+  ", ",
+  {
+   "t": "the new wine",
+   "w": [
+    "12"
+   ]
+  },
+  ", ",
+  {
+   "t": "and the fresh oil",
+   "w": [
+    "13"
+   ]
+  },
+  " ",
+  {
+   "t": "that",
+   "w": [
+    "14"
+   ]
+  },
+  " ",
+  {
+   "t": "you",
+   "w": [
+    "15"
+   ]
+  },
+  " ",
+  {
+   "t": "are exacting",
+   "w": [
+    "16"
+   ]
+  },
+  " ",
+  {
+   "t": "from them",
+   "w": [
+    "17"
+   ]
+  },
+  "."
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "return",
+    "give back",
+    "restore"
+   ],
+   "r": "Give back to the poor what the lenders have taken.",
+   "t": [
+    "Restore",
+    "Restore",
+    "Restore ye",
+    "Restore",
+    "Restore",
+    "Give back",
+    "restore"
+   ],
+   "n": "The causative form of the ordinary verb 'to turn back, return': 'make (it) return'. It is plural, addressed to all the lenders."
+  },
+  "02": {
+   "s": [
+    "please",
+    "I pray you",
+    "now"
+   ],
+   "r": "Softens the command into an urgent request.",
+   "t": [
+    "I pray you",
+    "I pray you",
+    null,
+    "I pray you",
+    "I pray you",
+    "I pray you",
+    "Please"
+   ],
+   "n": "Gesenius: a particle used in submissive and modest request, often rendered 'now' in English."
+  },
+  "03": {
+   "s": [
+    "to them",
+    "for them"
+   ],
+   "r": "The poor who had borrowed.",
+   "t": [
+    "to them",
+    "vnto them",
+    "to them",
+    "to them",
+    "to them",
+    "to them",
+    "to them"
+   ]
+  },
+  "04": {
+   "s": [
+    "this very day",
+    "today",
+    "at once"
+   ],
+   "r": "Without delay.",
+   "t": [
+    "even this day",
+    "this day",
+    "this day",
+    "even this day",
+    "even this day",
+    "as to-day",
+    "immediately"
+   ],
+   "n": "Literally 'as the day', an idiom for 'this very day'. YLT keeps 'as to-day'."
+  },
+  "05": {
+   "s": [
+    "their fields",
+    "their land"
+   ],
+   "r": "Farmland handed over to the lenders.",
+   "t": [
+    "their lands",
+    "their landes",
+    "their fields",
+    "their fields",
+    "their fields",
+    "their fields",
+    "their fields"
+   ]
+  },
+  "06": {
+   "s": [
+    "their vineyards"
+   ],
+   "r": "Vineyards handed over to the lenders.",
+   "t": [
+    "their vineyards",
+    "their vineyardes",
+    "and their vineyards",
+    "their vineyards",
+    "their vineyards",
+    "their vineyards",
+    "vineyards"
+   ],
+   "n": "Gesenius gives the first sense as a field set with plants of nobler quality, cultivated as a garden or orchard."
+  },
+  "07": {
+   "s": [
+    "their olive trees",
+    "their olive groves",
+    "their oliveyards"
+   ],
+   "r": "Olive groves handed over to the lenders.",
+   "t": [
+    "their oliveyards",
+    "their oliues",
+    "and their oliveyards",
+    "their oliveyards",
+    "their oliveyards",
+    "their olive-yards",
+    "olive groves"
+   ],
+   "n": "The word is 'olives' or 'olive trees'; the translations take it as the groves where they grow."
+  },
+  "08": {
+   "s": [
+    "and their houses",
+    "and their homes"
+   ],
+   "r": "Houses handed over to the lenders.",
+   "t": [
+    "and their houses",
+    "and their houses",
+    "and their houses",
+    "and their houses",
+    "and their houses",
+    "and their houses",
+    "and houses"
+   ]
+  },
+  "09": {
+   "s": [
+    "and the hundredth of",
+    "and the hundredth part of",
+    "and the one per cent of"
+   ],
+   "r": "A hundredth part of the loans, most likely the interest charged on them.",
+   "t": [
+    "also the hundredth part of",
+    "and remit the hundreth part of",
+    "and the hundredth part of",
+    "also the hundred pieces of",
+    "also the hundredth part of",
+    "and the hundredth part of",
+    "along with the percentage of"
+   ],
+   "n": "The word is 'hundred'; the brief's lexicon lists 'one hundredth' as one of its uses, and BDB gives 'a hundredth part of the money' here. BDB adds that the text may quite possibly be read 'the debt' (a word written much like it). That the hundredth was the rate of interest is a reasonable reading, not something the verse states; the JPS takes it as 'the hundred pieces of silver'."
+  },
+  "10": {
+   "s": [
+    "the silver",
+    "the money"
+   ],
+   "r": "Silver lent as money.",
+   "t": [
+    "the money",
+    "the siluer",
+    "the money",
+    "silver",
+    "the money",
+    "the money",
+    "the money"
+   ],
+   "n": "Our English keeps 'silver' throughout, as Gesenius gives it first."
+  },
+  "11": {
+   "s": [
+    "and the grain",
+    "and the corn"
+   ],
+   "r": "Grain lent to the poor.",
+   "t": [
+    "and of the corn",
+    "and of the corne",
+    "and of the corn",
+    "and the corn",
+    "and of the grain",
+    "and of the corn",
+    "grain"
+   ],
+   "n": "Gesenius: corn. In older English 'corn' meant grain in general."
+  },
+  "12": {
+   "s": [
+    "the new wine",
+    "the fresh wine",
+    "the must"
+   ],
+   "r": "Wine lent to the poor.",
+   "t": [
+    "the wine",
+    "of the wine",
+    "the wine",
+    "the wine",
+    "the new wine",
+    "of the new wine",
+    "new wine"
+   ],
+   "n": "Gesenius: must, new wine. The Hebrew has no 'and' before it."
+  },
+  "13": {
+   "s": [
+    "and the fresh oil",
+    "and the oil",
+    "and the olive oil"
+   ],
+   "r": "Oil lent to the poor.",
+   "t": [
+    "and the oil",
+    "and of the oyle",
+    "and the oil",
+    "and the oil",
+    "and the oil",
+    "and of the oil",
+    "and oil"
+   ],
+   "n": "Gesenius: oil, especially fresh and new, from a root meaning to shine; he notes it is often joined with the word for new wine."
+  },
+  "14": {
+   "s": [
+    "that",
+    "which"
+   ],
+   "r": "Introduces what the creditors are claiming.",
+   "t": [
+    "that",
+    "that",
+    "which",
+    "that",
+    "that",
+    "that",
+    "that"
+   ]
+  },
+  "15": {
+   "s": [
+    "you"
+   ],
+   "r": "The nobles and officials, the creditors.",
+   "t": [
+    "ye",
+    "ye",
+    "you",
+    "ye",
+    "ye",
+    "ye",
+    "you"
+   ],
+   "n": "The pronoun is written out, which makes it pointed: 'you are the ones'."
+  },
+  "16": {
+   "s": [
+    "are exacting",
+    "are claiming",
+    "are pressing as creditors"
+   ],
+   "r": "They are claiming these from the poor as creditors.",
+   "t": [
+    "exact",
+    "exact",
+    "were wont to exact",
+    "exact",
+    "exact",
+    "are exacting",
+    "have been assessing"
+   ],
+   "n": "A participle of the verb the brief's lexicon gives as to lend, be a creditor; its participle as a noun is the 'creditor' of Exodus 22:25 on this page, so our English renders it 'exact', the creditor's act, and keeps 'lend' for a different verb. Gesenius gives it as to borrow and to lend to someone, the person being marked with the preposition that follows here. Every translation here says 'exact' except the BSB, 'have been assessing'."
+  },
+  "17": {
+   "s": [
+    "from them",
+    "of them",
+    "on them"
+   ],
+   "r": "The poor, from whom payment is claimed.",
+   "t": [
+    "of them",
+    "of them",
+    "of them",
+    "of them",
+    "of them",
+    "of them",
+    "them"
+   ],
+   "n": "Literally 'in them' or 'on them'; with this verb the preposition marks the person the claim is made against, so English says 'from'."
+  }
+ },
+ "lxx": {
+  "_extra": {
+   "23": "καὶ (and): the Greek has no word for the oil; this 'and' leads into its last clause, ἐξενέγκατε ἑαυτοῖς."
+  },
+  "01": {
+   "i": [
+    0
+   ],
+   "m": 0,
+   "n": "ἐπιστρέφω, to turn back, return. Swete's text numbers this book 2 Esdras."
+  },
+  "02": {
+   "i": [
+    1
+   ],
+   "m": 1,
+   "n": "δή, a particle that adds urgency, 'now'."
+  },
+  "03": {
+   "i": [
+    2
+   ],
+   "m": 2,
+   "n": "Printed αὐτοὶ, 'they themselves', in our Greek text; it is likely αὐτοῖς, 'to them', misread."
+  },
+  "04": {
+   "i": [
+    3,
+    4
+   ],
+   "m": 4,
+   "n": "ὡς σήμερον, 'as today', exactly the Hebrew idiom."
+  },
+  "05": {
+   "i": [
+    5,
+    6
+   ],
+   "m": 5
+  },
+  "06": {
+   "i": [
+    7,
+    8
+   ],
+   "m": 7
+  },
+  "07": {
+   "i": [
+    9,
+    10
+   ],
+   "m": 9
+  },
+  "08": {
+   "i": [
+    11,
+    12,
+    13
+   ],
+   "m": 12
+  },
+  "09": {
+   "i": [
+    14,
+    15
+   ],
+   "m": 15,
+   "n": "The Greek has 'and from', not 'the hundredth': ἀπό, 'from'. A likely explanation is that the translators read the Hebrew letters for 'hundred of' as 'from' (the two are written alike); that is our inference."
+  },
+  "10": {
+   "i": [
+    16,
+    17
+   ],
+   "m": 17
+  },
+  "11": {
+   "i": [
+    18,
+    19
+   ],
+   "m": 19,
+   "n": "σῖτος, grain, wheat."
+  },
+  "12": {
+   "i": [
+    20,
+    21,
+    22
+   ],
+   "m": 22,
+   "n": "οἶνος, wine. The Greek adds 'and' here."
+  },
+  "16": {
+   "i": [
+    24
+   ],
+   "m": 24,
+   "lemma": "ἐκφέρω",
+   "strong": "G1627",
+   "n": "Dictionary form supplied; the brief gives none. ἐξενέγκατε, 'carry out, pay out', an imperative. Perhaps the translators read the Hebrew verb as the like-spelled 'carry'; that is our inference."
+  },
+  "17": {
+   "i": [
+    25
+   ],
+   "m": 25,
+   "lemma": "ἑαυτοῦ",
+   "strong": "G1438",
+   "n": "Dictionary form corrected: ἑαυτοῖς is from the reflexive ἑαυτοῦ, not αὐτός."
+  }
+ }
+}

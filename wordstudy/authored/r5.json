@@ -1,0 +1,689 @@
+{
+ "id": "r5",
+ "en": [
+  {
+   "t": "And you shall consecrate",
+   "w": [
+    "01"
+   ]
+  },
+  " ",
+  {
+   "t": "the fiftieth",
+   "w": [
+    "04"
+   ]
+  },
+  " ",
+  {
+   "t": "year",
+   "w": [
+    "03",
+    "02",
+    "05"
+   ]
+  },
+  ", ",
+  {
+   "t": "and proclaim",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "liberty",
+   "w": [
+    "07"
+   ]
+  },
+  " ",
+  {
+   "t": "in the land",
+   "w": [
+    "08"
+   ]
+  },
+  " ",
+  {
+   "t": "to all",
+   "w": [
+    "09"
+   ]
+  },
+  " ",
+  {
+   "t": "its inhabitants",
+   "w": [
+    "10"
+   ]
+  },
+  ". ",
+  {
+   "t": "A jubilee",
+   "w": [
+    "11"
+   ]
+  },
+  " ",
+  {
+   "t": "it",
+   "w": [
+    "12"
+   ]
+  },
+  " ",
+  {
+   "t": "shall be",
+   "w": [
+    "13"
+   ]
+  },
+  " ",
+  {
+   "t": "to you",
+   "w": [
+    "14"
+   ]
+  },
+  ", ",
+  {
+   "t": "and you shall return",
+   "w": [
+    "15"
+   ]
+  },
+  ", ",
+  {
+   "t": "each",
+   "w": [
+    "16"
+   ]
+  },
+  " ",
+  {
+   "t": "to",
+   "w": [
+    "17"
+   ]
+  },
+  " ",
+  {
+   "t": "his possession",
+   "w": [
+    "18"
+   ]
+  },
+  ", ",
+  {
+   "t": "and each",
+   "w": [
+    "19"
+   ]
+  },
+  " ",
+  {
+   "t": "to",
+   "w": [
+    "20"
+   ]
+  },
+  " ",
+  {
+   "t": "his clan",
+   "w": [
+    "21"
+   ]
+  },
+  " ",
+  {
+   "t": "you shall return",
+   "w": [
+    "22"
+   ]
+  },
+  "."
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "consecrate",
+    "hallow",
+    "make holy",
+    "set apart"
+   ],
+   "r": "Set the fiftieth year apart as holy, different from ordinary years.",
+   "t": [
+    "And ye shall hallow",
+    "And ye shall halowe",
+    "And thou shalt sanctify",
+    "And ye shall hallow",
+    "And ye shall hallow",
+    "and ye have hallowed",
+    "So you are to consecrate"
+   ],
+   "n": "The intensive form of a verb whose plain form Gesenius gives as TO BE PURE, CLEAN, and then to be holy, sacred; this form means to make holy. It is a perfect with 'and', carrying on the instruction: 'and you shall consecrate'. The 'you' is plural, addressed to the whole people."
+  },
+  "02": {
+   "s": [
+    "(object marker, no English equivalent)"
+   ],
+   "r": "Marks 'the fiftieth year' as the object of 'consecrate'.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "n": "This small word marks a definite direct object and has no English equivalent; it is counted with 'year'."
+  },
+  "03": {
+   "s": [
+    "year of",
+    "the year of"
+   ],
+   "r": "The year being set apart.",
+   "t": [
+    "year",
+    "that yeere",
+    "year",
+    "year",
+    "year",
+    "the year",
+    "year"
+   ],
+   "n": "Hebrew says 'year' twice: literally 'the year of the fifty, year'. The brief's lexicon lists 'fiftieth' among the uses of the number, and English says 'the fiftieth year' once; both Hebrew words are counted in 'year'. Geneva and YLT keep the doubling: 'that yeere, euen the fiftieth yeere'."
+  },
+  "04": {
+   "s": [
+    "the fiftieth",
+    "the fifty"
+   ],
+   "r": "The fiftieth year, set apart from all others.",
+   "t": [
+    "the fiftieth",
+    "euen the fiftieth",
+    "the fiftieth",
+    "the fiftieth",
+    "the fiftieth",
+    "the fiftieth",
+    "the fiftieth"
+   ],
+   "n": "The word is the number 'fifty', with the article, used here as 'fiftieth'."
+  },
+  "05": {
+   "s": [
+    "year"
+   ],
+   "r": "Repeats 'year' after the number.",
+   "t": [
+    null,
+    "yeere",
+    null,
+    null,
+    null,
+    "year",
+    null
+   ],
+   "n": "The second 'year' of the Hebrew; see the note on the first."
+  },
+  "06": {
+   "s": [
+    "proclaim",
+    "call out",
+    "announce"
+   ],
+   "r": "Announce publicly, to everyone.",
+   "t": [
+    "and proclaim",
+    "and proclaime",
+    "and shalt proclaim",
+    "and proclaim",
+    "and proclaim",
+    "and ye have proclaimed",
+    "and proclaim"
+   ],
+   "n": "Gesenius gives the first sense as TO CRY OUT, TO CALL. Another perfect with 'and'."
+  },
+  "07": {
+   "s": [
+    "liberty",
+    "release",
+    "freedom"
+   ],
+   "r": "Freedom for those bound by debt or sold into service.",
+   "t": [
+    "liberty",
+    "libertie",
+    "remission",
+    "liberty",
+    "liberty",
+    "liberty",
+    "liberty"
+   ],
+   "n": "BDB: a flowing, free run, liberty, and it notes the phrase 'proclaim liberty' with this verb; the same word is used of fine, free-flowing myrrh. The Douay-Rheims follows the Latin Vulgate, 'remission'. Who is set free is our reading of the chapter; the verse itself says only 'liberty'."
+  },
+  "08": {
+   "s": [
+    "in the land",
+    "throughout the land"
+   ],
+   "r": "Across the whole land of Israel.",
+   "t": [
+    "throughout all the land",
+    "in the lande",
+    "of thy land",
+    "throughout the land",
+    "throughout the land",
+    "in the land",
+    "in the land"
+   ]
+  },
+  "09": {
+   "s": [
+    "to all",
+    "for all"
+   ],
+   "r": "No inhabitant is left out.",
+   "t": [
+    "unto all",
+    "to all",
+    "to all",
+    "unto all",
+    "unto all",
+    "to all",
+    "for all"
+   ]
+  },
+  "10": {
+   "s": [
+    "its inhabitants",
+    "those who live in it",
+    "its dwellers"
+   ],
+   "r": "Everyone who lives in the land.",
+   "t": [
+    "the inhabitants thereof",
+    "the inhabitants thereof",
+    "the inhabitants",
+    "the inhabitants thereof",
+    "the inhabitants thereof",
+    "its inhabitants",
+    "its inhabitants"
+   ],
+   "n": "A participle of the verb 'to sit, dwell': literally 'all its dwellers'."
+  },
+  "11": {
+   "s": [
+    "a jubilee",
+    "a ram's horn year",
+    "a year of the horn"
+   ],
+   "r": "The fiftieth year, named after the horn blown to announce it.",
+   "t": [
+    "a jubile",
+    "the Iubile",
+    "the year of jubilee",
+    "a jubilee",
+    "a jubilee",
+    "a jubilee",
+    "Jubilee"
+   ],
+   "n": "BDB: ram, ram's horn, cornet, and so the name of the fiftieth year, marked by the blowing of cornets. Gesenius thinks it a word imitating a sound, a joyful sound, then a trumpet signal."
+  },
+  "12": {
+   "s": [
+    "it",
+    "this"
+   ],
+   "r": "The fiftieth year.",
+   "t": [
+    "it",
+    "it",
+    "it",
+    "it",
+    "it",
+    "it",
+    "It"
+   ],
+   "n": "The pronoun is written out, which gives it some emphasis: 'a jubilee it shall be'."
+  },
+  "13": {
+   "s": [
+    "shall be",
+    "will be"
+   ],
+   "r": "States what the year is to be.",
+   "t": [
+    "shall be",
+    "shalbe",
+    "is",
+    "shall be",
+    "shall be",
+    "is",
+    "shall be"
+   ]
+  },
+  "14": {
+   "s": [
+    "to you",
+    "for you"
+   ],
+   "r": "For the people of Israel.",
+   "t": [
+    "unto you",
+    "vnto you",
+    null,
+    "unto you",
+    "unto you",
+    "to you",
+    "your"
+   ]
+  },
+  "15": {
+   "s": [
+    "and you shall return",
+    "and you shall go back"
+   ],
+   "r": "Everyone goes back to what is his.",
+   "t": [
+    "and ye shall return",
+    "and ye shall returne",
+    "shall return",
+    "and ye shall return",
+    "and ye shall return",
+    "and ye have turned back",
+    "is to return"
+   ],
+   "n": "The ordinary verb 'to turn back, return', plural."
+  },
+  "16": {
+   "s": [
+    "each",
+    "every man",
+    "each one"
+   ],
+   "r": "Every person, one by one.",
+   "t": [
+    "every man",
+    "euery man",
+    "Every man",
+    "every man",
+    "every man",
+    "each",
+    "each of you"
+   ],
+   "n": "The word for 'man' used in the sense 'each'."
+  },
+  "17": {
+   "s": [
+    "to",
+    "unto"
+   ],
+   "r": "Direction of the return.",
+   "t": [
+    "unto",
+    "vnto",
+    "to",
+    "unto",
+    "unto",
+    "unto",
+    "to"
+   ]
+  },
+  "18": {
+   "s": [
+    "his possession",
+    "his property",
+    "his land holding"
+   ],
+   "r": "The land that belonged to his family.",
+   "t": [
+    "his possession",
+    "his possession",
+    "his possession",
+    "his possession",
+    "his possession",
+    "his possession",
+    "his property"
+   ],
+   "n": "Gesenius: possession, especially of lands and fields. This is a different word from 'inheritance' (נַחֲלָה), and our English keeps it apart as 'possession'."
+  },
+  "19": {
+   "s": [
+    "and each",
+    "and every man"
+   ],
+   "r": "Every person, again.",
+   "t": [
+    "and ... every man",
+    "and euery man",
+    "and every one",
+    "and ... every man",
+    "and ... every man",
+    "yea, each",
+    "and"
+   ]
+  },
+  "20": {
+   "s": [
+    "to",
+    "unto"
+   ],
+   "r": "Direction of the return.",
+   "t": [
+    "unto",
+    "vnto",
+    "to",
+    "unto",
+    "unto",
+    "unto",
+    "to"
+   ]
+  },
+  "21": {
+   "s": [
+    "his clan",
+    "his family",
+    "his kin"
+   ],
+   "r": "The extended family he belongs to.",
+   "t": [
+    "his family",
+    "his familie",
+    "his former family",
+    "his family",
+    "his family",
+    "his family",
+    "his clan"
+   ],
+   "n": "BDB: clan. Gesenius gives kind, then tribe, and then a subdivision within the people of Israel. It is wider than a household, so 'clan'."
+  },
+  "22": {
+   "s": [
+    "you shall return",
+    "you shall go back"
+   ],
+   "r": "Repeats the return, now to the family.",
+   "t": [
+    "ye shall return",
+    "shall returne",
+    "shall go back",
+    "ye shall return",
+    "ye shall return",
+    "ye do turn back",
+    null
+   ],
+   "n": "The verb is repeated at the end of the verse, framing the two returns."
+  }
+ },
+ "lxx": {
+  "01": {
+   "i": [
+    0,
+    1
+   ],
+   "m": 1,
+   "n": "ἁγιάζω, to make holy, as a command: 'and hallow'."
+  },
+  "03": {
+   "i": [
+    2,
+    3
+   ],
+   "m": 3,
+   "n": "ἔτος, year."
+  },
+  "04": {
+   "i": [
+    4,
+    5
+   ],
+   "m": 5,
+   "n": "πεντηκοστός, fiftieth; Pentecost is named from the same word."
+  },
+  "05": {
+   "i": [
+    6
+   ],
+   "m": 6,
+   "n": "ἐνιαυτός, a year: the Greek, like the Hebrew, says 'year' twice, using two different Greek words."
+  },
+  "06": {
+   "i": [
+    7,
+    8
+   ],
+   "m": 8,
+   "n": "διαβοάω, to proclaim aloud."
+  },
+  "07": {
+   "i": [
+    9
+   ],
+   "m": 9,
+   "n": "ἄφεσις, a release, a letting go; the same word is used in Luke 4:18 on this page, and the New Testament also uses it for forgiveness."
+  },
+  "08": {
+   "i": [
+    10,
+    11,
+    12
+   ],
+   "m": 12,
+   "n": "The second word, τῆς ('the'), has no dictionary form in our data; it is the article ὁ."
+  },
+  "09": {
+   "i": [
+    13
+   ],
+   "m": 13
+  },
+  "10": {
+   "i": [
+    14,
+    15,
+    16
+   ],
+   "m": 15,
+   "n": "κατοικέω, to dwell in: 'all who dwell in it'."
+  },
+  "11": {
+   "i": [
+    17,
+    18,
+    19
+   ],
+   "m": 19,
+   "n": "The Greek does not keep the Hebrew word: it says 'a year of release, a signal', ἐνιαυτὸς ἀφέσεως σημασία. σημασία, a signal, answers the horn blast behind the Hebrew name."
+  },
+  "12": {
+   "i": [
+    20
+   ],
+   "m": 20,
+   "lemma": "οὗτος",
+   "strong": "G3778",
+   "n": "Dictionary form supplied; the brief gives none. αὕτη, 'this'."
+  },
+  "13": {
+   "i": [
+    21
+   ],
+   "m": 21
+  },
+  "14": {
+   "i": [
+    22
+   ],
+   "m": 22
+  },
+  "15": {
+   "i": [
+    23,
+    24
+   ],
+   "m": 24,
+   "lemma": "ἀπέρχομαι",
+   "strong": "G0565",
+   "n": "Dictionary form supplied; the brief gives none. ἀπελεύσεται, 'he shall go away', singular, with 'each one' as subject."
+  },
+  "16": {
+   "i": [
+    25,
+    26
+   ],
+   "m": 26,
+   "n": "εἷς ἕκαστος, 'each one'."
+  },
+  "17": {
+   "i": [
+    27,
+    28
+   ],
+   "m": 27
+  },
+  "18": {
+   "i": [
+    29,
+    30
+   ],
+   "m": 29,
+   "n": "κτῆσις, a possession, property acquired."
+  },
+  "19": {
+   "i": [
+    31,
+    32
+   ],
+   "m": 32
+  },
+  "20": {
+   "i": [
+    33,
+    34
+   ],
+   "m": 33
+  },
+  "21": {
+   "i": [
+    35,
+    36
+   ],
+   "m": 35,
+   "n": "πατρίς, fatherland, ancestral home: the Greek reads 'to his ancestral home' for 'his clan'."
+  },
+  "22": {
+   "i": [
+    37
+   ],
+   "m": 37,
+   "lemma": "ἀπέρχομαι",
+   "strong": "G0565",
+   "n": "Dictionary form supplied; the brief gives none. ἀπελεύσεσθε, 'you shall go away', plural."
+  }
+ }
+}

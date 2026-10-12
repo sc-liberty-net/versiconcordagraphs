@@ -1,0 +1,480 @@
+{
+ "id": "v16",
+ "en": [
+  {
+   "t": "For",
+   "w": [
+    "02"
+   ]
+  },
+  " ",
+  {
+   "t": "they were pleased",
+   "w": [
+    "01"
+   ]
+  },
+  ", ",
+  {
+   "t": "and",
+   "w": [
+    "03"
+   ]
+  },
+  " ",
+  {
+   "t": "they are",
+   "w": [
+    "05"
+   ]
+  },
+  " ",
+  {
+   "t": "their",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "debtors",
+   "w": [
+    "04"
+   ]
+  },
+  "; ",
+  {
+   "t": "for",
+   "w": [
+    "08"
+   ]
+  },
+  " ",
+  {
+   "t": "if",
+   "w": [
+    "07"
+   ]
+  },
+  " ",
+  {
+   "t": "the",
+   "w": [
+    "13"
+   ]
+  },
+  " ",
+  {
+   "t": "Gentiles",
+   "w": [
+    "14"
+   ]
+  },
+  " ",
+  {
+   "t": "shared in",
+   "w": [
+    "12"
+   ]
+  },
+  " ",
+  {
+   "t": "their",
+   "w": [
+    "11"
+   ]
+  },
+  " ",
+  {
+   "t": "spiritual things",
+   "w": [
+    "10",
+    "09"
+   ]
+  },
+  ", ",
+  {
+   "t": "they owe it",
+   "w": [
+    "15"
+   ]
+  },
+  ", ",
+  {
+   "t": "also",
+   "w": [
+    "16"
+   ]
+  },
+  " ",
+  {
+   "t": "in",
+   "w": [
+    "17"
+   ]
+  },
+  " ",
+  {
+   "t": "the",
+   "w": [
+    "18"
+   ]
+  },
+  " ",
+  {
+   "t": "fleshly things",
+   "w": [
+    "19"
+   ]
+  },
+  ", ",
+  {
+   "t": "to minister",
+   "w": [
+    "20"
+   ]
+  },
+  " ",
+  {
+   "t": "to them",
+   "w": [
+    "21"
+   ]
+  },
+  "."
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "they were pleased",
+    "they were glad",
+    "they thought it good",
+    "they chose gladly"
+   ],
+   "r": "The givers acted willingly.",
+   "n": "Abbott-Smith's first sense is 'to be well pleased, to think it good, to give consent', and he notes it was frequent in legal documents. Who 'they' are and what pleased them lie in the sentence before this verse.",
+   "t": [
+    "It hath pleased them",
+    "it hath pleased them",
+    "it hath pleased them",
+    "it hath been their good pleasure",
+    "it pleased well",
+    "They were pleased"
+   ]
+  },
+  "02": {
+   "s": [
+    "for",
+    "yes",
+    "indeed"
+   ],
+   "r": "Picks up and confirms what has just been said.",
+   "n": "The KJV's 'verily' and the ASV's 'Yea' take it as confirming; the BSB leaves it untranslated.",
+   "t": [
+    "verily",
+    "For",
+    "For",
+    "Yea",
+    "for",
+    null
+   ]
+  },
+  "03": {
+   "s": [
+    "and"
+   ],
+   "r": "Adds the other side: willing, and yet owing.",
+   "t": [
+    "and",
+    "and",
+    "and",
+    "and",
+    "and",
+    "and"
+   ]
+  },
+  "04": {
+   "s": [
+    "debtors",
+    "people under obligation",
+    "those who owe"
+   ],
+   "r": "They owe a debt to those from whom they received.",
+   "n": "Built from the verb 'owe', ὀφείλω, which follows later in this verse. Abbott-Smith lists this verse under the metaphorical use, 'of obligation or duty in general, with reference to favours received'.",
+   "t": [
+    "debtors",
+    "detters",
+    "debtors",
+    "debtors",
+    "debtors",
+    "they owe it"
+   ]
+  },
+  "05": {
+   "s": [
+    "they are"
+   ],
+   "r": "States the debt as a present fact.",
+   "n": "The Textus Receptus has this word in a different position in the clause; the meaning is unchanged.",
+   "t": [
+    "they are",
+    "are they",
+    "they are",
+    "they are",
+    "they are",
+    null
+   ]
+  },
+  "06": {
+   "s": [
+    "their",
+    "of them"
+   ],
+   "r": "Those they owe: the ones whose spiritual things they shared.",
+   "t": [
+    "their",
+    "their",
+    "their",
+    "their",
+    "their",
+    "to them"
+   ]
+  },
+  "07": {
+   "s": [
+    "if"
+   ],
+   "r": "A real condition: the Gentiles did share.",
+   "n": "With the indicative, the 'if' assumes the fact, close to 'since'.",
+   "t": [
+    "if",
+    "if",
+    "if",
+    "if",
+    "if",
+    "if"
+   ]
+  },
+  "08": {
+   "s": [
+    "for"
+   ],
+   "r": "Gives the ground of the debt.",
+   "t": [
+    "For",
+    "for",
+    "For",
+    "For",
+    "for",
+    "For"
+   ]
+  },
+  "09": {
+   "s": [
+    "the"
+   ],
+   "r": "Turns 'spiritual' into a noun: the spiritual things.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    "in",
+    "in"
+   ]
+  },
+  "10": {
+   "s": [
+    "spiritual things",
+    "spiritual blessings",
+    "things of the Spirit"
+   ],
+   "r": "The spiritual goods the Gentiles received.",
+   "n": "Neuter plural used as a noun: 'spiritual things'. The BSB's 'blessings' is an addition.",
+   "t": [
+    "spiritual things",
+    "spirituall things",
+    "spiritual things",
+    "spiritual things",
+    "spiritual things",
+    "spiritual blessings"
+   ]
+  },
+  "11": {
+   "s": [
+    "their",
+    "of them"
+   ],
+   "r": "The spiritual things belonged to the saints first.",
+   "t": [
+    "their",
+    "their",
+    "their",
+    "their",
+    "their",
+    "their"
+   ]
+  },
+  "12": {
+   "s": [
+    "shared in",
+    "had a share in",
+    "took part in",
+    "partook of"
+   ],
+   "r": "The Gentiles came to have a share in what was theirs.",
+   "n": "Abbott-Smith gives 'to have a share of, go shares in (something) with (some one), take part in'. Aorist, 'shared', where the KJV has 'have been made partakers'.",
+   "t": [
+    "have been made partakers of",
+    "be made partakers of",
+    "have been made partakers of",
+    "have been made partakers of",
+    "did participate",
+    "have shared"
+   ]
+  },
+  "13": {
+   "s": [
+    "the"
+   ],
+   "r": "The Gentiles as a group.",
+   "t": [
+    "the",
+    "the",
+    "the",
+    "the",
+    "the",
+    "the"
+   ]
+  },
+  "14": {
+   "s": [
+    "Gentiles",
+    "nations",
+    "non-Jews"
+   ],
+   "r": "The non-Jewish believers.",
+   "n": "Literally 'the nations', the YLT's rendering; the Septuagint uses the word chiefly for Hebrew גּוֹי and עַם. In Acts 24:17 the singular means Paul's own nation.",
+   "t": [
+    "Gentiles",
+    "Gentiles",
+    "Gentiles",
+    "Gentiles",
+    "nations",
+    "Gentiles"
+   ]
+  },
+  "15": {
+   "s": [
+    "they owe it",
+    "they ought",
+    "they are obligated",
+    "they are bound"
+   ],
+   "r": "Ministering to them is a debt, not a favour.",
+   "n": "This study's fixed rendering is 'owe', which keeps the link with 'debtors' earlier in the verse. With an infinitive the verb means to be obliged to do something, as the DRC and YLT's 'they ought' shows.",
+   "t": [
+    "their duty is",
+    "their duetie is",
+    "they ought",
+    "they owe it to them",
+    "they ought",
+    "they are obligated"
+   ]
+  },
+  "16": {
+   "s": [
+    "also",
+    "in turn"
+   ],
+   "r": "Adds the return they owe.",
+   "t": [
+    "also",
+    "also",
+    "also",
+    "also",
+    "also",
+    null
+   ]
+  },
+  "17": {
+   "s": [
+    "in",
+    "with"
+   ],
+   "r": "The sphere of their service.",
+   "t": [
+    "in",
+    "in",
+    "in",
+    "in",
+    "in",
+    "with"
+   ]
+  },
+  "18": {
+   "s": [
+    "the"
+   ],
+   "r": "Turns 'fleshly' into a noun: the fleshly things.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    "the",
+    null
+   ]
+  },
+  "19": {
+   "s": [
+    "fleshly things",
+    "material things",
+    "bodily needs",
+    "things of the flesh"
+   ],
+   "r": "Material goods, the needs of the body.",
+   "n": "Abbott-Smith's first sense is 'associated with or pertaining to the flesh, fleshly, carnal', and he files this verse there, apart from the ethical sense. This study keeps 'fleshly' to show the link to σάρξ, flesh; the BSB's 'material blessings' gives the sense.",
+   "t": [
+    "carnal things",
+    "carnall things",
+    "carnal things",
+    "carnal things",
+    "fleshly things",
+    "material blessings"
+   ]
+  },
+  "20": {
+   "s": [
+    "to minister",
+    "to serve",
+    "to render service"
+   ],
+   "r": "To serve them with material help.",
+   "n": "Abbott-Smith explains that at Athens the word meant to supply public offices at one's own cost, to render public service to the State. In the Septuagint it stands chiefly for Hebrew שָׁרַת, to minister. English 'liturgy' comes from the same word family.",
+   "t": [
+    "to minister",
+    "to minister",
+    "to minister",
+    "to minister",
+    "to minister",
+    "to minister"
+   ]
+  },
+  "21": {
+   "s": [
+    "to them"
+   ],
+   "r": "To the saints who shared their spiritual things.",
+   "t": [
+    "unto them",
+    "vnto them",
+    "to them",
+    "unto them",
+    "to them",
+    "to them"
+   ]
+  }
+ },
+ "tr_note": "The Textus Receptus places εἰσὶν, 'they are', elsewhere in the clause. The words are the same, and the KJV's 'their debtors they are' renders either text."
+}

@@ -1,0 +1,69 @@
+{
+ "id": "f8",
+ "en": [
+  {"t": "But", "w": ["01"]}, " with ",
+  {"t": "precious", "w": ["02"]}, " ",
+  {"t": "blood", "w": ["03"]}, ", ",
+  {"t": "as", "w": ["04"]}, " ",
+  {"t": "of a lamb", "w": ["05"]}, " ",
+  {"t": "without blemish", "w": ["06"]}, " ",
+  {"t": "and", "w": ["07"]}, " ",
+  {"t": "without spot", "w": ["08"]}, ", ",
+  {"t": "the blood", "sup": "Supplied in English, as the ASV supplies it, to show that 'of Christ' goes with 'blood', the likely reading of the Greek."}, " ",
+  {"t": "of Christ", "w": ["09"]}, "."
+ ],
+ "words": {
+  "01": {
+   "s": ["but", "rather"],
+   "r": "Sets the true price against silver and gold.",
+   "t": ["But", "But", "But", "but", "but", "but"]
+  },
+  "02": {
+   "s": ["precious", "costly", "of great value", "honoured"],
+   "r": "Of the highest value, beyond silver and gold.",
+   "n": "Abbott-Smith's first sense is 'precious, costly, highly valued', primarily of money value. The word answers the money language of the verse before: the price was of greater worth than silver or gold.",
+   "t": ["precious", "precious", "precious", "precious", "precious", "precious"]
+  },
+  "03": {
+   "s": ["blood"],
+   "r": "Blood given in death, the price of the redemption.",
+   "n": "In the dative, as 'with perishable things' in the verse before: the means of the redeeming. English shows this with 'with'.",
+   "t": ["blood", "blood", "blood", "blood", "blood", "blood"]
+  },
+  "04": {
+   "s": ["as", "like that"],
+   "r": "Compares Christ to a sacrificial lamb.",
+   "n": "The BSB drops the comparison and calls Christ 'a lamb' outright.",
+   "t": ["as", "as", "as", "as", "as", null]
+  },
+  "05": {
+   "s": ["of a lamb"],
+   "r": "A lamb such as was offered in sacrifice.",
+   "n": "Abbott-Smith notes that the Septuagint uses it chiefly for Hebrew כֶּבֶשׂ, and lists this verse among its figurative uses of Christ.",
+   "t": ["of a lamb", "of a Lambe", "of a lamb", "of a lamb", "of a lamb", "a lamb"]
+  },
+  "06": {
+   "s": ["without blemish", "unblemished", "flawless"],
+   "r": "Free of any defect, as a sacrifice had to be.",
+   "n": "Abbott-Smith gives the sense 'of sacrificial victims, without blemish', lists this verse under it, and notes that the Septuagint uses the word chiefly for Hebrew תָּמִים.",
+   "t": ["without blemish", "vndefiled", "unspotted", "without blemish", "unblemished", "without blemish"]
+  },
+  "07": {
+   "s": ["and"],
+   "r": "Joins the second description to the first.",
+   "t": ["and", "and", "and", "and", "and", "or"]
+  },
+  "08": {
+   "s": ["without spot", "spotless", "unstained"],
+   "r": "Without any mark or stain.",
+   "n": "Abbott-Smith gives 'spotless, unstained' and lists ἄμωμος, the word before, among its synonyms.",
+   "t": ["without spot", "without spot", "undefiled", "without spot", "unspotted", "spot"]
+  },
+  "09": {
+   "s": ["of Christ", "Christ's"],
+   "r": "Names whose blood it is.",
+   "n": "The Greek holds the name to the end of the sentence, after the comparison with the lamb; the ASV and YLT keep that order.",
+   "t": ["of Christ", "of Christ", "of Christ", "even the blood of Christ", "Christ's", "of Christ"]
+  }
+ }
+}

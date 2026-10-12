@@ -1,0 +1,24 @@
+{
+ "id": "r1",
+ "en": [
+  {"t": "At the end of", "w": ["01"]}, " ",
+  {"t": "seven", "w": ["02"]}, " ",
+  {"t": "years", "w": ["03"]}, " ",
+  {"t": "you shall make", "w": ["04"]}, " ",
+  {"t": "a remission", "w": ["05"]}, "."
+ ],
+ "words": {
+  "01": {"s": ["at the end of", "after", "at the close of"], "r": "Marks the time: when each period of seven years runs out.", "n": "Literally 'from the end of'. Gesenius gives the noun as end, extremity, of space or of time, and notes that with this 'from' it means at the end, after, as in 'after forty days'.", "t": ["At the end of", "At the terme of", "In", "At the end of", "At the end of", "At the end of", "At the end of"]},
+  "02": {"s": ["seven"], "r": "The number of years in the cycle.", "n": "The Hebrew has no 'every'; the KJV, ASV, JPS and BSB add it to make the repeating cycle plain. The DRC makes the number an ordinal, 'the seventh year'.", "t": ["seven", "seuen", "the seventh", "seven", "seven", "seven", "seven"]},
+  "03": {"s": ["years"], "r": "The years of the cycle.", "n": "Gesenius suggests the word properly means a repetition, the return of the sun's course or of the seasons.", "t": ["years", "yeeres", "year", "years", "years", "years", "years"]},
+  "04": {"s": ["you shall make", "you shall carry out", "you shall keep", "you shall grant"], "r": "Each Israelite is to put the remission into effect.", "n": "The ordinary verb for doing and making, imperfect, used as a command. The 'you' is singular, as through this law. The BSB folds this verb and the noun after it into 'cancel debts'.", "t": ["thou shalt make", "thou shalt make", "thou shalt make", "thou shalt make", "thou shalt make", "thou dost make", "you must cancel"]},
+  "05": {"s": ["remission", "release", "letting go", "cancellation"], "r": "A letting go of claims: what this is, the next verse explains.", "n": "BDB: a letting drop of exactions; the brief's lexicon adds a temporary remitting, release from debt. Gesenius gives remission, release, citing this verse, and calls the year of remission the year of jubilee; in this law it falls every seventh year. Geneva says 'freedome'.", "t": ["a release", "a freedome", "a remission", "a release", "a release", "a release", "debts"]}
+ },
+ "lxx": {
+  "01": {"i": [0], "m": 0, "n": "διά, here 'after an interval of', 'every': 'through seven years'."},
+  "02": {"i": [1], "m": 1},
+  "03": {"i": [2], "m": 2},
+  "04": {"i": [3], "m": 3},
+  "05": {"i": [4], "m": 4, "n": "ἄφεσις, 'release, letting go'. It is the word the New Testament uses for the forgiveness of sins."}
+ }
+}

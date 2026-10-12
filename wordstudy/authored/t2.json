@@ -1,0 +1,736 @@
+{
+ "id": "t2",
+ "en": [
+  {
+   "t": "He says",
+   "w": [
+    "01"
+   ]
+  },
+  ", ‘",
+  {
+   "t": "Yes",
+   "w": [
+    "02"
+   ]
+  },
+  ".’ ",
+  {
+   "t": "And",
+   "w": [
+    "03"
+   ]
+  },
+  " ",
+  {
+   "t": "when he came",
+   "w": [
+    "05"
+   ]
+  },
+  " ",
+  {
+   "t": "into",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "the",
+   "w": [
+    "07"
+   ]
+  },
+  " ",
+  {
+   "t": "house",
+   "w": [
+    "08"
+   ]
+  },
+  ", ",
+  {
+   "t": "Jesus",
+   "w": [
+    "12",
+    "11"
+   ]
+  },
+  " ",
+  {
+   "t": "forestalled",
+   "w": [
+    "09"
+   ]
+  },
+  " ",
+  {
+   "t": "him",
+   "w": [
+    "10"
+   ]
+  },
+  ", ",
+  {
+   "t": "saying",
+   "w": [
+    "13"
+   ]
+  },
+  ", ‘",
+  {
+   "t": "What",
+   "w": [
+    "14"
+   ]
+  },
+  " ",
+  {
+   "t": "do you think",
+   "w": [
+    "16",
+    "15"
+   ]
+  },
+  ", ",
+  {
+   "t": "Simon",
+   "w": [
+    "17"
+   ]
+  },
+  "? ",
+  {
+   "t": "The",
+   "w": [
+    "18"
+   ]
+  },
+  " ",
+  {
+   "t": "kings",
+   "w": [
+    "19"
+   ]
+  },
+  " ",
+  {
+   "t": "of the",
+   "w": [
+    "20"
+   ]
+  },
+  " ",
+  {
+   "t": "earth",
+   "w": [
+    "21"
+   ]
+  },
+  ", ",
+  {
+   "t": "from",
+   "w": [
+    "22"
+   ]
+  },
+  " ",
+  {
+   "t": "whom",
+   "w": [
+    "23"
+   ]
+  },
+  " ",
+  {
+   "t": "do they receive",
+   "w": [
+    "24"
+   ]
+  },
+  " ",
+  {
+   "t": "tolls",
+   "w": [
+    "25"
+   ]
+  },
+  " ",
+  {
+   "t": "or",
+   "w": [
+    "26"
+   ]
+  },
+  " ",
+  {
+   "t": "census tax",
+   "w": [
+    "27"
+   ]
+  },
+  "? ",
+  {
+   "t": "From",
+   "w": [
+    "28"
+   ]
+  },
+  " ",
+  {
+   "t": "their",
+   "w": [
+    "31"
+   ]
+  },
+  " ",
+  {
+   "t": "sons",
+   "w": [
+    "30",
+    "29"
+   ]
+  },
+  ", ",
+  {
+   "t": "or",
+   "w": [
+    "32"
+   ]
+  },
+  " ",
+  {
+   "t": "from",
+   "w": [
+    "33"
+   ]
+  },
+  " ",
+  {
+   "t": "strangers",
+   "w": [
+    "35",
+    "34"
+   ]
+  },
+  "?’"
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "says",
+    "said",
+    "answers"
+   ],
+   "r": "Peter answers the collectors.",
+   "n": "A present tense in a past narrative, kept here as 'says'. The YLT places this short answer at the end of the previous verse.",
+   "t": [
+    "He saith",
+    "He sayd",
+    "He said",
+    "He saith",
+    null,
+    "he answered"
+   ]
+  },
+  "02": {
+   "s": [
+    "yes",
+    "indeed",
+    "certainly"
+   ],
+   "r": "Peter affirms that Jesus pays.",
+   "n": "Abbott-Smith: a particle of affirmation, used in answer to a question, and he lists this verse.",
+   "t": [
+    "Yes",
+    "Yes",
+    "Yes",
+    "Yea",
+    null,
+    "Yes"
+   ]
+  },
+  "03": {
+   "s": [
+    "and"
+   ],
+   "r": "Moves to the next scene, in the house.",
+   "t": [
+    "And",
+    "And",
+    "And",
+    "And",
+    "And",
+    null
+   ]
+  },
+  "05": {
+   "s": [
+    "when he came",
+    "having come",
+    "as he came"
+   ],
+   "r": "Peter comes into the house where Jesus is.",
+   "n": "An aorist participle, literally 'him having come', agreeing with 'him' later in the sentence.",
+   "t": [
+    "he was come",
+    "he was come",
+    "he was come",
+    "when he came",
+    "when he came",
+    "When Peter entered"
+   ]
+  },
+  "06": {
+   "s": [
+    "into"
+   ],
+   "r": "Entering the house.",
+   "t": [
+    "into",
+    "into",
+    "into",
+    "into",
+    "into",
+    null
+   ]
+  },
+  "07": {
+   "s": [
+    "the"
+   ],
+   "r": "A particular house, the one where they were staying.",
+   "t": [
+    "the",
+    "the",
+    "the",
+    "the",
+    "the",
+    "the"
+   ]
+  },
+  "08": {
+   "s": [
+    "house",
+    "home"
+   ],
+   "r": "The house in Capernaum.",
+   "t": [
+    "house",
+    "house",
+    "house",
+    "house",
+    "house",
+    "house"
+   ]
+  },
+  "09": {
+   "s": [
+    "forestalled",
+    "spoke first to",
+    "anticipated",
+    "got in ahead of"
+   ],
+   "r": "Jesus speaks before Peter can raise the matter.",
+   "n": "Abbott-Smith: 'to anticipate', used with a participle as here ('anticipated him, saying'); this verse is its only New Testament occurrence. The KJV's 'prevented' is the older English sense, to come before.",
+   "t": [
+    "prevented",
+    "preuented",
+    "prevented",
+    "spake first to",
+    "anticipated",
+    "preempted"
+   ]
+  },
+  "10": {
+   "s": [
+    "him"
+   ],
+   "r": "Peter.",
+   "t": [
+    "him",
+    "him",
+    "him",
+    "him",
+    "him",
+    "him"
+   ]
+  },
+  "11": {
+   "s": [
+    "the"
+   ],
+   "r": "Greek often puts the article before a personal name; English does not.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "12": {
+   "s": [
+    "Jesus"
+   ],
+   "r": "Jesus takes up the question himself.",
+   "t": [
+    "Jesus",
+    "Iesus",
+    "Jesus",
+    "Jesus",
+    "Jesus",
+    "Jesus"
+   ]
+  },
+  "13": {
+   "s": [
+    "saying"
+   ],
+   "r": "Introduces his question.",
+   "t": [
+    "saying",
+    "saying",
+    "saying",
+    "saying",
+    "saying",
+    "He asked"
+   ]
+  },
+  "14": {
+   "s": [
+    "what"
+   ],
+   "r": "Asks for Peter's judgment.",
+   "t": [
+    "What",
+    "What",
+    "What",
+    "What",
+    "What",
+    "What"
+   ]
+  },
+  "15": {
+   "s": [
+    "to you"
+   ],
+   "r": "Peter, whose opinion is asked.",
+   "n": "Literally 'to you'; with the verb, 'what seems it to you'.",
+   "t": [
+    "thou",
+    "thou",
+    "thy",
+    "thou",
+    "thou",
+    "you"
+   ]
+  },
+  "16": {
+   "s": [
+    "do you think",
+    "does it seem",
+    "is your view"
+   ],
+   "r": "Asks how the matter looks to Peter.",
+   "n": "Literally 'what does it seem to you'. Abbott-Smith's first sense is 'to be of opinion, suppose'.",
+   "t": [
+    "thinkest",
+    "thinkest",
+    "is ... opinion",
+    "thinkest",
+    "thinkest",
+    "do ... think"
+   ]
+  },
+  "17": {
+   "s": [
+    "Simon"
+   ],
+   "r": "Peter, called by his own name.",
+   "n": "Abbott-Smith notes that it is a Greek name used in place of Συμεών, and lists this verse under Simon Peter.",
+   "t": [
+    "Simon",
+    "Simon",
+    "Simon",
+    "Simon",
+    "Simon",
+    "Simon"
+   ]
+  },
+  "18": {
+   "s": [
+    "the"
+   ],
+   "r": "Kings in general.",
+   "t": [
+    "the",
+    "the",
+    "The",
+    "the",
+    "the",
+    "the"
+   ]
+  },
+  "19": {
+   "s": [
+    "kings",
+    "rulers"
+   ],
+   "r": "Earthly rulers who levy dues.",
+   "t": [
+    "kings",
+    "Kings",
+    "kings",
+    "kings",
+    "kings",
+    "kings"
+   ]
+  },
+  "20": {
+   "s": [
+    "of the"
+   ],
+   "r": "The article; 'of' comes from the genitive case of the noun.",
+   "t": [
+    "of the",
+    "of the",
+    "of the",
+    "of the",
+    "of the",
+    "of the"
+   ]
+  },
+  "21": {
+   "s": [
+    "earth",
+    "land",
+    "world"
+   ],
+   "r": "The earthly realm, as against God's.",
+   "t": [
+    "earth",
+    "earth",
+    "earth",
+    "earth",
+    "earth",
+    "earth"
+   ]
+  },
+  "22": {
+   "s": [
+    "from"
+   ],
+   "r": "The source of the payments.",
+   "t": [
+    "of",
+    "Of",
+    "of",
+    "from",
+    "from",
+    "From"
+   ]
+  },
+  "23": {
+   "s": [
+    "whom"
+   ],
+   "r": "Asks which people pay.",
+   "t": [
+    "whom",
+    "whome",
+    "whom",
+    "whom",
+    "whom",
+    "whom"
+   ]
+  },
+  "24": {
+   "s": [
+    "receive",
+    "take",
+    "collect"
+   ],
+   "r": "Kings take in these dues.",
+   "n": "The same verb used of 'those who receive the double drachmas' in Matthew 17:24.",
+   "t": [
+    "do ... take",
+    "doe ... take",
+    "do they receive",
+    "do they receive",
+    "do they receive",
+    "do ... collect"
+   ]
+  },
+  "25": {
+   "s": [
+    "tolls",
+    "duties",
+    "customs"
+   ],
+   "r": "Dues charged on goods and passage.",
+   "n": "Plural of τέλος, whose first sense in Abbott-Smith is 'end'; in its money sense this study renders it 'toll'. The translations vary between custom, toll, tribute and customs; the Geneva calls this 'tribute' and the next word 'polle money'.",
+   "t": [
+    "custom",
+    "tribute",
+    "tribute",
+    "toll",
+    "custom",
+    "customs"
+   ]
+  },
+  "26": {
+   "s": [
+    "or"
+   ],
+   "r": "Sets the second kind of payment beside the first.",
+   "t": [
+    "or",
+    "or",
+    "or",
+    "or",
+    "or",
+    "and"
+   ]
+  },
+  "27": {
+   "s": [
+    "census tax",
+    "poll tax",
+    "head tax"
+   ],
+   "r": "A tax on each person, assessed by census.",
+   "n": "Abbott-Smith derives it from Latin census and defines it as 'a poll-tax'. This study renders it 'census tax' to keep it apart from φόρος, 'tribute', which is the KJV's and ASV's word here.",
+   "t": [
+    "tribute",
+    "polle money",
+    "custom",
+    "tribute",
+    "poll-tax",
+    "taxes"
+   ]
+  },
+  "28": {
+   "s": [
+    "from"
+   ],
+   "r": "The first possible source.",
+   "t": [
+    "of",
+    "of",
+    "of",
+    "from",
+    "from",
+    "from"
+   ]
+  },
+  "29": {
+   "s": [
+    "the"
+   ],
+   "r": "With 'their', marks the kings' own sons.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "30": {
+   "s": [
+    "sons",
+    "children"
+   ],
+   "r": "The king's own family.",
+   "n": "The Greek word is 'sons'. The KJV and Geneva say 'children'.",
+   "t": [
+    "children",
+    "children",
+    "children",
+    "sons",
+    "sons",
+    "sons"
+   ]
+  },
+  "31": {
+   "s": [
+    "their",
+    "their own"
+   ],
+   "r": "The kings' own.",
+   "t": [
+    "their own",
+    "their",
+    "their own",
+    "their",
+    "their",
+    "their own"
+   ]
+  },
+  "32": {
+   "s": [
+    "or"
+   ],
+   "r": "Sets the second possible source.",
+   "t": [
+    "or",
+    "or",
+    "or",
+    "or",
+    "or",
+    "or"
+   ]
+  },
+  "33": {
+   "s": [
+    "from"
+   ],
+   "r": "The second possible source.",
+   "t": [
+    "of",
+    "of",
+    "of",
+    "from",
+    "from",
+    "from"
+   ]
+  },
+  "34": {
+   "s": [
+    "the"
+   ],
+   "r": "Strangers as a class.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    "the",
+    null
+   ]
+  },
+  "35": {
+   "s": [
+    "strangers",
+    "others",
+    "outsiders",
+    "those not their own"
+   ],
+   "r": "People outside the king's family.",
+   "n": "Abbott-Smith's first sense is 'belonging to another, not one's own'; his second, 'foreign, strange, alien', is set against οἰκεῖος (of one's household). The contrast here is with the king's own sons.",
+   "t": [
+    "strangers",
+    "strangers",
+    "strangers",
+    "strangers",
+    "strangers",
+    "others"
+   ]
+  }
+ },
+ "tr_note": "The Textus Receptus reads ὅτε εἰσῆλθεν, 'when he entered', where our text has the participle ἐλθόντα, 'having come'. The KJV's 'when he was come into the house' follows it; the sense is the same."
+}

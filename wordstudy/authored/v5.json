@@ -1,0 +1,280 @@
+{
+ "id": "v5",
+ "en": [
+  {
+   "t": "Now",
+   "w": [
+    "02"
+   ]
+  },
+  " ",
+  {
+   "t": "having looked up",
+   "w": [
+    "01"
+   ]
+  },
+  ", ",
+  {
+   "t": "he saw",
+   "w": [
+    "03"
+   ]
+  },
+  " ",
+  {
+   "t": "those",
+   "w": [
+    "04"
+   ]
+  },
+  " ",
+  {
+   "t": "casting",
+   "w": [
+    "05"
+   ]
+  },
+  " ",
+  {
+   "t": "into",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "the",
+   "w": [
+    "07"
+   ]
+  },
+  " ",
+  {
+   "t": "treasury",
+   "w": [
+    "08"
+   ]
+  },
+  " ",
+  {
+   "t": "their",
+   "w": [
+    "11"
+   ]
+  },
+  " ",
+  {
+   "t": "gifts",
+   "w": [
+    "10",
+    "09"
+   ]
+  },
+  ", ",
+  {
+   "t": "rich people",
+   "w": [
+    "12"
+   ]
+  },
+  ","
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "having looked up",
+    "looking up",
+    "he looked up and"
+   ],
+   "r": "Jesus raises his eyes to the scene at the treasury.",
+   "n": "Abbott-Smith gives 'to look up' as the first sense; his second, 'to recover sight', does not apply here. An aorist participle: he looks up, then sees.",
+   "t": [
+    "he looked up",
+    "as he behelde",
+    "looking on",
+    "he looked up",
+    "having looked up",
+    "looked up"
+   ]
+  },
+  "02": {
+   "s": [
+    "now",
+    "and",
+    "then"
+   ],
+   "r": "Opens the scene.",
+   "t": [
+    "And",
+    "And",
+    "And",
+    "And",
+    "And",
+    "Then"
+   ]
+  },
+  "03": {
+   "s": [
+    "he saw",
+    "he noticed",
+    "he caught sight of"
+   ],
+   "r": "What Jesus sees.",
+   "t": [
+    "saw",
+    "he sawe",
+    "he saw",
+    "saw",
+    "he saw",
+    "saw"
+   ]
+  },
+  "04": {
+   "s": [
+    "those",
+    "the ones",
+    "the"
+   ],
+   "r": "With the participle, makes 'those casting'.",
+   "n": "The article stands far from 'rich' at the end, so the Greek can be read 'those casting their gifts, rich people', as the YLT does, or 'the rich casting their gifts', as most translations do. Either way the givers are rich.",
+   "t": [
+    "the",
+    "the",
+    "the",
+    "the",
+    "those who",
+    "the"
+   ]
+  },
+  "05": {
+   "s": [
+    "casting",
+    "putting",
+    "throwing in",
+    "dropping"
+   ],
+   "r": "Present participle: they are giving as he watches.",
+   "n": "The same verb as the widow's 'cast in' in Mark 12:42, rendered 'cast' throughout this study.",
+   "t": [
+    "casting",
+    "cast",
+    "cast",
+    "were casting",
+    "did cast",
+    "putting"
+   ]
+  },
+  "06": {
+   "s": [
+    "into",
+    "to"
+   ],
+   "r": "Into the treasury.",
+   "t": [
+    "into",
+    "into",
+    "into",
+    "into",
+    "to",
+    "into"
+   ]
+  },
+  "07": {
+   "s": [
+    "the"
+   ],
+   "r": "The treasury, a known place.",
+   "t": [
+    "the",
+    "the",
+    "the",
+    "the",
+    "the",
+    "the"
+   ]
+  },
+  "08": {
+   "s": [
+    "treasury",
+    "offering chests",
+    "treasure room"
+   ],
+   "r": "The temple treasury.",
+   "n": "The same word as in Mark 12:43.",
+   "t": [
+    "treasury",
+    "treasurie",
+    "treasury",
+    "treasury",
+    "treasury",
+    "treasury"
+   ]
+  },
+  "09": {
+   "s": [
+    "the"
+   ],
+   "r": "Article; English uses 'their'.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "10": {
+   "s": [
+    "gifts",
+    "offerings",
+    "presents"
+   ],
+   "r": "What the rich are giving.",
+   "n": "Abbott-Smith derives it from δίδωμι, give, and lists this verse among 'gifts and sacrifices to God'. The Septuagint uses it chiefly for Hebrew קׇרְבָּן.",
+   "t": [
+    "gifts",
+    "giftes",
+    "gifts",
+    "gifts",
+    "gifts",
+    "gifts"
+   ]
+  },
+  "11": {
+   "s": [
+    "their",
+    "of them"
+   ],
+   "r": "The givers' own gifts.",
+   "t": [
+    "their",
+    "their",
+    "their",
+    "their",
+    "their",
+    "their"
+   ]
+  },
+  "12": {
+   "s": [
+    "rich people",
+    "rich men",
+    "the wealthy",
+    "the rich"
+   ],
+   "r": "The givers are wealthy.",
+   "n": "Abbott-Smith lists this verse under the use as a noun, 'the rich'. The masculine plural is the ordinary form for a group, so this study writes 'people' where most translations write 'men'.",
+   "t": [
+    "rich men",
+    "rich men",
+    "rich men",
+    "rich men",
+    "rich men",
+    "rich"
+   ]
+  }
+ },
+ "tr_note": "The words τὰ δῶρα αὐτῶν, 'their gifts', stand in the KJV's Greek as well, as its 'their gifts' shows; the Textus Receptus places them before 'into the treasury', which is the KJV's order. The sense is the same in both texts."
+}

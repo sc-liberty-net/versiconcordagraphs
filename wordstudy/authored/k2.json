@@ -1,0 +1,703 @@
+{
+ "id": "k2",
+ "en": [
+  {
+   "t": "But",
+   "w": [
+    "01"
+   ]
+  },
+  " ",
+  {
+   "t": "woe",
+   "w": [
+    "02"
+   ]
+  },
+  " ",
+  {
+   "t": "to you",
+   "w": [
+    "03"
+   ]
+  },
+  ", ",
+  {
+   "t": "Pharisees",
+   "w": [
+    "05",
+    "04"
+   ]
+  },
+  ", ",
+  {
+   "t": "for",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "you tithe",
+   "w": [
+    "07"
+   ]
+  },
+  " ",
+  {
+   "t": "the",
+   "w": [
+    "08"
+   ]
+  },
+  " ",
+  {
+   "t": "mint",
+   "w": [
+    "09"
+   ]
+  },
+  " ",
+  {
+   "t": "and",
+   "w": [
+    "10"
+   ]
+  },
+  " ",
+  {
+   "t": "the",
+   "w": [
+    "11"
+   ]
+  },
+  " ",
+  {
+   "t": "rue",
+   "w": [
+    "12"
+   ]
+  },
+  " ",
+  {
+   "t": "and",
+   "w": [
+    "13"
+   ]
+  },
+  " ",
+  {
+   "t": "every",
+   "w": [
+    "14"
+   ]
+  },
+  " ",
+  {
+   "t": "herb",
+   "w": [
+    "15"
+   ]
+  },
+  ", ",
+  {
+   "t": "and",
+   "w": [
+    "16"
+   ]
+  },
+  " ",
+  {
+   "t": "you pass by",
+   "w": [
+    "17"
+   ]
+  },
+  " ",
+  {
+   "t": "justice",
+   "w": [
+    "19",
+    "18"
+   ]
+  },
+  " ",
+  {
+   "t": "and",
+   "w": [
+    "20"
+   ]
+  },
+  " ",
+  {
+   "t": "the",
+   "w": [
+    "21"
+   ]
+  },
+  " ",
+  {
+   "t": "love",
+   "w": [
+    "22"
+   ]
+  },
+  " ",
+  {
+   "t": "of God",
+   "w": [
+    "24",
+    "23"
+   ]
+  },
+  ". ",
+  {
+   "t": "But",
+   "w": [
+    "26"
+   ]
+  },
+  " ",
+  {
+   "t": "these",
+   "w": [
+    "25"
+   ]
+  },
+  " ",
+  {
+   "t": "it was necessary",
+   "w": [
+    "27"
+   ]
+  },
+  " ",
+  {
+   "t": "to do",
+   "w": [
+    "28"
+   ]
+  },
+  ", ",
+  {
+   "t": "and those",
+   "w": [
+    "29"
+   ]
+  },
+  " ",
+  {
+   "t": "not",
+   "w": [
+    "30"
+   ]
+  },
+  " ",
+  {
+   "t": "to neglect",
+   "w": [
+    "31"
+   ]
+  },
+  "."
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "but",
+    "yet"
+   ],
+   "r": "Turns from what goes before to the charge against the Pharisees.",
+   "n": "Abbott-Smith calls this particle stronger than δέ, the lighter 'but' that comes later in the verse.",
+   "t": [
+    "But",
+    "But",
+    "But",
+    "But",
+    "But",
+    null
+   ]
+  },
+  "02": {
+   "s": [
+    "woe",
+    "alas",
+    "grief"
+   ],
+   "r": "A cry of grief and denunciation over the Pharisees.",
+   "n": "Abbott-Smith defines it as an interjection 'of grief or denunciation'. It voices grief as well as rebuke.",
+   "t": [
+    "woe",
+    "wo",
+    "woe",
+    "woe",
+    "woe",
+    "Woe"
+   ]
+  },
+  "03": {
+   "s": [
+    "to you",
+    "for you",
+    "on you"
+   ],
+   "r": "The people the woe is spoken over.",
+   "t": [
+    "unto you",
+    "to you",
+    "to you",
+    "unto you",
+    "to you",
+    "to you"
+   ]
+  },
+  "04": {
+   "s": [
+    "the",
+    "you"
+   ],
+   "r": "The article marks the Pharisees as the group being addressed.",
+   "n": "Greek says 'to you, the Pharisees'; English drops the article in direct address. Only the YLT keeps it.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    "the",
+    null
+   ]
+  },
+  "05": {
+   "s": [
+    "Pharisees"
+   ],
+   "r": "The members of the Jewish party known for strict keeping of the law.",
+   "t": [
+    "Pharisees",
+    "Pharises",
+    "Pharisees",
+    "Pharisees",
+    "Pharisees",
+    "Pharisees"
+   ]
+  },
+  "06": {
+   "s": [
+    "for",
+    "because",
+    "since"
+   ],
+   "r": "Gives the reason for the woe.",
+   "t": [
+    "for",
+    "for",
+    "because",
+    "for",
+    "because",
+    null
+   ]
+  },
+  "07": {
+   "s": [
+    "you tithe",
+    "you take a tenth of",
+    "you pay a tenth of",
+    "you give the tenth of"
+   ],
+   "r": "They set apart a tenth even of their garden herbs.",
+   "n": "Abbott-Smith's first sense is 'to tithe, pay a tenth of', with the things tithed in the accusative, and he cites this verse. He notes that the Septuagint uses it for Hebrew עָשַׂר. The present tense describes their regular practice.",
+   "t": [
+    "ye tithe",
+    "ye tithe",
+    "you tithe",
+    "ye tithe",
+    "ye tithe",
+    "You pay tithes of"
+   ]
+  },
+  "08": {
+   "s": [
+    "the"
+   ],
+   "r": "Marks mint as one item in the list.",
+   "n": "Greek puts the article before each herb named; English normally leaves it out.",
+   "t": [
+    null,
+    "the",
+    null,
+    null,
+    "the",
+    null
+   ]
+  },
+  "09": {
+   "s": [
+    "mint"
+   ],
+   "r": "A sweet-smelling garden herb.",
+   "n": "Abbott-Smith explains the name as 'sweet-smelling', used as a noun for mint, and lists only this verse and Matthew 23:23.",
+   "t": [
+    "mint",
+    "mynt",
+    "mint",
+    "mint",
+    "mint",
+    "mint"
+   ]
+  },
+  "10": {
+   "s": [
+    "and"
+   ],
+   "r": "Joins the next herb to the list.",
+   "t": [
+    "and",
+    "and",
+    "and",
+    "and",
+    "and",
+    null
+   ]
+  },
+  "11": {
+   "s": [
+    "the"
+   ],
+   "r": "Marks rue as the next item in the list.",
+   "t": [
+    null,
+    "the",
+    null,
+    null,
+    "the",
+    null
+   ]
+  },
+  "12": {
+   "s": [
+    "rue"
+   ],
+   "r": "A bitter garden herb.",
+   "n": "This is the word's only occurrence in the New Testament.",
+   "t": [
+    "rue",
+    "rewe",
+    "rue",
+    "rue",
+    "rue",
+    "rue"
+   ]
+  },
+  "13": {
+   "s": [
+    "and"
+   ],
+   "r": "Joins the last, widest item to the list.",
+   "t": [
+    "and",
+    "and",
+    "and",
+    "and",
+    "and",
+    "and"
+   ]
+  },
+  "14": {
+   "s": [
+    "every",
+    "every kind of",
+    "all"
+   ],
+   "r": "No herb of the garden escapes their tithing.",
+   "t": [
+    "all manner of",
+    "all maner",
+    "every",
+    "every",
+    "every",
+    "every"
+   ]
+  },
+  "15": {
+   "s": [
+    "herb",
+    "garden plant",
+    "vegetable"
+   ],
+   "r": "Any plant grown in a garden for food.",
+   "n": "Abbott-Smith defines it as 'a garden herb, vegetable', derives it from a verb meaning to dig, and cites this verse.",
+   "t": [
+    "herbs",
+    "herbs",
+    "herb",
+    "herb",
+    "herb",
+    "herb"
+   ]
+  },
+  "16": {
+   "s": [
+    "and",
+    "yet",
+    "but"
+   ],
+   "r": "Sets what they neglect beside what they do.",
+   "n": "The Greek has a plain 'and'. The BSB's 'but' brings out the contrast the sentence implies.",
+   "t": [
+    "and",
+    "and",
+    "and",
+    "and",
+    "and",
+    "but"
+   ]
+  },
+  "17": {
+   "s": [
+    "you pass by",
+    "you pass over",
+    "you go past",
+    "you disregard"
+   ],
+   "r": "They walk past justice and the love of God without attending to them.",
+   "n": "Abbott-Smith's first sense is 'to pass, pass by'; he notes the Septuagint uses it chiefly for Hebrew עָבַר. It is a different verb from the one at the end of the verse, rendered here 'neglect'.",
+   "t": [
+    "pass over",
+    "passe ouer",
+    "pass over",
+    "pass over",
+    "ye pass by",
+    "you disregard"
+   ]
+  },
+  "18": {
+   "s": [
+    "the"
+   ],
+   "r": "The article with justice; English leaves it out.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    "the",
+    null
+   ]
+  },
+  "19": {
+   "s": [
+    "justice",
+    "judgment",
+    "what is right",
+    "fair dealing"
+   ],
+   "r": "Doing what is right toward others.",
+   "n": "Abbott-Smith gives the senses 'a separating', then 'a decision, judgment', and notes that the Septuagint uses it chiefly for Hebrew מִשְׁפָּט. The translations split between judgment and justice; next to the love of God, justice is the likelier sense here, but that is a reading of the context.",
+   "t": [
+    "judgment",
+    "iudgement",
+    "judgment",
+    "justice",
+    "judgment",
+    "justice"
+   ]
+  },
+  "20": {
+   "s": [
+    "and"
+   ],
+   "r": "Joins the second thing they pass by.",
+   "t": [
+    "and",
+    "and",
+    "and",
+    "and",
+    "and",
+    "and"
+   ]
+  },
+  "21": {
+   "s": [
+    "the"
+   ],
+   "r": "Marks the particular love named next.",
+   "t": [
+    "the",
+    "the",
+    "the",
+    "the",
+    "the",
+    "the"
+   ]
+  },
+  "22": {
+   "s": [
+    "love",
+    "goodwill",
+    "devotion"
+   ],
+   "r": "The love that God asks for, or that he shows.",
+   "n": "Abbott-Smith gives 'love, goodwill, esteem'. 'The love of God' can mean love for God or God's own love; the Greek does not decide, though love for God fits a list of duties best (an inference). The DRC's 'charity' follows older English usage.",
+   "t": [
+    "love",
+    "loue",
+    "charity",
+    "love",
+    "love",
+    "love"
+   ]
+  },
+  "23": {
+   "s": [
+    "the"
+   ],
+   "r": "Greek puts the article before God; English does not.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "24": {
+   "s": [
+    "of God"
+   ],
+   "r": "God, as the one this love concerns.",
+   "t": [
+    "of God",
+    "of God",
+    "of God",
+    "of God",
+    "of God",
+    "of God"
+   ]
+  },
+  "25": {
+   "s": [
+    "these",
+    "these things",
+    "the latter"
+   ],
+   "r": "The nearer items in the sentence: justice and the love of God.",
+   "n": "Abbott-Smith relates this word to the one rendered 'those' as Latin hic to ille: 'this' points to what is nearer, 'that' to what is farther. So 'these' are justice and the love of God, and 'those' are the tithes, as the BSB's 'the latter ... the former' makes explicit. The verse itself does not name them.",
+   "t": [
+    "these",
+    "these",
+    "these things",
+    "these",
+    "these things",
+    "the latter"
+   ]
+  },
+  "26": {
+   "s": [
+    "but",
+    "and",
+    "now"
+   ],
+   "r": "Turns from the charge to what should have been done.",
+   "n": "This particle is not in the Textus Receptus, which is why the KJV and Geneva have no 'but' here and the ASV does.",
+   "t": [
+    null,
+    null,
+    "Now",
+    "but",
+    null,
+    null
+   ]
+  },
+  "27": {
+   "s": [
+    "it was necessary",
+    "you ought",
+    "you should have",
+    "it was right"
+   ],
+   "r": "The obligation already stood: these things had to be done.",
+   "n": "An impersonal verb in the imperfect tense: literally 'it was necessary', of a duty that stood all along. No 'you' is written; Abbott-Smith notes the same omission in the parallel Matthew 23:23. English usually renders it 'you ought to have done'.",
+   "t": [
+    "ought ye",
+    "ought yee",
+    "you ought",
+    "ought ye",
+    "it behoveth",
+    "You should"
+   ]
+  },
+  "28": {
+   "s": [
+    "to do",
+    "to practise",
+    "to have done"
+   ],
+   "r": "To carry out justice and the love of God in action.",
+   "t": [
+    "to have done",
+    "to haue done",
+    "to have done",
+    "to have done",
+    "to do",
+    "have practiced"
+   ]
+  },
+  "29": {
+   "s": [
+    "and those",
+    "those also",
+    "and the others"
+   ],
+   "r": "The farther items in the sentence: the tithes of the herbs.",
+   "n": "Two words run together, 'and' plus 'those'; Abbott-Smith gives 'and he, she or it; he, she or it also' and lists this verse. The 'and' keeps both duties together: the tithing is not set aside.",
+   "t": [
+    "and ... the other",
+    "and ... the other",
+    "and ... the other",
+    "and ... the other",
+    "and those",
+    "the former"
+   ]
+  },
+  "30": {
+   "s": [
+    "not"
+   ],
+   "r": "Negates the neglecting.",
+   "n": "Abbott-Smith calls this the subjective negative, used where the denial depends on a condition or hypothesis rather than stating a plain fact. It is the usual negative with an infinitive such as this one.",
+   "t": [
+    "not",
+    "not",
+    "not",
+    "not",
+    "not",
+    "without"
+   ]
+  },
+  "31": {
+   "s": [
+    "to neglect",
+    "to leave aside",
+    "to let go",
+    "to leave undone"
+   ],
+   "r": "To let the tithes go by undone.",
+   "n": "STEPBible's dictionary form here is πάρειμι, 'be present', which does not fit the sentence; the form is best taken as the aorist infinitive of the related verb παρίημι, 'let pass, leave aside'. That identification is ours, not a lexicon's. The Textus Receptus has a different verb here, ἀφιέναι, 'to leave'.",
+   "t": [
+    "to leave ... undone",
+    "to haue left ... vndone",
+    "to leave ... undone",
+    "to leave ... undone",
+    "to be neglecting",
+    "neglecting"
+   ],
+   "fix": {
+    "lemma": "παρίημι",
+    "strong": "G3935",
+    "why": "STEPBible tags this word as πάρειμι, 'be present', which does not fit the sentence."
+   }
+  }
+ },
+ "tr_note": "The Textus Receptus lacks δέ, 'but', before 'these things', which is why the KJV reads 'these ought ye' where the ASV has 'but these'. At the end it reads ἀφιέναι, 'to leave', where the critical text has παρεῖναι, 'to neglect'; the KJV's 'not to leave the other undone' follows the Textus Receptus verb."
+}

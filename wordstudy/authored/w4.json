@@ -1,0 +1,599 @@
+{
+ "id": "w4",
+ "en": [
+  {
+   "t": "Look",
+   "w": [
+    "01"
+   ]
+  },
+  ", ",
+  {
+   "t": "the",
+   "w": [
+    "02"
+   ]
+  },
+  " ",
+  {
+   "t": "wage",
+   "w": [
+    "03"
+   ]
+  },
+  " ",
+  {
+   "t": "of the",
+   "w": [
+    "04"
+   ]
+  },
+  " ",
+  {
+   "t": "labourers",
+   "w": [
+    "05"
+   ]
+  },
+  " ",
+  {
+   "t": "who",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "mowed",
+   "w": [
+    "07"
+   ]
+  },
+  " ",
+  {
+   "t": "your",
+   "w": [
+    "10"
+   ]
+  },
+  " ",
+  {
+   "t": "fields",
+   "w": [
+    "09",
+    "08"
+   ]
+  },
+  ", ",
+  {
+   "t": "which",
+   "w": [
+    "11"
+   ]
+  },
+  " ",
+  {
+   "t": "has been fraudulently withheld",
+   "w": [
+    "12"
+   ]
+  },
+  " ",
+  {
+   "t": "by",
+   "w": [
+    "13"
+   ]
+  },
+  " ",
+  {
+   "t": "you",
+   "w": [
+    "14"
+   ]
+  },
+  ", ",
+  {
+   "t": "cries out",
+   "w": [
+    "15"
+   ]
+  },
+  "; ",
+  {
+   "t": "and",
+   "w": [
+    "16"
+   ]
+  },
+  " ",
+  {
+   "t": "the",
+   "w": [
+    "17"
+   ]
+  },
+  " ",
+  {
+   "t": "cries",
+   "w": [
+    "18"
+   ]
+  },
+  " ",
+  {
+   "t": "of those",
+   "w": [
+    "19"
+   ]
+  },
+  " ",
+  {
+   "t": "who reaped",
+   "w": [
+    "20"
+   ]
+  },
+  " ",
+  {
+   "t": "have entered",
+   "w": [
+    "26"
+   ]
+  },
+  " ",
+  {
+   "t": "into",
+   "w": [
+    "21"
+   ]
+  },
+  " ",
+  {
+   "t": "the",
+   "w": [
+    "22"
+   ]
+  },
+  " ",
+  {
+   "t": "ears",
+   "w": [
+    "23"
+   ]
+  },
+  " ",
+  {
+   "t": "of the Lord",
+   "w": [
+    "24"
+   ]
+  },
+  " ",
+  {
+   "t": "of Sabaoth",
+   "w": [
+    "25"
+   ]
+  },
+  "."
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "look",
+    "see",
+    "listen",
+    "behold"
+   ],
+   "r": "Demands attention to what follows.",
+   "n": "Abbott-Smith explains it as properly an imperative of ὁράω, 'see', used as a pointing particle, much more often in the Septuagint and New Testament than in classical Greek.",
+   "t": [
+    "Behold",
+    "Behold",
+    "Behold",
+    "Behold",
+    "lo",
+    "Look"
+   ]
+  },
+  "02": {
+   "s": [
+    "the"
+   ],
+   "r": "The wage owed for the harvest.",
+   "t": [
+    "the",
+    "the",
+    "the",
+    "the",
+    "the",
+    "the"
+   ]
+  },
+  "03": {
+   "s": [
+    "wage",
+    "wages",
+    "pay",
+    "hire"
+   ],
+   "r": "The pay owed for the harvest work.",
+   "n": "Abbott-Smith lists this verse under the proper sense, 'wages, hire'. The YLT's 'reward' loses the sense of pay.",
+   "t": [
+    "hire",
+    "hire",
+    "hire",
+    "hire",
+    "reward",
+    "wages"
+   ]
+  },
+  "04": {
+   "s": [
+    "of the"
+   ],
+   "r": "The article; 'of' comes from the genitive case.",
+   "t": [
+    "of the",
+    "of ye",
+    "of the",
+    "of the",
+    "of the",
+    "the"
+   ]
+  },
+  "05": {
+   "s": [
+    "labourers",
+    "workers",
+    "workmen",
+    "field hands"
+   ],
+   "r": "Hired farm workers.",
+   "n": "Abbott-Smith's first sense is 'a field labourer, husbandman', and he lists this verse there, together with Matthew 20:2.",
+   "t": [
+    "labourers",
+    "labourers",
+    "labourers",
+    "laborers",
+    "workmen",
+    "workmen"
+   ]
+  },
+  "06": {
+   "s": [
+    "who",
+    "those who"
+   ],
+   "r": "With the participle, describes the labourers.",
+   "t": [
+    "who",
+    "which",
+    "who",
+    "who",
+    "of those who",
+    "who"
+   ]
+  },
+  "07": {
+   "s": [
+    "mowed",
+    "reaped",
+    "harvested",
+    "cut"
+   ],
+   "r": "They cut the grain in the owners' fields.",
+   "n": "Abbott-Smith gives 'to reap', and this is its only New Testament use. This study writes 'mowed', with the ASV and BSB, to keep it apart from θερίζω, 'reap', later in the verse.",
+   "t": [
+    "have reaped down",
+    "haue reaped",
+    "have reaped down",
+    "mowed",
+    "in-gathered",
+    "mowed"
+   ]
+  },
+  "08": {
+   "s": [
+    "the"
+   ],
+   "r": "Article; English uses 'your'.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "09": {
+   "s": [
+    "fields",
+    "lands",
+    "farmland",
+    "estates"
+   ],
+   "r": "The landowners' farm land.",
+   "n": "The ordinary word for land or country, the first senses in Abbott-Smith's entry; here, in the plural, the fields the labourers worked.",
+   "t": [
+    "fields",
+    "fieldes",
+    "fields",
+    "fields",
+    "fields",
+    "fields"
+   ]
+  },
+  "10": {
+   "s": [
+    "your",
+    "of you"
+   ],
+   "r": "The landowners James addresses.",
+   "t": [
+    "your",
+    "your",
+    "your",
+    "your",
+    "your",
+    "your"
+   ]
+  },
+  "11": {
+   "s": [
+    "which",
+    "that"
+   ],
+   "r": "The article attaches the next phrase to 'the wage'.",
+   "n": "Literally 'the (wage), the one kept back'.",
+   "t": [
+    "which",
+    "which",
+    "which",
+    "which",
+    "which",
+    null
+   ]
+  },
+  "12": {
+   "s": [
+    "has been fraudulently withheld",
+    "has been kept back by fraud",
+    "has been stolen",
+    "has been withheld"
+   ],
+   "r": "The wage was never paid: the workers were cheated of it.",
+   "n": "Abbott-Smith gives 'to defraud, deprive of, despoil', and notes that in classical Greek it was used chiefly of misappropriating trust funds. In the Septuagint it stands at Deuteronomy 24:14 for Hebrew עָשַׁק, in the law on the hired worker's pay. A perfect participle: the wrong was done and still stands.",
+   "t": [
+    "kept back by fraud",
+    "kept backe by fraude",
+    "by fraud has been kept back",
+    "kept back by fraud",
+    "hath been fraudulently kept back",
+    "withheld"
+   ]
+  },
+  "13": {
+   "s": [
+    "by",
+    "from"
+   ],
+   "r": "Names who withheld it.",
+   "n": "Literally 'from you'. With the passive verb, the translations take it as naming the agent, 'by you'.",
+   "t": [
+    "of",
+    "of",
+    "by",
+    "of",
+    "by",
+    null
+   ]
+  },
+  "14": {
+   "s": [
+    "you"
+   ],
+   "r": "The landowners.",
+   "t": [
+    "you",
+    "you",
+    "you",
+    "you",
+    "you",
+    "you"
+   ]
+  },
+  "15": {
+   "s": [
+    "cries out",
+    "screams",
+    "shouts",
+    "calls out"
+   ],
+   "r": "The unpaid wage itself cries out, as if it had a voice.",
+   "n": "Abbott-Smith calls the word properly imitative, of the raven's croak, and so of inarticulate cries: to scream, cry out. He also records a use 'of crying for vengeance', which fits this verse, though that is a reading, not a listing shown for it.",
+   "t": [
+    "crieth",
+    "cryeth",
+    "crieth",
+    "crieth out",
+    "doth cry out",
+    "are crying out"
+   ]
+  },
+  "16": {
+   "s": [
+    "and"
+   ],
+   "r": "Adds the workers' own cries.",
+   "t": [
+    "and",
+    "and",
+    "and",
+    "and",
+    "and",
+    null
+   ]
+  },
+  "17": {
+   "s": [
+    "the"
+   ],
+   "r": "The cries of the reapers.",
+   "t": [
+    "the",
+    "the",
+    "the",
+    "the",
+    "the",
+    "The"
+   ]
+  },
+  "18": {
+   "s": [
+    "cries",
+    "outcries",
+    "shouts",
+    "pleas"
+   ],
+   "r": "The workers' cries for help.",
+   "n": "Abbott-Smith gives simply 'a cry', with this verse its only New Testament use. The Septuagint uses it for Hebrew זְעָקָה, outcry.",
+   "t": [
+    "cries",
+    "cryes",
+    "cry",
+    "cries",
+    "exclamations",
+    "cries"
+   ]
+  },
+  "19": {
+   "s": [
+    "of those",
+    "of the ones"
+   ],
+   "r": "With the participle, the workers again.",
+   "t": [
+    "of them",
+    "of them",
+    "of them",
+    "of them",
+    "of those",
+    "of the"
+   ]
+  },
+  "20": {
+   "s": [
+    "who reaped",
+    "reapers",
+    "harvesters",
+    "who harvested"
+   ],
+   "r": "The same labourers, now named as reapers.",
+   "n": "The ordinary verb for reaping, the same as 'reaping' in Matthew 25:24. Abbott-Smith lists this verse under its literal sense.",
+   "t": [
+    "which have reaped",
+    "which haue reaped",
+    null,
+    "that reaped",
+    "who did reap",
+    "harvesters"
+   ]
+  },
+  "21": {
+   "s": [
+    "into"
+   ],
+   "r": "Into the Lord's ears.",
+   "t": [
+    "into",
+    "into",
+    "into",
+    "into",
+    "into",
+    null
+   ]
+  },
+  "22": {
+   "s": [
+    "the"
+   ],
+   "r": "The Lord's ears.",
+   "t": [
+    "the",
+    "the",
+    "the",
+    "the",
+    "the",
+    "the"
+   ]
+  },
+  "23": {
+   "s": [
+    "ears"
+   ],
+   "r": "God has heard the cries.",
+   "n": "Abbott-Smith lists this verse for the phrase with 'enter', εἰσέρχεσθαι: cries that enter the ears.",
+   "t": [
+    "ears",
+    "eares",
+    "ears",
+    "ears",
+    "ears",
+    "ears"
+   ]
+  },
+  "24": {
+   "s": [
+    "of the Lord",
+    "of God"
+   ],
+   "r": "God, the Lord who hears.",
+   "n": "No article in the Greek, as often with this word for God; English needs 'the'.",
+   "t": [
+    "of the Lord",
+    "of the Lord",
+    "of the Lord",
+    "of the Lord",
+    "of the Lord",
+    "of the Lord"
+   ]
+  },
+  "25": {
+   "s": [
+    "of Sabaoth",
+    "of Hosts",
+    "of armies"
+   ],
+   "r": "A Hebrew title of God: Lord of hosts.",
+   "n": "A Hebrew word kept untranslated in the Greek. Abbott-Smith explains it as 'hosts or armies', and notes that the Septuagint keeps it chiefly in Isaiah, elsewhere translating the phrase as κύριος παντοκράτωρ, 'Lord Almighty', or κύριος τῶν δυνάμεων, 'Lord of the powers'.",
+   "t": [
+    "of sabaoth",
+    "of hostes",
+    "of Sabaoth",
+    "of Sabaoth",
+    "of Sabaoth",
+    "of Hosts"
+   ]
+  },
+  "26": {
+   "s": [
+    "have entered",
+    "have reached",
+    "have come into"
+   ],
+   "r": "The cries have reached God.",
+   "n": "A perfect: the cries have entered and are now heard.",
+   "t": [
+    "are entered",
+    "are entred",
+    "hath entered",
+    "have entered",
+    "have entered",
+    "have reached"
+   ]
+  }
+ }
+}

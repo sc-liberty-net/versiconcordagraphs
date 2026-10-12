@@ -1,0 +1,497 @@
+{
+ "id": "c1",
+ "en": [
+  {
+   "t": "And",
+   "w": [
+    "01"
+   ]
+  },
+  " ",
+  {
+   "t": "passing on",
+   "w": [
+    "02"
+   ]
+  },
+  " ",
+  {
+   "t": "from there",
+   "w": [
+    "05"
+   ]
+  },
+  ", ",
+  {
+   "t": "Jesus",
+   "w": [
+    "04",
+    "03"
+   ]
+  },
+  " ",
+  {
+   "t": "saw",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "a man",
+   "w": [
+    "07"
+   ]
+  },
+  " ",
+  {
+   "t": "sitting",
+   "w": [
+    "08"
+   ]
+  },
+  " ",
+  {
+   "t": "at",
+   "w": [
+    "09"
+   ]
+  },
+  " ",
+  {
+   "t": "the",
+   "w": [
+    "10"
+   ]
+  },
+  " ",
+  {
+   "t": "toll booth",
+   "w": [
+    "11"
+   ]
+  },
+  ", ",
+  {
+   "t": "called",
+   "w": [
+    "13"
+   ]
+  },
+  " ",
+  {
+   "t": "Matthew",
+   "w": [
+    "12"
+   ]
+  },
+  ", ",
+  {
+   "t": "and",
+   "w": [
+    "14"
+   ]
+  },
+  " ",
+  {
+   "t": "he says",
+   "w": [
+    "15"
+   ]
+  },
+  " ",
+  {
+   "t": "to him",
+   "w": [
+    "16"
+   ]
+  },
+  ", ‘",
+  {
+   "t": "Follow",
+   "w": [
+    "17"
+   ]
+  },
+  " ",
+  {
+   "t": "me",
+   "w": [
+    "18"
+   ]
+  },
+  ".’ ",
+  {
+   "t": "And",
+   "w": [
+    "19"
+   ]
+  },
+  " ",
+  {
+   "t": "he rose up",
+   "w": [
+    "20"
+   ]
+  },
+  " and ",
+  {
+   "t": "followed",
+   "w": [
+    "21"
+   ]
+  },
+  " ",
+  {
+   "t": "him",
+   "w": [
+    "22"
+   ]
+  },
+  "."
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "and",
+    "now"
+   ],
+   "r": "Links this scene to the one before.",
+   "t": [
+    "And",
+    "And",
+    "And",
+    "And",
+    "And",
+    null
+   ]
+  },
+  "02": {
+   "s": [
+    "passing on",
+    "passing by",
+    "going on",
+    "moving along"
+   ],
+   "r": "Jesus is on his way past the place.",
+   "n": "Abbott-Smith's intransitive sense, 'to pass by', is the one he gives for this verse; he also records 'to go away, depart'. A present participle: it happens as he goes.",
+   "t": [
+    "passed forth",
+    "passed foorth",
+    "passed on",
+    "passed by",
+    "passing by",
+    "went on"
+   ]
+  },
+  "03": {
+   "s": [
+    "the"
+   ],
+   "r": "Greek often puts the article before a personal name; English does not.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "04": {
+   "s": [
+    "Jesus"
+   ],
+   "r": "The subject of the scene.",
+   "t": [
+    "Jesus",
+    "Iesus",
+    "Jesus",
+    "Jesus",
+    "Jesus",
+    "Jesus"
+   ]
+  },
+  "05": {
+   "s": [
+    "from there",
+    "from that place",
+    "thence"
+   ],
+   "r": "From the place of the previous scene.",
+   "t": [
+    "from thence",
+    "from thence",
+    "from thence",
+    "from thence",
+    "thence",
+    "from there"
+   ]
+  },
+  "06": {
+   "s": [
+    "saw",
+    "caught sight of",
+    "noticed"
+   ],
+   "r": "Jesus sees Matthew at his post.",
+   "t": [
+    "he saw",
+    "hee sawe",
+    "he saw",
+    "he saw",
+    "saw",
+    "He saw"
+   ]
+  },
+  "07": {
+   "s": [
+    "a man",
+    "a person",
+    "someone"
+   ],
+   "r": "A man not yet named.",
+   "t": [
+    "a man",
+    "a man",
+    "a man",
+    "a man",
+    "a man",
+    "a man"
+   ]
+  },
+  "08": {
+   "s": [
+    "sitting",
+    "seated"
+   ],
+   "r": "Seated at his work.",
+   "t": [
+    "sitting",
+    "sitting",
+    "sitting",
+    "sitting",
+    "sitting",
+    "sitting"
+   ]
+  },
+  "09": {
+   "s": [
+    "at",
+    "in",
+    "by"
+   ],
+   "r": "His place: at the booth.",
+   "t": [
+    "at",
+    "at",
+    "in",
+    "at",
+    "at",
+    "at"
+   ]
+  },
+  "10": {
+   "s": [
+    "the"
+   ],
+   "r": "A particular booth, the one at that place.",
+   "t": [
+    "the",
+    "the",
+    "the",
+    "the",
+    "the",
+    "the"
+   ]
+  },
+  "11": {
+   "s": [
+    "toll booth",
+    "toll house",
+    "custom house",
+    "place of toll"
+   ],
+   "r": "The post where tolls were collected.",
+   "n": "Abbott-Smith defines it as 'a custom house, tollhouse, place of toll'. He derives it from τελώνης, toll collector, so this study renders it 'toll booth' to keep it with that family. The translations range from the KJV's 'receipt of custom' to the BSB's 'tax booth'.",
+   "t": [
+    "receipt of custom",
+    "custome",
+    "custom house",
+    "place of toll",
+    "tax-office",
+    "tax booth"
+   ]
+  },
+  "12": {
+   "s": [
+    "Matthew"
+   ],
+   "r": "The man's name.",
+   "n": "Abbott-Smith spells it Μαθθαῖος and notes that the received text spells it with τθ, Ματθ-; this is a difference of spelling, not of name.",
+   "t": [
+    "Matthew",
+    "Matthewe",
+    "Matthew",
+    "Matthew",
+    "Matthew",
+    "Matthew"
+   ]
+  },
+  "13": {
+   "s": [
+    "called",
+    "named",
+    "by name"
+   ],
+   "r": "Introduces his name.",
+   "n": "Literally 'being called', a present passive participle of the verb 'say'.",
+   "t": [
+    "named",
+    "named",
+    "named",
+    "called",
+    "named",
+    "named"
+   ]
+  },
+  "14": {
+   "s": [
+    "and"
+   ],
+   "r": "Joins what Jesus says to what he sees.",
+   "t": [
+    "and",
+    "and",
+    "and",
+    "and",
+    "and",
+    null
+   ]
+  },
+  "15": {
+   "s": [
+    "says",
+    "said",
+    "tells"
+   ],
+   "r": "Jesus speaks to him.",
+   "n": "The present tense in a past narrative, which makes the moment vivid; four of the six translations keep it ('saith'). This study keeps the present, 'says'.",
+   "t": [
+    "he saith",
+    "saide",
+    "he saith",
+    "he saith",
+    "saith",
+    "He told"
+   ]
+  },
+  "16": {
+   "s": [
+    "to him"
+   ],
+   "r": "To Matthew.",
+   "t": [
+    "unto him",
+    "to him",
+    "to him",
+    "unto him",
+    "to him",
+    "him"
+   ]
+  },
+  "17": {
+   "s": [
+    "follow",
+    "keep following",
+    "come after"
+   ],
+   "r": "A call to come with Jesus as his disciple.",
+   "n": "Abbott-Smith lists this verse under the figurative sense 'of discipleship'. A present imperative, which the YLT brings out with 'Be following': an ongoing following, not one step.",
+   "t": [
+    "Follow",
+    "Followe",
+    "Follow",
+    "Follow",
+    "Be following",
+    "Follow"
+   ]
+  },
+  "18": {
+   "s": [
+    "me"
+   ],
+   "r": "Jesus himself, the one to be followed.",
+   "t": [
+    "me",
+    "me",
+    "me",
+    "me",
+    "me",
+    "Me"
+   ]
+  },
+  "19": {
+   "s": [
+    "and"
+   ],
+   "r": "Introduces Matthew's response.",
+   "t": [
+    "And",
+    "And",
+    "And",
+    "And",
+    "and",
+    "and"
+   ]
+  },
+  "20": {
+   "s": [
+    "rose up",
+    "got up",
+    "stood up",
+    "having risen"
+   ],
+   "r": "He stands up from his seat at the booth.",
+   "n": "An aorist participle, literally 'having risen', joined to 'followed'. Abbott-Smith treats the second aorist, the form here, as intransitive; in its causal sense, 'to raise up', the same verb is used of raising from death.",
+   "t": [
+    "he arose",
+    "he arose",
+    "he arose up",
+    "he arose",
+    "having risen",
+    "got up"
+   ]
+  },
+  "21": {
+   "s": [
+    "followed",
+    "went after",
+    "went with"
+   ],
+   "r": "He leaves the booth and goes with Jesus.",
+   "t": [
+    "followed",
+    "followed",
+    "followed",
+    "followed",
+    "did follow",
+    "followed"
+   ]
+  },
+  "22": {
+   "s": [
+    "him"
+   ],
+   "r": "Jesus.",
+   "t": [
+    "him",
+    "him",
+    "him",
+    "him",
+    "him",
+    "Him"
+   ]
+  }
+ }
+}

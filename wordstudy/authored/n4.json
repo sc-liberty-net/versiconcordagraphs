@@ -1,0 +1,43 @@
+{
+ "id": "n4",
+ "en": [
+  {"t": "And you shall say", "w": ["01"]}, " ",
+  {"t": "to them", "w": ["02"]}, ", ‘",
+  {"t": "When you lift up", "w": ["03"]}, " ",
+  {"t": "its best", "w": ["05", "04"]}, " ",
+  {"t": "from it", "w": ["06"]}, ", ",
+  {"t": "then it shall be reckoned", "w": ["07"]}, " ",
+  {"t": "to the Levites", "w": ["08"]}, " ",
+  {"t": "like the produce of", "w": ["09"]}, " ",
+  {"t": "a threshing floor", "w": ["10"]}, " ",
+  {"t": "and like the produce of", "w": ["11"]}, " ",
+  {"t": "a winepress", "w": ["12"]}, ".’"
+ ],
+ "words": {
+  "01": {"s": ["and you shall say", "so you shall say", "say"], "r": "Moses is to give the Levites a further word.", "n": "A perfect with 'and', which carries on the instruction of the verses before. The KJV and most others make the 'and' a 'therefore'; YLT renders the perfect form literally, 'thou hast said'.", "t": ["Therefore thou shalt say", "Therefore thou shalt say", "And thou shalt say", "Therefore thou shalt say", "Therefore thou shalt say", "And thou hast said", "Therefore say"]},
+  "02": {"s": ["to them", "unto them"], "r": "The Levites.", "t": ["unto them", "vnto them", "to them", "unto them", "unto them", "unto them", "to the Levites"]},
+  "03": {"s": ["when you lift up", "when you raise", "when you set apart", "in your lifting up"], "r": "Once the Levites have lifted their contribution off the tithe.", "n": "Literally 'in your lifting up': an infinitive with 'in' and 'your', which Hebrew uses for 'when you'. It is the causative form of a verb that Gesenius and BDB give as to rise, be high, the same verb as in the verse before. YLT keeps the Hebrew shape.", "t": ["When ye have heaved", "When ye haue offred", "If you offer", "When ye set apart", "When ye heave", "In your lifting up", "When you have presented"]},
+  "04": {"s": ["(object marker, no English equivalent)"], "r": "Marks 'its best' as the object of 'lift up'.", "n": "This small word marks a definite direct object and has no English equivalent; it is counted here with 'its best'.", "t": [null, null, null, null, null, null, null]},
+  "05": {"s": ["its best", "its choicest part", "its fat", "its richest part"], "r": "The finest part of the tithe, the portion owed to the LORD.", "n": "Literally 'its fat'. Gesenius gives fat, and figuratively the best or most excellent of any kind. Geneva and YLT keep 'fat'.", "t": ["the best thereof", "the fat thereof", "all the goodly and the better things", "the best thereof", "the best thereof", "its fat", "the best part"]},
+  "06": {"s": ["from it", "out of it", "off it"], "r": "From the tithe the Levites received.", "t": ["from it", null, "of the tithes", "from it", "from it", "out of it", null]},
+  "07": {"s": ["it shall be reckoned", "it shall be counted", "it shall be regarded", "it shall be credited"], "r": "What remains is to be treated as the Levites' own harvest.", "n": "A passive form of a verb whose primary idea, Gesenius suggests, is computing or reckoning. A perfect with 'and' after the 'when' clause, so 'then it shall be'. The 'it' is most naturally the tithe left after the best is lifted out; that is a reading of the context, not something the verse names.", "t": ["then it shall be counted", "then it shalbe couted", "it shall be reckoned", "then it shall be counted", "then it shall be reckoned", "then it hath been reckoned", "it will be reckoned"]},
+  "08": {"s": ["to the Levites", "for the Levites", "as the Levites'"], "r": "The Levites are the ones for whom it counts.", "n": "The DRC and BSB say 'to you', since the Levites are being addressed.", "t": ["unto the Levites", "vnto the Leuites", "to you", "unto the Levites", "unto the Levites", "to the Levites", "to you"]},
+  "09": {"s": ["like the produce of", "as the yield of", "as the crop of"], "r": "Compares the Levites' remaining share to a farmer's harvest.", "n": "Gesenius gives produce, as of the earth, and cites this verse for the produce of the threshing floor and of the winepress. The KJV's 'increase' renders a different Hebrew word from the one our register calls 'increase', so we say 'produce' here.", "t": ["as the increase", "as the encrease", "as if you had given the firstfruits", "as the increase", "as the increase", "as increase", "as the produce"]},
+  "10": {"s": ["threshing floor", "grain floor", "barn floor"], "r": "The floor where grain was threshed: the grain harvest.", "n": "Gesenius: a level place, made smooth, especially a floor on which grain is trodden out. The noun has no article: 'a threshing floor'.", "t": ["of the threshingfloor", "of the corne floore", "of the barnfloor", "of the threshing-floor", "of the threshing-floor", "of a threshing-floor", "of the threshing floor"]},
+  "11": {"s": ["and like the produce of", "and as the yield of", "or as the produce of"], "r": "The same comparison, for the wine harvest.", "t": ["and as the increase", "or as the encrease", "and", "and as the increase", "and as the increase", "and as increase", "or"]},
+  "12": {"s": ["winepress", "wine vat", "press"], "r": "Where grapes were pressed: the wine harvest.", "n": "Gesenius gives first the vat of the winepress, the cistern into which the juice flows from the press, and second the winepress itself; BDB gives wine vat. YLT says 'wine-vat'.", "t": ["of the winepress", "of the wine presse", "the winepress", "of the wine-press", "of the winepress", "of a wine-vat", "winepress"]}
+ },
+ "lxx": {
+  "01": {"i": [0, 1], "m": 1},
+  "02": {"i": [2, 3], "m": 2},
+  "03": {"i": [4, 5], "m": 5, "n": "ὅταν ἀφαιρῆτε, 'when you take off', the same verb the Greek uses for 'lift up' in the verse before."},
+  "05": {"i": [6, 7], "m": 7, "n": "ἀπαρχή, 'firstfruits, first portion', where the Hebrew says 'its fat', its best."},
+  "06": {"i": [8, 9], "m": 8},
+  "07": {"i": [10, 11, 12], "m": 11, "n": "Our Greek text splits one word in two: λογὶς θήσεται is λογισθήσεται, 'it shall be reckoned', from λογίζομαι."},
+  "08": {"i": [13, 14], "m": 14, "lemma": "Λευίτης", "strong": "G3019", "n": "Dictionary form supplied by hand: the matched form is marked loose. Our Greek text spells the word Λευείταις."},
+  "09": {"i": [15, 16], "m": 16, "n": "γένημα, 'produce, yield'."},
+  "10": {"i": [17, 18], "m": 18, "n": "The Greek says 'from a threshing floor' where the Hebrew has 'of'."},
+  "11": {"i": [19, 20, 21], "m": 21, "n": "The first word, printed κα in our Greek text, is καὶ cut short."},
+  "12": {"i": [22], "m": 22, "n": "ληνός, 'winepress' or 'wine vat'."}
+ }
+}

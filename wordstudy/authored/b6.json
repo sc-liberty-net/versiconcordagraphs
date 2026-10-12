@@ -1,0 +1,338 @@
+{
+ "id": "b6",
+ "en": [
+  {
+   "t": "Owe",
+   "w": [
+    "03"
+   ]
+  },
+  " ",
+  {
+   "t": "no one",
+   "w": [
+    "01"
+   ]
+  },
+  " ",
+  {
+   "t": "anything",
+   "w": [
+    "02"
+   ]
+  },
+  ", ",
+  {
+   "t": "except",
+   "w": [
+    "04",
+    "05"
+   ]
+  },
+  " ",
+  {
+   "t": "to love",
+   "w": [
+    "08",
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "one another",
+   "w": [
+    "07"
+   ]
+  },
+  "; ",
+  {
+   "t": "for",
+   "w": [
+    "10"
+   ]
+  },
+  " ",
+  {
+   "t": "the one",
+   "w": [
+    "09"
+   ]
+  },
+  " ",
+  {
+   "t": "who loves",
+   "w": [
+    "11"
+   ]
+  },
+  " ",
+  {
+   "t": "the",
+   "w": [
+    "12"
+   ]
+  },
+  " ",
+  {
+   "t": "other",
+   "w": [
+    "13"
+   ]
+  },
+  " ",
+  {
+   "t": "has fulfilled",
+   "w": [
+    "15"
+   ]
+  },
+  " the ",
+  {
+   "t": "law",
+   "w": [
+    "14"
+   ]
+  },
+  "."
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "no one",
+    "nobody",
+    "anyone"
+   ],
+   "r": "No person at all is to be left owed.",
+   "n": "Greek piles up negatives for emphasis: literally 'to no one nothing owe'. English uses one negative, 'no one anything'. Abbott-Smith cites this verse under the word, with the meanings no, none, no one, and in the neuter, nothing.",
+   "t": [
+    "no man",
+    "to any man",
+    "no man",
+    "no man",
+    "To no one",
+    "to no one"
+   ]
+  },
+  "02": {
+   "s": [
+    "anything",
+    "nothing"
+   ],
+   "r": "No debt of any kind.",
+   "t": [
+    "any thing",
+    "nothing",
+    "any thing",
+    "anything",
+    "anything",
+    null
+   ]
+  },
+  "03": {
+   "s": [
+    "owe",
+    "be in debt to",
+    "keep owing"
+   ],
+   "r": "A command: let no debt stand unpaid.",
+   "n": "The present form can be read as a statement ('you owe') or a command ('owe'); all six translations, and this study, take it as a command. The present tense suggests an ongoing state: do not stay in anyone's debt.",
+   "t": [
+    "Owe",
+    "Owe",
+    "Owe",
+    "Owe",
+    "owe",
+    "Be indebted"
+   ]
+  },
+  "04": {
+   "s": [
+    "except",
+    "save",
+    "but",
+    "only"
+   ],
+   "r": "With μή, 'if not': the one exception to the rule.",
+   "n": "εἰ μή is literally 'if not'; together the two words mean 'except'.",
+   "t": [
+    "but",
+    "but",
+    "but",
+    "save",
+    "except",
+    "except"
+   ]
+  },
+  "05": {
+   "s": [
+    "not"
+   ],
+   "r": "The negative in 'if not', that is, 'except'.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "06": {
+   "s": [
+    "the"
+   ],
+   "r": "The article makes 'to love one another' into a noun phrase: the loving of one another.",
+   "n": "Greek can put an article before an infinitive; English has no equivalent, and 'to love' carries both words.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "07": {
+   "s": [
+    "one another",
+    "each other"
+   ],
+   "r": "Love that runs both ways among the readers.",
+   "t": [
+    "one another",
+    "one another",
+    "one another",
+    "one another",
+    "one another",
+    "one another"
+   ]
+  },
+  "08": {
+   "s": [
+    "to love",
+    "loving"
+   ],
+   "r": "The one thing they are to go on owing each other.",
+   "n": "Abbott-Smith gives the sense 'to feel and exhibit esteem and goodwill to a person'. A present infinitive: love as an ongoing obligation. That this debt can never be fully paid off is a reasonable reading of the verse, but it is an inference.",
+   "t": [
+    "to love",
+    "to loue",
+    "to love",
+    "to love",
+    "to love",
+    "in love"
+   ]
+  },
+  "09": {
+   "s": [
+    "the one",
+    "he who",
+    "whoever"
+   ],
+   "r": "The article turns the participle 'loving' into a person: the one who loves.",
+   "t": [
+    "he that",
+    "he that",
+    "he that",
+    "he that",
+    "he who",
+    "he who"
+   ]
+  },
+  "10": {
+   "s": [
+    "for"
+   ],
+   "r": "Gives the reason for the command.",
+   "t": [
+    "for",
+    "for",
+    "For",
+    "for",
+    "for",
+    "For"
+   ]
+  },
+  "11": {
+   "s": [
+    "who loves",
+    "loving"
+   ],
+   "r": "A present participle: the one who goes on loving.",
+   "t": [
+    "loveth",
+    "loueth",
+    "loveth",
+    "loveth",
+    "is loving",
+    "loves"
+   ]
+  },
+  "12": {
+   "s": [
+    "the"
+   ],
+   "r": "With 'other', marks the other person in any relationship.",
+   "t": [
+    null,
+    null,
+    "his",
+    "his",
+    "the",
+    "his"
+   ]
+  },
+  "13": {
+   "s": [
+    "other",
+    "another",
+    "neighbour",
+    "fellow"
+   ],
+   "r": "The other person, whoever he is.",
+   "n": "Literally 'the other'. The DRC, ASV and BSB render it 'neighbour', which is the sense, but not the word: Abbott-Smith's entry for 'love' shows the usual Greek word for neighbour, πλησίον, in another verse. Abbott-Smith notes that this word properly means the second of two.",
+   "t": [
+    "another",
+    "another",
+    "neighbour",
+    "neighbor",
+    "other",
+    "neighbor"
+   ]
+  },
+  "14": {
+   "s": [
+    "law",
+    "the law"
+   ],
+   "r": "The law of God given to Israel, by the most natural reading.",
+   "n": "There is no article in the Greek; the YLT shows this with plain 'law'. Abbott-Smith derives the word from νέμω, to deal out or distribute.",
+   "t": [
+    "the law",
+    "the Lawe",
+    "the law",
+    "the law",
+    "law",
+    "the law"
+   ]
+  },
+  "15": {
+   "s": [
+    "has fulfilled",
+    "has carried out in full",
+    "has satisfied"
+   ],
+   "r": "The one who loves has done all the law requires.",
+   "n": "The perfect tense: the fulfilment is complete and stands. Abbott-Smith's first sense of the verb is to fill or make full.",
+   "t": [
+    "hath fulfilled",
+    "hath fulfilled",
+    "hath fulfilled",
+    "hath fulfilled",
+    "he hath fulfilled",
+    "has fulfilled"
+   ]
+  }
+ },
+ "tr_note": "The Textus Receptus has ἀλλήλους, 'one another', in a different position in the phrase. The meaning is the same, which is why the KJV reads 'to love one another' as we do."
+}

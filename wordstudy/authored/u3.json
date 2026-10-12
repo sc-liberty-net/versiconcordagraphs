@@ -1,0 +1,309 @@
+{
+ "id": "u3",
+ "en": [
+  {
+   "t": "Your silver",
+   "w": [
+    "02",
+    "01"
+   ]
+  },
+  " ",
+  {
+   "t": "you shall not give",
+   "w": [
+    "04",
+    "03"
+   ]
+  },
+  " ",
+  {
+   "t": "him",
+   "w": [
+    "05"
+   ]
+  },
+  " ",
+  {
+   "t": "for interest",
+   "w": [
+    "06"
+   ]
+  },
+  ", ",
+  {
+   "t": "and for increase",
+   "w": [
+    "07"
+   ]
+  },
+  " ",
+  {
+   "t": "you shall not give",
+   "w": [
+    "09",
+    "08"
+   ]
+  },
+  " ",
+  {
+   "t": "your food",
+   "w": [
+    "10"
+   ]
+  },
+  "."
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "(object marker, no English equivalent)"
+   ],
+   "r": "Marks 'your silver' as the object of 'give'.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "n": "This small word marks a definite direct object and has no English equivalent; it is counted with 'Your silver'."
+  },
+  "02": {
+   "s": [
+    "your silver",
+    "your money"
+   ],
+   "r": "Silver used as money, the thing lent.",
+   "t": [
+    "thy money",
+    "thy money",
+    "thy money",
+    "thy money",
+    "thy money",
+    "thy money",
+    "your silver"
+   ],
+   "n": "Gesenius gives the first sense as silver, so called from its pale colour. The Hebrew puts it first for emphasis: 'your silver you shall not give'. Of these translations only the BSB keeps 'silver'."
+  },
+  "03": {
+   "s": [
+    "not",
+    "never"
+   ],
+   "r": "A flat prohibition.",
+   "t": [
+    "not",
+    "not",
+    "not",
+    "not",
+    "not",
+    "not",
+    "not"
+   ]
+  },
+  "04": {
+   "s": [
+    "give",
+    "put out",
+    "lend"
+   ],
+   "r": "To hand over the silver as a loan.",
+   "t": [
+    "Thou shalt ... give",
+    "Thou shalt ... giue",
+    "Thou shalt ... give",
+    "Thou shalt ... give",
+    "Thou shalt ... give",
+    "thou givest",
+    "You must ... lend"
+   ],
+   "n": "The ordinary verb 'give'. The brief's lexicon includes 'lend' among its uses, and here it means to give on loan. The BSB says 'lend'."
+  },
+  "05": {
+   "s": [
+    "him",
+    "to him"
+   ],
+   "r": "The poor brother of the verses before.",
+   "t": [
+    "him",
+    "him",
+    "him",
+    "him",
+    "him",
+    "to him",
+    "him"
+   ]
+  },
+  "06": {
+   "s": [
+    "for interest",
+    "at interest",
+    "on interest"
+   ],
+   "r": "In return for interest: as a loan that earns a charge.",
+   "t": [
+    "upon usury",
+    "to vsurie",
+    "upon usury",
+    "upon interest",
+    "upon interest",
+    "in usury",
+    "at interest"
+   ],
+   "n": "The Hebrew 'for' (בְּ) marks what the silver is given in exchange for. Gesenius and BDB both give interest, usury; our English keeps 'interest' for this word in every verse (see Exodus 22:25 on this page)."
+  },
+  "07": {
+   "s": [
+    "for increase",
+    "for profit",
+    "for gain"
+   ],
+   "r": "In return for an increase on the food lent.",
+   "t": [
+    "for increase",
+    "for increase",
+    "any increase",
+    "for increase",
+    "for increase",
+    "and for increase",
+    "for profit"
+   ],
+   "n": "Gesenius gives this word's senses as multitude, then progeny, the increase of a family, and then interest, as if the increase of the principal, citing this verse and comparing Greek τόκος, from τίκτω, to give birth. A related word from the same root, תַּרְבִּית, appears in Leviticus 25:36 on this page; both are rendered 'increase'. Like 'your silver' in the first clause, it stands first in its clause for emphasis."
+  },
+  "08": {
+   "s": [
+    "not",
+    "nor"
+   ],
+   "r": "The second prohibition.",
+   "t": [
+    "nor",
+    "nor",
+    "nor",
+    "nor",
+    "nor",
+    "not",
+    "or"
+   ]
+  },
+  "09": {
+   "s": [
+    "give",
+    "lend",
+    "sell"
+   ],
+   "r": "To hand over food on terms that bring a return.",
+   "t": [
+    "lend",
+    "lende",
+    "exact",
+    "give",
+    "give",
+    "thou givest",
+    "sell"
+   ],
+   "n": "The same verb 'give' as before. The KJV and Geneva say 'lend'; the BSB says 'sell', reading it as food sold for profit; the Douay-Rheims follows the Latin Vulgate, 'exact of him any increase of fruits'."
+  },
+  "10": {
+   "s": [
+    "your food",
+    "your provisions",
+    "your grain"
+   ],
+   "r": "Food lent to the poor brother, to be repaid with more.",
+   "t": [
+    "thy victuals",
+    "thy vitailes",
+    "of fruits",
+    "thy victuals",
+    "thy victuals",
+    "thy food",
+    "your food"
+   ],
+   "n": "Gesenius gives first an eating, then food, especially corn, grain, provision."
+  }
+ },
+ "lxx": {
+  "_extra": {
+   "11": "αὐτῷ (to him): the Greek repeats 'to him' in the second clause, where the Hebrew does not."
+  },
+  "01": {
+   "i": [
+    0
+   ],
+   "m": 0,
+   "n": "The Greek article τὸ stands where the Hebrew has its object marker."
+  },
+  "02": {
+   "i": [
+    1,
+    2
+   ],
+   "m": 1
+  },
+  "03": {
+   "i": [
+    3
+   ],
+   "m": 3
+  },
+  "04": {
+   "i": [
+    4
+   ],
+   "m": 4,
+   "lemma": "δίδωμι",
+   "strong": "G1325",
+   "n": "Dictionary form supplied; the brief gives none. δώσεις, 'you shall give'."
+  },
+  "05": {
+   "i": [
+    5
+   ],
+   "m": 5
+  },
+  "06": {
+   "i": [
+    6
+   ],
+   "m": 6,
+   "n": "τόκος, interest, here in the dative: 'for interest'."
+  },
+  "07": {
+   "i": [
+    7,
+    8
+   ],
+   "m": 8,
+   "n": "πλεονασμός, an increase, a surplus: 'and an increase', as the object of the second 'you shall not give'."
+  },
+  "08": {
+   "i": [
+    9
+   ],
+   "m": 9
+  },
+  "09": {
+   "i": [
+    10
+   ],
+   "m": 10,
+   "lemma": "δίδωμι",
+   "strong": "G1325",
+   "n": "Dictionary form supplied; the brief gives none."
+  },
+  "10": {
+   "i": [
+    12,
+    13,
+    14
+   ],
+   "m": 13,
+   "n": "βρῶμα, food; the Greek makes it plural, 'your foods'."
+  }
+ }
+}

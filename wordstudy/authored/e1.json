@@ -1,0 +1,147 @@
+{
+ "id": "e1",
+ "en": [
+  {"t": "This", "w": ["01"]}, " ",
+  {"t": "they shall give", "w": ["02"]}, ", ",
+  {"t": "everyone", "w": ["03"]}, " ",
+  {"t": "who passes over", "w": ["04"]}, " ",
+  {"t": "to", "w": ["05"]}, " ",
+  {"t": "those enrolled", "w": ["06"]}, ": ",
+  {"t": "half of", "w": ["07"]}, " ",
+  {"t": "the shekel", "w": ["08"]}, ", ",
+  {"t": "by the shekel of", "w": ["09"]}, " ",
+  {"t": "the sanctuary", "w": ["10"]}, " (",
+  {"t": "the shekel", "w": ["13"]}, " is ",
+  {"t": "twenty", "w": ["11"]}, " ",
+  {"t": "gerahs", "w": ["12"]}, "); ",
+  {"t": "half of", "w": ["14"]}, " ",
+  {"t": "the shekel", "w": ["15"]}, " is ",
+  {"t": "a contribution", "w": ["16"]}, " ",
+  {"t": "to the LORD", "w": ["17"]}, "."
+ ],
+ "words": {
+  "01": {
+   "s": ["this", "this is what"],
+   "r": "Points forward to the payment about to be named.",
+   "n": "The word stands first in the Hebrew for emphasis: 'this' is what they give.",
+   "t": ["This", "This", "this", "This", "This", "This", null]
+  },
+  "02": {
+   "s": ["give", "pay", "hand over"],
+   "r": "Each man counted pays the sum.",
+   "n": "Gesenius gives the first sense simply as TO GIVE. The BSB's 'must pay' makes the obligation explicit.",
+   "t": ["they shall give", "shall ... giue", "shall ... give", "they shall give", "they shall give", "they do give", "must pay"]
+  },
+  "03": {
+   "s": ["everyone", "every man", "each one", "all"],
+   "r": "No one counted is exempt.",
+   "t": ["every one", "euery man", "every one", "every one", "every one", "every one", "Everyone"]
+  },
+  "04": {
+   "s": ["passes over", "crosses over", "goes over", "passes"],
+   "r": "Each man who is added to the count.",
+   "n": "Literally 'the one passing over'. Gesenius gives the first sense as TO PASS OVER, properly of crossing a stream. The picture is likely of each man crossing over to join those already counted; that is a reasonable reading of the phrase, not a lexicon statement.",
+   "t": ["that passeth", "that goeth", "that passeth", "that passeth", "that passeth over", "passing over", "who crosses over"]
+  },
+  "05": {
+   "s": ["to", "unto", "among", "over to"],
+   "r": "Toward the group already enrolled.",
+   "n": "The basic sense of this preposition is 'upon' or 'over'; BDB lists 'to' among its uses.",
+   "t": ["among", "into", "at", "among", "unto", "unto", "to"]
+  },
+  "06": {
+   "s": ["those enrolled", "those counted", "those mustered", "the numbered"],
+   "r": "The men entered in the census.",
+   "n": "A passive participle with the article, 'the ones mustered'. BDB gives attend to, visit, muster, and notes that with some constructions the verb is nearly 'number'. Gesenius puts first a root sense he supposes, to strike upon, and from it to visit.",
+   "t": ["them that are numbered", "the nomber", "the naming", "them that are numbered", "them that are numbered", "those numbered", "those counted"]
+  },
+  "07": {
+   "s": ["half of", "half"],
+   "r": "Half a shekel is the sum each man pays.",
+   "n": "Gesenius cites this very verse for the sense 'half'.",
+   "t": ["half", "halfe", "half", "half", "half", "half", "a half"]
+  },
+  "08": {
+   "s": ["shekel"],
+   "r": "The standard weight of silver used for payment.",
+   "n": "A shekel was a weight, not a coin. Gesenius describes it as a certain weight of gold and silver containing twenty gerahs, citing this verse, and says the Hebrews weighed it out for money.",
+   "t": ["a shekel", "a shekel", "a sicle", "a shekel", "a shekel", "a shekel", "shekel"]
+  },
+  "09": {
+   "s": ["by the shekel of", "according to the shekel of", "by the standard of"],
+   "r": "Measured by the official standard weight.",
+   "n": "Gesenius notes that two shekels are distinguished, 'the holy shekel', citing this verse, and 'the royal shekel'. The DRC calls it 'the standard'.",
+   "t": ["after the shekel", "after the shekel", "according to the standard", "after the shekel", "after the shekel", "by the shekel", "according to the ... shekel"]
+  },
+  "10": {
+   "s": ["the sanctuary", "the holy place", "holiness", "the holy"],
+   "r": "The standard kept at the sanctuary, as against any other.",
+   "n": "Literally 'the holiness' or 'the holy thing'. Gesenius gives the first sense as holiness and notes that the noun is often added to another noun in place of an adjective, so 'shekel of the holiness' amounts to his 'holy shekel'. The DRC's 'the temple' names the place.",
+   "t": ["of the sanctuary", "of the Sanctuarie", "of the temple", "of the sanctuary", "of the sanctuary", "of the sanctuary", "sanctuary"]
+  },
+  "11": {
+   "s": ["twenty"],
+   "r": "The number of gerahs in one shekel.",
+   "t": ["twenty", "twentie", "twenty", "twenty", "twenty", "twenty", "twenty"]
+  },
+  "12": {
+   "s": ["gerahs", "grains", "beans"],
+   "r": "The smallest weight, a twentieth of a shekel.",
+   "n": "Gesenius gives the first sense as the cud, then a grain or bean, so called from its round form, and hence the smallest Hebrew weight. The Hebrew noun is singular after the number, as it often is; English needs the plural. The DRC's 'obols' follows the Greek translators, who named a Greek coin.",
+   "t": ["gerahs", "gerahs", "obols", "gerahs", "gerahs", "gerahs", "gerahs"]
+  },
+  "13": {
+   "s": ["the shekel"],
+   "r": "Defines the shekel just named.",
+   "n": "Hebrew has no 'is': literally 'twenty gerah the shekel', a parenthesis fixing the weight.",
+   "t": ["a shekel is", "a shekel is", "A sicle hath", "the shekel is", "the shekel is", "the shekel is", "which weighs"]
+  },
+  "14": {
+   "s": ["half of", "half"],
+   "r": "Repeats the sum, now naming its purpose.",
+   "t": ["an half", "the halfe", "Half", "half", "half", "half", "half"]
+  },
+  "15": {
+   "s": ["the shekel"],
+   "r": "The same holy shekel.",
+   "t": ["shekel", "shekel", "a sicle", "a shekel", "a shekel", "a shekel", "shekel"]
+  },
+  "16": {
+   "s": ["contribution", "offering", "gift", "levy"],
+   "r": "A portion set apart and given to God.",
+   "n": "Gesenius: an oblation, offering, gift, especially a gift brought to the temple and the priests, citing this verse; BDB: contribution, offering. Gesenius derives it from the root רוּם; that root's sense of raising is the source of YLT's 'heave-offering'. Hebrew has no 'is' here.",
+   "t": ["shall be the offering", "shalbe an offring", "shall be offered", "for an offering", "for an offering", "is the heave-offering", "is an offering"]
+  },
+  "17": {
+   "s": ["to the LORD", "for the LORD", "to Yahweh"],
+   "r": "The contribution belongs to God.",
+   "t": ["of the Lord", "to the Lord", "to the Lord", "to HaShem", "to Jehovah", "to Jehovah", "to the LORD"]
+  }
+ },
+ "lxx": {
+  "_extra": {
+   "0": "καὶ (and): added by the Greek translators; nothing in the Hebrew answers to it.",
+   "2": "ἐστιν (is): added; the Greek reads 'and this is what they shall give'.",
+   "3": "ὃ (what): added with the 'is' before it.",
+   "13": "ὅ (which): added; the Greek reads 'which is according to the holy double drachma'.",
+   "14": "ἐστιν (is): added with the 'which' before it.",
+   "24": "δὲ (and, but): added by the Greek translators."
+  },
+  "01": {"i": [1], "m": 1},
+  "02": {"i": [4], "m": 4},
+  "03": {"i": [5, 6], "m": 5, "n": "ὅσοι ἄν, 'as many as'."},
+  "04": {"i": [7], "m": 7, "n": "παραπορεύομαι, 'pass along, pass by'."},
+  "06": {"i": [8, 9], "m": 9, "n": "ἐπίσκεψις, an inspection or census: 'as many as pass by the census'."},
+  "07": {"i": [10, 11], "m": 11},
+  "08": {"i": [12], "m": 12, "n": "Our Greek text has only the article here. A noun for the shekel has probably dropped out after it; that is an inference from the gap."},
+  "09": {"i": [15, 16, 17], "m": 17, "n": "The Greek translators wrote δίδραχμον, the double drachma, for the shekel."},
+  "10": {"i": [18, 19], "m": 19},
+  "11": {"i": [20], "m": 20},
+  "12": {"i": [21], "m": 21, "n": "ὀβολός, the obol, a small Greek coin, for the gerah. The DRC's 'obols' comes from here."},
+  "13": {"i": [22], "m": 22, "n": "Again only the article survives in our Greek text; a noun has probably dropped out after it, as at the first mention of the shekel."},
+  "14": {"i": [23, 25], "m": 25},
+  "15": {"i": [26, 27], "m": 27},
+  "16": {"i": [28], "m": 28, "n": "εἰσφορά, a contribution or levy paid in."},
+  "17": {"i": [29], "m": 29}
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "id": "r6",
+ "en": [
+  {"t": "In this year of", "w": ["01", "03"]}, " ",
+  {"t": "the jubilee", "w": ["02"]}, " ",
+  {"t": "you shall return", "w": ["04"]}, ", ",
+  {"t": "each", "w": ["05"]}, " ",
+  {"t": "to", "w": ["06"]}, " ",
+  {"t": "his possession", "w": ["07"]}, "."
+ ],
+ "words": {
+  "01": {"s": ["in the year of", "in the year"], "r": "The time the law speaks of: the jubilee year.", "t": ["In the year of", "In the yeere of", "In the year of", "In ... year of", "In ... year of", "in the year of", "In ... Year of"],
+         "n": "Literally 'in the year of the jubilee, this'. The word 'this' comes last in Hebrew; our English puts it first, 'in this year of'."},
+  "02": {"s": ["the jubilee", "the ram's horn year"], "r": "The fiftieth year, named after the horn blown to announce it.", "t": ["jubile", "Iubile", "the jubilee", "jubilee", "jubilee", "jubilee", "Jubilee"],
+         "n": "BDB: ram, ram's horn, cornet, and so the name of the fiftieth year, marked by the blowing of cornets. Gesenius thinks it a word imitating a sound, a joyful sound, then a trumpet signal."},
+  "03": {"s": ["this"], "r": "Points to the year just described.", "t": ["this", "this", null, "this", "this", "this", "this"],
+         "n": "The 'this' is feminine, so it most likely belongs with 'year', which is feminine: 'this year of the jubilee', as the JPS, ASV and BSB read it. Gesenius lists the word for jubilee as of common gender, so 'this jubilee' (KJV, Geneva, YLT) is also possible."},
+  "04": {"s": ["you shall return", "you shall go back"], "r": "Everyone goes back to his own land.", "t": ["ye shall return", "ye shall returne", "shall return", "ye shall return", "ye shall return", "ye turn back", "shall return"],
+         "n": "The ordinary verb 'to turn back, return', plural, addressed to the whole people."},
+  "05": {"s": ["each", "every man", "each one"], "r": "Every person, one by one.", "t": ["every man", "euery man", "all", "every man", "every man", "each", "each of you"],
+         "n": "The word for 'man' used in the sense 'each'."},
+  "06": {"s": ["to", "unto"], "r": "Direction of the return.", "t": ["unto", "vnto", "to", "unto", "unto", "unto", "to"]},
+  "07": {"s": ["his possession", "his property", "his land holding"], "r": "The land that belonged to his family.", "t": ["his possession", "his possession", "their possessions", "his possession", "his possession", "his possession", "his own property"],
+         "n": "Gesenius: possession, especially of lands and fields. This is a different word from 'inheritance' (נַחֲלָה), and our English keeps it apart as 'possession'."}
+ },
+ "lxx": {
+  "01": {"i": [0, 1, 2], "m": 2, "n": "ἐν τῷ ἔτει, 'in the year'."},
+  "02": {"i": [3, 4, 5], "m": 5, "n": "The Greek again does not keep the Hebrew word: 'of the release, a signal', τῆς ἀφέσεως σημασίᾳ, as in Leviticus 25:10 on this page. σημασία, a signal, answers the horn blast behind the Hebrew name. τῆς, 'the', has no dictionary form in our data; it is the article ὁ."},
+  "03": {"i": [6], "m": 6, "n": "The Greek has αὐτῆς, 'its' ('its signal'), where the Hebrew has 'this'."},
+  "04": {"i": [7], "m": 7, "n": "ἐπανέρχομαι, to come back, return; singular in the Greek, 'he shall return', with no word for 'each'."},
+  "06": {"i": [8, 9], "m": 8},
+  "07": {"i": [10, 11], "m": 10, "n": "κτῆσις, a possession, property acquired."}
+ }
+}

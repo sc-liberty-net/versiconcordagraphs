@@ -1,0 +1,693 @@
+{
+ "id": "t4",
+ "en": [
+  {
+   "t": "But",
+   "w": [
+    "02"
+   ]
+  },
+  " ",
+  {
+   "t": "so that",
+   "w": [
+    "01"
+   ]
+  },
+  " ",
+  {
+   "t": "we do not cause them to stumble",
+   "w": [
+    "04",
+    "03",
+    "05"
+   ]
+  },
+  ", ",
+  {
+   "t": "go",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "to",
+   "w": [
+    "07"
+   ]
+  },
+  " the ",
+  {
+   "t": "sea",
+   "w": [
+    "09"
+   ]
+  },
+  ", ",
+  {
+   "t": "cast",
+   "w": [
+    "10"
+   ]
+  },
+  " ",
+  {
+   "t": "a hook",
+   "w": [
+    "11"
+   ]
+  },
+  ", ",
+  {
+   "t": "and",
+   "w": [
+    "12"
+   ]
+  },
+  " ",
+  {
+   "t": "take up",
+   "w": [
+    "17"
+   ]
+  },
+  " ",
+  {
+   "t": "the",
+   "w": [
+    "13"
+   ]
+  },
+  " ",
+  {
+   "t": "fish",
+   "w": [
+    "16"
+   ]
+  },
+  " ",
+  {
+   "t": "that comes up",
+   "w": [
+    "14"
+   ]
+  },
+  " ",
+  {
+   "t": "first",
+   "w": [
+    "15"
+   ]
+  },
+  "; ",
+  {
+   "t": "and",
+   "w": [
+    "18"
+   ]
+  },
+  " ",
+  {
+   "t": "when you have opened",
+   "w": [
+    "19"
+   ]
+  },
+  " ",
+  {
+   "t": "its",
+   "w": [
+    "22"
+   ]
+  },
+  " ",
+  {
+   "t": "mouth",
+   "w": [
+    "21",
+    "20"
+   ]
+  },
+  ", ",
+  {
+   "t": "you will find",
+   "w": [
+    "23"
+   ]
+  },
+  " a ",
+  {
+   "t": "stater",
+   "w": [
+    "24"
+   ]
+  },
+  ". ",
+  {
+   "t": "Take",
+   "w": [
+    "26"
+   ]
+  },
+  " ",
+  {
+   "t": "that",
+   "w": [
+    "25"
+   ]
+  },
+  " and ",
+  {
+   "t": "give",
+   "w": [
+    "27"
+   ]
+  },
+  " ",
+  {
+   "t": "it",
+   "sup": "Supplied in English. The Greek leaves the object of 'give' unstated."
+  },
+  " ",
+  {
+   "t": "to them",
+   "w": [
+    "28"
+   ]
+  },
+  " ",
+  {
+   "t": "for",
+   "w": [
+    "29"
+   ]
+  },
+  " ",
+  {
+   "t": "me",
+   "w": [
+    "30"
+   ]
+  },
+  " ",
+  {
+   "t": "and",
+   "w": [
+    "31"
+   ]
+  },
+  " ",
+  {
+   "t": "you",
+   "w": [
+    "32"
+   ]
+  },
+  ".’"
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "so that",
+    "in order that"
+   ],
+   "r": "Introduces the purpose of what Jesus tells Peter to do.",
+   "t": [
+    "lest",
+    "lest",
+    "that",
+    "lest",
+    "that",
+    "so that"
+   ]
+  },
+  "02": {
+   "s": [
+    "but",
+    "however",
+    "nevertheless"
+   ],
+   "r": "Sets what they will do against the freedom just stated.",
+   "t": [
+    "Notwithstanding",
+    "Neuerthelesse",
+    "But",
+    "But",
+    "but",
+    "But"
+   ]
+  },
+  "03": {
+   "s": [
+    "not"
+   ],
+   "r": "Negates the purpose: so that they are not made to stumble.",
+   "n": "With 'so that' it forms 'so that not', which the KJV, Geneva and ASV render 'lest'.",
+   "t": [
+    null,
+    null,
+    "not",
+    null,
+    "not",
+    "not"
+   ]
+  },
+  "04": {
+   "s": [
+    "cause to stumble",
+    "give offence to",
+    "trip up",
+    "offend"
+   ],
+   "r": "Give the collectors cause to take offence and turn against them.",
+   "n": "Abbott-Smith gives its proper sense as 'to put a snare or stumbling-block in the way'. The KJV's 'offend' once carried this sense; in modern English it suggests only hurt feelings. An aorist subjunctive, first person plural: Jesus includes himself.",
+   "t": [
+    "we should offend",
+    "we should offend",
+    "we may ... scandalize",
+    "we cause ... to stumble",
+    "we may ... cause ... to stumble",
+    "we may ... offend"
+   ]
+  },
+  "05": {
+   "s": [
+    "them"
+   ],
+   "r": "The collectors of the double drachmas.",
+   "t": [
+    "them",
+    "them",
+    "them",
+    "them",
+    "them",
+    "them"
+   ]
+  },
+  "06": {
+   "s": [
+    "go",
+    "having gone",
+    "going"
+   ],
+   "r": "Peter is to go down to the lake.",
+   "n": "An aorist participle, literally 'having gone', joined to the command 'cast'; English makes it a command of its own.",
+   "t": [
+    "go thou",
+    "goe",
+    "go",
+    "go thou",
+    "having gone",
+    "go"
+   ]
+  },
+  "07": {
+   "s": [
+    "to"
+   ],
+   "r": "Direction of his going.",
+   "t": [
+    "to",
+    "to",
+    "to",
+    "to",
+    "to",
+    "to"
+   ]
+  },
+  "09": {
+   "s": [
+    "sea",
+    "lake"
+   ],
+   "r": "The Sea of Galilee, beside Capernaum.",
+   "n": "The Greek word is 'sea'; it is used here of the lake on which Capernaum stands.",
+   "t": [
+    "sea",
+    "sea",
+    "sea",
+    "sea",
+    "sea",
+    "sea"
+   ]
+  },
+  "10": {
+   "s": [
+    "cast",
+    "throw",
+    "throw out"
+   ],
+   "r": "Throw a line into the water.",
+   "t": [
+    "cast",
+    "cast in",
+    "cast in",
+    "cast",
+    "cast",
+    "cast"
+   ]
+  },
+  "11": {
+   "s": [
+    "a hook",
+    "a fishhook",
+    "a line"
+   ],
+   "r": "A fishing hook, not a net.",
+   "n": "Abbott-Smith derives it from ἄγκος, a bend, and defines it 'a fish-hook'; this verse is its only New Testament occurrence. The Geneva's 'angle' is the old word for a fishhook.",
+   "t": [
+    "an hook",
+    "an angle",
+    "a hook",
+    "a hook",
+    "a hook",
+    "a hook"
+   ]
+  },
+  "12": {
+   "s": [
+    "and"
+   ],
+   "r": "Joins the next command.",
+   "t": [
+    "and",
+    "and",
+    "and",
+    "and",
+    "and",
+    "and"
+   ]
+  },
+  "13": {
+   "s": [
+    "the"
+   ],
+   "r": "The particular fish described next.",
+   "t": [
+    "the",
+    "the",
+    "that",
+    "the",
+    "the",
+    "the"
+   ]
+  },
+  "14": {
+   "s": [
+    "that comes up",
+    "that rises",
+    "coming up"
+   ],
+   "r": "The fish that rises to the hook.",
+   "n": "An aorist participle of 'go up'; with 'first', the first fish to come up.",
+   "t": [
+    "that ... cometh up",
+    "that commeth vp",
+    "which shall ... come up",
+    "that ... cometh up",
+    "that hath come up",
+    "you catch"
+   ]
+  },
+  "15": {
+   "s": [
+    "first"
+   ],
+   "r": "The very first fish, no other.",
+   "t": [
+    "first",
+    "first",
+    "first",
+    "first",
+    "first",
+    "first"
+   ]
+  },
+  "16": {
+   "s": [
+    "fish"
+   ],
+   "r": "The fish that will carry the coin.",
+   "t": [
+    "fish",
+    "fish",
+    "fish",
+    "fish",
+    "fish",
+    "fish"
+   ]
+  },
+  "17": {
+   "s": [
+    "take up",
+    "take",
+    "pull out",
+    "lift out"
+   ],
+   "r": "Draw the fish out of the water.",
+   "n": "Abbott-Smith's first sense is 'to raise, take up, lift or draw up'.",
+   "t": [
+    "take up",
+    "take",
+    "take",
+    "take up",
+    "take thou up",
+    "take"
+   ]
+  },
+  "18": {
+   "s": [
+    "and"
+   ],
+   "r": "Joins the next step.",
+   "t": [
+    "and",
+    "and",
+    "and",
+    "and",
+    "and",
+    null
+   ]
+  },
+  "19": {
+   "s": [
+    "when you have opened",
+    "having opened",
+    "opening"
+   ],
+   "r": "Peter opens the fish's mouth.",
+   "n": "An aorist participle, literally 'having opened'.",
+   "t": [
+    "when thou hast opened",
+    "when thou hast opened",
+    "when thou hast opened",
+    "when thou hast opened",
+    "having opened",
+    "When you open"
+   ]
+  },
+  "20": {
+   "s": [
+    "the"
+   ],
+   "r": "With 'its', marks the fish's mouth.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "21": {
+   "s": [
+    "mouth"
+   ],
+   "r": "The fish's mouth, where the coin lies.",
+   "n": "Abbott-Smith lists this verse under the mouth of animals.",
+   "t": [
+    "mouth",
+    "mouth",
+    "mouth",
+    "mouth",
+    "mouth",
+    "mouth"
+   ]
+  },
+  "22": {
+   "s": [
+    "its",
+    "his"
+   ],
+   "r": "The fish's.",
+   "n": "Older English used 'his' for 'its', as the KJV, Geneva and ASV do here.",
+   "t": [
+    "his",
+    "his",
+    "it's",
+    "his",
+    "its",
+    "its"
+   ]
+  },
+  "23": {
+   "s": [
+    "you will find",
+    "you shall find"
+   ],
+   "r": "A promise of what Peter will find.",
+   "n": "A future tense: Jesus states the outcome before it happens.",
+   "t": [
+    "thou shalt find",
+    "thou shalt finde",
+    "thou shalt find",
+    "thou shalt find",
+    "thou shalt find",
+    "you will find"
+   ]
+  },
+  "24": {
+   "s": [
+    "stater",
+    "four-drachma coin",
+    "tetradrachm"
+   ],
+   "r": "A coin worth four drachmas.",
+   "n": "Abbott-Smith gives 'a stater', first a weight, then a coin, the name late writers used for the Greek four-drachma piece; this is its only New Testament verse. Four drachmas is two double drachmas, so a reasonable reading is that the one coin pays the due for two, Jesus and Peter, as 'for me and you' says. The translations range from 'a piece of money' (KJV) and 'a shekel' (ASV) to 'a four-drachma coin' (BSB).",
+   "t": [
+    "a piece of money",
+    "a piece of twentie pence",
+    "a stater",
+    "a shekel",
+    "a stater",
+    "a four-drachma coin"
+   ]
+  },
+  "25": {
+   "s": [
+    "that",
+    "that one",
+    "it"
+   ],
+   "r": "The stater just found.",
+   "t": [
+    "that",
+    "that",
+    "that",
+    "that",
+    "that",
+    "it"
+   ]
+  },
+  "26": {
+   "s": [
+    "take",
+    "having taken",
+    "taking"
+   ],
+   "r": "Peter is to take the coin.",
+   "n": "An aorist participle, literally 'having taken', joined to the command 'give'.",
+   "t": [
+    "take",
+    "take",
+    "take",
+    "take",
+    "having taken",
+    "Take"
+   ]
+  },
+  "27": {
+   "s": [
+    "give",
+    "hand over",
+    "pay"
+   ],
+   "r": "Hand the coin over to the collectors.",
+   "t": [
+    "give",
+    "giue",
+    "give",
+    "give",
+    "give",
+    "give"
+   ]
+  },
+  "28": {
+   "s": [
+    "to them"
+   ],
+   "r": "The collectors.",
+   "t": [
+    "unto them",
+    "vnto them",
+    "to them",
+    "unto them",
+    "to them",
+    "to them"
+   ]
+  },
+  "29": {
+   "s": [
+    "for",
+    "in place of",
+    "on behalf of"
+   ],
+   "r": "The coin stands in place of the payment each owes.",
+   "n": "Abbott-Smith's second sense is 'instead of, in place of, for', and he lists this verse under it.",
+   "t": [
+    "for",
+    "for",
+    "for",
+    "for",
+    "for",
+    "for"
+   ]
+  },
+  "30": {
+   "s": [
+    "me"
+   ],
+   "r": "Jesus.",
+   "t": [
+    "me",
+    "me",
+    "me",
+    "me",
+    "me",
+    "My tax"
+   ]
+  },
+  "31": {
+   "s": [
+    "and"
+   ],
+   "r": "Joins Peter to Jesus in the one payment.",
+   "t": [
+    "and",
+    "and",
+    "and",
+    "and",
+    "and",
+    "and"
+   ]
+  },
+  "32": {
+   "s": [
+    "you"
+   ],
+   "r": "Peter.",
+   "n": "Singular: Peter alone, not the disciples.",
+   "t": [
+    "thee",
+    "thee",
+    "thee",
+    "thee",
+    "thee",
+    "yours"
+   ]
+  }
+ },
+ "tr_note": "The Textus Receptus has the article τὴν before 'sea', which our text lacks. English needs 'the' either way, so the KJV's 'to the sea' and ours read alike."
+}

@@ -1,0 +1,413 @@
+{
+ "id": "u9",
+ "en": [
+  {
+   "t": "And also",
+   "w": [
+    "01"
+   ]
+  },
+  " ",
+  {
+   "t": "I",
+   "w": [
+    "02"
+   ]
+  },
+  ", ",
+  {
+   "t": "my brothers",
+   "w": [
+    "03"
+   ]
+  },
+  ", ",
+  {
+   "t": "and my young men",
+   "w": [
+    "04"
+   ]
+  },
+  " ",
+  {
+   "t": "are exacting",
+   "w": [
+    "05"
+   ]
+  },
+  " ",
+  {
+   "t": "from them",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "silver",
+   "w": [
+    "07"
+   ]
+  },
+  " ",
+  {
+   "t": "and grain",
+   "w": [
+    "08"
+   ]
+  },
+  ". ",
+  {
+   "t": "Let us leave off",
+   "w": [
+    "09"
+   ]
+  },
+  ", ",
+  {
+   "t": "please",
+   "w": [
+    "10"
+   ]
+  },
+  ", ",
+  {
+   "t": "this",
+   "w": [
+    "13"
+   ]
+  },
+  " ",
+  {
+   "t": "usury",
+   "w": [
+    "12",
+    "11"
+   ]
+  },
+  "."
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "and also",
+    "and even",
+    "moreover"
+   ],
+   "r": "Nehemiah puts himself in the same position as the creditors he has just rebuked.",
+   "n": "Gesenius explains the particle as properly 'addition', and so 'also'; BDB notes it usually stresses the word right after it, here 'I'.",
+   "t": [
+    "likewise",
+    "euen",
+    "Both",
+    "And ... likewise",
+    "And ... likewise",
+    "And also",
+    "as well as"
+   ]
+  },
+  "02": {
+   "s": [
+    "I",
+    "I myself"
+   ],
+   "r": "Nehemiah himself.",
+   "n": "The Hebrew writes the pronoun out, which the brief's lexicon says is usually for emphasis: I too.",
+   "t": [
+    "I",
+    "I",
+    "I",
+    "I",
+    "I",
+    "I",
+    "I"
+   ]
+  },
+  "03": {
+   "s": [
+    "my brothers",
+    "my kinsmen",
+    "my relatives"
+   ],
+   "r": "Nehemiah's own kin.",
+   "n": "The word can mean a brother of the same parents or, more widely, a relative or member of the same people; BDB records the wider sense. There is no 'and' before it in the Hebrew: 'I, my brothers, and my young men'.",
+   "t": [
+    "my brethren",
+    "my brethren",
+    "my brethren",
+    "my brethren",
+    "my brethren",
+    "my brethren",
+    "my brothers"
+   ]
+  },
+  "04": {
+   "s": [
+    "my young men",
+    "my servants",
+    "my attendants",
+    "my retainers"
+   ],
+   "r": "The young men in Nehemiah's service.",
+   "n": "Gesenius gives the first sense as a boy or young man; the brief's lexicon adds servant or retainer, which is how every translation here takes it. 'Young men' keeps this word apart from the usual Hebrew word for a slave or servant. BDB's line in this brief, 'a shaking, scattering', belongs to a different word spelled the same way.",
+   "t": [
+    "and my servants",
+    "and my seruants",
+    "and my servants",
+    "and my servants",
+    "and my servants",
+    "and my servants",
+    "and my servants"
+   ]
+  },
+  "05": {
+   "s": [
+    "are exacting",
+    "are claiming",
+    "are pressing as creditors"
+   ],
+   "r": "They have been pressing the poorer Jews as creditors.",
+   "n": "A participle, so the action is going on: 'are exacting'. The brief's lexicon gives the verb as to lend, be a creditor, and its participle as a noun is the 'creditor' of Exodus 22:25 on this page; our English renders it 'exact' and keeps 'lend' for a different verb. Most translations here say 'lend'; the KJV's 'might exact' and YLT's 'are exacting' take it as we do.",
+   "t": [
+    "might exact",
+    "doe lende",
+    "have lent",
+    "have lent",
+    "do lend",
+    "are exacting",
+    "have been lending"
+   ]
+  },
+  "06": {
+   "s": [
+    "from them",
+    "of them",
+    "on them"
+   ],
+   "r": "The people the claim is made against.",
+   "n": "Literally 'in them' or 'on them'; with this verb the preposition marks the person the claim is made against, so English says 'from'.",
+   "t": [
+    "of them",
+    "them",
+    "to many",
+    "them",
+    "them",
+    "of them",
+    "the people"
+   ]
+  },
+  "07": {
+   "s": [
+    "silver",
+    "money"
+   ],
+   "r": "Silver lent as money.",
+   "n": "Gesenius gives the first sense as silver, so called from its pale colour; it was weighed out for payment, so most translations say 'money'.",
+   "t": [
+    "money",
+    "money",
+    "money",
+    "money",
+    "money",
+    "silver",
+    "money"
+   ]
+  },
+  "08": {
+   "s": [
+    "and grain",
+    "and corn"
+   ],
+   "r": "Grain lent for food and seed.",
+   "n": "Gesenius: corn, that is grain; the older translations' 'corn' means grain in general, not maize.",
+   "t": [
+    "and corn",
+    "and corne",
+    "and corn",
+    "and corn",
+    "and grain",
+    "and corn",
+    "and grain"
+   ]
+  },
+  "09": {
+   "s": [
+    "let us leave off",
+    "let us abandon",
+    "let us give up",
+    "let us let go"
+   ],
+   "r": "Nehemiah calls on all the lenders, himself included, to give up the practice.",
+   "n": "The form is first person plural, 'let us leave'; the brief's morphology tag ('infinitive construct') does not fit it, and every translation here reads 'let us'. Gesenius gives the first sense as to loosen bands, to let go, and BDB 'leave, forsake, loose'.",
+   "t": [
+    "let us leave off",
+    "let vs leaue off",
+    "let us forgive",
+    "let us leave off",
+    "let us leave off",
+    "let us leave off",
+    "let us stop"
+   ]
+  },
+  "10": {
+   "s": [
+    "please",
+    "I pray you",
+    "now"
+   ],
+   "r": "Softens the call into an appeal.",
+   "n": "Gesenius: a particle of submissive and modest request.",
+   "t": [
+    "I pray you",
+    "I pray you",
+    null,
+    "I pray you",
+    "I pray you",
+    "I pray you",
+    "Please"
+   ]
+  },
+  "11": {
+   "s": [
+    "(object marker, no English equivalent)"
+   ],
+   "r": "Marks 'this usury' as the object of 'let us leave off'.",
+   "n": "This small word marks a definite direct object and has no English equivalent; it is counted here with 'usury'.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "12": {
+   "s": [
+    "usury",
+    "exaction",
+    "a creditor's claim",
+    "debt"
+   ],
+   "r": "The claims the creditors were holding against the poor, with the repayment they demanded.",
+   "n": "BDB: lending on interest, or usury; Gesenius gives first 'usury', citing Nehemiah 5:7, and then 'a debt'. Gesenius derives it from the root נָשָׁא, and under the verb earlier in the verse he notes that verb is also written נָשָׁא, so noun and verb are of one family; our English gives the noun 'usury' to keep it apart from 'interest' (נֶשֶׁךְ) and 'increase'. Whether Nehemiah admits to charging interest or only to holding debts is a matter of reading, and the Douay-Rheims takes it as 'the debt'.",
+   "t": [
+    "usury",
+    "burden",
+    "the debt",
+    "exaction",
+    "usury",
+    "usury",
+    "usury"
+   ]
+  },
+  "13": {
+   "s": [
+    "this"
+   ],
+   "r": "Points to the practice just described.",
+   "n": "In Hebrew 'this' takes the article when it describes a noun: 'the usury, the this'.",
+   "t": [
+    "this",
+    "this",
+    null,
+    "this",
+    "this",
+    "this",
+    "this"
+   ]
+  }
+ },
+ "lxx": {
+  "_extra": {
+   "8": "καὶ (and): the Greek reorders the list as 'my brothers and my acquaintances and I', joining the last with 'and'.",
+   "16": "δὲ (and, but): added by the Greek translators."
+  },
+  "01": {
+   "i": [
+    0
+   ],
+   "m": 0
+  },
+  "02": {
+   "i": [
+    9
+   ],
+   "m": 9
+  },
+  "03": {
+   "i": [
+    1,
+    2,
+    3
+   ],
+   "m": 2
+  },
+  "04": {
+   "i": [
+    4,
+    5,
+    6,
+    7
+   ],
+   "m": 6,
+   "n": "γνωστός, 'acquaintance, one known': the Greek has 'my acquaintances' where the Hebrew has 'my young men'."
+  },
+  "05": {
+   "i": [
+    10
+   ],
+   "m": 10,
+   "lemma": "τίθημι",
+   "strong": "G5087",
+   "n": "Dictionary form supplied; the brief gives none. ἐθήκαμεν, 'we have placed (with them)', that is, deposited or lent."
+  },
+  "06": {
+   "i": [
+    11
+   ],
+   "m": 11
+  },
+  "07": {
+   "i": [
+    12
+   ],
+   "m": 12,
+   "n": "ἀργύριον, silver used as money."
+  },
+  "08": {
+   "i": [
+    13,
+    14
+   ],
+   "m": 14
+  },
+  "09": {
+   "i": [
+    15
+   ],
+   "m": 15,
+   "lemma": "ἐγκαταλείπω",
+   "strong": "G1459",
+   "n": "Dictionary form supplied; the brief gives none, and Swete spells the prefix ἐν- unassimilated. The Greek is a past tense, 'we left off', where the Hebrew says 'let us leave off'."
+  },
+  "12": {
+   "i": [
+    17,
+    18
+   ],
+   "m": 18,
+   "n": "ἀπαίτησις, a demand for repayment: 'this demand'. The Greek seems to take the Hebrew noun as the claim on the debt rather than as interest; that is an inference from the choice of word."
+  },
+  "13": {
+   "i": [
+    19
+   ],
+   "m": 19,
+   "lemma": "οὗτος",
+   "strong": "G3778",
+   "n": "Dictionary form supplied; the brief gives none."
+  }
+ }
+}

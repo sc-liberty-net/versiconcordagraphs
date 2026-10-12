@@ -1,0 +1,229 @@
+{
+ "id": "g3",
+ "en": [
+  {
+   "t": "Mine is",
+   "w": [
+    "01"
+   ]
+  },
+  " ",
+  {
+   "t": "the silver",
+   "w": [
+    "02"
+   ]
+  },
+  ", ",
+  {
+   "t": "and mine is",
+   "w": [
+    "03"
+   ]
+  },
+  " ",
+  {
+   "t": "the gold",
+   "w": [
+    "04"
+   ]
+  },
+  ", ",
+  {
+   "t": "declares",
+   "w": [
+    "05"
+   ]
+  },
+  " ",
+  {
+   "t": "the LORD",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "of hosts",
+   "w": [
+    "07"
+   ]
+  },
+  "."
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "mine",
+    "belongs to me",
+    "is mine"
+   ],
+   "r": "God claims the silver as his own.",
+   "n": "Literally 'to me the silver': Hebrew uses 'to' with the owner and no verb. 'To me' stands first for emphasis.",
+   "t": [
+    "is mine",
+    "is mine",
+    "is mine",
+    "Mine is",
+    "is mine",
+    "Mine is",
+    "is Mine"
+   ]
+  },
+  "02": {
+   "s": [
+    "silver",
+    "the silver"
+   ],
+   "r": "All the silver there is.",
+   "n": "Gesenius says silver is so called from its pale colour; BDB lists silver as wealth among its uses.",
+   "t": [
+    "The silver",
+    "The siluer",
+    "The silver",
+    "the silver",
+    "The silver",
+    "the silver",
+    "The silver"
+   ]
+  },
+  "03": {
+   "s": [
+    "and mine",
+    "and belongs to me"
+   ],
+   "r": "The same claim, made for the gold.",
+   "t": [
+    "and ... is mine",
+    "and ... is mine",
+    "and ... is mine",
+    "and Mine",
+    "and ... is mine",
+    "and Mine",
+    "and ... is Mine"
+   ]
+  },
+  "04": {
+   "s": [
+    "gold",
+    "the gold"
+   ],
+   "r": "All the gold there is.",
+   "n": "BDB lists gold as wealth among its uses.",
+   "t": [
+    "the gold",
+    "the golde",
+    "the gold",
+    "the gold",
+    "the gold",
+    "the gold",
+    "the gold"
+   ]
+  },
+  "05": {
+   "s": [
+    "declares",
+    "says",
+    "utterance of",
+    "declaration of"
+   ],
+   "r": "Marks the words as the LORD's own.",
+   "n": "A noun, not a verb: literally 'utterance of the LORD of hosts'. The brief's lexicon notes that it almost always stands before the divine name. YLT keeps the noun, 'An affirmation of'.",
+   "t": [
+    "saith",
+    "sayth",
+    "saith",
+    "saith",
+    "saith",
+    "An affirmation",
+    "declares"
+   ]
+  },
+  "06": {
+   "s": [
+    "the LORD",
+    "Yahweh",
+    "Jehovah",
+    "HaShem"
+   ],
+   "r": "The personal name of Israel's God.",
+   "t": [
+    "the Lord",
+    "the Lord",
+    "the Lord",
+    "HaShem",
+    "Jehovah",
+    "Jehovah",
+    "the LORD"
+   ]
+  },
+  "07": {
+   "s": [
+    "of hosts",
+    "of armies",
+    "of the heavenly armies"
+   ],
+   "r": "God as commander of armies.",
+   "n": "Gesenius gives the first sense as army, host; BDB notes its use in the name of the LORD as God of war.",
+   "t": [
+    "of hosts",
+    "of hostes",
+    "of hosts",
+    "of hosts",
+    "of hosts",
+    "of Hosts",
+    "of Hosts"
+   ]
+  }
+ },
+ "lxx": {
+  "01": {
+   "i": [
+    0
+   ],
+   "m": 0,
+   "n": "ἐμός, 'mine'."
+  },
+  "02": {
+   "i": [
+    1,
+    2
+   ],
+   "m": 2
+  },
+  "03": {
+   "i": [
+    3,
+    4
+   ],
+   "m": 4
+  },
+  "04": {
+   "i": [
+    5,
+    6
+   ],
+   "m": 6
+  },
+  "05": {
+   "i": [
+    7
+   ],
+   "m": 7,
+   "n": "λέγει, 'says': the Greek turns the noun into a verb."
+  },
+  "06": {
+   "i": [
+    8
+   ],
+   "m": 8
+  },
+  "07": {
+   "i": [
+    9
+   ],
+   "m": 9,
+   "n": "παντοκράτωρ, 'ruler of all', for 'of hosts'. Our Greek text prints it as αντοκράτωρ, missing its first letter."
+  }
+ }
+}

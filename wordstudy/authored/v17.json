@@ -1,0 +1,301 @@
+{
+ "id": "v17",
+ "en": [
+  {
+   "t": "Now",
+   "w": [
+    "03"
+   ]
+  },
+  " ",
+  {
+   "t": "after",
+   "w": [
+    "01"
+   ]
+  },
+  " ",
+  {
+   "t": "several",
+   "w": [
+    "04"
+   ]
+  },
+  " ",
+  {
+   "t": "years",
+   "w": [
+    "02"
+   ]
+  },
+  " ",
+  {
+   "t": "I arrived",
+   "w": [
+    "11"
+   ]
+  },
+  " ",
+  {
+   "t": "to do",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "alms",
+   "w": [
+    "05"
+   ]
+  },
+  " ",
+  {
+   "t": "for",
+   "w": [
+    "07"
+   ]
+  },
+  " ",
+  {
+   "t": "my",
+   "w": [
+    "10"
+   ]
+  },
+  " ",
+  {
+   "t": "nation",
+   "w": [
+    "09",
+    "08"
+   ]
+  },
+  ", ",
+  {
+   "t": "and",
+   "w": [
+    "12"
+   ]
+  },
+  " ",
+  {
+   "t": "offerings",
+   "w": [
+    "13"
+   ]
+  },
+  ","
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "after",
+    "through"
+   ],
+   "r": "After an interval of years.",
+   "n": "Literally 'through'; with a span of time it marks the time passed in between: after.",
+   "t": [
+    "after",
+    "after",
+    "after",
+    "after",
+    "after",
+    "After"
+   ]
+  },
+  "02": {
+   "s": [
+    "years"
+   ],
+   "r": "The span of Paul's absence.",
+   "t": [
+    "years",
+    "yeres",
+    "years",
+    "years",
+    "years",
+    "years"
+   ]
+  },
+  "03": {
+   "s": [
+    "now",
+    "and",
+    "then"
+   ],
+   "r": "Moves the account on to his visit.",
+   "t": [
+    "Now",
+    "Now",
+    "Now",
+    "Now",
+    "And",
+    "then"
+   ]
+  },
+  "04": {
+   "s": [
+    "several",
+    "many",
+    "a number of",
+    "more"
+   ],
+   "r": "A fair number of years.",
+   "n": "A comparative, literally 'more years', used for a fair number; the ASV's 'some' and the BSB's 'several' keep it modest.",
+   "t": [
+    "many",
+    "many",
+    "many",
+    "some",
+    "many",
+    "several"
+   ]
+  },
+  "05": {
+   "s": [
+    "alms",
+    "gifts for the poor",
+    "acts of mercy"
+   ],
+   "r": "Gifts brought for the poor of his people.",
+   "n": "Abbott-Smith lists this verse for the phrase 'do alms', ποιεῖν ἐλεημοσύνην, the same phrase as in Matthew 6:2. Plural here: several gifts.",
+   "t": [
+    "alms",
+    "almes",
+    "alms",
+    "alms",
+    "kind acts",
+    "alms"
+   ]
+  },
+  "06": {
+   "s": [
+    "to do",
+    "to bring",
+    "to make",
+    "to carry out"
+   ],
+   "r": "A future participle: the purpose of his coming.",
+   "n": "Literally 'about to do'; a future participle with a verb of coming states purpose, as the YLT's 'about to do' shows. The other translations write 'to bring'.",
+   "t": [
+    "to bring",
+    "brought",
+    "to bring",
+    "to bring",
+    "about to do",
+    "to bring"
+   ]
+  },
+  "07": {
+   "s": [
+    "for",
+    "to"
+   ],
+   "r": "The nation the alms were for.",
+   "t": [
+    "to",
+    "to",
+    "to",
+    "to",
+    "to",
+    "to"
+   ]
+  },
+  "08": {
+   "s": [
+    "the"
+   ],
+   "r": "Article; English uses 'my'.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "09": {
+   "s": [
+    "nation",
+    "people"
+   ],
+   "r": "Paul's own people, the Jews.",
+   "n": "The same word that in the plural means 'the Gentiles' in Romans 15:27. Abbott-Smith notes its use in the singular of the Jewish people.",
+   "t": [
+    "nation",
+    "nation",
+    "nation",
+    "nation",
+    "nation",
+    "people"
+   ]
+  },
+  "10": {
+   "s": [
+    "my",
+    "of mine"
+   ],
+   "r": "Paul's own nation.",
+   "t": [
+    "my",
+    "my",
+    "my",
+    "my",
+    "my",
+    "my"
+   ]
+  },
+  "11": {
+   "s": [
+    "I arrived",
+    "I came",
+    "I came up",
+    "I returned"
+   ],
+   "r": "Paul's arrival among his people.",
+   "n": "Abbott-Smith gives 'to come, come up, arrive'. This study writes 'arrived' to keep it apart from the common verb 'come', ἔρχομαι.",
+   "t": [
+    "I came",
+    "I came",
+    "I came",
+    "I came",
+    "I came",
+    "I returned"
+   ]
+  },
+  "12": {
+   "s": [
+    "and"
+   ],
+   "r": "Adds the offerings to the alms.",
+   "t": [
+    "and",
+    "and",
+    "and",
+    "and",
+    "and",
+    "and"
+   ]
+  },
+  "13": {
+   "s": [
+    "offerings",
+    "sacrifices",
+    "gifts"
+   ],
+   "r": "Sacrificial offerings.",
+   "n": "Abbott-Smith derives it from προσφέρω, to bring to, and says that in the New Testament it is used of sacrificial offerings, listing this verse. The Greek lets 'to do' govern it as well as 'alms'.",
+   "t": [
+    "offerings",
+    "offerings",
+    "offerings",
+    "offerings",
+    "offerings",
+    "offerings"
+   ]
+  }
+ },
+ "tr_note": "The word παρεγενόμην, 'I arrived', stands in the KJV's Greek as well, as its 'I came' shows; the Textus Receptus has it in another position in the sentence. The sense is the same in both texts."
+}

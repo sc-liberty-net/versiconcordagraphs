@@ -1,0 +1,27 @@
+{
+ "id": "r8",
+ "en": [
+  {"t": "to proclaim", "w": ["01"]}, " a ",
+  {"t": "welcome", "w": ["04"]}, " ",
+  {"t": "year", "w": ["02"]}, " ",
+  {"t": "of the Lord", "w": ["03"]}, ".’"
+ ],
+ "words": {
+  "01": {"s": ["to proclaim", "to herald", "to announce", "to preach"],
+         "r": "To announce the year publicly, as a herald does.",
+         "n": "Abbott-Smith: 'to be a herald, to proclaim', citing this verse and the one before. It continues the list of what the speaker was sent to do.",
+         "t": ["To preach", "that I should preache", "to preach", "To proclaim", "To proclaim", "to proclaim"]},
+  "02": {"s": ["year", "season", "time"],
+         "r": "A year marked out by God.",
+         "n": "Abbott-Smith gives its proper sense as 'a cycle of time', then simply 'a year'. Coming after the 'release' of Luke 4:18, it is a reasonable reading to hear the year of release, the jubilee, behind it; the Greek itself says only 'year'.",
+         "t": ["year", "yeere", "year", "year", "year", "year"]},
+  "03": {"s": ["of the Lord", "the Lord's"],
+         "r": "The year belongs to God, who grants it.",
+         "n": "There is no article in the Greek. Abbott-Smith notes that the Septuagint uses this word chiefly for יהוה, God's name.",
+         "t": ["of the Lord", "of the Lord", "of the Lord", "of the Lord", "of the Lord", "of the Lord’s"]},
+  "04": {"s": ["welcome", "acceptable", "favourable", "of favour"],
+         "r": "A year of God's favour, gladly received.",
+         "n": "A verbal adjective from δέχομαι, to receive or welcome; Abbott-Smith gives 'acceptable', and notes that the Septuagint uses it chiefly for Hebrew רָצוֹן. The BSB's 'year of the Lord's favor' likely reflects that Hebrew word's sense of favour; our 'welcome' keeps the Greek link to receiving.",
+         "t": ["acceptable", "acceptable", "acceptable", "acceptable", "acceptable", "favor"]}
+ }
+}

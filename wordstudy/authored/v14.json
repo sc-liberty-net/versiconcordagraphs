@@ -1,0 +1,461 @@
+{
+ "id": "v14",
+ "en": [
+  {
+   "t": "On every",
+   "w": [
+    "01"
+   ]
+  },
+  " ",
+  {
+   "t": "first",
+   "w": [
+    "02"
+   ]
+  },
+  " ",
+  {
+   "t": "day",
+   "sup": "Supplied in English. The Greek numeral is feminine, agreeing with an unstated word for day."
+  },
+  " ",
+  {
+   "t": "of the week",
+   "w": [
+    "03"
+   ]
+  },
+  ", let ",
+  {
+   "t": "each",
+   "w": [
+    "04"
+   ]
+  },
+  " ",
+  {
+   "t": "of you",
+   "w": [
+    "05"
+   ]
+  },
+  " ",
+  {
+   "t": "put",
+   "w": [
+    "08"
+   ]
+  },
+  " ",
+  {
+   "t": "by",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "himself",
+   "w": [
+    "07"
+   ]
+  },
+  ", ",
+  {
+   "t": "storing up",
+   "w": [
+    "09"
+   ]
+  },
+  " ",
+  {
+   "t": "whatever",
+   "w": [
+    "10",
+    "11"
+   ]
+  },
+  " ",
+  {
+   "t": "he may be prospered",
+   "w": [
+    "13",
+    "12"
+   ]
+  },
+  ", ",
+  {
+   "t": "so that",
+   "w": [
+    "14"
+   ]
+  },
+  ", ",
+  {
+   "t": "when",
+   "w": [
+    "16"
+   ]
+  },
+  " ",
+  {
+   "t": "I come",
+   "w": [
+    "17"
+   ]
+  },
+  ", ",
+  {
+   "t": "no",
+   "w": [
+    "15"
+   ]
+  },
+  " ",
+  {
+   "t": "collections",
+   "w": [
+    "19"
+   ]
+  },
+  " ",
+  {
+   "t": "may take place",
+   "w": [
+    "20"
+   ]
+  },
+  " ",
+  {
+   "t": "then",
+   "w": [
+    "18"
+   ]
+  },
+  "."
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "on every",
+    "every",
+    "each"
+   ],
+   "r": "Distributive: week by week.",
+   "n": "With a time word, κατά takes each one in turn: every first day. The KJV, DRC and ASV's 'the first day' lose the 'every'.",
+   "t": [
+    "Upon",
+    "Euery",
+    "On",
+    "Upon",
+    "on every",
+    "every"
+   ]
+  },
+  "02": {
+   "s": [
+    "first",
+    "one"
+   ],
+   "r": "The first day of the week.",
+   "n": "Literally 'one': Greek here uses the cardinal number for 'first'.",
+   "t": [
+    "first",
+    "first",
+    "first",
+    "first",
+    "first",
+    "first"
+   ]
+  },
+  "03": {
+   "s": [
+    "of the week",
+    "of the sabbath"
+   ],
+   "r": "The week.",
+   "n": "Literally 'of the sabbath'. Abbott-Smith's entry begins with the seventh day; here, as all the translations take it, the word stands for the week. The Textus Receptus has the plural σαββάτων, with the same sense.",
+   "t": [
+    "of the week",
+    "of the weeke",
+    "of the week",
+    "of the week",
+    "of the week",
+    "week"
+   ]
+  },
+  "04": {
+   "s": [
+    "each",
+    "every one",
+    "each one"
+   ],
+   "r": "Every member, one by one.",
+   "t": [
+    "every one",
+    "euery one",
+    "every one",
+    "each one",
+    "each one",
+    "each"
+   ]
+  },
+  "05": {
+   "s": [
+    "of you"
+   ],
+   "r": "The Corinthians.",
+   "t": [
+    "of you",
+    "of you",
+    "of you",
+    "of you",
+    "of you",
+    "of you"
+   ]
+  },
+  "06": {
+   "s": [
+    "by",
+    "beside",
+    "with"
+   ],
+   "r": "Beside himself: in his own keeping.",
+   "n": "With 'himself', literally 'beside himself'; the likely sense is at home, each keeping his own store until Paul comes.",
+   "t": [
+    "by",
+    "by",
+    "with",
+    "by",
+    "by",
+    "aside"
+   ]
+  },
+  "07": {
+   "s": [
+    "himself"
+   ],
+   "r": "Each giver's own keeping.",
+   "t": [
+    "him",
+    "himselfe",
+    "himself",
+    "him",
+    "him",
+    null
+   ]
+  },
+  "08": {
+   "s": [
+    "put",
+    "set",
+    "lay",
+    "place"
+   ],
+   "r": "A third-person command: let him put.",
+   "n": "Present imperative, which fits a standing practice, week after week.",
+   "t": [
+    "let ... lay",
+    "let ... put aside",
+    "let ... put apart",
+    "let ... lay",
+    "let ... lay",
+    "should set"
+   ]
+  },
+  "09": {
+   "s": [
+    "storing up",
+    "saving up",
+    "laying up",
+    "treasuring up"
+   ],
+   "r": "Building up a store over time.",
+   "n": "This study's fixed rendering for this verb is 'store up treasure'; here it has its own object, 'whatever...', so 'storing up' alone. Abbott-Smith gives 'to lay up, store up' and lists this verse for its use with an accusative of the thing stored.",
+   "t": [
+    "in store",
+    "lay vp",
+    "laying up",
+    "in store",
+    "treasuring up",
+    "saving it up"
+   ]
+  },
+  "10": {
+   "s": [
+    "whatever",
+    "what"
+   ],
+   "r": "Opens the clause naming what is stored.",
+   "n": "With τι and ἐάν it means 'whatever'; the Greek writes the three as separate words.",
+   "t": [
+    "as",
+    "as",
+    "what",
+    "as",
+    "whatever",
+    null
+   ]
+  },
+  "11": {
+   "s": [
+    "ever",
+    "anything"
+   ],
+   "r": "Makes the relative general: whatever.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "12": {
+   "s": [
+    "ever",
+    "if"
+   ],
+   "r": "With the subjunctive, leaves the amount open.",
+   "n": "The Textus Receptus has ἄν, with the same sense.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "13": {
+   "s": [
+    "he may be prospered",
+    "he may prosper",
+    "he may gain",
+    "he may succeed"
+   ],
+   "r": "Each sets aside as his success allows.",
+   "n": "Abbott-Smith gives the root sense 'to help on one's way', and for the passive 'to prosper, be prospered, be successful', listing this verse. The KJV and Geneva supply 'God' as the one who prospers him; the Greek names no one.",
+   "t": [
+    "God hath prospered him",
+    "God hath prospered him",
+    "it shall well please him",
+    "he may prosper",
+    "he may have prospered",
+    "a portion of his income"
+   ]
+  },
+  "14": {
+   "s": [
+    "so that",
+    "in order that"
+   ],
+   "r": "States Paul's purpose.",
+   "t": [
+    "that",
+    "that",
+    "that",
+    "that",
+    "that",
+    "so that"
+   ]
+  },
+  "15": {
+   "s": [
+    "no",
+    "not"
+   ],
+   "r": "Rules out collections at his coming.",
+   "t": [
+    "no",
+    "no",
+    "not",
+    "no",
+    "not",
+    "no"
+   ]
+  },
+  "16": {
+   "s": [
+    "when",
+    "whenever"
+   ],
+   "r": "When Paul arrives, at a time not yet fixed.",
+   "n": "With the subjunctive, it leaves the time open.",
+   "t": [
+    "when",
+    "when",
+    "when",
+    "when",
+    "when",
+    "when"
+   ]
+  },
+  "17": {
+   "s": [
+    "I come",
+    "I arrive"
+   ],
+   "r": "Paul's coming visit.",
+   "t": [
+    "I come",
+    "I come",
+    "I come",
+    "I come",
+    "I may come",
+    "I come"
+   ]
+  },
+  "18": {
+   "s": [
+    "then",
+    "at that time"
+   ],
+   "r": "At Paul's arrival.",
+   "t": [
+    null,
+    "then",
+    "then",
+    null,
+    "then",
+    null
+   ]
+  },
+  "19": {
+   "s": [
+    "collections",
+    "gatherings"
+   ],
+   "r": "Collections made on the spot.",
+   "n": "The same word as 'collection' in 1 Corinthians 16:1, here plural.",
+   "t": [
+    "gatherings",
+    "gatherings",
+    "collections",
+    "collections",
+    "collections",
+    "collections"
+   ]
+  },
+  "20": {
+   "s": [
+    "may take place",
+    "may be made",
+    "may be needed",
+    "may happen"
+   ],
+   "r": "Paul does not want collecting to begin only when he comes.",
+   "t": [
+    "there be",
+    "there be",
+    "be ... to be made",
+    "be made",
+    "may ... be made",
+    "will be needed"
+   ]
+  }
+ },
+ "tr_note": "The Textus Receptus reads σαββάτων, the plural of 'sabbath', and ἄν for ἐάν. Neither changes the sense, and the KJV's 'the first day of the week' would render either text."
+}

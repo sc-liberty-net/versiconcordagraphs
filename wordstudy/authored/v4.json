@@ -1,0 +1,480 @@
+{
+ "id": "v4",
+ "en": [
+  {
+   "t": "For",
+   "w": [
+    "02"
+   ]
+  },
+  " ",
+  {
+   "t": "all",
+   "w": [
+    "01"
+   ]
+  },
+  ", ",
+  {
+   "t": "out of",
+   "w": [
+    "03"
+   ]
+  },
+  " ",
+  {
+   "t": "what",
+   "w": [
+    "04"
+   ]
+  },
+  " ",
+  {
+   "t": "was more than enough",
+   "w": [
+    "05"
+   ]
+  },
+  " ",
+  {
+   "t": "for them",
+   "w": [
+    "06"
+   ]
+  },
+  ", ",
+  {
+   "t": "cast in",
+   "w": [
+    "07"
+   ]
+  },
+  "; ",
+  {
+   "t": "but",
+   "w": [
+    "09"
+   ]
+  },
+  " ",
+  {
+   "t": "she",
+   "w": [
+    "08"
+   ]
+  },
+  ", ",
+  {
+   "t": "out of",
+   "w": [
+    "10"
+   ]
+  },
+  " ",
+  {
+   "t": "her",
+   "w": [
+    "13"
+   ]
+  },
+  " ",
+  {
+   "t": "need",
+   "w": [
+    "12",
+    "11"
+   ]
+  },
+  ", ",
+  {
+   "t": "cast in",
+   "w": [
+    "17"
+   ]
+  },
+  " ",
+  {
+   "t": "all",
+   "w": [
+    "14"
+   ]
+  },
+  " ",
+  {
+   "t": "that",
+   "w": [
+    "15"
+   ]
+  },
+  " ",
+  {
+   "t": "she had",
+   "w": [
+    "16"
+   ]
+  },
+  ", ",
+  {
+   "t": "her",
+   "w": [
+    "21"
+   ]
+  },
+  " ",
+  {
+   "t": "whole",
+   "w": [
+    "18"
+   ]
+  },
+  " ",
+  {
+   "t": "living",
+   "w": [
+    "20",
+    "19"
+   ]
+  },
+  ".’"
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "all",
+    "all of them",
+    "everyone"
+   ],
+   "r": "All the other givers.",
+   "t": [
+    "all they",
+    "they all",
+    "all they",
+    "they all",
+    "all",
+    "they all"
+   ]
+  },
+  "02": {
+   "s": [
+    "for",
+    "because"
+   ],
+   "r": "Gives the reason for Jesus' verdict in the verse before.",
+   "t": [
+    "For",
+    "For",
+    "For",
+    "for",
+    "for",
+    "For"
+   ]
+  },
+  "03": {
+   "s": [
+    "out of",
+    "from"
+   ],
+   "r": "The source their gifts came from.",
+   "t": [
+    "of",
+    "of",
+    "of",
+    "of",
+    "out of",
+    "out of"
+   ]
+  },
+  "04": {
+   "s": [
+    "what",
+    "that which"
+   ],
+   "r": "The article turns the participle into a noun: what was more than enough.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "05": {
+   "s": [
+    "was more than enough",
+    "was over and above",
+    "was left over",
+    "abounded"
+   ],
+   "r": "Their surplus: money beyond what they needed.",
+   "n": "A present participle, literally 'the abounding (part)'. Abbott-Smith's first sense is 'to be over and above', and under the widow's word for need in this verse he names this participle as its opposite. The KJV's 'abundance' and the BSB's 'surplus' turn the participle into a noun.",
+   "t": [
+    "abundance",
+    "superfluitie",
+    "abundance",
+    "superfluity",
+    "abundance",
+    "surplus"
+   ]
+  },
+  "06": {
+   "s": [
+    "for them",
+    "to them",
+    "their"
+   ],
+   "r": "The surplus belonged to the givers.",
+   "n": "Dative, 'to them' or 'for them'; the translations turn it into 'their'.",
+   "t": [
+    "their",
+    "their",
+    "their",
+    "their",
+    "their",
+    "their"
+   ]
+  },
+  "07": {
+   "s": [
+    "cast in",
+    "put in",
+    "gave",
+    "threw in"
+   ],
+   "r": "Their gifts into the treasury.",
+   "n": "The same verb as the widow's 'cast in' later in this verse; Jesus sets the two acts side by side.",
+   "t": [
+    "did cast in",
+    "did cast in",
+    "did cast in",
+    "did cast in",
+    "put in",
+    "contributed"
+   ]
+  },
+  "08": {
+   "s": [
+    "she",
+    "this woman",
+    "this one"
+   ],
+   "r": "The widow, set against all the others.",
+   "n": "A demonstrative, literally 'this one', which sets her apart from 'all'.",
+   "t": [
+    "she",
+    "she",
+    "she",
+    "she",
+    "she",
+    "she"
+   ]
+  },
+  "09": {
+   "s": [
+    "but",
+    "while"
+   ],
+   "r": "Marks the contrast.",
+   "t": [
+    "but",
+    "but",
+    "but",
+    "but",
+    "but",
+    "but"
+   ]
+  },
+  "10": {
+   "s": [
+    "out of",
+    "from"
+   ],
+   "r": "The source of her gift.",
+   "t": [
+    "of",
+    "of",
+    "of",
+    "of",
+    "out of",
+    "out of"
+   ]
+  },
+  "11": {
+   "s": [
+    "the"
+   ],
+   "r": "Article; English uses 'her' instead.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "12": {
+   "s": [
+    "need",
+    "want",
+    "lack",
+    "poverty"
+   ],
+   "r": "Her lack: she had nothing to spare.",
+   "n": "Abbott-Smith gives 'need, want', and cites this verse for it as the opposite of what is over and above. Luke's account, at Luke 21:4, uses a related noun, ὑστέρημα; this study renders Mark's word 'need' and Luke's 'lack' to keep them apart.",
+   "t": [
+    "want",
+    "pouertie",
+    "want",
+    "want",
+    "want",
+    "poverty"
+   ]
+  },
+  "13": {
+   "s": [
+    "her",
+    "of her"
+   ],
+   "r": "Her own need.",
+   "t": [
+    "her",
+    "her",
+    "her",
+    "her",
+    "her",
+    "her"
+   ]
+  },
+  "14": {
+   "s": [
+    "all",
+    "everything"
+   ],
+   "r": "The whole of what she had.",
+   "t": [
+    "all",
+    "all",
+    "all",
+    "all",
+    "all",
+    "all"
+   ]
+  },
+  "15": {
+   "s": [
+    "that",
+    "as much as",
+    "whatever"
+   ],
+   "r": "Takes in everything she had.",
+   "n": "Literally 'as many things as': all, as many things as she had.",
+   "t": [
+    "that",
+    "that",
+    null,
+    "that",
+    "that",
+    null
+   ]
+  },
+  "16": {
+   "s": [
+    "she had",
+    "she was having",
+    "she possessed"
+   ],
+   "r": "Imperfect: what she had to her name.",
+   "n": "The imperfect describes her standing situation, what she owned at the time.",
+   "t": [
+    "she had",
+    "she had",
+    "she had",
+    "she had",
+    "she had",
+    "she had"
+   ]
+  },
+  "17": {
+   "s": [
+    "cast in",
+    "put in",
+    "gave",
+    "threw in"
+   ],
+   "r": "Her gift into the treasury.",
+   "t": [
+    "did cast in",
+    "did cast in",
+    "cast in",
+    "did cast in",
+    "put in",
+    "has put in"
+   ]
+  },
+  "18": {
+   "s": [
+    "whole",
+    "entire",
+    "all"
+   ],
+   "r": "Her entire living, nothing held back.",
+   "n": "A different word from 'all' earlier in the verse: ὅλος means whole, entire. This study keeps 'whole' for it, as the DRC does, where most translations repeat 'all'.",
+   "t": [
+    "all",
+    "all",
+    "whole",
+    "all",
+    "all",
+    null
+   ]
+  },
+  "19": {
+   "s": [
+    "the"
+   ],
+   "r": "Article; English uses 'her'.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "20": {
+   "s": [
+    "living",
+    "livelihood",
+    "means of living",
+    "what she had to live on"
+   ],
+   "r": "What she had to live on.",
+   "n": "Abbott-Smith's second sense, 'living, livelihood, means', with this verse listed. It is not the word for life itself, ζωή, which his entry sets beside it.",
+   "t": [
+    "living",
+    "liuing",
+    "living",
+    "living",
+    "living",
+    "to live on"
+   ]
+  },
+  "21": {
+   "s": [
+    "her",
+    "of her"
+   ],
+   "r": "Her own living.",
+   "t": [
+    "her",
+    "her",
+    "her",
+    "her",
+    "her",
+    null
+   ]
+  }
+ }
+}

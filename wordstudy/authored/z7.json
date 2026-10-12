@@ -1,0 +1,49 @@
+{
+ "id": "z7",
+ "en": [
+  {"t": "If", "w": ["01"]}, " ",
+  {"t": "the ox", "w": ["04"]}, " ",
+  {"t": "gores", "w": ["03"]}, " ",
+  {"t": "a male slave", "w": ["02"]}, " ",
+  {"t": "or", "w": ["05"]}, " ",
+  {"t": "a female slave", "w": ["06"]}, ", ",
+  {"t": "he shall give", "w": ["10"]}, " ",
+  {"t": "thirty", "w": ["08"]}, " ",
+  {"t": "shekels", "w": ["09"]}, " ",
+  {"t": "of silver", "w": ["07"]}, " ",
+  {"t": "to his master", "w": ["11"]}, ", ",
+  {"t": "and the ox", "w": ["12"]}, " ",
+  {"t": "shall be stoned", "w": ["13"]}, "."
+ ],
+ "words": {
+  "01": {"s": ["if"], "r": "Opens the case.", "t": ["If", "If", "If", "If", "If", "If", "If"]},
+  "02": {"s": ["a male slave", "a slave", "a manservant", "a bondman"], "r": "A man owned by another.", "n": "Gesenius: a servant, who among the Hebrews was commonly a slave. The Hebrew puts the slave first, ahead of the verb and the ox, for emphasis.", "t": ["a manservant", "a seruant", "a bondman", "a bondman", "a man-servant", "a man-servant", "a manservant"]},
+  "03": {"s": ["gores", "butts", "strikes with the horn"], "r": "The ox strikes him with its horns.", "n": "Gesenius: TO PUSH, STRIKE with the horn, used of horned animals, citing this verse; he thinks the word imitates the sound. The KJV's 'push' keeps the plain sense.", "t": ["shall push", "gore", "assault", "gore", "gore", "gore", "gores"]},
+  "04": {"s": ["the ox", "the bull"], "r": "The ox already known to gore.", "n": "Gesenius: a general word for one of the ox tribe, without distinction of age or sex.", "t": ["the ox", "the oxe", "he", "the ox", "the ox", "the ox", "the ox"]},
+  "05": {"s": ["or"], "r": "The law covers either.", "t": ["or", "or", "or", "or", "or", "or", "or"]},
+  "06": {"s": ["a female slave", "a maidservant", "a handmaid", "a bondwoman"], "r": "A woman owned by another.", "n": "Gesenius: a handmaid, female slave.", "t": ["a maidservant", "a mayde", "bondwoman", "a bondwoman", "a maid-servant", "a handmaid", "maidservant"]},
+  "07": {"s": ["of silver", "silver"], "r": "The metal in which the payment is weighed.", "n": "The Hebrew order is 'silver, thirty shekels'. Gesenius: silver, so called from its pale colour.", "t": ["of silver", "of siluer", "of silver", "of silver", "of silver", "silver", "of silver"]},
+  "08": {"s": ["thirty"], "r": "The fixed price for a slave's life.", "t": ["thirty", "thirtie", "thirty", "thirty", "thirty", "thirty", "thirty"]},
+  "09": {"s": ["shekels"], "r": "Weights of silver used as payment.", "n": "A shekel was a weight, not a coin. Gesenius describes it as a certain weight of gold and silver which the Hebrews weighed out for money, and cites this verse.", "t": ["shekels", "shekels", "sicles", "shekels", "shekels", "shekels", "shekels"]},
+  "10": {"s": ["he shall give", "he shall pay"], "r": "The ox's owner pays.", "n": "STEP tags the verb here with the sense 'pay'. The 'he' is most likely the ox's owner, as the BSB takes it ('the owner'); the verse itself does not name him.", "t": ["he shall give", "hee shall giue", "he shall give", "he shall give", "there shall be given", "he doth give", "the owner must pay"]},
+  "11": {"s": ["to his master", "to his owner", "to their master"], "r": "The slave's owner receives the payment.", "n": "Gesenius: lord, master, used of a possessor or owner, and so of a master of servants. The form is plural, a plural of rank as BDB notes, with a singular 'his' referring to the slave; the translations make it 'their master'.", "t": ["unto their master", "vnto their master", "to their master", "unto their master", "unto their master", "to their lord", "to the master of that servant"]},
+  "12": {"s": ["and the ox", "and the bull"], "r": "The animal itself is put to death.", "t": ["and the ox", "and the oxe", "and the ox", "and the ox", "and the ox", "and the ox", "and the ox"]},
+  "13": {"s": ["shall be stoned", "shall be stoned to death"], "r": "Killed with stones, as a person who killed would be.", "n": "Gesenius: TO STONE, TO OVERWHELM WITH STONES, a form of capital punishment among the Hebrews. The form here is passive.", "t": ["shall be stoned", "shalbe stoned", "shall be stoned", "shall be stoned", "shall be stoned", "is stoned", "must be stoned"]}
+ },
+ "lxx": {
+  "_extra": {"1": "δὲ (and, but): added by the Greek translators."},
+  "01": {"i": [0], "m": 0},
+  "02": {"i": [2], "m": 2, "n": "παῖς, 'boy, servant'."},
+  "03": {"i": [3], "m": 3, "n": "κερατίζω, 'to butt with the horns', from κέρας, horn."},
+  "04": {"i": [4, 5], "m": 5, "n": "ταῦρος, 'bull'; Gesenius notes the Greek and Latin words for bull come from the same source as the Hebrew word."},
+  "05": {"i": [6], "m": 6},
+  "06": {"i": [7], "m": 7, "n": "παιδίσκη, 'young woman, female slave'."},
+  "07": {"i": [8], "m": 8},
+  "08": {"i": [9], "m": 9},
+  "09": {"i": [10], "m": 10, "n": "The Greek translators wrote δίδραχμον, the double drachma, for the shekel."},
+  "10": {"i": [11], "m": 11},
+  "11": {"i": [12, 13, 14], "m": 13, "n": "κύριος here in its human sense, master. The last word is printed σὐτῶν in our Greek text, a machine-reading error for αὐτῶν, 'their'."},
+  "12": {"i": [15, 16, 17], "m": 17},
+  "13": {"i": [18], "m": 18, "n": "λιθοβολέω, 'to stone'."}
+ }
+}

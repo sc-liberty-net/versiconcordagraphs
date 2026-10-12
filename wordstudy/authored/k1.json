@@ -1,0 +1,831 @@
+{
+ "id": "k1",
+ "en": [
+  {
+   "t": "Woe",
+   "w": [
+    "01"
+   ]
+  },
+  " ",
+  {
+   "t": "to you",
+   "w": [
+    "02"
+   ]
+  },
+  ", ",
+  {
+   "t": "scribes",
+   "w": [
+    "03"
+   ]
+  },
+  " ",
+  {
+   "t": "and",
+   "w": [
+    "04"
+   ]
+  },
+  " ",
+  {
+   "t": "Pharisees",
+   "w": [
+    "05"
+   ]
+  },
+  ", ",
+  {
+   "t": "hypocrites",
+   "w": [
+    "06"
+   ]
+  },
+  "! ",
+  {
+   "t": "For",
+   "w": [
+    "07"
+   ]
+  },
+  " ",
+  {
+   "t": "you tithe",
+   "w": [
+    "08"
+   ]
+  },
+  " ",
+  {
+   "t": "the",
+   "w": [
+    "09"
+   ]
+  },
+  " ",
+  {
+   "t": "mint",
+   "w": [
+    "10"
+   ]
+  },
+  " ",
+  {
+   "t": "and",
+   "w": [
+    "11"
+   ]
+  },
+  " ",
+  {
+   "t": "the",
+   "w": [
+    "12"
+   ]
+  },
+  " ",
+  {
+   "t": "dill",
+   "w": [
+    "13"
+   ]
+  },
+  " ",
+  {
+   "t": "and",
+   "w": [
+    "14"
+   ]
+  },
+  " ",
+  {
+   "t": "the",
+   "w": [
+    "15"
+   ]
+  },
+  " ",
+  {
+   "t": "cumin",
+   "w": [
+    "16"
+   ]
+  },
+  ", ",
+  {
+   "t": "and",
+   "w": [
+    "17"
+   ]
+  },
+  " ",
+  {
+   "t": "you have left aside",
+   "w": [
+    "18"
+   ]
+  },
+  " ",
+  {
+   "t": "the",
+   "w": [
+    "19"
+   ]
+  },
+  " ",
+  {
+   "t": "weightier matters",
+   "w": [
+    "20"
+   ]
+  },
+  " ",
+  {
+   "t": "of the",
+   "w": [
+    "21"
+   ]
+  },
+  " ",
+  {
+   "t": "law",
+   "w": [
+    "22"
+   ]
+  },
+  ": ",
+  {
+   "t": "justice",
+   "w": [
+    "24",
+    "23"
+   ]
+  },
+  " ",
+  {
+   "t": "and",
+   "w": [
+    "25"
+   ]
+  },
+  " ",
+  {
+   "t": "mercy",
+   "w": [
+    "27",
+    "26"
+   ]
+  },
+  " ",
+  {
+   "t": "and",
+   "w": [
+    "28"
+   ]
+  },
+  " ",
+  {
+   "t": "faithfulness",
+   "w": [
+    "30",
+    "29"
+   ]
+  },
+  ". ",
+  {
+   "t": "But",
+   "w": [
+    "32"
+   ]
+  },
+  " ",
+  {
+   "t": "these",
+   "w": [
+    "31"
+   ]
+  },
+  " ",
+  {
+   "t": "it was necessary",
+   "w": [
+    "33"
+   ]
+  },
+  " ",
+  {
+   "t": "to do",
+   "w": [
+    "34"
+   ]
+  },
+  ", ",
+  {
+   "t": "and those",
+   "w": [
+    "35"
+   ]
+  },
+  " ",
+  {
+   "t": "not",
+   "w": [
+    "36"
+   ]
+  },
+  " ",
+  {
+   "t": "to leave aside",
+   "w": [
+    "37"
+   ]
+  },
+  "."
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "woe",
+    "alas",
+    "how terrible for"
+   ],
+   "r": "A cry of grief and denunciation over those addressed.",
+   "n": "Abbott-Smith calls it an interjection 'of grief or denunciation', 'alas! woe!', most often with a dative of the person, as here.",
+   "t": [
+    "Woe",
+    "Wo",
+    "Woe",
+    "Woe",
+    "Woe",
+    "Woe"
+   ]
+  },
+  "02": {
+   "s": [
+    "to you",
+    "on you"
+   ],
+   "r": "The scribes and Pharisees, on whom the woe falls.",
+   "t": [
+    "unto you",
+    "be to you",
+    "to you",
+    "unto you",
+    "to you",
+    "to you"
+   ]
+  },
+  "03": {
+   "s": [
+    "scribes",
+    "experts in the law",
+    "teachers of the law"
+   ],
+   "r": "The professional students and teachers of the law.",
+   "n": "Abbott-Smith's first sense is 'a secretary', a clerk. The Jewish sense, a scholar of the law, is the one that fits here; the brief's extract of his entry stops before it.",
+   "t": [
+    "scribes",
+    "Scribes",
+    "scribes",
+    "scribes",
+    "Scribes",
+    "scribes"
+   ]
+  },
+  "04": {
+   "s": [
+    "and"
+   ],
+   "r": "Joins the two groups addressed.",
+   "t": [
+    "and",
+    "and",
+    "and",
+    "and",
+    "and",
+    "and"
+   ]
+  },
+  "05": {
+   "s": [
+    "Pharisees"
+   ],
+   "r": "The party known for strict observance of the law.",
+   "n": "Abbott-Smith gives the Aramaic form behind the name, פְּרִישָׁא, and notes how often it is paired with 'scribes'.",
+   "t": [
+    "Pharisees",
+    "Pharises",
+    "Pharisees",
+    "Pharisees",
+    "Pharisees",
+    "Pharisees"
+   ]
+  },
+  "06": {
+   "s": [
+    "hypocrites",
+    "pretenders",
+    "play-actors"
+   ],
+   "r": "Men whose outward religion does not match what they are.",
+   "n": "Abbott-Smith traces the word from 'one who answers, an interpreter' to 'a stage player, actor', and then, in the Septuagint and New Testament, 'a pretender, dissembler, hypocrite'.",
+   "t": [
+    "hypocrites",
+    "hypocrites",
+    "hypocrites",
+    "hypocrites",
+    "hypocrites",
+    "hypocrites"
+   ]
+  },
+  "07": {
+   "s": [
+    "for",
+    "because"
+   ],
+   "r": "Gives the reason for the woe.",
+   "t": [
+    "for",
+    "for",
+    "because",
+    "for",
+    "because",
+    null
+   ]
+  },
+  "08": {
+   "s": [
+    "you tithe",
+    "you pay a tenth of",
+    "you give a tenth of"
+   ],
+   "r": "They set aside a tenth of even their smallest garden herbs.",
+   "n": "Abbott-Smith gives, with an object of the thing tithed, 'to tithe, pay a tenth of', and lists this verse; he notes that the Septuagint uses it for Hebrew עָשַׂר. A present tense: their regular practice. The charge falls on the next clause, and the end of the verse says the tithing is not to be left aside.",
+   "t": [
+    "ye pay tithe of",
+    "ye tithe",
+    "you tithe",
+    "ye tithe",
+    "ye give tithe of",
+    "You pay tithes of"
+   ]
+  },
+  "09": {
+   "s": [
+    "the"
+   ],
+   "r": "The article before each herb: the mint, the dill, the cumin.",
+   "n": "Greek puts an article before each of the three herbs; only the YLT keeps them.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    "the",
+    null
+   ]
+  },
+  "10": {
+   "s": [
+    "mint"
+   ],
+   "r": "A common garden herb, among the smallest things one could tithe.",
+   "n": "Abbott-Smith explains the word as 'sweet-smelling', used as a noun for mint.",
+   "t": [
+    "mint",
+    "mynt",
+    "mint",
+    "mint",
+    "mint",
+    "mint"
+   ]
+  },
+  "11": {
+   "s": [
+    "and"
+   ],
+   "r": "Adds the next herb.",
+   "t": [
+    "and",
+    "and",
+    "and",
+    "and",
+    "and",
+    null
+   ]
+  },
+  "12": {
+   "s": [
+    "the"
+   ],
+   "r": "The article before the second herb.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    "the",
+    null
+   ]
+  },
+  "13": {
+   "s": [
+    "dill",
+    "anise"
+   ],
+   "r": "A second small garden herb.",
+   "n": "The brief's lexicon entry gives both 'anise' and 'dill'. The KJV, Geneva, DRC and ASV say 'anise'; the YLT and BSB say 'dill'.",
+   "t": [
+    "anise",
+    "annyse",
+    "anise",
+    "anise",
+    "dill",
+    "dill"
+   ]
+  },
+  "14": {
+   "s": [
+    "and"
+   ],
+   "r": "Adds the last herb.",
+   "t": [
+    "and",
+    "and",
+    "and",
+    "and",
+    "and",
+    "and"
+   ]
+  },
+  "15": {
+   "s": [
+    "the"
+   ],
+   "r": "The article before the third herb.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    "the",
+    null
+   ]
+  },
+  "16": {
+   "s": [
+    "cumin"
+   ],
+   "r": "A third small seed-herb, used to flavour food.",
+   "n": "Abbott-Smith records the word in the New Testament only here, and notes that the Septuagint uses it for Hebrew כַּמֹּן.",
+   "t": [
+    "cummin",
+    "cummyn",
+    "cummin",
+    "cummin",
+    "cumin",
+    "cumin"
+   ]
+  },
+  "17": {
+   "s": [
+    "and",
+    "and yet",
+    "but"
+   ],
+   "r": "Joins the second half of the charge to the first.",
+   "n": "A plain 'and'. The BSB's 'But' brings out the contrast the sense implies.",
+   "t": [
+    "and",
+    "and",
+    "and",
+    "and",
+    "and",
+    "But"
+   ]
+  },
+  "18": {
+   "s": [
+    "you have left aside",
+    "you have neglected",
+    "you have let go",
+    "you have abandoned"
+   ],
+   "r": "They have let go of what matters most in the law.",
+   "n": "Abbott-Smith's first sense is 'to send forth, send away, let go'. The verse uses this verb twice: here of what they have left aside, and at the end of what they are not to leave aside. This study renders both 'leave aside' so the link shows.",
+   "t": [
+    "have omitted",
+    "leaue",
+    "have left",
+    "have left undone",
+    "did neglect",
+    "you have disregarded"
+   ]
+  },
+  "19": {
+   "s": [
+    "the"
+   ],
+   "r": "With the adjective that follows, makes a noun: the weightier things.",
+   "t": [
+    "the",
+    "the",
+    "the",
+    "the",
+    "the",
+    "the"
+   ]
+  },
+  "20": {
+   "s": [
+    "weightier matters",
+    "weightier things",
+    "heavier matters",
+    "more important matters"
+   ],
+   "r": "The parts of the law that carry the greater weight.",
+   "n": "A comparative of the adjective 'heavy', in the neuter plural: literally 'the heavier (things)'. Abbott-Smith gives the metaphorical sense 'weighty' and quotes this phrase.",
+   "t": [
+    "weightier matters",
+    "weightier matters",
+    "weightier things",
+    "weightier matters",
+    "weightier things",
+    "weightier matters"
+   ]
+  },
+  "21": {
+   "s": [
+    "of the"
+   ],
+   "r": "The article; 'of' comes from the genitive case of the noun.",
+   "t": [
+    "of the",
+    "of the",
+    "of the",
+    "of the",
+    "of the",
+    "of the"
+   ]
+  },
+  "22": {
+   "s": [
+    "law",
+    "Torah"
+   ],
+   "r": "The law of Moses, which the scribes and Pharisees studied.",
+   "n": "Abbott-Smith derives the word from νέμω, to deal out, and notes that the Septuagint uses it chiefly for Hebrew תּוֹרָה.",
+   "t": [
+    "law",
+    "law",
+    "law",
+    "law",
+    "Law",
+    "law"
+   ]
+  },
+  "23": {
+   "s": [
+    "the"
+   ],
+   "r": "Greek puts the article before each of the three; English does not need it.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    "the",
+    null
+   ]
+  },
+  "24": {
+   "s": [
+    "justice",
+    "judgment",
+    "right judgment"
+   ],
+   "r": "Doing what is right toward others, especially in judging.",
+   "n": "Literally 'judgment', as the KJV, DRC and YLT have it. Abbott-Smith gives 'a decision, judgment' and notes that the Septuagint uses the word chiefly for Hebrew מִשְׁפָּט. 'Justice', with the ASV and BSB, is the likely sense in this list, but that is a judgment about context.",
+   "t": [
+    "judgment",
+    "iudgement",
+    "judgment",
+    "justice",
+    "judgment",
+    "justice"
+   ]
+  },
+  "25": {
+   "s": [
+    "and"
+   ],
+   "r": "Joins the second of the weightier matters.",
+   "t": [
+    null,
+    "and",
+    "and",
+    "and",
+    "and",
+    null
+   ]
+  },
+  "26": {
+   "s": [
+    "the"
+   ],
+   "r": "Greek puts the article before 'mercy'; English does not need it.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    "the",
+    null
+   ]
+  },
+  "27": {
+   "s": [
+    "mercy",
+    "compassion",
+    "kindness",
+    "pity"
+   ],
+   "r": "Compassion shown to those in need.",
+   "n": "Abbott-Smith gives 'mercy, pity, compassion', and notes that the Septuagint uses it chiefly for Hebrew חֶסֶד. The YLT's 'kindness' is closer to that Hebrew word's range.",
+   "t": [
+    "mercy",
+    "mercy",
+    "mercy",
+    "mercy",
+    "kindness",
+    "mercy"
+   ]
+  },
+  "28": {
+   "s": [
+    "and"
+   ],
+   "r": "Joins the third of the weightier matters.",
+   "t": [
+    "and",
+    "and",
+    "and",
+    "and",
+    "and",
+    "and"
+   ]
+  },
+  "29": {
+   "s": [
+    "the"
+   ],
+   "r": "Greek puts the article before 'faithfulness'; English does not need it.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    "the",
+    null
+   ]
+  },
+  "30": {
+   "s": [
+    "faithfulness",
+    "faith",
+    "fidelity",
+    "trustworthiness"
+   ],
+   "r": "Being faithful and reliable, alongside justice and mercy.",
+   "n": "The ordinary word for faith. STEPBible tags this occurrence with the sense 'faithfulness', which it gives in only 3 verses, and the Geneva's 'fidelitie' and the BSB agree. Abbott-Smith's entry, as the brief shows it, covers only the active sense, 'faith, belief, trust'.",
+   "t": [
+    "faith",
+    "fidelitie",
+    "faith",
+    "faith",
+    "faith",
+    "faithfulness"
+   ]
+  },
+  "31": {
+   "s": [
+    "these",
+    "the latter",
+    "these things"
+   ],
+   "r": "The nearer things just named: justice, mercy and faithfulness.",
+   "n": "Abbott-Smith notes that this pronoun relates to ἐκεῖνος, 'that', as Latin hic, 'this', to ille, 'that'. So 'these' are the matters just named, and 'those' at the end of the verse are the herbs named earlier. The BSB's 'the latter' and 'the former' make the same reading explicit.",
+   "t": [
+    "these",
+    "These",
+    "These things",
+    "these",
+    "these",
+    "the latter"
+   ]
+  },
+  "32": {
+   "s": [
+    "but",
+    "and",
+    "now"
+   ],
+   "r": "Turns from the charge to what was required.",
+   "t": [
+    null,
+    null,
+    null,
+    "but",
+    null,
+    null
+   ]
+  },
+  "33": {
+   "s": [
+    "it was necessary",
+    "you ought",
+    "you should have",
+    "it was right"
+   ],
+   "r": "States what was required of them.",
+   "n": "An impersonal verb in the imperfect, literally 'it was necessary'. Abbott-Smith gives 'one must, it is necessary', and lists this verse as a use with the person left unstated; 'you' is understood from the address. It governs both infinitives that follow: to have done these, and not to leave those aside.",
+   "t": [
+    "ought ye",
+    "ought ye",
+    "you ought",
+    "ye ought",
+    "it behoved you",
+    "You should"
+   ]
+  },
+  "34": {
+   "s": [
+    "to do",
+    "to have done",
+    "to practise"
+   ],
+   "r": "To carry out justice, mercy and faithfulness.",
+   "n": "An aorist infinitive of the common verb 'do, make'. Most translations join it to 'ought' and say 'to have done'.",
+   "t": [
+    "to have done",
+    "to haue done",
+    "to have done",
+    "to have done",
+    "to do",
+    "have practiced"
+   ]
+  },
+  "35": {
+   "s": [
+    "and those",
+    "and the others",
+    "and the former"
+   ],
+   "r": "The farther things, the tithing of the herbs named earlier.",
+   "n": "A contraction of καί and ἐκεῖνα, 'and those'; Abbott-Smith lists this verse. The word is plural and refers to things, not people.",
+   "t": [
+    "and ... the other",
+    "and ... the other",
+    "and ... those",
+    "and ... the other",
+    "and those",
+    "the former"
+   ]
+  },
+  "36": {
+   "s": [
+    "not"
+   ],
+   "r": "Negates the leaving aside: the tithing is not to be dropped.",
+   "n": "The negative used with infinitives, as distinct from οὐ, which Abbott-Smith describes as denying absolutely.",
+   "t": [
+    "not",
+    "not",
+    "not",
+    "not",
+    "not",
+    "without"
+   ]
+  },
+  "37": {
+   "s": [
+    "to leave aside",
+    "to neglect",
+    "to let go",
+    "to leave undone"
+   ],
+   "r": "The tithing they already practise was not to be abandoned.",
+   "n": "The same verb as 'you have left aside' earlier in the verse, now a present infinitive. The verse states both obligations: the weightier matters were required of them, and the tithing was not to be left aside.",
+   "t": [
+    "to leave ... undone",
+    "to haue left",
+    "to leave ... undone",
+    "to have left ... undone",
+    "to neglect",
+    "neglecting"
+   ]
+  }
+ },
+ "tr_note": "The Textus Receptus lacks δέ before 'these', so the KJV reads 'these ought ye to have done' with no 'but', where the ASV has 'but these'. It also uses the classical masculine form of 'mercy', τὸν ἔλεον, which Abbott-Smith notes for this verse; that is a difference of form only and does not show in the KJV."
+}

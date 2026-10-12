@@ -1,0 +1,86 @@
+{
+ "id": "h13",
+ "en": [
+  {"t": "For", "w": ["02"]}, " ",
+  {"t": "it is testified", "w": ["01"]}, " ",
+  {"t": "that", "w": ["03"]}, " ‘",
+  {"t": "You", "w": ["04"]}, " ",
+  {"t": "are", "sup": "Supplied in English. The Greek has no verb here."}, " a ",
+  {"t": "priest", "w": ["05"]}, " ",
+  {"t": "for ever", "w": ["08", "06", "07"]}, ", ",
+  {"t": "according to", "w": ["09"]}, " ",
+  {"t": "the", "w": ["10"]}, " ",
+  {"t": "order", "w": ["11"]}, " ",
+  {"t": "of Melchizedek", "w": ["12"]}, ".’"
+ ],
+ "words": {
+  "01": {
+   "s": ["it is testified", "it is witnessed", "testimony is given", "he is attested"],
+   "r": "Scripture bears witness concerning this priest.",
+   "n": "Present passive, the same verb as 'who is testified' in Hebrews 7:8; the writer does not say who testifies. That the testimony is the scriptural line now quoted is the plain reading. The Textus Receptus has the active, 'he testifies', which the KJV follows.",
+   "t": ["he testifieth", "hee testifieth", "he testifieth", "it is witnessed of him", "He doth testify", "it is testified"]
+  },
+  "02": {
+   "s": ["for"],
+   "r": "Gives the ground for what the previous verse said of an indestructible life.",
+   "t": ["For", "For", "For", "for", "for", "For"]
+  },
+  "03": {
+   "s": ["that"],
+   "r": "Introduces the words of the testimony, quoted directly.",
+   "n": "Greek often uses this word to open a direct quotation, where English would use only a colon or quotation marks; none of the translations renders it.",
+   "t": [null, null, null, null, null, null]
+  },
+  "04": {
+   "s": ["you", "thou"],
+   "r": "The priest addressed in the quotation.",
+   "t": ["Thou", "Thou", "Thou", "Thou", "Thou", "You"]
+  },
+  "05": {
+   "s": ["priest"],
+   "r": "One who serves God on behalf of others.",
+   "n": "Abbott-Smith notes that the Septuagint uses it for Hebrew כָּהֵן, and lists uses of it for Christ in Hebrews.",
+   "t": ["a priest", "a Priest", "a priest", "a priest", "a priest", "a priest"]
+  },
+  "06": {
+   "s": ["into", "to", "for"],
+   "r": "With 'the age', forms the phrase 'for ever'.",
+   "n": "Literally 'into the age'. English 'for ever' renders the whole phrase, so this word has no English of its own.",
+   "t": ["for", "for", "for", "for", "to", null]
+  },
+  "07": {
+   "s": ["the"],
+   "r": "Part of the fixed phrase 'into the age'.",
+   "t": [null, null, null, null, "the", null]
+  },
+  "08": {
+   "s": ["ever", "the age", "eternity", "all time"],
+   "r": "With the words before it, an unending span of time.",
+   "n": "Abbott-Smith explains that in the New Testament the word means an indefinitely long period, an age, eternity. The YLT keeps the literal 'to the age'.",
+   "t": ["ever", "euer", "ever", "ever", "age", "forever"]
+  },
+  "09": {
+   "s": ["according to", "after", "in", "in the line of"],
+   "r": "Names the pattern his priesthood follows.",
+   "t": ["after", "after", "according to", "After", "according to", "in"]
+  },
+  "10": {
+   "s": ["the"],
+   "r": "Marks one particular order of priesthood.",
+   "t": ["the", "the", "the", "the", "the", "the"]
+  },
+  "11": {
+   "s": ["order", "rank", "manner", "kind"],
+   "r": "The kind or pattern of priesthood that Melchizedek held.",
+   "n": "Abbott-Smith's senses run from an arranging (in war, battle array) to arrangement and order. He records that the Septuagint uses it for Hebrew דִּבְרָה at Psa.110:4.",
+   "t": ["order", "order", "order", "order", "order", "order"]
+  },
+  "12": {
+   "s": ["of Melchizedek"],
+   "r": "The priest-king whose order this is.",
+   "n": "Abbott-Smith marks the name as indeclinable: its ending never changes, so the sense 'of Melchizedek' is shown only by its place after 'order'.",
+   "t": ["of Melchisedec", "of Melchi-sedec", "of Melchisedech", "of Melchizedek", "of Melchisedek", "of Melchizedek"]
+  }
+ },
+ "tr_note": "The Textus Receptus reads μαρτυρεῖ, 'he testifies' (active), for μαρτυρεῖται, 'it is testified' (passive). That is why the KJV and Geneva read 'he testifieth' and the YLT 'He doth testify', while the ASV and BSB read 'it is witnessed' and 'it is testified'."
+}

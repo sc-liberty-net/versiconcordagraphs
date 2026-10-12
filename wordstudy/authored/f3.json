@@ -1,0 +1,101 @@
+{
+ "id": "f3",
+ "en": [
+  {"t": "Now", "w": ["02"]}, " ",
+  {"t": "if", "w": ["01"]}, " ",
+  {"t": "anyone", "w": ["03"]}, " ",
+  {"t": "builds", "w": ["04"]}, " ",
+  {"t": "upon", "w": ["05"]}, " ",
+  {"t": "the", "w": ["06"]}, " ",
+  {"t": "foundation", "w": ["07"]}, " ",
+  {"t": "gold", "w": ["09"]}, ", ",
+  {"t": "silver", "w": ["10"]}, ", ",
+  {"t": "precious", "w": ["12"]}, " ",
+  {"t": "stones", "w": ["11"]}, ", ",
+  {"t": "wood", "w": ["13"]}, ", ",
+  {"t": "hay", "w": ["14"]}, ", ",
+  {"t": "straw", "w": ["15"]}, ","
+ ],
+ "words": {
+  "01": {
+   "s": ["if"],
+   "r": "Sets out a case that may happen: whoever builds, and with whatever material.",
+   "t": ["if", "if", "if", "if", "if", "If"]
+  },
+  "02": {
+   "s": ["now", "and", "but"],
+   "r": "Moves from the one foundation to what is built on it.",
+   "t": ["Now", "And", "Now", "But", "and", null]
+  },
+  "03": {
+   "s": ["anyone", "any man", "someone"],
+   "r": "Any builder at all, not a particular person.",
+   "t": ["any man", "any man", "any man", "any man", "any one", "anyone"]
+  },
+  "04": {
+   "s": ["builds", "builds on", "builds up"],
+   "r": "Adds work on top of the foundation already laid.",
+   "n": "The verb itself already means 'build upon'; Abbott-Smith notes that in the New Testament it is always used figuratively, of the spiritual life seen as a building, and cites this verse.",
+   "t": ["build", "builde", "build", "buildeth", "doth build", "builds"]
+  },
+  "05": {
+   "s": ["upon", "on"],
+   "r": "Places the building on the foundation.",
+   "t": ["upon", "on", "upon", "on", "upon", "on"]
+  },
+  "06": {
+   "s": ["the", "this"],
+   "r": "The one foundation already spoken of.",
+   "n": "The Textus Receptus adds 'this' here, which most of the translations read; the ASV has 'the'.",
+   "t": [null, null, null, "the", null, null]
+  },
+  "07": {
+   "s": ["foundation", "foundation stone", "base"],
+   "r": "The groundwork on which everything else rests.",
+   "n": "Abbott-Smith explains that the word is properly an adjective, with 'stone' understood: a foundation stone, a foundation.",
+   "t": ["foundation", "foundation", "foundation", "foundation", "foundation", "foundation"]
+  },
+  "09": {
+   "s": ["gold"],
+   "r": "The first and costliest of the materials.",
+   "n": "Abbott-Smith notes that the Septuagint uses it chiefly for Hebrew זָהָב.",
+   "t": ["gold", "golde", "gold", "gold", "gold", "gold"]
+  },
+  "10": {
+   "s": ["silver"],
+   "r": "A second costly metal.",
+   "n": "Abbott-Smith derives the word from ἀργός, 'shining', and notes that the Septuagint uses it for Hebrew כֶּסֶף. This is the word for the metal; ἀργύριον, the word often used for silver money, is related to it.",
+   "t": ["silver", "siluer", "silver", "silver", "silver", "silver"]
+  },
+  "11": {
+   "s": ["stones"],
+   "r": "Stones of value, the third costly material.",
+   "t": ["stones", "stones", "stones", "stones", "stones", "stones"]
+  },
+  "12": {
+   "s": ["precious", "costly", "valuable"],
+   "r": "Of high value, set against the cheap materials that follow.",
+   "n": "Abbott-Smith's first sense is 'precious, costly, highly valued', primarily of money value, and he lists this verse there. The ASV has 'costly'.",
+   "t": ["precious", "precious", "precious", "costly", "precious", "precious"]
+  },
+  "13": {
+   "s": ["wood", "timber", "pieces of wood"],
+   "r": "The first of the cheap, burnable materials.",
+   "n": "Plural in Greek: pieces of wood. Abbott-Smith lists this verse under the plain sense, 'wood'. The Geneva has 'timber'.",
+   "t": ["wood", "timber", "wood", "wood", "wood", "wood"]
+  },
+  "14": {
+   "s": ["hay", "grass", "dried grass", "fodder"],
+   "r": "Dried grass, a material that burns at once.",
+   "n": "Abbott-Smith classes this verse under 'food, esp. for cattle, grass'; 'hay' is grass cut and dried for fodder.",
+   "t": ["hay", "haye", "hay", "hay", "hay", "hay"]
+  },
+  "15": {
+   "s": ["straw", "stubble", "stalks"],
+   "r": "The stalks of grain, the cheapest material of all.",
+   "n": "Abbott-Smith defines it as 'a stalk of corn, stubble', and notes that the Septuagint uses it chiefly for Hebrew קַשׁ. This is its only occurrence in the New Testament. The older translations have 'stubble'.",
+   "t": ["stubble", "stubble", "stubble", "stubble", "straw", "straw"]
+  }
+ },
+ "tr_note": "The Textus Receptus adds τοῦτον, 'this', after 'the foundation'. That is the KJV's 'this foundation'; the ASV, without it, reads 'the foundation'."
+}

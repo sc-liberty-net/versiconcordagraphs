@@ -1,0 +1,269 @@
+{
+ "id": "v2",
+ "en": [
+  {
+   "t": "And",
+   "w": [
+    "01"
+   ]
+  },
+  " ",
+  {
+   "t": "one",
+   "w": [
+    "03"
+   ]
+  },
+  " ",
+  {
+   "t": "poor",
+   "w": [
+    "05"
+   ]
+  },
+  " ",
+  {
+   "t": "widow",
+   "w": [
+    "04"
+   ]
+  },
+  " ",
+  {
+   "t": "came",
+   "w": [
+    "02"
+   ]
+  },
+  " and ",
+  {
+   "t": "cast in",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "two",
+   "w": [
+    "08"
+   ]
+  },
+  " ",
+  {
+   "t": "lepta",
+   "w": [
+    "07"
+   ]
+  },
+  ", ",
+  {
+   "t": "which",
+   "w": [
+    "09"
+   ]
+  },
+  " ",
+  {
+   "t": "is",
+   "w": [
+    "10"
+   ]
+  },
+  " a ",
+  {
+   "t": "quadrans",
+   "w": [
+    "11"
+   ]
+  },
+  "."
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "and",
+    "then"
+   ],
+   "r": "Joins the widow's arrival to the scene at the treasury.",
+   "t": [
+    "And",
+    "And",
+    "And",
+    "And",
+    "and",
+    "Then"
+   ]
+  },
+  "02": {
+   "s": [
+    "came",
+    "having come",
+    "came up",
+    "arrived"
+   ],
+   "r": "She arrives at the treasury.",
+   "n": "An aorist participle, literally 'having come', joined to the main verb; English joins the two with 'and'.",
+   "t": [
+    "there came",
+    "there came",
+    "there came",
+    "there came",
+    "having come",
+    "came"
+   ]
+  },
+  "03": {
+   "s": [
+    "one",
+    "a",
+    "a certain",
+    "a single"
+   ],
+   "r": "Singles out one woman from the crowd of givers.",
+   "n": "The numeral 'one'. The KJV and Geneva take it as 'a certain', the ASV and YLT as plain 'a'; this study keeps the numeral, as the BSB does.",
+   "t": [
+    "a certain",
+    "a certaine",
+    "a certain",
+    "a",
+    "a",
+    "one"
+   ]
+  },
+  "04": {
+   "s": [
+    "widow"
+   ],
+   "r": "A woman whose husband has died.",
+   "n": "Abbott-Smith notes that the Septuagint uses this word chiefly for Hebrew אַלְמָנָה, widow.",
+   "t": [
+    "widow",
+    "widowe",
+    "widow",
+    "widow",
+    "widow",
+    "widow"
+   ]
+  },
+  "05": {
+   "s": [
+    "poor",
+    "destitute",
+    "beggarly",
+    "needy"
+   ],
+   "r": "She has next to nothing.",
+   "n": "Abbott-Smith derives the word from πτώσσω, 'to crouch, cower', and gives 'a beggar' as its sense when used as a noun. The Septuagint uses it for Hebrew עָנִי, among other words for the poor.",
+   "t": [
+    "poor",
+    "poore",
+    "poor",
+    "poor",
+    "poor",
+    "poor"
+   ]
+  },
+  "06": {
+   "s": [
+    "cast in",
+    "threw in",
+    "put in",
+    "dropped in"
+   ],
+   "r": "She puts her coins into the treasury.",
+   "n": "Abbott-Smith gives the range 'to throw, cast, put, place'. This study renders it 'cast' throughout the treasury scenes, so the reader can follow the one verb through Mark and Luke.",
+   "t": [
+    "threw in",
+    "threw in",
+    "cast in",
+    "cast in",
+    "did put in",
+    "put in"
+   ]
+  },
+  "07": {
+   "s": [
+    "lepta",
+    "small coins",
+    "tiny copper coins",
+    "mites"
+   ],
+   "r": "Two of the smallest coins in use.",
+   "n": "Abbott-Smith derives it from λέπω, 'to peel': the adjective means fine, thin, small, and in late Greek τὸ λεπτόν is a small coin, one-eighth of an as. This study keeps the coin's own name, lepton (plural lepta); 'mite' is the KJV's English equivalent.",
+   "t": [
+    "mites",
+    "mites",
+    "mites",
+    "mites",
+    "mites",
+    "small copper coins"
+   ]
+  },
+  "08": {
+   "s": [
+    "two"
+   ],
+   "r": "Two coins, both of the smallest kind.",
+   "t": [
+    "two",
+    "two",
+    "two",
+    "two",
+    "two",
+    "two"
+   ]
+  },
+  "09": {
+   "s": [
+    "which",
+    "that"
+   ],
+   "r": "Refers to the two lepta taken together.",
+   "n": "Neuter singular: the two coins are reckoned as one sum.",
+   "t": [
+    "which",
+    "which",
+    "which",
+    "which",
+    "which",
+    "which"
+   ]
+  },
+  "10": {
+   "s": [
+    "is",
+    "makes",
+    "amounts to",
+    "is worth"
+   ],
+   "r": "States their combined value.",
+   "n": "Singular in the Greek, agreeing with 'which': the two together 'is' one quadrans.",
+   "t": [
+    "make",
+    "make",
+    "make",
+    "make",
+    "are",
+    "amounted to"
+   ]
+  },
+  "11": {
+   "s": [
+    "quadrans",
+    "farthing",
+    "quarter of an as"
+   ],
+   "r": "A small Roman coin, used to state the value of the two lepta.",
+   "n": "Abbott-Smith explains it as the Latin quadrans, 'the fourth part of an as', the AV's 'farthing'; his figures agree, since two lepta at one-eighth of an as make a quarter. Mark states the Greek coins' value in Roman money, likely for readers who reckoned in it; that is an inference. The BSB's 'a small fraction of a denarius' explains rather than translates.",
+   "t": [
+    "a farthing",
+    "a quadrin",
+    "a farthing",
+    "a farthing",
+    "a farthing",
+    "a small fraction of a denarius"
+   ]
+  }
+ }
+}

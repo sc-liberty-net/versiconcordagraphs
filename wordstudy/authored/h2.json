@@ -1,0 +1,99 @@
+{
+ "id": "h2",
+ "en": [
+  {"t": "Now", "w": ["02"]}, " ",
+  {"t": "consider", "w": ["01"]}, " ",
+  {"t": "how great", "w": ["03"]}, " ",
+  {"t": "this one", "w": ["04"]}, " ",
+  {"t": "was", "sup": "Supplied in English. The Greek has no verb in this clause."}, ", ",
+  {"t": "to whom", "w": ["05"]}, " ",
+  {"t": "also", "w": ["06"]}, " ",
+  {"t": "Abraham", "w": ["08"]}, ", ",
+  {"t": "the", "w": ["13"]}, " ",
+  {"t": "patriarch", "w": ["14"]}, ", ",
+  {"t": "gave", "w": ["09"]}, " a ",
+  {"t": "tenth", "w": ["07"]}, " ",
+  {"t": "out of", "w": ["10"]}, " ",
+  {"t": "the", "w": ["11"]}, " ",
+  {"t": "choicest spoils", "w": ["12"]}, "."
+ ],
+ "words": {
+  "01": {
+   "s": ["consider", "see", "look at", "observe"],
+   "r": "The readers are told to look closely at Melchizedek's greatness.",
+   "n": "Abbott-Smith's first sense is 'to look at, gaze, behold'. The same form could also be read as a statement, 'you see', but every translation here takes it as a command.",
+   "t": ["consider", "consider", "consider", "consider", "see", "Consider"]
+  },
+  "02": {
+   "s": ["now", "and", "so"],
+   "r": "Moves the argument to its next point.",
+   "t": ["Now", "Nowe", "Now", "Now", "And", null]
+  },
+  "03": {
+   "s": ["how great", "how important", "how eminent"],
+   "r": "Calls attention to the size of Melchizedek's standing.",
+   "n": "Abbott-Smith explains that the word properly asks about size, and files this verse under 'of personal greatness'; this is one of its two uses in the New Testament.",
+   "t": ["how great", "how great", "how great", "how great", "how great", "how great"]
+  },
+  "04": {
+   "s": ["this one", "this man", "he"],
+   "r": "Melchizedek, the subject of the whole passage.",
+   "n": "The BSB writes his name; the Greek says only 'this one'.",
+   "t": ["this man", "this man", "this man", "this man", "this one", "Melchizedek"]
+  },
+  "05": {
+   "s": ["to whom"],
+   "r": "Melchizedek again, now as the one who received the tenth.",
+   "t": ["unto whom", "vnto whome", "to whom", "unto whom", "to whom", "him"]
+  },
+  "06": {
+   "s": ["also", "even"],
+   "r": "Stresses that Abraham, of all people, gave to him.",
+   "n": "The KJV, Geneva and BSB read 'even', which brings out the force of the argument: even the patriarch gave. 'Also' is the plainer rendering, and the same word in Hebrews 7:2 is rendered 'also'.",
+   "t": ["even", "euen", "also", null, "also", "Even"]
+  },
+  "07": {
+   "s": ["tenth", "tenth part", "tithe"],
+   "r": "The tenth part that Abraham gave Melchizedek.",
+   "n": "The feminine of the adjective 'tenth', standing alone as a noun. This study renders it 'tenth' throughout Hebrews 7.",
+   "t": ["the tenth", "the tithe", "tithes", "a tenth", "a tenth", "a tenth"]
+  },
+  "08": {
+   "s": ["Abraham"],
+   "r": "The giver of the tenth.",
+   "t": ["Abraham", "Abraham", "Abraham", "Abraham", "Abraham", "Abraham"]
+  },
+  "09": {
+   "s": ["gave", "handed over", "paid"],
+   "r": "Abraham gave the tenth to Melchizedek.",
+   "t": ["gave", "gaue", "gave", "gave", "did give", "gave"]
+  },
+  "10": {
+   "s": ["out of", "from"],
+   "r": "Marks the spoils as the store from which the tenth was taken.",
+   "t": ["of", "of", "out of", "out of", "out of", "of"]
+  },
+  "11": {
+   "s": ["the"],
+   "r": "The particular spoils of the battle in the story.",
+   "t": ["the", "the", "the", "the", "the", "the"]
+  },
+  "12": {
+   "s": ["choicest spoils", "best of the spoils", "chief spoils", "first-fruits"],
+   "r": "The best part of what was taken in war.",
+   "n": "Abbott-Smith derives the word from 'top' and 'heap': properly the top of the heap, and so, in the plural, first-fruits, or in war the choicest spoils, the sense he gives for this verse. This is its only occurrence in the New Testament. The KJV and BSB say only 'spoils' and 'plunder'.",
+   "t": ["spoils", "spoyles", "principal things", "chief spoils", "best of the spoils", "plunder"]
+  },
+  "13": {
+   "s": ["the"],
+   "r": "Marks the title that follows as Abraham's own.",
+   "t": ["the", "the", "the", "the", "the", "the"]
+  },
+  "14": {
+   "s": ["patriarch", "founding father", "forefather"],
+   "r": "Abraham as the founding father of the people.",
+   "n": "The Greek holds this title to the very end of the sentence, which gives it weight: it was the patriarch himself who gave. Abbott-Smith gives its parts as πατριά and ἄρχω; in plain terms, the head of a family line.",
+   "t": ["patriarch", "Patriarke", "patriarch", "patriarch", "patriarch", "patriarch"]
+  }
+ }
+}

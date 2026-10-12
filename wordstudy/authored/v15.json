@@ -1,0 +1,399 @@
+{
+ "id": "v15",
+ "en": [
+  {
+   "t": "Each one",
+   "w": [
+    "01"
+   ]
+  },
+  " ",
+  {
+   "t": "should give",
+   "sup": "Supplied in English. The Greek has no verb in this clause; giving is the subject of the surrounding verses."
+  },
+  " ",
+  {
+   "t": "as",
+   "w": [
+    "02"
+   ]
+  },
+  " ",
+  {
+   "t": "he has chosen",
+   "w": [
+    "03"
+   ]
+  },
+  " ",
+  {
+   "t": "in the",
+   "w": [
+    "04"
+   ]
+  },
+  " ",
+  {
+   "t": "heart",
+   "w": [
+    "05"
+   ]
+  },
+  ", ",
+  {
+   "t": "not",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "out of",
+   "w": [
+    "07"
+   ]
+  },
+  " ",
+  {
+   "t": "sorrow",
+   "w": [
+    "08"
+   ]
+  },
+  " ",
+  {
+   "t": "or",
+   "w": [
+    "09"
+   ]
+  },
+  " ",
+  {
+   "t": "out of",
+   "w": [
+    "10"
+   ]
+  },
+  " ",
+  {
+   "t": "necessity",
+   "w": [
+    "11"
+   ]
+  },
+  "; ",
+  {
+   "t": "for",
+   "w": [
+    "13"
+   ]
+  },
+  " ",
+  {
+   "t": "God",
+   "w": [
+    "17",
+    "16"
+   ]
+  },
+  " ",
+  {
+   "t": "loves",
+   "w": [
+    "15"
+   ]
+  },
+  " a ",
+  {
+   "t": "cheerful",
+   "w": [
+    "12"
+   ]
+  },
+  " ",
+  {
+   "t": "giver",
+   "w": [
+    "14"
+   ]
+  },
+  "."
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "each one",
+    "each",
+    "every one"
+   ],
+   "r": "Every giver individually.",
+   "t": [
+    "Every man",
+    "euery man",
+    "Every one",
+    "each man",
+    "each one",
+    "Each one"
+   ]
+  },
+  "02": {
+   "s": [
+    "as",
+    "just as",
+    "according as"
+   ],
+   "r": "Measures the gift by the giver's own decision.",
+   "n": "Abbott-Smith gives 'according as, even as, just as, as'.",
+   "t": [
+    "according as",
+    "As",
+    "as",
+    "according as",
+    "according as",
+    "what"
+   ]
+  },
+  "03": {
+   "s": [
+    "he has chosen",
+    "he has decided",
+    "he has resolved",
+    "he has purposed"
+   ],
+   "r": "The giver settles the amount beforehand, by his own choice.",
+   "n": "Abbott-Smith gives the middle sense 'to take by choice, prefer, propose', and this is its only New Testament use. A perfect: the choice is made and stands. The Textus Receptus has the present προαιρεῖται, which is the KJV's 'purposeth'.",
+   "t": [
+    "he purposeth",
+    "wisheth",
+    "he hath determined",
+    "he hath purposed",
+    "he doth purpose",
+    "he has decided"
+   ]
+  },
+  "04": {
+   "s": [
+    "in the",
+    "in his"
+   ],
+   "r": "The dative case: in the heart.",
+   "n": "Greek says 'the heart'; most translations write 'his heart'.",
+   "t": [
+    "in his",
+    "in his",
+    "in his",
+    "in his",
+    "in",
+    "in his"
+   ]
+  },
+  "05": {
+   "s": [
+    "heart",
+    "mind",
+    "inner self"
+   ],
+   "r": "The seat of decision.",
+   "n": "Abbott-Smith describes the heart in its psychological sense as 'the focus of personal life'.",
+   "t": [
+    "heart",
+    "heart",
+    "heart",
+    "heart",
+    "heart",
+    "heart"
+   ]
+  },
+  "06": {
+   "s": [
+    "not"
+   ],
+   "r": "Rules out the wrong motives.",
+   "t": [
+    "not",
+    "not",
+    "not",
+    "not",
+    "not",
+    "not"
+   ]
+  },
+  "07": {
+   "s": [
+    "out of",
+    "from"
+   ],
+   "r": "The motive the gift comes from.",
+   "t": [
+    null,
+    null,
+    "with",
+    null,
+    "out of",
+    "out of"
+   ]
+  },
+  "08": {
+   "s": [
+    "sorrow",
+    "grief",
+    "reluctance",
+    "regret"
+   ],
+   "r": "Giving with pain, regretting the loss.",
+   "n": "Abbott-Smith gives 'pain of body or mind, grief, sorrow', and cites the phrase ἐκ λύπης at this verse. The KJV's 'grudgingly' interprets it as reluctance.",
+   "t": [
+    "grudgingly",
+    "grudgingly",
+    "sadness",
+    "grudgingly",
+    "sorrow",
+    "regret"
+   ]
+  },
+  "09": {
+   "s": [
+    "or"
+   ],
+   "r": "Joins the second wrong motive.",
+   "t": [
+    "or",
+    "or",
+    "or",
+    "or",
+    "or",
+    "or"
+   ]
+  },
+  "10": {
+   "s": [
+    "out of",
+    "from"
+   ],
+   "r": "The motive the gift comes from.",
+   "t": [
+    "of",
+    "of",
+    "of",
+    "of",
+    "out of",
+    null
+   ]
+  },
+  "11": {
+   "s": [
+    "necessity",
+    "compulsion",
+    "constraint",
+    "obligation"
+   ],
+   "r": "Giving because one is made to.",
+   "n": "Abbott-Smith lists ἐξ ἀνάγκης at this verse with the sense 'of necessity'.",
+   "t": [
+    "necessity",
+    "necessitie",
+    "necessity",
+    "necessity",
+    "necessity",
+    "compulsion"
+   ]
+  },
+  "12": {
+   "s": [
+    "cheerful",
+    "glad",
+    "joyful",
+    "willing"
+   ],
+   "r": "Glad to give.",
+   "n": "Abbott-Smith gives 'cheerful, joyous', and this is its only New Testament use. English 'hilarious' comes from the same word, in a stronger sense.",
+   "t": [
+    "cheerful",
+    "cheerefull",
+    "cheerful",
+    "cheerful",
+    "cheerful",
+    "cheerful"
+   ]
+  },
+  "13": {
+   "s": [
+    "for",
+    "because"
+   ],
+   "r": "Gives the reason for giving gladly.",
+   "t": [
+    "for",
+    "for",
+    "for",
+    "for",
+    "for",
+    "For"
+   ]
+  },
+  "14": {
+   "s": [
+    "giver",
+    "one who gives"
+   ],
+   "r": "The person who gives.",
+   "n": "Abbott-Smith gives 'a giver', found in the New Testament only here, and marks the phrase as drawn from the Septuagint, which he cites at Pro.22:8.",
+   "t": [
+    "giver",
+    "giuer",
+    "giver",
+    "giver",
+    "giver",
+    "giver"
+   ]
+  },
+  "15": {
+   "s": [
+    "loves",
+    "delights in",
+    "prizes"
+   ],
+   "r": "God's settled regard for such a giver.",
+   "n": "Abbott-Smith's definition includes 'to feel and exhibit esteem and goodwill' and 'to prize and delight in a thing'.",
+   "t": [
+    "loveth",
+    "loueth",
+    "loveth",
+    "loveth",
+    "doth ... love",
+    "loves"
+   ]
+  },
+  "16": {
+   "s": [
+    "the"
+   ],
+   "r": "Greek uses the article with 'God'; English does not.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "17": {
+   "s": [
+    "God"
+   ],
+   "r": "The one who loves the cheerful giver.",
+   "n": "The Greek puts 'a cheerful giver' first and 'God' last, for emphasis; the YLT keeps that order.",
+   "t": [
+    "God",
+    "God",
+    "God",
+    "God",
+    "God",
+    "God"
+   ]
+  }
+ },
+ "tr_note": "The Textus Receptus reads προαιρεῖται, the present 'he purposes', for the perfect προῄρηται, 'he has chosen'; the KJV's 'purposeth' follows it."
+}

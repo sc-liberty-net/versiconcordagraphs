@@ -1,0 +1,44 @@
+{
+ "id": "z5",
+ "en": [
+  {"t": "And its redeemed ones", "w": ["01"]}, ", ",
+  {"t": "from the age of", "w": ["02"]}, " ",
+  {"t": "a month", "w": ["03"]}, " ",
+  {"t": "you shall redeem", "w": ["04"]}, ", ",
+  {"t": "by your valuation", "w": ["05"]}, ": ",
+  {"t": "silver of", "w": ["06"]}, " ",
+  {"t": "five", "w": ["07"]}, " ",
+  {"t": "shekels", "w": ["08"]}, ", ",
+  {"t": "by the shekel of", "w": ["09"]}, " ",
+  {"t": "the sanctuary", "w": ["10"]}, " (",
+  {"t": "it", "w": ["13"]}, " is ",
+  {"t": "twenty", "w": ["11"]}, " ",
+  {"t": "gerahs", "w": ["12"]}, ")."
+ ],
+ "words": {
+  "01": {"s": ["and its redeemed ones", "and those to be redeemed of it", "and its redemption price", "and its ransom"], "r": "The human firstborn who must be bought back.", "n": "From the verb 'redeem', with 'and' and 'its' attached; the 'its' refers back to the firstborn of man in the verse before. STEP tags the form as a noun, 'redemption price', and the JPS reads 'their redemption-money'; the KJV, ASV and YLT read it as the persons redeemed, which we follow.", "t": ["And those that are to be redeemed", "And those that are to bee redeemed", "And the redemption of it", "And their redemption-money", "And those that are to be redeemed of them", "And their ransomed ones", "the redemption price"]},
+  "02": {"s": ["from the age of", "from a son of", "from"], "r": "Sets the age at which redemption is due.", "n": "Literally 'from a son of a month', the Hebrew way of giving an age.", "t": ["from", "from the age of", "after", "from", "from", "from a son of", null]},
+  "03": {"s": ["a month", "one month"], "r": "A month old.", "n": "Gesenius gives the first sense as the new moon, the day of the new moon, and so a lunar month.", "t": ["a month old", "a moneth", "one month", "a month old", "a month old", "a month", "a month-old male"]},
+  "04": {"s": ["you shall redeem", "you shall ransom", "you shall buy back"], "r": "The priest releases the child for the set price.", "n": "Gesenius cites this verse for a sense of this verb, to let go, of a priest releasing a firstling, alongside its first sense, to redeem by paying a price.", "t": ["shalt thou redeem", "shalt thou redeeme", null, "shalt thou redeem them", "shalt thou redeem", "thou dost ransom", "You are to pay"]},
+  "05": {"s": ["by your valuation", "according to your valuation", "at your assessment"], "r": "At the fixed rate.", "n": "The same word 'valuation' as in the valuation laws of Leviticus 27:2 and 27:3 on this page.", "t": ["according to thine estimation", "according to thy estimation", null, "according to thy valuation", "according to thine estimation", "with thy valuation", "according to your valuation"]},
+  "06": {"s": ["silver of", "money of", "a price of"], "r": "The payment is in silver, weighed.", "n": "STEP tags the word here with the sense 'price'. Gesenius: silver, so called from its pale colour.", "t": ["for the money of", "for the money of", "of silver", "of silver", "for the money of", "of silver", "of silver"]},
+  "07": {"s": ["five"], "r": "The fixed redemption price in shekels.", "t": ["five", "fiue", "for five", "five", "five", "five", "five"]},
+  "08": {"s": ["shekels"], "r": "Weights of silver used as payment.", "n": "A shekel was a weight, not a coin. Gesenius describes it as a certain weight of gold and silver containing twenty gerahs, which the Hebrews weighed out for money.", "t": ["shekels", "shekels", "sicles", "shekels", "shekels", "shekels", "shekels"]},
+  "09": {"s": ["by the shekel of", "according to the shekel of", "by the standard of"], "r": "Measured by the official standard weight.", "n": "Gesenius notes that two shekels are distinguished, the holy shekel and the royal shekel.", "t": ["after the shekel", "after the shekel", "by the weight", "after the shekel", "after the shekel", "by the shekel", "according to the ... shekel"]},
+  "10": {"s": ["the sanctuary", "the holy place", "holiness"], "r": "The standard kept at the sanctuary.", "n": "Literally 'the holiness': 'the shekel of the holiness' is the holy shekel.", "t": ["of the sanctuary", "of the Sanctuarie", "of the sanctuary", "of the sanctuary", "of the sanctuary", "of the sanctuary", "sanctuary"]},
+  "11": {"s": ["twenty"], "r": "The number of gerahs in one shekel.", "t": ["twenty", "twentie", "twenty", "twenty", "twenty", "twenty", "twenty"]},
+  "12": {"s": ["gerahs", "grains", "beans"], "r": "The smallest weight, a twentieth of a shekel.", "n": "Gesenius gives the first sense as the cud, then a grain or bean, so called from its round form, and hence the smallest Hebrew weight. The noun is singular after the number; English needs the plural. The Douay-Rheims's 'obols' follows the Greek.", "t": ["gerahs", "gerahs", "obols", "gerahs", "gerahs", "gerahs", "gerahs"]},
+  "13": {"s": ["it", "that"], "r": "The shekel, defined by its weight.", "n": "Hebrew has no 'is': literally 'twenty gerah it'.", "t": ["which is", "which is", "A sicle hath", "the same is", "the same is", "it is", "which is"]}
+ },
+ "lxx": {
+  "01": {"i": [0, 1, 2, 3], "m": 2, "n": "λύτρωσις, 'redemption, ransoming': 'and its redemption'. The Greek reads the Hebrew word as a noun, as STEP does."},
+  "02": {"i": [4], "m": 4, "n": "Our Greek text has nothing after ἀπό for 'a month'; a word has probably dropped out. That is an inference from the gap."},
+  "05": {"i": [5], "m": 5, "n": "συντίμησις, 'valuation, assessment'. The Greek has no verb 'redeem' here: 'and its redemption from (a month old): the valuation, five shekels'."},
+  "07": {"i": [6], "m": 6},
+  "08": {"i": [7], "m": 7, "n": "σίκλος, the Greek form of 'shekel'. In Leviticus 27:3 the Greek translators wrote δίδραχμον, the double drachma, instead."},
+  "09": {"i": [8, 9, 10], "m": 10},
+  "10": {"i": [11, 12], "m": 12},
+  "12": {"i": [13], "m": 13, "n": "ὀβολός, the obol, a small Greek coin, for the gerah. Our Greek text has no word for 'twenty' before it; it has probably dropped out."},
+  "13": {"i": [14], "m": 14, "n": "εἰσίν, 'they are'."}
+ }
+}

@@ -1,0 +1,33 @@
+{
+ "id": "i11",
+ "en": [
+  {"t": "Is it lawful", "w": ["01"]}, " ",
+  {"t": "for us", "w": ["02"]}, " ",
+  {"t": "to give", "w": ["05"]}, " ",
+  {"t": "tribute", "w": ["04"]}, " ",
+  {"t": "to Caesar", "w": ["03"]}, ", ",
+  {"t": "or", "w": ["06"]}, " ",
+  {"t": "not", "w": ["07"]}, "?"
+ ],
+ "words": {
+  "01": {"s": ["is it lawful", "is it permitted", "is it right"], "r": "Asks whether the law of God allows it.",
+         "n": "Abbott-Smith gives 'it is permitted, lawful' and lists this verse among those where it is used with an accusative. The question asks what God's law allows, not what Rome requires; a reasonable reading is that the trap lies in that difference.",
+         "t": ["Is it lawful", "Is it lawfull", "Is it lawful", "Is it lawful", "Is it lawful", "Is it lawful"]},
+  "02": {"s": ["for us", "us"], "r": "The questioners, as Jews under Roman rule.",
+         "n": "Accusative, the subject of 'to give'.",
+         "t": ["for us", "for vs", "for us", "for us", "to us", "for us"]},
+  "03": {"s": ["to Caesar", "to the emperor"], "r": "The Roman emperor, to whom the tribute went.",
+         "t": ["unto Cesar", "Cesar", "to Caesar", "unto Cæsar", "to Caesar", "to Caesar"]},
+  "04": {"s": ["tribute", "tribute money"], "r": "The payment owed to Rome by a subject people.",
+         "n": "Abbott-Smith defines it as 'tribute paid by a subject nation' and cites this verse, pointing to κῆνσος and τέλος as related words. This study keeps the three apart: tribute, census tax, toll. The BSB's 'taxes' does not.",
+         "t": ["tribute", "tribute", "tribute", "tribute", "tribute", "taxes"]},
+  "05": {"s": ["to give", "to pay"], "r": "To hand over the tribute.",
+         "n": "Abbott-Smith's φόρος entry lists 'to give tribute' as a phrase, with this verse. In his answer Jesus uses a different verb, 'give back' or 'render', the word for paying what is due.",
+         "t": ["to give", "to giue", "to give", "to give", "to give", "to pay"]},
+  "06": {"s": ["or"], "r": "Sets up the two possible answers.",
+         "t": ["or", "or", "or", "or", "or", "or"]},
+  "07": {"s": ["not", "no"], "r": "The second option: it is not lawful.",
+         "t": ["no", "no", "no", "not", "not", "not"]}
+ },
+ "tr_note": "The Textus Receptus reads the dative ἡμῖν, 'to us', for the accusative ἡμᾶς. The meaning is the same, and the KJV's 'for us' does not show the difference."
+}

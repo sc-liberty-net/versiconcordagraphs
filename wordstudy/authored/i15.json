@@ -1,0 +1,606 @@
+{
+ "id": "i15",
+ "en": [
+  {
+   "t": "From",
+   "w": [
+    "01"
+   ]
+  },
+  " ",
+  {
+   "t": "this",
+   "w": [
+    "02"
+   ]
+  },
+  ", ",
+  {
+   "t": "Pilate",
+   "w": [
+    "04",
+    "03"
+   ]
+  },
+  " ",
+  {
+   "t": "was seeking",
+   "w": [
+    "05"
+   ]
+  },
+  " ",
+  {
+   "t": "to release",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "him",
+   "w": [
+    "07"
+   ]
+  },
+  "; ",
+  {
+   "t": "but",
+   "w": [
+    "09"
+   ]
+  },
+  " ",
+  {
+   "t": "the Jews",
+   "w": [
+    "10",
+    "08"
+   ]
+  },
+  " ",
+  {
+   "t": "cried out",
+   "w": [
+    "11"
+   ]
+  },
+  ", ",
+  {
+   "t": "saying",
+   "w": [
+    "12"
+   ]
+  },
+  ", ‘",
+  {
+   "t": "If",
+   "w": [
+    "13"
+   ]
+  },
+  " ",
+  {
+   "t": "you release",
+   "w": [
+    "15"
+   ]
+  },
+  " ",
+  {
+   "t": "this man",
+   "w": [
+    "14"
+   ]
+  },
+  ", ",
+  {
+   "t": "you are",
+   "w": [
+    "17"
+   ]
+  },
+  " ",
+  {
+   "t": "not",
+   "w": [
+    "16"
+   ]
+  },
+  " ",
+  {
+   "t": "a friend",
+   "w": [
+    "18"
+   ]
+  },
+  " ",
+  {
+   "t": "of Caesar",
+   "w": [
+    "20",
+    "19"
+   ]
+  },
+  ". ",
+  {
+   "t": "Everyone",
+   "w": [
+    "21"
+   ]
+  },
+  " ",
+  {
+   "t": "who makes",
+   "w": [
+    "25",
+    "22"
+   ]
+  },
+  " ",
+  {
+   "t": "himself",
+   "w": [
+    "24"
+   ]
+  },
+  " ",
+  {
+   "t": "a king",
+   "w": [
+    "23"
+   ]
+  },
+  " ",
+  {
+   "t": "speaks against",
+   "w": [
+    "26"
+   ]
+  },
+  " ",
+  {
+   "t": "Caesar",
+   "w": [
+    "28",
+    "27"
+   ]
+  },
+  ".’"
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "from",
+    "upon",
+    "because of"
+   ],
+   "r": "With 'this', marks the point from which Pilate acts.",
+   "n": "The phrase 'from this' can mean 'from this time' or 'for this reason'. The translations take it of time, and either fits.",
+   "t": [
+    "from",
+    "From",
+    "from",
+    "Upon",
+    "From",
+    "From"
+   ]
+  },
+  "02": {
+   "s": [
+    "this",
+    "this point",
+    "then on"
+   ],
+   "r": "What has just passed between Jesus and Pilate.",
+   "t": [
+    "thenceforth",
+    "thence foorth",
+    "henceforth",
+    "this",
+    "this time",
+    "then on"
+   ]
+  },
+  "03": {
+   "s": [
+    "the"
+   ],
+   "r": "Greek often puts the article before a personal name; English does not.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "04": {
+   "s": [
+    "Pilate"
+   ],
+   "r": "Pontius Pilate, the Roman governor.",
+   "n": "Abbott-Smith spells the name Πειλᾶτος and notes the received text's Πιλάτος; a difference of spelling only.",
+   "t": [
+    "Pilate",
+    "Pilate",
+    "Pilate",
+    "Pilate",
+    "Pilate",
+    "Pilate"
+   ]
+  },
+  "05": {
+   "s": [
+    "was seeking",
+    "kept trying",
+    "tried",
+    "sought"
+   ],
+   "r": "Imperfect tense: he kept trying.",
+   "t": [
+    "sought",
+    "sought",
+    "sought",
+    "sought",
+    "was ... seeking",
+    "tried"
+   ]
+  },
+  "06": {
+   "s": [
+    "to release",
+    "to set free",
+    "to let go"
+   ],
+   "r": "To let Jesus go free.",
+   "n": "Abbott-Smith's first sense is 'to set free, release'. The same verb returns in the crowd's reply: 'if you release this man'.",
+   "t": [
+    "to release",
+    "to loose",
+    "to release",
+    "to release",
+    "to release",
+    "to release"
+   ]
+  },
+  "07": {
+   "s": [
+    "him"
+   ],
+   "r": "Jesus.",
+   "t": [
+    "him",
+    "him",
+    "him",
+    "him",
+    "him",
+    "Him"
+   ]
+  },
+  "08": {
+   "s": [
+    "the"
+   ],
+   "r": "The article with 'Jews'.",
+   "t": [
+    "the",
+    "the",
+    "the",
+    "the",
+    "the",
+    "the"
+   ]
+  },
+  "09": {
+   "s": [
+    "but",
+    "and"
+   ],
+   "r": "Sets the crowd's response against Pilate's effort.",
+   "t": [
+    "but",
+    "but",
+    "But",
+    "but",
+    "and",
+    "but"
+   ]
+  },
+  "10": {
+   "s": [
+    "Jews",
+    "Judeans"
+   ],
+   "r": "Those pressing the case against Jesus.",
+   "t": [
+    "Jews",
+    "Iewes",
+    "Jews",
+    "Jews",
+    "Jews",
+    "Jews"
+   ]
+  },
+  "11": {
+   "s": [
+    "cried out",
+    "shouted",
+    "yelled"
+   ],
+   "r": "They raise their voices against him.",
+   "n": "Abbott-Smith gives 'to cry out, shout', of people, and lists this verse with λέγων following.",
+   "t": [
+    "cried out",
+    "cried",
+    "cried out",
+    "cried out",
+    "were crying out",
+    "kept shouting"
+   ]
+  },
+  "12": {
+   "s": [
+    "saying"
+   ],
+   "r": "Introduces their words.",
+   "t": [
+    "saying",
+    "saying",
+    "saying",
+    "saying",
+    "saying",
+    null
+   ]
+  },
+  "13": {
+   "s": [
+    "if"
+   ],
+   "r": "Opens a condition about what Pilate may yet do.",
+   "n": "Abbott-Smith describes this conditional as representing something liable to happen but not so definitely expected; here, a release that Pilate might still carry out.",
+   "t": [
+    "If",
+    "If",
+    "If",
+    "If",
+    "If",
+    "If"
+   ]
+  },
+  "14": {
+   "s": [
+    "this man",
+    "this one",
+    "him"
+   ],
+   "r": "Jesus.",
+   "t": [
+    "this man",
+    "him",
+    "this man",
+    "this man",
+    "this one",
+    "this man"
+   ]
+  },
+  "15": {
+   "s": [
+    "you release",
+    "you let go",
+    "you set free"
+   ],
+   "r": "Aorist subjunctive: if you once let him go.",
+   "t": [
+    "thou let ... go",
+    "thou deliuer",
+    "thou release",
+    "thou release",
+    "thou mayest release",
+    "you release"
+   ]
+  },
+  "16": {
+   "s": [
+    "not",
+    "no"
+   ],
+   "r": "Denies that he would remain Caesar's friend.",
+   "t": [
+    "not",
+    "not",
+    "not",
+    "not",
+    "not",
+    "no"
+   ]
+  },
+  "17": {
+   "s": [
+    "you are",
+    "you will be"
+   ],
+   "r": "States what releasing Jesus would make him.",
+   "t": [
+    "thou art",
+    "thou art",
+    "thou art",
+    "thou art",
+    "thou art",
+    "you are"
+   ]
+  },
+  "18": {
+   "s": [
+    "a friend",
+    "an ally",
+    "a loyal supporter"
+   ],
+   "r": "One loyal to the emperor.",
+   "n": "Abbott-Smith's sense here is the noun, 'a friend'. Whether the crowd means a formal title or simple loyalty the verse does not say.",
+   "t": [
+    "friend",
+    "friende",
+    "friend",
+    "friend",
+    "a friend",
+    "friend"
+   ]
+  },
+  "19": {
+   "s": [
+    "the"
+   ],
+   "r": "The article with 'Caesar'; English does not use it.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "20": {
+   "s": [
+    "of Caesar",
+    "Caesar's",
+    "the emperor's"
+   ],
+   "r": "The emperor.",
+   "t": [
+    "Cesar’s",
+    "Cesars",
+    "Caesar's",
+    "Cæsar’s",
+    "of Caesar",
+    "of Caesar"
+   ]
+  },
+  "21": {
+   "s": [
+    "everyone",
+    "anyone",
+    "whoever"
+   ],
+   "r": "Any person at all who does this.",
+   "t": [
+    "whosoever",
+    "whosoeuer",
+    "whosoever",
+    "every one",
+    "every one",
+    "Anyone"
+   ]
+  },
+  "22": {
+   "s": [
+    "who",
+    "the one who"
+   ],
+   "r": "The article with the participle: the one who makes himself king.",
+   "t": [
+    null,
+    null,
+    null,
+    "that",
+    null,
+    "who"
+   ]
+  },
+  "23": {
+   "s": [
+    "a king"
+   ],
+   "r": "The title claimed.",
+   "t": [
+    "a king",
+    "a King",
+    "a king",
+    "a king",
+    "a king",
+    "a king"
+   ]
+  },
+  "24": {
+   "s": [
+    "himself"
+   ],
+   "r": "He makes himself king; no one else made him one.",
+   "t": [
+    "himself",
+    "himselfe",
+    "himself",
+    "himself",
+    "himself",
+    "himself"
+   ]
+  },
+  "25": {
+   "s": [
+    "makes",
+    "declares",
+    "claims to be",
+    "sets up as"
+   ],
+   "r": "Present participle: whoever presents himself as king.",
+   "t": [
+    "maketh",
+    "maketh",
+    "maketh",
+    "maketh",
+    "making",
+    "declares"
+   ]
+  },
+  "26": {
+   "s": [
+    "speaks against",
+    "opposes",
+    "defies",
+    "sets himself against"
+   ],
+   "r": "He sets himself against Caesar.",
+   "n": "Literally 'speaks against'. Abbott-Smith gives 'contradict, oppose, resist', and cites this verse for the use with a dative. The BSB's 'is defying' takes it as opposition in act, not only in words.",
+   "t": [
+    "speaketh against",
+    "speaketh against",
+    "speaketh against",
+    "speaketh against",
+    "doth speak against",
+    "is defying"
+   ]
+  },
+  "27": {
+   "s": [
+    "the"
+   ],
+   "r": "The article with 'Caesar'; English does not use it.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "28": {
+   "s": [
+    "Caesar",
+    "the emperor"
+   ],
+   "r": "The emperor whose authority is at stake.",
+   "t": [
+    "Cesar",
+    "Cesar",
+    "Caesar",
+    "Cæsar",
+    "Caesar",
+    "Caesar"
+   ]
+  }
+ },
+ "tr_note": "The Textus Receptus reads ἔκραζον, 'were crying out', for ἐκραύγασαν, 'cried out'; the YLT's 'were crying out' matches it, while the KJV's 'cried out' does not show the tense. It reads αὐτόν for ἑαυτόν, 'himself', yet the KJV still has 'himself'. It has ἐζήτει, 'was seeking', at another place in the sentence, which is the KJV's 'Pilate sought'."
+}

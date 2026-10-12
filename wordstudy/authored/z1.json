@@ -1,0 +1,47 @@
+{
+ "id": "z1",
+ "en": [
+  {"t": "Speak", "w": ["01"]}, " ",
+  {"t": "to", "w": ["02"]}, " ",
+  {"t": "the sons of", "w": ["03"]}, " ",
+  {"t": "Israel", "w": ["04"]}, ", ",
+  {"t": "and say", "w": ["05"]}, " ",
+  {"t": "to them", "w": ["06"]}, ", ‘",
+  {"t": "When", "w": ["08"]}, " ",
+  {"t": "a man", "w": ["07"]}, " ",
+  {"t": "makes a special", "w": ["09"]}, " ",
+  {"t": "vow", "w": ["10"]}, ", ",
+  {"t": "by your valuation", "w": ["11"]}, " ",
+  {"t": "persons", "w": ["12"]}, " ",
+  {"t": "belong", "sup": "Supplied in English. The Hebrew has no verb: 'persons to the LORD'."}, " ",
+  {"t": "to the LORD", "w": ["13"]}, "."
+ ],
+ "words": {
+  "01": {"s": ["speak", "tell"], "r": "The LORD's instruction to Moses.", "t": ["Speak", "Speake", "Speak", "Speak", "Speak", "Speak", "Speak"]},
+  "02": {"s": ["to", "unto"], "r": "Toward the people addressed.", "t": ["unto", "vnto", "to", "unto", "unto", "unto", "to"]},
+  "03": {"s": ["the sons of", "the children of", "the people of"], "r": "The descendants of Israel, the whole people.", "n": "Literally 'sons of'; STEP tags it here as 'people of', and the BSB folds the phrase into 'the Israelites'.", "t": ["the children", "the children", "the children", "the children", "the children", "the sons", "the Israelites"]},
+  "04": {"s": ["Israel"], "r": "The people named after Jacob, whose second name was Israel.", "n": "BDB: the second name of Jacob, and the name of the Hebrew nation.", "t": ["of Israel", "of Israel", "of Israel", "of Israel", "of Israel", "of Israel", null]},
+  "05": {"s": ["and say", "and tell", "and you shall say"], "r": "Moses is to pass the law on.", "n": "A perfect with 'and' after a command, which continues the command: literally 'and you shall say'. The Douay-Rheims and YLT keep that form.", "t": ["and say", "and say", "and thou shalt say", "and say", "and say", "and thou hast said", "and say"]},
+  "06": {"s": ["to them"], "r": "To the people.", "t": ["unto them", "vnto them", "to them", "unto them", "unto them", "unto them", "to them"]},
+  "07": {"s": ["a man", "anyone", "someone", "a person"], "r": "Whoever makes the vow.", "n": "The Hebrew puts 'a man' first: 'a man, when he vows'. STEP tags it here with the general sense 'anyone', and the BSB says 'someone'.", "t": ["a man", "any man", "The man", "a man", "a man", "a man", "someone"]},
+  "08": {"s": ["when", "if"], "r": "Introduces the case the law covers.", "t": ["When", "If", null, "When", "When", "When", "When"]},
+  "09": {"s": ["makes a special", "makes an extraordinary", "sets apart", "fulfils"], "r": "A vow out of the ordinary, set apart from the usual offerings.", "n": "Gesenius gives the root's proper sense as TO SEPARATE, TO DISTINGUISH; BDB gives 'be surpassing, extraordinary'. So 'make a special vow', a vow set apart. The translations differ widely: 'singular', 'clearly utter', 'accomplish', 'wonderful'.", "t": ["shall make a singular", "shall make", "shall have made", "shall clearly utter", "shall accomplish", "maketh a wonderful", "makes a special"]},
+  "10": {"s": ["vow", "votive offering", "promise"], "r": "A promise to give something to God.", "n": "Gesenius gives two senses, a vow and anything vowed, such as a vowed sacrifice.", "t": ["vow", "a vowe", "a vow", "a vow", "a vow", "vow", "vow"]},
+  "11": {"s": ["by your valuation", "according to your valuation", "at your assessment"], "r": "At the price fixed for each person in the verses that follow.", "n": "The brief's lexicon gives estimate, valuation; Gesenius's first senses are a row or pile and a putting in order, and BDB says it is made by ordering, classifying. 'Your' addresses Moses, or whoever sets the value; the same 'your valuation' recurs through the chapter, and it may have become a fixed term for the standard rate. That last point is a reasonable reading, not a lexicon statement.", "t": ["by thy estimation", "by thy estimation", "according to estimation", "according to thy valuation", "by thy estimation", "by thy valuation", "involving the value"]},
+  "12": {"s": ["persons", "lives", "souls", "people"], "r": "Human beings vowed to God, whose value is then paid instead.", "n": "The plural of the word often rendered 'soul'. BDB lists this verse under its sense 'persons'. The Douay-Rheims's 'his soul' takes the vow as of oneself.", "t": ["the persons", "of a person", "and promised his soul", "of persons", "the persons", "the persons", "of persons"]},
+  "13": {"s": ["to the LORD", "for the LORD", "the LORD's"], "r": "The persons vowed belong to God.", "n": "The 'to' here marks belonging: they are the LORD's, as YLT puts it.", "t": ["shall be for the Lord", "vnto the Lord", "to God", "unto HaShem", "shall be for Jehovah", "are Jehovah's", "to the LORD"]}
+ },
+ "lxx": {
+  "01": {"i": [0], "m": 0},
+  "03": {"i": [1, 2], "m": 2},
+  "04": {"i": [3], "m": 3},
+  "05": {"i": [4, 5], "m": 5},
+  "06": {"i": [6], "m": 6},
+  "07": {"i": [7, 8], "m": 7, "n": "ὃς ἄν, 'whoever': the Greek folds 'a man, when' into one phrase."},
+  "09": {"i": [9], "m": 9, "lemma": "εὔχομαι", "strong": "G2172", "n": "Dictionary form supplied; the brief gives none. 'Whoever vows a vow': the Greek has nothing for 'special'."},
+  "10": {"i": [10], "m": 10},
+  "11": {"i": [11, 12], "m": 12, "n": "ὥστε τιμήν, 'so as to pay the price': τιμή, 'price, value', is the Greek word for the valuation."},
+  "12": {"i": [13, 14], "m": 13, "n": "Our Greek text reads only 'the (...) of him' here; a noun, probably 'soul', has evidently dropped out after the article. That is an inference from the gap."},
+  "13": {"i": [15, 16], "m": 16}
+ }
+}

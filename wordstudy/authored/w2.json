@@ -1,0 +1,40 @@
+{
+ "id": "w2",
+ "en": [
+  {"t": "You shall not oppress", "w": ["02", "01"]}, " ",
+  {"t": "a hired man", "w": ["03"]}, ", ",
+  {"t": "poor", "w": ["04"]}, " ",
+  {"t": "and needy", "w": ["05"]}, ", ",
+  {"t": "of your brothers", "w": ["06"]}, " ",
+  {"t": "or", "w": ["07"]}, " ",
+  {"t": "of your sojourners", "w": ["08"]}, " ",
+  {"t": "who", "w": ["09"]}, " are ",
+  {"t": "in your land", "w": ["10"]}, ", ",
+  {"t": "in your gates", "w": ["11"]}, "."
+ ],
+ "words": {
+  "01": {"s": ["not", "do not"], "r": "A flat prohibition.", "t": ["not", "not", "not", "not", "not", "not", "not"]},
+  "02": {"s": ["oppress", "wrong", "defraud", "exploit"], "r": "To take unfair advantage of a worker who cannot resist.", "n": "Gesenius gives TO OPPRESS, to treat anyone unjustly or violently, and names the needy and helpless among those so treated. The Douay-Rheims's 'refuse the hire' follows the Greek, which reads 'wage' here (see the Septuagint note).", "t": ["oppress", "oppresse", "refuse", "oppress", "oppress", "oppress", "oppress"]},
+  "03": {"s": ["a hired man", "a hireling", "a hired worker", "a day labourer"], "r": "A man who works for another for pay.", "n": "Gesenius: a hireling. The brief's lexicon gives 'hired', and as a noun 'hireling, hired labourer'.", "t": ["an hired servant", "an hyred seruant", "the hire", "a hired servant", "a hired servant", "a hireling", "a hired hand"]},
+  "04": {"s": ["poor", "afflicted", "lowly", "wretched"], "r": "Without means, and so easily pressed.", "n": "Gesenius gives afflicted, wretched, poor, often with the added idea of piety; BDB adds 'oppressed by rich and powerful'. 'Poor' here, with 'afflicted' in the hover, since the verse is about a worker's means.", "t": ["that is poor", "poore", "and the poor", "that is poor", "that is poor", "poor", "who is poor"]},
+  "05": {"s": ["and needy", "and in want", "and destitute"], "r": "Lacking what he needs to live.", "n": "Gesenius: needy, poor, so called from the idea of needing; he notes it is often joined with the word before it, as here.", "t": ["and needy", "that is needie", "of the needy", "and needy", "and needy", "and needy", "and needy"]},
+  "06": {"s": ["of your brothers", "of your countrymen", "of your kinsmen", "a fellow Israelite"], "r": "A fellow Israelite.", "n": "Literally 'from your brothers', that is, one of them. STEP tags the word here with the sense 'compatriot': a brother in the wider sense of a member of the same people.", "t": ["of thy brethren", "of thy brethren", "thy brother", "of thy brethren", "of thy brethren", "of thy brethren", "a brother"]},
+  "07": {"s": ["or"], "r": "The law covers both groups alike.", "t": ["or", "nor", "or", "or", "or", "or", "or"]},
+  "08": {"s": ["of your sojourners", "of the foreigners among you", "of your resident aliens", "of your strangers"], "r": "A foreigner living among Israel, as a hired worker would often be.", "n": "Literally singular, 'from your sojourner', used for the whole group. Gesenius: a sojourner, stranger, foreigner, a person living out of his own country; STEPBible's lexicon adds 'a newcomer lacking inherited rights'.", "t": ["of thy strangers", "of the stranger", "a stranger", "of thy strangers", "of thy sojourners", "of thy sojourner", "a foreigner"]},
+  "09": {"s": ["who", "that"], "r": "Introduces where the sojourner lives.", "n": "Hebrew has no 'are': literally 'who in your land'.", "t": ["that are", "that is", "that dwelleth with thee", "that are", "that are", "who is", "residing"]},
+  "10": {"s": ["in your land", "in your country"], "r": "Living in Israel's own territory.", "t": ["in thy land", "in thy land", "in the land", "in thy land", "in thy land", "in thy land", null]},
+  "11": {"s": ["in your gates", "within your gates", "in your towns", "in your cities"], "r": "Inside one of your towns.", "n": "Gesenius gives the first sense as a gate, of a camp, a city, a temple or a palace. STEP tags it here as 'town', and the BSB renders it so: the gate stands for the town it lets into.", "t": ["within thy gates", "within thy gates", "and is within thy gates", "within thy gates", "within thy gates", "within thy gates", "in one of your towns"]}
+ },
+ "lxx": {
+  "01": {"i": [0], "m": 0},
+  "02": {"i": [1], "m": 1, "n": "ἀπαδικέω, 'to wrong someone out of something, withhold wrongfully'."},
+  "03": {"i": [2], "m": 2, "n": "μισθός, 'wage', where the Hebrew has 'hired man': the Greek reads 'you shall not withhold the wage of the poor and needy'. The two Hebrew words are close in spelling, which likely explains the difference; that is an inference."},
+  "04": {"i": [3], "m": 3, "n": "πένης, 'a poor man, one who works for his living'."},
+  "05": {"i": [4, 5], "m": 5},
+  "06": {"i": [6, 7, 8, 9], "m": 8},
+  "07": {"i": [10], "m": 10},
+  "08": {"i": [11, 12, 13], "m": 13, "n": "προσήλυτος, 'one who has come over', the Greek word for the sojourner."},
+  "09": {"i": [14], "m": 14, "n": "The Greek has no 'in your land'; it reads 'of the sojourners who are in your cities'."},
+  "11": {"i": [15, 16, 17, 18], "m": 17, "n": "πόλις, 'city': the Greek gives the sense, not the picture of the gate."}
+ }
+}

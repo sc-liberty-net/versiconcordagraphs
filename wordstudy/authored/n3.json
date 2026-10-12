@@ -1,0 +1,41 @@
+{
+ "id": "n3",
+ "en": [
+  {"t": "From all", "w": ["01"]}, " ",
+  {"t": "your gifts", "w": ["02"]}, " ",
+  {"t": "you shall lift up", "w": ["03"]}, " ",
+  {"t": "all", "w": ["05", "04"]}, " ",
+  {"t": "the contribution of", "w": ["06"]}, " ",
+  {"t": "the LORD", "w": ["07"]}, ", ",
+  {"t": "from all", "w": ["08"]}, " ",
+  {"t": "its best", "w": ["09"]}, ", ",
+  {"t": "its holy part", "w": ["11", "10"]}, ", ",
+  {"t": "from it", "w": ["12"]}, "."
+ ],
+ "words": {
+  "01": {"s": ["from all", "out of all", "out of every"], "r": "Every gift the Levites receive is to be drawn on.", "t": ["Out of all", "of all", "All the things", "Out of all", "Out of all", "out of all", "every"]},
+  "02": {"s": ["gifts", "presents", "what is given you"], "r": "What comes to the Levites from the people, chiefly the tithe.", "n": "Gesenius: a gift, a present, and also a gift offered to God. That 'your gifts' means what the Levites receive, and not what they own, is a reasonable reading of the passage, not something the word itself says. The DRC follows the Latin and rewrites the whole verse.", "t": ["your gifts", "your gifts", null, "that is given you", "your gifts", "your gifts", "gift"]},
+  "03": {"s": ["lift up", "raise", "set apart", "offer"], "r": "The Levites are to lift off a portion for the LORD.", "n": "The causative form of a verb that Gesenius and BDB give as to rise, be high: so 'make high, lift up'. It is the verb from which 'contribution' later in the verse is formed. The 'you' is plural: the Levites.", "t": ["ye shall offer", "Ye shall offer", "you shall offer", "ye shall set apart", "ye shall offer", "ye do lift up", "You must present"]},
+  "04": {"s": ["(object marker, no English equivalent)"], "r": "Marks 'all the contribution of the LORD' as the object of 'lift up'.", "n": "This small word marks a definite direct object and has no English equivalent; it is counted here with 'all'.", "t": [null, null, null, null, null, null, null]},
+  "05": {"s": ["all", "the whole", "every"], "r": "The whole of what is due to the LORD, none held back.", "n": "BDB notes that with a following noun this word means 'the whole of'. Because 'the contribution of the LORD' is definite, 'all the' or 'the whole' fits better than the KJV's 'every'; YLT says 'the whole'.", "t": ["every", "al", null, "all", "every", "the whole", null]},
+  "06": {"s": ["contribution", "offering", "portion set apart", "gift"], "r": "The portion lifted off and set apart for the LORD.", "n": "Gesenius derives the noun from the verb 'lift up' and gives an oblation, offering, gift, especially brought to the temple and the priests. We keep 'contribution' throughout, where older translations say 'heave offering'.", "t": ["heave offering", "heaue offrings", "the gifts", "that which is due", "heave-offering", "heave-offering", "the offering due"]},
+  "07": {"s": ["the LORD", "Yahweh", "Jehovah", "HaShem"], "r": "The personal name of Israel's God.", "n": "Gesenius records the phrase 'contribution of the LORD' as a fuller name for this offering.", "t": ["of the Lord", "the Lords", "of the Lord", "unto HaShem", "of Jehovah", "of Jehovah", "the LORD"]},
+  "08": {"s": ["from all", "out of all", "of all"], "r": "The portion is to be drawn from the whole.", "t": ["of all", "of all", null, "of all", "of all", "out of all", "from all"]},
+  "09": {"s": ["its best", "its choicest part", "its fat", "its richest part"], "r": "The finest of the gifts, not the leftovers.", "n": "Literally 'its fat'. Gesenius gives fat, and figuratively the best or most excellent of any kind, as in 'the fat of the land'. Geneva and YLT keep 'fat'.", "t": ["the best thereof", "the fat of the same", "the best and choicest things", "the best thereof", "the best thereof", "its fat", "the best"]},
+  "10": {"s": ["(object marker, no English equivalent)"], "r": "Marks 'its holy part' as a further object of 'lift up'.", "n": "This small word marks a definite direct object and has no English equivalent; it is counted here with 'its holy part'.", "t": [null, null, null, null, null, null, null]},
+  "11": {"s": ["its holy part", "its consecrated part", "the hallowed portion of it"], "r": "The part of the gift that belongs to God and is set apart for him.", "n": "This word usually means a sanctuary. Gesenius cites this very verse for an earlier sense, a holy thing, something consecrated, and notes that the form here is unusual. 'Its best' and 'its holy part' describe the same portion.", "t": ["the hallowed part thereof", "the holy things thereof", null, "the hallowed part thereof", "the hallowed part thereof", "its hallowed part", "the holiest part"]},
+  "12": {"s": ["from it", "out of it", "of it"], "r": "Taken from the gift itself.", "t": ["out of it", null, null, "out of it", "out of it", "out of it", "of it"]}
+ },
+ "lxx": {
+  "_extra": {"8": "ἢ (or): nothing in the Hebrew answers to it."},
+  "01": {"i": [0, 1], "m": 1},
+  "02": {"i": [2, 3, 4], "m": 3, "n": "δόμα, 'a gift'."},
+  "03": {"i": [5], "m": 5, "lemma": "ἀφαιρέω", "strong": "G0851", "n": "Dictionary form supplied by hand: the brief gives none. ἀφελεῖτε, 'you shall take off'."},
+  "06": {"i": [6], "m": 6, "n": "ἀφαίρεμα, 'something taken off', from the same Greek verb as 'take off' before it, much as the Hebrew noun comes from its verb. The Greek has no word for 'all'."},
+  "07": {"i": [7], "m": 7},
+  "08": {"i": [9, 10], "m": 10},
+  "09": {"i": [11, 12], "m": 12, "n": "ἀπαρχή, 'firstfruits, first portion', where the Hebrew says 'its fat', its best."},
+  "11": {"i": [13, 14], "m": 14, "lemma": "ἁγιάζω", "strong": "G0037", "n": "Dictionary form supplied by hand: the brief gives none. τὸ ἡγιασμένον, 'the thing made holy'."},
+  "12": {"i": [15, 16], "m": 15}
+ }
+}

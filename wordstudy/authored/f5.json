@@ -1,0 +1,71 @@
+{
+ "id": "f5",
+ "en": [
+  {"t": "Your", "w": ["03"]}, " ",
+  {"t": "wealth", "w": ["02", "01"]}, " ",
+  {"t": "has rotted", "w": ["04"]}, ", ",
+  {"t": "and", "w": ["05"]}, " ",
+  {"t": "your", "w": ["08"]}, " ",
+  {"t": "garments", "w": ["07", "06"]}, " ",
+  {"t": "have become", "w": ["10"]}, " ",
+  {"t": "moth-eaten", "w": ["09"]}, "."
+ ],
+ "words": {
+  "01": {
+   "s": ["the"],
+   "r": "With 'your', marks the hearers' own wealth.",
+   "n": "Greek says 'the wealth of you'; English uses 'your' alone.",
+   "t": [null, null, null, null, null, null]
+  },
+  "02": {
+   "s": ["wealth", "riches", "possessions"],
+   "r": "Everything the rich have gathered.",
+   "n": "Singular in Greek, so 'wealth' keeps the number; the translations all say 'riches'. Abbott-Smith gives 'riches, wealth' and lists this verse under external possessions.",
+   "t": ["riches", "riches", "riches", "riches", "riches", "riches"]
+  },
+  "03": {
+   "s": ["your", "of you"],
+   "r": "The rich whom James addresses.",
+   "t": ["Your", "Your", "Your", "Your", "your", "Your"]
+  },
+  "04": {
+   "s": ["has rotted", "has decayed", "is corrupted", "has perished"],
+   "r": "The wealth has already gone bad.",
+   "n": "A perfect, spoken as if the ruin were already complete. Abbott-Smith explains that this perfect active form has a middle sense, 'has perished, become corrupted', and gives this verse as its only New Testament use.",
+   "t": ["are corrupted", "are corrupt", "are corrupted", "are corrupted", "have rotted", "have rotted"]
+  },
+  "05": {
+   "s": ["and"],
+   "r": "Adds the second loss.",
+   "t": ["and", "and", "and", "and", "and", "and"]
+  },
+  "06": {
+   "s": ["the"],
+   "r": "With 'your', marks the garments as theirs.",
+   "t": [null, null, null, null, null, null]
+  },
+  "07": {
+   "s": ["garments", "clothes", "cloaks", "robes"],
+   "r": "Their clothing, a form of stored wealth.",
+   "n": "Abbott-Smith explains that the word is used of an outer garment, a mantle or cloak, except in the plural, which he treats separately. Here it is plural, and the translations take it as clothing. That garments counted as wealth worth storing is a reasonable reading of the verse.",
+   "t": ["garments", "garments", "garments", "garments", "garments", "clothes"]
+  },
+  "08": {
+   "s": ["your", "of you"],
+   "r": "The same rich hearers.",
+   "t": ["your", "your", "your", "your", "your", "your"]
+  },
+  "09": {
+   "s": ["moth-eaten", "eaten by moths"],
+   "r": "Destroyed by moths while laid away.",
+   "n": "Abbott-Smith builds it from σής, moth, and βιβρώσκω, eat, and gives this verse as its only New Testament use. He records one Septuagint use, for the Hebrew phrase אָכַל עָשׁ, in which the moth is the eater.",
+   "t": ["motheaten", "moth eaten", "motheaten", "moth-eaten", "moth-eaten", "moths have eaten"]
+  },
+  "10": {
+   "s": ["have become", "are", "have been"],
+   "r": "The change is complete: they are now moth-eaten.",
+   "n": "A perfect, like 'has rotted'.",
+   "t": ["are", "are", "are", "are", "have become", null]
+  }
+ }
+}

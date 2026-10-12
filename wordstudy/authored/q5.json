@@ -1,0 +1,39 @@
+{
+ "id": "q5",
+ "en": [
+  {"t": "When", "w": ["01"]}, " ",
+  {"t": "you pick the grapes of", "w": ["02"]}, " ",
+  {"t": "your vineyard", "w": ["03"]}, ", ",
+  {"t": "you shall not glean", "w": ["05", "04"]}, " ",
+  {"t": "behind you", "w": ["06"]}, "; ",
+  {"t": "it shall be", "w": ["10"]}, " ",
+  {"t": "for the sojourner", "w": ["07"]}, ", ",
+  {"t": "for the fatherless", "w": ["08"]}, ", ",
+  {"t": "and for the widow", "w": ["09"]}, "."
+ ],
+ "words": {
+  "01": {"s": ["when", "whenever", "if"], "r": "Sets the scene: whenever the grape harvest comes.", "n": "The same opening as the sheaf law two verses before. The DRC's 'If' makes it a case law.", "t": ["When", "When", "If", "When", "When", "When", "When"]},
+  "02": {"s": ["pick the grapes of", "gather the vintage of", "cut the grapes of", "harvest"], "r": "You cut the grape clusters from your vines.", "n": "Gesenius gives the first sense TO CUT OFF, and notes that it commonly refers to grapes, to gather the vintage, citing this verse for its use with a vineyard as object. The Hebrew says only 'you vintage your vineyard'; 'the grapes of' is part of the verb's meaning. YLT keeps the root sense, 'cuttest'.", "t": ["thou gatherest the grapes", "thou gatherest", "thou make the vintage", "thou gatherest the grapes", "thou gatherest the grapes", "thou cuttest", "you gather the grapes"]},
+  "03": {"s": ["vineyard", "vines"], "r": "Your own vineyard.", "n": "Gesenius gives the base sense as a field planted with choicer plants, kept like a garden or orchard.", "t": ["of thy vineyard", "thy vineyard", "of thy vineyard", "of thy vineyard", "of thy vineyard", "thy vineyard", "of your vineyard"]},
+  "04": {"s": ["not", "do not"], "r": "A flat prohibition.", "t": ["not", "not", "not", "not", "not", "not", "not"]},
+  "05": {"s": ["glean", "go over again", "strip", "pick clean"], "r": "Do not go back over the vines for what the first picking missed.", "n": "BDB and the brief's lexicon give 'glean'. Gesenius traces the root to a sense of drinking a second time, applied to any second going-over, such as going over the boughs to collect what is left. The BSB's 'go over the vines again' gives that sense.", "t": ["thou shalt ... glean it", "thou shalt ... gather the grapes cleane", "thou shalt ... gather the clusters that remain", "thou shalt ... glean it", "thou shalt ... glean it", "thou dost ... glean", "you must ... go over the vines"]},
+  "06": {"s": ["behind you", "after you", "afterward"], "r": "Going back over the rows you have already picked.", "n": "Gesenius gives the base sense as what is behind, the hinder part. The KJV takes it of time, 'afterward'; most others take it of place, 'after thee', 'behind thee'.", "t": ["afterward", "after thee", null, "after thee", "after thee", "behind thee", "again"]},
+  "07": {"s": ["resident foreigner", "sojourner", "stranger", "immigrant"], "r": "Someone living in Israel who was not born into it.", "n": "Gesenius: a sojourner, stranger, foreigner, a person living out of his own country. BDB: a temporary dweller, a newcomer with no inherited rights.", "t": ["for the stranger", "for the stranger", "for the stranger", "for the stranger", "for the sojourner", "to the sojourner", "for the foreigner"]},
+  "08": {"s": ["fatherless child", "orphan"], "r": "A child without a father to provide for them.", "n": "Gesenius notes the word is used of a child who has lost only its father, so 'fatherless' is more exact than 'orphan'.", "t": ["for the fatherless", "for the fatherlesse", "the fatherless", "for the fatherless", "for the fatherless", "to the fatherless", "the fatherless"]},
+  "09": {"s": ["widow"], "r": "A woman without a husband to provide for her.", "t": ["and for the widow", "and for the widowe", "and the widow", "and for the widow", "and for the widow", "and to the widow", "and the widow"]},
+  "10": {"s": ["it shall be", "it belongs", "let it be"], "r": "What is left on the vines belongs to these three.", "n": "The Hebrew says simply 'it shall be', and the 'to the' on each of the three nouns makes it ownership. Geneva and the DRC make it plural, 'they', meaning the grapes; the BSB spells out the subject, 'What remains'.", "t": ["it shall be", "they shalbe", "they shall be", "it shall be", "it shall be", "it is", "What remains will be"]}
+ },
+ "lxx": {
+  "_extra": {"1": "δὲ (and, but): added by the Greek translators; nothing in the Hebrew answers to it."},
+  "01": {"i": [0], "m": 0},
+  "02": {"i": [2], "m": 2, "n": "τρυγάω, 'to gather the vintage'."},
+  "03": {"i": [3, 4, 5], "m": 4},
+  "04": {"i": [6], "m": 6},
+  "05": {"i": [7, 8], "m": 7, "n": "ἐπανατρυγάω, 'to gather the vintage a second time', the same compound the Greek uses for this Hebrew verb in Leviticus 19:10. The Greek adds 'it', the vineyard."},
+  "06": {"i": [9, 10, 11], "m": 10, "n": "τὰ ὀπίσω σου, 'the things behind you': the Greek makes the leftovers the object."},
+  "07": {"i": [12, 13], "m": 13, "n": "προσήλυτος, 'one who has come over'. English 'proselyte' comes from it, though here it still means a resident foreigner."},
+  "08": {"i": [14, 15, 16], "m": 16, "n": "ὀρφανός, the source of English 'orphan'. The Greek adds 'and' before it."},
+  "09": {"i": [17, 18, 19], "m": 19},
+  "10": {"i": [20], "m": 20}
+ }
+}

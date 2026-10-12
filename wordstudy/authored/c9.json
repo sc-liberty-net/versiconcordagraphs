@@ -1,0 +1,164 @@
+{
+ "id": "c9",
+ "en": [
+  {"t": "And", "w": ["01"]}, " ",
+  {"t": "the", "w": ["02"]}, " ",
+  {"t": "scribes", "w": ["03"]}, " ",
+  {"t": "of the", "w": ["05"]}, " ",
+  {"t": "Pharisees", "w": ["06"]}, ", ",
+  {"t": "having seen", "w": ["08"]}, " ",
+  {"t": "that", "w": ["09"]}, " ",
+  {"t": "he was eating", "w": ["10"]}, " ",
+  {"t": "with", "w": ["11"]}, " ",
+  {"t": "the", "w": ["12"]}, " ",
+  {"t": "sinners", "w": ["13"]}, " ",
+  {"t": "and", "w": ["14"]}, " ",
+  {"t": "toll collectors", "w": ["15"]}, ", ",
+  {"t": "were saying", "w": ["16"]}, " ",
+  {"t": "to", "w": ["17"]}, " ",
+  {"t": "his", "w": ["19"]}, " ",
+  {"t": "disciples", "w": ["18"]}, ", ‘",
+  {"t": "Why", "w": ["21"]}, " ",
+  {"t": "does he eat", "w": ["27"]}, " ",
+  {"t": "with", "w": ["22"]}, " ",
+  {"t": "the", "w": ["23"]}, " ",
+  {"t": "toll collectors", "w": ["24"]}, " ",
+  {"t": "and", "w": ["25"]}, " ",
+  {"t": "sinners", "w": ["26"]}, "?’"
+ ],
+ "words": {
+  "01": {
+   "s": ["and", "now"],
+   "r": "Links this scene to the meal just described.",
+   "t": ["And", "And", "And", "And", "And", null]
+  },
+  "02": {
+   "s": ["the"],
+   "r": "Marks the scribes as a known group.",
+   "t": ["the", "the", "the", "the", "the", "the"]
+  },
+  "03": {
+   "s": ["scribes", "experts in the law", "teachers of the law"],
+   "r": "Men trained in the written law, who taught and applied it.",
+   "n": "Abbott-Smith's entry begins with older senses of the word, a secretary or a state clerk. In the gospels it names men expert in the law, which is the sense here.",
+   "t": ["scribes", "Scribes", "scribes", "scribes", "scribes", "scribes"]
+  },
+  "05": {
+   "s": ["of the", "belonging to the", "who were of the"],
+   "r": "Marks these scribes as belonging to the Pharisee party.",
+   "n": "Our text has the genitive, 'the scribes of the Pharisees': scribes who were Pharisees. The Textus Receptus has 'and the Pharisees', two groups, which the KJV follows.",
+   "t": [null, null, "the", "of the", "the", "who were"]
+  },
+  "06": {
+   "s": ["Pharisees"],
+   "r": "The party known for strict keeping of the law and its traditions.",
+   "n": "Abbott-Smith cites this verse for the pairing of Pharisees and scribes, and traces the name to an Aramaic word.",
+   "t": ["Pharisees", "Pharises", "Pharisees", "Pharisees", "Pharisees", "Pharisees"]
+  },
+  "08": {
+   "s": ["having seen", "seeing", "when they saw", "noticing"],
+   "r": "They observed Jesus at table with these guests.",
+   "n": "An aorist participle: the seeing comes before their speaking.",
+   "t": ["when ... saw", "when ... sawe", "seeing", "when they saw", "having seen", "When ... saw"]
+  },
+  "09": {
+   "s": ["that"],
+   "r": "Introduces what they saw.",
+   "n": "Where our text reads 'that he eats', the Textus Receptus reads 'him eating'; the KJV, Geneva and YLT render that 'him', and the BSB names 'Jesus'.",
+   "t": ["him", "him", "that", "that", "him", "Jesus"]
+  },
+  "10": {
+   "s": ["he was eating", "he is eating", "he eats", "he ate"],
+   "r": "Jesus was sharing a meal with them.",
+   "n": "The Greek keeps the present tense of what was seen, 'he eats'; English shifts it into the past after 'having seen'.",
+   "t": ["eat", "eate", "he ate", "he was eating", "eating", "eating"]
+  },
+  "11": {
+   "s": ["with", "in company with"],
+   "r": "In the company of these guests at the table.",
+   "t": ["with", "with", "with", "with", "with", "with"]
+  },
+  "12": {
+   "s": ["the"],
+   "r": "Points to the particular guests just described at the meal.",
+   "t": [null, "the", null, "the", "the", null]
+  },
+  "13": {
+   "s": ["sinners", "the sinful", "wrongdoers"],
+   "r": "People known for wrongdoing, whom the scribes held at a distance.",
+   "n": "Abbott-Smith gives 'sinful, a sinner', and notes that the Septuagint uses it chiefly for Hebrew רָשָׁע. In our text 'sinners' comes first in this pair; the Textus Receptus puts it second, as in the question that follows. The BSB's 'these people' sums up both groups.",
+   "t": ["sinners", "sinners", "sinners", "sinners", "sinners", "these people"]
+  },
+  "14": {
+   "s": ["and"],
+   "r": "Joins the two groups at the table.",
+   "t": ["and", "and", "and", "and", "and", null]
+  },
+  "15": {
+   "s": ["toll collectors", "tax collectors", "publicans", "tax-gatherers"],
+   "r": "Men who collected tolls and taxes, here at table with Jesus.",
+   "n": "Abbott-Smith gives two senses: a farmer of taxes (Latin publicanus), and a subordinate of such a man who collected taxes or tolls in a district, the 'publican' of the English versions. This study renders the word 'toll collector'.",
+   "t": ["publicans", "Publicanes", "publicans", "publicans", "tax-gatherers", null]
+  },
+  "16": {
+   "s": ["were saying", "said", "kept saying", "began to say"],
+   "r": "They put their objection to the disciples.",
+   "n": "An imperfect: 'were saying', which may suggest repeated or ongoing complaint; the translations simplify it to 'said' or 'asked'.",
+   "t": ["they said", "they sayd", "said", "said", "said", "they asked"]
+  },
+  "17": {
+   "s": ["to", "to the"],
+   "r": "The article; 'to' comes from the dative case of the noun.",
+   "t": ["unto", "vnto", "to", "unto", "to", null]
+  },
+  "18": {
+   "s": ["disciples", "followers", "learners"],
+   "r": "Jesus' followers, not Jesus himself, are questioned.",
+   "n": "Abbott-Smith's entry sets the disciple over against the teacher, and cites this same chapter (Mrk.2:18) for disciples of the Pharisees.",
+   "t": ["disciples", "disciples", "disciples", "disciples", "disciples", "disciples"]
+  },
+  "19": {
+   "s": ["his", "of him"],
+   "r": "The disciples of Jesus.",
+   "t": ["his", "his", "his", "his", "his", "His"]
+  },
+  "21": {
+   "s": ["why", "why is it that", "how is it that"],
+   "r": "Opens the question the scribes put to the disciples.",
+   "n": "Literally 'that'. Used here to open a question, it is commonly understood as 'why'; that reading is an interpretation of a short form. The Textus Receptus has τί ὅτι, 'why is it that', which the KJV renders 'How is it that'.",
+   "t": ["that", "that", "Why", "How is it that", "that", "Why"]
+  },
+  "22": {
+   "s": ["with"],
+   "r": "In the company of these guests.",
+   "t": ["with", "with", "with", "with", "with", "with"]
+  },
+  "23": {
+   "s": ["the"],
+   "r": "Points back to the same guests.",
+   "t": [null, null, null, null, "the", null]
+  },
+  "24": {
+   "s": ["toll collectors", "tax collectors", "publicans"],
+   "r": "The same toll collectors as before.",
+   "t": ["publicans", "Publicanes", "publicans", "publicans", "tax-gatherers", "tax collectors"]
+  },
+  "25": {
+   "s": ["and"],
+   "r": "Joins the two groups again.",
+   "t": ["and", "and", "and", "and", "and", "and"]
+  },
+  "26": {
+   "s": ["sinners", "the sinful"],
+   "r": "The same sinners as before.",
+   "t": ["sinners", "sinners", "sinners", "sinners", "sinners", "sinners"]
+  },
+  "27": {
+   "s": ["does he eat", "is he eating", "he eats"],
+   "r": "The act the scribes object to: sharing a meal.",
+   "n": "Present tense, 'he eats'. Here the Textus Receptus adds 'and drinks', the KJV's 'eateth and drinketh'. The DRC's 'your master' is its own wording.",
+   "t": ["he eateth", "hee eateth", "doth your master eat", "he eateth", "he doth eat", "does He eat"]
+  }
+ },
+ "tr_note": "The Textus Receptus reads 'the scribes and the Pharisees' for 'the scribes of the Pharisees', 'him eating' for 'that he eats', 'toll collectors and sinners' in the first pair, and 'why is it that he eats and drinks' in the question. That is the KJV's 'scribes and Pharisees saw him eat with publicans and sinners' and 'How is it that he eateth and drinketh'."
+}

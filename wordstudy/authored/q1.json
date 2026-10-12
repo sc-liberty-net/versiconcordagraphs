@@ -1,0 +1,44 @@
+{
+ "id": "q1",
+ "en": [
+  {"t": "And when you reap", "w": ["01"]}, " ",
+  {"t": "the harvest of", "w": ["03", "02"]}, " ",
+  {"t": "your land", "w": ["04"]}, ", ",
+  {"t": "you shall not finish", "w": ["06", "05"]}, " ",
+  {"t": "reaping", "w": ["09"]}, " ",
+  {"t": "the edge of", "w": ["07"]}, " ",
+  {"t": "your field", "w": ["08"]}, "; ",
+  {"t": "and the gleaning of", "w": ["10"]}, " ",
+  {"t": "your harvest", "w": ["11"]}, " ",
+  {"t": "you shall not gather", "w": ["13", "12"]}, "."
+ ],
+ "words": {
+  "01": {"s": ["and when you reap", "and in your reaping", "when you harvest"], "r": "Sets the scene: the time of harvest.", "n": "Literally 'and in your reaping': an infinitive with 'in' and 'your', which Hebrew uses for 'when you'. YLT keeps that shape. Gesenius gives the verb's first sense as TO CUT OFF, especially grain, and cites this verse for 'to reap'.", "t": ["And when ye reap", "When yee reape", "When thou reapest", "And when ye reap", "And when ye reap", "And in your reaping", "When you reap"]},
+  "02": {"s": ["(object marker, no English equivalent)"], "r": "Marks 'the harvest of your land' as the object of 'reap'.", "n": "This small word marks a definite direct object and has no English equivalent; it is counted here with 'the harvest of'.", "t": [null, null, null, null, null, null, null]},
+  "03": {"s": ["harvest", "crop", "grain"], "r": "The crop being cut.", "n": "Gesenius cites this verse for the sense 'grain harvested'. The noun comes from the same root as the verb before it, so the Hebrew reads 'in your reaping the reaping of your land'. The DRC's 'corn' meant grain in older English.", "t": ["the harvest", "the haruest", "the corn", "the harvest", "the harvest", "the harvest", "the harvest"]},
+  "04": {"s": ["land", "country", "ground"], "r": "The land Israel farms.", "n": "The 'your' here is plural, addressing the people together; from the next clause on the law speaks to each one as 'you' singular.", "t": ["of your land", "of your land", "of thy land", "of your land", "of your land", "of your land", "of your land"]},
+  "05": {"s": ["not", "do not"], "r": "A flat prohibition.", "t": ["not", "not", "not", "not", "not", "not", "not"]},
+  "06": {"s": ["finish", "complete", "bring to an end", "wholly reap"], "r": "Do not carry the reaping through to the very end of the field.", "n": "Gesenius gives the base sense as to be completed, finished; BDB gives this form as complete, bring to an end. The KJV's 'wholly reap' joins this verb and the 'to reap' that follows it.", "t": ["thou shalt ... wholly", "ye shall ... euery", "thou shalt ... cut down", "thou shalt ... wholly", "thou shalt ... wholly", "ye do ... completely", "you are ... to the very"]},
+  "07": {"s": ["edge", "corner", "side", "border"], "r": "The outer strip of the field, left standing.", "n": "Gesenius gives first a quarter of the heavens, then side, region; BDB gives corner, side. 'Edge' suits a strip along the field's border; the KJV's 'corners' is the traditional rendering.", "t": ["the corners", "corner", null, "the corner", "the corners", "the corner", "edges"]},
+  "08": {"s": ["field", "plot", "land"], "r": "The farmer's own cultivated land.", "n": "Here 'your' is singular.", "t": ["of thy field", "of your field", null, "of thy field", "of thy field", "of thy field", "of your field"]},
+  "09": {"s": ["reaping", "to reap", "harvesting"], "r": "The act of cutting the grain.", "n": "Literally 'to reap': an infinitive with 'to', which here completes 'finish'. The DRC follows the Latin and rewords the clause.", "t": ["reap", "reape", null, "reap", "reap", "reap", "to reap"]},
+  "10": {"s": ["gleaning", "what is left", "fallen ears", "leavings"], "r": "The stalks that fall or are missed by the reapers.", "n": "BDB and the brief's lexicon give simply 'gleaning'. The noun shares its consonants with the verb that ends the verse, so the Hebrew sets the gathered leftovers beside the verb for gathering them. The DRC's 'the ears that remain' describes what gleaning is.", "t": ["the gleanings", "the glainings", "the ears that remain", "the gleaning", "the gleaning", "and the gleaning", "the gleanings"]},
+  "11": {"s": ["harvest", "crop"], "r": "The crop just reaped.", "t": ["of thy harvest", "of thy haruest", null, "of thy harvest", "of thy harvest", "of thy harvest", "of your harvest"]},
+  "12": {"s": ["not", "do not"], "r": "A second flat prohibition.", "t": ["neither", "neither", "nor", "neither", "neither", "not", "or"]},
+  "13": {"s": ["gather", "pick up", "glean", "collect"], "r": "Do not go back to pick up what lies on the ground.", "n": "Gesenius: to gather, to collect, properly things lying on the ground, such as ears of grain, citing Ruth 2:3, 7, 15. The brief's lexicon gives this form as to gather up, or to glean. We keep 'gather' for this verb and 'glean' for a different one used of the vineyard in the next verse.", "t": ["shalt thou gather", "shalt thou gather", "shalt thou gather", "shalt thou gather", "shalt thou gather", "thou dost ... gather", "gather"]}
+ },
+ "lxx": {
+  "01": {"i": [0, 1, 2], "m": 1, "n": "ἐκθερίζω, 'to reap completely, reap off'."},
+  "03": {"i": [3, 4], "m": 4, "n": "θερισμός, 'harvest'. The Greek uses it again for 'the edge of' later in the verse."},
+  "04": {"i": [5, 6, 7], "m": 6},
+  "05": {"i": [8], "m": 8},
+  "06": {"i": [9], "m": 9, "n": "συντελέω, 'to bring to completion'."},
+  "07": {"i": [10, 11, 12], "m": 11, "n": "The Greek has 'your harvest' where the Hebrew has 'the edge of': 'you shall not complete your harvest of the field'. It does not name the edge."},
+  "08": {"i": [13, 14, 15], "m": 14},
+  "09": {"i": [16], "m": 16},
+  "10": {"i": [17, 18, 19], "m": 19, "n": "τὰ ἀποπίπτοντα, 'the things that fall off': the Greek describes the gleaning as what drops during reaping."},
+  "11": {"i": [20, 21, 22], "m": 21},
+  "12": {"i": [23], "m": 23},
+  "13": {"i": [24], "m": 24, "n": "συλλέγω, 'to gather up, collect'."}
+ }
+}

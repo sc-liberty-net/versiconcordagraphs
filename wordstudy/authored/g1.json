@@ -1,0 +1,97 @@
+{
+ "id": "g1",
+ "en": [
+  {"t": "And blessed be", "w": ["01"]}, " ",
+  {"t": "God", "w": ["02"]}, " ",
+  {"t": "Most High", "w": ["03"]}, ", ",
+  {"t": "who", "w": ["04"]}, " ",
+  {"t": "has delivered", "w": ["05"]}, " ",
+  {"t": "your adversaries", "w": ["06"]}, " ",
+  {"t": "into your hand", "w": ["07"]}, ". ",
+  {"t": "And he gave", "w": ["08"]}, " ",
+  {"t": "him", "w": ["09"]}, " ",
+  {"t": "a tithe", "w": ["10"]}, " ",
+  {"t": "from everything", "w": ["11"]}, "."
+ ],
+ "words": {
+  "01": {
+   "s": ["blessed be", "blessed is", "praised be"],
+   "r": "Melchizedek's blessing turns from Abram to God.",
+   "n": "A passive participle, 'blessed', with no verb 'be'. It can be read as a wish ('blessed be') or a statement ('blessed is', as YLT has it). Gesenius puts 'to bend the knees, to kneel' first among this verb's senses; BDB lists 'bless God, adore with bended knees'.",
+   "t": ["And blessed be", "And blessed be", "And blessed be", "and blessed be", "and blessed be", "and blessed is", "and blessed be"]
+  },
+  "02": {
+   "s": ["God", "El", "the Mighty One"],
+   "r": "God, named with the short word El.",
+   "n": "This is El, not the usual plural form for God. Gesenius gives its root sense as strong, mighty, a mighty one.",
+   "t": ["God", "God", "God", "G-d", "God", "God", "God"]
+  },
+  "03": {
+   "s": ["Most High", "Highest", "Supreme"],
+   "r": "A title of God: the one above all.",
+   "n": "Gesenius gives the adjective's first sense as high, higher, of a place, and then supreme; BDB: Highest, Most High, as a name of God.",
+   "t": ["the most high", "the most high", "the most high", "the Most High", "Most High", "Most High", "Most High"]
+  },
+  "04": {
+   "s": ["who", "which", "the one who"],
+   "r": "Introduces what God has done.",
+   "n": "The DRC rewords the clause around 'by whose protection'.",
+   "t": ["which", "which", "by whose", "who", "who", "who", "who"]
+  },
+  "05": {
+   "s": ["has delivered", "has handed over", "has given"],
+   "r": "God gave Abram's enemies into his power.",
+   "n": "A rare verb, in only three verses. Gesenius says it is not used in the simple form and gives this form as TO GIVE, TO DELIVER, citing Gen. 14:20. The DRC's 'by whose protection' probably reads the consonants as the noun for 'shield', which is spelled the same; that is an inference.",
+   "t": ["hath delivered", "hath deliuered", "protection", "hath delivered", "hath delivered", "hath delivered", "has delivered"]
+  },
+  "06": {
+   "s": ["adversaries", "enemies", "foes", "oppressors"],
+   "r": "The kings Abram had just defeated.",
+   "n": "The brief's lexicon gives adversary, foe, enemy, oppressor. YLT's 'adversaries' is the closest of the translations.",
+   "t": ["thine enemies", "thine enemies", "the enemies", "thine enemies", "thine enemies", "thine adversaries", "your enemies"]
+  },
+  "07": {
+   "s": ["into your hand", "into your power", "into your grip"],
+   "r": "Under your control.",
+   "n": "Literally 'in your hand'; with a verb of handing over, English says 'into'. The brief's lexicon lists strength, power as a figurative sense of 'hand'.",
+   "t": ["into thy hand", "into thine hand", "are in thy hands", "into thy hand", "into thy hand", "into thy hand", "into your hand"]
+  },
+  "08": {
+   "s": ["gave", "handed over", "paid"],
+   "r": "The giving of the tithe.",
+   "n": "The Hebrew does not name the giver or the receiver: only 'he gave him'. The context makes Abram the giver and Melchizedek the receiver, which is how the Geneva and BSB read it; that is an inference from the story, not stated in this verse.",
+   "t": ["And he gave", "And Abram gaue", "And he gave", "And he gave", "And he gave", "and he giveth", "Then Abram gave"]
+  },
+  "09": {
+   "s": ["him", "to him"],
+   "r": "The receiver of the tithe.",
+   "n": "Literally 'to him'.",
+   "t": ["him", "him", "him", "him", "him", "to him", "Melchizedek"]
+  },
+  "10": {
+   "s": ["tithe", "tenth", "tenth part"],
+   "r": "A tenth part, given as a tithe.",
+   "n": "Gesenius gives 'tithes' and cites this verse; the brief's lexicon gives tithe, tenth part. The newer translations here say 'a tenth'; this edition keeps 'tithe' for this noun and 'tenth' for the plain number.",
+   "t": ["tithes", "tythe", "the tithes", "a tenth", "a tenth", "a tenth", "a tenth"]
+  },
+  "11": {
+   "s": ["from everything", "of all", "of everything"],
+   "r": "Out of all he had, most likely the recovered goods.",
+   "n": "Literally 'from all'. What 'all' covers is not said here; that it means the goods recovered in the battle is a reasonable reading of the story.",
+   "t": ["of all", "of all", "of all", "of all", "of all", "of all", "of everything"]
+  }
+ },
+ "lxx": {
+  "01": {"i": [0, 1], "m": 1, "n": "εὐλογητός, 'blessed', the adjective used of God."},
+  "02": {"i": [2, 3], "m": 3},
+  "03": {"i": [4, 5], "m": 5, "n": "ὕψιστος, 'highest'."},
+  "04": {"i": [6], "m": 6},
+  "05": {"i": [7], "m": 7, "lemma": "παραδίδωμι", "strong": "G3860", "n": "Dictionary form supplied; the brief gives none. παραδίδωμι, 'hand over'."},
+  "06": {"i": [8, 9, 10], "m": 9},
+  "07": {"i": [11, 12], "m": 11, "n": "ὑποχείριος, 'under the hand': 'handed over your enemies as subject to you'."},
+  "08": {"i": [13, 14], "m": 14},
+  "09": {"i": [15], "m": 15},
+  "10": {"i": [16], "m": 16, "n": "δεκάτη, 'a tenth', the Greek word for the tenth part."},
+  "11": {"i": [17, 18], "m": 18}
+ }
+}

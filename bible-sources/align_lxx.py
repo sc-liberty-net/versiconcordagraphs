@@ -173,7 +173,7 @@ def strong_for(key, wl):
 
 def main():
     wl = load_wordlist()
-    out, lines = {}, []
+    out, lines, shifted = {}, [], []
     totals = {"words": 0, "matched": 0, "exact": 0, "verses": 0, "verses_missing": 0, "strong": 0}
     for path in sorted(glob.glob(os.path.join(SWETE, "*.txt"))):
         name = re.sub(r"^\d+\.", "", os.path.basename(path))[:-4]
@@ -200,6 +200,17 @@ def main():
                 rows = [{"w": w, "lemma": None, "key": None, "strong": None, "fit": 0} for w in words]
             else:
                 pairs = align(words, lemmas)
+                # Swete's digital text sometimes numbers a stretch one verse off (its "Deut 14:28" holds
+                # verse 29). If this verse matches badly, try the neighbouring verses' lemma lists.
+                if len(pairs) < 0.5 * len(words):
+                    _, ch2, vs2 = lref.split(".")
+                    for nb in (f"{prefix}.{ch2}.{int(vs2) + 1}", f"{prefix}.{ch2}.{int(vs2) - 1}"):
+                        if lem.get(nb):
+                            p2 = align(words, lem[nb])
+                            if len(p2) >= 0.75 * len(words) and len(p2) > len(pairs):
+                                pairs, lemmas = p2, lem[nb]
+                                shifted.append(f"{ref} -> {nb}")
+                                break
                 for i, w in enumerate(words):
                     if i in pairs:
                         j, s = pairs[i]
@@ -228,7 +239,9 @@ def main():
             f"Given a lemma, counting only verses that have a lemma list: "
             f"{totals['matched'] / (totals['words'] - totals.get('words_in_missing', 0)):.1%}\n"
             f"A fit under 0.7 is a loose pairing: read it as a guess.\n")
-    open(REPORT, "w", encoding="utf-8").write(head + "\n" + "\n".join(lines) + "\n")
+    head += f"Verses matched against a neighbouring verse's lemma list (numbering off by one): {len(shifted)}\n"
+    open(REPORT, "w", encoding="utf-8").write(head + "\n" + "\n".join(lines) + "\n\nShifted verses:\n" +
+                                              "\n".join(shifted) + "\n")
     print(head)
     rng = random.Random(7)
     show = sys.argv[1:] or []

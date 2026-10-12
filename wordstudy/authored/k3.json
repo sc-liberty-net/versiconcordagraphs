@@ -1,0 +1,37 @@
+{
+ "id": "k3",
+ "en": [
+  {"t": "I fast", "w": ["01"]}, " ",
+  {"t": "twice", "w": ["02"]}, " ",
+  {"t": "in the", "w": ["03"]}, " ",
+  {"t": "week", "w": ["04"]}, "; ",
+  {"t": "I tithe", "w": ["05"]}, " ",
+  {"t": "all", "w": ["06"]}, " ",
+  {"t": "that", "w": ["07"]}, " ",
+  {"t": "I acquire", "w": ["08"]}, "."
+ ],
+ "words": {
+  "01": {"s": ["I fast", "I go without food"], "r": "The Pharisee names a religious practice he keeps.",
+         "n": "A present tense, of a regular habit. Abbott-Smith lists this verse among the New Testament uses of the verb.",
+         "t": ["I fast", "I fast", "I fast", "I fast", "I fast", "I fast"]},
+  "02": {"s": ["twice", "two times"], "r": "The number of fasts he keeps in each week.",
+         "n": "Abbott-Smith cites this verse for the phrase δὶς τοῦ σαββάτου, literally 'twice of the sabbath', that is, twice a week.",
+         "t": ["twice", "twise", "twice", "twice", "twice", "twice"]},
+  "03": {"s": ["in the", "of the", "each"], "r": "The article with week; 'in' comes from the Greek genitive, which marks the span of time.",
+         "t": ["in the", "in the", "in a", "in the", "in the", "a"]},
+  "04": {"s": ["week", "sabbath-week"], "r": "The seven-day period between one sabbath and the next.",
+         "n": "The word is the one for the sabbath; here it stands for the whole week, as every translation takes it.",
+         "t": ["week", "weeke", "week", "week", "week", "week"]},
+  "05": {"s": ["I tithe", "I take a tenth of", "I give a tenth of", "I pay a tenth of"], "r": "He sets apart a tenth of everything that comes to him.",
+         "n": "Abbott-Smith's first sense is 'to tithe, pay a tenth of', with the things tithed in the accusative, and he notes that the Septuagint uses it for Hebrew עָשַׂר. All six translations expand the one verb to 'give tithes of' or 'pay tithes of'.",
+         "t": ["I give tithes of", "I giue tithe of", "I give tithes of", "I give tithes of", "I give tithes of", "pay tithes of"]},
+  "06": {"s": ["all", "everything", "all things"], "r": "Nothing he acquires is left out of the tithe.",
+         "t": ["all", "all", "all", "all", "all things", "all"]},
+  "07": {"s": ["that", "as much as", "whatever"], "r": "Introduces what 'all' covers.",
+         "n": "Literally 'as many things as', a correlative that stresses the whole amount; the YLT keeps it as 'as many as'.",
+         "t": ["that", "that euer", "that", "that", "as many as", "that"]},
+  "08": {"s": ["I acquire", "I get", "I gain", "I earn"], "r": "Whatever comes into his hands, his income.",
+         "n": "Abbott-Smith gives the present tense as 'to procure for oneself, get, gain, acquire', and cites this verse; the sense 'to possess' belongs to the perfect tense, which he says does not occur in the New Testament. So the KJV's 'possess' reads the Pharisee as tithing his property, where the Greek has him tithing what he takes in. The ASV's 'get' and the BSB's 'acquire' follow the present.",
+         "t": ["I possess", "I possesse", "I possess", "I get", "I possess", "I acquire"]}
+ }
+}

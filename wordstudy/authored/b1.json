@@ -1,0 +1,241 @@
+{
+ "id": "b1",
+ "en": [
+  {
+   "t": "And",
+   "w": [
+    "02"
+   ]
+  },
+  " when ",
+  {
+   "t": "he",
+   "w": [
+    "03"
+   ]
+  },
+  " ",
+  {
+   "t": "began",
+   "w": [
+    "01"
+   ]
+  },
+  " ",
+  {
+   "t": "to settle accounts",
+   "w": [
+    "04"
+   ]
+  },
+  ", there ",
+  {
+   "t": "was brought",
+   "w": [
+    "05"
+   ]
+  },
+  " ",
+  {
+   "t": "to him",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "one",
+   "w": [
+    "07"
+   ]
+  },
+  " ",
+  {
+   "t": "debtor",
+   "w": [
+    "08"
+   ]
+  },
+  " ",
+  {
+   "t": "of ten thousand",
+   "w": [
+    "09"
+   ]
+  },
+  " ",
+  {
+   "t": "talents",
+   "w": [
+    "10"
+   ]
+  },
+  "."
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "began",
+    "had begun",
+    "started"
+   ],
+   "r": "He starts the reckoning with those who owe him.",
+   "n": "An aorist participle in the genitive, agreeing with 'he': a genitive absolute, which sets the time of the main verb. Hence 'when he began'. Abbott-Smith notes that the middle of this verb means to begin, while the active can also mean to rule.",
+   "t": [
+    "had begun",
+    "had begun",
+    "had begun",
+    "had begun",
+    "having begun",
+    "began"
+   ]
+  },
+  "02": {
+   "s": [
+    "and",
+    "now",
+    "then"
+   ],
+   "r": "Moves the parable on to its first scene.",
+   "t": [
+    "And",
+    "And",
+    "And",
+    "And",
+    "and",
+    null
+   ]
+  },
+  "03": {
+   "s": [
+    "he"
+   ],
+   "r": "The master who is settling accounts.",
+   "t": [
+    "he",
+    "he",
+    "he",
+    "he",
+    "he",
+    "he"
+   ]
+  },
+  "04": {
+   "s": [
+    "to settle accounts",
+    "to reckon",
+    "to take account",
+    "to square accounts"
+   ],
+   "r": "To go through the accounts and settle what each one owes.",
+   "n": "Abbott-Smith gives the root sense 'to take up together' and, with λόγον ('account'), the sense 'to settle accounts'; he lists this verse and the one before it under that sense, and points to several examples of the phrase in the papyri. Here the verb stands without λόγον, which the reader carries over from the previous line.",
+   "t": [
+    "to reckon",
+    "to reckon",
+    "to take the account",
+    "to reckon",
+    "to take account",
+    "the settlements"
+   ]
+  },
+  "05": {
+   "s": [
+    "was brought",
+    "was led",
+    "was presented"
+   ],
+   "r": "The debtor is brought before the master; he does not come of his own accord.",
+   "n": "Passive: someone else brings him. Abbott-Smith files this verse under the passive of the verb, to be brought to someone.",
+   "t": [
+    "was brought",
+    "was brought",
+    "brought",
+    "was brought",
+    "there was brought near",
+    "was brought"
+   ]
+  },
+  "06": {
+   "s": [
+    "to him",
+    "before him"
+   ],
+   "r": "To the one settling accounts.",
+   "t": [
+    "unto him",
+    "vnto him",
+    "to him",
+    "unto him",
+    "to him",
+    "to him"
+   ]
+  },
+  "07": {
+   "s": [
+    "one",
+    "a",
+    "a certain"
+   ],
+   "r": "A single debtor, singled out from the rest.",
+   "t": [
+    "one",
+    "one",
+    "one",
+    "one",
+    "one",
+    "a"
+   ]
+  },
+  "08": {
+   "s": [
+    "debtor",
+    "one who owed",
+    "man in debt"
+   ],
+   "r": "A man who owes money to the one settling accounts.",
+   "n": "Abbott-Smith defines it as 'a debtor' and notes that here it takes a genitive of the amount: a debtor of ten thousand talents. He also records a figurative use, of obligation or duty in general and of sinners in relation to God. The KJV, Geneva, DRC and ASV turn the noun into a verb, 'which owed' or 'that owed'.",
+   "t": [
+    "which owed",
+    "which ought",
+    "that owed",
+    "that owed",
+    "debtor",
+    "debtor"
+   ]
+  },
+  "09": {
+   "s": [
+    "ten thousand",
+    "a myriad",
+    "countless"
+   ],
+   "r": "The number ten thousand.",
+   "n": "Abbott-Smith gives two senses: numberless or countless, and, in the plural as a definite number, ten thousand, citing this verse for the second. The English 'myriad', which the YLT uses, comes from this word. That the sum is meant to be beyond paying is a reasonable reading, not something the verse states.",
+   "t": [
+    "ten thousand",
+    "ten thousand",
+    "ten thousand",
+    "ten thousand",
+    "a myriad of",
+    "ten thousand"
+   ]
+  },
+  "10": {
+   "s": [
+    "talents",
+    "large sums of silver",
+    "weights of money"
+   ],
+   "r": "A talent is a unit of weight, used as a sum of money.",
+   "n": "Abbott-Smith gives the order of meanings: first a balance, then what is weighed on it, then a sum of gold or silver equal to that weight.",
+   "t": [
+    "talents",
+    "talents",
+    "talents",
+    "talents",
+    "talents",
+    "talents"
+   ]
+  }
+ }
+}

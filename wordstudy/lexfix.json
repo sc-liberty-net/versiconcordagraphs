@@ -1,0 +1,10 @@
+{
+ "_about": "Corrections to the lexicon data, applied by build.py. 'hide' drops an entry that belongs to a different word spelled alike; 'fix' replaces a dictionary form STEPBible tagged wrongly. Each found by the drafters while reading the briefs.",
+ "q6-10": {"hide": ["ges"], "why": "Gesenius's שִׁבֹּלֶת here is the homonym 'a branch', not 'an ear of grain'."},
+ "r4-15": {"hide": ["ges"], "why": "Gesenius's entry here is the homonym 'to make a loud noise', not 'to be evil'."},
+ "g1-06": {"hide": ["ges"], "why": "Gesenius's entry here is the adjective 'narrow', not 'adversary'."},
+ "i22-08": {"hide": ["ges"], "why": "Gesenius's entry here is the homonym 'to set, as the sun', not 'to pledge'."},
+ "u8-15": {"fix": {"lemma": "נָשָׁא", "strong": "H5378"}, "why": "STEPBible tags this word as נָשָׂא, 'lift up'; in this verse it is נָשָׁא, 'lend on interest, exact'."},
+ "u8-19": {"fix": {"lemma": "גָּדוֹל", "strong": "H1419"}, "why": "STEPBible tags this word as גַּל, 'heap'; it is גָּדוֹל, 'great'."},
+ "m4-12": {"fix": {"lemma": "גָּדוֹל", "strong": "H1419"}, "why": "STEPBible tags this word as גַּל, 'heap'; it is גָּדוֹל, 'great'."}
+}

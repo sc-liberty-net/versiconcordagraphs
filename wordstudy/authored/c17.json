@@ -1,0 +1,553 @@
+{
+ "id": "c17",
+ "en": [
+  {
+   "t": "And",
+   "w": [
+    "02"
+   ]
+  },
+  " ",
+  {
+   "t": "Zacchaeus",
+   "w": [
+    "03"
+   ]
+  },
+  ", ",
+  {
+   "t": "having stood",
+   "w": [
+    "01"
+   ]
+  },
+  ", ",
+  {
+   "t": "said",
+   "w": [
+    "04"
+   ]
+  },
+  " ",
+  {
+   "t": "to",
+   "w": [
+    "05"
+   ]
+  },
+  " ",
+  {
+   "t": "the",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "Lord",
+   "w": [
+    "07"
+   ]
+  },
+  ", ‘",
+  {
+   "t": "Look",
+   "w": [
+    "08"
+   ]
+  },
+  ", ",
+  {
+   "t": "the",
+   "w": [
+    "09"
+   ]
+  },
+  " ",
+  {
+   "t": "half",
+   "w": [
+    "10"
+   ]
+  },
+  " of ",
+  {
+   "t": "my",
+   "w": [
+    "11"
+   ]
+  },
+  " ",
+  {
+   "t": "possessions",
+   "w": [
+    "13",
+    "12"
+   ]
+  },
+  ", ",
+  {
+   "t": "Lord",
+   "w": [
+    "14"
+   ]
+  },
+  ", ",
+  {
+   "t": "I give",
+   "w": [
+    "17"
+   ]
+  },
+  " ",
+  {
+   "t": "to the",
+   "w": [
+    "15"
+   ]
+  },
+  " ",
+  {
+   "t": "poor",
+   "w": [
+    "16"
+   ]
+  },
+  "; ",
+  {
+   "t": "and",
+   "w": [
+    "18"
+   ]
+  },
+  " ",
+  {
+   "t": "if",
+   "w": [
+    "19"
+   ]
+  },
+  " ",
+  {
+   "t": "I have defrauded",
+   "w": [
+    "22"
+   ]
+  },
+  " ",
+  {
+   "t": "anyone",
+   "w": [
+    "20"
+   ]
+  },
+  " ",
+  {
+   "t": "of anything",
+   "w": [
+    "21"
+   ]
+  },
+  ", ",
+  {
+   "t": "I give back",
+   "w": [
+    "23"
+   ]
+  },
+  " ",
+  {
+   "t": "fourfold",
+   "w": [
+    "24"
+   ]
+  },
+  ".’"
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "having stood",
+    "standing up",
+    "taking his stand",
+    "stood"
+   ],
+   "r": "Zacchaeus stands to make his declaration.",
+   "n": "An aorist passive participle of the verb 'stand', with active meaning: literally 'having been stood', that is, having taken his stand. It may mark a deliberate, public stance; that is a reasonable reading.",
+   "t": [
+    "stood",
+    "stood forth",
+    "standing",
+    "stood",
+    "having stood",
+    "stood up"
+   ]
+  },
+  "02": {
+   "s": [
+    "and",
+    "but",
+    "then"
+   ],
+   "r": "Turns the story to Zacchaeus's answer.",
+   "t": [
+    "And",
+    "And",
+    "But",
+    "And",
+    "And",
+    "But"
+   ]
+  },
+  "03": {
+   "s": [
+    "Zacchaeus"
+   ],
+   "r": "The chief toll collector introduced earlier in the chapter.",
+   "n": "Abbott-Smith lists this verse under Zacchaeus, 'a publican'.",
+   "t": [
+    "Zaccheus",
+    "Zaccheus",
+    "Zacheus",
+    "Zacchæus",
+    "Zaccheus",
+    "Zacchaeus"
+   ]
+  },
+  "04": {
+   "s": [
+    "said",
+    "spoke"
+   ],
+   "r": "He speaks his pledge.",
+   "t": [
+    "said",
+    "said",
+    "said",
+    "said",
+    "said",
+    "said"
+   ]
+  },
+  "05": {
+   "s": [
+    "to",
+    "toward"
+   ],
+   "r": "Addressed directly to Jesus.",
+   "t": [
+    "unto",
+    "vnto",
+    "to",
+    "unto",
+    "unto",
+    "to"
+   ]
+  },
+  "06": {
+   "s": [
+    "the"
+   ],
+   "r": "With 'Lord', a title.",
+   "t": [
+    "the",
+    "the",
+    "the",
+    "the",
+    "the",
+    "the"
+   ]
+  },
+  "07": {
+   "s": [
+    "Lord",
+    "master"
+   ],
+   "r": "Jesus, called 'the Lord' by the narrator.",
+   "n": "Abbott-Smith notes that in the Septuagint the noun chiefly stands for the divine name, יהוה. This study renders it 'Lord' when used of God or Jesus.",
+   "t": [
+    "Lord",
+    "Lord",
+    "Lord",
+    "Lord",
+    "Lord",
+    "Lord"
+   ]
+  },
+  "08": {
+   "s": [
+    "look",
+    "see",
+    "behold"
+   ],
+   "r": "Calls attention to what he is about to pledge.",
+   "t": [
+    "Behold",
+    "Beholde",
+    "Behold",
+    "Behold",
+    "Lo",
+    "Look"
+   ]
+  },
+  "09": {
+   "s": [
+    "the"
+   ],
+   "r": "With 'half', a definite share: the half.",
+   "t": [
+    "the",
+    "the",
+    "the",
+    "the",
+    "the",
+    null
+   ]
+  },
+  "10": {
+   "s": [
+    "half",
+    "the half part"
+   ],
+   "r": "Half of all he owns.",
+   "n": "Abbott-Smith quotes this very phrase, 'the half of the possessions', for the adjective agreeing in gender and number with the noun that follows.",
+   "t": [
+    "half",
+    "halfe",
+    "half",
+    "half",
+    "half",
+    "half"
+   ]
+  },
+  "11": {
+   "s": [
+    "my",
+    "of me"
+   ],
+   "r": "His own property.",
+   "n": "The Greek puts 'my' straight after 'half': 'the half of me of the possessions'. The Textus Receptus has it at another point in the clause; see the note on the text.",
+   "t": [
+    "my",
+    "my",
+    "my",
+    "my",
+    "my",
+    "my"
+   ]
+  },
+  "12": {
+   "s": [
+    "the"
+   ],
+   "r": "With the participle, makes a noun: the things he has.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "13": {
+   "s": [
+    "possessions",
+    "goods",
+    "property",
+    "belongings"
+   ],
+   "r": "Everything that belongs to him.",
+   "n": "A participle of a verb meaning 'to be at hand, exist': literally 'the things that are (his)'. Abbott-Smith notes that the Septuagint uses this form for Hebrew words for property and livestock, מִקְנֶה and רְכוּשׁ.",
+   "t": [
+    "goods",
+    "goods",
+    "goods",
+    "goods",
+    "goods",
+    "possessions"
+   ]
+  },
+  "14": {
+   "s": [
+    "Lord",
+    "sir",
+    "master"
+   ],
+   "r": "Zacchaeus addresses Jesus directly.",
+   "n": "The YLT's 'sir' takes it as a polite address; the other translations say 'Lord'.",
+   "t": [
+    "Lord",
+    "Lord",
+    "Lord",
+    "Lord",
+    "sir",
+    "Lord"
+   ]
+  },
+  "15": {
+   "s": [
+    "to the"
+   ],
+   "r": "The article, in the dative; 'to' comes from the case.",
+   "t": [
+    "to the",
+    "to the",
+    "to the",
+    "to the",
+    "to the",
+    "to the"
+   ]
+  },
+  "16": {
+   "s": [
+    "poor",
+    "needy",
+    "beggars"
+   ],
+   "r": "Those without means.",
+   "n": "Abbott-Smith derives it from πτώσσω, 'to crouch, cower', so its root picture is one who crouches and cowers; as a noun, 'a beggar'. In the Septuagint it stands for Hebrew עָנִי, דַּל and רָשׁ.",
+   "t": [
+    "poor",
+    "poore",
+    "poor",
+    "poor",
+    "poor",
+    "poor"
+   ]
+  },
+  "17": {
+   "s": [
+    "I give",
+    "I am giving",
+    "I will give"
+   ],
+   "r": "His pledge, stated in the present tense.",
+   "n": "A present tense. It may describe a resolve he makes now or a practice he already follows; the Greek allows both, and the context favours a resolve, which is an inference.",
+   "t": [
+    "I give",
+    "I giue",
+    "I give",
+    "I give",
+    "I give",
+    "I give"
+   ]
+  },
+  "18": {
+   "s": [
+    "and"
+   ],
+   "r": "Adds the second pledge.",
+   "t": [
+    "and",
+    "and",
+    "and",
+    "and",
+    "and",
+    "and"
+   ]
+  },
+  "19": {
+   "s": [
+    "if"
+   ],
+   "r": "Sets out a case he allows may be true.",
+   "n": "With the aorist indicative, the condition treats the wrongdoing as a real possibility, not a denial.",
+   "t": [
+    "if",
+    "if",
+    "if",
+    "if",
+    "if",
+    "if"
+   ]
+  },
+  "20": {
+   "s": [
+    "anyone",
+    "any man",
+    "someone"
+   ],
+   "r": "Any person he has wronged.",
+   "n": "In the genitive, the person from whom something was taken.",
+   "t": [
+    "from any man",
+    "from any man",
+    "any man",
+    "of any man",
+    "of any one",
+    "anyone"
+   ]
+  },
+  "21": {
+   "s": [
+    "of anything",
+    "anything",
+    "aught"
+   ],
+   "r": "Any amount taken.",
+   "t": [
+    "any thing",
+    null,
+    "of any thing",
+    "aught",
+    "anything",
+    null
+   ]
+  },
+  "22": {
+   "s": [
+    "I have defrauded",
+    "I have extorted",
+    "I have taken by false accusation",
+    "I have cheated"
+   ],
+   "r": "Taking money from people by false charges.",
+   "n": "Abbott-Smith builds the word from σῦκον, fig, and φαίνω, show, explains it as 'to act the συκοφάντης', and gives 'to accuse falsely'. The KJV's 'taken ... by false accusation' keeps that sense; the ASV's 'wrongfully exacted' and the BSB's 'cheated' name the result.",
+   "t": [
+    "have taken ... by false accusation",
+    "haue taken ... by forged cauillation",
+    "have wronged",
+    "have wrongfully exacted",
+    "I did take by false accusation",
+    "have cheated"
+   ]
+  },
+  "23": {
+   "s": [
+    "I give back",
+    "I restore",
+    "I repay",
+    "I pay back"
+   ],
+   "r": "He returns what he took, and more.",
+   "n": "Abbott-Smith gives 'to give up or back, restore, return' and cites this verse under that sense. A present tense, like 'I give' above.",
+   "t": [
+    "I restore",
+    "I restore",
+    "I restore",
+    "I restore",
+    "I give back",
+    "I will repay"
+   ]
+  },
+  "24": {
+   "s": [
+    "fourfold",
+    "four times as much",
+    "four times over"
+   ],
+   "r": "Four times the amount taken.",
+   "n": "Abbott-Smith records the word only in this verse.",
+   "t": [
+    "fourfold",
+    "foure folde",
+    "fourfold",
+    "fourfold",
+    "fourfold",
+    "fourfold"
+   ]
+  }
+ },
+ "tr_note": "The Textus Receptus places μου, 'my', and τοῖς πτωχοῖς, 'to the poor', at different points in the first pledge. The sense is unchanged, and the difference does not show in the KJV's English."
+}

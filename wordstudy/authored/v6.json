@@ -1,0 +1,529 @@
+{
+ "id": "v6",
+ "en": [
+  {
+   "t": "For",
+   "w": [
+    "02"
+   ]
+  },
+  " ",
+  {
+   "t": "all",
+   "w": [
+    "01"
+   ]
+  },
+  " ",
+  {
+   "t": "these",
+   "w": [
+    "03"
+   ]
+  },
+  ", ",
+  {
+   "t": "out of",
+   "w": [
+    "04"
+   ]
+  },
+  " ",
+  {
+   "t": "what",
+   "w": [
+    "05"
+   ]
+  },
+  " ",
+  {
+   "t": "was more than enough",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "for them",
+   "w": [
+    "07"
+   ]
+  },
+  ", ",
+  {
+   "t": "cast",
+   "w": [
+    "08"
+   ]
+  },
+  " ",
+  {
+   "t": "into",
+   "w": [
+    "09"
+   ]
+  },
+  " ",
+  {
+   "t": "the",
+   "w": [
+    "10"
+   ]
+  },
+  " ",
+  {
+   "t": "gifts",
+   "w": [
+    "11"
+   ]
+  },
+  "; ",
+  {
+   "t": "but",
+   "w": [
+    "15"
+   ]
+  },
+  " ",
+  {
+   "t": "she",
+   "w": [
+    "14"
+   ]
+  },
+  ", ",
+  {
+   "t": "out of",
+   "w": [
+    "16"
+   ]
+  },
+  " ",
+  {
+   "t": "her",
+   "w": [
+    "19"
+   ]
+  },
+  " ",
+  {
+   "t": "lack",
+   "w": [
+    "18",
+    "17"
+   ]
+  },
+  ", ",
+  {
+   "t": "cast in",
+   "w": [
+    "25"
+   ]
+  },
+  " ",
+  {
+   "t": "all",
+   "w": [
+    "20"
+   ]
+  },
+  " ",
+  {
+   "t": "the",
+   "w": [
+    "21"
+   ]
+  },
+  " ",
+  {
+   "t": "living",
+   "w": [
+    "22"
+   ]
+  },
+  " ",
+  {
+   "t": "that",
+   "w": [
+    "23"
+   ]
+  },
+  " ",
+  {
+   "t": "she had",
+   "w": [
+    "24"
+   ]
+  },
+  ".’"
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "all",
+    "all of them",
+    "everyone"
+   ],
+   "r": "All the rich givers.",
+   "n": "The Textus Receptus has the strengthened form ἅπαντες, with the same meaning.",
+   "t": [
+    "all",
+    "all",
+    "all",
+    "all",
+    "all",
+    "all"
+   ]
+  },
+  "02": {
+   "s": [
+    "for",
+    "because"
+   ],
+   "r": "Gives the reason for Jesus' verdict in the verse before.",
+   "t": [
+    "For",
+    "For",
+    "For",
+    "for",
+    "for",
+    "For"
+   ]
+  },
+  "03": {
+   "s": [
+    "these",
+    "these people"
+   ],
+   "r": "The rich givers of Luke 21:1.",
+   "n": "Luke adds 'these' where Mark 12:44 has only 'all'.",
+   "t": [
+    "these",
+    "they",
+    "these",
+    "these",
+    "these",
+    "they"
+   ]
+  },
+  "04": {
+   "s": [
+    "out of",
+    "from"
+   ],
+   "r": "The source their gifts came from.",
+   "t": [
+    "of",
+    "of",
+    "of",
+    "of",
+    "out of",
+    "out of"
+   ]
+  },
+  "05": {
+   "s": [
+    "what",
+    "that which"
+   ],
+   "r": "The article turns the participle into a noun: what was more than enough.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "06": {
+   "s": [
+    "was more than enough",
+    "was over and above",
+    "was left over",
+    "abounded"
+   ],
+   "r": "Their surplus: money beyond what they needed.",
+   "n": "The same participle as in Mark 12:44, rendered the same way. Abbott-Smith's first sense is 'to be over and above'.",
+   "t": [
+    "abundance",
+    "superfluitie",
+    "abundance",
+    "superfluity",
+    "superabundance",
+    "surplus"
+   ]
+  },
+  "07": {
+   "s": [
+    "for them",
+    "to them",
+    "their"
+   ],
+   "r": "The surplus belonged to the givers.",
+   "n": "Dative, 'to them' or 'for them'; the translations turn it into 'their'.",
+   "t": [
+    "their",
+    "their",
+    "their",
+    "their",
+    "their",
+    "their"
+   ]
+  },
+  "08": {
+   "s": [
+    "cast",
+    "put",
+    "threw",
+    "gave"
+   ],
+   "r": "Their gifts into the store of offerings.",
+   "t": [
+    "have ... cast in",
+    "haue ... cast",
+    "have ... cast",
+    "did ... cast in",
+    "did cast",
+    "contributed"
+   ]
+  },
+  "09": {
+   "s": [
+    "into",
+    "to"
+   ],
+   "r": "Where their gifts went.",
+   "t": [
+    "unto",
+    "into",
+    "into",
+    "unto",
+    "into",
+    null
+   ]
+  },
+  "10": {
+   "s": [
+    "the"
+   ],
+   "r": "The gifts already given.",
+   "t": [
+    "the",
+    "the",
+    "the",
+    "the",
+    "the",
+    null
+   ]
+  },
+  "11": {
+   "s": [
+    "gifts",
+    "offerings",
+    "presents"
+   ],
+   "r": "The offerings already given, as one collection.",
+   "n": "Literally 'into the gifts'; the likely sense is the store of offerings already given. The KJV, Geneva and DRC's 'the offerings of God' and the YLT's 'the gifts to God' reflect the Textus Receptus, which adds τοῦ θεοῦ, 'of God'.",
+   "t": [
+    "offerings",
+    "offerings",
+    "offerings",
+    "gifts",
+    "gifts",
+    null
+   ]
+  },
+  "14": {
+   "s": [
+    "she",
+    "this woman",
+    "this one"
+   ],
+   "r": "The widow, set against all the others.",
+   "n": "A demonstrative, literally 'this one', as the YLT has it.",
+   "t": [
+    "she",
+    "she",
+    "she",
+    "she",
+    "this one",
+    "she"
+   ]
+  },
+  "15": {
+   "s": [
+    "but",
+    "while"
+   ],
+   "r": "Marks the contrast.",
+   "t": [
+    "but",
+    "but",
+    "but",
+    "but",
+    "but",
+    "but"
+   ]
+  },
+  "16": {
+   "s": [
+    "out of",
+    "from"
+   ],
+   "r": "The source of her gift.",
+   "t": [
+    "of",
+    "of",
+    "of",
+    "of",
+    "out of",
+    "out of"
+   ]
+  },
+  "17": {
+   "s": [
+    "the"
+   ],
+   "r": "Article; English uses 'her' instead.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "18": {
+   "s": [
+    "lack",
+    "want",
+    "deficiency",
+    "poverty"
+   ],
+   "r": "What she lacked: she had nothing over.",
+   "n": "Abbott-Smith's first sense is 'that which is lacking, deficiency, shortcoming'. Mark 12:44 uses the related ὑστέρησις, rendered 'need' in this study; Luke's word is rendered 'lack' to keep the two apart.",
+   "t": [
+    "penury",
+    "penurie",
+    "want",
+    "want",
+    "want",
+    "poverty"
+   ]
+  },
+  "19": {
+   "s": [
+    "her",
+    "of her"
+   ],
+   "r": "Her own lack.",
+   "t": [
+    "her",
+    "her",
+    "her",
+    "her",
+    "her",
+    "her"
+   ]
+  },
+  "20": {
+   "s": [
+    "all",
+    "the whole of"
+   ],
+   "r": "All of her living.",
+   "n": "Here 'all' agrees with 'the living', where Mark has 'whole' (ὅλος). The Textus Receptus has the strengthened form ἅπαντα, with the same meaning.",
+   "t": [
+    "all",
+    "all",
+    "all",
+    "all",
+    "all",
+    "all"
+   ]
+  },
+  "21": {
+   "s": [
+    "the"
+   ],
+   "r": "Marks the living as hers, the one she had.",
+   "t": [
+    "the",
+    "the",
+    "the",
+    "the",
+    "the",
+    null
+   ]
+  },
+  "22": {
+   "s": [
+    "living",
+    "livelihood",
+    "means of living",
+    "what she had to live on"
+   ],
+   "r": "What she had to live on.",
+   "n": "Abbott-Smith's second sense, 'living, livelihood, means', with this verse listed, as in Mark 12:44. It is not the word for life itself, ζωή.",
+   "t": [
+    "living",
+    "liuing",
+    "living",
+    "living",
+    "living",
+    "to live on"
+   ]
+  },
+  "23": {
+   "s": [
+    "that",
+    "which"
+   ],
+   "r": "Introduces what she had.",
+   "t": [
+    "that",
+    "that",
+    "that",
+    "that",
+    "that",
+    null
+   ]
+  },
+  "24": {
+   "s": [
+    "she had",
+    "she was having",
+    "she possessed"
+   ],
+   "r": "Imperfect: what she had to her name.",
+   "t": [
+    "she had",
+    "she had",
+    "she had",
+    "she had",
+    "she had",
+    "she had"
+   ]
+  },
+  "25": {
+   "s": [
+    "cast in",
+    "put in",
+    "gave",
+    "threw in"
+   ],
+   "r": "Her gift into the treasury.",
+   "t": [
+    "hath cast in",
+    "hath cast in",
+    "hath cast in",
+    "did cast in",
+    "did cast in",
+    "has put in"
+   ]
+  }
+ },
+ "tr_note": "The Textus Receptus adds τοῦ θεοῦ, 'of God', after 'the gifts', which the KJV renders 'unto the offerings of God'. It also reads ἅπαντες and ἅπαντα, strengthened forms of 'all', which make no difference in English."
+}

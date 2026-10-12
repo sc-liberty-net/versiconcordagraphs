@@ -1,0 +1,339 @@
+{
+ "id": "w5",
+ "en": [
+  {
+   "t": "And",
+   "w": [
+    "03"
+   ]
+  },
+  " ",
+  {
+   "t": "having agreed",
+   "w": [
+    "02"
+   ]
+  },
+  " ",
+  {
+   "t": "with",
+   "w": [
+    "04"
+   ]
+  },
+  " ",
+  {
+   "t": "the",
+   "w": [
+    "05"
+   ]
+  },
+  " ",
+  {
+   "t": "labourers",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "for",
+   "w": [
+    "07"
+   ]
+  },
+  " a ",
+  {
+   "t": "denarius",
+   "w": [
+    "08"
+   ]
+  },
+  " ",
+  {
+   "t": "for the",
+   "w": [
+    "09"
+   ]
+  },
+  " ",
+  {
+   "t": "day",
+   "w": [
+    "10"
+   ]
+  },
+  ", ",
+  {
+   "t": "he sent",
+   "w": [
+    "11"
+   ]
+  },
+  " ",
+  {
+   "t": "them",
+   "w": [
+    "12"
+   ]
+  },
+  " ",
+  {
+   "t": "into",
+   "w": [
+    "13"
+   ]
+  },
+  " ",
+  {
+   "t": "his",
+   "w": [
+    "16"
+   ]
+  },
+  " ",
+  {
+   "t": "vineyard",
+   "w": [
+    "15",
+    "14"
+   ]
+  },
+  "."
+ ],
+ "words": {
+  "02": {
+   "s": [
+    "having agreed",
+    "agreeing",
+    "after agreeing",
+    "having come to terms"
+   ],
+   "r": "The landowner and the labourers settle the pay before the work.",
+   "n": "Abbott-Smith gives the proper sense 'to agree in sound, be in harmony', and the metaphorical 'to agree with'. English 'symphony' comes from the same word family. An aorist participle: the agreement comes before the sending.",
+   "t": [
+    "when he had agreed",
+    "he agreed",
+    "having agreed",
+    "when he had agreed",
+    "having agreed",
+    "He agreed"
+   ]
+  },
+  "03": {
+   "s": [
+    "and",
+    "then",
+    "now"
+   ],
+   "r": "Moves the story on.",
+   "t": [
+    "And",
+    "And",
+    "And",
+    "And",
+    "and",
+    null
+   ]
+  },
+  "04": {
+   "s": [
+    "with"
+   ],
+   "r": "The other party to the agreement.",
+   "t": [
+    "with",
+    "with",
+    "with",
+    "with",
+    "with",
+    null
+   ]
+  },
+  "05": {
+   "s": [
+    "the"
+   ],
+   "r": "The labourers he has hired.",
+   "t": [
+    "the",
+    "the",
+    "the",
+    "the",
+    "the",
+    null
+   ]
+  },
+  "06": {
+   "s": [
+    "labourers",
+    "workers",
+    "workmen",
+    "field hands"
+   ],
+   "r": "Hired hands for the vineyard.",
+   "n": "The same word as in James 5:4, which Abbott-Smith lists with this verse under 'a field labourer'.",
+   "t": [
+    "labourers",
+    "labourers",
+    "labourers",
+    "laborers",
+    "workmen",
+    "them"
+   ]
+  },
+  "07": {
+   "s": [
+    "for",
+    "at",
+    "on the basis of"
+   ],
+   "r": "Marks the price agreed.",
+   "n": "Literally 'out of a denarius': the preposition marks the sum the agreement rests on.",
+   "t": [
+    "for",
+    "for",
+    "for",
+    "for",
+    "for",
+    "to pay"
+   ]
+  },
+  "08": {
+   "s": [
+    "denarius",
+    "Roman coin",
+    "a day's pay"
+   ],
+   "r": "One Roman coin, the agreed pay.",
+   "n": "Abbott-Smith: 'the Lat. denarius, a Roman coin, nearly equal to the δραχμή'. He lists this verse with Matthew 20:13 and the other places in this parable. The KJV's 'penny' and the ASV's 'shilling' turn it into English money.",
+   "t": [
+    "a penny",
+    "a peny",
+    "a penny",
+    "a shilling",
+    "a denary",
+    "a denarius"
+   ]
+  },
+  "09": {
+   "s": [
+    "for the",
+    "a"
+   ],
+   "r": "With 'day', the time the pay covers.",
+   "n": "An accusative of time, 'for the day'; the older translations' 'a day' reads it as a rate.",
+   "t": [
+    "a",
+    "a",
+    "a",
+    "a",
+    "a",
+    "for the"
+   ]
+  },
+  "10": {
+   "s": [
+    "day",
+    "day's work"
+   ],
+   "r": "One day's work.",
+   "t": [
+    "day",
+    "day",
+    "day",
+    "day",
+    "day",
+    "day"
+   ]
+  },
+  "11": {
+   "s": [
+    "he sent",
+    "he sent out",
+    "he dispatched"
+   ],
+   "r": "He sends them off to work.",
+   "n": "Abbott-Smith's proper sense: 'to send away, to dispatch on service'.",
+   "t": [
+    "he sent",
+    "sent",
+    "he sent",
+    "he sent",
+    "he sent",
+    "sent"
+   ]
+  },
+  "12": {
+   "s": [
+    "them"
+   ],
+   "r": "The labourers.",
+   "t": [
+    "them",
+    "them",
+    "them",
+    "them",
+    "them",
+    "them"
+   ]
+  },
+  "13": {
+   "s": [
+    "into"
+   ],
+   "r": "Into the vineyard.",
+   "t": [
+    "into",
+    "into",
+    "into",
+    "into",
+    "into",
+    "into"
+   ]
+  },
+  "14": {
+   "s": [
+    "the"
+   ],
+   "r": "Article; English uses 'his'.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "15": {
+   "s": [
+    "vineyard"
+   ],
+   "r": "The landowner's vineyard.",
+   "t": [
+    "vineyard",
+    "vineyard",
+    "vineyard",
+    "vineyard",
+    "vineyard",
+    "vineyard"
+   ]
+  },
+  "16": {
+   "s": [
+    "his",
+    "of him"
+   ],
+   "r": "The landowner's own.",
+   "t": [
+    "his",
+    "his",
+    "his",
+    "his",
+    "his",
+    "his"
+   ]
+  }
+ }
+}

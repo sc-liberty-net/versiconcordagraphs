@@ -1,0 +1,156 @@
+{
+ "id": "f4",
+ "en": [
+  {"t": "The", "w": ["02"]}, " ",
+  {"t": "work", "w": ["03"]}, " ",
+  {"t": "of each", "w": ["01"]}, " ",
+  {"t": "will become", "w": ["05"]}, " ",
+  {"t": "manifest", "w": ["04"]}, ", ",
+  {"t": "for", "w": ["07"]}, " ",
+  {"t": "the", "w": ["06"]}, " ",
+  {"t": "day", "w": ["08"]}, " ",
+  {"t": "will disclose", "w": ["09"]}, " ",
+  {"t": "it", "sup": "Supplied in English. The Greek verb has no stated object; the work is meant."}, ", ",
+  {"t": "because", "w": ["10"]}, " ",
+  {"t": "it is revealed", "w": ["13"]}, " ",
+  {"t": "in", "w": ["11"]}, " ",
+  {"t": "fire", "w": ["12"]}, "; ",
+  {"t": "and", "w": ["14"]}, " ",
+  {"t": "the", "w": ["20"]}, " ",
+  {"t": "fire", "w": ["21"]}, " ",
+  {"t": "itself", "w": ["22"]}, " ",
+  {"t": "will test", "w": ["23"]}, " ",
+  {"t": "the", "w": ["16"]}, " ",
+  {"t": "work", "w": ["17"]}, " ",
+  {"t": "of each", "w": ["15"]}, ", ",
+  {"t": "what sort", "w": ["18"]}, " ",
+  {"t": "it is", "w": ["19"]}, "."
+ ],
+ "words": {
+  "01": {
+   "s": ["of each", "of every one", "of each man"],
+   "r": "Every builder's work, one by one.",
+   "n": "The Greek puts 'of each' first in the sentence, before 'the work', for emphasis: no builder is passed over.",
+   "t": ["Every man’s", "Euery mans", "Every man's", "each man’s", "of each", "his"]
+  },
+  "02": {
+   "s": ["the"],
+   "r": "Marks the work as the builder's own.",
+   "t": [null, null, null, null, "the", null]
+  },
+  "03": {
+   "s": ["work", "workmanship", "what has been built"],
+   "r": "What each one has built on the foundation.",
+   "n": "Abbott-Smith's first sense is 'work, task, employment'. Here it means the result of the work, the building itself.",
+   "t": ["work", "worke", "work", "work", "work", "workmanship"]
+  },
+  "04": {
+   "s": ["manifest", "evident", "visible", "plain to see"],
+   "r": "Open to view, no longer hidden.",
+   "n": "Abbott-Smith gives 'open to sight, visible, manifest', and notes the phrase with 'become', as here.",
+   "t": ["manifest", "manifest", "manifest", "manifest", "manifest", "evident"]
+  },
+  "05": {
+   "s": ["will become", "will be made", "will be"],
+   "r": "What is now hidden will come to light.",
+   "t": ["shall be made", "shalbe made", "shall be", "shall be made", "shall become", "will be"]
+  },
+  "06": {
+   "s": ["the"],
+   "r": "Marks a known, particular day.",
+   "t": ["the", "the", "the", "the", "the", "the"]
+  },
+  "07": {
+   "s": ["for"],
+   "r": "Gives the reason the work will be seen.",
+   "t": ["for", "for", "For", "for", "for", "because"]
+  },
+  "08": {
+   "s": ["day", "the Day"],
+   "r": "A coming day on which the work is shown for what it is.",
+   "n": "The Greek says only 'the day'. A day of judgment is the likely meaning; the DRC adds 'of the Lord' and the BSB capitalises 'Day', both interpreting.",
+   "t": ["day", "day", "day of the Lord", "day", "day", "Day"]
+  },
+  "09": {
+   "s": ["will disclose", "will make plain", "will declare", "will show"],
+   "r": "The day will make the work clear for all to see.",
+   "n": "Abbott-Smith gives 'to make plain, declare', and cites this verse.",
+   "t": ["shall declare it", "shall declare it", "shall declare it", "shall declare it", "shall declare it", "will bring it to light"]
+  },
+  "10": {
+   "s": ["because", "since", "for"],
+   "r": "Explains how the day discloses the work.",
+   "t": ["because", "because", "because", "because", "because", null]
+  },
+  "11": {
+   "s": ["in", "by", "with"],
+   "r": "Fire is the setting or means of the revealing.",
+   "t": ["by", "by", "in", "in", "in", "with"]
+  },
+  "12": {
+   "s": ["fire"],
+   "r": "The fire that tests and reveals.",
+   "t": ["fire", "fire", "fire", "fire", "fire", "fire"]
+  },
+  "13": {
+   "s": ["it is revealed", "it is uncovered", "it is disclosed"],
+   "r": "Something is laid bare in the fire.",
+   "n": "Present tense, used of a certain future. The subject is unstated: it may be the day, revealed in fire, or the work. Abbott-Smith lists this verse under the general sense 'to reveal, uncover, disclose', of things.",
+   "t": ["it shall be revealed", "it shalbe reueiled", "it shall be revealed", "it is revealed", "it is revealed", "It will be revealed"]
+  },
+  "14": {
+   "s": ["and"],
+   "r": "Adds what the fire will do.",
+   "t": ["and", "and", "And", "and", "and", "and"]
+  },
+  "15": {
+   "s": ["of each", "of every one"],
+   "r": "Again, every builder's work in turn.",
+   "t": ["every man’s", "euery mans", "every man's", "each man’s", "of each", "each man’s"]
+  },
+  "16": {
+   "s": ["the"],
+   "r": "Marks the work as the builder's own.",
+   "t": [null, null, null, null, "the", null]
+  },
+  "17": {
+   "s": ["work"],
+   "r": "What each has built.",
+   "t": ["work", "worke", "work", "work", "work", "work"]
+  },
+  "18": {
+   "s": ["what sort", "of what kind", "what quality"],
+   "r": "The quality of the work, not its size.",
+   "n": "Abbott-Smith gives 'of what sort'. The Greek places 'what sort it is' before 'the fire', which our English moves after the verb.",
+   "t": ["of what sort", "of what sort", "of what sort", "of what sort", "what kind", "the quality"]
+  },
+  "19": {
+   "s": ["it is"],
+   "r": "Asks what the work truly is.",
+   "t": ["it is", "it is", "it is", "it is", "it is", null]
+  },
+  "20": {
+   "s": ["the"],
+   "r": "The same fire just mentioned.",
+   "t": ["the", "the", "the", "the", "the", "the"]
+  },
+  "21": {
+   "s": ["fire"],
+   "r": "The fire that tests the work.",
+   "t": ["fire", "fire", "fire", "fire", "fire", "fire"]
+  },
+  "22": {
+   "s": ["itself", "by itself"],
+   "r": "The fire alone will be the test.",
+   "n": "Absent from the Textus Receptus, so the KJV has 'the fire shall try'.",
+   "t": [null, null, null, "itself", null, null]
+  },
+  "23": {
+   "s": ["will test", "will prove", "will try", "will assay"],
+   "r": "The fire will put the work to the proof.",
+   "n": "Abbott-Smith explains that the verb is used primarily of metals, to test, try, prove, and that the testing is done in the hope that it will prove successful. That fits a fire set to try gold and silver.",
+   "t": ["shall try", "shall trie", "shall try", "shall prove", "shall prove", "will prove"]
+  }
+ },
+ "tr_note": "The Textus Receptus lacks αὐτό, 'itself', so the KJV reads 'the fire shall try' where the ASV has 'the fire itself shall prove'."
+}

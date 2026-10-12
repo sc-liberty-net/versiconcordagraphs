@@ -1,0 +1,145 @@
+{
+ "id": "f2",
+ "en": [
+  {"t": "And he shall sit", "w": ["01"]}, ", ",
+  {"t": "refining", "w": ["02"]}, " ",
+  {"t": "and purifying", "w": ["03"]}, " ",
+  {"t": "silver", "w": ["04"]}, "; ",
+  {"t": "and he shall purify", "w": ["05"]}, " ",
+  {"t": "the sons of", "w": ["07", "06"]}, " ",
+  {"t": "Levi", "w": ["08"]}, " ",
+  {"t": "and purge", "w": ["09"]}, " ",
+  {"t": "them", "w": ["10"]}, " ",
+  {"t": "like gold", "w": ["11"]}, " ",
+  {"t": "and like silver", "w": ["12"]}, "; ",
+  {"t": "and they shall be", "w": ["13"]}, " ",
+  {"t": "bringing near", "w": ["15"]}, " ",
+  {"t": "to the LORD", "w": ["14"]}, " ",
+  {"t": "an offering", "w": ["16"]}, " ",
+  {"t": "in righteousness", "w": ["17"]}, "."
+ ],
+ "words": {
+  "01": {
+   "s": ["sit", "sit down", "be seated", "settle"],
+   "r": "He takes his seat at the work, like a metalworker at the furnace.",
+   "n": "A perfect with 'and', which carries the prophecy into the future: 'he shall sit'. YLT renders the perfect form literally, 'he hath sat'. Gesenius gives the first sense as TO SIT, TO SIT DOWN.",
+   "t": ["And he shall sit", "And he shall sit downe", "And he shall sit", "And he shall sit", "and he will sit", "And he hath sat", "And He will sit"]
+  },
+  "02": {
+   "s": ["refining", "smelting", "as a refiner", "testing"],
+   "r": "Melting the metal to separate it from its dross.",
+   "n": "A participle, 'one refining', the same word as 'refiner' in the verse before. Gesenius: TO MELT a metal, specially to purge gold or silver by fire, and figuratively to prove, to examine; Geneva's 'to trye' takes that second sense.",
+   "t": ["as a refiner", "to trye", "refining", "as a refiner", "as a refiner", "a refiner", "as a refiner"]
+  },
+  "03": {
+   "s": ["purifying", "cleansing", "as a purifier", "making clean"],
+   "r": "Making the metal clean of what is mixed into it.",
+   "n": "Gesenius gives the root sense TO SHINE, TO BE BRIGHT, then to be clean or pure, in a physical, a Levitical or a moral sense; this form means to make clean. A reasonable reading is that the metal picture and the priestly sense of 'clean' meet here.",
+   "t": ["and purifier", "and fine", "and cleansing", "and purifier", "and purifier", "and purifier", "and purifier"]
+  },
+  "04": {
+   "s": ["silver"],
+   "r": "The metal being refined.",
+   "n": "Gesenius says silver is so called from its pale colour.",
+   "t": ["of silver", "the siluer", "the silver", "of silver", "of silver", "of silver", "of silver"]
+  },
+  "05": {
+   "s": ["purify", "cleanse", "make clean"],
+   "r": "The refining now applied to people.",
+   "n": "The same verb as 'purifying' earlier in the verse, now as a finite verb with 'and', future in sense.",
+   "t": ["and he shall purify", "he shall euen fine", "and he shall purify", "and he shall purify", "and he will purify", "And he hath purified", "He will purify"]
+  },
+  "06": {
+   "s": ["(object marker, no English equivalent)"],
+   "r": "Marks 'the sons of Levi' as the object of 'purify'.",
+   "n": "This small word marks a definite direct object and has no English equivalent; it is counted here with 'the sons of'.",
+   "t": [null, null, null, null, null, null, null]
+  },
+  "07": {
+   "s": ["sons of", "descendants of", "children of"],
+   "r": "The descendants of Levi: the priestly tribe.",
+   "t": ["the sons", "the sonnes", "the sons", "the sons", "the sons", "the sons", "the sons"]
+  },
+  "08": {
+   "s": ["Levi"],
+   "r": "The ancestor of the priestly tribe, standing for the tribe itself.",
+   "n": "Gesenius notes that the tribe of Levi, the 'sons of Levi', was set apart for the service of the sanctuary, and that the priesthood belonged to the family of Aaron within it.",
+   "t": ["of Levi", "of Leui", "of Levi", "of Levi", "of Levi", "of Levi", "of Levi"]
+  },
+  "09": {
+   "s": ["purge", "refine", "strain", "purify"],
+   "r": "Clear them of impurity as metal is cleared.",
+   "n": "A different verb from 'refining' earlier in the verse. Gesenius gives its sense as TO SQUEEZE THROUGH a strainer, to strain, hence to refine wine and metals. 'Purge' keeps the two verbs apart in our English.",
+   "t": ["and purge", "and purifie", "and shall refine", "and purge", "and refine", "And hath refined", "and refine"]
+  },
+  "10": {
+   "s": ["them"],
+   "r": "The sons of Levi.",
+   "t": ["them", "them", "them", "them", "them", "them", "them"]
+  },
+  "11": {
+   "s": ["like gold", "as gold"],
+   "r": "Refined as gold is refined.",
+   "t": ["as gold", "as golde", "as gold", "as gold", "as gold", "as gold", "like gold"]
+  },
+  "12": {
+   "s": ["and like silver", "and as silver"],
+   "r": "And as silver is refined.",
+   "n": "The 'like' is repeated in the Hebrew: 'like the gold and like the silver'. The DRC and YLT keep it.",
+   "t": ["and silver", "and siluer", "and as silver", "and silver", "and silver", "and as silver", "and silver"]
+  },
+  "13": {
+   "s": ["they shall be", "they will be", "they will become"],
+   "r": "Describes what the purified priests will go on doing.",
+   "n": "Literally 'and they shall be to the LORD bringers near of an offering'. 'Be' with a participle describes ongoing action, so 'they shall be bringing near'; it can also be read 'they shall belong to the LORD, bringing near an offering'.",
+   "t": ["that they may", "that they may", "and they shall", "and there shall be", "and they shall", "And they have been", "Then they will"]
+  },
+  "14": {
+   "s": ["to the LORD", "for the LORD", "to Yahweh"],
+   "r": "The LORD receives the offering.",
+   "t": ["unto the Lord", "vnto the Lord", "to the Lord", "unto HaShem", "unto Jehovah", "to Jehovah", "to the LORD"]
+  },
+  "15": {
+   "s": ["bringing near", "presenting", "offering", "bringing"],
+   "r": "Bringing an offering to the altar.",
+   "n": "The causative form of the verb 'to draw near': 'make come near'. The brief's lexicon gives this form as to cause to approach, bring near.",
+   "t": ["offer", "bring", "offer", "they that shall offer", "offer", "bringing nigh", "present"]
+  },
+  "16": {
+   "s": ["offering", "gift", "grain offering", "present"],
+   "r": "A gift brought to God.",
+   "n": "Gesenius lists a gift, tribute, and a gift offered to a divinity, specially a sacrifice without blood. Here it is a gift to God, not tribute to a ruler. The Hebrew is singular; most translations make it plural.",
+   "t": ["an offering", "offerings", "sacrifices", "offerings", "offerings", "a present", "offerings"]
+  },
+  "17": {
+   "s": ["in righteousness", "rightly", "as is right", "in justice"],
+   "r": "Offered as it ought to be, by priests now made right.",
+   "n": "Gesenius gives the first sense as rectitude, right, before justice. 'In righteousness' can mean in the right way or in a right state; both fit here, and the choice is a matter of reading.",
+   "t": ["in righteousness", "in righteousnesse", "in justice", "in righteousness", "in righteousness", "in righteousness", "in righteousness"]
+  }
+ },
+ "lxx": {
+  "_extra": {
+   "7": "καὶ (and): begins a phrase added by the Greek translators, 'and as the gold'.",
+   "8": "ὡς (as): part of the added phrase.",
+   "9": "τὸ (the): part of the added phrase.",
+   "10": "χρυσίον (gold): the Greek adds gold to the first mention of silver, 'as the silver and as the gold'."
+  },
+  "01": {"i": [0], "m": 0, "n": "καθιεῖται, 'he will sit', a future of καθίζω. The Greek has no 'and' here."},
+  "02": {"i": [1], "m": 1, "n": "χωνεύω, 'to melt, cast metal'."},
+  "03": {"i": [2, 3], "m": 3, "n": "καθαρίζω, 'to cleanse'."},
+  "04": {"i": [4, 5, 6], "m": 6, "n": "The Greek makes the silver a comparison: 'refining and cleansing as the silver'."},
+  "05": {"i": [11, 12], "m": 12},
+  "07": {"i": [13, 14], "m": 14},
+  "08": {"i": [15], "m": 15},
+  "09": {"i": [16, 17], "m": 17, "n": "χέω, 'to pour': the Greek reads 'and he will pour them', as molten metal is poured."},
+  "10": {"i": [18], "m": 18},
+  "11": {"i": [19, 20, 21], "m": 21, "n": "The first word is printed σπερ in our Greek text; it is evidently ὥσπερ, 'just as', cut short."},
+  "12": {"i": [22, 23, 24, 25], "m": 25},
+  "13": {"i": [26, 27], "m": 27},
+  "14": {"i": [28, 29], "m": 29},
+  "15": {"i": [30], "m": 30, "n": "προσάγω, 'bring to, present'."},
+  "16": {"i": [31], "m": 31, "n": "θυσία, 'sacrifice', where the Hebrew has a word whose first sense is a gift. The DRC's 'sacrifices' matches this."},
+  "17": {"i": [32, 33], "m": 33}
+ }
+}

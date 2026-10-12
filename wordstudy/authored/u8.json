@@ -1,0 +1,611 @@
+{
+ "id": "u8",
+ "en": [
+  {
+   "t": "And my heart took counsel",
+   "w": [
+    "01",
+    "02"
+   ]
+  },
+  " ",
+  {
+   "t": "within me",
+   "w": [
+    "03"
+   ]
+  },
+  ", ",
+  {
+   "t": "and I contended",
+   "w": [
+    "04"
+   ]
+  },
+  " ",
+  {
+   "t": "with",
+   "w": [
+    "05"
+   ]
+  },
+  " ",
+  {
+   "t": "the nobles",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "and with",
+   "w": [
+    "07"
+   ]
+  },
+  " ",
+  {
+   "t": "the officials",
+   "w": [
+    "08"
+   ]
+  },
+  ", ",
+  {
+   "t": "and I said",
+   "w": [
+    "09"
+   ]
+  },
+  " ",
+  {
+   "t": "to them",
+   "w": [
+    "10"
+   ]
+  },
+  ", ‘",
+  {
+   "t": "Usury",
+   "w": [
+    "11"
+   ]
+  },
+  ", ",
+  {
+   "t": "each",
+   "w": [
+    "12"
+   ]
+  },
+  " ",
+  {
+   "t": "from his brother",
+   "w": [
+    "13"
+   ]
+  },
+  ", ",
+  {
+   "t": "you",
+   "w": [
+    "14"
+   ]
+  },
+  " ",
+  {
+   "t": "are exacting",
+   "w": [
+    "15"
+   ]
+  },
+  "!’ ",
+  {
+   "t": "And I set",
+   "w": [
+    "16"
+   ]
+  },
+  " ",
+  {
+   "t": "against them",
+   "w": [
+    "17"
+   ]
+  },
+  " ",
+  {
+   "t": "a great",
+   "w": [
+    "19"
+   ]
+  },
+  " ",
+  {
+   "t": "assembly",
+   "w": [
+    "18"
+   ]
+  },
+  "."
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "took counsel",
+    "considered",
+    "deliberated",
+    "thought it over"
+   ],
+   "r": "Nehemiah weighs the matter inwardly before he acts.",
+   "t": [
+    "Then I consulted",
+    "And I thought",
+    "And ... thought",
+    "Then I consulted",
+    "Then I consulted",
+    "and ... reigneth",
+    "and after serious thought"
+   ],
+   "n": "This form of the verb occurs only here; the brief's lexicon gives 'to consider', BDB 'counsel, advise'. Gesenius's main entry is the like-spelled verb 'to reign, to be king', and he notes that in Syriac and Chaldee the root means to consult; YLT's 'my heart reigneth over me' takes the 'reign' sense. Hebrew puts the verb first: 'and took counsel my heart'; our English puts the subject first."
+  },
+  "02": {
+   "s": [
+    "my heart",
+    "my mind",
+    "my inner self"
+   ],
+   "r": "Nehemiah's mind and will, the seat of his thinking.",
+   "t": [
+    null,
+    "in my minde",
+    "my heart",
+    null,
+    null,
+    "my heart",
+    null
+   ],
+   "n": "The brief's lexicon puts mind, will and understanding among the senses of 'heart'. The KJV, JPS and ASV fold it into 'I consulted with myself'."
+  },
+  "03": {
+   "s": [
+    "within me",
+    "upon me",
+    "with me"
+   ],
+   "r": "The deliberation is inward, within himself.",
+   "t": [
+    "with myself",
+    null,
+    "with myself",
+    "with myself",
+    "with myself",
+    "over me",
+    null
+   ],
+   "n": "Literally 'upon me'. Hebrew uses this preposition for what goes on inside a person, so 'within me' is the closest English."
+  },
+  "04": {
+   "s": [
+    "contended",
+    "strove",
+    "rebuked",
+    "brought a complaint against"
+   ],
+   "r": "He takes the nobles to task, as one bringing a case.",
+   "t": [
+    "and I rebuked",
+    "and I rebuked",
+    "and I rebuked",
+    "and contended",
+    "and contended",
+    "and I strive",
+    "I rebuked"
+   ],
+   "n": "Gesenius: TO CONTEND, TO STRIVE; the brief's lexicon also gives to conduct a case and to make complaint. The verb is in a lengthened form (an extra -ah ending) that does not change its meaning."
+  },
+  "05": {
+   "s": [
+    "with",
+    "against"
+   ],
+   "r": "The nobles are the other party to the dispute.",
+   "t": [
+    null,
+    null,
+    null,
+    "with",
+    "with",
+    "with",
+    null
+   ]
+  },
+  "06": {
+   "s": [
+    "the nobles",
+    "the freeborn",
+    "the leading men"
+   ],
+   "r": "The men of high birth among the people.",
+   "t": [
+    "the nobles",
+    "the princes",
+    "the nobles",
+    "the nobles",
+    "the nobles",
+    "the freemen",
+    "the nobles"
+   ],
+   "n": "Gesenius: noble, freeborn, only in the plural. YLT's 'freemen' takes the 'freeborn' sense."
+  },
+  "07": {
+   "s": [
+    "and with",
+    "and against"
+   ],
+   "r": "Adds the second group.",
+   "t": [
+    "and",
+    "and",
+    "and",
+    "and",
+    "and",
+    "and with",
+    "and"
+   ]
+  },
+  "08": {
+   "s": [
+    "the officials",
+    "the prefects",
+    "the deputies",
+    "the rulers"
+   ],
+   "r": "Officials who governed the people of Jerusalem.",
+   "t": [
+    "the rulers",
+    "the rulers",
+    "magistrates",
+    "the rulers",
+    "the rulers",
+    "the prefects",
+    "officials"
+   ],
+   "n": "Gesenius: properly a substitute, a deputy of a prince, hence a prefect, and used of the chiefs and rulers of the people of Jerusalem in the time of Ezra and Nehemiah, citing this verse. BDB distinguishes them from the nobles."
+  },
+  "09": {
+   "s": [
+    "and I said",
+    "and I told"
+   ],
+   "r": "Introduces his charge.",
+   "t": [
+    "and said",
+    "and saide",
+    "and said",
+    "and said",
+    "and said",
+    "and say",
+    "saying"
+   ],
+   "n": "Like 'contended', it is in the lengthened form with an extra -ah ending."
+  },
+  "10": {
+   "s": [
+    "to them",
+    "unto them"
+   ],
+   "r": "The nobles and officials.",
+   "t": [
+    "unto them",
+    "vnto them",
+    "to them",
+    "unto them",
+    "unto them",
+    "to them",
+    null
+   ]
+  },
+  "11": {
+   "s": [
+    "usury",
+    "exaction",
+    "a creditor's claim",
+    "a loan on interest"
+   ],
+   "r": "A creditor's claim on a loan, with the gain it brings him.",
+   "t": [
+    "usury",
+    "burthens",
+    "usury",
+    "upon pledge",
+    "usury",
+    "Usury",
+    "usury"
+   ],
+   "n": "A third word for gain from a loan, different from 'interest' and 'increase' in the laws on this page, so our English gives it 'usury' to keep it apart. Gesenius: usury, from the root נָשָׁא, citing this verse; BDB: lending on interest, or usury; STEPBible's lexicon adds that in Nehemiah 5:11 the rate was only one per cent. Geneva's 'burthens' and the JPS's 'upon pledge' read the word differently."
+  },
+  "12": {
+   "s": [
+    "each",
+    "every one",
+    "each man"
+   ],
+   "r": "Every one of them, without exception.",
+   "t": [
+    "every one",
+    "euery one",
+    "every one",
+    "every one",
+    "every one",
+    "one",
+    null
+   ],
+   "n": "The word for 'man' used in the sense 'each'."
+  },
+  "13": {
+   "s": [
+    "from his brother",
+    "of his brother",
+    "on his brother"
+   ],
+   "r": "Their own fellow Jews are the ones the usury is exacted from.",
+   "t": [
+    "of his brother",
+    "vpon his brethren",
+    "of your brethren",
+    "to his brother",
+    "of his brother",
+    "upon another",
+    "from your own brothers"
+   ],
+   "n": "Literally 'in his brother' or 'on his brother'; with this verb the preposition marks the person the claim is made against, so English says 'from'. 'Brother' here means a fellow Jew."
+  },
+  "14": {
+   "s": [
+    "you"
+   ],
+   "r": "The nobles and officials, addressed directly.",
+   "t": [
+    "Ye",
+    "You",
+    "you",
+    "Ye",
+    "Ye",
+    "ye",
+    "You"
+   ],
+   "n": "The pronoun is written out, which makes the charge pointed: 'you are the ones'."
+  },
+  "15": {
+   "s": [
+    "are exacting",
+    "are claiming",
+    "are pressing as creditors"
+   ],
+   "r": "They are pressing their own people for usury, as creditors.",
+   "t": [
+    "exact",
+    "lay",
+    "Do ... exact",
+    "lend",
+    "exact",
+    "are exacting",
+    "are exacting"
+   ],
+   "n": "A participle, 'you are exacting', an action still going on. STEPBible files it under a verb whose Gesenius entry, printed in the brief, is 'to take up, to lift up', and glosses it 'lending'; we take it as the creditor's verb of Nehemiah 5:11 on this page and render it 'exact', keeping 'lend' for a different verb (Exodus 22:25 on this page). The noun 'usury' at the head of the clause is written with the same letters, so noun and verb echo each other."
+  },
+  "16": {
+   "s": [
+    "and I set",
+    "and I gave",
+    "and I called"
+   ],
+   "r": "He convenes an assembly to deal with them.",
+   "t": [
+    "And I set",
+    "and I set",
+    "And I gathered together",
+    "And I held",
+    "And I held",
+    "and I set",
+    "So I called"
+   ],
+   "n": "The ordinary verb 'to give, put, set'."
+  },
+  "17": {
+   "s": [
+    "against them",
+    "over them",
+    "concerning them"
+   ],
+   "r": "The assembly is called to face the nobles and officials.",
+   "t": [
+    "against them",
+    "against them",
+    "against them",
+    "against them",
+    "against them",
+    "against them",
+    "against them"
+   ]
+  },
+  "18": {
+   "s": [
+    "assembly",
+    "gathering",
+    "congregation"
+   ],
+   "r": "A public meeting of the people.",
+   "t": [
+    "assembly",
+    "assemblie",
+    "assembly",
+    "assembly",
+    "assembly",
+    "assembly",
+    "assembly"
+   ],
+   "n": "Gesenius: an assembly, citing this verse. The brief's lexicon says the word occurs in only two verses."
+  },
+  "19": {
+   "s": [
+    "great",
+    "large"
+   ],
+   "r": "A large public gathering.",
+   "t": [
+    "a great",
+    "a great",
+    "a great",
+    "a great",
+    "a great",
+    "a great",
+    "a large"
+   ],
+   "n": "The brief's short lexicon entry here belongs to a different word (heap, wave); Gesenius's entry, 'great', is the right one."
+  }
+ },
+ "lxx": {
+  "01": {
+   "i": [
+    0,
+    1
+   ],
+   "m": 1,
+   "n": "βουλεύω, to take counsel, deliberate. Swete's text numbers this book 2 Esdras."
+  },
+  "02": {
+   "i": [
+    2,
+    3
+   ],
+   "m": 2
+  },
+  "03": {
+   "i": [
+    4,
+    5
+   ],
+   "m": 4,
+   "n": "ἐπʼ ἐμέ, 'upon me', exactly the Hebrew phrase."
+  },
+  "04": {
+   "i": [
+    6,
+    7
+   ],
+   "m": 7,
+   "lemma": "μάχομαι",
+   "strong": "G3164",
+   "n": "Dictionary form supplied; the brief gives none. ἐμαχεσάμην, 'I fought, I quarrelled'."
+  },
+  "05": {
+   "i": [
+    8
+   ],
+   "m": 8
+  },
+  "06": {
+   "i": [
+    9,
+    10
+   ],
+   "m": 10,
+   "n": "ἔντιμος, honoured, of high rank."
+  },
+  "07": {
+   "i": [
+    11
+   ],
+   "m": 11
+  },
+  "08": {
+   "i": [
+    12,
+    13
+   ],
+   "m": 13,
+   "n": "ἄρχων, ruler."
+  },
+  "09": {
+   "i": [
+    14,
+    15
+   ],
+   "m": 15,
+   "lemma": "εἶπον",
+   "strong": "G2036",
+   "n": "Dictionary form supplied; the brief gives none. εἶπα, 'I said'."
+  },
+  "10": {
+   "i": [
+    16
+   ],
+   "m": 16
+  },
+  "11": {
+   "i": [
+    17
+   ],
+   "m": 17,
+   "n": "The brief takes this word as the verb ἀπαιτέω, to demand back, 'he will demand'. It may instead be the noun ἀπαίτησις, a demand, in the dative, answering the Hebrew noun; we cannot settle it from the brief and leave the form as given."
+  },
+  "12": {
+   "i": [
+    18,
+    19
+   ],
+   "m": 19,
+   "n": "ἀνήρ, man, for the Hebrew 'each'."
+  },
+  "13": {
+   "i": [
+    20,
+    21,
+    22
+   ],
+   "m": 21
+  },
+  "14": {
+   "i": [
+    23
+   ],
+   "m": 23
+  },
+  "15": {
+   "i": [
+    24
+   ],
+   "m": 24,
+   "n": "ἀπαιτέω, to demand back, to ask for repayment: the Greek sees the lenders pressing for payment."
+  },
+  "16": {
+   "i": [
+    25,
+    26
+   ],
+   "m": 26
+  },
+  "17": {
+   "i": [
+    27,
+    28
+   ],
+   "m": 27
+  },
+  "18": {
+   "i": [
+    29
+   ],
+   "m": 29,
+   "n": "ἐκκλησία, an assembly, the word the New Testament uses for the church."
+  },
+  "19": {
+   "i": [
+    30
+   ],
+   "m": 30
+  }
+ }
+}

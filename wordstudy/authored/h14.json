@@ -1,0 +1,86 @@
+{
+ "id": "h14",
+ "en": [
+  {"t": "For", "w": ["03"]}, ", ",
+  {"t": "on the one hand", "w": ["02"]}, ", ",
+  {"t": "there comes", "w": ["04"]}, " a ",
+  {"t": "setting aside", "w": ["01"]}, " of a ",
+  {"t": "preceding", "w": ["05"]}, " ",
+  {"t": "commandment", "w": ["06"]}, " ",
+  {"t": "because of", "w": ["07"]}, " ",
+  {"t": "its", "w": ["09"]}, " ",
+  {"t": "weakness", "w": ["10", "08"]}, " ",
+  {"t": "and", "w": ["11"]}, " ",
+  {"t": "uselessness", "w": ["12"]}, ","
+ ],
+ "words": {
+  "01": {
+   "s": ["setting aside", "annulment", "cancelling", "disannulling"],
+   "r": "The former commandment is put out of force.",
+   "n": "Abbott-Smith gives 'a disannulling, setting aside' and cites this verse. He adds that in the Septuagint the word is usually used of unfaithful, rebellious action; here it is used of a rule being cancelled. The KJV's 'disannulling' is an old word for annulling.",
+   "t": ["a disannulling", "is disanulled", "a setting aside", "a disannulling", "a disannulling", "is set aside"]
+  },
+  "02": {
+   "s": ["on the one hand", "indeed", "verily"],
+   "r": "Marks this statement as the first half of a contrast.",
+   "n": "Abbott-Smith describes this particle as usually related to a following δέ or other adversative word, and calls it 'generally untranslatable'. Its partner does not fall within this verse. As in Hebrews 7:8, this study renders it 'on the one hand'.",
+   "t": ["verily", null, "indeed", null, "indeed", null]
+  },
+  "03": {
+   "s": ["for"],
+   "r": "Gives the reason or explanation for what has just been said about the new priest.",
+   "t": ["For", "For", null, "For", "for", "So"]
+  },
+  "04": {
+   "s": ["there comes", "there is", "takes place", "comes about"],
+   "r": "The setting aside happens; it is a present fact.",
+   "n": "Present tense of the verb 'become, come about'. Abbott-Smith's first sense is 'to come into being, arise'.",
+   "t": ["there is", null, "There is", "there is", "doth come", null]
+  },
+  "05": {
+   "s": ["preceding", "going before", "former", "earlier"],
+   "r": "The commandment that came first, before the new priesthood.",
+   "n": "A present participle, literally 'going before'. Abbott-Smith's first sense of the verb is 'to lead on, lead forth'; the brief's extract does not reach the intransitive sense used here, so 'going before' rests on the form and the context.",
+   "t": ["going before", "that went afore", "former", "foregoing", "going before", "former"]
+  },
+  "06": {
+   "s": ["commandment", "command", "regulation"],
+   "r": "The command about priesthood, as in Hebrews 7:16.",
+   "n": "Abbott-Smith cites Hebrews 7:16 and this verse together under the general sense 'a charge, injunction, order, command'.",
+   "t": ["commandment", "commandement", "commandment", "commandment", "command", "commandment"]
+  },
+  "07": {
+   "s": ["because of", "on account of", "for"],
+   "r": "Gives the reason for setting it aside.",
+   "t": ["for", "because of", "because of", "because of", "because of", "because"]
+  },
+  "08": {
+   "s": ["the"],
+   "r": "Turns the two adjectives that follow into nouns: the weak and useless quality of it.",
+   "n": "Literally 'the weak and unprofitable (thing) of it'. English needs nouns, 'weakness' and 'uselessness', so this word has no English of its own.",
+   "t": ["the", "the", "the", null, null, null]
+  },
+  "09": {
+   "s": ["its", "of it", "thereof"],
+   "r": "The preceding commandment's own weakness.",
+   "t": ["thereof", "thereof", "thereof", "its", "its", "it"]
+  },
+  "10": {
+   "s": ["weakness", "feebleness", "lack of strength"],
+   "r": "The commandment had no strength to do what was needed.",
+   "n": "An adjective, 'weak', made into a noun by the article. Abbott-Smith builds it from a negative and σθένος, strength: 'without strength, weak, feeble', and cites this verse.",
+   "t": ["weakness", "weakenes", "weakness", "weakness", "weakness", "was weak"]
+  },
+  "11": {
+   "s": ["and"],
+   "r": "Joins the second fault to the first.",
+   "t": ["and", "and", "and", "and", "and", "and"]
+  },
+  "12": {
+   "s": ["uselessness", "unprofitableness", "lack of benefit", "futility"],
+   "r": "The commandment brought no real benefit.",
+   "n": "Abbott-Smith builds it from a negative and ὄφελος, benefit, and gives 'unprofitable', and for the neuter used as a noun in this verse, 'unprofitableness'. 'Profit' here means benefit, not money.",
+   "t": ["unprofitableness", "vnprofitablenes", "unprofitableness", "unprofitableness", "unprofitableness", "useless"]
+  }
+ }
+}

@@ -1,0 +1,174 @@
+{
+ "id": "f6",
+ "en": [
+  {"t": "Your", "w": ["03"]}, " ",
+  {"t": "gold", "w": ["02", "01"]}, " ",
+  {"t": "and", "w": ["04"]}, " ",
+  {"t": "silver", "w": ["06", "05"]}, " ",
+  {"t": "has rusted over", "w": ["07"]}, ", ",
+  {"t": "and", "w": ["08"]}, " ",
+  {"t": "the", "w": ["09"]}, " ",
+  {"t": "rust", "w": ["10"]}, " ",
+  {"t": "of them", "w": ["11"]}, " ",
+  {"t": "will be", "w": ["15"]}, " ",
+  {"t": "for", "w": ["12"]}, " ",
+  {"t": "a testimony", "w": ["13"]}, " ",
+  {"t": "against you", "w": ["14"]}, " ",
+  {"t": "and", "w": ["16"]}, " ",
+  {"t": "will eat", "w": ["17"]}, " ",
+  {"t": "your", "w": ["20"]}, " ",
+  {"t": "flesh", "w": ["19", "18"]}, " ",
+  {"t": "like", "w": ["21"]}, " ",
+  {"t": "fire", "w": ["22"]}, ". ",
+  {"t": "You stored up treasure", "w": ["23"]}, " ",
+  {"t": "in", "w": ["24"]}, " ",
+  {"t": "the last", "w": ["25"]}, " ",
+  {"t": "days", "w": ["26"]}, "."
+ ],
+ "words": {
+  "01": {
+   "s": ["the"],
+   "r": "With 'your', marks the gold as the hearers' own.",
+   "n": "Greek says 'the gold of you'; English uses 'your' alone.",
+   "t": [null, null, null, null, null, null]
+  },
+  "02": {
+   "s": ["gold"],
+   "r": "Gold kept as wealth.",
+   "n": "Abbott-Smith lists this verse among uses of the word for golden ornaments.",
+   "t": ["gold", "gold", "gold", "gold", "gold", "gold"]
+  },
+  "03": {
+   "s": ["your", "of you"],
+   "r": "The rich whom James addresses.",
+   "t": ["Your", "Your", "Your", "Your", "your", "Your"]
+  },
+  "04": {
+   "s": ["and"],
+   "r": "Joins silver to gold.",
+   "t": ["and", "and", "and", "and", "and", "and"]
+  },
+  "05": {
+   "s": ["the"],
+   "r": "Gives silver its own article beside gold.",
+   "n": "English needs no word here; the ASV renders it 'your'.",
+   "t": [null, null, null, "your", null, null]
+  },
+  "06": {
+   "s": ["silver"],
+   "r": "Silver kept as wealth.",
+   "n": "The word for the metal itself. Abbott-Smith points to a discussion of how it relates to ἀργύριον, the word often used for silver money.",
+   "t": ["silver", "siluer", "silver", "silver", "silver", "silver"]
+  },
+  "07": {
+   "s": ["has rusted over", "is corroded", "is tarnished", "is rusted through"],
+   "r": "The stored metal has corroded from lying unused.",
+   "n": "Abbott-Smith gives 'to rust over' and, in the passive, 'become rusted over'; this verse is its only New Testament use. Gold and silver do not rust in the ordinary sense, so the picture is likely of wealth hoarded until it decays; that is an inference. The verb is singular, treating gold and silver as one hoard; the KJV's 'cankered' is an old word for corroded.",
+   "t": ["is cankered", "is cankred", "is cankered", "are rusted", "have rotted", "are corroded"]
+  },
+  "08": {
+   "s": ["and"],
+   "r": "Adds what the rust will do.",
+   "t": ["and", "and", "and", "and", "and", null]
+  },
+  "09": {
+   "s": ["the"],
+   "r": "The rust just implied by 'rusted over'.",
+   "t": ["the", "the", "the", null, "the", null]
+  },
+  "10": {
+   "s": ["rust", "corrosion", "tarnish"],
+   "r": "The corrosion on the hoarded metal.",
+   "n": "Abbott-Smith records three senses of this word, an arrow, rust, and poison, and places this verse under 'rust'.",
+   "t": ["rust", "rust", "rust", "rust", "rust", "corrosion"]
+  },
+  "11": {
+   "s": ["of them", "their"],
+   "r": "The rust of the gold and silver.",
+   "t": ["of them", "of them", "of them", "their", "of them", "Their"]
+  },
+  "12": {
+   "s": ["for", "as", "to serve as"],
+   "r": "Marks what the rust will serve as.",
+   "t": [null, null, "for", "for", "for", null]
+  },
+  "13": {
+   "s": ["a testimony", "a witness", "evidence", "proof"],
+   "r": "Evidence that will speak against the owners.",
+   "n": "Abbott-Smith gives 'a testimony, witness, proof'. The BSB turns the phrase into a verb, 'will testify'.",
+   "t": ["a witness", "a witnesse", "a testimony", "a testimony", "a testimony", "will testify"]
+  },
+  "14": {
+   "s": ["against you", "to you", "for you"],
+   "r": "The testimony will count against the rich.",
+   "n": "Plain dative 'to you'; the context shows the testimony is to their harm, so 'against you'. The YLT keeps 'to you'.",
+   "t": ["against you", "against you", "against you", "against you", "to you", "against you"]
+  },
+  "15": {
+   "s": ["will be", "shall be"],
+   "r": "The rust's future role.",
+   "t": ["shall be", "shalbe", "shall be", "shall be", "shall be", null]
+  },
+  "16": {
+   "s": ["and"],
+   "r": "Adds the rust's second work.",
+   "t": ["and", "and", "and", "and", "and", "and"]
+  },
+  "17": {
+   "s": ["will eat", "will consume", "will devour"],
+   "r": "The rust will consume the owners themselves.",
+   "n": "Abbott-Smith treats this future as the Hellenistic form belonging to the verb 'eat'.",
+   "t": ["shall eat", "shall eate", "shall eat", "shall eat", "shall eat", "consume"]
+  },
+  "18": {
+   "s": ["the"],
+   "r": "With 'your', marks their own bodies.",
+   "t": [null, null, null, null, null, null]
+  },
+  "19": {
+   "s": ["flesh", "bodies"],
+   "r": "Their bodies, consumed as if by fire.",
+   "n": "Plural in Greek, 'fleshes'; English uses the singular.",
+   "t": ["flesh", "flesh", "flesh", "flesh", "flesh", "flesh"]
+  },
+  "20": {
+   "s": ["your", "of you"],
+   "r": "The rich themselves.",
+   "t": ["your", "your", "your", "your", "your", "your"]
+  },
+  "21": {
+   "s": ["like", "as"],
+   "r": "Compares the rust's work to fire.",
+   "n": "The Greek may also be punctuated so that 'like fire' goes with the next sentence: 'you stored up treasure like fire'. The translations here all join it to what precedes.",
+   "t": ["as it were", "as it were", "like", "as", "as", "like"]
+  },
+  "22": {
+   "s": ["fire"],
+   "r": "Fire as a picture of consuming judgment.",
+   "t": ["fire", "fire", "fire", "fire", "fire", "fire"]
+  },
+  "23": {
+   "s": ["you stored up treasure", "you hoarded", "you laid up treasure", "you heaped up treasure"],
+   "r": "They piled up wealth for themselves.",
+   "n": "One Greek verb, built on the word for treasure; this study renders it 'store up treasure'. Abbott-Smith gives 'to lay up, store up' and lists this verse under 'of riches'. An aorist, 'you stored up', which the older translations give as 'have heaped' or 'have laid up'.",
+   "t": ["Ye have heaped treasure together", "Ye haue heaped vp treasure", "You have stored up", "Ye have laid up your treasure", "Ye made treasure", "You have hoarded treasure"]
+  },
+  "24": {
+   "s": ["in", "during", "for"],
+   "r": "The time in which they hoarded: the last days.",
+   "n": "Plainly 'in'. The KJV and Geneva's 'for the last days' and the DRC's 'against the last days' read it as storing up with the end in view. Read as plain 'in', it likely means they hoarded when the end was already at hand.",
+   "t": ["for", "for", "against", "in", "in", "in"]
+  },
+  "25": {
+   "s": ["the last", "final"],
+   "r": "The final days before the end.",
+   "n": "There is no article in Greek, 'in last days'; English needs 'the'.",
+   "t": ["the last", "the last", "the last", "the last", "the last", "the last"]
+  },
+  "26": {
+   "s": ["days"],
+   "r": "The time at the end.",
+   "t": ["days", "dayes", "days", "days", "days", "days"]
+  }
+ }
+}

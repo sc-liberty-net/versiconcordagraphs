@@ -1,0 +1,572 @@
+{
+ "id": "p2",
+ "en": [
+  {
+   "t": "Then",
+   "w": [
+    "02"
+   ]
+  },
+  " ",
+  {
+   "t": "the one",
+   "w": [
+    "04"
+   ]
+  },
+  " ",
+  {
+   "t": "also",
+   "w": [
+    "03"
+   ]
+  },
+  " ",
+  {
+   "t": "who had received",
+   "w": [
+    "08"
+   ]
+  },
+  " ",
+  {
+   "t": "the",
+   "w": [
+    "05"
+   ]
+  },
+  " ",
+  {
+   "t": "one",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "talent",
+   "w": [
+    "07"
+   ]
+  },
+  " ",
+  {
+   "t": "came forward",
+   "w": [
+    "01"
+   ]
+  },
+  " and ",
+  {
+   "t": "said",
+   "w": [
+    "09"
+   ]
+  },
+  ", ‘",
+  {
+   "t": "Master",
+   "w": [
+    "10"
+   ]
+  },
+  ", ",
+  {
+   "t": "I knew",
+   "w": [
+    "11"
+   ]
+  },
+  " ",
+  {
+   "t": "you",
+   "w": [
+    "12"
+   ]
+  },
+  ", ",
+  {
+   "t": "that",
+   "w": [
+    "13"
+   ]
+  },
+  " ",
+  {
+   "t": "you are",
+   "w": [
+    "15"
+   ]
+  },
+  " a ",
+  {
+   "t": "hard",
+   "w": [
+    "14"
+   ]
+  },
+  " ",
+  {
+   "t": "man",
+   "w": [
+    "16"
+   ]
+  },
+  ", ",
+  {
+   "t": "reaping",
+   "w": [
+    "17"
+   ]
+  },
+  " ",
+  {
+   "t": "where",
+   "w": [
+    "18"
+   ]
+  },
+  " ",
+  {
+   "t": "you did not sow",
+   "w": [
+    "20",
+    "19"
+   ]
+  },
+  " ",
+  {
+   "t": "and",
+   "w": [
+    "21"
+   ]
+  },
+  " ",
+  {
+   "t": "gathering",
+   "w": [
+    "22"
+   ]
+  },
+  " ",
+  {
+   "t": "from where",
+   "w": [
+    "23"
+   ]
+  },
+  " ",
+  {
+   "t": "you did not scatter",
+   "w": [
+    "25",
+    "24"
+   ]
+  },
+  ".’"
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "came forward",
+    "approached",
+    "stepped up",
+    "drew near"
+   ],
+   "r": "The third servant comes up to his master to give his account.",
+   "t": [
+    "came",
+    "came",
+    "came",
+    "came",
+    "having come",
+    "came"
+   ]
+  },
+  "02": {
+   "s": [
+    "then",
+    "next",
+    "and now"
+   ],
+   "r": "Moves the story on to the last servant.",
+   "n": "The BSB's \"Finally\" is an interpretation of this small connective. The Greek only marks the next step in the story.",
+   "t": [
+    "Then",
+    "Then",
+    "But",
+    "And",
+    "And",
+    "Finally"
+   ]
+  },
+  "03": {
+   "s": [
+    "also",
+    "too",
+    "likewise"
+   ],
+   "r": "He too comes, like the two servants before him.",
+   "t": [
+    null,
+    null,
+    null,
+    "also",
+    "also",
+    null
+   ]
+  },
+  "04": {
+   "s": [
+    "the one",
+    "he who"
+   ],
+   "r": "The article turns the following phrase into a description of a person: the one who had received.",
+   "t": [
+    "he which",
+    "he which",
+    "he that",
+    "he",
+    "he ... who",
+    "the servant who"
+   ]
+  },
+  "05": {
+   "s": [
+    "the"
+   ],
+   "r": "Points back to the single talent already mentioned in the parable.",
+   "t": [
+    "the",
+    "the",
+    "the",
+    "the",
+    "the",
+    "the"
+   ]
+  },
+  "06": {
+   "s": [
+    "one",
+    "a single"
+   ],
+   "r": "One talent, against the five and two given to the others.",
+   "t": [
+    "one",
+    "one",
+    "one",
+    "one",
+    "one",
+    "one"
+   ]
+  },
+  "07": {
+   "s": [
+    "talent",
+    "a large sum of silver",
+    "a weight of money"
+   ],
+   "r": "A unit of weight, used as a sum of money.",
+   "n": "Abbott-Smith gives the order of meanings: first a balance, then what is weighed on it, then a sum of money equal to that weight. The amount varied by place and period. The English sense of talent as a gift or ability grew out of this parable.",
+   "t": [
+    "talent",
+    "talent",
+    "talent",
+    "talent",
+    "talent",
+    "talent"
+   ]
+  },
+  "08": {
+   "s": [
+    "had received",
+    "had been given",
+    "was holding"
+   ],
+   "r": "He had received the talent and still had it.",
+   "n": "This is a perfect participle: the receiving is finished and its result still holds. That fits a servant who kept the money unused.",
+   "t": [
+    "had received",
+    "had receiued",
+    "had received",
+    "had received",
+    "hath received",
+    "had received"
+   ]
+  },
+  "09": {
+   "s": [
+    "said",
+    "spoke",
+    "answered"
+   ],
+   "r": "He speaks his defence.",
+   "t": [
+    "said",
+    "said",
+    "said",
+    "said",
+    "said",
+    "said"
+   ]
+  },
+  "10": {
+   "s": [
+    "master",
+    "sir",
+    "lord",
+    "owner"
+   ],
+   "r": "A slave addressing the man who owns him.",
+   "n": "The same word stands for God's name throughout the Greek Old Testament. STEPBible tags this occurrence with its human sense, master, which accounts for 82 of its 691 verses. The translations split between Lord, Master and Sir.",
+   "t": [
+    "Lord",
+    "Master",
+    "Lord",
+    "Lord",
+    "Sir",
+    "Master"
+   ]
+  },
+  "11": {
+   "s": [
+    "I knew",
+    "I recognised",
+    "I had learned",
+    "I was aware"
+   ],
+   "r": "He claims a settled judgment about his master's character.",
+   "t": [
+    "I knew",
+    "I knewe",
+    "I know",
+    "I knew",
+    "I knew",
+    "I knew"
+   ]
+  },
+  "12": {
+   "s": [
+    "you",
+    "thee"
+   ],
+   "r": "The master himself is the object of what the servant claims to know.",
+   "t": [
+    "thee",
+    null,
+    null,
+    "thee",
+    "thee",
+    null
+   ]
+  },
+  "13": {
+   "s": [
+    "that"
+   ],
+   "r": "Introduces what he knew.",
+   "t": [
+    "that",
+    "that",
+    "that",
+    "that",
+    "that",
+    "that"
+   ]
+  },
+  "14": {
+   "s": [
+    "harsh",
+    "severe",
+    "exacting",
+    "stern",
+    "unyielding"
+   ],
+   "r": "The servant's charge against the master: demanding and without mercy.",
+   "n": "Abbott-Smith derives the word from a verb meaning to dry, so its root picture is stiff, dry and rough to the touch. It describes rough, hard things as well as hard men. Abbott-Smith files this verse under 'of men: hard, stern, severe'.",
+   "t": [
+    "hard",
+    "hard",
+    "hard",
+    "hard",
+    "hard",
+    "hard"
+   ]
+  },
+  "15": {
+   "s": [
+    "you are",
+    "thou art"
+   ],
+   "r": "States the master's character as fixed, not occasional.",
+   "t": [
+    "thou art",
+    "thou wast",
+    "thou art",
+    "thou art",
+    "thou art",
+    "you are"
+   ]
+  },
+  "16": {
+   "s": [
+    "man",
+    "person",
+    "someone"
+   ],
+   "r": "A generic word for a human being, here used of the master.",
+   "t": [
+    "man",
+    "man",
+    "man",
+    "man",
+    "man",
+    "man"
+   ]
+  },
+  "17": {
+   "s": [
+    "reaping",
+    "harvesting",
+    "cutting the crop"
+   ],
+   "r": "Present participle: a man who habitually reaps.",
+   "n": "Abbott-Smith notes that the Septuagint chiefly uses this verb for Hebrew קָצַר, the reaping verb that opens Deuteronomy 24:19 on this page. In that verse itself, though, Swete's Septuagint uses a different reaping verb, ἀμάω.",
+   "t": [
+    "reaping",
+    "reapest",
+    "reapest",
+    "reaping",
+    "reaping",
+    "reaping"
+   ]
+  },
+  "18": {
+   "s": [
+    "where",
+    "in places where"
+   ],
+   "r": "Introduces the fields he reaps without having sown.",
+   "t": [
+    "where",
+    "where",
+    "where",
+    "where",
+    "where",
+    "where"
+   ]
+  },
+  "19": {
+   "s": [
+    "not",
+    "never"
+   ],
+   "r": "Plain negation of a fact.",
+   "t": [
+    "not",
+    "not",
+    "not",
+    "not",
+    "not",
+    "not"
+   ]
+  },
+  "20": {
+   "s": [
+    "sowed",
+    "planted",
+    "scattered seed"
+   ],
+   "r": "The master takes a crop he did not plant.",
+   "t": [
+    "sown",
+    "sowedst",
+    "sown",
+    "sow",
+    "sow",
+    "sown"
+   ]
+  },
+  "21": {
+   "s": [
+    "and"
+   ],
+   "r": "Joins the second half of the charge.",
+   "t": [
+    "and",
+    "and",
+    "and",
+    "and",
+    "and",
+    "and"
+   ]
+  },
+  "22": {
+   "s": [
+    "gathering in",
+    "collecting",
+    "storing up",
+    "bringing together"
+   ],
+   "r": "Gathering grain into the barn.",
+   "n": "Abbott-Smith's entry for the verb that ends the verse, scatter, names this one as its opposite. Here the two describe the threshing floor: gathering what someone else winnowed.",
+   "t": [
+    "gathering",
+    "gatherest",
+    "gatherest",
+    "gathering",
+    "gathering",
+    "gathering"
+   ]
+  },
+  "23": {
+   "s": [
+    "from where",
+    "whence",
+    "from places where"
+   ],
+   "r": "Points to the place the grain came from.",
+   "n": "Abbott-Smith treats it here as shorthand for 'from the place where'.",
+   "t": [
+    "where",
+    "where",
+    "where",
+    "where",
+    "from whence",
+    "where"
+   ]
+  },
+  "24": {
+   "s": [
+    "not"
+   ],
+   "r": "Plain negation.",
+   "t": [
+    "not",
+    "not",
+    "not",
+    "not",
+    "not",
+    "not"
+   ]
+  },
+  "25": {
+   "s": [
+    "scattered",
+    "winnowed",
+    "strewed",
+    "spread"
+   ],
+   "r": "Throwing grain into the wind to separate it from the chaff.",
+   "n": "Abbott-Smith classes this verse under 'of winnowing grain', and lists another use: of property, to squander. The KJV's 'strawed' is an old form of strewed. The BSB reads the word as sowing, 'scattered seed', which is a different farm picture from winnowing.",
+   "t": [
+    "strawed",
+    "strawedst",
+    "strewed",
+    "scatter",
+    "scatter",
+    "scattered seed"
+   ]
+  }
+ }
+}

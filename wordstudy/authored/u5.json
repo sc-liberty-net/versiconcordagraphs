@@ -1,0 +1,593 @@
+{
+ "id": "u5",
+ "en": [
+  {
+   "t": "To the foreigner",
+   "w": [
+    "01"
+   ]
+  },
+  " ",
+  {
+   "t": "you may charge interest",
+   "w": [
+    "02"
+   ]
+  },
+  ", ",
+  {
+   "t": "but to your brother",
+   "w": [
+    "03"
+   ]
+  },
+  " ",
+  {
+   "t": "you shall not charge interest",
+   "w": [
+    "05",
+    "04"
+   ]
+  },
+  ", ",
+  {
+   "t": "so that",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "the LORD",
+   "w": [
+    "08"
+   ]
+  },
+  " ",
+  {
+   "t": "your God",
+   "w": [
+    "09"
+   ]
+  },
+  " ",
+  {
+   "t": "may bless you",
+   "w": [
+    "07"
+   ]
+  },
+  " ",
+  {
+   "t": "in every",
+   "w": [
+    "10"
+   ]
+  },
+  " ",
+  {
+   "t": "outstretching of",
+   "w": [
+    "11"
+   ]
+  },
+  " ",
+  {
+   "t": "your hand",
+   "w": [
+    "12"
+   ]
+  },
+  " ",
+  {
+   "t": "on",
+   "w": [
+    "13"
+   ]
+  },
+  " ",
+  {
+   "t": "the land",
+   "w": [
+    "14"
+   ]
+  },
+  " ",
+  {
+   "t": "that",
+   "w": [
+    "15"
+   ]
+  },
+  " ",
+  {
+   "t": "you",
+   "w": [
+    "16"
+   ]
+  },
+  " ",
+  {
+   "t": "are going",
+   "w": [
+    "17"
+   ]
+  },
+  " ",
+  {
+   "t": "into",
+   "w": [
+    "18"
+   ]
+  },
+  " ",
+  {
+   "t": "to possess it",
+   "w": [
+    "19"
+   ]
+  },
+  "."
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "the foreigner",
+    "the stranger",
+    "the alien"
+   ],
+   "r": "A man of another people, not an Israelite.",
+   "t": [
+    "Unto a stranger",
+    "Vnto a stranger",
+    "to the stranger",
+    "Unto a foreigner",
+    "Unto a foreigner",
+    "To a stranger",
+    "a foreigner"
+   ],
+   "n": "Gesenius: strange, of another country and people, foreign; as a noun, a foreigner. This is a different word from the sojourner who lives in Israel, so our English keeps 'foreigner' for it."
+  },
+  "02": {
+   "s": [
+    "you may charge interest",
+    "you may lend at interest",
+    "you may make pay interest"
+   ],
+   "r": "Interest is permitted on a loan to a foreigner.",
+   "t": [
+    "thou mayest lend upon usury",
+    "thou mayest lend vpon vsurie",
+    null,
+    "thou mayest lend upon interest",
+    "thou mayest lend upon interest",
+    "thou mayest lend in usury",
+    "You may charge ... interest"
+   ],
+   "n": "The causative form of the verb behind the noun 'interest', as in Deuteronomy 23:19 on this page: 'make (him) pay interest'. Gesenius gives the first sense as TO BITE. The imperfect here grants a permission, 'you may'."
+  },
+  "03": {
+   "s": [
+    "but to your brother",
+    "and to your brother",
+    "to your kinsman"
+   ],
+   "r": "A fellow Israelite, set against the foreigner.",
+   "t": [
+    "but unto thy brother",
+    "vnto thy brother",
+    "To thy brother",
+    "but unto thy brother",
+    "but unto thy brother",
+    "and to thy brother",
+    "but ... your brother"
+   ],
+   "n": "The Hebrew has only 'and'; the contrast comes from setting the two clauses side by side, so English needs 'but'."
+  },
+  "04": {
+   "s": [
+    "not",
+    "never"
+   ],
+   "r": "A flat prohibition.",
+   "t": [
+    "not",
+    "not",
+    "without",
+    "not",
+    "not",
+    "not",
+    "not"
+   ]
+  },
+  "05": {
+   "s": [
+    "charge interest",
+    "lend at interest",
+    "make pay interest"
+   ],
+   "r": "The same act, forbidden toward a fellow Israelite.",
+   "t": [
+    "thou shalt ... lend upon usury",
+    "thou shalt ... lend vpon vsurie",
+    "thou shalt lend that which he wanteth ... usury",
+    "thou shalt ... lend upon interest",
+    "thou shalt ... lend upon interest",
+    "thou dost ... lend in usury",
+    null
+   ],
+   "n": "The Douay-Rheims follows the Latin Vulgate and turns the clause into a command to lend without usury."
+  },
+  "06": {
+   "s": [
+    "so that",
+    "in order that"
+   ],
+   "r": "Gives the purpose of the law.",
+   "t": [
+    "that",
+    "that",
+    "that",
+    "that",
+    "that",
+    "so that",
+    "so that"
+   ]
+  },
+  "07": {
+   "s": [
+    "may bless you",
+    "may prosper you",
+    "may favour you"
+   ],
+   "r": "God's blessing is tied to lending freely to a brother.",
+   "t": [
+    "may bless thee",
+    "may blesse thee",
+    "may bless thee",
+    "may bless thee",
+    "may bless thee",
+    "doth bless thee",
+    "may bless you"
+   ],
+   "n": "Gesenius puts 'to bend the knees, to kneel' first among this verb's senses, ahead of 'to bless'."
+  },
+  "08": {
+   "s": [
+    "the LORD",
+    "Yahweh",
+    "Jehovah"
+   ],
+   "r": "The personal name of Israel's God.",
+   "t": [
+    "the Lord",
+    "the Lord",
+    "the Lord",
+    "HaShem",
+    "Jehovah",
+    "Jehovah",
+    "the LORD"
+   ]
+  },
+  "09": {
+   "s": [
+    "your God"
+   ],
+   "r": "Your own God.",
+   "n": "The form is plural but the meaning is singular.",
+   "t": [
+    "thy God",
+    "thy God",
+    "thy God",
+    "thy G-d",
+    "thy God",
+    "thy God",
+    "your God"
+   ]
+  },
+  "10": {
+   "s": [
+    "in every",
+    "in all",
+    "in any"
+   ],
+   "r": "No undertaking is left out of the blessing.",
+   "t": [
+    "in all",
+    "in all",
+    "in all",
+    "in all",
+    "in all",
+    "in every",
+    "in everything"
+   ]
+  },
+  "11": {
+   "s": [
+    "outstretching of",
+    "putting forth of",
+    "undertaking of",
+    "everything you set"
+   ],
+   "r": "Whatever you reach out your hand to do.",
+   "t": [
+    "that thou settest ... to",
+    "that thou settest ... to",
+    "thy works",
+    "that thou puttest ... unto",
+    "that thou puttest ... unto",
+    "putting forth of",
+    "to which you put"
+   ],
+   "n": "BDB gives 'outstretching': 'the outstretching of your hand' is an idiom for whatever you undertake. Gesenius's entry gives a related form meaning a sending, and with 'hand', a thing upon which the hand is sent."
+  },
+  "12": {
+   "s": [
+    "your hand"
+   ],
+   "r": "The hand you put to your work.",
+   "t": [
+    "thine hand",
+    "thine hand",
+    null,
+    "thy hand",
+    "thy hand",
+    "thy hand",
+    "your hand"
+   ]
+  },
+  "13": {
+   "s": [
+    "on",
+    "in",
+    "upon"
+   ],
+   "r": "Where the work is done: on the land itself.",
+   "t": [
+    "in",
+    "in",
+    "in",
+    "in",
+    "in",
+    "on",
+    "in"
+   ],
+   "n": "Literally 'on' or 'upon' the land; most translations say 'in'."
+  },
+  "14": {
+   "s": [
+    "the land",
+    "the country"
+   ],
+   "r": "The land of Canaan, which Israel is about to enter.",
+   "t": [
+    "the land",
+    "the land",
+    "the land",
+    "the land",
+    "the land",
+    "the land",
+    "the land"
+   ]
+  },
+  "15": {
+   "s": [
+    "that",
+    "which",
+    "where"
+   ],
+   "r": "Introduces the land Israel is entering.",
+   "t": [
+    "whither",
+    "whither",
+    "which",
+    "whither",
+    "whither",
+    "whither",
+    "that"
+   ],
+   "n": "Hebrew says 'which ... there', with 'there' later in the clause; together they mean 'into which'."
+  },
+  "16": {
+   "s": [
+    "you"
+   ],
+   "r": "The Israelite addressed, singular.",
+   "t": [
+    "thou",
+    "thou",
+    "thou",
+    "thou",
+    "thou",
+    "thou",
+    "you"
+   ],
+   "n": "The pronoun is written out, which gives 'you' some emphasis."
+  },
+  "17": {
+   "s": [
+    "are going",
+    "are coming",
+    "are entering"
+   ],
+   "r": "Israel is on the point of going in.",
+   "t": [
+    "goest",
+    "goest",
+    "shalt go in",
+    "goest in",
+    "goest in",
+    "goest in",
+    "are entering"
+   ],
+   "n": "A participle, 'you are going', of an action already under way. Gesenius gives the first sense as to come in, to enter."
+  },
+  "18": {
+   "s": [
+    "into",
+    "there",
+    "thither"
+   ],
+   "r": "Points to the land as the place of entry.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "n": "Literally 'thither', 'to there': it picks up 'that' earlier in the clause. The translations fold it into 'whither' or leave it out."
+  },
+  "19": {
+   "s": [
+    "to possess it",
+    "to take possession of it",
+    "to occupy it"
+   ],
+   "r": "To take the land and hold it.",
+   "t": [
+    "to possess it",
+    "to possesse it",
+    "to possess",
+    "to possess it",
+    "to possess it",
+    "to possess it",
+    "to possess"
+   ],
+   "n": "Gesenius gives the first sense as TO TAKE, TO TAKE POSSESSION OF, TO OCCUPY, especially by force, and argues that this, not 'to inherit', is the primary meaning."
+  }
+ },
+ "lxx": {
+  "01": {
+   "i": [
+    0,
+    1
+   ],
+   "m": 1,
+   "n": "ἀλλότριος, belonging to another, a stranger."
+  },
+  "02": {
+   "i": [
+    2
+   ],
+   "m": 2,
+   "n": "ἐκτοκίζω, to lend at interest, built on τόκος."
+  },
+  "03": {
+   "i": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "m": 5,
+   "n": "The Greek marks the contrast with δὲ, 'but'."
+  },
+  "04": {
+   "i": [
+    7
+   ],
+   "m": 7
+  },
+  "05": {
+   "i": [
+    8
+   ],
+   "m": 8
+  },
+  "06": {
+   "i": [
+    9
+   ],
+   "m": 9
+  },
+  "07": {
+   "i": [
+    10,
+    11
+   ],
+   "m": 10
+  },
+  "08": {
+   "i": [
+    12
+   ],
+   "m": 12
+  },
+  "09": {
+   "i": [
+    13,
+    14,
+    15
+   ],
+   "m": 14
+  },
+  "10": {
+   "i": [
+    16,
+    17
+   ],
+   "m": 17
+  },
+  "11": {
+   "i": [
+    18,
+    19
+   ],
+   "m": 19,
+   "n": "ἔργον, work: the Greek says 'in all your works'."
+  },
+  "12": {
+   "i": [
+    20
+   ],
+   "m": 20,
+   "n": "The Greek has only 'your' here; 'hand' is not rendered."
+  },
+  "13": {
+   "i": [
+    21
+   ],
+   "m": 21
+  },
+  "14": {
+   "i": [
+    22,
+    23
+   ],
+   "m": 23
+  },
+  "15": {
+   "i": [
+    24,
+    25
+   ],
+   "m": 25,
+   "n": "εἰς ἣν, 'into which'; our Greek text prints the relative as ἢν, a slip in the accent."
+  },
+  "17": {
+   "i": [
+    26
+   ],
+   "m": 26,
+   "n": "εἰσπορεύομαι, to go in; our Greek text prints it with a stray mark, εἰσπ·ορεύῃ."
+  },
+  "18": {
+   "i": [
+    27
+   ],
+   "m": 27,
+   "n": "ἐκεῖ, 'there': the Greek keeps the Hebrew's 'there'."
+  },
+  "19": {
+   "i": [
+    28,
+    29
+   ],
+   "m": 28,
+   "n": "κληρονομέω, to inherit, to receive as one's lot: the Greek leans to 'inherit' where Gesenius takes the Hebrew as 'take possession'. Our Greek text prints the last word as ἀυτὴν, for αὐτὴν, 'it'."
+  }
+ }
+}

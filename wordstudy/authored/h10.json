@@ -1,0 +1,72 @@
+{
+ "id": "h10",
+ "en": [
+  {"t": "Now", "w": ["02"]}, " ",
+  {"t": "apart from", "w": ["01"]}, " ",
+  {"t": "all", "w": ["03"]}, " ",
+  {"t": "dispute", "w": ["04"]}, ", ",
+  {"t": "the", "w": ["05"]}, " ",
+  {"t": "lesser", "w": ["06"]}, " ",
+  {"t": "is blessed", "w": ["10"]}, " ",
+  {"t": "by", "w": ["07"]}, " ",
+  {"t": "the", "w": ["08"]}, " ",
+  {"t": "better", "w": ["09"]}, "."
+ ],
+ "words": {
+  "01": {
+   "s": ["apart from", "without", "beyond"],
+   "r": "Puts the statement outside any possible argument.",
+   "n": "Abbott-Smith treats it, as a preposition with the genitive, as 'separate from, apart from, without'.",
+   "t": ["without", "without", "without", "without", "apart from", null]
+  },
+  "02": {
+   "s": ["now", "and", "but"],
+   "r": "Adds a general principle to the argument.",
+   "t": ["And", "And", "And", "But", "and", "And"]
+  },
+  "03": {
+   "s": ["all", "any"],
+   "r": "No dispute of any kind is possible here.",
+   "t": ["all", "all", "all", "any", "all", null]
+  },
+  "04": {
+   "s": ["dispute", "contradiction", "argument", "gainsaying"],
+   "r": "Speaking against, contesting a claim.",
+   "n": "Abbott-Smith derives it from ἀντιλέγω, literally 'speak against', and gives 'gain-saying, strife'. The BSB folds the whole phrase into one word, 'indisputably'.",
+   "t": ["contradiction", "contradiction", "contradiction", "dispute", "controversy", "indisputably"]
+  },
+  "05": {
+   "s": ["the", "that which is"],
+   "r": "With the adjective it makes a noun: the lesser one.",
+   "t": ["the", "the", "that which", "the", "the", "the"]
+  },
+  "06": {
+   "s": ["lesser", "less", "inferior"],
+   "r": "The one of lower rank, who receives the blessing.",
+   "n": "The form is neuter, 'the lesser (thing)', which states the rule in general terms rather than naming a person; the DRC's 'that which is less' shows this. Abbott-Smith gives 'less, in age, rank or quality' and cites this verse. In the passage the rule is applied to Abraham, blessed by Melchizedek; that is a reading of the context, as the verse itself states only the rule.",
+   "t": ["less", "lesse", "less", "less", "less", "lesser"]
+  },
+  "07": {
+   "s": ["by", "at the hands of", "of"],
+   "r": "Marks the one who gives the blessing.",
+   "t": ["of", "of", "by", "of", "by", "by"]
+  },
+  "08": {
+   "s": ["the"],
+   "r": "With the adjective it makes a noun: the better one.",
+   "t": ["the", "the", "the", "the", "the", "the"]
+  },
+  "09": {
+   "s": ["better", "greater", "superior", "higher"],
+   "r": "The one of higher rank, who gives the blessing; in the passage, Melchizedek.",
+   "n": "Abbott-Smith explains that it is properly the comparative of a word for 'strong', but is often used as the comparative of 'good': better. The Geneva and BSB render 'greater'.",
+   "t": ["better", "greater", "better", "better", "better", "greater"]
+  },
+  "10": {
+   "s": ["is blessed", "receives a blessing", "is given a blessing"],
+   "r": "Receives the blessing that the greater gives.",
+   "n": "Present passive: a standing rule, not a single event. Abbott-Smith notes that the Septuagint uses the verb chiefly for Hebrew בָּרַךְ.",
+   "t": ["is blessed", "is blessed", "is blessed", "is blessed", "is blessed", "is blessed"]
+  }
+ }
+}

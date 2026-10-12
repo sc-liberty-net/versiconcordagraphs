@@ -1,0 +1,328 @@
+{
+ "id": "b2",
+ "en": [
+  {
+   "t": "And",
+   "w": [
+    "02"
+   ]
+  },
+  " ",
+  {
+   "t": "the",
+   "w": [
+    "03"
+   ]
+  },
+  " ",
+  {
+   "t": "master",
+   "w": [
+    "04"
+   ]
+  },
+  " ",
+  {
+   "t": "of",
+   "w": [
+    "05"
+   ]
+  },
+  " ",
+  {
+   "t": "that",
+   "w": [
+    "07"
+   ]
+  },
+  " ",
+  {
+   "t": "slave",
+   "w": [
+    "06"
+   ]
+  },
+  ", ",
+  {
+   "t": "moved with compassion",
+   "w": [
+    "01"
+   ]
+  },
+  ", ",
+  {
+   "t": "released",
+   "w": [
+    "08"
+   ]
+  },
+  " ",
+  {
+   "t": "him",
+   "w": [
+    "09"
+   ]
+  },
+  ", ",
+  {
+   "t": "and",
+   "w": [
+    "10"
+   ]
+  },
+  " ",
+  {
+   "t": "forgave",
+   "w": [
+    "13"
+   ]
+  },
+  " ",
+  {
+   "t": "him",
+   "w": [
+    "14"
+   ]
+  },
+  " ",
+  {
+   "t": "the",
+   "w": [
+    "11"
+   ]
+  },
+  " ",
+  {
+   "t": "loan",
+   "w": [
+    "12"
+   ]
+  },
+  "."
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "moved with compassion",
+    "filled with pity",
+    "taking pity",
+    "having compassion"
+   ],
+   "r": "The master is moved by pity for the slave.",
+   "n": "Abbott-Smith explains the verb as 'to be moved as to the σπλάγχνα', and so to feel pity or compassion; the σπλάγχνα are the inward parts, felt as the seat of the emotions. The form is an aorist passive participle: literally 'having been moved with compassion'. Abbott-Smith lists this verse for the participle joined to a finite verb, as here with 'released'.",
+   "t": [
+    "was moved with compassion",
+    "had compassion",
+    "being moved with pity",
+    "being moved with compassion",
+    "having been moved with compassion",
+    "had compassion"
+   ]
+  },
+  "02": {
+   "s": [
+    "and",
+    "then",
+    "now"
+   ],
+   "r": "Moves the story on to the master's response.",
+   "t": [
+    "Then",
+    "Then",
+    "And",
+    "And",
+    "and",
+    null
+   ]
+  },
+  "03": {
+   "s": [
+    "the"
+   ],
+   "r": "Marks the master already introduced in the parable.",
+   "t": [
+    "the",
+    null,
+    "the",
+    "the",
+    "the",
+    null
+   ]
+  },
+  "04": {
+   "s": [
+    "master",
+    "lord",
+    "owner"
+   ],
+   "r": "The man who owns the slave and holds his debt.",
+   "n": "A human owner, so 'master' by this study's register; the older translations say 'lord'. STEPBible tags this occurrence with the human sense.",
+   "t": [
+    "lord",
+    "Lord",
+    "lord",
+    "lord",
+    "lord",
+    "master"
+   ]
+  },
+  "05": {
+   "s": [
+    "of",
+    "of the"
+   ],
+   "r": "The article of the genitive phrase 'of that slave'; the 'of' comes from the case.",
+   "t": [
+    "of",
+    null,
+    "of",
+    "of",
+    "of",
+    null
+   ]
+  },
+  "06": {
+   "s": [
+    "slave",
+    "servant",
+    "bondservant"
+   ],
+   "r": "The slave whose debt is in question.",
+   "n": "Abbott-Smith gives 'a slave' for the noun. The translations say 'servant'; this study keeps 'slave', since the man belongs to his master.",
+   "t": [
+    "servant",
+    "seruants",
+    "servant",
+    "servant",
+    "servant",
+    "His"
+   ]
+  },
+  "07": {
+   "s": [
+    "that",
+    "the same"
+   ],
+   "r": "Points back to the slave just described.",
+   "t": [
+    "that",
+    "that",
+    "that",
+    "that",
+    "that",
+    null
+   ]
+  },
+  "08": {
+   "s": [
+    "released",
+    "set free",
+    "let go",
+    "loosed"
+   ],
+   "r": "The master sets the debtor free.",
+   "n": "Abbott-Smith's first sense is to set free or release, and he cites this verse for the release of a debtor. The same verb also means to let go or dismiss.",
+   "t": [
+    "loosed",
+    "loosed",
+    "let ... go",
+    "released",
+    "did release",
+    "released"
+   ]
+  },
+  "09": {
+   "s": [
+    "him"
+   ],
+   "r": "The slave.",
+   "t": [
+    "him",
+    "him",
+    "him",
+    "him",
+    "him",
+    "him"
+   ]
+  },
+  "10": {
+   "s": [
+    "and"
+   ],
+   "r": "Joins the second act of mercy to the first.",
+   "t": [
+    "and",
+    "and",
+    "and",
+    "and",
+    "and",
+    "and"
+   ]
+  },
+  "11": {
+   "s": [
+    "the"
+   ],
+   "r": "The loan already in question.",
+   "t": [
+    "the",
+    "the",
+    "the",
+    "the",
+    "the",
+    null
+   ]
+  },
+  "12": {
+   "s": [
+    "loan",
+    "debt",
+    "money lent"
+   ],
+   "r": "The sum that had been lent to the slave.",
+   "n": "Abbott-Smith defines the word as 'a loan' and lists only this verse for it in the New Testament; his Septuagint references tie it to the Hebrew verbs נָשָׁה and עָבַט, both used of lending. All six translations say 'debt'. This study renders it 'loan' to keep it apart from ὀφειλή and ὀφείλημα, which it renders 'debt'.",
+   "t": [
+    "debt",
+    "dette",
+    "debt",
+    "debt",
+    "debt",
+    "debt"
+   ]
+  },
+  "13": {
+   "s": [
+    "forgave",
+    "cancelled",
+    "remitted",
+    "let go"
+   ],
+   "r": "He lets the loan go: the slave no longer owes it.",
+   "n": "The verb's root sense, in Abbott-Smith, is to send away or let go; as far as the brief shows his entry, debts are among the things he lists as let go. Forgiving a debt is, literally, letting it go.",
+   "t": [
+    "forgave",
+    "forgaue",
+    "forgave",
+    "forgave",
+    "forgave",
+    "forgave"
+   ]
+  },
+  "14": {
+   "s": [
+    "him",
+    "for him"
+   ],
+   "r": "The person to whom the loan is forgiven.",
+   "n": "A dative: the loan is let go for him, in his favour.",
+   "t": [
+    "him",
+    "him",
+    "him",
+    "him",
+    "him",
+    "his"
+   ]
+  }
+ }
+}

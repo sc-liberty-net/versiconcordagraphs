@@ -1,0 +1,116 @@
+{
+ "id": "a1",
+ "en": [
+  {"t": "Come", "w": ["01"]}, " ",
+  {"t": "to Bethel", "w": ["02", "03"]}, " ",
+  {"t": "and transgress", "w": ["04"]}, "; ",
+  {"t": "to Gilgal", "w": ["05"]}, ", ",
+  {"t": "multiply", "w": ["06"]}, " ",
+  {"t": "transgressing", "w": ["07"]}, "; ",
+  {"t": "and bring", "w": ["08"]}, " ",
+  {"t": "every morning", "w": ["09"]}, " ",
+  {"t": "your sacrifices", "w": ["10"]}, ", ",
+  {"t": "every three", "w": ["11"]}, " ",
+  {"t": "days", "w": ["12"]}, " ",
+  {"t": "your tithes", "w": ["13"]}, "."
+ ],
+ "words": {
+  "01": {
+   "s": ["come", "go in", "enter"],
+   "r": "A command to the people to come to the shrine.",
+   "n": "The verb is a plural imperative, addressed to the whole people. Gesenius gives its first sense as to come in, to enter, which YLT keeps with 'Enter ye'.",
+   "t": ["Come", "Come", "Come ye", "Come", "Come", "Enter ye", "Go"]
+  },
+  "02": {
+   "s": ["Bethel", "house of God"],
+   "r": "The first half of the name Bethel, 'house of'.",
+   "n": "Bethel is written as two joined words, 'house of' and 'God', and the brief's lexicon gives the name's meaning as 'house of God'. Hebrew has no 'to' here: the verb 'come' takes the place as its direct goal, and English needs the preposition.",
+   "t": ["to Beth", "to Beth", "to Bethel", "to Beth", "to Beth", "Beth", "to Bethel"]
+  },
+  "03": {
+   "s": ["Bethel", "God"],
+   "r": "The second half of the name Bethel, 'God'.",
+   "n": "The brief's lexicon describes Bethel as an ancient place and seat of worship in Ephraim on the border of Benjamin.",
+   "t": ["el", "el", "Bethel", "el", "el", "El", "Bethel"]
+  },
+  "04": {
+   "s": ["transgress", "rebel", "revolt", "break away", "sin"],
+   "r": "Commit rebellion against God, here by worshipping at Bethel.",
+   "n": "Gesenius gives the first sense as TO FALL AWAY, BREAK AWAY from someone, and specially to turn away from God; BDB gives rebel, transgress. The command is ironic: the worship at these shrines is itself the transgression. That is a reading of the context, not something the lexicons state.",
+   "t": ["and transgress", "and transgresse", "and do wickedly", "and transgress", "and transgress", "and transgress", "and transgress"]
+  },
+  "05": {
+   "s": ["Gilgal", "the Gilgal"],
+   "r": "The second shrine named, near Jericho.",
+   "n": "The Hebrew has the article, 'the Gilgal', and no preposition, so it can be read as a second goal of 'come' (to Gilgal) or as the place of the next command (at Gilgal); the translations split. The brief's lexicon gives the name's meaning as 'a wheel, rolling' and notes that the place was later used for illicit worship.",
+   "t": ["at Gilgal", "to Gilgal", "to Galgal", "to Gilgal", "to Gilgal", "At Gilgal", "at Gilgal"]
+  },
+  "06": {
+   "s": ["multiply", "increase", "do much", "do all the more"],
+   "r": "Do it more and more: pile transgression on transgression.",
+   "n": "This is the causative form of the verb 'to be many', so 'make many'. The BSB folds it into an adverb, 'even more'.",
+   "t": ["multiply", "multiplie", "multiply", "multiply", "multiply", "multiply", "even more"]
+  },
+  "07": {
+   "s": ["transgressing", "rebelling", "to transgress", "transgression"],
+   "r": "The same rebellion as before, now heaped up.",
+   "n": "The same verb as the one after Bethel, here as an infinitive with 'to': literally 'multiply to transgress'. English needs 'transgressing'. Most of the older translations turn it into the noun 'transgression'.",
+   "t": ["transgression", "transgression", "transgressions", "transgression", "transgression", "transgression", "rebel"]
+  },
+  "08": {
+   "s": ["bring", "bring in", "offer"],
+   "r": "Bring your offerings to the shrine.",
+   "n": "This is the causative form of the verb 'come' that opens the verse: literally 'make come'. The DRC and YLT keep 'bring in'.",
+   "t": ["and bring", "and bring", "and bring in", "and bring", "and bring", "And bring in", "Bring"]
+  },
+  "09": {
+   "s": ["every morning", "in the morning", "morning by morning"],
+   "r": "Sacrifices brought daily, morning after morning.",
+   "n": "Literally 'to the morning'. In parallel with 'to three days' after it, the 'to' most likely marks a repeated time, 'every morning'; Geneva, DRC and JPS read 'in the morning'. Either way the frequency is exaggerated, which is a reasonable reading of the irony, not a statement of the text.",
+   "t": ["every morning", "in the morning", "in the morning", "in the morning", "every morning", "every morning", "every morning"]
+  },
+  "10": {
+   "s": ["sacrifices", "slaughtered offerings", "victims"],
+   "r": "Animals slaughtered and offered, much of them eaten at a feast.",
+   "n": "Gesenius gives the first sense as a slaying, hence the flesh of slain animals and feasts, then a sacrifice. He notes it is opposed to the bloodless offering and to the burnt offering. The DRC's 'victims' means the animals offered.",
+   "t": ["your sacrifices", "your sacrifices", "your victims", "your sacrifices", "your sacrifices", "your sacrifices", "your sacrifices"]
+  },
+  "11": {
+   "s": ["every three", "after three", "on the third"],
+   "r": "A repeated interval, matching 'every morning'.",
+   "n": "Literally 'to three of', the same 'to' as in 'to the morning', with the number joined to 'days'. 'Every' is our rendering of that 'to', on the same reading as 'every morning'.",
+   "t": ["after three", "after three", "in three", "after three", "every three", "Every third", "every three"]
+  },
+  "12": {
+   "s": ["days", "years", "time"],
+   "r": "Days: the tithe brought absurdly often.",
+   "n": "The KJV, Geneva and YLT read 'years', and the brief's lexicon does list year among this word's senses. Gesenius, under the word for tithe, notes 'the year of tithe', every third year, citing Deu. 26:12. Reading 'days' makes the prophet mock a three-yearly duty done every three days; that is an inference from the irony of the verse.",
+   "t": ["years", "yeres", "days", "days", "days", "year", "days"]
+  },
+  "13": {
+   "s": ["tithes", "tenths"],
+   "r": "Your tithes, the tenth of produce owed to God.",
+   "n": "Gesenius: tithes, formed from the number ten. BDB: tenth part, tithe. The form is plural.",
+   "t": ["your tithes", "your tithes", "your tithes", "your tithes", "your tithes", "your tithes", "your tithes"]
+  }
+ },
+ "lxx": {
+  "_extra": {
+   "5": "καὶ (and): added by the Greek translators; the Hebrew has no 'and' before Gilgal."
+  },
+  "01": {"i": [0], "m": 0, "lemma": "εἰσέρχομαι", "strong": "G1525",
+         "n": "Dictionary form supplied; the brief gives none. The Greek is past tense, 'you went in', not a command: the Greek turns the summons into an accusation."},
+  "02": {"i": [1, 2], "m": 2, "n": "Βαιθηλ spells out the whole name, so it answers to both Hebrew words."},
+  "04": {"i": [3, 4], "m": 4, "lemma": "ἀσεβέω", "strong": "G0764",
+         "n": "Dictionary form supplied; the brief gives none. The Greek says 'you acted impiously', again past tense."},
+  "05": {"i": [6, 7], "m": 7},
+  "06": {"i": [8], "m": 8},
+  "07": {"i": [9, 10], "m": 10},
+  "08": {"i": [11, 12], "m": 12, "lemma": "φέρω", "strong": "G5342",
+         "n": "Dictionary form supplied; the brief gives none. Past tense again: 'you brought'."},
+  "09": {"i": [13, 14, 15], "m": 15},
+  "10": {"i": [16, 17], "m": 16},
+  "11": {"i": [18, 19, 20], "m": 20, "n": "τριημερία, 'a space of three days', renders both Hebrew words, 'three' and 'days'."},
+  "13": {"i": [21, 22, 23], "m": 22}
+ }
+}

@@ -1,0 +1,677 @@
+{
+ "id": "q4",
+ "en": [
+  {
+   "t": "When",
+   "w": [
+    "01"
+   ]
+  },
+  " ",
+  {
+   "t": "you reap",
+   "w": [
+    "02"
+   ]
+  },
+  " ",
+  {
+   "t": "your harvest",
+   "w": [
+    "03"
+   ]
+  },
+  " ",
+  {
+   "t": "in your field",
+   "w": [
+    "04"
+   ]
+  },
+  " ",
+  {
+   "t": "and forget",
+   "w": [
+    "05"
+   ]
+  },
+  " ",
+  {
+   "t": "a sheaf",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "in the field",
+   "w": [
+    "07"
+   ]
+  },
+  ", ",
+  {
+   "t": "you shall not go back",
+   "w": [
+    "09",
+    "08"
+   ]
+  },
+  " ",
+  {
+   "t": "to take it",
+   "w": [
+    "10"
+   ]
+  },
+  "; ",
+  {
+   "t": "it shall be",
+   "w": [
+    "14"
+   ]
+  },
+  " ",
+  {
+   "t": "for the sojourner",
+   "w": [
+    "11"
+   ]
+  },
+  ", ",
+  {
+   "t": "for the fatherless",
+   "w": [
+    "12"
+   ]
+  },
+  ", ",
+  {
+   "t": "and for the widow",
+   "w": [
+    "13"
+   ]
+  },
+  ", ",
+  {
+   "t": "so that",
+   "w": [
+    "15"
+   ]
+  },
+  " ",
+  {
+   "t": "the LORD",
+   "w": [
+    "17"
+   ]
+  },
+  " ",
+  {
+   "t": "your God",
+   "w": [
+    "18"
+   ]
+  },
+  " ",
+  {
+   "t": "may bless you",
+   "w": [
+    "16"
+   ]
+  },
+  " ",
+  {
+   "t": "in all",
+   "w": [
+    "19"
+   ]
+  },
+  " ",
+  {
+   "t": "the work of",
+   "w": [
+    "20"
+   ]
+  },
+  " ",
+  {
+   "t": "your hands",
+   "w": [
+    "21"
+   ]
+  },
+  "."
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "when",
+    "whenever",
+    "if"
+   ],
+   "r": "Sets the scene: whenever harvest comes.",
+   "n": "Most of the older translations read 'when'. The BSB's 'If' makes it a case law. The Hebrew particle can carry either sense.",
+   "t": [
+    "When",
+    "When",
+    "When",
+    "When",
+    "When",
+    "When",
+    "If"
+   ]
+  },
+  "02": {
+   "s": [
+    "reap",
+    "harvest",
+    "cut down",
+    "bring in"
+   ],
+   "r": "You cut your grain at harvest.",
+   "n": "Gesenius gives the first sense as TO CUT OFF, especially grain, and so to reap. The KJV and Geneva keep that picture with 'cuttest down'.",
+   "t": [
+    "cuttest down",
+    "cuttest downe",
+    "hast reaped",
+    "reapest",
+    "reapest",
+    "reapest",
+    "are harvesting"
+   ]
+  },
+  "03": {
+   "s": [
+    "harvest",
+    "crop",
+    "grain",
+    "what you reap"
+   ],
+   "r": "Your crop, the thing being reaped.",
+   "n": "The noun comes from the same root as the verb before it, so the Hebrew reads 'reap your reaping'. The Douay-Rheims says 'the corn', which in older English meant grain. The BSB folds the noun into its verb and does not render it separately.",
+   "t": [
+    "thine harvest",
+    "thine haruest",
+    "the corn",
+    "thy harvest",
+    "thy harvest",
+    "thy harvest",
+    null
+   ]
+  },
+  "04": {
+   "s": [
+    "field",
+    "plot",
+    "land",
+    "open ground"
+   ],
+   "r": "Your own cultivated land.",
+   "n": "Gesenius gives the primary sense as a plain or level tract of country.",
+   "t": [
+    "in thy field",
+    "in thy fielde",
+    "in thy field",
+    "in thy field",
+    "in thy field",
+    "in thy field",
+    "in your field"
+   ]
+  },
+  "05": {
+   "s": [
+    "forget",
+    "overlook",
+    "leave behind"
+   ],
+   "r": "A sheaf left behind by oversight, not on purpose.",
+   "n": "Gesenius cites this very verse for a special sense: to leave something behind through forgetfulness. The Douay-Rheims spells out both halves: 'hast forgot and left'.",
+   "t": [
+    "hast forgot",
+    "hast forgotten",
+    "hast forgot and left",
+    "hast forgot",
+    "hast forgot",
+    "hast forgotten",
+    "forget"
+   ]
+  },
+  "06": {
+   "s": [
+    "sheaf",
+    "bundle of cut grain"
+   ],
+   "r": "One bound bundle of stalks, left lying in the field.",
+   "n": "BDB separates two words spelled this way: this one, a sheaf, and another, the omer, a dry measure. No Gesenius entry was matched to this word in our parsed copy.",
+   "t": [
+    "a sheaf",
+    "a sheafe",
+    "a sheaf",
+    "a sheaf",
+    "a sheaf",
+    "a sheaf",
+    "a sheaf"
+   ]
+  },
+  "07": {
+   "s": [
+    "in the field",
+    "out there"
+   ],
+   "r": "Still lying where it was cut.",
+   "t": [
+    "in the field",
+    "in the fielde",
+    null,
+    "in the field",
+    "in the field",
+    "in a field",
+    "there"
+   ]
+  },
+  "08": {
+   "s": [
+    "not",
+    "do not"
+   ],
+   "r": "A flat prohibition.",
+   "t": [
+    "not",
+    "not",
+    "not",
+    "not",
+    "not",
+    "not",
+    "not"
+   ]
+  },
+  "09": {
+   "s": [
+    "go back",
+    "return",
+    "turn back"
+   ],
+   "r": "Do not go back over the field for it.",
+   "n": "This is the ordinary Hebrew verb for turning and returning. Gesenius notes that it is also used figuratively, of a sinner turning back, but here it is literal.",
+   "t": [
+    "go again",
+    "goe againe",
+    "return",
+    "go back",
+    "go again",
+    "turn back",
+    "go back"
+   ]
+  },
+  "10": {
+   "s": [
+    "fetch",
+    "take",
+    "pick up",
+    "get"
+   ],
+   "r": "To collect the forgotten sheaf.",
+   "n": "This is a very common verb, with a meaning as wide as English 'take'. Geneva's 'fet' is an old form of fetch.",
+   "t": [
+    "to fetch it",
+    "to fet it",
+    "to take it away",
+    "to fetch it",
+    "to fetch it",
+    "to take it",
+    "to get it"
+   ]
+  },
+  "11": {
+   "s": [
+    "resident foreigner",
+    "sojourner",
+    "stranger",
+    "immigrant",
+    "outsider living among you"
+   ],
+   "r": "Someone living in Israel who was not born into it.",
+   "n": "Gesenius: a person living out of his own country. STEPBible's lexicon: a newcomer lacking inherited rights. Inherited rights in Israel meant land, so the gēr would usually have no field of their own to reap. That last step is a reasonable reading, not something the lexicons state.",
+   "t": [
+    "the stranger",
+    "the stranger",
+    "the stranger",
+    "the stranger",
+    "the sojourner",
+    "the sojourner",
+    "the foreigner"
+   ]
+  },
+  "12": {
+   "s": [
+    "fatherless child",
+    "orphan"
+   ],
+   "r": "A child without a father to provide for them.",
+   "n": "Gesenius notes the word is used of a child who has lost only its father. So 'fatherless', which every translation here uses, is more exact than 'orphan'.",
+   "t": [
+    "the fatherless",
+    "the fatherles",
+    "the fatherless",
+    "the fatherless",
+    "the fatherless",
+    "the fatherless",
+    "the fatherless"
+   ]
+  },
+  "13": {
+   "s": [
+    "widow"
+   ],
+   "r": "A woman without a husband to provide for her.",
+   "t": [
+    "the widow",
+    "the widowe",
+    "the widow",
+    "the widow",
+    "the widow",
+    "the widow",
+    "the widow"
+   ]
+  },
+  "14": {
+   "s": [
+    "it shall be",
+    "it belongs",
+    "let it be"
+   ],
+   "r": "The sheaf now belongs to these three.",
+   "n": "The Hebrew says simply 'it shall be', and the 'to the' on each of the three nouns makes it ownership: it is theirs. The Douay-Rheims follows the Latin Vulgate here and rewords the clause entirely.",
+   "t": [
+    "it shall be",
+    "it shalbe",
+    "thou shalt suffer ... to take it away",
+    "it shall be",
+    "it shall be",
+    "it is",
+    "It is to be left"
+   ]
+  },
+  "15": {
+   "s": [
+    "so that",
+    "in order that"
+   ],
+   "r": "Gives the purpose of the law.",
+   "t": [
+    "that",
+    "that",
+    "that",
+    "that",
+    "that",
+    "so that",
+    "so that"
+   ]
+  },
+  "16": {
+   "s": [
+    "bless",
+    "prosper",
+    "favour"
+   ],
+   "r": "God's blessing is tied to the sheaf left behind.",
+   "n": "Gesenius puts 'to bend the knees, to kneel' first among this verb's senses, ahead of 'to bless'.",
+   "t": [
+    "may bless thee",
+    "may blesse thee",
+    "may bless thee",
+    "may bless thee",
+    "may bless thee",
+    "doth bless thee",
+    "may bless you"
+   ]
+  },
+  "17": {
+   "s": [
+    "the LORD",
+    "Yahweh",
+    "Jehovah",
+    "HaShem"
+   ],
+   "r": "The personal name of Israel's God.",
+   "n": "The translations show four traditions for the name. The KJV, Geneva and Douay-Rheims say 'the Lord', the BSB uses small capitals (LORD), the ASV and YLT say 'Jehovah', and the JPS writes 'HaShem' ('the Name').",
+   "t": [
+    "the Lord",
+    "the Lord",
+    "the Lord",
+    "HaShem",
+    "Jehovah",
+    "Jehovah",
+    "the LORD"
+   ]
+  },
+  "18": {
+   "s": [
+    "your God"
+   ],
+   "r": "Your own God.",
+   "n": "The form is plural but the meaning is singular. In our parsed copy, Gesenius here is only a cross-reference to another entry.",
+   "t": [
+    "thy God",
+    "thy God",
+    "thy God",
+    "thy G-d",
+    "thy God",
+    "thy God",
+    "your God"
+   ]
+  },
+  "19": {
+   "s": [
+    "in all",
+    "in every",
+    "in the whole of"
+   ],
+   "r": "No part of your work is left out of the blessing.",
+   "t": [
+    "in all",
+    "in all",
+    "in all",
+    "in all",
+    "in all",
+    "in all",
+    "in all"
+   ]
+  },
+  "20": {
+   "s": [
+    "work",
+    "labour",
+    "undertaking",
+    "what you make"
+   ],
+   "r": "Everything you do and produce.",
+   "t": [
+    "the work",
+    "the workes",
+    "the works",
+    "the work",
+    "the work",
+    "the work",
+    "the work"
+   ]
+  },
+  "21": {
+   "s": [
+    "hands",
+    "your two hands"
+   ],
+   "r": "The hands that cut the sheaf.",
+   "n": "The form is dual, 'your two hands'. Hebrew uses the dual for things that come in pairs.",
+   "t": [
+    "thine hands",
+    "thine hands",
+    "thy hands",
+    "thy hands",
+    "thy hands",
+    "thy hands",
+    "your hands"
+   ]
+  }
+ },
+ "lxx": {
+  "_extra": {
+   "1": "δὲ (and, but): added by the Greek translators; nothing in the Hebrew answers to it."
+  },
+  "01": {
+   "i": [
+    0
+   ],
+   "m": 0
+  },
+  "02": {
+   "i": [
+    2
+   ],
+   "m": 2
+  },
+  "03": {
+   "i": [
+    3
+   ],
+   "m": 3,
+   "n": "The Greek has no 'your' here: just 'you reap a harvest'."
+  },
+  "04": {
+   "i": [
+    4,
+    5,
+    6,
+    7
+   ],
+   "m": 6
+  },
+  "05": {
+   "i": [
+    8,
+    9
+   ],
+   "m": 9
+  },
+  "06": {
+   "i": [
+    10
+   ],
+   "m": 10
+  },
+  "07": {
+   "i": [
+    11,
+    12,
+    13,
+    14
+   ],
+   "m": 13,
+   "n": "The Greek adds 'your': 'in your field' again, where the Hebrew says 'in the field'."
+  },
+  "08": {
+   "i": [
+    15
+   ],
+   "m": 15
+  },
+  "09": {
+   "i": [
+    16
+   ],
+   "m": 16,
+   "lemma": "ἀναστρέφω",
+   "strong": "G0390",
+   "n": "Swete's text reads ἀναστραφήσῃ, from ἀναστρέφω, to turn back. Rahlfs's edition reads a longer compound here, ἐπαναστραφήσῃ, so the matched dictionary form (ἐπαναστρέφω) belongs to that reading, not to Swete's."
+  },
+  "10": {
+   "i": [
+    17,
+    18
+   ],
+   "m": 17
+  },
+  "11": {
+   "i": [
+    19,
+    20
+   ],
+   "m": 20,
+   "n": "The Greek word is προσήλυτος, 'one who has come over'. English 'proselyte' comes from it, though here it still means a resident foreigner, not a religious convert."
+  },
+  "12": {
+   "i": [
+    21,
+    22,
+    23
+   ],
+   "m": 23,
+   "n": "ὀρφανός, the source of English 'orphan'."
+  },
+  "13": {
+   "i": [
+    24,
+    25,
+    26
+   ],
+   "m": 26
+  },
+  "14": {
+   "i": [
+    27
+   ],
+   "m": 27
+  },
+  "15": {
+   "i": [
+    28
+   ],
+   "m": 28
+  },
+  "16": {
+   "i": [
+    29,
+    30
+   ],
+   "m": 29
+  },
+  "17": {
+   "i": [
+    31
+   ],
+   "m": 31,
+   "n": "The Greek translators wrote κύριος, 'Lord', for the divine name. It is the same word the servant uses for his master in Matthew 25:24 on this page."
+  },
+  "18": {
+   "i": [
+    32,
+    33,
+    34
+   ],
+   "m": 33
+  },
+  "19": {
+   "i": [
+    35,
+    36
+   ],
+   "m": 36
+  },
+  "20": {
+   "i": [
+    37,
+    38
+   ],
+   "m": 38
+  },
+  "21": {
+   "i": [
+    39,
+    40,
+    41
+   ],
+   "m": 40
+  }
+ }
+}

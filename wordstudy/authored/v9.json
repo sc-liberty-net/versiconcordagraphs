@@ -1,0 +1,260 @@
+{
+ "id": "v9",
+ "en": [
+  {
+   "t": "But",
+   "w": [
+    "01"
+   ]
+  },
+  " ",
+  {
+   "t": "the things",
+   "w": [
+    "02"
+   ]
+  },
+  " ",
+  {
+   "t": "that are within",
+   "w": [
+    "03"
+   ]
+  },
+  ", ",
+  {
+   "t": "give",
+   "w": [
+    "04"
+   ]
+  },
+  " as ",
+  {
+   "t": "alms",
+   "w": [
+    "05"
+   ]
+  },
+  "; ",
+  {
+   "t": "and",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "look",
+   "w": [
+    "07"
+   ]
+  },
+  ", ",
+  {
+   "t": "all things",
+   "w": [
+    "08"
+   ]
+  },
+  " ",
+  {
+   "t": "are",
+   "w": [
+    "11"
+   ]
+  },
+  " ",
+  {
+   "t": "clean",
+   "w": [
+    "09"
+   ]
+  },
+  " ",
+  {
+   "t": "to you",
+   "w": [
+    "10"
+   ]
+  },
+  "."
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "but",
+    "only",
+    "yet",
+    "rather"
+   ],
+   "r": "Turns the argument: instead of what has just been criticised, do this.",
+   "n": "Abbott-Smith quotes Blass that it was 'the regular word in the vulgar language' for 'but', and gives 'yet, howbeit, only'.",
+   "t": [
+    "But rather",
+    "Therefore",
+    "But yet",
+    "But",
+    "But",
+    "But"
+   ]
+  },
+  "02": {
+   "s": [
+    "the things",
+    "what"
+   ],
+   "r": "With the participle, makes 'the things that are within'.",
+   "t": [
+    "such things",
+    "those thinges",
+    "that",
+    "those things",
+    "what",
+    "the things"
+   ]
+  },
+  "03": {
+   "s": [
+    "that are within",
+    "that are inside",
+    "that you have",
+    "that you can"
+   ],
+   "r": "The contents, the things inside.",
+   "n": "Abbott-Smith records two senses and puts both at this verse: 'to be in, within', the Revised Version's text, and 'to be possible', its margin, which would make it 'what you can'. The KJV, Geneva and YLT's 'what you have' lean toward the second.",
+   "t": [
+    "as ye have",
+    "which you haue",
+    "which remaineth",
+    "which are within",
+    "ye have",
+    "that are within you"
+   ]
+  },
+  "04": {
+   "s": [
+    "give"
+   ],
+   "r": "A command, plural: to all those Jesus is addressing.",
+   "n": "Aorist imperative.",
+   "t": [
+    "give",
+    "giue",
+    "give",
+    "give",
+    "give ye",
+    "give"
+   ]
+  },
+  "05": {
+   "s": [
+    "alms",
+    "gifts to the poor",
+    "acts of mercy"
+   ],
+   "r": "What the contents are to be given as.",
+   "n": "Abbott-Smith lists this verse for the phrase 'give alms', ἐλεημοσύνην διδόναι.",
+   "t": [
+    "alms",
+    "almes",
+    "alms",
+    "for alms",
+    "as alms",
+    "as alms"
+   ]
+  },
+  "06": {
+   "s": [
+    "and"
+   ],
+   "r": "Joins the result to the command.",
+   "t": [
+    "and",
+    "and",
+    "and",
+    "and",
+    "and",
+    "and"
+   ]
+  },
+  "07": {
+   "s": [
+    "look",
+    "see",
+    "behold",
+    "then"
+   ],
+   "r": "Calls attention to the result.",
+   "t": [
+    "behold",
+    "beholde",
+    "behold",
+    "behold",
+    "lo",
+    "you will see that"
+   ]
+  },
+  "08": {
+   "s": [
+    "all things",
+    "everything"
+   ],
+   "r": "Everything, without exception.",
+   "t": [
+    "all things",
+    "all thinges",
+    "all things",
+    "all things",
+    "all things",
+    "everything"
+   ]
+  },
+  "09": {
+   "s": [
+    "clean",
+    "pure"
+   ],
+   "r": "Ritually clean.",
+   "n": "Abbott-Smith lists this verse under the ceremonial sense, as distinct from physical cleanness.",
+   "t": [
+    "clean",
+    "cleane",
+    "clean",
+    "clean",
+    "clean",
+    "clean"
+   ]
+  },
+  "10": {
+   "s": [
+    "to you",
+    "for you"
+   ],
+   "r": "Clean as far as they are concerned.",
+   "t": [
+    "unto you",
+    "to you",
+    "unto you",
+    "unto you",
+    "to you",
+    "for you"
+   ]
+  },
+  "11": {
+   "s": [
+    "are",
+    "is"
+   ],
+   "r": "States the result as a fact.",
+   "n": "Singular in Greek, as is usual with a neuter plural subject; English needs 'are'.",
+   "t": [
+    "are",
+    "shall be",
+    "are",
+    "are",
+    "are",
+    "is"
+   ]
+  }
+ }
+}

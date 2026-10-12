@@ -1,0 +1,388 @@
+{
+ "id": "b5",
+ "en": [
+  {
+   "t": "And",
+   "w": [
+    "01"
+   ]
+  },
+  " ",
+  {
+   "t": "having called to himself",
+   "w": [
+    "02"
+   ]
+  },
+  " ",
+  {
+   "t": "each",
+   "w": [
+    "04"
+   ]
+  },
+  " ",
+  {
+   "t": "one",
+   "w": [
+    "03"
+   ]
+  },
+  " ",
+  {
+   "t": "of the",
+   "w": [
+    "05"
+   ]
+  },
+  " ",
+  {
+   "t": "debtors",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "of",
+   "w": [
+    "07"
+   ]
+  },
+  " ",
+  {
+   "t": "his own",
+   "w": [
+    "09"
+   ]
+  },
+  " ",
+  {
+   "t": "master",
+   "w": [
+    "08"
+   ]
+  },
+  ", ",
+  {
+   "t": "he said",
+   "w": [
+    "10"
+   ]
+  },
+  " ",
+  {
+   "t": "to the",
+   "w": [
+    "11"
+   ]
+  },
+  " ",
+  {
+   "t": "first",
+   "w": [
+    "12"
+   ]
+  },
+  ", ‘",
+  {
+   "t": "How much",
+   "w": [
+    "13"
+   ]
+  },
+  " ",
+  {
+   "t": "do you owe",
+   "w": [
+    "14"
+   ]
+  },
+  " ",
+  {
+   "t": "to",
+   "w": [
+    "15"
+   ]
+  },
+  " ",
+  {
+   "t": "my",
+   "w": [
+    "17"
+   ]
+  },
+  " ",
+  {
+   "t": "master",
+   "w": [
+    "16"
+   ]
+  },
+  "?’"
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "and",
+    "so"
+   ],
+   "r": "Carries the story on to the manager's next step.",
+   "t": [
+    "So",
+    "Then",
+    "Therefore",
+    "And",
+    "And",
+    "And"
+   ]
+  },
+  "02": {
+   "s": [
+    "having called to himself",
+    "summoning",
+    "calling in",
+    "sending for"
+   ],
+   "r": "The manager summons the debtors to come to him.",
+   "n": "Abbott-Smith notes that the middle voice, used here, means 'to call to oneself'. It is an aorist participle: the summons comes before the questioning.",
+   "t": [
+    "called ... unto him",
+    "called ... vnto him",
+    "calling together",
+    "calling to him",
+    "having called near",
+    "called in"
+   ]
+  },
+  "03": {
+   "s": [
+    "one",
+    "one by one"
+   ],
+   "r": "With 'each', stresses that he dealt with them one at a time.",
+   "t": [
+    "one",
+    "one",
+    "one",
+    "one",
+    "one",
+    "one"
+   ]
+  },
+  "04": {
+   "s": [
+    "each",
+    "every"
+   ],
+   "r": "Every debtor, taken singly.",
+   "t": [
+    "every",
+    "euery",
+    "every",
+    "each",
+    "each",
+    "each"
+   ]
+  },
+  "05": {
+   "s": [
+    "of the"
+   ],
+   "r": "The article; 'of' comes from the genitive case.",
+   "t": [
+    "of",
+    "of",
+    "of",
+    "of",
+    "of",
+    "of"
+   ]
+  },
+  "06": {
+   "s": [
+    "debtors",
+    "people in debt"
+   ],
+   "r": "Those who owed goods or money to the manager's master.",
+   "n": "The same compound word as in Luke 7:41 on this page; Abbott-Smith explains it as χρέος, a debt, joined to ὀφειλέτης, a debtor, and lists these two verses as its only New Testament uses.",
+   "t": [
+    "debtors",
+    "detters",
+    "debtors",
+    "debtors",
+    "debtors",
+    "debtors"
+   ]
+  },
+  "07": {
+   "s": [
+    "of",
+    "of the"
+   ],
+   "r": "The article of the phrase 'of his own master'; 'of' comes from the case.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "08": {
+   "s": [
+    "master",
+    "lord",
+    "employer"
+   ],
+   "r": "The master whose affairs the manager runs.",
+   "n": "A human owner, so 'master' by this study's register. STEPBible tags this occurrence with the human sense.",
+   "t": [
+    "lord’s",
+    "masters",
+    "lord's",
+    "lord’s",
+    "lord's",
+    "master’s"
+   ]
+  },
+  "09": {
+   "s": [
+    "his own",
+    "his"
+   ],
+   "r": "The manager's own master.",
+   "n": "A reflexive pronoun: 'his own'. It makes plain that these are debts owed to the master, not to the manager.",
+   "t": [
+    "his",
+    "his",
+    "his",
+    "his",
+    "his",
+    "his"
+   ]
+  },
+  "10": {
+   "s": [
+    "he said",
+    "he asked",
+    "he began to say"
+   ],
+   "r": "He puts the question to the first debtor.",
+   "n": "The imperfect tense, literally 'he was saying'. Greek narrative often introduces speech this way, and English says simply 'he said'.",
+   "t": [
+    "said",
+    "said",
+    "he said",
+    "he said",
+    "he said",
+    "he asked"
+   ]
+  },
+  "11": {
+   "s": [
+    "to the"
+   ],
+   "r": "The article; 'to' comes from the dative case.",
+   "t": [
+    "unto the",
+    "vnto the",
+    "to the",
+    "to the",
+    "to the",
+    "the"
+   ]
+  },
+  "12": {
+   "s": [
+    "first"
+   ],
+   "r": "The first debtor to be called in.",
+   "t": [
+    "first",
+    "first",
+    "first",
+    "first",
+    "first",
+    "first"
+   ]
+  },
+  "13": {
+   "s": [
+    "how much",
+    "what amount"
+   ],
+   "r": "Asks the size of the debt.",
+   "n": "Abbott-Smith lists this verse for the neuter used on its own, 'how much'.",
+   "t": [
+    "How much",
+    "Howe much",
+    "How much",
+    "How much",
+    "How much",
+    "How much"
+   ]
+  },
+  "14": {
+   "s": [
+    "do you owe",
+    "are you in debt"
+   ],
+   "r": "The present tense: what the debtor still owes.",
+   "n": "Abbott-Smith lists this verse for the verb with the dative of the person owed: 'to owe to my master'.",
+   "t": [
+    "owest thou",
+    "owest thou",
+    "dost thou owe",
+    "owest thou",
+    "dost thou owe",
+    "do you owe"
+   ]
+  },
+  "15": {
+   "s": [
+    "to"
+   ],
+   "r": "The article of 'my master'; 'to' comes from the dative case.",
+   "t": [
+    "unto",
+    "vnto",
+    null,
+    "unto",
+    "to",
+    null
+   ]
+  },
+  "16": {
+   "s": [
+    "master",
+    "lord"
+   ],
+   "r": "The same master whose debtors these are.",
+   "t": [
+    "lord",
+    "master",
+    "lord",
+    "lord",
+    "lord",
+    "master"
+   ]
+  },
+  "17": {
+   "s": [
+    "my",
+    "of me"
+   ],
+   "r": "The manager speaks of his master as his own.",
+   "t": [
+    "my",
+    "my",
+    "my",
+    "my",
+    "my",
+    "my"
+   ]
+  }
+ }
+}

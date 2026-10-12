@@ -1,0 +1,119 @@
+{
+ "id": "f1",
+ "en": [
+  {"t": "And who", "w": ["01"]}, " ",
+  {"t": "can endure", "w": ["02"]}, " ",
+  {"t": "the day of", "w": ["04", "03"]}, " ",
+  {"t": "his coming", "w": ["05"]}, "? ",
+  {"t": "And who", "w": ["06"]}, " ",
+  {"t": "is the one who stands", "w": ["07"]}, " ",
+  {"t": "when he appears", "w": ["08"]}, "? ",
+  {"t": "For", "w": ["09"]}, " ",
+  {"t": "he", "w": ["10"]}, " ",
+  {"t": "is like the fire of", "w": ["11"]}, " ",
+  {"t": "a refiner", "w": ["12"]}, ", ",
+  {"t": "and like the lye of", "w": ["13"]}, " ",
+  {"t": "launderers", "w": ["14"]}, "."
+ ],
+ "words": {
+  "01": {
+   "s": ["and who", "but who", "who then"],
+   "r": "Opens a question that expects the answer: no one.",
+   "n": "The Hebrew has 'and'; most translations make it 'But'. That the question expects 'no one' is a reading of its tone, not something the text states.",
+   "t": ["But who", "But who", "And who", "But who", "But who", "And who", "But who"]
+  },
+  "02": {
+   "s": ["endure", "bear", "withstand", "hold out against"],
+   "r": "Hold up under the day without being overcome.",
+   "n": "A participle, literally 'who is enduring'; English needs 'can'. Gesenius gives the root sense TO MEASURE, then to contain, then to hold up, to sustain, and under that 'to bear, to endure', citing this verse. The DRC's 'shall be able to think of' departs from the Hebrew.",
+   "t": ["may abide", "may abide", "shall be able to think of", "may abide", "can abide", "is bearing", "can endure"]
+  },
+  "03": {
+   "s": ["(object marker, no English equivalent)"],
+   "r": "Marks 'the day' as the object of 'endure'.",
+   "n": "This small word marks a definite direct object and has no English equivalent; it is counted here with 'the day'.",
+   "t": [null, null, null, null, null, null, null]
+  },
+  "04": {
+   "s": ["the day of", "the time of"],
+   "r": "The day on which he arrives.",
+   "t": ["the day", "the day", "the day", "the day", "the day", "the day", "the day"]
+  },
+  "05": {
+   "s": ["his coming", "his arrival", "his entering"],
+   "r": "The coming of the one announced in the verse before.",
+   "n": "An infinitive with 'his': literally 'the day of his coming'. Gesenius gives the verb's first sense as to come in, to enter.",
+   "t": ["of his coming", "of his comming", "of his coming", "of his coming", "of his coming", "of his coming", "of His coming"]
+  },
+  "06": {
+   "s": ["and who", "or who"],
+   "r": "Repeats the question in a second form.",
+   "t": ["and who", "and who", "and who", "And who", "and who", "And who", "And who"]
+  },
+  "07": {
+   "s": ["stands", "stands firm", "holds his ground", "remains standing"],
+   "r": "Stays on his feet, not overthrown.",
+   "n": "A participle with the article: literally 'who is the one standing'. Gesenius gives the first sense simply as TO STAND. That it means holding one's ground here is a reading of the context.",
+   "t": ["shall stand", "shall endure", "shall stand", "shall stand", "shall stand", "is standing", "can stand"]
+  },
+  "08": {
+   "s": ["when he appears", "when he is seen", "at his appearing"],
+   "r": "When he shows himself.",
+   "n": "Literally 'in his being seen': the ordinary verb 'see' in its passive form, which means 'be seen, appear'. The DRC's 'to see him' takes it as active.",
+   "t": ["when he appeareth", "when he appeareth", "to see him", "when he appeareth", "when he appeareth", "in his appearing", "when He appears"]
+  },
+  "09": {
+   "s": ["for", "because"],
+   "r": "Gives the reason no one can stand.",
+   "t": ["for", "for", "for", "For", "for", "For", "For"]
+  },
+  "10": {
+   "s": ["he", "he himself"],
+   "r": "The one who comes.",
+   "n": "Hebrew does not need the pronoun, so stating it adds weight: he, and no other.",
+   "t": ["he", "he", "he", "he", "he", "he", "He"]
+  },
+  "11": {
+   "s": ["like the fire of", "as the fire of"],
+   "r": "He is compared to the fire that melts metal.",
+   "n": "Hebrew has no 'is'. The noun 'fire' is joined to 'refiner': literally 'like fire of a refiner'.",
+   "t": ["is like ... fire", "is like ... fire", "is like ... fire", "is like ... fire", "is like ... fire", "is as fire", "will be like ... fire"]
+  },
+  "12": {
+   "s": ["refiner", "smelter", "metalworker", "goldsmith"],
+   "r": "One who melts metal to separate it from its dross.",
+   "n": "Gesenius gives the first sense as TO MELT a metal, specially to purge gold or silver by fire and to separate it from dross, and notes that the participle means a goldsmith. BDB: smelt, refine, test.",
+   "t": ["a refiner’s", "a purging", "a refining", "a refiner's", "a refiner’s", "of a refiner", "a refiner’s"]
+  },
+  "13": {
+   "s": ["lye", "alkali", "potash", "washing soda"],
+   "r": "A strong cleansing alkali used to wash cloth.",
+   "n": "Gesenius: properly something which cleanses, specially vegetable alkali made from the ashes of certain plants, sometimes used with oil for washing garments instead of soap. The older translations' 'soap' means this, not soap as we know it.",
+   "t": ["and like ... soap", "and like ... sope", "and like the ... herb", "and like ... soap", "and like ... soap", "And as soap", "like ... soap"]
+  },
+  "14": {
+   "s": ["launderers", "fullers", "washers of cloth"],
+   "r": "Workers who wash and clean cloth.",
+   "n": "Gesenius gives the root sense as TO TREAD, hence to wash garments by treading on them under water, and distinguishes it from the verb for washing the body. 'Fuller' is the older English name for this trade. The form is plural, 'of launderers'.",
+   "t": ["fullers’", "fullers", "fuller's", "fullers'", "fullers’", "of a fuller", "a launderer’s"]
+  }
+ },
+ "lxx": {
+  "_extra": {
+   "15": "εἰσπορεύεται (comes in): added by the Greek translators, 'for he comes in like fire'."
+  },
+  "01": {"i": [0, 1], "m": 1},
+  "02": {"i": [2], "m": 2, "n": "ὑπομένω, 'remain under, endure'."},
+  "04": {"i": [3], "m": 3},
+  "05": {"i": [4, 5], "m": 4, "n": "εἴσοδος, 'a coming in, entrance'."},
+  "06": {"i": [6, 7], "m": 7, "n": "The Greek has ἤ, 'or', where the Hebrew has 'and'."},
+  "07": {"i": [8], "m": 8, "lemma": "ὑφίστημι", "n": "Dictionary form supplied; the brief gives none. ὑφίστημι, 'withstand'. The word does not occur in the New Testament, so it has no Strong's number."},
+  "08": {"i": [9, 10, 11, 12], "m": 11, "n": "ὀπτασία, 'appearing, vision'."},
+  "09": {"i": [13], "m": 13},
+  "10": {"i": [14], "m": 14},
+  "11": {"i": [16, 17], "m": 17},
+  "12": {"i": [18], "m": 18, "n": "The Greek says 'fire of a smelting furnace', not 'of a refiner'. Our Greek text spells the word χαρνευτηρίου, evidently a misprint for χωνευτηρίου."},
+  "13": {"i": [19, 20, 21], "m": 21, "n": "The Greek translators wrote ποία (πόα), 'grass, herb', for the alkali, perhaps thinking of the plant it was made from. The DRC's 'fuller's herb' matches this reading."},
+  "14": {"i": [22], "m": 22, "n": "πλυνόντων, 'of those washing'."}
+ }
+}

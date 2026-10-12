@@ -1,0 +1,99 @@
+{
+ "id": "f7",
+ "en": [
+  {"t": "Knowing", "w": ["01"]}, " ",
+  {"t": "that", "w": ["02"]}, " ",
+  {"t": "not", "w": ["03"]}, " ",
+  {"t": "with perishable things", "w": ["04"]}, ", ",
+  {"t": "silver", "w": ["05"]}, " ",
+  {"t": "or", "w": ["06"]}, " ",
+  {"t": "gold", "w": ["07"]}, ", ",
+  {"t": "were you redeemed", "w": ["08"]}, " ",
+  {"t": "from", "w": ["09"]}, " ",
+  {"t": "your", "w": ["12"]}, " ",
+  {"t": "futile", "w": ["11"]}, " ",
+  {"t": "way of life", "w": ["13", "10"]}, " ",
+  {"t": "handed down from the fathers", "w": ["14"]}, ","
+ ],
+ "words": {
+  "01": {
+   "s": ["knowing", "since you know", "for you know"],
+   "r": "The readers already know what follows; the writer reminds them of it.",
+   "n": "A perfect participle of the verb 'know', which Abbott-Smith describes as a perfect with present meaning: 'to have seen or perceived, hence, to know'.",
+   "t": ["Forasmuch as ye know", "Knowing", "Knowing", "knowing", "having known", "For you know"]
+  },
+  "02": {
+   "s": ["that"],
+   "r": "Introduces what they know.",
+   "t": ["that", "that", "that", "that", "that", "that"]
+  },
+  "03": {
+   "s": ["not"],
+   "r": "Denies that the ransom was paid in money.",
+   "n": "The Greek puts 'not' first in the clause, before the means, so the denial falls on silver and gold, not on the redeeming.",
+   "t": ["not", "not", "not", "not", "not", "not"]
+  },
+  "04": {
+   "s": ["with perishable things", "with corruptible things", "with things that decay"],
+   "r": "Things that can decay and pass away.",
+   "n": "A neuter plural adjective used as a noun, in the dative of means: 'with perishable things'. Abbott-Smith gives 'perishable, corruptible', and notes that it is often set opposite ἄφθαρτος, imperishable.",
+   "t": ["with corruptible things", "with corruptible things", "with corruptible things", "with corruptible things", "with corruptible things", "with perishable things"]
+  },
+  "05": {
+   "s": ["silver", "silver money", "silver coin"],
+   "r": "Silver, as the price one might pay for a ransom.",
+   "n": "Abbott-Smith explains that the word is properly 'a piece of silver', and in the New Testament means either silver or money; he lists this verse under 'silver'. This study renders it 'silver'.",
+   "t": ["silver", "siluer", "silver", "with silver", "silver", "silver"]
+  },
+  "06": {
+   "s": ["or"],
+   "r": "Gives the alternative metal.",
+   "t": ["and", "and", "or", "or", "or", "or"]
+  },
+  "07": {
+   "s": ["gold", "gold coin"],
+   "r": "Gold, the costlier price.",
+   "n": "Abbott-Smith calls it a diminutive of χρυσός, 'a piece of gold, gold', and notes its use for gold coin, money. The DRC puts gold before silver.",
+   "t": ["gold", "golde", "gold", "gold", "gold", "gold"]
+  },
+  "08": {
+   "s": ["were you redeemed", "were you ransomed", "were you set free"],
+   "r": "They were released from their old way of life by a price paid.",
+   "n": "Abbott-Smith gives 'to release on receipt of ransom', and in the middle 'to release by paying ransom, to redeem', with this verse for the passive. He notes that the Septuagint uses it chiefly for Hebrew פָּדָה and גָּאַל; this study renders פָּדָה 'redeem' as well.",
+   "t": ["ye were ... redeemed", "yee were ... redeemed", "you were ... redeemed", "ye were redeemed", "were ye redeemed", "you were redeemed"]
+  },
+  "09": {
+   "s": ["from", "out of"],
+   "r": "Marks what they were redeemed out of.",
+   "t": ["from", "from", "from", "from", "from", "from"]
+  },
+  "10": {
+   "s": ["the"],
+   "r": "With 'your', marks the way of life as their own.",
+   "t": [null, null, null, null, null, "the"]
+  },
+  "11": {
+   "s": ["futile", "vain", "empty", "worthless"],
+   "r": "A way of life that led nowhere.",
+   "n": "Abbott-Smith gives 'vain, useless', and lists this verse with ἀναστροφή, the next word but one. The KJV's 'vain' is the older sense: empty, without result.",
+   "t": ["vain", "vaine", "vain", "vain", "foolish", "empty"]
+  },
+  "12": {
+   "s": ["your", "of you"],
+   "r": "The readers' own former life.",
+   "t": ["your", "your", "your", "your", "your", null]
+  },
+  "13": {
+   "s": ["way of life", "manner of life", "conduct", "behaviour"],
+   "r": "The whole pattern of how they lived.",
+   "n": "Abbott-Smith explains that the word first meant a turning back, and in late writers came to mean manner of life, behaviour. The KJV's 'conversation' is an old word for conduct, not talk.",
+   "t": ["conversation", "conuersation", "conversation", "manner of life", "behaviour", "way of life"]
+  },
+  "14": {
+   "s": ["handed down from the fathers", "inherited", "ancestral", "received from your forefathers"],
+   "r": "The way of life they had received from their ancestors.",
+   "n": "One Greek adjective, built from 'father' and 'hand down'; Abbott-Smith gives 'handed down from one's fathers, inherited', and this is its only New Testament use. Most translations add 'your', which the context implies.",
+   "t": ["received by tradition from your fathers", "receiued by the traditions of the fathers", "of the tradition of your fathers", "handed down from your fathers", "delivered by fathers", "you inherited from your forefathers"]
+  }
+ }
+}

@@ -1,0 +1,52 @@
+{
+ "id": "z8",
+ "en": [
+  {"t": "And I said", "w": ["01"]}, " ",
+  {"t": "to them", "w": ["02"]}, ", ‘",
+  {"t": "If", "w": ["03"]}, " ",
+  {"t": "it is good", "w": ["04"]}, " ",
+  {"t": "in your eyes", "w": ["05"]}, ", ",
+  {"t": "give", "w": ["06"]}, " ",
+  {"t": "my wage", "w": ["07"]}, "; ",
+  {"t": "and if", "w": ["08"]}, " ",
+  {"t": "not", "w": ["09"]}, ", ",
+  {"t": "refrain", "w": ["10"]}, ".’ ",
+  {"t": "And they weighed out", "w": ["11"]}, " ",
+  {"t": "my wage", "w": ["13", "12"]}, ": ",
+  {"t": "thirty", "w": ["14"]}, " ",
+  {"t": "shekels", "sup": "Supplied in English. The Hebrew says only 'thirty silver'; Gesenius notes that 'shekel' is often left unstated with sums of silver."}, " ",
+  {"t": "of silver", "w": ["15"]}, "."
+ ],
+ "words": {
+  "01": {"s": ["and I said", "then I said", "and I told"], "r": "The prophet, acting as shepherd, speaks to those who hired him.", "t": ["And I said", "And I said", "And I said", "And I said", "And I said", "And I say", "Then I told"]},
+  "02": {"s": ["to them"], "r": "Those he has been shepherding for.", "t": ["unto them", "vnto them", "to them", "unto them", "unto them", "unto them", "them"]},
+  "03": {"s": ["if"], "r": "Leaves the payment to their choice.", "t": ["If", "If", "If", "If", "If", "If", "If"]},
+  "04": {"s": ["it is good", "it seems good", "it pleases"], "r": "If they think it right.", "n": "Gesenius: TO BE GOOD, used only impersonally in phrases such as 'it is good for me'.", "t": ["ye think good", "ye thinke it good", "it be good", "ye think good", "ye think good", "good", "it seems right"]},
+  "05": {"s": ["in your eyes", "in your sight", "to you"], "r": "In their own judgment.", "n": "A Hebrew idiom for someone's opinion; the brief's lexicon lists the eye as showing mental qualities. The Douay-Rheims and YLT keep the eyes.", "t": [null, null, "in your eyes", null, null, "in your eyes", "to you"]},
+  "06": {"s": ["give", "hand over", "pay"], "r": "A plural command: pay me.", "n": "A different verb from the usual 'give'; BDB: give, set, provide. The Hebrew has no 'me'.", "t": ["give me", "giue me", "bring hither", "give me", "give me", "give", "give me"]},
+  "07": {"s": ["my wage", "my wages", "my hire", "my pay"], "r": "The pay due to him as shepherd.", "n": "The same word as the labourer's wage in Deuteronomy 24:15 on this page; BDB: hire, wages, reward for work done. The KJV's 'my price' looks ahead to the sum weighed out.", "t": ["my price", "my wages", "my wages", "my hire", "my hire", "my hire", "my wages"]},
+  "08": {"s": ["and if", "but if"], "r": "The other choice.", "t": ["and if", "and if", "and if", "and if", "and if", "and if", "but if"]},
+  "09": {"s": ["not", "no"], "r": "If they do not think it good.", "t": ["not", "no", "not", "not", "not", "not", "not"]},
+  "10": {"s": ["refrain", "leave off", "forbear", "keep it"], "r": "Do not pay, then.", "n": "Gesenius: TO LEAVE OFF, TO CEASE, TO DESIST. A plural command, like 'give'.", "t": ["forbear", "leaue off", "be quiet", "forbear", "forbear", "forbear", "keep them"]},
+  "11": {"s": ["and they weighed out", "and they paid", "and they counted out"], "r": "They paid by weighing silver on a balance.", "n": "Gesenius: TO POISE, TO WEIGH, and with 'to' someone, to weigh out metals or money to him; BDB adds 'weigh a price, that is, pay'. The noun 'shekel' comes from this verb: a shekel is 'a weight'.", "t": ["So they weighed", "so they weighed", "And they weighed", "So they weighed", "So they weighed", "and they weigh out", "So they weighed out"]},
+  "12": {"s": ["(object marker, no English equivalent)"], "r": "Marks 'my wage' as the object of 'weighed out'.", "n": "This small word marks a definite direct object and has no English equivalent; it is counted here with 'my wage'.", "t": [null, null, null, null, null, null, null]},
+  "13": {"s": ["my wage", "my wages", "my hire"], "r": "What they judged him worth.", "t": ["for my price", "for my wages", "for my wages", "for my hire", "for my hire", "my hire", "my wages"]},
+  "14": {"s": ["thirty"], "r": "The sum they set on him.", "n": "Thirty shekels of silver is the sum paid for a slave gored by an ox in Exodus 21:32 on this page. Whether the prophet means that echo as a slight is a matter of reading.", "t": ["thirty", "thirtie", "thirty", "thirty", "thirty", "thirty", "thirty"]},
+  "15": {"s": ["of silver", "silver", "pieces of silver"], "r": "The metal weighed out.", "n": "Gesenius: silver, so called from its pale colour, and notes that sums are often given without the word shekel, as 'twenty (shekels) of silver'. The translations supply 'pieces'; YLT's 'silverlings' is an old word for silver coins.", "t": ["pieces of silver", "pieces of siluer", "pieces of silver", "pieces of silver", "pieces of silver", "silverlings", "pieces of silver"]}
+ },
+ "lxx": {
+  "01": {"i": [0, 1], "m": 1, "n": "ἐρῶ, 'I will say', a future, where the Hebrew narrates in the past."},
+  "02": {"i": [2, 3], "m": 3},
+  "03": {"i": [4], "m": 4},
+  "04": {"i": [5, 8], "m": 5, "n": "καλόν ... ἐστιν, 'it is good'."},
+  "05": {"i": [6, 7], "m": 6, "n": "ἐνώπιον ὑμῶν, 'before you, in your sight'."},
+  "06": {"i": [9], "m": 9},
+  "07": {"i": [10, 11, 12], "m": 11, "n": "μισθός, 'wage': the same Greek word as the worker's wage in Luke 10:7 on this page."},
+  "08": {"i": [13], "m": 13, "n": "ἤ, 'or': the Greek reads 'give my wage, or refuse', with no 'if not'."},
+  "10": {"i": [14], "m": 14, "n": "ἀπεῖπον, 'to refuse, renounce'."},
+  "11": {"i": [15, 16], "m": 16, "n": "ἵστημι, 'to set', here 'to weigh' on the balance. Matthew 26:15 on this page uses the same verb for the thirty pieces of silver weighed out to Judas."},
+  "13": {"i": [17, 18, 19], "m": 18},
+  "14": {"i": [20], "m": 20},
+  "15": {"i": [21], "m": 21, "n": "ἀργύρεος, 'of silver': 'thirty silver (pieces)'."}
+ }
+}

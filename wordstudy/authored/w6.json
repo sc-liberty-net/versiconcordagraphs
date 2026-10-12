@@ -1,0 +1,317 @@
+{
+ "id": "w6",
+ "en": [
+  {
+   "t": "But",
+   "w": [
+    "02"
+   ]
+  },
+  " ",
+  {
+   "t": "he",
+   "w": [
+    "01"
+   ]
+  },
+  ", ",
+  {
+   "t": "answering",
+   "w": [
+    "03"
+   ]
+  },
+  ", ",
+  {
+   "t": "said",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "to one",
+   "w": [
+    "04"
+   ]
+  },
+  " ",
+  {
+   "t": "of them",
+   "w": [
+    "05"
+   ]
+  },
+  ", ‘",
+  {
+   "t": "Friend",
+   "w": [
+    "07"
+   ]
+  },
+  ", ",
+  {
+   "t": "I do not wrong",
+   "w": [
+    "09",
+    "08"
+   ]
+  },
+  " ",
+  {
+   "t": "you",
+   "w": [
+    "10"
+   ]
+  },
+  ". ",
+  {
+   "t": "Did you not agree",
+   "w": [
+    "13",
+    "11"
+   ]
+  },
+  " ",
+  {
+   "t": "with me",
+   "w": [
+    "14"
+   ]
+  },
+  " ",
+  {
+   "t": "for a denarius",
+   "w": [
+    "12"
+   ]
+  },
+  "?’"
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "he",
+    "the householder"
+   ],
+   "r": "The article stands for the owner of the vineyard, now the speaker.",
+   "n": "Greek uses the article with δέ, 'and he', to switch the subject to someone already in the story.",
+   "t": [
+    "he",
+    "hee",
+    "he",
+    "he",
+    "he",
+    "he"
+   ]
+  },
+  "02": {
+   "s": [
+    "but",
+    "and",
+    "then"
+   ],
+   "r": "Turns from the grumbling workers to the owner's reply.",
+   "t": [
+    "But",
+    "And",
+    "But",
+    "But",
+    "And",
+    "But"
+   ]
+  },
+  "03": {
+   "s": [
+    "answering",
+    "in reply",
+    "replying"
+   ],
+   "r": "He answers the complaint of the workers hired first.",
+   "n": "The form is passive, but Abbott-Smith notes that in late Greek the passive was also used to mean 'answer', and was the more frequent form. 'Answering ... said' is a common Greek way of introducing a reply.",
+   "t": [
+    "answered",
+    "answered",
+    "answering",
+    "answered",
+    "answering",
+    "answered"
+   ]
+  },
+  "04": {
+   "s": [
+    "to one",
+    "to a single one"
+   ],
+   "r": "He speaks to one worker on behalf of all.",
+   "t": [
+    "one",
+    "one",
+    "to one",
+    "to one",
+    "to one",
+    "one"
+   ]
+  },
+  "05": {
+   "s": [
+    "of them",
+    "among them"
+   ],
+   "r": "Of the workers who had laboured all day.",
+   "t": [
+    "of them",
+    "of them",
+    "of them",
+    "of them",
+    "of them",
+    "of them"
+   ]
+  },
+  "06": {
+   "s": [
+    "said",
+    "spoke"
+   ],
+   "r": "He speaks his reply.",
+   "t": [
+    "said",
+    "saying",
+    "said",
+    "said",
+    "said",
+    null
+   ]
+  },
+  "07": {
+   "s": [
+    "friend",
+    "my friend",
+    "companion",
+    "comrade"
+   ],
+   "r": "A courteous address to a man the owner is correcting.",
+   "n": "Abbott-Smith gives 'a companion, comrade', and as a term of address 'my friend'. It is a different word from φίλος, the usual word for a friend; this one keeps a polite distance, which the YLT's 'Comrade' tries to show. Abbott-Smith records the address only in Matthew.",
+   "t": [
+    "Friend",
+    "Friend",
+    "friend",
+    "Friend",
+    "Comrade",
+    "Friend"
+   ]
+  },
+  "08": {
+   "s": [
+    "not",
+    "no"
+   ],
+   "r": "Flatly denies any wrong.",
+   "t": [
+    "no",
+    "no",
+    "no",
+    "no",
+    "no",
+    "not"
+   ]
+  },
+  "09": {
+   "s": [
+    "wrong",
+    "treat unjustly",
+    "do injustice to",
+    "cheat"
+   ],
+   "r": "The owner denies that paying the agreed sum treats the worker unjustly.",
+   "n": "Abbott-Smith's transitive sense, 'to wrong someone'. The verb is built on ἄδικος, unjust, so the YLT's 'I do no unrighteousness' keeps the root picture.",
+   "t": [
+    "I do ... wrong",
+    "I doe ... wrong",
+    "I do ... wrong",
+    "I do ... wrong",
+    "I do ... unrighteousness",
+    "I am ... being unfair"
+   ]
+  },
+  "10": {
+   "s": [
+    "you"
+   ],
+   "r": "The worker who complained.",
+   "t": [
+    "thee",
+    "thee",
+    "thee",
+    "thee",
+    "to thee",
+    "to you"
+   ]
+  },
+  "11": {
+   "s": [
+    "not",
+    "surely"
+   ],
+   "r": "Turns the question into one that expects the answer yes.",
+   "n": "Abbott-Smith: a strengthened 'not', used more often in questions where an affirmative answer is expected. The owner is reminding him, not asking.",
+   "t": [
+    "not",
+    "not",
+    "not",
+    "not",
+    "not",
+    "not"
+   ]
+  },
+  "12": {
+   "s": [
+    "for a denarius",
+    "for one denarius",
+    "at a denarius"
+   ],
+   "r": "The day's pay the worker had agreed to.",
+   "n": "Abbott-Smith: the Latin denarius, a Roman coin nearly equal to the drachma. The genitive here gives the price agreed on. The KJV's 'penny' and the ASV's 'shilling' put a coin of their own day in its place.",
+   "t": [
+    "for a penny",
+    "for a penie",
+    "for a penny",
+    "for a shilling",
+    "for a denary",
+    "on one denarius"
+   ]
+  },
+  "13": {
+   "s": [
+    "agree",
+    "make an agreement",
+    "settle terms"
+   ],
+   "r": "The worker had accepted the terms before he started.",
+   "n": "Abbott-Smith gives the proper sense as 'to agree in sound, be in harmony', and the figurative sense 'to agree with'. English 'symphony' comes from the same Greek.",
+   "t": [
+    "didst ... agree",
+    "didst ... agree",
+    "didst ... agree",
+    "didst ... agree",
+    "didst ... agree",
+    "Did ... agree"
+   ]
+  },
+  "14": {
+   "s": [
+    "with me"
+   ],
+   "r": "The owner himself was the other party to the agreement.",
+   "t": [
+    "with me",
+    "with me",
+    "with me",
+    "with me",
+    "with me",
+    "with me"
+   ]
+  }
+ },
+ "tr_note": "The Textus Receptus has εἶπεν, 'said', at another place in the sentence."
+}

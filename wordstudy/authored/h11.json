@@ -1,0 +1,89 @@
+{
+ "id": "h11",
+ "en": [
+  {"t": "For", "w": ["02"]}, " ",
+  {"t": "he was", "w": ["08"]}, " ",
+  {"t": "still", "w": ["01"]}, " ",
+  {"t": "in", "w": ["03"]}, " ",
+  {"t": "the", "w": ["04"]}, " ",
+  {"t": "loins", "w": ["05"]}, " ",
+  {"t": "of his", "w": ["06"]}, " ",
+  {"t": "father", "w": ["07"]}, " ",
+  {"t": "when", "w": ["09"]}, " ",
+  {"t": "Melchizedek", "w": ["13"]}, " ",
+  {"t": "met", "w": ["10"]}, " ",
+  {"t": "him", "w": ["11"]}, "."
+ ],
+ "words": {
+  "01": {
+   "s": ["still", "yet", "as yet"],
+   "r": "At that time he had not yet been born.",
+   "n": "Abbott-Smith lists this verse under 'of the past', usually with an imperfect verb, as here.",
+   "t": ["yet", "yet", "yet", "yet", "yet", "still"]
+  },
+  "02": {
+   "s": ["for", "because"],
+   "r": "Gives the reason for what was just claimed about Levi.",
+   "n": "The claim it explains is that of Hebrews 7:9: Levi gave the tenth through Abraham.",
+   "t": ["For", "For", "For", "for", "for", "For"]
+  },
+  "03": {
+   "s": ["in", "within"],
+   "r": "Inside his ancestor, as an unborn descendant.",
+   "t": ["in", "in", "in", "in", "in", "in"]
+  },
+  "04": {
+   "s": ["the"],
+   "r": "Marks the loins of a particular man.",
+   "t": ["the", "the", "the", "the", "the", "the"]
+  },
+  "05": {
+   "s": ["loins", "body", "seed"],
+   "r": "The body as the source of descendants.",
+   "n": "Singular in Greek, 'loin'; English idiom says 'loins', and only the BSB keeps the singular. Abbott-Smith notes that the word is regarded, as by the Hebrews, as the seat of generative power, and cites this verse and Hebrews 7:5.",
+   "t": ["loins", "loynes", "loins", "loins", "loins", "loin"]
+  },
+  "06": {
+   "s": ["of his", "of the"],
+   "r": "The article, here doing the work of 'his'; 'of' comes from the genitive case.",
+   "n": "Literally 'of the father', as the YLT has it.",
+   "t": ["of his", "of his", "of his", "of his", "of the", "of his"]
+  },
+  "07": {
+   "s": ["father", "ancestor", "forefather"],
+   "r": "The forefather in whose body Levi still was: Abraham.",
+   "n": "Abbott-Smith's first sense is the male parent; here the word reaches back several generations, so the BSB writes 'ancestor' and the Geneva adds 'Abraham'. That Abraham is meant follows from the next clause, where Melchizedek meets him.",
+   "t": ["father", "father Abraham", "father", "father", "father", "ancestor"]
+  },
+  "08": {
+   "s": ["he was", "he existed"],
+   "r": "Levi, the subject carried over from what precedes.",
+   "n": "The Greek leaves the subject inside the verb; the BSB names Levi. The imperfect describes a state that held at that time.",
+   "t": ["he was", "hee was", "he was", "he was", "he was", "Levi was"]
+  },
+  "09": {
+   "s": ["when", "at the time that"],
+   "r": "Sets the time: the meeting of Melchizedek and Abraham.",
+   "t": ["when", "when", "when", "when", "when", "when"]
+  },
+  "10": {
+   "s": ["met", "came to meet", "met with"],
+   "r": "Melchizedek met Abraham.",
+   "n": "Abbott-Smith gives 'to meet with', with the person met in the dative, and cites this verse and Hebrews 7:1 for that use.",
+   "t": ["met", "met", "met", "met", "met", "met"]
+  },
+  "11": {
+   "s": ["him"],
+   "r": "Abraham, the one Melchizedek met.",
+   "n": "The BSB writes the name 'Abraham' for the pronoun.",
+   "t": ["him", "him", "him", "him", "him", "Abraham"]
+  },
+  "13": {
+   "s": ["Melchizedek"],
+   "r": "The priest-king who met Abraham.",
+   "n": "Abbott-Smith gives the Hebrew form מַלְכִּי־צֶדֶק and notes that the Greek name does not change its ending.",
+   "t": ["Melchisedec", "Melchi-sedec", "Melchisedech", "Melchizedek", "Melchisedek", "Melchizedek"]
+  }
+ },
+ "tr_note": "The Textus Receptus puts the article before the name, ὁ Μελχισεδέκ, 'the Melchizedek'. Greek often does this with names and English does not, so the difference does not show in the KJV."
+}

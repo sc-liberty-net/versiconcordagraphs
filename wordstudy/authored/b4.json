@@ -1,0 +1,323 @@
+{
+ "id": "b4",
+ "en": [
+  {
+   "t": "There were",
+   "w": [
+    "03"
+   ]
+  },
+  " ",
+  {
+   "t": "two",
+   "w": [
+    "01"
+   ]
+  },
+  " ",
+  {
+   "t": "debtors",
+   "w": [
+    "02"
+   ]
+  },
+  " to ",
+  {
+   "t": "a certain",
+   "w": [
+    "05"
+   ]
+  },
+  " ",
+  {
+   "t": "moneylender",
+   "w": [
+    "04"
+   ]
+  },
+  ": ",
+  {
+   "t": "the",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "one",
+   "w": [
+    "07"
+   ]
+  },
+  " ",
+  {
+   "t": "owed",
+   "w": [
+    "08"
+   ]
+  },
+  " ",
+  {
+   "t": "five hundred",
+   "w": [
+    "10"
+   ]
+  },
+  " ",
+  {
+   "t": "denarii",
+   "w": [
+    "09"
+   ]
+  },
+  ", ",
+  {
+   "t": "and",
+   "w": [
+    "12"
+   ]
+  },
+  " ",
+  {
+   "t": "the",
+   "w": [
+    "11"
+   ]
+  },
+  " ",
+  {
+   "t": "other",
+   "w": [
+    "13"
+   ]
+  },
+  " ",
+  {
+   "t": "fifty",
+   "w": [
+    "14"
+   ]
+  },
+  "."
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "two"
+   ],
+   "r": "Two debtors, set side by side for comparison.",
+   "t": [
+    "two",
+    "two",
+    "two",
+    "two",
+    "Two",
+    "Two"
+   ]
+  },
+  "02": {
+   "s": [
+    "debtors",
+    "people in debt",
+    "borrowers"
+   ],
+   "r": "People who owe money to the lender.",
+   "n": "Abbott-Smith explains the word as a compound of χρέος, a debt, and ὀφειλέτης, the ordinary word for a debtor. English has one word for both, so 'debtor' renders each.",
+   "t": [
+    "debtors",
+    "detters",
+    "debtors",
+    "debtors",
+    "debtors",
+    "debtors"
+   ]
+  },
+  "03": {
+   "s": [
+    "there were",
+    "were",
+    "had"
+   ],
+   "r": "The verb 'to be' with a dative: the debtors 'were to' the lender, that is, they were his.",
+   "n": "Greek says the debtors were 'to' the lender, a common way of expressing whose they were. The KJV, Geneva, DRC and ASV turn it round: the lender 'had' two debtors.",
+   "t": [
+    "had",
+    "had",
+    "had",
+    "had",
+    "were",
+    "were"
+   ]
+  },
+  "04": {
+   "s": [
+    "moneylender",
+    "lender",
+    "creditor"
+   ],
+   "r": "A man who lends money, and is owed it.",
+   "n": "Abbott-Smith defines it as 'a money-lender' and lists only this verse for it in the New Testament. He refers the reader to δανείζω, the verb 'to lend'. The 'to' before it in our English comes from its dative case.",
+   "t": [
+    "creditor",
+    "lender",
+    "creditor",
+    "lender",
+    "creditor",
+    "moneylender"
+   ]
+  },
+  "05": {
+   "s": [
+    "a certain",
+    "some",
+    "a"
+   ],
+   "r": "An unnamed lender: the story does not need to say who.",
+   "t": [
+    "a certain",
+    "a certaine",
+    "A certain",
+    "A certain",
+    "a certain",
+    "a certain"
+   ]
+  },
+  "06": {
+   "s": [
+    "the"
+   ],
+   "r": "With 'one', picks out the first of the pair.",
+   "t": [
+    "the",
+    "the",
+    "the",
+    "the",
+    "the",
+    null
+   ]
+  },
+  "07": {
+   "s": [
+    "one",
+    "first"
+   ],
+   "r": "The first of the two debtors.",
+   "t": [
+    "one",
+    "one",
+    "one",
+    "one",
+    "one",
+    "One"
+   ]
+  },
+  "08": {
+   "s": [
+    "owed",
+    "was owing",
+    "was in debt for"
+   ],
+   "r": "The amount he owed to the lender.",
+   "n": "The imperfect tense: a debt that stood over him, not a single act. The YLT's 'was owing' shows the form.",
+   "t": [
+    "owed",
+    "ought",
+    "owed",
+    "owed",
+    "was owing",
+    "owed"
+   ]
+  },
+  "09": {
+   "s": [
+    "denarii",
+    "silver coins",
+    "Roman coins"
+   ],
+   "r": "Roman silver coins.",
+   "n": "Abbott-Smith describes the denarius as a Roman coin nearly equal in value to the Greek drachma. The KJV's 'pence' and the ASV's 'shillings' substitute coins familiar to their own readers.",
+   "t": [
+    "pence",
+    "pence",
+    "pence",
+    "shillings",
+    "denaries",
+    "denarii"
+   ]
+  },
+  "10": {
+   "s": [
+    "five hundred"
+   ],
+   "r": "The larger debt, ten times the other.",
+   "t": [
+    "five hundred",
+    "fiue hundreth",
+    "five hundred",
+    "five hundred",
+    "five hundred",
+    "five hundred"
+   ]
+  },
+  "11": {
+   "s": [
+    "the"
+   ],
+   "r": "With 'other', picks out the second of the pair.",
+   "t": [
+    "the",
+    "the",
+    "the",
+    "the",
+    "the",
+    "the"
+   ]
+  },
+  "12": {
+   "s": [
+    "and",
+    "but",
+    "while"
+   ],
+   "r": "Sets the second debtor against the first.",
+   "t": [
+    "and",
+    "and",
+    "and",
+    "and",
+    "and",
+    "and"
+   ]
+  },
+  "13": {
+   "s": [
+    "other",
+    "second"
+   ],
+   "r": "The second of the two debtors.",
+   "n": "Abbott-Smith notes that this word properly denotes the second of a pair, and with the article, 'the other' of two, as here.",
+   "t": [
+    "other",
+    "other",
+    "other",
+    "other",
+    "other",
+    "other"
+   ]
+  },
+  "14": {
+   "s": [
+    "fifty"
+   ],
+   "r": "The smaller debt. The verb 'owed' is understood from the first half.",
+   "t": [
+    "fifty",
+    "fiftie",
+    "fifty",
+    "fifty",
+    "fifty",
+    "fifty"
+   ]
+  }
+ }
+}

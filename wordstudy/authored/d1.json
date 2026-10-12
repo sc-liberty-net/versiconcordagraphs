@@ -1,0 +1,776 @@
+{
+ "id": "d1",
+ "en": [
+  {
+   "t": "And there shall come",
+   "w": [
+    "01"
+   ]
+  },
+  " ",
+  {
+   "t": "the Levite",
+   "w": [
+    "02"
+   ]
+  },
+  ", ",
+  {
+   "t": "because",
+   "w": [
+    "03"
+   ]
+  },
+  " ",
+  {
+   "t": "he has",
+   "w": [
+    "05"
+   ]
+  },
+  " ",
+  {
+   "t": "no",
+   "w": [
+    "04"
+   ]
+  },
+  " ",
+  {
+   "t": "portion",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "and inheritance",
+   "w": [
+    "07"
+   ]
+  },
+  " ",
+  {
+   "t": "with you",
+   "w": [
+    "08"
+   ]
+  },
+  ", ",
+  {
+   "t": "and the sojourner",
+   "w": [
+    "09"
+   ]
+  },
+  " ",
+  {
+   "t": "and the fatherless",
+   "w": [
+    "10"
+   ]
+  },
+  " ",
+  {
+   "t": "and the widow",
+   "w": [
+    "11"
+   ]
+  },
+  " ",
+  {
+   "t": "who",
+   "w": [
+    "12"
+   ]
+  },
+  " ",
+  {
+   "t": "are in your gates",
+   "w": [
+    "13"
+   ]
+  },
+  "; ",
+  {
+   "t": "and they shall eat",
+   "w": [
+    "14"
+   ]
+  },
+  " ",
+  {
+   "t": "and be satisfied",
+   "w": [
+    "15"
+   ]
+  },
+  ", ",
+  {
+   "t": "so that",
+   "w": [
+    "16"
+   ]
+  },
+  " ",
+  {
+   "t": "the LORD",
+   "w": [
+    "18"
+   ]
+  },
+  " ",
+  {
+   "t": "your God",
+   "w": [
+    "19"
+   ]
+  },
+  " ",
+  {
+   "t": "may bless you",
+   "w": [
+    "17"
+   ]
+  },
+  " ",
+  {
+   "t": "in all",
+   "w": [
+    "20"
+   ]
+  },
+  " ",
+  {
+   "t": "the work of",
+   "w": [
+    "21"
+   ]
+  },
+  " ",
+  {
+   "t": "your hand",
+   "w": [
+    "22"
+   ]
+  },
+  " ",
+  {
+   "t": "that",
+   "w": [
+    "23"
+   ]
+  },
+  " ",
+  {
+   "t": "you do",
+   "w": [
+    "24"
+   ]
+  },
+  "."
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "shall come",
+    "will come",
+    "may come",
+    "shall come in"
+   ],
+   "r": "The Levite and the others are to come and share the stored tithe.",
+   "n": "The verb is singular, agreeing with the Levite, who stands first; the sojourner, fatherless and widow are added after him. The form is a perfect with 'and', which carries on the instruction of the verse before into the future.",
+   "t": [
+    "And ... shall come",
+    "Then ... shall come",
+    "And ... shall come",
+    "And ... shall come",
+    "and ... shall come",
+    "and come in hath",
+    "Then ... may come"
+   ]
+  },
+  "02": {
+   "s": [
+    "the Levite",
+    "the Levites"
+   ],
+   "r": "A member of the tribe of Levi, set apart for the sanctuary.",
+   "n": "BDB notes that with the article the word can stand as a collective, for Levites as a class, which suits this law.",
+   "t": [
+    "the Levite",
+    "ye Leuite",
+    "the Levite",
+    "the Levite",
+    "the Levite",
+    "the Levite",
+    "the Levite"
+   ]
+  },
+  "03": {
+   "s": [
+    "because",
+    "for",
+    "since"
+   ],
+   "r": "Gives the reason the Levite is included.",
+   "n": "The DRC turns the clause into a description, 'the Levite that hath no other part'.",
+   "t": [
+    "because",
+    "because",
+    "that",
+    "because",
+    "because",
+    "for",
+    "because"
+   ]
+  },
+  "04": {
+   "s": [
+    "no",
+    "not",
+    "there is not"
+   ],
+   "r": "Denies that he holds any share of land.",
+   "n": "Gesenius gives the word's base sense as nothing, emptiness, and notes that it often includes the verb 'to be': 'there is not'.",
+   "t": [
+    "no",
+    "no",
+    "no other",
+    "no",
+    "no",
+    "no",
+    "no"
+   ]
+  },
+  "05": {
+   "s": [
+    "he has",
+    "to him",
+    "belonging to him"
+   ],
+   "r": "Marks the Levite as the one who lacks the share.",
+   "n": "Literally 'there is not to him a portion': Hebrew has no verb 'have' and uses 'to' with the owner instead.",
+   "t": [
+    "he hath",
+    "he hath",
+    "hath",
+    "he hath",
+    "he hath",
+    "he hath",
+    "he has"
+   ]
+  },
+  "06": {
+   "s": [
+    "portion",
+    "share",
+    "part",
+    "allotment"
+   ],
+   "r": "A share of the land, such as the other tribes received.",
+   "n": "The brief's lexicon lists portion, share, and a tract or parcel of land; BDB gives portion, tract, territory.",
+   "t": [
+    "part",
+    "part",
+    "part",
+    "portion",
+    "portion",
+    "part",
+    "portion"
+   ]
+  },
+  "07": {
+   "s": [
+    "inheritance",
+    "possession",
+    "heritage"
+   ],
+   "r": "Land held by a family and passed down within it.",
+   "n": "Gesenius gives possession, domain, and notes that the word is often used of the territory in the land assigned to each tribe. That is what the Levite lacks.",
+   "t": [
+    "nor inheritance",
+    "nor inheritance",
+    "nor possession",
+    "nor inheritance",
+    "nor inheritance",
+    "and inheritance",
+    "or inheritance"
+   ]
+  },
+  "08": {
+   "s": [
+    "with you",
+    "among you",
+    "alongside you"
+   ],
+   "r": "Alongside the landholding Israelite addressed by the law.",
+   "n": "The 'you' is singular, as through the whole verse: the law addresses each Israelite as one person.",
+   "t": [
+    "with thee",
+    "with thee",
+    "with thee",
+    "with thee",
+    "with thee",
+    "with thee",
+    "among you"
+   ]
+  },
+  "09": {
+   "s": [
+    "resident foreigner",
+    "sojourner",
+    "stranger",
+    "immigrant"
+   ],
+   "r": "Someone living in Israel who was not born into it.",
+   "n": "Gesenius: a sojourner, stranger, foreigner, a person living out of his own country. BDB: a temporary dweller, a newcomer with no inherited rights.",
+   "t": [
+    "and the stranger",
+    "and the stranger",
+    "and the stranger",
+    "and the stranger",
+    "and the sojourner",
+    "and the sojourner",
+    "the foreigner"
+   ]
+  },
+  "10": {
+   "s": [
+    "fatherless child",
+    "orphan"
+   ],
+   "r": "A child without a father to provide for them.",
+   "n": "Gesenius cites this verse for the word and notes that it is used of a child who has lost only its father, so 'fatherless' is more exact than 'orphan'.",
+   "t": [
+    "and the fatherless",
+    "and the fatherlesse",
+    "and the fatherless",
+    "and the fatherless",
+    "and the fatherless",
+    "and the fatherless",
+    "the fatherless"
+   ]
+  },
+  "11": {
+   "s": [
+    "widow"
+   ],
+   "r": "A woman without a husband to provide for her.",
+   "t": [
+    "and the widow",
+    "and the widowe",
+    "and the widow",
+    "and the widow",
+    "and the widow",
+    "and the widow",
+    "and the widow"
+   ]
+  },
+  "12": {
+   "s": [
+    "who",
+    "that",
+    "which"
+   ],
+   "r": "Introduces where these people live.",
+   "t": [
+    "which",
+    "which",
+    "that",
+    "that",
+    "that",
+    "who",
+    null
+   ]
+  },
+  "13": {
+   "s": [
+    "in your gates",
+    "within your gates",
+    "in your towns"
+   ],
+   "r": "Living in your towns.",
+   "n": "Hebrew has no 'are' here; the clause is verbless. The brief's lexicon notes that 'gate' can stand for the space inside the gate, and so for the city or town; the Greek translators wrote 'in your cities'.",
+   "t": [
+    "are within thy gates",
+    "are within thy gates",
+    "are within thy gates",
+    "are within thy gates",
+    "are within thy gates",
+    "are within thy gates",
+    "within your gates"
+   ]
+  },
+  "14": {
+   "s": [
+    "eat",
+    "feed"
+   ],
+   "r": "They eat from the stored tithe.",
+   "n": "A perfect with 'and', like the verb that opens the verse, so future: 'they shall eat'. YLT renders the perfect form literally, 'they have eaten'.",
+   "t": [
+    "and shall eat",
+    "and shall eate",
+    "and shall eat",
+    "and shall eat",
+    "and shall eat",
+    "and they have eaten",
+    "and eat"
+   ]
+  },
+  "15": {
+   "s": [
+    "be satisfied",
+    "be filled",
+    "have enough",
+    "eat their fill"
+   ],
+   "r": "They eat until they have had enough.",
+   "n": "BDB: be sated, satisfied, especially with food.",
+   "t": [
+    "and be satisfied",
+    "and be filled",
+    "and be filled",
+    "and be satisfied",
+    "and be satisfied",
+    "and been satisfied",
+    "and be satisfied"
+   ]
+  },
+  "16": {
+   "s": [
+    "so that",
+    "in order that"
+   ],
+   "r": "Gives the purpose of the law.",
+   "n": "The BSB turns the purpose into a promise, 'And the LORD your God will bless you'.",
+   "t": [
+    "that",
+    "that",
+    "that",
+    "that",
+    "that",
+    "so that",
+    "And"
+   ]
+  },
+  "17": {
+   "s": [
+    "bless",
+    "prosper",
+    "favour"
+   ],
+   "r": "God's blessing is tied to feeding those without land.",
+   "n": "Gesenius puts 'to bend the knees, to kneel' first among this verb's senses, ahead of 'to bless'.",
+   "t": [
+    "may bless thee",
+    "may blesse thee",
+    "may bless thee",
+    "may bless thee",
+    "may bless thee",
+    "doth bless thee",
+    "will bless you"
+   ]
+  },
+  "18": {
+   "s": [
+    "the LORD",
+    "Yahweh",
+    "Jehovah",
+    "HaShem"
+   ],
+   "r": "The personal name of Israel's God.",
+   "t": [
+    "the Lord",
+    "the Lord",
+    "the Lord",
+    "HaShem",
+    "Jehovah",
+    "Jehovah",
+    "the LORD"
+   ]
+  },
+  "19": {
+   "s": [
+    "your God"
+   ],
+   "r": "Your own God.",
+   "n": "The form is plural but the meaning is singular.",
+   "t": [
+    "thy God",
+    "thy God",
+    "thy God",
+    "thy G-d",
+    "thy God",
+    "thy God",
+    "your God"
+   ]
+  },
+  "20": {
+   "s": [
+    "in all",
+    "in every",
+    "in the whole of"
+   ],
+   "r": "No part of your work is left out of the blessing.",
+   "t": [
+    "in all",
+    "in al",
+    "in all",
+    "in all",
+    "in all",
+    "in all",
+    "in all"
+   ]
+  },
+  "21": {
+   "s": [
+    "work",
+    "labour",
+    "undertaking",
+    "what you make"
+   ],
+   "r": "Everything you do and produce.",
+   "n": "Gesenius calls this noun the noun of action of the verb that ends the verse, so 'the work ... that you do' repeats one root.",
+   "t": [
+    "the work",
+    "the worke",
+    "the works",
+    "the work",
+    "the work",
+    "the work",
+    "the work"
+   ]
+  },
+  "22": {
+   "s": [
+    "hand",
+    "hands"
+   ],
+   "r": "The hand that does the work.",
+   "n": "Here the noun is singular, 'your hand'. The DRC and BSB make it plural.",
+   "t": [
+    "thine hand",
+    "thine hand",
+    "thy hands",
+    "thy hand",
+    "thy hand",
+    "thy hand",
+    "your hands"
+   ]
+  },
+  "23": {
+   "s": [
+    "that",
+    "which"
+   ],
+   "r": "Introduces the work you do.",
+   "t": [
+    "which",
+    "which",
+    "that",
+    "which",
+    "which",
+    "which",
+    null
+   ]
+  },
+  "24": {
+   "s": [
+    "you do",
+    "you make",
+    "you work at"
+   ],
+   "r": "Whatever you set your hand to.",
+   "n": "Gesenius gives the verb's first sense as to labour, to work about anything, and then to make. The BSB leaves this clause out.",
+   "t": [
+    "thou doest",
+    "thou doest",
+    "thou shalt do",
+    "thou doest",
+    "thou doest",
+    "thou dost",
+    null
+   ]
+  }
+ },
+ "lxx": {
+  "01": {
+   "i": [
+    0,
+    1
+   ],
+   "m": 1
+  },
+  "02": {
+   "i": [
+    2,
+    3
+   ],
+   "m": 3,
+   "lemma": "Λευίτης",
+   "strong": "G3019",
+   "n": "Dictionary form supplied by hand: the matched data gives λευείτης."
+  },
+  "03": {
+   "i": [
+    4
+   ],
+   "m": 4
+  },
+  "04": {
+   "i": [
+    5,
+    6
+   ],
+   "m": 5,
+   "n": "οὐκ ἔστιν, 'there is not', matches the Hebrew idiom exactly."
+  },
+  "05": {
+   "i": [
+    7
+   ],
+   "m": 7
+  },
+  "06": {
+   "i": [
+    8
+   ],
+   "m": 8
+  },
+  "07": {
+   "i": [
+    9,
+    10
+   ],
+   "m": 10,
+   "n": "κλῆρος means a lot, and so a share assigned by lot."
+  },
+  "08": {
+   "i": [
+    11,
+    12
+   ],
+   "m": 11
+  },
+  "09": {
+   "i": [
+    13,
+    14,
+    15
+   ],
+   "m": 15
+  },
+  "10": {
+   "i": [
+    16,
+    17,
+    18
+   ],
+   "m": 18
+  },
+  "11": {
+   "i": [
+    19,
+    20,
+    21
+   ],
+   "m": 21,
+   "n": "The first word, printed κα in our Greek text, is καὶ cut short."
+  },
+  "12": {
+   "i": [
+    22
+   ],
+   "m": 22,
+   "n": "The Greek uses the article, 'the one in your cities', where the Hebrew has 'who'."
+  },
+  "13": {
+   "i": [
+    23,
+    24,
+    25,
+    26
+   ],
+   "m": 25,
+   "n": "The Greek says 'in your cities' for 'in your gates'. The first word, printed ἱέν in our Greek text, is evidently ἐν, 'in'."
+  },
+  "14": {
+   "i": [
+    27,
+    28
+   ],
+   "m": 28,
+   "lemma": "ἐσθίω",
+   "strong": "G2068",
+   "n": "Dictionary form supplied by hand: the matched data gives φάγω."
+  },
+  "15": {
+   "i": [
+    29,
+    30
+   ],
+   "m": 30,
+   "lemma": "ἐμπίμπλημι",
+   "strong": "G1705",
+   "n": "Dictionary form supplied by hand: the matched data gives none. The Greek says 'they shall be filled'."
+  },
+  "16": {
+   "i": [
+    31
+   ],
+   "m": 31
+  },
+  "17": {
+   "i": [
+    32,
+    33
+   ],
+   "m": 32
+  },
+  "18": {
+   "i": [
+    34
+   ],
+   "m": 34
+  },
+  "19": {
+   "i": [
+    35,
+    36,
+    37
+   ],
+   "m": 36
+  },
+  "20": {
+   "i": [
+    38,
+    39
+   ],
+   "m": 39
+  },
+  "21": {
+   "i": [
+    40,
+    41
+   ],
+   "m": 41,
+   "n": "The Greek has 'in all the works', with no 'of your hand'."
+  },
+  "23": {
+   "i": [
+    42
+   ],
+   "m": 42
+  },
+  "24": {
+   "i": [
+    43,
+    44
+   ],
+   "m": 44,
+   "n": "With ἐὰν before it, 'whatever you do'."
+  }
+ }
+}

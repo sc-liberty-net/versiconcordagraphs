@@ -1,0 +1,42 @@
+{
+ "id": "h8",
+ "en": [
+  {"t": "For", "w": ["02"]}, ", ",
+  {"t": "the", "w": ["03"]}, " ",
+  {"t": "priesthood", "w": ["04"]}, " ",
+  {"t": "being changed", "w": ["01"]}, ", ",
+  {"t": "of", "w": ["05"]}, " ",
+  {"t": "necessity", "w": ["06"]}, " ",
+  {"t": "a change", "w": ["09"]}, " ",
+  {"t": "of law", "w": ["08"]}, " ",
+  {"t": "also", "w": ["07"]}, " ",
+  {"t": "takes place", "w": ["10"]}, "."
+ ],
+ "words": {
+  "01": {"s": ["being changed", "being transferred", "when it is changed"], "r": "Present passive participle: while, or when, the priesthood is being changed.",
+         "n": "Abbott-Smith gives two senses, to transfer to another place and to change, and files this verse under 'to change'. The construction is a genitive absolute, which sets the scene for the main clause; 'when the priesthood is changed' is the plain English sense. The DRC's 'translated' keeps the older sense of carrying across.",
+         "t": ["being changed", "be changed", "being translated", "being changed", "being changed", "is changed"]},
+  "02": {"s": ["for"], "r": "Gives the reason behind the question of Hebrews 7:11.",
+         "t": ["For", "For", "For", "For", "for", "For"]},
+  "03": {"s": ["the"], "r": "The priesthood just discussed, the Levitical one.",
+         "t": ["the", "the", "the", "the", "the", "the"]},
+  "04": {"s": ["priesthood", "priestly order"], "r": "The Levitical priesthood.",
+         "n": "The same word, ἱερωσύνη, as in Hebrews 7:11.",
+         "t": ["priesthood", "Priesthood", "priesthood", "priesthood", "priesthood", "priesthood"]},
+  "05": {"s": ["of", "out of", "by"], "r": "With 'necessity', forms the phrase 'of necessity'.",
+         "t": ["of", "of", null, "of", "of", null]},
+  "06": {"s": ["necessity", "compulsion"], "r": "The change of law follows by necessity, not by choice.",
+         "n": "Abbott-Smith lists the phrase ἐξ ἀνάγκης, 'of necessity', with this verse.",
+         "t": ["necessity", "necessitie", "it is necessary", "necessity", "necessity", "must"]},
+  "07": {"s": ["also", "as well", "too"], "r": "The law changes along with the priesthood.",
+         "t": ["also", null, "also", "also", "also", "as well"]},
+  "08": {"s": ["of law", "of the law"], "r": "The law bound up with the Levitical priesthood.",
+         "n": "There is no article in the Greek: 'of law'. Most translations supply 'the', and the context makes clear that the law of Moses is meant.",
+         "t": ["of the law", "of the Lawe", "of the law", "of the law", "of the law", "the law"]},
+  "09": {"s": ["a change", "an alteration", "a transfer"], "r": "An alteration of what had been established.",
+         "n": "The noun of the verb that opens the verse, so the Greek repeats itself: the priesthood being changed, a change of law. Abbott-Smith files this verse under 'change, as of that which has been established'.",
+         "t": ["a change", "a change", "a translation", "a change", "a change", "be changed"]},
+  "10": {"s": ["takes place", "comes about", "happens", "occurs"], "r": "Present tense: the change follows as a matter of course.",
+         "t": ["there is made", "there be", "be made", "there is made", "doth come", null]}
+ }
+}

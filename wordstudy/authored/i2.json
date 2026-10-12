@@ -1,0 +1,38 @@
+{
+ "id": "i2",
+ "en": [
+  {"t": "And", "w": ["01"]}, " ",
+  {"t": "all", "w": ["03"]}, " ",
+  {"t": "were going", "w": ["02"]}, " ",
+  {"t": "to be registered", "w": ["04"]}, ", ",
+  {"t": "each", "w": ["05"]}, " ",
+  {"t": "to", "w": ["06"]}, " ",
+  {"t": "his own", "w": ["08"]}, " ",
+  {"t": "city", "w": ["09", "07"]}, "."
+ ],
+ "words": {
+  "01": {"s": ["and", "so"], "r": "Continues the account of the registration.",
+         "t": ["And", "Therefore", "And", "And", "and", "And"]},
+  "02": {"s": ["were going", "were travelling", "went", "set out"], "r": "People were on the move, each to his own city.",
+         "n": "The verb is imperfect, describing the travel as it was going on; the YLT keeps this with 'were going'. Abbott-Smith notes that in the New Testament the verb is always middle, to go, proceed, go on one's way.",
+         "t": ["went", "went", "went", "went", "were going", "went"]},
+  "03": {"s": ["all", "everyone", "all people"], "r": "Everyone the decree applied to.",
+         "t": ["all", "all", "all", "all", "all", "everyone"]},
+  "04": {"s": ["to be registered", "to register", "to be enrolled", "to enrol themselves"], "r": "To have their names entered on the official list.",
+         "n": "Abbott-Smith gives 'to enrol' and, for the middle, 'to enrol oneself', citing this verse; the form here can be middle or passive. The word is about writing names on a register, not about paying. The KJV and Geneva's 'to be taxed' names what such a census was likely for, but that is an inference the word itself does not state.",
+         "t": ["to be taxed", "to be taxed", "to be enrolled", "to enrol themselves", "to be enrolled", "to register"]},
+  "05": {"s": ["each", "every one", "each one"], "r": "Each person individually, after the 'all' of the first half.",
+         "t": ["every one", "euery man", "every one", "every one", "each", null]},
+  "06": {"s": ["to", "into"], "r": "The destination of each journey.",
+         "t": ["into", "to", "into", "to", "to", "to"]},
+  "07": {"s": ["the"], "r": "Greek puts the article before 'his own city'; English does not.",
+         "t": [null, null, null, null, null, null]},
+  "08": {"s": ["his own", "his"], "r": "The city each person belonged to.",
+         "n": "A reflexive pronoun, literally 'of himself'. The YLT's 'his proper city' is an older English way of saying his own.",
+         "t": ["his own", "his owne", "his own", "his own", "his proper", "his own"]},
+  "09": {"s": ["city", "town"], "r": "The place each person was to register.",
+         "n": "Abbott-Smith sets this word against κῶμαι, villages. The BSB's 'town' is a looser rendering.",
+         "t": ["city", "Citie", "city", "city", "city", "town"]}
+ },
+ "tr_note": "Where our text has ἑαυτοῦ, 'his own' (literally 'of himself'), the Textus Receptus reads ἰδίαν, also 'his own'. The meaning is the same, so the KJV's 'his own city' does not show the difference."
+}

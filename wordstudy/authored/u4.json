@@ -1,0 +1,375 @@
+{
+ "id": "u4",
+ "en": [
+  {
+   "t": "You shall not charge interest",
+   "w": [
+    "02",
+    "01"
+   ]
+  },
+  " ",
+  {
+   "t": "to your brother",
+   "w": [
+    "03"
+   ]
+  },
+  ": ",
+  {
+   "t": "interest on",
+   "w": [
+    "04"
+   ]
+  },
+  " ",
+  {
+   "t": "silver",
+   "w": [
+    "05"
+   ]
+  },
+  ", ",
+  {
+   "t": "interest on",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "food",
+   "w": [
+    "07"
+   ]
+  },
+  ", ",
+  {
+   "t": "interest on",
+   "w": [
+    "08"
+   ]
+  },
+  " ",
+  {
+   "t": "any",
+   "w": [
+    "09"
+   ]
+  },
+  " ",
+  {
+   "t": "thing",
+   "w": [
+    "10"
+   ]
+  },
+  " ",
+  {
+   "t": "that",
+   "w": [
+    "11"
+   ]
+  },
+  " ",
+  {
+   "t": "bears interest",
+   "w": [
+    "12"
+   ]
+  },
+  "."
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "not",
+    "never"
+   ],
+   "r": "A flat prohibition.",
+   "t": [
+    "not",
+    "not",
+    "not",
+    "not",
+    "not",
+    "not",
+    "not"
+   ]
+  },
+  "02": {
+   "s": [
+    "charge interest",
+    "make pay interest",
+    "lend at interest"
+   ],
+   "r": "To make a fellow Israelite pay interest on a loan.",
+   "t": [
+    "Thou shalt ... lend upon usury",
+    "Thou shalt ... giue to vsurie",
+    "Thou shalt ... lend ... to usury",
+    "Thou shalt ... lend upon interest",
+    "Thou shalt ... lend upon interest",
+    "Thou dost ... lend in usury",
+    "Do ... charge ... interest"
+   ],
+   "n": "The verb from which the noun 'interest' comes, in its causative form: the brief's lexicon gives 'to make to give interest'. Gesenius gives the first sense as TO BITE, as a serpent, then metaphorically to vex, to oppress, and to lend on usury, citing Deut. 23:20 (this verse in the Hebrew numbering, evidently, since the English numbers it one lower). He adds that receiving interest was thought to mark a sordid person and an oppressor of the weak."
+  },
+  "03": {
+   "s": [
+    "to your brother",
+    "to your kinsman",
+    "to your fellow Israelite"
+   ],
+   "r": "A fellow Israelite, counted as family.",
+   "t": [
+    "to thy brother",
+    "to thy brother",
+    "to thy brother",
+    "to thy brother",
+    "to thy brother",
+    "to thy brother",
+    "your brother"
+   ],
+   "n": "The brief's lexicon lists brother of the same parents, relative, and one of the same tribe; STEPBible's gloss here is 'countryman'."
+  },
+  "04": {
+   "s": [
+    "interest on",
+    "interest of"
+   ],
+   "r": "The first of three kinds of interest the law names.",
+   "t": [
+    "usury of",
+    "as vsurie of",
+    null,
+    "interest of",
+    "interest of",
+    "usury of",
+    null
+   ],
+   "n": "Literally 'interest of silver': the noun is joined to the next word. The verse repeats the noun three times, so that no kind of loan is left out."
+  },
+  "05": {
+   "s": [
+    "silver",
+    "money"
+   ],
+   "r": "Silver used as money.",
+   "t": [
+    "money",
+    "money",
+    "money",
+    "money",
+    "money",
+    "money",
+    "on money"
+   ],
+   "n": "Gesenius gives the first sense as silver, so called from its pale colour; our English keeps 'silver' throughout."
+  },
+  "06": {
+   "s": [
+    "interest on",
+    "interest of"
+   ],
+   "r": "The second kind: interest on food lent.",
+   "t": [
+    "usury of",
+    "vsurie of",
+    null,
+    "interest of",
+    "interest of",
+    "usury of",
+    null
+   ]
+  },
+  "07": {
+   "s": [
+    "food",
+    "grain",
+    "provisions"
+   ],
+   "r": "Food lent, to be repaid with more.",
+   "t": [
+    "victuals",
+    "meate",
+    "nor corn",
+    "victuals",
+    "victuals",
+    "food",
+    "food"
+   ],
+   "n": "Gesenius gives first an eating, then food, especially corn, grain, provision."
+  },
+  "08": {
+   "s": [
+    "interest on",
+    "interest of"
+   ],
+   "r": "The third kind, covering everything else.",
+   "t": [
+    "usury of",
+    "vsurie of",
+    null,
+    "interest of",
+    "interest of",
+    "usury of",
+    null
+   ]
+  },
+  "09": {
+   "s": [
+    "any",
+    "every"
+   ],
+   "r": "Leaves nothing out.",
+   "t": [
+    "any",
+    "any",
+    "nor any other",
+    "any",
+    "anything",
+    "anything",
+    "or any other"
+   ]
+  },
+  "10": {
+   "s": [
+    "thing",
+    "matter"
+   ],
+   "r": "Anything at all that might be lent.",
+   "t": [
+    "thing",
+    "thing",
+    "thing",
+    "thing",
+    null,
+    null,
+    "type"
+   ],
+   "n": "The word's first senses are word and speech, but it is also the ordinary word for a thing or matter. The ASV and YLT fold it into 'anything'."
+  },
+  "11": {
+   "s": [
+    "that",
+    "which"
+   ],
+   "r": "Introduces what the thing does.",
+   "t": [
+    "that",
+    "that",
+    null,
+    "that",
+    "that",
+    "which",
+    null
+   ]
+  },
+  "12": {
+   "s": [
+    "bears interest",
+    "is lent at interest",
+    "earns interest"
+   ],
+   "r": "Anything on which interest could be charged.",
+   "t": [
+    "is lent upon usury",
+    "is put to vsurie",
+    null,
+    "is lent upon interest",
+    "is lent upon interest",
+    "is lent on usury",
+    "of loan"
+   ],
+   "n": "The same verb as at the start of the verse, now in its plain form, which the brief's lexicon gives as 'to give interest'. With 'thing' as its subject it reads 'that yields interest'; it can also be taken impersonally, 'on which one pays interest'. Most translations make it passive, 'that is lent upon usury'."
+  }
+ },
+ "lxx": {
+  "_extra": {
+   "7": "καὶ (and): added by the Greek translators between the kinds of interest.",
+   "10": "καὶ (and): added again before the third kind."
+  },
+  "01": {
+   "i": [
+    0
+   ],
+   "m": 0
+  },
+  "02": {
+   "i": [
+    1
+   ],
+   "m": 1,
+   "n": "ἐκτοκίζω, to lend at interest, built on τόκος, interest."
+  },
+  "03": {
+   "i": [
+    2,
+    3,
+    4
+   ],
+   "m": 3
+  },
+  "04": {
+   "i": [
+    5
+   ],
+   "m": 5,
+   "n": "τόκος, interest; the Greek repeats it three times, as the Hebrew does."
+  },
+  "05": {
+   "i": [
+    6
+   ],
+   "m": 6
+  },
+  "06": {
+   "i": [
+    8
+   ],
+   "m": 8
+  },
+  "07": {
+   "i": [
+    9
+   ],
+   "m": 9,
+   "n": "βρῶμα, food, here plural."
+  },
+  "08": {
+   "i": [
+    11
+   ],
+   "m": 11
+  },
+  "09": {
+   "i": [
+    12
+   ],
+   "m": 12
+  },
+  "10": {
+   "i": [
+    13
+   ],
+   "m": 13,
+   "n": "πρᾶγμα, a thing, a matter."
+  },
+  "11": {
+   "i": [
+    14,
+    15
+   ],
+   "m": 14,
+   "n": "οὗ ἂν, 'whatever'."
+  },
+  "12": {
+   "i": [
+    16
+   ],
+   "m": 16,
+   "n": "ἐκδανείζω, to lend out. The Greek changes the person: 'whatever you lend', where the Hebrew has 'that bears interest'."
+  }
+ }
+}

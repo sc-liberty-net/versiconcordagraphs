@@ -1,0 +1,406 @@
+{
+ "id": "v8",
+ "en": [
+  {
+   "t": "so that",
+   "w": [
+    "01"
+   ]
+  },
+  " ",
+  {
+   "t": "your",
+   "w": [
+    "03"
+   ]
+  },
+  " ",
+  {
+   "t": "alms",
+   "w": [
+    "05",
+    "04"
+   ]
+  },
+  " ",
+  {
+   "t": "may be",
+   "w": [
+    "02"
+   ]
+  },
+  " ",
+  {
+   "t": "in",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "secret",
+   "w": [
+    "08",
+    "07"
+   ]
+  },
+  "; ",
+  {
+   "t": "and",
+   "w": [
+    "09"
+   ]
+  },
+  " ",
+  {
+   "t": "your",
+   "w": [
+    "12"
+   ]
+  },
+  " ",
+  {
+   "t": "Father",
+   "w": [
+    "11",
+    "10"
+   ]
+  },
+  ", ",
+  {
+   "t": "the one",
+   "w": [
+    "13"
+   ]
+  },
+  " ",
+  {
+   "t": "seeing",
+   "w": [
+    "14"
+   ]
+  },
+  " ",
+  {
+   "t": "in",
+   "w": [
+    "15"
+   ]
+  },
+  " ",
+  {
+   "t": "secret",
+   "w": [
+    "17",
+    "16"
+   ]
+  },
+  ", ",
+  {
+   "t": "will give back",
+   "w": [
+    "19"
+   ]
+  },
+  " ",
+  {
+   "t": "to you",
+   "w": [
+    "20"
+   ]
+  },
+  "."
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "so that",
+    "in order that",
+    "that"
+   ],
+   "r": "States the purpose of giving in secret.",
+   "t": [
+    "That",
+    "That",
+    "That",
+    "that",
+    "that",
+    "so that"
+   ]
+  },
+  "02": {
+   "s": [
+    "may be",
+    "might be"
+   ],
+   "r": "Subjunctive: what the giver is to aim at.",
+   "t": [
+    "may be",
+    "may be",
+    "may be",
+    "may be",
+    "may be",
+    "may be"
+   ]
+  },
+  "03": {
+   "s": [
+    "your"
+   ],
+   "r": "Singular: each giver's own alms.",
+   "t": [
+    "thine",
+    "thine",
+    "thy",
+    "thine",
+    "thy",
+    "your"
+   ]
+  },
+  "04": {
+   "s": [
+    "the"
+   ],
+   "r": "Article; English uses 'your'.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "05": {
+   "s": [
+    "alms",
+    "almsgiving",
+    "giving"
+   ],
+   "r": "The giver's alms.",
+   "n": "The same word as in Matthew 6:2; the YLT renders it 'kindness', the BSB 'giving'. Abbott-Smith lists this verse for the sense 'almsgiving, alms'.",
+   "t": [
+    "alms",
+    "almes",
+    "alms",
+    "alms",
+    "kindness",
+    "giving"
+   ]
+  },
+  "06": {
+   "s": [
+    "in"
+   ],
+   "r": "Where the alms are done.",
+   "t": [
+    "in",
+    "in",
+    "in",
+    "in",
+    "in",
+    "in"
+   ]
+  },
+  "07": {
+   "s": [
+    "the"
+   ],
+   "r": "Article with the adjective used as a noun.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "08": {
+   "s": [
+    "secret",
+    "hiding",
+    "private",
+    "the hidden place"
+   ],
+   "r": "Done where no one else sees.",
+   "n": "Literally 'in the hidden', the neuter adjective used as a noun; Abbott-Smith lists the phrase ἐν τῷ κρυπτῷ at this verse.",
+   "t": [
+    "secret",
+    "secret",
+    "secret",
+    "secret",
+    "secret",
+    "secret"
+   ]
+  },
+  "09": {
+   "s": [
+    "and"
+   ],
+   "r": "Adds the Father's response.",
+   "t": [
+    "and",
+    "and",
+    "and",
+    "and",
+    "and",
+    "And"
+   ]
+  },
+  "10": {
+   "s": [
+    "the"
+   ],
+   "r": "Article; English uses 'your'.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "11": {
+   "s": [
+    "Father"
+   ],
+   "r": "God, the giver's Father.",
+   "t": [
+    "Father",
+    "Father",
+    "Father",
+    "Father",
+    "Father",
+    "Father"
+   ]
+  },
+  "12": {
+   "s": [
+    "your"
+   ],
+   "r": "Singular: each giver's Father.",
+   "t": [
+    "thy",
+    "thy",
+    "thy",
+    "thy",
+    "thy",
+    "your"
+   ]
+  },
+  "13": {
+   "s": [
+    "the one",
+    "who",
+    "he who"
+   ],
+   "r": "The article turns 'seeing' into a description of the Father.",
+   "t": [
+    "which",
+    "that",
+    "who",
+    "who",
+    "who",
+    "who"
+   ]
+  },
+  "14": {
+   "s": [
+    "seeing",
+    "who sees",
+    "watching"
+   ],
+   "r": "Present participle: he goes on seeing.",
+   "t": [
+    "seeth",
+    "seeth",
+    "seeth",
+    "seeth",
+    "is seeing",
+    "sees"
+   ]
+  },
+  "15": {
+   "s": [
+    "in"
+   ],
+   "r": "Where he sees.",
+   "t": [
+    "in",
+    "in",
+    "in",
+    "in",
+    "in",
+    "in"
+   ]
+  },
+  "16": {
+   "s": [
+    "the"
+   ],
+   "r": "Article with the adjective used as a noun.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "17": {
+   "s": [
+    "secret",
+    "hiding",
+    "private",
+    "the hidden place"
+   ],
+   "r": "What is done where no one else sees.",
+   "n": "The same phrase as earlier in the verse: what the giver hides, the Father sees.",
+   "t": [
+    "secret",
+    "secret",
+    "secret",
+    "secret",
+    "secret",
+    "secret"
+   ]
+  },
+  "19": {
+   "s": [
+    "will give back",
+    "will repay",
+    "will reward",
+    "will pay"
+   ],
+   "r": "The Father will pay the giver what is due.",
+   "n": "Abbott-Smith gives 'to give up or back', and especially of wages and debts, 'to render what is due, to pay'. This study's fixed rendering is 'give back'; the translations write 'reward', 'repay' or 'recompense'.",
+   "t": [
+    "shall reward",
+    "will rewarde",
+    "will repay",
+    "shall recompense",
+    "shall reward",
+    "will reward"
+   ]
+  },
+  "20": {
+   "s": [
+    "to you",
+    "you"
+   ],
+   "r": "Singular: to the giver.",
+   "t": [
+    "thee",
+    "thee",
+    "thee",
+    "thee",
+    "thee",
+    "you"
+   ]
+  }
+ },
+ "tr_note": "The Textus Receptus adds αὐτὸς, 'himself', and, at the end, ἐν τῷ φανερῷ, 'in the open'. That is why the KJV reads 'himself shall reward thee openly', with the Geneva's 'openly' and the YLT's 'Himself ... manifestly'; the DRC, ASV and BSB have neither."
+}

@@ -1,0 +1,144 @@
+{
+ "id": "h1",
+ "en": [
+  {"t": "To whom", "w": ["01"]}, " ",
+  {"t": "also", "w": ["02"]}, " ",
+  {"t": "Abraham", "w": ["07"]}, " ",
+  {"t": "apportioned", "w": ["06"]}, " a ",
+  {"t": "tenth", "w": ["03"]}, " ",
+  {"t": "from", "w": ["04"]}, " ",
+  {"t": "all", "w": ["05"]}, ", ",
+  {"t": "first", "w": ["08", "09"]}, " ",
+  {"t": "being interpreted", "w": ["10"]}, " ‘",
+  {"t": "king", "w": ["11"]}, " ",
+  {"t": "of righteousness", "w": ["12"]}, ",’ ",
+  {"t": "and", "w": ["14"]}, " ",
+  {"t": "then", "w": ["13"]}, " ",
+  {"t": "also", "w": ["15"]}, " ‘",
+  {"t": "king", "w": ["16"]}, " ",
+  {"t": "of Salem", "w": ["17"]}, ",’ ",
+  {"t": "which", "w": ["18"]}, " ",
+  {"t": "is", "w": ["19"]}, " ‘",
+  {"t": "king", "w": ["20"]}, " ",
+  {"t": "of peace", "w": ["21"]}, ",’"
+ ],
+ "words": {
+  "01": {
+   "s": ["to whom", "to him"],
+   "r": "Points back to Melchizedek, the one who received the tenth.",
+   "n": "A relative pronoun in the dative: the person something is given to. The BSB starts a new clause, 'to him'.",
+   "t": ["To whom", "To whom", "To whom", "to whom", "to whom", "to him"]
+  },
+  "02": {
+   "s": ["also", "even", "and"],
+   "r": "Adds the giving of the tenth to what has already been said of Melchizedek.",
+   "t": ["also", "also", "also", "also", "also", "and"]
+  },
+  "03": {
+   "s": ["tenth", "tenth part", "tithe"],
+   "r": "The tenth part of what Abraham had taken, set apart for Melchizedek.",
+   "n": "The brief's entry is for the adjective δέκατος, 'tenth'; here its feminine stands alone as a noun, 'a tenth (part)'. Abbott-Smith notes that the Septuagint uses the word for Hebrew מַעֲשֵׂר. This study keeps 'tenth' for this Greek word and 'tithe' for the Hebrew one, as in Hebrews 7:8.",
+   "t": ["a tenth part", "the tithe", "the tithes", "a tenth part", "a tenth", "a tenth"]
+  },
+  "04": {
+   "s": ["from", "of", "out of"],
+   "r": "Marks the whole from which the tenth was taken.",
+   "t": ["of", "of", "of", "of", "of", "of"]
+  },
+  "05": {
+   "s": ["all", "everything", "all things"],
+   "r": "Everything Abraham had, or had taken; the verse does not say which.",
+   "n": "Plural and neuter: 'all things'. The verse leaves open whether the whole of Abraham's goods or the whole of the spoils is meant; Hebrews 7:4 speaks of the spoils.",
+   "t": ["all", "all things", "all", "all", "all", "everything"]
+  },
+  "06": {
+   "s": ["apportioned", "divided", "gave as a share", "assigned"],
+   "r": "Abraham marked off a portion and gave it to Melchizedek.",
+   "n": "The verb is built on the noun for a part or share, and Abbott-Smith's first sense is 'to divide'. The KJV and Geneva say simply 'gave'; the DRC, ASV and YLT keep 'divided'. 'Apportioned' keeps the idea of a share handed over.",
+   "t": ["gave", "gaue", "divided", "divided", "did ... divide", "apportioned"]
+  },
+  "07": {
+   "s": ["Abraham"],
+   "r": "The patriarch, who gave the tenth.",
+   "t": ["Abraham", "Abraham", "Abraham", "Abraham", "Abraham", "Abraham"]
+  },
+  "08": {
+   "s": ["first", "in the first place", "to begin with"],
+   "r": "The first of two things the writer draws out of Melchizedek's titles.",
+   "n": "Paired with 'then' later in the verse: first one title, then another.",
+   "t": ["first", "first", "first", "first", "first", "First"]
+  },
+  "09": {
+   "s": ["indeed", "on the one hand"],
+   "r": "Marks 'first' as the first half of a pair answered by 'then'.",
+   "n": "Abbott-Smith calls this particle 'generally untranslatable'. Here 'first ... then' already carries the pairing, so it has no English of its own. In Hebrews 7:8 it is rendered 'on the one hand'.",
+   "t": [null, null, "indeed", null, "indeed", null]
+  },
+  "10": {
+   "s": ["being interpreted", "by interpretation", "translated", "whose name means"],
+   "r": "Melchizedek's name and title are put into Greek for the reader.",
+   "n": "A present passive participle: he is 'being interpreted', that is, his name is rendered in another language. Abbott-Smith gives the senses 'to explain' and 'to interpret', and lists this verse under the second. The BSB turns it into 'his name means'.",
+   "t": ["being by interpretation", "is by interpretation", "by interpretation is", "being ... by interpretation", "being interpreted", "his name means"]
+  },
+  "11": {
+   "s": ["king"],
+   "r": "The first part of the meaning drawn from the name.",
+   "t": ["King", "King", "king", "King", "King", "king"]
+  },
+  "12": {
+   "s": ["of righteousness", "of justice", "of what is right"],
+   "r": "Righteousness is what this king is named for.",
+   "n": "Abbott-Smith notes that the Septuagint uses this word chiefly for Hebrew צֶדֶק and its cognates. That is likely the Hebrew word the writer hears in the name Melchizedek, though the name is not spelled out in Hebrew on this page. The DRC's 'justice' follows the Latin.",
+   "t": ["of righteousness", "of righteousnes", "of justice", "of righteousness", "of righteousness", "of righteousness"]
+  },
+  "13": {
+   "s": ["then", "next", "after that", "thereafter"],
+   "r": "The second item after 'first'.",
+   "n": "Abbott-Smith classes it as an adverb of sequence and lists this verse among those where it answers 'first'.",
+   "t": ["after that", "after that", "then", "then", "then", "Then"]
+  },
+  "14": {
+   "s": ["and", "but"],
+   "r": "Joins the second title to the first.",
+   "t": ["and", null, "and", "and", "and", null]
+  },
+  "15": {
+   "s": ["also", "too"],
+   "r": "He is king of Salem as well as king of righteousness.",
+   "t": ["also", "also", "also", "also", "also", "also"]
+  },
+  "16": {
+   "s": ["king"],
+   "r": "His title as ruler of a place.",
+   "t": ["King", "King", "king", "King", "King", "king"]
+  },
+  "17": {
+   "s": ["of Salem"],
+   "r": "The place Melchizedek ruled.",
+   "n": "Abbott-Smith gives the Hebrew form, שָׁלֵם, citing the Genesis account where the name first stands.",
+   "t": ["of Salem", "of Salem", "of Salem", "of Salem", "of Salem", "of Salem"]
+  },
+  "18": {
+   "s": ["which", "that"],
+   "r": "Points back to the title 'king of Salem', which is about to be explained.",
+   "n": "Neuter, so it refers to the title or name, not to the man.",
+   "t": ["which", "that", "that", "which", "which", null]
+  },
+  "19": {
+   "s": ["is", "means"],
+   "r": "Introduces the meaning of the title.",
+   "t": ["is", "is", "is", "is", "is", "means"]
+  },
+  "20": {
+   "s": ["king"],
+   "r": "The title restated in its meaning.",
+   "t": ["King", "King", "king", "King", "King", "king"]
+  },
+  "21": {
+   "s": ["of peace"],
+   "r": "Peace is what the name Salem is taken to mean.",
+   "n": "Abbott-Smith notes that the Septuagint uses this word chiefly for Hebrew שָׁלוֹם. Set beside his Hebrew for Salem, שָׁלֵם, the likely reason for the explanation is that the two Hebrew words share their letters; that is an inference, not something the verse states.",
+   "t": ["of peace", "of peace", "of peace", "of peace", "of Peace", "of peace"]
+  }
+ }
+}

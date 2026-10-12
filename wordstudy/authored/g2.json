@@ -1,0 +1,126 @@
+{
+ "id": "g2",
+ "en": [
+  {"t": "And this stone", "w": ["01", "02"]}, ", ",
+  {"t": "which", "w": ["03"]}, " ",
+  {"t": "I have set up", "w": ["04"]}, " ",
+  {"t": "as a pillar", "w": ["05"]}, ", ",
+  {"t": "shall be", "w": ["06"]}, " ",
+  {"t": "the house of", "w": ["07"]}, " ",
+  {"t": "God", "w": ["08"]}, "; ",
+  {"t": "and all", "w": ["09"]}, " ",
+  {"t": "that", "w": ["10"]}, " ",
+  {"t": "you give", "w": ["11"]}, " ",
+  {"t": "to me", "w": ["12"]}, ", ",
+  {"t": "I will surely tithe it", "w": ["14", "13"]}, " ",
+  {"t": "to you", "w": ["15"]}, "."
+ ],
+ "words": {
+  "01": {
+   "s": ["stone", "rock"],
+   "r": "The stone Jacob has just stood upright.",
+   "n": "Gesenius: a stone of any kind, rough or polished, very large or very small. The Hebrew order is 'and the stone, this'; English puts 'this' first.",
+   "t": ["And ... stone", "And ... stone", "And ... stone", "and ... stone", "then ... stone", "then ... stone", "And ... stone"]
+  },
+  "02": {
+   "s": ["this", "this one"],
+   "r": "Points to the stone in front of him.",
+   "n": "In Hebrew the word 'this' takes the article when it describes a noun: 'the stone, the this'.",
+   "t": ["this", "this", "this", "this", "this", "this", "this"]
+  },
+  "03": {
+   "s": ["which", "that"],
+   "r": "Introduces what Jacob did with the stone.",
+   "n": "The BSB leaves it unexpressed: 'this stone I have set up'.",
+   "t": ["which", "which", "which", "which", "which", "which", null]
+  },
+  "04": {
+   "s": ["set up", "set", "placed", "made"],
+   "r": "He stood the stone on end.",
+   "n": "Gesenius gives the general sense TO PUT, TO SET, TO PLACE. With a second noun, 'pillar', it means to set something up as that thing.",
+   "t": ["I have set", "I haue set vp", "I have set up", "I have set up", "I have set up", "I have made", "I have set up"]
+  },
+  "05": {
+   "s": ["pillar", "standing stone", "memorial stone"],
+   "r": "A stone set upright as a marker.",
+   "n": "Gesenius: something set upright, specially a pillar, citing Genesis 28:18, 22, and also a statue or idol image. Hebrew has no 'as': the noun stands beside the verb. The DRC's 'title' likely follows the Latin titulus, a marker or monument.",
+   "t": ["for a pillar", "as a pillar", "for a title", "for a pillar", "for a pillar", "a standing pillar", "as a pillar"]
+  },
+  "06": {
+   "s": ["shall be", "will be", "will become"],
+   "r": "Part of Jacob's vow: what the stone will become.",
+   "t": ["shall be", "shall be", "shall be called", "shall be", "shall be", "is", "will be"]
+  },
+  "07": {
+   "s": ["house of", "dwelling of", "temple of"],
+   "r": "A place where God dwells.",
+   "n": "Gesenius notes that this word is very often prefixed to the names of towns, as in Bethel. 'House of God' echoes the name of the place; the link is plain in the story, but drawing it here is our reading.",
+   "t": ["house", "house", "the house", "house", "house", "a house", "house"]
+  },
+  "08": {
+   "s": ["God"],
+   "r": "God.",
+   "n": "The form is plural but the meaning is singular.",
+   "t": ["God’s", "Gods", "of God", "G-d's", "God’s", "of God", "God’s"]
+  },
+  "09": {
+   "s": ["and all", "and everything", "and of all"],
+   "r": "Everything God will give Jacob.",
+   "n": "The phrase stands first for emphasis, and the 'it' at the end of the vow picks it up again. Most translations add 'of': 'of all that you give'.",
+   "t": ["and of all", "and of all", "and of all things", "and of all", "and of all", "and all", "and of all"]
+  },
+  "10": {
+   "s": ["that", "which"],
+   "r": "Introduces what God gives.",
+   "t": ["that", "that", "that", "that", "that", "that", "that"]
+  },
+  "11": {
+   "s": ["you give", "you will give"],
+   "r": "Whatever God will give him.",
+   "n": "The verb is imperfect, so it can be 'you give' or 'you will give'.",
+   "t": ["thou shalt give", "thou shalt giue", "thou shalt give", "Thou shalt give", "thou shalt give", "Thou dost give", "You give"]
+  },
+  "12": {
+   "s": ["to me", "me"],
+   "r": "Jacob, the receiver.",
+   "t": ["me", "me", "to me", "me", "me", "to me", "me"]
+  },
+  "13": {
+   "s": ["surely", "certainly", "tithing"],
+   "r": "Makes the promise emphatic.",
+   "n": "Literally 'tithing': the same verb repeated before itself, 'tithing I will tithe it'. Hebrew uses this doubling for emphasis, which English gives as 'surely'. YLT keeps the doubling.",
+   "t": ["surely", null, null, "surely", "surely", "tithing", "surely"]
+  },
+  "14": {
+   "s": ["I will tithe it", "I will give a tenth of it", "I will give a tithe of it"],
+   "r": "Jacob vows a tenth of all he receives.",
+   "n": "Gesenius gives this form of the verb as to give the tenth part; the brief's lexicon, to give a tithe. The ending 'it' refers back to 'all that you give me'.",
+   "t": ["I will ... give the tenth", "wil I giue the tenth", "I will offer tithes", "I will ... give the tenth", "I will ... give the tenth", "I tithe", "I will ... give ... a tenth"]
+  },
+  "15": {
+   "s": ["to you", "you"],
+   "r": "God, to whom the vow is made.",
+   "t": ["unto thee", "vnto thee", "to thee", "unto Thee", "unto thee", "to Thee", "You"]
+  }
+ },
+ "lxx": {
+  "_extra": {
+   "8": "μοι (to me): added by the Greek translators, 'shall be to me a house of God'."
+  },
+  "01": {"i": [0, 1, 2], "m": 2},
+  "02": {"i": [3], "m": 3},
+  "03": {"i": [4], "m": 4},
+  "04": {"i": [5], "m": 5, "lemma": "ἵστημι", "strong": "G2476", "n": "Dictionary form supplied; the brief gives none. ἔστησα, 'I set up, made stand'."},
+  "05": {"i": [6], "m": 6, "n": "στήλη, a standing stone or monument."},
+  "06": {"i": [7], "m": 7},
+  "07": {"i": [9], "m": 9},
+  "08": {"i": [10], "m": 10},
+  "09": {"i": [11, 12], "m": 12},
+  "10": {"i": [13, 14], "m": 13, "n": "ὧν ἐάν, 'whatever'."},
+  "11": {"i": [16], "m": 16, "lemma": "δίδωμι", "strong": "G1325", "n": "Dictionary form supplied; the brief gives none."},
+  "12": {"i": [15], "m": 15},
+  "13": {"i": [17], "m": 17, "n": "The Greek renders the Hebrew doubled verb with a noun and a verb: δεκάτην ἀποδεκατώσω, 'a tenth I will tithe'."},
+  "14": {"i": [18, 19], "m": 18, "n": "ἀποδεκατόω, 'to tithe, give a tenth'."},
+  "15": {"i": [20], "m": 20}
+ }
+}

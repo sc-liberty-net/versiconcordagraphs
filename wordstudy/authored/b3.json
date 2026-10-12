@@ -1,0 +1,343 @@
+{
+ "id": "b3",
+ "en": [
+  {
+   "t": "And",
+   "w": [
+    "01"
+   ]
+  },
+  " ",
+  {
+   "t": "having become angry",
+   "w": [
+    "02"
+   ]
+  },
+  ", ",
+  {
+   "t": "his",
+   "w": [
+    "05"
+   ]
+  },
+  " ",
+  {
+   "t": "master",
+   "w": [
+    "04",
+    "03"
+   ]
+  },
+  " ",
+  {
+   "t": "handed",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "him",
+   "w": [
+    "07"
+   ]
+  },
+  " over ",
+  {
+   "t": "to the",
+   "w": [
+    "08"
+   ]
+  },
+  " ",
+  {
+   "t": "torturers",
+   "w": [
+    "09"
+   ]
+  },
+  " ",
+  {
+   "t": "until",
+   "w": [
+    "10",
+    "11"
+   ]
+  },
+  " ",
+  {
+   "t": "he should render",
+   "w": [
+    "12"
+   ]
+  },
+  " ",
+  {
+   "t": "all",
+   "w": [
+    "13"
+   ]
+  },
+  " ",
+  {
+   "t": "that",
+   "w": [
+    "14"
+   ]
+  },
+  " ",
+  {
+   "t": "was owed",
+   "w": [
+    "15"
+   ]
+  },
+  "."
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "and",
+    "so",
+    "then"
+   ],
+   "r": "Joins the master's response to what goes before.",
+   "t": [
+    "And",
+    "So",
+    "And",
+    "And",
+    "And",
+    null
+   ]
+  },
+  "02": {
+   "s": [
+    "having become angry",
+    "angered",
+    "in anger",
+    "enraged"
+   ],
+   "r": "The master's anger is roused by the slave's conduct.",
+   "n": "Abbott-Smith notes that the active means to make angry, and that in the New Testament the verb is always passive, to be provoked to anger; he cites this verse. The form is an aorist participle, marking the anger as arising before the master acts.",
+   "t": [
+    "was wroth",
+    "was wroth",
+    "being angry",
+    "was wroth",
+    "having been wroth",
+    "In anger"
+   ]
+  },
+  "03": {
+   "s": [
+    "the"
+   ],
+   "r": "With 'his', marks the slave's own master.",
+   "n": "Greek says 'the master of him'; English uses 'his' alone.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "04": {
+   "s": [
+    "master",
+    "lord",
+    "owner"
+   ],
+   "r": "The slave's owner, to whom the debt is owed.",
+   "n": "A human owner, so 'master' by this study's register. STEPBible tags this occurrence with the human sense.",
+   "t": [
+    "lord",
+    "Lord",
+    "lord",
+    "lord",
+    "lord",
+    "master"
+   ]
+  },
+  "05": {
+   "s": [
+    "his",
+    "of him"
+   ],
+   "r": "The master of the unforgiving slave.",
+   "t": [
+    "his",
+    "his",
+    "his",
+    "his",
+    "his",
+    "his"
+   ]
+  },
+  "06": {
+   "s": [
+    "handed over",
+    "delivered",
+    "gave over",
+    "turned over"
+   ],
+   "r": "He hands the slave into others' custody.",
+   "n": "Abbott-Smith's first sense is 'to give or hand over to another', with the person handed over in the accusative and the receiver in the dative, as here.",
+   "t": [
+    "delivered",
+    "deliuered",
+    "delivered",
+    "delivered",
+    "delivered",
+    "turned ... over"
+   ]
+  },
+  "07": {
+   "s": [
+    "him"
+   ],
+   "r": "The slave who would not forgive.",
+   "t": [
+    "him",
+    "him",
+    "him",
+    "him",
+    "him",
+    "him"
+   ]
+  },
+  "08": {
+   "s": [
+    "to the"
+   ],
+   "r": "The article; 'to' comes from the dative case of the noun.",
+   "t": [
+    "to the",
+    "to the",
+    "to the",
+    "to the",
+    "to the",
+    "to the"
+   ]
+  },
+  "09": {
+   "s": [
+    "torturers",
+    "jailers",
+    "tormentors",
+    "interrogators"
+   ],
+   "r": "Those who held and tortured prisoners.",
+   "n": "Abbott-Smith derives the noun from βασανίζω and gives its proper sense as 'a torturer', adding that here it is used of a gaoler, a jailer. This verse is its only occurrence in the New Testament. The BSB keeps both ideas: 'the jailers to be tortured'.",
+   "t": [
+    "tormentors",
+    "tormentours",
+    "torturers",
+    "tormentors",
+    "inquisitors",
+    "jailers ... to be tortured"
+   ]
+  },
+  "10": {
+   "s": [
+    "until",
+    "till"
+   ],
+   "r": "Sets the limit of the slave's confinement.",
+   "t": [
+    "till",
+    "till",
+    "until",
+    "till",
+    "till",
+    "until"
+   ]
+  },
+  "11": {
+   "s": [
+    "the time when",
+    "that"
+   ],
+   "r": "A relative word that, with 'until', forms the fixed phrase 'until the time that'.",
+   "n": "Literally 'until which (time)'. English needs only 'until', so this word has no English of its own.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "12": {
+   "s": [
+    "should render",
+    "should pay back",
+    "should repay",
+    "should pay"
+   ],
+   "r": "Paying back the whole debt is the condition of release.",
+   "n": "Literally 'give back'. Abbott-Smith notes its special use of wages, debts and the like: to render what is due, to pay. The subjunctive, usual after 'until' for an event still to come, does not say when, or whether, it will happen.",
+   "t": [
+    "he should pay",
+    "he should pay",
+    "he paid",
+    "he should pay",
+    "he might pay",
+    "he should repay"
+   ]
+  },
+  "13": {
+   "s": [
+    "all",
+    "the whole of",
+    "everything"
+   ],
+   "r": "The full amount, not a part.",
+   "t": [
+    "all",
+    "all",
+    "all",
+    "all",
+    "all",
+    "all"
+   ]
+  },
+  "14": {
+   "s": [
+    "that",
+    "the"
+   ],
+   "r": "The article makes the participle that follows into a noun: the thing owed.",
+   "t": [
+    "that",
+    "that",
+    "the",
+    "that",
+    "that",
+    "that"
+   ]
+  },
+  "15": {
+   "s": [
+    "was owed",
+    "was due",
+    "was owing"
+   ],
+   "r": "The sum still owed to the master.",
+   "n": "A present passive participle, literally 'the being-owed (amount)'. Abbott-Smith gives the passive of the verb as 'to be owed, to be due'.",
+   "t": [
+    "was due",
+    "was due",
+    "debt",
+    "was due",
+    "was owing",
+    "he owed"
+   ]
+  }
+ },
+ "tr_note": "The Textus Receptus adds αὐτῷ, 'to him', at the end of the verse. That is why the KJV, Geneva and YLT read 'due unto him', 'due to him' and 'owing to him'; the critical text ends with 'owed'."
+}

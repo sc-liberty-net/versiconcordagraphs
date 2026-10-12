@@ -1,0 +1,281 @@
+{
+ "id": "c10",
+ "en": [
+  {
+   "t": "And",
+   "w": [
+    "02"
+   ]
+  },
+  " ",
+  {
+   "t": "toll collectors",
+   "w": [
+    "04"
+   ]
+  },
+  " ",
+  {
+   "t": "also",
+   "w": [
+    "03"
+   ]
+  },
+  " ",
+  {
+   "t": "came",
+   "w": [
+    "01"
+   ]
+  },
+  " ",
+  {
+   "t": "to be baptized",
+   "w": [
+    "05"
+   ]
+  },
+  ", ",
+  {
+   "t": "and",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "they said",
+   "w": [
+    "07"
+   ]
+  },
+  " ",
+  {
+   "t": "to",
+   "w": [
+    "08"
+   ]
+  },
+  " ",
+  {
+   "t": "him",
+   "w": [
+    "09"
+   ]
+  },
+  ", ‘",
+  {
+   "t": "Teacher",
+   "w": [
+    "10"
+   ]
+  },
+  ", ",
+  {
+   "t": "what",
+   "w": [
+    "11"
+   ]
+  },
+  " ",
+  {
+   "t": "are we to do",
+   "w": [
+    "12"
+   ]
+  },
+  "?’"
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "came",
+    "arrived",
+    "came out"
+   ],
+   "r": "They come to John where he is baptizing.",
+   "n": "The verb stands first in the Greek: 'came also toll collectors'.",
+   "t": [
+    "came",
+    "came",
+    "came",
+    "came",
+    "came",
+    "came"
+   ]
+  },
+  "02": {
+   "s": [
+    "and",
+    "then",
+    "now"
+   ],
+   "r": "Moves on to a new group of enquirers.",
+   "t": [
+    "Then",
+    "Then",
+    "And",
+    "And",
+    "And",
+    null
+   ]
+  },
+  "03": {
+   "s": [
+    "also",
+    "even",
+    "too"
+   ],
+   "r": "Toll collectors came as well as others.",
+   "n": "The BSB's 'Even' reads surprise into the word: even these men came. That is a possible reading, but the word itself need mean no more than 'also'.",
+   "t": [
+    "also",
+    "also",
+    "also",
+    "also",
+    "also",
+    "Even"
+   ]
+  },
+  "04": {
+   "s": [
+    "toll collectors",
+    "tax gatherers",
+    "collectors of tolls"
+   ],
+   "r": "Men who collected tolls and taxes for the authorities.",
+   "n": "Abbott-Smith derives the word from τέλος and ὠνέομαι; the first is this study's 'toll', the second a verb meaning to buy. He gives two senses, a farmer of taxes (Latin publicanus, the source of the KJV's 'publicans') and a subordinate who collected taxes or tolls in a district, and lists this verse under the second. This study renders the word 'toll collector' throughout, to keep it apart from the words for tribute and census tax.",
+   "t": [
+    "publicans",
+    "Publicanes",
+    "publicans",
+    "publicans",
+    "tax-gatherers",
+    "tax collectors"
+   ]
+  },
+  "05": {
+   "s": [
+    "to be baptized",
+    "to be immersed"
+   ],
+   "r": "They come for John's baptism.",
+   "n": "Abbott-Smith gives the general sense of the verb as 'to dip, immerse, sink'. An aorist passive infinitive expressing purpose: they came in order to be baptized.",
+   "t": [
+    "to be baptized",
+    "to bee baptized",
+    "to be baptized",
+    "to be baptized",
+    "to be baptised",
+    "to be baptized"
+   ]
+  },
+  "06": {
+   "s": [
+    "and"
+   ],
+   "r": "Joins their question to their coming.",
+   "t": [
+    "and",
+    "and",
+    "and",
+    "and",
+    "and",
+    null
+   ]
+  },
+  "07": {
+   "s": [
+    "they said",
+    "they asked"
+   ],
+   "r": "They put their question to John.",
+   "t": [
+    "said",
+    "saide",
+    "said",
+    "they said",
+    "they said",
+    "they asked"
+   ]
+  },
+  "08": {
+   "s": [
+    "to"
+   ],
+   "r": "Directs their words to him.",
+   "t": [
+    "unto",
+    "vnto",
+    "to",
+    "unto",
+    "unto",
+    null
+   ]
+  },
+  "09": {
+   "s": [
+    "him"
+   ],
+   "r": "John, whom they address as 'Teacher'.",
+   "t": [
+    "him",
+    "him",
+    "him",
+    "him",
+    "him",
+    null
+   ]
+  },
+  "10": {
+   "s": [
+    "Teacher",
+    "Master",
+    "Rabbi"
+   ],
+   "r": "A respectful address to John as a teacher.",
+   "n": "Abbott-Smith notes that the word was used to render Hebrew רַבִּי, rabbi, and he cites this verse as its use of John the Baptist. The KJV's 'Master' is an older English word for a teacher.",
+   "t": [
+    "Master",
+    "Master",
+    "Master",
+    "Teacher",
+    "Teacher",
+    "Teacher"
+   ]
+  },
+  "11": {
+   "s": [
+    "what"
+   ],
+   "r": "Asks what action is required of them.",
+   "t": [
+    "what",
+    "what",
+    "what",
+    "what",
+    "what",
+    "what"
+   ]
+  },
+  "12": {
+   "s": [
+    "are we to do",
+    "should we do",
+    "must we do",
+    "shall we do"
+   ],
+   "r": "They ask what they ought to do.",
+   "n": "An aorist subjunctive in a question, which asks for direction: 'what are we to do?' The ASV's 'must' and the BSB's 'should' bring this out.",
+   "t": [
+    "shall we do",
+    "shall we doe",
+    "shall we do",
+    "must we do",
+    "shall we do",
+    "should we do"
+   ]
+  }
+ },
+ "tr_note": "The Textus Receptus reads ποιήσομεν, 'we will do', a future, where our text has ποιήσωμεν, 'are we to do', a deliberative subjunctive. The KJV's 'what shall we do' follows the future."
+}

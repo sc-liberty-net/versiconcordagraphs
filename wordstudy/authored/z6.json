@@ -1,0 +1,51 @@
+{
+ "id": "z6",
+ "en": [
+  {"t": "And every", "w": ["01"]}, " ",
+  {"t": "firstling of", "w": ["02"]}, " ",
+  {"t": "a donkey", "w": ["03"]}, " ",
+  {"t": "you shall redeem", "w": ["04"]}, " ",
+  {"t": "with a sheep", "w": ["05"]}, "; ",
+  {"t": "and if", "w": ["06"]}, " ",
+  {"t": "you do not redeem", "w": ["08", "07"]}, " ",
+  {"t": "it", "sup": "Supplied in English. The Hebrew verb has no object here."}, ", ",
+  {"t": "then you shall break its neck", "w": ["09"]}, ". ",
+  {"t": "And every", "w": ["10"]}, " ",
+  {"t": "firstborn of", "w": ["11"]}, " ",
+  {"t": "man", "w": ["12"]}, " ",
+  {"t": "among your sons", "w": ["13"]}, " ",
+  {"t": "you shall redeem", "w": ["14"]}, "."
+ ],
+ "words": {
+  "01": {"s": ["and every", "and all"], "r": "No firstling of a donkey is left out.", "t": ["And every", "But euery", null, "And every", "And every", "And every", "every"]},
+  "02": {"s": ["firstling of", "first offspring of", "firstborn of"], "r": "The first young a donkey bears.", "n": "The same word as 'one that opens (a womb)' in Numbers 18:15 on this page: BDB gives 'that which separates, first opens'. We render it 'firstling' here, where no word for 'womb' follows, and keep 'firstborn' for the different word later in this verse.", "t": ["firstling", "first foale", "The firstborn", "firstling", "firstling", "firstling", "firstborn"]},
+  "03": {"s": ["a donkey", "an ass", "a male donkey"], "r": "An unclean animal that could not be offered.", "n": "BDB: (he-)ass, valuable property, used for riding, as a beast of burden and in tillage.", "t": ["of an ass", "of an asse", "of an ass", "of an ass", "of an ass", "of an ass", "donkey"]},
+  "04": {"s": ["you shall redeem", "you shall ransom", "you shall buy back"], "r": "The donkey is bought back by giving a sheep in its place.", "n": "Gesenius gives the root sense TO LOOSE, and cites this verse for its first sense, to redeem by paying a price, with the price marked by 'with'. BDB: ransom, for an assessed price.", "t": ["thou shalt redeem", "thou shalt redeeme", "thou shalt change", "thou shalt redeem", "thou shalt redeem", "thou dost ransom", "You must redeem"]},
+  "05": {"s": ["with a sheep", "with a lamb", "with a kid", "with one of the flock"], "r": "One animal of the flock is the price.", "n": "Gesenius: a sheep or goat, a single animal of the flock. Most translations say 'a lamb'; the word does not itself say the animal is young.", "t": ["with a lamb", "with a lambe", "for a sheep", "with a lamb", "with a lamb", "with a lamb", "with a lamb"]},
+  "06": {"s": ["and if"], "r": "Opens the alternative.", "t": ["and if", "and if", "and if", "and if", "and if", "and if", "and if"]},
+  "07": {"s": ["not"], "r": "Negates the redeeming.", "t": ["not", "not", "not", "not", "not", "not", "not"]},
+  "08": {"s": ["redeem", "ransom", "buy back"], "r": "If the owner will not pay the sheep.", "t": ["thou wilt ... redeem it", "thou redeeme him", "thou do ... redeem it", "thou wilt ... redeem it", "thou wilt ... redeem it", "thou dost ... ransom it", "you do ... redeem it"]},
+  "09": {"s": ["then you shall break its neck", "then you shall kill it", "then you shall behead it"], "r": "The animal is killed, not kept and not sacrificed.", "n": "One Hebrew verb with 'and' and 'its' attached; the brief's lexicon and BDB give 'break the neck'. Gesenius connects the verb with the Hebrew word for the neck. The 'and' introduces the result, which English gives as 'then'.", "t": ["then thou shalt break his neck", "then thou shalt breake his necke", "thou shalt kill it", "then thou shalt break its neck", "then thou shalt break its neck", "then thou hast beheaded it", "you are to break its neck"]},
+  "10": {"s": ["and every", "and all"], "r": "No human firstborn is left out.", "t": ["and all", "likewise all", "And every", "and all", "and all", "and every", "And every"]},
+  "11": {"s": ["firstborn of", "first-born of", "eldest of"], "r": "The first son born.", "n": "Gesenius: first-born, of men or of animals; used of a man, it refers to the eldest son of a father.", "t": ["the firstborn", "the first borne", "firstborn", "the first-born", "the first-born", "first-born", "firstborn"]},
+  "12": {"s": ["man", "mankind", "human"], "r": "Human, as against the animal just named.", "n": "Gesenius notes this word has no plural and is very often used collectively for men, the human race.", "t": ["of man", "of man", "of men", "of man", "of man", "of man", null]},
+  "13": {"s": ["among your sons", "of your sons", "among your children"], "r": "Within your own family.", "t": ["among thy children", "among thy sonnes", null, "among thy sons", "among thy sons", "among thy sons", "of your sons"]},
+  "14": {"s": ["you shall redeem", "you shall ransom", "you shall buy back"], "r": "The firstborn son is bought back, not given up.", "n": "Geneva's 'bye out' is an old spelling of 'buy out', and the Douay-Rheims's 'redeem with a price' spells out the payment.", "t": ["shalt thou redeem", "shalt thou bye out", "thou shalt redeem with a price", "shalt thou redeem", "shalt thou redeem", "thou dost ransom", "you must redeem"]}
+ },
+ "lxx": {
+  "01": {"i": [0], "m": 0, "n": "The Greek has no 'and'."},
+  "02": {"i": [1, 2], "m": 1, "n": "διανοῖγον μήτραν, 'that opens the womb': the Greek spells out the picture in the Hebrew word."},
+  "03": {"i": [3], "m": 3},
+  "04": {"i": [4], "m": 4, "n": "ἀλλάσσω, 'to exchange': the Greek reads 'you shall exchange for a sheep', where the Hebrew says 'redeem with a sheep'. The Douay-Rheims's 'change' agrees."},
+  "05": {"i": [5], "m": 5, "n": "πρόβατον, 'sheep'."},
+  "06": {"i": [6, 7], "m": 6},
+  "07": {"i": [8], "m": 8},
+  "08": {"i": [9], "m": 9, "n": "Again ἀλλάσσω, 'exchange'."},
+  "09": {"i": [10, 11], "m": 10, "n": "λυτρόω, 'to ransom': the Greek reads 'if you do not exchange it, you shall ransom it', where the Hebrew says 'you shall break its neck'."},
+  "10": {"i": [12], "m": 12},
+  "11": {"i": [13, 14], "m": 13, "n": "Printed as two words, πρωτώ τόκον, in our Greek text: a machine-reading split of πρωτότοκον, 'firstborn'."},
+  "12": {"i": [15], "m": 15},
+  "13": {"i": [16, 17, 18], "m": 17},
+  "14": {"i": [19], "m": 19, "n": "λυτρόω, 'to ransom'."}
+ }
+}

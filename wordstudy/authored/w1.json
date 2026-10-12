@@ -1,0 +1,46 @@
+{
+ "id": "w1",
+ "en": [
+  {"t": "You shall not oppress", "w": ["02", "01"]}, " ",
+  {"t": "your neighbour", "w": ["04", "03"]}, ", ",
+  {"t": "and you shall not", "w": ["05"]}, " ",
+  {"t": "rob", "w": ["06"]}, ". ",
+  {"t": "The wage of", "w": ["09"]}, " ",
+  {"t": "a hired man", "w": ["10"]}, " ",
+  {"t": "shall not", "w": ["07"]}, " ",
+  {"t": "pass the night", "w": ["08"]}, " ",
+  {"t": "with you", "w": ["11"]}, " ",
+  {"t": "until", "w": ["12"]}, " ",
+  {"t": "morning", "w": ["13"]}, "."
+ ],
+ "words": {
+  "01": {"s": ["not", "do not"], "r": "A flat prohibition.", "t": ["not", "not", "not", "not", "not", "not", "not"]},
+  "02": {"s": ["oppress", "wrong", "defraud", "extort from"], "r": "To take advantage of your neighbour by force or unfair dealing.", "n": "Gesenius gives the first sense as TO OPPRESS, to treat anyone unjustly or violently; the brief's lexicon adds defraud and extort. The KJV and BSB choose 'defraud', which suits the wage law that follows.", "t": ["defraud", "do ... wrong", "calumniate", "oppress", "oppress", "oppress", "defraud"]},
+  "03": {"s": ["(object marker, no English equivalent)"], "r": "Marks 'your neighbour' as the object of 'oppress'.", "n": "This small word marks a definite direct object and has no English equivalent; it is counted here with 'your neighbour'.", "t": [null, null, null, null, null, null, null]},
+  "04": {"s": ["your neighbour", "your fellow", "your companion", "another person"], "r": "Anyone you live and deal with.", "n": "BDB: friend, companion, fellow, and in a weaker sense even another person with whom one stands in reciprocal relations.", "t": ["thy neighbour", "thy neighbour", "thy neighbour", "thy neighbour", "thy neighbor", "thy neighbour", "your neighbor"]},
+  "05": {"s": ["and you shall not", "nor", "and do not"], "r": "Adds a second prohibition.", "t": ["neither", "neither", "nor", "nor", "nor", "nor", "or"]},
+  "06": {"s": ["rob", "seize", "plunder", "take by force"], "r": "To take what is his by open force.", "n": "Gesenius gives the root picture as to strip off, as skin from flesh, and then to pluck away by open force. The Hebrew has no 'him'; YLT keeps that with 'nor take plunder'.", "t": ["rob him", "rob him", "oppress him by violence", "rob him", "rob him", "take plunder", "rob him"]},
+  "07": {"s": ["not", "shall not"], "r": "Negates the wage's staying overnight.", "t": ["not", "not", "not", "not", "not", "not", "not"]},
+  "08": {"s": ["pass the night", "stay overnight", "lodge", "remain"], "r": "The pay must not be kept back through the night.", "n": "Gesenius gives TO PASS THE NIGHT, TO LODGE, probably from the word for night. The verb is feminine, agreeing with 'wage': the wage itself is pictured lodging overnight in the employer's house.", "t": ["abide ... all night", "abide", "abide", "abide ... all night", "abide ... all night", "remain", "withhold"]},
+  "09": {"s": ["wage", "wages", "pay", "earnings"], "r": "What the labourer has earned by the day's work.", "n": "Gesenius gives two senses, what anyone does, his work, and then wages, citing this verse for the second. The Hebrew is singular; most translations say 'wages'.", "t": ["the wages", "hire", "The wages", "the wages", "the wages", "the wages", "the wages due"]},
+  "10": {"s": ["a hired man", "a hireling", "a hired worker", "a day labourer"], "r": "A man working for pay, not a member of the household.", "n": "Gesenius: a hireling, citing this verse. The brief's lexicon gives 'hired', and as a noun 'hireling, hired labourer'.", "t": ["of him that is hired", "The workemans", "of him that hath been hired by thee", "of a hired servant", "of a hired servant", "of the hireling", "a hired hand"]},
+  "11": {"s": ["with you", "in your keeping", "by you"], "r": "In the employer's hands.", "t": ["with thee", "with thee", "with thee", "with thee", "with thee", "with thee", null]},
+  "12": {"s": ["until", "till"], "r": "Sets the limit: not as late as the next morning.", "t": ["until", "vntil", "until", "until", "until", "till", "until"]},
+  "13": {"s": ["morning", "daybreak", "the next day"], "r": "The following morning.", "n": "Gesenius: morning, daybreak, dawn, so called from the breaking forth of light.", "t": ["the morning", "the morning", "the morning", "the morning", "the morning", "morning", "morning"]}
+ },
+ "lxx": {
+  "_extra": {"7": "καὶ (and): added by the Greek translators; the Hebrew has no 'and' before the second prohibition."},
+  "01": {"i": [0], "m": 0},
+  "02": {"i": [1], "m": 1, "n": "ἀδικέω, 'to wrong': the same verb the householder uses in Matthew 20:13, 'I do not wrong you'."},
+  "04": {"i": [2, 3], "m": 3, "n": "The Greek has no 'your': 'the neighbour'."},
+  "05": {"i": [4, 5], "m": 5},
+  "06": {"i": [6], "m": 6, "n": "ἁρπάζω, 'to snatch, seize'."},
+  "07": {"i": [8, 9], "m": 8, "n": "οὐ μή, the emphatic Greek negative: 'shall by no means'."},
+  "08": {"i": [10], "m": 10, "n": "κοιμάω, 'to lie down, sleep': 'the wage shall not sleep with you'."},
+  "09": {"i": [11, 12], "m": 12, "n": "μισθός, the ordinary Greek word for a wage."},
+  "10": {"i": [13, 14], "m": 14, "n": "μισθωτός, 'hired man', from the same root as μισθός."},
+  "11": {"i": [15, 16], "m": 15},
+  "12": {"i": [17], "m": 17},
+  "13": {"i": [18], "m": 18}
+ }
+}

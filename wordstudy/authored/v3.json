@@ -1,0 +1,532 @@
+{
+ "id": "v3",
+ "en": [
+  {
+   "t": "And",
+   "w": [
+    "01"
+   ]
+  },
+  " ",
+  {
+   "t": "having called",
+   "w": [
+    "02"
+   ]
+  },
+  " ",
+  {
+   "t": "his",
+   "w": [
+    "05",
+    "03"
+   ]
+  },
+  " ",
+  {
+   "t": "disciples",
+   "w": [
+    "04"
+   ]
+  },
+  " to him, ",
+  {
+   "t": "he said",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "to them",
+   "w": [
+    "07"
+   ]
+  },
+  ", ‘",
+  {
+   "t": "Amen",
+   "w": [
+    "08"
+   ]
+  },
+  " ",
+  {
+   "t": "I say",
+   "w": [
+    "09"
+   ]
+  },
+  " ",
+  {
+   "t": "to you",
+   "w": [
+    "10"
+   ]
+  },
+  " ",
+  {
+   "t": "that",
+   "w": [
+    "11"
+   ]
+  },
+  " ",
+  {
+   "t": "this",
+   "w": [
+    "14"
+   ]
+  },
+  " ",
+  {
+   "t": "poor",
+   "w": [
+    "16",
+    "15"
+   ]
+  },
+  " ",
+  {
+   "t": "widow",
+   "w": [
+    "13",
+    "12"
+   ]
+  },
+  " ",
+  {
+   "t": "cast in",
+   "w": [
+    "19"
+   ]
+  },
+  " ",
+  {
+   "t": "more",
+   "w": [
+    "17"
+   ]
+  },
+  " ",
+  {
+   "t": "than all",
+   "w": [
+    "18"
+   ]
+  },
+  " ",
+  {
+   "t": "those",
+   "w": [
+    "20"
+   ]
+  },
+  " ",
+  {
+   "t": "casting",
+   "w": [
+    "21"
+   ]
+  },
+  " ",
+  {
+   "t": "into",
+   "w": [
+    "22"
+   ]
+  },
+  " ",
+  {
+   "t": "the",
+   "w": [
+    "23"
+   ]
+  },
+  " ",
+  {
+   "t": "treasury",
+   "w": [
+    "24"
+   ]
+  },
+  "."
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "and"
+   ],
+   "r": "Links Jesus' words to what he has been watching.",
+   "t": [
+    "And",
+    "Then",
+    "And",
+    "And",
+    "And",
+    null
+   ]
+  },
+  "02": {
+   "s": [
+    "having called to him",
+    "summoning",
+    "calling over",
+    "having called near"
+   ],
+   "r": "Jesus calls his disciples over to him before he speaks.",
+   "n": "Middle voice: Abbott-Smith gives 'to call to oneself'. The English 'to him' comes from that middle voice, not from a separate word.",
+   "t": [
+    "he called unto him",
+    "he called vnto him",
+    "calling ... together",
+    "he called unto him",
+    "having called near",
+    "called ... to Him"
+   ]
+  },
+  "03": {
+   "s": [
+    "the"
+   ],
+   "r": "With 'his', marks the disciples as Jesus' own.",
+   "n": "Greek says 'the disciples of him'; English uses 'his' alone.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "04": {
+   "s": [
+    "disciples",
+    "pupils",
+    "learners",
+    "followers"
+   ],
+   "r": "Those who follow Jesus as their teacher.",
+   "n": "Abbott-Smith connects the noun with μανθάνω, the verb 'learn', and sets it opposite διδάσκαλος, teacher.",
+   "t": [
+    "disciples",
+    "disciples",
+    "disciples",
+    "disciples",
+    "disciples",
+    "disciples"
+   ]
+  },
+  "05": {
+   "s": [
+    "his",
+    "of him"
+   ],
+   "r": "Jesus' own disciples.",
+   "t": [
+    "his",
+    "his",
+    "his",
+    "his",
+    "his",
+    "His"
+   ]
+  },
+  "06": {
+   "s": [
+    "he said",
+    "he told",
+    "he says"
+   ],
+   "r": "Jesus speaks to them.",
+   "n": "Aorist, 'he said'. The KJV's 'saith' reflects the Textus Receptus, which reads the present λέγει, 'says'.",
+   "t": [
+    "saith",
+    "said",
+    "he saith",
+    "said",
+    "he saith",
+    "said"
+   ]
+  },
+  "07": {
+   "s": [
+    "to them"
+   ],
+   "r": "To the disciples.",
+   "t": [
+    "unto them",
+    "vnto them",
+    "to them",
+    "unto them",
+    "to them",
+    null
+   ]
+  },
+  "08": {
+   "s": [
+    "Amen",
+    "truly",
+    "verily",
+    "I assure you"
+   ],
+   "r": "A solemn word vouching for what follows.",
+   "n": "A Hebrew word kept in Greek. Abbott-Smith traces it to Hebrew אָמֵן, from a root meaning to be firm. Here it stands before the statement it confirms.",
+   "t": [
+    "Verily",
+    "Verely",
+    "Amen",
+    "Verily",
+    "Verily",
+    "Truly"
+   ]
+  },
+  "09": {
+   "s": [
+    "I say",
+    "I tell"
+   ],
+   "r": "Present tense: Jesus' own declaration.",
+   "t": [
+    "I say",
+    "I say",
+    "I say",
+    "I say",
+    "I say",
+    "I tell"
+   ]
+  },
+  "10": {
+   "s": [
+    "to you"
+   ],
+   "r": "Plural: to the disciples.",
+   "t": [
+    "unto you",
+    "vnto you",
+    "to you",
+    "unto you",
+    "to you",
+    "you"
+   ]
+  },
+  "11": {
+   "s": [
+    "that"
+   ],
+   "r": "Introduces what Jesus declares.",
+   "n": "Several translations leave it out, since in English the words that follow read as direct speech.",
+   "t": [
+    "That",
+    "that",
+    null,
+    null,
+    "that",
+    null
+   ]
+  },
+  "12": {
+   "s": [
+    "the"
+   ],
+   "r": "Article with 'widow'; English uses 'this' instead.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "13": {
+   "s": [
+    "widow"
+   ],
+   "r": "The widow just seen at the treasury.",
+   "t": [
+    "widow",
+    "widowe",
+    "widow",
+    "widow",
+    "widow",
+    "widow"
+   ]
+  },
+  "14": {
+   "s": [
+    "this"
+   ],
+   "r": "Points to the woman they have just watched.",
+   "t": [
+    "this",
+    "this",
+    "this",
+    "this",
+    "this",
+    "this"
+   ]
+  },
+  "15": {
+   "s": [
+    "the"
+   ],
+   "r": "A second article, which attaches 'poor' to her as a mark of who she is.",
+   "n": "Literally 'the widow, this one, the poor one'.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "16": {
+   "s": [
+    "poor",
+    "destitute",
+    "beggarly"
+   ],
+   "r": "The same word as in Mark 12:42: destitute.",
+   "t": [
+    "poor",
+    "poore",
+    "poor",
+    "poor",
+    "poor",
+    "poor"
+   ]
+  },
+  "17": {
+   "s": [
+    "more",
+    "a greater amount"
+   ],
+   "r": "Measures her gift against all the rest.",
+   "n": "A comparative of the word for 'much'. Jesus says she gave more, and the next verse gives his reason.",
+   "t": [
+    "more",
+    "more",
+    "more",
+    "more",
+    "more",
+    "more"
+   ]
+  },
+  "18": {
+   "s": [
+    "than all",
+    "than all of"
+   ],
+   "r": "More than every one of the other givers.",
+   "n": "Genitive of comparison: the Greek case itself supplies 'than'.",
+   "t": [
+    "than all",
+    "then all",
+    "than all",
+    "than all",
+    "than all",
+    "than all"
+   ]
+  },
+  "19": {
+   "s": [
+    "cast in",
+    "has cast in",
+    "put in",
+    "threw in"
+   ],
+   "r": "What she put into the treasury.",
+   "n": "Aorist, a single act. The KJV's 'hath cast' follows the perfect βέβληκεν that the Textus Receptus reads here.",
+   "t": [
+    "hath cast ... in",
+    "hath cast ... in",
+    "hath cast in",
+    "cast in",
+    "hath put in",
+    "has put"
+   ]
+  },
+  "20": {
+   "s": [
+    "those",
+    "the ones"
+   ],
+   "r": "With the participle, makes 'those casting'.",
+   "t": [
+    "they which",
+    "they which",
+    "they who",
+    "they that",
+    "those",
+    "the others"
+   ]
+  },
+  "21": {
+   "s": [
+    "casting",
+    "putting",
+    "throwing in",
+    "giving"
+   ],
+   "r": "Present participle: the others who were putting money in.",
+   "n": "The present tense pictures them in the act of giving, as the ASV's 'are casting' shows. The Textus Receptus reads the aorist βαλόντων, 'who cast', which is why the KJV has 'have cast'.",
+   "t": [
+    "have cast",
+    "haue cast",
+    "have cast",
+    "are casting",
+    "putting",
+    null
+   ]
+  },
+  "22": {
+   "s": [
+    "into"
+   ],
+   "r": "Into the treasury.",
+   "t": [
+    "into",
+    "into",
+    "into",
+    "into",
+    "into",
+    "into"
+   ]
+  },
+  "23": {
+   "s": [
+    "the"
+   ],
+   "r": "The treasury, a known place.",
+   "t": [
+    "the",
+    "the",
+    "the",
+    "the",
+    "the",
+    "the"
+   ]
+  },
+  "24": {
+   "s": [
+    "treasury",
+    "offering chests",
+    "treasure room"
+   ],
+   "r": "The place in the temple where gifts were received.",
+   "n": "Built from γάζα, treasure, and φυλακή, guard. Abbott-Smith notes its Septuagint use for a temple treasury, and records a second, less certain sense: 'apparently, the trumpet-shaped chests'.",
+   "t": [
+    "treasury",
+    "treasurie",
+    "treasury",
+    "treasury",
+    "treasury",
+    "treasury"
+   ]
+  }
+ },
+ "tr_note": "The Textus Receptus reads λέγει, 'says', for εἶπεν, 'said', hence the KJV's 'saith'; βέβληκεν, 'has cast', for ἔβαλεν, hence 'hath cast'; and the aorist βαλόντων, 'who cast', for the present βαλλόντων, hence the KJV's 'they which have cast' where the ASV has 'they that are casting'. None of these changes the sense of the verse."
+}

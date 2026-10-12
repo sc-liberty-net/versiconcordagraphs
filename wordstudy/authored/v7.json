@@ -1,0 +1,711 @@
+{
+ "id": "v7",
+ "en": [
+  {
+   "t": "Whenever",
+   "w": [
+    "01"
+   ]
+  },
+  ", ",
+  {
+   "t": "therefore",
+   "w": [
+    "02"
+   ]
+  },
+  ", ",
+  {
+   "t": "you do",
+   "w": [
+    "03"
+   ]
+  },
+  " ",
+  {
+   "t": "alms",
+   "w": [
+    "04"
+   ]
+  },
+  ", do ",
+  {
+   "t": "not",
+   "w": [
+    "05"
+   ]
+  },
+  " ",
+  {
+   "t": "sound a trumpet",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "before",
+   "w": [
+    "07"
+   ]
+  },
+  " ",
+  {
+   "t": "you",
+   "w": [
+    "08"
+   ]
+  },
+  ", ",
+  {
+   "t": "just as",
+   "w": [
+    "09"
+   ]
+  },
+  " ",
+  {
+   "t": "the",
+   "w": [
+    "10"
+   ]
+  },
+  " ",
+  {
+   "t": "hypocrites",
+   "w": [
+    "11"
+   ]
+  },
+  " ",
+  {
+   "t": "do",
+   "w": [
+    "12"
+   ]
+  },
+  " ",
+  {
+   "t": "in",
+   "w": [
+    "13"
+   ]
+  },
+  " ",
+  {
+   "t": "the",
+   "w": [
+    "14"
+   ]
+  },
+  " ",
+  {
+   "t": "synagogues",
+   "w": [
+    "15"
+   ]
+  },
+  " ",
+  {
+   "t": "and",
+   "w": [
+    "16"
+   ]
+  },
+  " ",
+  {
+   "t": "in",
+   "w": [
+    "17"
+   ]
+  },
+  " ",
+  {
+   "t": "the",
+   "w": [
+    "18"
+   ]
+  },
+  " ",
+  {
+   "t": "lanes",
+   "w": [
+    "19"
+   ]
+  },
+  ", ",
+  {
+   "t": "so that",
+   "w": [
+    "20"
+   ]
+  },
+  " ",
+  {
+   "t": "they may be glorified",
+   "w": [
+    "21"
+   ]
+  },
+  " ",
+  {
+   "t": "by",
+   "w": [
+    "22"
+   ]
+  },
+  " ",
+  {
+   "t": "people",
+   "w": [
+    "24",
+    "23"
+   ]
+  },
+  ". ",
+  {
+   "t": "Amen",
+   "w": [
+    "25"
+   ]
+  },
+  " ",
+  {
+   "t": "I say",
+   "w": [
+    "26"
+   ]
+  },
+  " ",
+  {
+   "t": "to you",
+   "w": [
+    "27"
+   ]
+  },
+  ", ",
+  {
+   "t": "they have",
+   "w": [
+    "28"
+   ]
+  },
+  " ",
+  {
+   "t": "their",
+   "w": [
+    "31"
+   ]
+  },
+  " ",
+  {
+   "t": "wage",
+   "w": [
+    "30",
+    "29"
+   ]
+  },
+  " in full."
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "whenever",
+    "when"
+   ],
+   "r": "Introduces any occasion of giving, not one in particular.",
+   "n": "Abbott-Smith gives 'whenever' as its proper sense, and lists this verse for its use with the present subjunctive.",
+   "t": [
+    "when",
+    "when",
+    "when",
+    "When",
+    "whenever",
+    "when"
+   ]
+  },
+  "02": {
+   "s": [
+    "therefore",
+    "so",
+    "then"
+   ],
+   "r": "Draws a consequence from what has just been said.",
+   "t": [
+    "Therefore",
+    "Therefore",
+    "Therefore",
+    "therefore",
+    "therefore",
+    "So"
+   ]
+  },
+  "03": {
+   "s": [
+    "you do",
+    "you give",
+    "you practise",
+    "you perform"
+   ],
+   "r": "Singular: Jesus addresses each hearer.",
+   "n": "Present subjunctive after 'whenever'. Literally 'do alms', the phrase Abbott-Smith records as ποιεῖν ἐλεημοσύνην, listing this verse; this study keeps 'do' where several translations write 'give'.",
+   "t": [
+    "thou doest",
+    "thou giuest",
+    "thou dost",
+    "thou doest",
+    "thou mayest do",
+    "you give"
+   ]
+  },
+  "04": {
+   "s": [
+    "alms",
+    "almsgiving",
+    "acts of mercy",
+    "gifts to the poor"
+   ],
+   "r": "Gifts given out of mercy to the poor.",
+   "n": "Abbott-Smith derives it from ἐλεέω, to show mercy, and gives two senses: 'mercy, pity', and 'almsgiving, alms'. The Septuagint uses it chiefly for Hebrew חֶסֶד and צְדָקָה. English 'alms' comes from this Greek word, as does the German Almosen that he mentions.",
+   "t": [
+    "alms",
+    "almes",
+    "alms-deed",
+    "alms",
+    "kindness",
+    "to the needy"
+   ]
+  },
+  "05": {
+   "s": [
+    "not",
+    "do not"
+   ],
+   "r": "Forbids the action.",
+   "n": "Abbott-Smith calls it the 'subjective negative particle', the negative used with commands and wishes, as distinct from οὐ, which denies outright.",
+   "t": [
+    "not",
+    "not",
+    "not",
+    "not",
+    "not",
+    "not"
+   ]
+  },
+  "06": {
+   "s": [
+    "sound a trumpet",
+    "blow a trumpet",
+    "trumpet it",
+    "announce it"
+   ],
+   "r": "Making a public show of one's giving.",
+   "n": "Abbott-Smith lists this verse under the verb's metaphorical use, not a literal trumpet. With 'not', the aorist subjunctive forbids the act outright.",
+   "t": [
+    "do ... sound a trumpet",
+    "shalt ... make a trumpet to be blowen",
+    "sound ... a trumpet",
+    "sound ... a trumpet",
+    "mayest ... sound a trumpet",
+    "do ... sound a trumpet"
+   ]
+  },
+  "07": {
+   "s": [
+    "before",
+    "in front of",
+    "ahead of"
+   ],
+   "r": "In front of the giver, for others to hear.",
+   "t": [
+    "before",
+    "before",
+    "before",
+    "before",
+    "before",
+    "before"
+   ]
+  },
+  "08": {
+   "s": [
+    "you",
+    "yourself"
+   ],
+   "r": "The giver himself.",
+   "t": [
+    "thee",
+    "thee",
+    "thee",
+    "thee",
+    "thee",
+    "you"
+   ]
+  },
+  "09": {
+   "s": [
+    "just as",
+    "as",
+    "even as"
+   ],
+   "r": "Compares the forbidden act with what the hypocrites do.",
+   "n": "Abbott-Smith gives 'just as, even as', and lists this verse.",
+   "t": [
+    "as",
+    "as",
+    "as",
+    "as",
+    "as",
+    "as"
+   ]
+  },
+  "10": {
+   "s": [
+    "the"
+   ],
+   "r": "The hypocrites as a known group.",
+   "t": [
+    "the",
+    "the",
+    "the",
+    "the",
+    "the",
+    "the"
+   ]
+  },
+  "11": {
+   "s": [
+    "hypocrites",
+    "actors",
+    "pretenders",
+    "play-actors"
+   ],
+   "r": "People who act a part in order to be seen.",
+   "n": "Abbott-Smith traces the word from 'one who answers, an interpreter' to 'a stage player, actor', and gives its metaphorical sense as 'a pretender, dissembler, hypocrite'. He lists this verse.",
+   "t": [
+    "hypocrites",
+    "hypocrites",
+    "hypocrites",
+    "hypocrites",
+    "hypocrites",
+    "hypocrites"
+   ]
+  },
+  "12": {
+   "s": [
+    "do",
+    "act",
+    "practise"
+   ],
+   "r": "What the hypocrites habitually do.",
+   "n": "The same verb as 'you do' at the start of the verse.",
+   "t": [
+    "do",
+    "doe",
+    "do",
+    "do",
+    "do",
+    "do"
+   ]
+  },
+  "13": {
+   "s": [
+    "in"
+   ],
+   "r": "Where they make their show.",
+   "t": [
+    "in",
+    "in",
+    "in",
+    "in",
+    "in",
+    "in"
+   ]
+  },
+  "14": {
+   "s": [
+    "the"
+   ],
+   "r": "The synagogues of the town.",
+   "t": [
+    "the",
+    "the",
+    "the",
+    "the",
+    "the",
+    "the"
+   ]
+  },
+  "15": {
+   "s": [
+    "synagogues",
+    "assemblies",
+    "meeting places"
+   ],
+   "r": "The places where Jews gathered for prayer and reading.",
+   "n": "Abbott-Smith's entry begins with 'a bringing together', which he applies to things, including a collection of money, before he comes to people: an assembly. Here it means the meeting places.",
+   "t": [
+    "synagogues",
+    "Synagogues",
+    "synagogues",
+    "synagogues",
+    "synagogues",
+    "synagogues"
+   ]
+  },
+  "16": {
+   "s": [
+    "and"
+   ],
+   "r": "Adds the second public place.",
+   "t": [
+    "and",
+    "and",
+    "and",
+    "and",
+    "and",
+    "and"
+   ]
+  },
+  "17": {
+   "s": [
+    "in",
+    "on"
+   ],
+   "r": "Where they make their show.",
+   "t": [
+    "in",
+    "in",
+    "in",
+    "in",
+    "in",
+    "on"
+   ]
+  },
+  "18": {
+   "s": [
+    "the"
+   ],
+   "r": "The lanes of the town.",
+   "t": [
+    "the",
+    "the",
+    "the",
+    "the",
+    "the",
+    "the"
+   ]
+  },
+  "19": {
+   "s": [
+    "lanes",
+    "streets",
+    "alleys",
+    "narrow streets"
+   ],
+   "r": "The narrow streets of the town.",
+   "n": "Abbott-Smith gives the late Greek sense 'a narrow road, lane, street'; this study writes 'lanes' to keep the word's narrowness.",
+   "t": [
+    "streets",
+    "streetes",
+    "streets",
+    "streets",
+    "streets",
+    "streets"
+   ]
+  },
+  "20": {
+   "s": [
+    "so that",
+    "in order that",
+    "that"
+   ],
+   "r": "States the hypocrites' purpose.",
+   "t": [
+    "that",
+    null,
+    "that",
+    "that",
+    "that",
+    null
+   ]
+  },
+  "21": {
+   "s": [
+    "they may be glorified",
+    "they may be praised",
+    "they may be honoured",
+    "they may have glory"
+   ],
+   "r": "They want praise from people.",
+   "n": "Aorist passive of the verb built on δόξα, glory; Abbott-Smith gives 'to magnify, extol, praise'. The KJV's 'have glory' and the DRC's 'be honoured' are both fair.",
+   "t": [
+    "they may have glory",
+    "to be praysed",
+    "they may be honoured",
+    "they may have glory",
+    "they may have glory",
+    "to be honored"
+   ]
+  },
+  "22": {
+   "s": [
+    "by",
+    "from"
+   ],
+   "r": "Names those who give the praise.",
+   "n": "With a passive verb, it names the ones who do the action.",
+   "t": [
+    "of",
+    "of",
+    "by",
+    "of",
+    "from",
+    "by"
+   ]
+  },
+  "23": {
+   "s": [
+    "the"
+   ],
+   "r": "Article; English needs none with 'people'.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "24": {
+   "s": [
+    "people",
+    "men",
+    "human beings",
+    "others"
+   ],
+   "r": "Human beings in general.",
+   "n": "A generic word, not limited to males; this study writes 'people' here, where the translations have 'men'.",
+   "t": [
+    "men",
+    "men",
+    "men",
+    "men",
+    "men",
+    "men"
+   ]
+  },
+  "25": {
+   "s": [
+    "Amen",
+    "truly",
+    "verily",
+    "I assure you"
+   ],
+   "r": "A solemn word vouching for what follows.",
+   "n": "A Hebrew word kept in Greek. Abbott-Smith traces it to Hebrew אָמֵן, from a root meaning to be firm.",
+   "t": [
+    "Verily",
+    "Verely",
+    "Amen",
+    "Verily",
+    "verily",
+    "Truly"
+   ]
+  },
+  "26": {
+   "s": [
+    "I say",
+    "I tell"
+   ],
+   "r": "Present tense: Jesus' own declaration.",
+   "t": [
+    "I say",
+    "I say",
+    "I say",
+    "I say",
+    "I say",
+    "I tell"
+   ]
+  },
+  "27": {
+   "s": [
+    "to you"
+   ],
+   "r": "Plural: to all his hearers.",
+   "t": [
+    "unto you",
+    "vnto you",
+    "to you",
+    "unto you",
+    "to you",
+    "you"
+   ]
+  },
+  "28": {
+   "s": [
+    "they have in full",
+    "they have received",
+    "they are paid in full",
+    "they already have"
+   ],
+   "r": "They have already been paid, and there is nothing more to come.",
+   "n": "Abbott-Smith gives 'to have in full, to have received', and lists this verse. The present tense states a settled account, and this study's 'in full' brings out the prefix ἀπ-. The DRC and ASV write 'have received', the BSB 'already have their full'.",
+   "t": [
+    "They have",
+    "they haue",
+    "they have received",
+    "They have received",
+    "they have",
+    "they already have ... full"
+   ]
+  },
+  "29": {
+   "s": [
+    "the"
+   ],
+   "r": "Article; English uses 'their'.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "30": {
+   "s": [
+    "wage",
+    "pay",
+    "reward",
+    "recompense"
+   ],
+   "r": "The praise they wanted is the whole of their pay.",
+   "n": "This study's fixed rendering is 'wage', and the pay picture of 'have in full' keeps it here, though every translation in the list has 'reward'. Abbott-Smith's senses run from 'wages, hire' to 'reward'; which fits here is a judgment, and this study's is the first.",
+   "t": [
+    "reward",
+    "rewarde",
+    "reward",
+    "reward",
+    "reward",
+    "reward"
+   ]
+  },
+  "31": {
+   "s": [
+    "their",
+    "of them"
+   ],
+   "r": "The hypocrites' own pay.",
+   "t": [
+    "their",
+    "their",
+    "their",
+    "their",
+    "their",
+    "their"
+   ]
+  }
+ }
+}

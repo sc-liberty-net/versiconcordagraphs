@@ -1,0 +1,49 @@
+{
+ "id": "q2",
+ "en": [
+  {"t": "And your vineyard", "w": ["01"]}, " ",
+  {"t": "you shall not glean", "w": ["03", "02"]}, ", ",
+  {"t": "and the fallen grapes of", "w": ["04"]}, " ",
+  {"t": "your vineyard", "w": ["05"]}, " ",
+  {"t": "you shall not gather", "w": ["07", "06"]}, "; ",
+  {"t": "for the poor", "w": ["08"]}, " ",
+  {"t": "and for the sojourner", "w": ["09"]}, " ",
+  {"t": "you shall leave", "w": ["10"]}, " ",
+  {"t": "them", "w": ["11"]}, ": ",
+  {"t": "I am", "w": ["12"]}, " ",
+  {"t": "the LORD", "w": ["13"]}, " ",
+  {"t": "your God", "w": ["14"]}, "."
+ ],
+ "words": {
+  "01": {"s": ["vineyard", "vines", "grape garden"], "r": "The farmer's own vineyard, the second harvest after the grain of the verse before.", "n": "The vineyard stands first in the Hebrew for emphasis, 'and your vineyard you shall not glean'; YLT keeps that order. Gesenius gives the base sense as a field planted with choicer plants, kept like a garden or orchard.", "t": ["And ... thy vineyard", "thy vineyarde", null, "And ... thy vineyard", "And ... thy vineyard", "and thy vineyard", "your vineyard"]},
+  "02": {"s": ["not", "do not"], "r": "A flat prohibition.", "t": ["not", "not", "Neither", "not", "not", "not", "not"]},
+  "03": {"s": ["glean", "go over again", "strip", "pick clean"], "r": "Do not go back over the vines a second time for what the first picking missed.", "n": "BDB and the brief's lexicon give 'glean'. Gesenius traces the root to a sense of drinking a second time, applied to any second going-over, such as going over the boughs to collect what is left. This is a different verb from 'gather' later in the verse, which we keep apart in our English.", "t": ["thou shalt ... glean", "Thou shalt ... gather the grapes ... cleane", "shalt thou gather the bunches", "thou shalt ... glean", "thou shalt ... glean", "thou dost ... glean", "You must ... strip ... bare"]},
+  "04": {"s": ["fallen grapes", "scattered grapes", "dropped fruit", "single grapes"], "r": "Grapes that have dropped to the ground during the picking.", "n": "Gesenius: something scattered, and he cites this verse as 'the scattered grapes (those fallen off) of thy vineyard'. BDB gives 'the broken off'. The brief records the word in this one verse only.", "t": ["every grape", "euery grape", "and grapes that fall down", "the fallen fruit", "the fallen fruit", "even the omitted part", "fallen grapes"]},
+  "05": {"s": ["vineyard", "vines"], "r": "The same vineyard.", "t": ["of thy vineyard", "of thy vineyarde", "in thy vineyard", "of thy vineyard", "of thy vineyard", "of thy vineyard", "its"]},
+  "06": {"s": ["not", "do not"], "r": "A second flat prohibition.", "t": ["neither", "neyther", null, "neither", "neither", "not", "or"]},
+  "07": {"s": ["gather", "pick up", "collect", "glean"], "r": "Do not pick the fallen grapes up off the ground.", "n": "The same verb as 'gather' in the verse before. Gesenius: to gather, to collect, properly things lying on the ground.", "t": ["shalt thou gather", "gather", null, "shalt thou gather", "shalt thou gather", "thou dost ... gather", "gather"]},
+  "08": {"s": ["poor", "afflicted", "needy", "lowly"], "r": "Someone without the means to live without help.", "n": "Gesenius gives afflicted, wretched, poor, often with the added idea of piety; BDB adds 'oppressed by rich and powerful'. 'Poor' is the word's sense here, but 'afflicted' sits close behind it.", "t": ["for the poor", "for the poore", "to the poor", "for the poor", "for the poor", "to the poor", "for the poor"]},
+  "09": {"s": ["sojourner", "resident foreigner", "stranger", "immigrant"], "r": "Someone living in Israel who was not born into it.", "n": "Gesenius: a sojourner, stranger, foreigner, a person living out of his own country. BDB: a temporary dweller, a newcomer with no inherited rights.", "t": ["and stranger", "and for the straunger", "and the strangers", "and for the stranger", "and for the sojourner", "and to the sojourner", "and the foreigner"]},
+  "10": {"s": ["leave", "leave behind", "let go", "abandon"], "r": "Leave the leftovers where they lie, for these two to take.", "n": "Gesenius gives the first sense as to loosen bands, to let go. BDB notes that with 'to' before a person, as here, it means to leave something to that person's possession. The poor and the sojourner stand first in the Hebrew: 'for the poor and for the sojourner you shall leave them'.", "t": ["thou shalt leave", "thou shalt leaue", "shalt leave", "thou shalt leave", "thou shalt leave", "thou dost leave", "Leave"]},
+  "11": {"s": ["them"], "r": "The grapes left in the vineyard.", "n": "The object marker with 'them' attached.", "t": ["them", "them", "them", "them", "them", "them", "them"]},
+  "12": {"s": ["I", "I am", "I myself"], "r": "God speaks in his own person and gives the law his authority.", "n": "Hebrew has no 'am' here; the clause is verbless, 'I the LORD your God'. Every translation supplies 'am'.", "t": ["I am", "I am", "I am", "I am", "I am", "I am", "I am"]},
+  "13": {"s": ["the LORD", "Yahweh", "Jehovah", "HaShem"], "r": "The personal name of Israel's God.", "t": ["the Lord", "the Lord", "the Lord", "HaShem", "Jehovah", "Jehovah", "the LORD"]},
+  "14": {"s": ["your God"], "r": "The God of the whole people.", "n": "The form is plural but the meaning is singular. The 'your' is plural, though the commands before it address each Israelite as 'you' singular.", "t": ["your God", "your God", "your God", "your G-d", "your God", "your God", "your God"]}
+ },
+ "lxx": {
+  "01": {"i": [0, 1, 2, 3], "m": 2, "n": "ἀμπελών, 'vineyard'."},
+  "02": {"i": [4], "m": 4},
+  "03": {"i": [5], "m": 5, "n": "ἐπανατρυγάω, 'to gather the vintage a second time', a compound that spells out the 'go over again' in the Hebrew verb."},
+  "04": {"i": [7, 8], "m": 8, "n": "ῥώξ, a single grape or berry."},
+  "05": {"i": [9, 10, 11], "m": 10},
+  "06": {"i": [6], "m": 6},
+  "07": {"i": [12], "m": 12, "n": "συλλέγω, 'to gather up', the same Greek verb as in the verse before."},
+  "08": {"i": [13, 14], "m": 14, "n": "πτωχός, 'poor'. The article is printed τῶ in our Greek text, a slip for τῷ."},
+  "09": {"i": [15, 16, 17], "m": 17, "n": "προσήλυτος, 'one who has come over'. English 'proselyte' comes from it, though here it still means a resident foreigner."},
+  "10": {"i": [18], "m": 18},
+  "11": {"i": [19], "m": 19},
+  "12": {"i": [20, 21], "m": 20, "n": "The Greek supplies the verb, ἐγώ εἰμι, 'I am'."},
+  "13": {"i": [22], "m": 22},
+  "14": {"i": [23, 24, 25], "m": 24}
+ }
+}

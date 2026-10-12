@@ -1,0 +1,470 @@
+{
+ "id": "u1",
+ "en": [
+  {
+   "t": "If",
+   "w": [
+    "01"
+   ]
+  },
+  " ",
+  {
+   "t": "you lend",
+   "w": [
+    "03"
+   ]
+  },
+  " ",
+  {
+   "t": "silver",
+   "w": [
+    "02"
+   ]
+  },
+  " ",
+  {
+   "t": "to my people",
+   "w": [
+    "05",
+    "04"
+   ]
+  },
+  ", ",
+  {
+   "t": "to the poor one",
+   "w": [
+    "07",
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "with you",
+   "w": [
+    "08"
+   ]
+  },
+  ", ",
+  {
+   "t": "you shall not be",
+   "w": [
+    "10",
+    "09"
+   ]
+  },
+  " ",
+  {
+   "t": "to him",
+   "w": [
+    "11"
+   ]
+  },
+  " ",
+  {
+   "t": "like a creditor",
+   "w": [
+    "12"
+   ]
+  },
+  "; ",
+  {
+   "t": "you shall not lay",
+   "w": [
+    "14",
+    "13"
+   ]
+  },
+  " ",
+  {
+   "t": "interest",
+   "w": [
+    "16"
+   ]
+  },
+  " ",
+  {
+   "t": "on him",
+   "w": [
+    "15"
+   ]
+  },
+  "."
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "if",
+    "when",
+    "whenever"
+   ],
+   "r": "Sets out the case the law deals with: a loan to a poor Israelite.",
+   "t": [
+    "If",
+    "If",
+    "If",
+    "If",
+    "If",
+    "If",
+    "If"
+   ],
+   "n": "Gesenius cites this verse as Ex. 22:24, by the Hebrew numbering."
+  },
+  "02": {
+   "s": [
+    "silver",
+    "money"
+   ],
+   "r": "Silver used as money, the thing lent.",
+   "t": [
+    "money",
+    "money",
+    "money",
+    "money",
+    "money",
+    "money",
+    "money"
+   ],
+   "n": "Gesenius gives the first sense as silver, so called from its pale colour; BDB lists both silver and money. Our English keeps 'silver' throughout, as every translation here says 'money'. In Hebrew the word stands first in its clause: 'if silver you lend'."
+  },
+  "03": {
+   "s": [
+    "lend",
+    "lend to",
+    "make a loan to"
+   ],
+   "r": "To give someone a loan, here of silver.",
+   "t": [
+    "thou lend",
+    "thou lende",
+    "thou lend",
+    "thou lend",
+    "thou lend",
+    "thou dost lend",
+    "you lend"
+   ],
+   "n": "The causative form of a verb whose plain form means to borrow: literally 'cause to borrow'. Gesenius gives the root sense as to adhere, to be joined closely to someone, and then to borrow, as if the borrower were bound to the lender."
+  },
+  "04": {
+   "s": [
+    "(object marker, no English equivalent)"
+   ],
+   "r": "Marks 'my people' as the object of the verb.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "n": "This small word marks a definite direct object and has no English equivalent. The Hebrew verb takes the borrower as its direct object; English needs 'to', so the marker is counted with 'to my people'."
+  },
+  "05": {
+   "s": [
+    "my people",
+    "one of my people"
+   ],
+   "r": "Israel, spoken of by God as his own people.",
+   "t": [
+    "to any of my people",
+    "to my people",
+    "to any of my people",
+    "to any of My people",
+    "to any of my people",
+    "My ... people",
+    "to one of My people"
+   ],
+   "n": "God speaks in the first person: 'my people'. Gesenius notes that the word is very often used of Israel as the people of God. Most translations add 'any of' or 'one of'; the Hebrew has simply 'my people'."
+  },
+  "06": {
+   "s": [
+    "(object marker, no English equivalent)"
+   ],
+   "r": "Marks 'the poor one' as a second object, naming the same person.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "n": "A second object marker, standing in apposition to the first: 'my people, the poor one'. It is counted with 'to the poor one'."
+  },
+  "07": {
+   "s": [
+    "the poor one",
+    "the afflicted one",
+    "the needy"
+   ],
+   "r": "The borrower is a poor man among God's people.",
+   "t": [
+    "that is poor",
+    "to the poore",
+    "that is poor",
+    "even to the poor",
+    "that is poor",
+    "poor",
+    "who is poor"
+   ],
+   "n": "Gesenius: afflicted, wretched, poor, often with the added idea of piety, and he cites this verse. BDB adds: oppressed by rich and powerful. The word is singular, with the article: one particular poor person, so 'the poor one'."
+  },
+  "08": {
+   "s": [
+    "with you",
+    "among you",
+    "beside you"
+   ],
+   "r": "Living alongside the lender, part of his own community.",
+   "t": [
+    "by thee",
+    "with thee",
+    "that dwelleth with thee",
+    "with thee",
+    "with thee",
+    "with thee",
+    "among you"
+   ],
+   "n": "The 'you' is singular: the law addresses each Israelite. The Douay-Rheims spells out 'that dwelleth with thee'."
+  },
+  "09": {
+   "s": [
+    "not",
+    "never"
+   ],
+   "r": "A flat prohibition.",
+   "t": [
+    "not",
+    "not",
+    "not",
+    "not",
+    "not",
+    "not",
+    "not"
+   ]
+  },
+  "10": {
+   "s": [
+    "you shall be",
+    "you must be",
+    "you shall act"
+   ],
+   "r": "Forbids the lender to take up the role that follows.",
+   "t": [
+    "thou shalt ... be",
+    "thou shalt ... bee",
+    "thou shalt ... be hard upon",
+    "thou shalt ... be",
+    "thou shalt ... be",
+    "thou art",
+    "you must ... act"
+   ],
+   "n": "The Douay-Rheims follows the Latin Vulgate here, 'be hard upon them as an extortioner'."
+  },
+  "11": {
+   "s": [
+    "to him",
+    "toward him",
+    "for him"
+   ],
+   "r": "Toward the poor borrower.",
+   "t": [
+    "to him",
+    "vnto him",
+    "them",
+    "to him",
+    "to him",
+    "to him",
+    "to him"
+   ]
+  },
+  "12": {
+   "s": [
+    "like a creditor",
+    "as a lender",
+    "as one who presses for a debt"
+   ],
+   "r": "Do not deal with him as a creditor deals with a debtor.",
+   "t": [
+    "as an usurer",
+    "as an vsurer",
+    "as an extortioner",
+    "as a creditor",
+    "as a creditor",
+    "as a usurer",
+    "as a creditor"
+   ],
+   "n": "A participle of a verb that the brief's lexicon gives as to lend, be a creditor; as a noun the participle means a creditor. Gesenius thinks its root sense is to take, receive. It looks like the word for interest at the end of the verse, but it is a different word, so our English keeps it apart: 'creditor', not 'usurer'."
+  },
+  "13": {
+   "s": [
+    "not",
+    "nor"
+   ],
+   "r": "A second prohibition.",
+   "t": [
+    "neither",
+    "not",
+    "nor",
+    "neither",
+    "neither",
+    "not",
+    "not"
+   ]
+  },
+  "14": {
+   "s": [
+    "lay",
+    "put",
+    "place",
+    "impose"
+   ],
+   "r": "To place a charge of interest on the borrower.",
+   "t": [
+    "shalt thou lay",
+    "yee shall ... oppresse",
+    "oppress",
+    "shall ye lay",
+    "shall ye lay",
+    "thou dost ... lay",
+    "you are ... to charge"
+   ],
+   "n": "Gesenius gives the general sense TO PUT, TO SET, TO PLACE, and under the word for interest he cites this phrase, 'put interest on', as meaning to take usury of someone. The verb is plural, 'you all', where the rest of the verse says singular 'you'; the JPS, ASV and Geneva keep the plural with 'ye'. It ends with an extra Hebrew letter (n) that adds emphasis or weight, not meaning."
+  },
+  "15": {
+   "s": [
+    "on him",
+    "upon him"
+   ],
+   "r": "The borrower, who would carry the charge.",
+   "t": [
+    "upon him",
+    "him",
+    "them",
+    "upon him",
+    "upon him",
+    "on him",
+    "him"
+   ]
+  },
+  "16": {
+   "s": [
+    "interest",
+    "a charge for the loan",
+    "usury"
+   ],
+   "r": "A charge made for lending, paid back above what was lent.",
+   "t": [
+    "usury",
+    "with vsurie",
+    "with usuries",
+    "interest",
+    "interest",
+    "usury",
+    "interest"
+   ],
+   "n": "Gesenius and BDB both give interest, usury. The noun comes from a root meaning 'bite' (see the verb in Deuteronomy 23:19 on this page). We render it 'interest' everywhere, keeping 'increase' for a second Hebrew word (Leviticus 25:36 on this page)."
+  }
+ },
+ "lxx": {
+  "_extra": {
+   "1": "δὲ (and, but): added by the Greek translators; nothing in the Hebrew answers to it."
+  },
+  "01": {
+   "i": [
+    0
+   ],
+   "m": 0
+  },
+  "02": {
+   "i": [
+    2
+   ],
+   "m": 2,
+   "n": "ἀργύριον, silver, and so money: the Greek keeps the same picture as the Hebrew."
+  },
+  "03": {
+   "i": [
+    3
+   ],
+   "m": 3,
+   "n": "ἐκδανείζω, to lend out (at interest or otherwise)."
+  },
+  "05": {
+   "i": [
+    4,
+    5
+   ],
+   "m": 5,
+   "n": "The Greek reads 'the brother' where the Hebrew has 'my people'."
+  },
+  "07": {
+   "i": [
+    6,
+    7
+   ],
+   "m": 7,
+   "n": "πενιχρός, poor, needy."
+  },
+  "08": {
+   "i": [
+    8,
+    9
+   ],
+   "m": 8
+  },
+  "09": {
+   "i": [
+    10
+   ],
+   "m": 10
+  },
+  "10": {
+   "i": [
+    11
+   ],
+   "m": 11
+  },
+  "11": {
+   "i": [
+    12
+   ],
+   "m": 12
+  },
+  "12": {
+   "i": [
+    13
+   ],
+   "m": 13,
+   "n": "κατεπείγω, to press hard: the Greek says 'you shall not be pressing him', describing what a creditor does rather than naming him."
+  },
+  "13": {
+   "i": [
+    14
+   ],
+   "m": 14
+  },
+  "14": {
+   "i": [
+    15
+   ],
+   "m": 15,
+   "n": "ἐπιθήσεις is the future of ἐπιτίθημι, to lay upon, so the dictionary form the brief marks as loose is in fact right. The Greek keeps the singular 'you' here, where the Hebrew switches to the plural."
+  },
+  "15": {
+   "i": [
+    16
+   ],
+   "m": 16
+  },
+  "16": {
+   "i": [
+    17
+   ],
+   "m": 17,
+   "n": "τόκος, interest; the word also means offspring, interest being what money breeds. The same Greek word is used in Matthew 25:27 on this page."
+  }
+ }
+}

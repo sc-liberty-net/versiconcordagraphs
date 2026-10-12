@@ -1,0 +1,415 @@
+{
+ "id": "v13",
+ "en": [
+  {
+   "t": "Now",
+   "w": [
+    "02"
+   ]
+  },
+  " ",
+  {
+   "t": "concerning",
+   "w": [
+    "01"
+   ]
+  },
+  " ",
+  {
+   "t": "the",
+   "w": [
+    "03"
+   ]
+  },
+  " ",
+  {
+   "t": "collection",
+   "w": [
+    "04"
+   ]
+  },
+  " ",
+  {
+   "t": "that is",
+   "w": [
+    "05"
+   ]
+  },
+  " ",
+  {
+   "t": "for",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "the",
+   "w": [
+    "07"
+   ]
+  },
+  " ",
+  {
+   "t": "saints",
+   "w": [
+    "08"
+   ]
+  },
+  ": ",
+  {
+   "t": "just as",
+   "w": [
+    "09"
+   ]
+  },
+  " ",
+  {
+   "t": "I directed",
+   "w": [
+    "10"
+   ]
+  },
+  " ",
+  {
+   "t": "the",
+   "w": [
+    "11"
+   ]
+  },
+  " ",
+  {
+   "t": "churches",
+   "w": [
+    "12"
+   ]
+  },
+  " ",
+  {
+   "t": "of Galatia",
+   "w": [
+    "14",
+    "13"
+   ]
+  },
+  ", ",
+  {
+   "t": "so",
+   "w": [
+    "15"
+   ]
+  },
+  " ",
+  {
+   "t": "also",
+   "w": [
+    "16"
+   ]
+  },
+  " ",
+  {
+   "t": "you",
+   "w": [
+    "17"
+   ]
+  },
+  " ",
+  {
+   "t": "must do",
+   "w": [
+    "18"
+   ]
+  },
+  "."
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "concerning",
+    "about",
+    "as for",
+    "regarding"
+   ],
+   "r": "Introduces a new topic.",
+   "n": "Paul uses 'now concerning' to take up a subject in turn. That the Corinthians had asked about it is a likely reading, not something this verse states.",
+   "t": [
+    "concerning",
+    "Concerning",
+    "concerning",
+    "concerning",
+    "concerning",
+    "about"
+   ]
+  },
+  "02": {
+   "s": [
+    "now",
+    "and"
+   ],
+   "r": "Marks the move to a new subject.",
+   "t": [
+    "Now",
+    null,
+    "Now",
+    "Now",
+    "And",
+    "Now"
+   ]
+  },
+  "03": {
+   "s": [
+    "the"
+   ],
+   "r": "A collection the readers know about.",
+   "t": [
+    "the",
+    "the",
+    "the",
+    "the",
+    "the",
+    "the"
+   ]
+  },
+  "04": {
+   "s": [
+    "collection",
+    "gathering",
+    "fund"
+   ],
+   "r": "Money being gathered from the churches.",
+   "n": "Abbott-Smith derives it from λογεύω, 'to collect', and gives simply 'a collection'. His only New Testament references are this verse and 1 Corinthians 16:2.",
+   "t": [
+    "collection",
+    "gathering",
+    "collections",
+    "collection",
+    "collection",
+    "collection"
+   ]
+  },
+  "05": {
+   "s": [
+    "that is",
+    "which is"
+   ],
+   "r": "The repeated article ties 'for the saints' to the collection.",
+   "n": "Literally 'the collection, the one for the saints'.",
+   "t": [
+    null,
+    null,
+    "that are made",
+    null,
+    "that is",
+    null
+   ]
+  },
+  "06": {
+   "s": [
+    "for",
+    "for the benefit of",
+    "to"
+   ],
+   "r": "Names who the collection is for.",
+   "t": [
+    "for",
+    "for",
+    "for",
+    "for",
+    "for",
+    "for"
+   ]
+  },
+  "07": {
+   "s": [
+    "the"
+   ],
+   "r": "The saints as a known group.",
+   "t": [
+    "the",
+    "the",
+    "the",
+    "the",
+    "the",
+    "the"
+   ]
+  },
+  "08": {
+   "s": [
+    "saints",
+    "holy ones",
+    "God's people"
+   ],
+   "r": "Believers, here the ones the collection is for.",
+   "n": "Literally 'the holy ones'. Abbott-Smith's first sense is 'dedicated to the gods, sacred', hence 'holy', 'separated to God'.",
+   "t": [
+    "saints",
+    "Saintes",
+    "saints",
+    "saints",
+    "saints",
+    "saints"
+   ]
+  },
+  "09": {
+   "s": [
+    "just as",
+    "as",
+    "even as"
+   ],
+   "r": "Compares the Corinthians' task with what the Galatians were told.",
+   "n": "Abbott-Smith gives 'just as, even as'.",
+   "t": [
+    "as",
+    "as",
+    "as",
+    "as",
+    "as",
+    "as"
+   ]
+  },
+  "10": {
+   "s": [
+    "I directed",
+    "I gave orders",
+    "I instructed",
+    "I arranged"
+   ],
+   "r": "Paul has already given the same instructions elsewhere.",
+   "n": "Abbott-Smith gives 'to charge, give orders to, appoint, arrange, ordain', and lists this verse for its use with a dative of those instructed. Aorist, 'I directed', where the KJV has 'have given order'.",
+   "t": [
+    "I have given order",
+    "I haue ordeined",
+    "I have given order",
+    "I gave order",
+    "I directed",
+    "I directed"
+   ]
+  },
+  "11": {
+   "s": [
+    "the",
+    "to the"
+   ],
+   "r": "The dative case: the churches are the ones directed.",
+   "t": [
+    "to the",
+    "in the",
+    "to the",
+    "to the",
+    "to the",
+    "the"
+   ]
+  },
+  "12": {
+   "s": [
+    "churches",
+    "assemblies",
+    "congregations"
+   ],
+   "r": "The congregations of believers in Galatia.",
+   "n": "Abbott-Smith's first sense is 'an assembly of citizens regularly convened'; the Septuagint uses it chiefly for Hebrew קָהָל. The YLT keeps 'assemblies'.",
+   "t": [
+    "churches",
+    "Churches",
+    "churches",
+    "churches",
+    "assemblies",
+    "churches"
+   ]
+  },
+  "13": {
+   "s": [
+    "the"
+   ],
+   "r": "Greek uses the article with the place name; English does not.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "14": {
+   "s": [
+    "of Galatia"
+   ],
+   "r": "The Roman province in Asia Minor.",
+   "n": "Abbott-Smith distinguishes the region settled by Gauls from the Roman province that included it, and files this verse under the province.",
+   "t": [
+    "of Galatia",
+    "of Galatia",
+    "of Galatia",
+    "of Galatia",
+    "of Galatia",
+    "of Galatia"
+   ]
+  },
+  "15": {
+   "s": [
+    "so",
+    "in this way",
+    "likewise"
+   ],
+   "r": "In the same way as the Galatians.",
+   "t": [
+    "even so",
+    "so",
+    "so",
+    "so",
+    "so",
+    null
+   ]
+  },
+  "16": {
+   "s": [
+    "also",
+    "too"
+   ],
+   "r": "You as well as they.",
+   "t": [
+    null,
+    "also",
+    "also",
+    "also",
+    "also",
+    null
+   ]
+  },
+  "17": {
+   "s": [
+    "you",
+    "you yourselves"
+   ],
+   "r": "Emphatic: the Corinthians in turn.",
+   "n": "The pronoun is expressed, which in Greek gives it emphasis.",
+   "t": [
+    "ye",
+    "ye",
+    "ye",
+    "ye",
+    "ye",
+    "you"
+   ]
+  },
+  "18": {
+   "s": [
+    "must do",
+    "do",
+    "are to do",
+    "act"
+   ],
+   "r": "A command: follow the same plan.",
+   "n": "An aorist imperative, literally 'do'. English needs 'must' to make the command plain after 'so also you'.",
+   "t": [
+    "do",
+    "doe",
+    "do",
+    "do",
+    "do ye",
+    "are to do"
+   ]
+  }
+ }
+}

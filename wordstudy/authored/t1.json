@@ -1,0 +1,460 @@
+{
+ "id": "t1",
+ "en": [
+  {
+   "t": "Now",
+   "w": [
+    "02"
+   ]
+  },
+  " ",
+  {
+   "t": "when they had come",
+   "w": [
+    "01",
+    "03"
+   ]
+  },
+  " ",
+  {
+   "t": "to",
+   "w": [
+    "04"
+   ]
+  },
+  " ",
+  {
+   "t": "Capernaum",
+   "w": [
+    "05"
+   ]
+  },
+  ", ",
+  {
+   "t": "those who",
+   "w": [
+    "07"
+   ]
+  },
+  " ",
+  {
+   "t": "receive",
+   "w": [
+    "10"
+   ]
+  },
+  " ",
+  {
+   "t": "the",
+   "w": [
+    "08"
+   ]
+  },
+  " ",
+  {
+   "t": "double drachmas",
+   "w": [
+    "09"
+   ]
+  },
+  " ",
+  {
+   "t": "came",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "to Peter",
+   "w": [
+    "12",
+    "11"
+   ]
+  },
+  " ",
+  {
+   "t": "and",
+   "w": [
+    "13"
+   ]
+  },
+  " ",
+  {
+   "t": "said",
+   "w": [
+    "14"
+   ]
+  },
+  ", ‘",
+  {
+   "t": "Your",
+   "w": [
+    "17"
+   ]
+  },
+  " ",
+  {
+   "t": "teacher",
+   "w": [
+    "16",
+    "15"
+   ]
+  },
+  " ",
+  {
+   "t": "pays",
+   "w": [
+    "19"
+   ]
+  },
+  " ",
+  {
+   "t": "the",
+   "w": [
+    "20"
+   ]
+  },
+  " ",
+  {
+   "t": "double drachmas",
+   "w": [
+    "21"
+   ]
+  },
+  ", does he ",
+  {
+   "t": "not",
+   "w": [
+    "18"
+   ]
+  },
+  "?’"
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "having come",
+    "when they had come",
+    "on their arrival"
+   ],
+   "r": "Jesus and the disciples arrive in Capernaum.",
+   "n": "An aorist participle in a construction of its own, literally 'they having come'; English makes it a 'when' clause.",
+   "t": [
+    "when ... were come",
+    "when ... were come",
+    "when ... were come",
+    "when ... were come",
+    "having come",
+    "After ... had arrived"
+   ]
+  },
+  "02": {
+   "s": [
+    "now",
+    "and",
+    "then"
+   ],
+   "r": "Opens a new scene.",
+   "t": [
+    "And",
+    "And",
+    "And",
+    "And",
+    "And",
+    null
+   ]
+  },
+  "03": {
+   "s": [
+    "they"
+   ],
+   "r": "Jesus and his disciples.",
+   "t": [
+    "they",
+    "they",
+    "they",
+    "they",
+    "they",
+    "they"
+   ]
+  },
+  "04": {
+   "s": [
+    "to",
+    "into"
+   ],
+   "r": "Their destination.",
+   "t": [
+    "to",
+    "to",
+    "to",
+    "to",
+    "to",
+    "in"
+   ]
+  },
+  "05": {
+   "s": [
+    "Capernaum"
+   ],
+   "r": "The lakeside town where the scene takes place.",
+   "n": "Abbott-Smith spells it Καφαρναούμ, notes the received text's spelling Καπερ-, and explains the name from Hebrew as 'Nahum's village'.",
+   "t": [
+    "Capernaum",
+    "Capernaum",
+    "Capharnaum",
+    "Capernaum",
+    "Capernaum",
+    "Capernaum"
+   ]
+  },
+  "06": {
+   "s": [
+    "came",
+    "came up",
+    "approached"
+   ],
+   "r": "The collectors come up to Peter.",
+   "t": [
+    "came",
+    "came",
+    "came",
+    "came",
+    "came near",
+    "came"
+   ]
+  },
+  "07": {
+   "s": [
+    "those who",
+    "the ones who",
+    "the men who"
+   ],
+   "r": "The article turns the phrase that follows into a description of people.",
+   "t": [
+    "they that",
+    "they that",
+    "they that",
+    "they that",
+    "those",
+    "the"
+   ]
+  },
+  "08": {
+   "s": [
+    "the"
+   ],
+   "r": "Marks the familiar, expected payment.",
+   "t": [
+    null,
+    null,
+    "the",
+    "the",
+    "the",
+    null
+   ]
+  },
+  "09": {
+   "s": [
+    "double drachmas",
+    "two-drachma pieces",
+    "two-drachma dues"
+   ],
+   "r": "The payment of two drachmas, the yearly temple due.",
+   "n": "Abbott-Smith: 'worth two drachmae', as a noun 'a double drachma, nearly equal to the Jewish half-shekel, the amount of the Temple tax'; this is the only verse that uses it. This study renders it 'double drachma', not 'temple tax' or 'tribute', so it stays apart from φόρος, 'tribute', and κῆνσος, 'census tax'; the KJV's 'tribute money' blurs them. Compare the half-shekel payment of Exodus 30:13, also in this corpus, which the ASV's 'half-shekel' names.",
+   "t": [
+    "tribute money",
+    "polle money",
+    "didrachmas",
+    "half-shekel",
+    "didrachms",
+    "two-drachma tax"
+   ]
+  },
+  "10": {
+   "s": [
+    "receive",
+    "collect",
+    "take"
+   ],
+   "r": "Their work is to take in the payment.",
+   "n": "A present participle: those whose job it is to receive it. Abbott-Smith's first sense of the verb is 'to take, lay hold of'.",
+   "t": [
+    "received",
+    "receiued",
+    "received",
+    "received",
+    "receiving",
+    "collectors"
+   ]
+  },
+  "11": {
+   "s": [
+    "to"
+   ],
+   "r": "The article; 'to' comes from the dative case of the noun.",
+   "n": "Greek often puts the article before a personal name; English does not.",
+   "t": [
+    "to",
+    "to",
+    "to",
+    "to",
+    "to",
+    "to"
+   ]
+  },
+  "12": {
+   "s": [
+    "Peter"
+   ],
+   "r": "Simon Peter, approached as the one who speaks for the group.",
+   "n": "Abbott-Smith notes that the name means 'a stone'.",
+   "t": [
+    "Peter",
+    "Peter",
+    "Peter",
+    "Peter",
+    "Peter",
+    "Peter"
+   ]
+  },
+  "13": {
+   "s": [
+    "and"
+   ],
+   "r": "Joins their speaking to their coming.",
+   "t": [
+    "and",
+    "and",
+    "and",
+    "and",
+    "and",
+    "and"
+   ]
+  },
+  "14": {
+   "s": [
+    "said",
+    "asked"
+   ],
+   "r": "They put their question.",
+   "t": [
+    "said",
+    "sayd",
+    "said",
+    "said",
+    "said",
+    "asked"
+   ]
+  },
+  "15": {
+   "s": [
+    "the"
+   ],
+   "r": "With 'your', marks Peter's own teacher.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "16": {
+   "s": [
+    "teacher",
+    "master",
+    "rabbi"
+   ],
+   "r": "Jesus, as the collectors see him: a teacher with disciples.",
+   "n": "Abbott-Smith notes that the word was given as a rendering of Hebrew רַבִּי, rabbi. The KJV and Geneva say 'master' in its older sense of teacher.",
+   "t": [
+    "master",
+    "Master",
+    "master",
+    "teacher",
+    "teacher",
+    "Teacher"
+   ]
+  },
+  "17": {
+   "s": [
+    "your"
+   ],
+   "r": "Plural: the teacher of Peter and the others.",
+   "t": [
+    "your",
+    "your",
+    "your",
+    "your",
+    "your",
+    "your"
+   ]
+  },
+  "18": {
+   "s": [
+    "not",
+    "surely"
+   ],
+   "r": "Shapes the question so that it expects the answer yes.",
+   "n": "With this negative a Greek question looks for 'yes'. Our English keeps the Greek order, teacher first, and carries the 'not' in the closing 'does he not?'.",
+   "t": [
+    "not",
+    "not",
+    "not",
+    "not",
+    "not",
+    null
+   ]
+  },
+  "19": {
+   "s": [
+    "pay",
+    "pay in full",
+    "settle"
+   ],
+   "r": "Pay what is due.",
+   "n": "Abbott-Smith derives the verb from τέλος, which in its money sense this study renders 'toll', and gives as its first sense 'to bring to an end, complete, finish'. The money sense, to pay, can be seen as completing what is owed; that link is an inference, as the brief's entry is cut off before the sense 'pay'.",
+   "t": [
+    "Doth ... pay",
+    "Doeth ... pay",
+    "Doth ... pay",
+    "Doth ... pay",
+    "doth he ... pay",
+    "Does ... pay"
+   ]
+  },
+  "20": {
+   "s": [
+    "the"
+   ],
+   "r": "The payment already named.",
+   "t": [
+    null,
+    null,
+    "the",
+    "the",
+    "the",
+    "the"
+   ]
+  },
+  "21": {
+   "s": [
+    "double drachmas",
+    "two-drachma pieces"
+   ],
+   "r": "The same payment, named again in the question.",
+   "n": "The KJV renders the same word 'tribute money' and then 'tribute', the word this study keeps for φόρος.",
+   "t": [
+    "tribute",
+    "polle money",
+    "didrachma",
+    "half-shekel",
+    "didrachms",
+    "two drachmas"
+   ]
+  }
+ }
+}
