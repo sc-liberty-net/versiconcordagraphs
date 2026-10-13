@@ -231,6 +231,10 @@ ABBR_KNOWN = {
     'John': 'John', 'Acts': 'Acts', 'Romans': 'Rom', '1 Corinthians': '1 Cor',
     '2 Corinthians': '2 Cor', '1 Timothy': '1 Tim', 'Hebrews': 'Heb',
     'James': 'Jas', '1 Peter': '1 Pet',
+    'Joshua': 'Josh', '2 Samuel': '2 Sam', '1 Kings': '1 Kgs', '2 Kings': '2 Kgs',
+    'Ezra': 'Ezra', 'Esther': 'Esth', 'Proverbs': 'Prov', 'Jeremiah': 'Jer',
+    'Lamentations': 'Lam', 'Daniel': 'Dan', 'Micah': 'Mic', 'Haggai': 'Hag',
+    'Galatians': 'Gal',
 }
 
 if fail:

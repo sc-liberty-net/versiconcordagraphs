@@ -7,7 +7,8 @@ Reads corpus_nodes.csv; never edits it. Nothing here reads NRSV text.
 """
 import csv, json, os, re, glob, sys
 from sources import (ROOT, BOOKS, TRANS_ORDER, TRANS_NAMES, GPUNCT, heb, clean_def, greek_gram, heb_part,
-                     brief, gesenius, thayer, bdb, COUNT_E, COUNT_B, TRANSLATIONS, LXX, lxx_ref)
+                     brief, gesenius, thayer, bdb, COUNT_E, COUNT_B, TRANSLATIONS, LXX, lxx_ref,
+                     LXX_ABSENT)
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 os.makedirs(os.path.join(HERE, "data"), exist_ok=True)
@@ -215,7 +216,9 @@ for nd in nodes:
          "clusterKey": nd["cluster"], "gist": nd["gist"],
          "translations": [{"key": k, "t": TRANS_NAMES[k], "text": tr[k]} for k in TRANS_ORDER if k in tr],
          "words": words, "tr_extra": tr_extra}
-    if lang == "H":
+    if lang == "H" and (book, ch, vs) in LXX_ABSENT:
+        v["lxx_ref"], v["lxx"] = lxx_ref(book, ch, vs), None
+    elif lang == "H":
         v["lxx_ref"] = lxx_ref(book, ch, vs)
         v["lxx"] = LXX.get(v["lxx_ref"])
         if not v["lxx"]:  # Swete's digital text sometimes numbers a stretch one verse behind (its "Deut 14:28" is verse 29)

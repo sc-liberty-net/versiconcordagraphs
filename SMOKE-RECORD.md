@@ -89,3 +89,8 @@ source: C:\Users\ethan\AppData\Local\Temp/claude/C--Users-ethan-Desktop-Biblogra
 cause: Ethan's /title-case, 13 Oct: titles and labels shown in Title Case with & (a titleCase() display helper; the CSV names are unchanged). Three lines change case only: the panel heading, the group panel's ref and tag. The suite's group probe now finds 'Tithe Statutes', the name as displayed.
 moved: 3 changed, 0 new, 0 gone (0 allowed, not counted)
 source: C:\Users\ethan\AppData\Local\Temp/claude/C--Users-ethan-Desktop-Biblography/4247ac7d-27d5-45cb-9f65-2e89e9d758c8/scratchpad/new3.out -> smoke-baseline.out
+
+## 2026-10-13 - baseline refreshed: smoke-baseline.out
+cause: Ethan's O1-O3, 13 Oct: 60 passages and 76 connections added; two new groups (kings: Kings and their levies, 20 incl. 1 Samuel 8:15 moved from anchor; inherit: Portion and inheritance, 20); 13 empires passages in imperial; Deuteronomy 14:22-28 and Malachi 3:10 in anchor (18-1+8=25). 244 nodes, 299 edges, 38 books (26 + 12 new; ticks = books + 1), 20 groups. Dependent counts follow: treasure motif still lights 14 (dims 244-14, edges 299-9); search 'tithe' leaves 13 (5 new summaries use the word); anchor group lit 119/60 and held during arc hover; bbox h and zoom move with the taller arc field.
+moved: 29 changed, 0 new, 0 gone (0 allowed, not counted)
+source: C:\Users\ethan\AppData\Local\Temp/claude/C--Users-ethan-Desktop-Biblography/4247ac7d-27d5-45cb-9f65-2e89e9d758c8/scratchpad/new4.out -> smoke-baseline.out

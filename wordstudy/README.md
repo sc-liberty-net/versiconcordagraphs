@@ -1,6 +1,7 @@
 # Word Study — Taxes & Tithes
 
-Every one of the concordagraph's 184 passages in this project's own literal English, with the
+The concordagraph's passages in this project's own literal English (184 drafted; the 60 added on
+13 Oct, kings, empires, inheritance and more tithe law, are not drafted yet), with the
 KJV as supporting reference. Every word opens onto the Hebrew or Greek behind it: grammar, how
 seven public-domain translations render it, the lexicons, the Textus Receptus reading (Greek), and
 the Septuagint's Greek (Hebrew). Built 11-12 October 2026. Published as a private artifact:
@@ -13,7 +14,7 @@ From this folder:
 ```
 python extract.py     # data/<id>.json and digest/<id>.txt for every corpus node (reads, never edits, corpus_nodes.csv)
 python check.py       # every authored/<id>.json against GUIDE.md's rules; must end "184 of 184 drafts pass"
-python build.py       # word-study.html and ../wordstudy.js; must report 184 of 184 verses
+python build.py       # word-study.html and ../wordstudy.js; reports drafted of total (184 of 244 on 13 Oct)
 python test_page.py   # runs the page in Chromium, renders all 3,269 word panels; must end "PASSED"
 ```
 

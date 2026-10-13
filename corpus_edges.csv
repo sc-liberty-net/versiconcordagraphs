@@ -222,3 +222,79 @@ p10,p3,con,states,"The hole in the ground, and the bank it should have been."
 z10,z9,con,states,"The price agreed, then carried back."
 z10,v12,con,states,"Brought back to the priests, and refused by the treasury."
 y9,y2,con,supports,"A fellowship that sold what it had, and an apostle with no coin on him."
+s1,g1,con,supports,"The tenth Abram gave freely to a priest-king, here taken by a king."
+s1,m1,con,supports,Two claimants to one fraction: the king takes the tenth; Malachi says withholding it robs God.
+kg5,t2,con,supports,"Samuel's answer to Jesus' question: the king takes from his own people, until they are his slaves."
+kg5,t3,con,spec,Under Samuel's king the people become slaves; in Jesus' answer the sons go free.
+kg5,l2,con,supports,"The tenth of the flock: holy to the LORD in Leviticus, claimed by the king in Samuel."
+kg2,kg3,con,states,"Samuel's list of what the king will take, continued."
+kg3,s1,con,states,"Samuel's list of what the king will take, continued."
+s1,kg4,con,states,"Samuel's list of what the king will take, continued."
+kg4,kg5,con,states,"Samuel's list of what the king will take, continued."
+kg5,kg6,con,states,The list ends in the outcry it predicts.
+kg1,s1,con,supports,The law limits the king; Samuel describes a king without limits.
+kg1,kg11,con,supports,The law forbade the king a hoard of gold; Solomon's revenue is the hoard.
+kg8,s1,con,supports,"Officers drawing the court's food from the land, as Samuel said the king's men would."
+kg9,kg10,lex,states,"The same word for the labour levy, and what it built."
+kg10,kg14,lex,states,The same forced labour; its overseer is killed when the kingdom breaks.
+kg6,kg12,con,supports,"The outcry Samuel foretold, made to Solomon's son."
+kg12,kg13,con,states,"The request, and the refusal."
+kg13,kg14,con,states,"The heavier yoke, answered with stones."
+kg17,kg13,con,supports,The proverb played out: the heavy levy tears the kingdom apart.
+kg15,kg16,con,supports,"Kings raising an empire's price from their own people, each by his wealth."
+kg18,w2,con,supports,A king who keeps back pay breaks the law that protects the hired worker.
+kg18,w4,con,supports,"Wages held back, crying out against those who held them."
+kg19,kg3,con,supports,"The seizing of land Samuel foresaw, ordered stopped."
+kg7,em5,lex,supports,"The same word for tribute: Israel's king collects it from Moab, a later king pays it to Assyria."
+em1,em2,con,states,"Joseph's arrangement with Egypt, continued."
+em2,em3,con,states,"Joseph's arrangement with Egypt, made law."
+em3,s1,con,supports,A fifth of the harvest for Pharaoh; a tenth for Israel's king.
+em3,em10,con,supports,"Two empires exempt the priests: Pharaoh's keep their land, Persia's temple staff pay no toll."
+em10,t3,con,spec,Persia exempts the temple's servants from toll; Jesus says the sons are free.
+em9,em10,lex,states,"The same three levies, tribute, duty and toll: feared lost, then waived for the temple."
+em4,kg9,lex,supports,"The forced labour Israel suffered in Egypt, imposed by Solomon on Israel."
+em5,em6,con,states,"The tribute paid, then withheld."
+em7,kg15,con,supports,Israel's and Judah's kings each buy off Assyria with silver.
+kg16,em8,con,states,"Neco's levy, and how Jehoiakim raised it from the land."
+em11,i23,con,supports,The harvest going to foreign kings; families borrowing against their land to meet the royal levy.
+em12,i1,con,supports,"An emperor reaching his whole empire, with a levy and with a registration."
+em13,c11,con,supports,"An empire's exactor, and the instruction given to the collectors: no more than is set."
+in1,n1,con,states,"No land for the Levites, so the tithe is given instead."
+in2,in3,con,states,"No inheritance among the tribes, and what is given in its place."
+in3,n1,lex,states,"The tithe named as the Levites' inheritance, twice in four verses."
+in6,in1,ref,supports,Deuteronomy recalls the promise of Numbers 18: the LORD is Levi's inheritance.
+in7,in6,lex,states,"No share and no inheritance: the same rule for Levi, restated."
+in8,in7,lex,states,The rule carried out when the land is divided.
+in9,in1,lex,supports,Ezekiel restates the Levitical rule for the restored temple.
+d1,in6,lex,states,The third-year tithe is for the Levite because he has no share or inheritance.
+dt6,in6,lex,states,The same reason given: the Levite has no share or inheritance.
+h3,in3,ref,supports,Hebrews' commandment that the Levites collect the tithe is this one.
+in10,kg3,con,supports,The king who takes the best vineyards meets a man who will not sell his.
+in10,in11,con,supports,Ezekiel forbids the prince what Ahab did.
+in11,kg19,con,states,"Ezekiel's charter for the prince: no violence, no seizing the people's land."
+in12,in10,con,supports,"Fields coveted and seized, as Ahab seized Naboth's."
+in4,in5,con,supports,"Inheritance kept in the family line, and in the tribe."
+in5,r6,con,supports,"Land stays with its family: by tribe here, by the jubilee there."
+in13,in1,lex,supports,The priests' portion claimed by a worshipper: the LORD as one's share.
+in14,in13,lex,supports,"The LORD as one's share, said out of loss."
+in15,in4,con,supports,An inheritance kept for the generations that follow.
+in16,in17,con,states,"The request, and the refusal."
+in17,v10,con,supports,"Refusing to divide an estate, Jesus turns the talk to where treasure is kept."
+in18,c13,con,states,The parable of the two sons is told to an audience of tax collectors and sinners.
+in19,f7,con,supports,The same letter sets an imperishable inheritance against perishable silver and gold.
+in19,k5,con,supports,"Wealth kept in heaven, out of reach of decay."
+in20,t3,con,spec,"A son, not a slave, and so an heir; the sons are free."
+in20,kg5,con,spec,Slaves of the king in Samuel; sons and heirs in Paul.
+dt1,dt2,con,states,"The tithe law of Deuteronomy 14, continued."
+dt2,dt3,con,states,"The tithe law of Deuteronomy 14, continued."
+dt3,dt4,con,states,"The tithe law of Deuteronomy 14, continued."
+dt4,dt5,con,states,"The tithe law of Deuteronomy 14, continued."
+dt5,dt6,con,states,"The tithe law of Deuteronomy 14, continued."
+dt6,dt7,con,states,"The tithe law of Deuteronomy 14, continued."
+dt7,d1,con,states,"The third-year tithe, and who eats it."
+dt1,l1,con,supports,Two statements of the yearly tithe of the field.
+dt2,n1,con,supports,Here the giver eats the tithe; in Numbers it goes to the Levites. Two rules to reconcile.
+dt4,x1,con,spec,Tithe turned into money for the journey; the exchange trade later filled the temple court.
+ml1,m1,con,states,"Malachi's charge of robbery, then the command."
+ml1,n1,con,supports,"The tithe feeds the house of God, as Numbers assigned it to its servants."
+ml1,dt7,lex,states,"The tenth laid up in store: in the towns, in the storehouse."

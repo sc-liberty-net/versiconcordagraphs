@@ -24,7 +24,20 @@ BOOKS = {
     "1 Corinthians": ("1Co", "TAGNT Act-Rev", None), "2 Corinthians": ("2Co", "TAGNT Act-Rev", None),
     "1 Timothy": ("1Ti", "TAGNT Act-Rev", None), "Hebrews": ("Heb", "TAGNT Act-Rev", None),
     "James": ("Jas", "TAGNT Act-Rev", None), "1 Peter": ("1Pe", "TAGNT Act-Rev", None),
+    # added 13 Oct with the kings, empires and inheritance passages
+    "Joshua": ("Jos", "TAHOT Jos-Est", "JoshB"), "2 Samuel": ("2Sa", "TAHOT Jos-Est", "2Sam"),
+    "1 Kings": ("1Ki", "TAHOT Jos-Est", "1Kgs"), "2 Kings": ("2Ki", "TAHOT Jos-Est", "2Kgs"),
+    "Ezra": ("Ezr", "TAHOT Jos-Est", "2Esd"), "Esther": ("Est", "TAHOT Jos-Est", "Esth"),
+    "Proverbs": ("Pro", "TAHOT Job-Sng", "Prov"), "Jeremiah": ("Jer", "TAHOT Isa-Mal", "Jer"),
+    "Lamentations": ("Lam", "TAHOT Isa-Mal", "Lam"), "Daniel": ("Dan", "TAHOT Isa-Mal", "DanTh"),
+    "Micah": ("Mic", "TAHOT Isa-Mal", "Mic"), "Galatians": ("Gal", "TAGNT Act-Rev", None),
 }
+
+# Verses the Septuagint does not have at all, checked against Swete 13 Oct: no pairing, and no guess at
+# the verse before (extract.py otherwise tries one verse back, which would pair 1 Kings 9:15 with 9:14).
+# Swete's 1 Kingdoms III lacks 9:15; Lamentations 3:22-24 is absent from the Greek; Swete numbers Greek
+# Esther's chapter 10 by its additions, so English 10:1 has no counterpart there.
+LXX_ABSENT = {("1 Kings", 9, 15), ("Lamentations", 3, 24), ("Esther", 10, 1)}
 
 
 def lxx_ref(book, ch, vs):
@@ -32,6 +45,8 @@ def lxx_ref(book, ch, vs):
     lb = BOOKS[book][2]
     if book == "Nehemiah":          # Nehemiah is 2 Esdras 11-23
         ch += 10
+    if book == "1 Kings" and ch in (20, 21):  # the Greek has Naboth (21) before Ahab's wars (20)
+        ch = 41 - ch
     if book == "Psalm" and 10 <= ch <= 112:  # Hebrew Psalms 10-113 run one behind in the Greek
         ch -= 1
     return f"{lb}.{ch}.{vs}"

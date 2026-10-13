@@ -1,20 +1,20 @@
 console errors: 0
-META: {"books": 26, "edges": 223, "nodes": 184}
-corpus N length: 184
-corpus E length: 223
-drawn nodes: 184
-drawn arcs: 223
-drawn hits: 223
-drawn labels: 26
-drawn ticks: 27
-rail clusters: 18
+META: {"books": 38, "edges": 299, "nodes": 244}
+corpus N length: 244
+corpus E length: 299
+drawn nodes: 244
+drawn arcs: 299
+drawn hits: 299
+drawn labels: 38
+drawn ticks: 39
+rail clusters: 20
 rail warrants: 3
 rail kinds: 3
 rail group lens hidden: True
-header: 184 passages across 26 books, joined by 223 connections — drawn 
+header: 244 passages across 38 books, joined by 299 connections — drawn 
 title: Concordagraph - Taxes & Tithes
 graph bbox w: 2490
-graph bbox h: 1360
+graph bbox h: 1480
 NRSV payload present: False
 empty panel note: This copy shows references and summaries. To r
 panel found node: True
@@ -26,48 +26,48 @@ panel heading: 12 Connections
 edges on Matthew 9:9 to Mark 2:14: 2
 kinds on that pair: con,lex
 distinct arc lanes on that pair: 2
-filter hid: 18
+filter hid: 25
 filter restored: 0
-zoom floor: 0.2812
-zoom fitted: 0.2812
-zoom afterButtons: 0.2812
-zoom afterWheel: 0.2812
-zoom zoomedIn: 0.3515
+zoom floor: 0.2816
+zoom fitted: 0.2816
+zoom afterButtons: 0.2816
+zoom afterWheel: 0.2816
+zoom zoomedIn: 0.3519
 page heading: Taxes, Tithes, & Tribute
 arrangement group hidden: True
 reset sits over the canvas: True
 era label font-size: 34px
 arc stroke-width states: 1.7
-groups carrying a note: 18
-group row tooltips: 18
+groups carrying a note: 20
+group row tooltips: 20
 header height px: 76
 about opens: True
 about closes on click-off: True
 about closes on X: True
 about sections: 4
-about size sentence: 184 passages across 26 books, joined by 
-group clear hides: 184
+about size sentence: 244 passages across 38 books, joined by 
+group clear hides: 244
 group select all hides: 0
 group name click leaves tick alone: True
 group group panel ref: Tithe Statutes
-group group panel tag: 18 Passages
-group group panel rows: 18
-group group lights: 18
+group group panel tag: 25 Passages
+group group panel rows: 25
+group group lights: 25
 group second click deselects: True
-arc hover: group lit before: 92/44
+arc hover: group lit before: 119/60
 arc hover: hovering an arc: True
-arc hover: group lit during: 92/44
+arc hover: group lit during: 119/60
 arc hover: hovered arc drawn full: 1
 motif tip on hover: A motif is a Hebrew or Greek word, not a
 motif tip after leaving: hidden
 motif rows: 10
 motif keys: treasure,silver,coin,tithe,tax,collector,debt,gift,poor,blessing
 motif nodes covered: 95
-motif treasure dims: 170
+motif treasure dims: 230
 motif treasure lights: 14
-motif treasure dims edges: 214
+motif treasure dims edges: 290
 motif unticked restores to: 0
-search "tithe" hides: 176
+search "tithe" hides: 231
 wordstudy.js present: True
 study desktop passages: 184
 study desktop empty note: Each passage opens in this project's own liter
