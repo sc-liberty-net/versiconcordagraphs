@@ -143,7 +143,15 @@ button.reset:hover{background:var(--sunk)}
 .motifbar .mlabel{
   font-family:Archivo,sans-serif; font-size:11.5px; font-weight:600;
   letter-spacing:.04em; color:var(--ink-3); cursor:help; flex:none;
+  appearance:none; border:0; background:none; padding:2px 0; text-align:left;
 }
+.motifbar .mlabel:hover{color:var(--ink)}
+.motifbar .mq{display:inline-grid; place-items:center; width:15px; height:15px; margin-left:3px;
+  border:1px solid currentColor; border-radius:50%; font-size:10px; line-height:1}
+.motifbar{position:relative}
+.mtip{position:absolute; left:14px; top:calc(100% - 4px); z-index:5; width:min(360px, calc(100% - 28px));
+  background:var(--ink); color:var(--surface); border-radius:8px; padding:9px 12px;
+  font-size:13px; line-height:1.45; box-shadow:0 6px 20px rgba(0,0,0,.25)}
 #motifs{display:flex; flex-wrap:wrap; gap:6px}
 #motifs .row{
   display:inline-flex; align-items:center; gap:6px; padding:3px 11px;
@@ -241,6 +249,8 @@ button.reset:hover{background:var(--sunk)}
    and the dashes constant however far out you are. */
 .edge, .hit{vector-effect:non-scaling-stroke}
 path.esel{stroke-width:4; stroke-opacity:1}
+/* the arc under the pointer while something is selected: full strength, even if dimmed */
+path.edge.ehov{opacity:1; stroke-width:3; stroke-opacity:1}
 .booklab.sel{font-weight:600; fill:var(--ink)}
 @media (max-width:900px){
   .main{flex-direction:column}
@@ -346,7 +356,10 @@ path.esel{stroke-width:4; stroke-opacity:1}
   </div>
   <div class="stage">
     <div class="motifbar">
-      <span class="mlabel" title="A motif is a Hebrew or Greek word, not a group. A passage belongs to one group but carries as many motifs as it has words. The second number is how many verses in the whole Bible use that word: shared with four is evidence, shared with four hundred is vocabulary.">Trace a motif</span>
+      <!-- A real tooltip, not a title attribute: a title shows only after the
+           pointer rests a second, and never on a phone (Ethan, 13 Oct). -->
+      <button type="button" class="mlabel" id="mlabel" aria-describedby="mtip" aria-expanded="false">Trace a motif <span class="mq" aria-hidden="true">?</span></button>
+      <div class="mtip" id="mtip" role="tooltip" hidden>A motif is a Hebrew or Greek word, not a group. A passage belongs to one group but carries as many motifs as it has words. The second number is how many verses in the whole Bible use that word: shared with four is evidence, shared with four hundred is vocabulary.</div>
       <div id="motifs"></div>
     </div>
     <div class="canvas">
@@ -1342,7 +1355,11 @@ function focused(){
   // selection to compare it against. The readout still names the arc either
   // way, so nothing becomes undiscoverable. Passages and book labels are
   // discrete targets and keep highlighting on hover as before.
-  if(isEdge(hovered) && !picked) return null;
+  // Once something IS selected, arc hover must not replace it either: reaching
+  // for a lit arc means crossing others, and each one swapped the selection's
+  // highlight for its own two ends (Ethan, 13 Oct). The hovered arc is drawn
+  // full-strength instead (.ehov) and the readout names it.
+  if(isEdge(hovered)) return picked;
   return hovered || picked;
 }
 
@@ -1457,6 +1474,7 @@ function draw(){
     e.el.classList.toggle('dim', ok && ((f ? !litEdge(e,f) : false)
                           || (mo ? !(mo.has(e.s.id) && mo.has(e.t.id)) : false)));
     e.el.classList.toggle('esel', e===picked);
+    e.el.classList.toggle('ehov', e===hovered && !!picked);
   });
   for(const b in bookLabels){
     bookLabels[b].classList.toggle('mag', isBook(f) && f.book===b);
@@ -1653,6 +1671,19 @@ function render(){
   if(isEdge(picked)) return renderEdge(picked);
   renderNode(picked);
 }
+// ---- the motif explanation: hover or focus shows it, a tap or click pins it --
+(function motifTip(){
+  const b=document.getElementById('mlabel'), t=document.getElementById('mtip');
+  let pinned=false;
+  const show=on=>{ t.hidden=!on; b.setAttribute('aria-expanded', String(on)); };
+  b.addEventListener('mouseenter',()=>show(true));
+  b.addEventListener('mouseleave',()=>{ if(!pinned) show(false); });
+  b.addEventListener('focus',()=>show(true));
+  b.addEventListener('blur',()=>{ pinned=false; show(false); });
+  b.addEventListener('click',()=>{ pinned=!pinned; show(pinned); });
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape' && !t.hidden){ pinned=false; show(false); } });
+})();
+
 // ---- the About panel -------------------------------------------------------
 (function about(){
   const dlg=document.getElementById('about'), scrim=document.getElementById('scrim'),

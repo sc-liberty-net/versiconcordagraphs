@@ -79,3 +79,8 @@ source: C:/Users/ethan/AppData/Local/Temp/ui2.out -> smoke-baseline.out
 cause: Word Study in the concordagraph (12 Oct 2026): a passage shows this project's literal English with the KJV beneath, hover synonyms and the full word study on click. 30 new lines from a second smoke pass that loads the page with wordstudy.js at 1400x900 and 390x844; no existing line moved (the first pass, without wordstudy.js, is the page's fallback).
 moved: 0 changed, 30 new, 0 gone (0 allowed, not counted)
 source: C:\Users\ethan\AppData\Local\Temp/claude/C--Users-ethan-Desktop-Biblography/4247ac7d-27d5-45cb-9f65-2e89e9d758c8/scratchpad/new.out -> smoke-baseline.out
+
+## 2026-10-13 - baseline refreshed: smoke-baseline.out
+cause: Ethan, 13 Oct: hovering an arc while a group or passage is selected no longer replaces the selection's highlight (group stays 92/44 lit; the hovered arc is drawn full, .ehov), and 'Trace a motif' has a real tooltip on hover, focus and tap instead of a title attribute. 7 new lines; on the previous page (da03bde) the hover line reads 2/1 and the tooltip lines fail. No existing line moved.
+moved: 0 changed, 7 new, 0 gone (0 allowed, not counted)
+source: C:\Users\ethan\AppData\Local\Temp/claude/C--Users-ethan-Desktop-Biblography/4247ac7d-27d5-45cb-9f65-2e89e9d758c8/scratchpad/new2.out -> smoke-baseline.out

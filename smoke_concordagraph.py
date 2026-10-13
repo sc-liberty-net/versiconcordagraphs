@@ -316,6 +316,42 @@ try:
         if pick(gr, 'rows') in (0, 'MISSING') or pick(gr, 'tickUnchanged') is not True:
             fatal.append('clicking a group name did not show its passages cleanly')
 
+        # --- hovering an arc keeps a selection lit (Ethan, 13 Oct) -------------
+        # With a group selected, reaching for its arcs crossed others, and each
+        # one swapped the group's highlight for its own two ends. A real pointer,
+        # because the arcs listen for pointer events, not for synthetic ones.
+        lit_js = ('() => [document.querySelectorAll(".node:not(.dim):not(.hide)").length,'
+                  ' document.querySelectorAll("path.edge:not(.dim):not(.hide)").length].join("/")')
+        ev(page, '''() => { picked = {kind: 'cluster', cl: 'anchor'}; hovered = null; studyWord = null;
+            render(); draw(); }''')
+        P('arc hover: group lit before', ev(page, lit_js))
+        pt = ev(page, '''() => { const e = edges.find(e => e.el.classList.contains('dim')
+                && !e.el.classList.contains('hide'));
+            if (!e) return 'NONE';
+            const L = e.hit.getTotalLength(), q = e.hit.getPointAtLength(L / 2), m = e.hit.getScreenCTM();
+            return {x: q.x * m.a + q.y * m.c + m.e, y: q.x * m.b + q.y * m.d + m.f}; }''')
+        if isinstance(pt, dict):
+            page.mouse.move(pt['x'], pt['y'])
+            page.wait_for_timeout(100)
+        P('arc hover: hovering an arc', ev(page, '() => !!(hovered && hovered.s)'))
+        P('arc hover: group lit during', ev(page, lit_js))
+        P('arc hover: hovered arc drawn full', ev(page, '() => document.querySelectorAll("path.ehov").length'))
+        page.mouse.move(5, 5)
+        ev(page, '() => { picked = null; hovered = null; render(); draw(); }')
+
+        # --- the motif explanation is a real tooltip (Ethan, 13 Oct) ----------
+        try:
+            page.locator('#mlabel').hover(timeout=5000)
+            page.wait_for_timeout(100)
+        except Exception as exc:
+            P('motif tip hover failed', str(exc).splitlines()[0][:60])
+        P('motif tip on hover', ev(page,
+            '() => { const t = document.getElementById("mtip"); return t && !t.hidden ? t.textContent.slice(0, 40) : "hidden"; }'))
+        page.mouse.move(5, 5)
+        page.wait_for_timeout(100)
+        P('motif tip after leaving', ev(page,
+            '() => { const t = document.getElementById("mtip"); return t ? (t.hidden ? "hidden" : "shown") : "NONE"; }'))
+
         # --- the motif axis ---------------------------------------------------
         P('motif rows', ev(page, '() => document.querySelectorAll("#motifs .row").length'))
         P('motif keys', ev(page,
@@ -378,6 +414,19 @@ try:
                 wp.goto(url2, wait_until='load')
                 wp.wait_for_timeout(1500)
                 pre = 'study %s ' % vlabel
+                if vargs.get('has_touch'):
+                    # the motif explanation, by tap: a title attribute never showed on a phone
+                    try:
+                        wp.locator('#mlabel').tap(timeout=5000)
+                        wp.wait_for_timeout(100)
+                    except Exception as exc:
+                        P(pre + 'motif tip tap failed', str(exc).splitlines()[0][:60])
+                    P(pre + 'motif tip on tap', ev(wp,
+                        '() => { const t = document.getElementById("mtip"); return t ? (t.hidden ? "hidden" : "shown") : "NONE"; }'))
+                    try:
+                        wp.locator('#mlabel').tap(timeout=5000)   # and close it again
+                    except Exception:
+                        pass
                 P(pre + 'passages', ev(wp, '() => window.WS ? WS.count : "NONE"'))
                 P(pre + 'empty note', ev(wp,
                     '() => (document.querySelector(".panel .note")||{}).textContent?.slice(0,46) || "NONE"'))
