@@ -22,7 +22,7 @@ panel ref: Matthew 23:23
 panel verse href: https://biblehub.com/matthew/23-23.htm
 panel chapter href: https://www.biblegateway.com/passage/?search=Matthew%2023&version=NRSVUE
 panel connections: 12
-panel heading: 12 connections
+panel heading: 12 Connections
 edges on Matthew 9:9 to Mark 2:14: 2
 kinds on that pair: con,lex
 distinct arc lanes on that pair: 2
@@ -49,8 +49,8 @@ about size sentence: 184 passages across 26 books, joined by
 group clear hides: 184
 group select all hides: 0
 group name click leaves tick alone: True
-group group panel ref: Tithe statutes
-group group panel tag: 18 passages
+group group panel ref: Tithe Statutes
+group group panel tag: 18 Passages
 group group panel rows: 18
 group group lights: 18
 group second click deselects: True

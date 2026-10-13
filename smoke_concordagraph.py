@@ -292,7 +292,7 @@ try:
             document.getElementById('clAll').click();
             const hiddenAfterAll = document.querySelectorAll('.node.hide').length;
             const gn = [...document.querySelectorAll('#clusters .gname')]
-                .find(g => g.textContent === 'Tithe statutes');
+                .find(g => g.textContent === 'Tithe Statutes');   // shown in Title Case since 13 Oct
             const tickBefore = gn.parentElement.querySelector('input').checked;
             gn.dispatchEvent(new MouseEvent('click', {bubbles: true, cancelable: true}));
             const out = {

@@ -84,3 +84,8 @@ source: C:\Users\ethan\AppData\Local\Temp/claude/C--Users-ethan-Desktop-Biblogra
 cause: Ethan, 13 Oct: hovering an arc while a group or passage is selected no longer replaces the selection's highlight (group stays 92/44 lit; the hovered arc is drawn full, .ehov), and 'Trace a motif' has a real tooltip on hover, focus and tap instead of a title attribute. 7 new lines; on the previous page (da03bde) the hover line reads 2/1 and the tooltip lines fail. No existing line moved.
 moved: 0 changed, 7 new, 0 gone (0 allowed, not counted)
 source: C:\Users\ethan\AppData\Local\Temp/claude/C--Users-ethan-Desktop-Biblography/4247ac7d-27d5-45cb-9f65-2e89e9d758c8/scratchpad/new2.out -> smoke-baseline.out
+
+## 2026-10-13 - baseline refreshed: smoke-baseline.out
+cause: Ethan's /title-case, 13 Oct: titles and labels shown in Title Case with & (a titleCase() display helper; the CSV names are unchanged). Three lines change case only: the panel heading, the group panel's ref and tag. The suite's group probe now finds 'Tithe Statutes', the name as displayed.
+moved: 3 changed, 0 new, 0 gone (0 allowed, not counted)
+source: C:\Users\ethan\AppData\Local\Temp/claude/C--Users-ethan-Desktop-Biblography/4247ac7d-27d5-45cb-9f65-2e89e9d758c8/scratchpad/new3.out -> smoke-baseline.out

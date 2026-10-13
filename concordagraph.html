@@ -273,10 +273,10 @@ path.edge.ehov{opacity:1; stroke-width:3; stroke-opacity:1}
 <div class="scrim" id="scrim" hidden></div>
 <div class="about" id="about" role="dialog" aria-modal="true" aria-labelledby="aboutH" hidden>
   <button type="button" class="x" id="aboutX" aria-label="Close">&times;</button>
-  <h2 id="aboutH">About this concordagraph</h2>
+  <h2 id="aboutH">About This Concordagraph</h2>
   <p class="sub" id="hSub"></p>
 
-  <h3>How to read it</h3>
+  <h3>How To Read It</h3>
   <p>Every dot is a passage; every arc is a claim that two passages are connected.
      An arc says two things about itself, and both are visible without clicking.</p>
   <p><b>What kind of link.</b> A solid line means the two passages share wording.
@@ -289,7 +289,7 @@ path.edge.ehov{opacity:1; stroke-width:3; stroke-opacity:1}
      every connection the same way launders one reader's speculation into settled
      reference, and there is no way to tell afterwards which was which.</p>
 
-  <h3>Groups and motifs are different axes</h3>
+  <h3>Groups &amp; Motifs Are Different Axes</h3>
   <p>A <b>group</b> is a topic, and a passage belongs to exactly one. A
      <b>motif</b> is a Hebrew or Greek word, and a passage carries as many as it
      has words &mdash; so a motif cuts across groups by construction. The number
@@ -297,7 +297,7 @@ path.edge.ehov{opacity:1; stroke-width:3; stroke-opacity:1}
      shared with four verses is evidence, one shared with four hundred is
      vocabulary.</p>
 
-  <h3>The Versiconcordagraphs project</h3>
+  <h3>The Versiconcordagraphs Project</h3>
   <p>A <b>concordagraph</b> is a traversable network of source references in
      which the nodes are locatable citations and every edge carries both a type
      and a warrant. This page is one of them. Each topic lives on its own branch
@@ -308,7 +308,7 @@ path.edge.ehov{opacity:1; stroke-width:3; stroke-opacity:1}
      resolve, an edge points at a missing passage, or a warrant tier is
      misspelled.</p>
 
-  <h3>No copyrighted scripture text</h3>
+  <h3>No Copyrighted Scripture Text</h3>
   <p>These pages carry verse references and summaries written for this project,
      never the wording of a copyrighted translation. Where the Word Study is
      present, a passage also shows this project's own literal English &mdash; a
@@ -326,29 +326,29 @@ path.edge.ehov{opacity:1; stroke-width:3; stroke-opacity:1}
     <div class="grp hide">
       <h2>Arrangement</h2>
       <div class="seg">
-        <button id="mGroup" aria-pressed="false">By group</button>
-        <button id="mCanon" aria-pressed="true">Bible order</button>
+        <button id="mGroup" aria-pressed="false">By Group</button>
+        <button id="mCanon" aria-pressed="true">Bible Order</button>
       </div>
       <p class="hint" id="modeHint"></p>
     </div>
     <div class="grp">
-      <h2>Find a passage</h2>
+      <h2>Find A Passage</h2>
       <input type="search" id="q" placeholder="Matthew 22, tithe, widow…" autocomplete="off">
     </div>
     <div class="grp">
       <h2>Groups</h2>
       <div class="bulk">
-        <button type="button" id="clAll">Select all</button>
+        <button type="button" id="clAll">Select All</button>
         <button type="button" id="clNone">Clear</button>
       </div>
       <div id="clusters"></div>
     </div>
     <div class="grp">
-      <h2>How strong is the link</h2>
+      <h2>How Strong Is The Link</h2>
       <div id="warrants"></div>
     </div>
     <div class="grp">
-      <h2>What kind of link</h2>
+      <h2>What Kind Of Link</h2>
       <div id="types"></div>
     </div>
     <div class="grp">
@@ -358,12 +358,12 @@ path.edge.ehov{opacity:1; stroke-width:3; stroke-opacity:1}
     <div class="motifbar">
       <!-- A real tooltip, not a title attribute: a title shows only after the
            pointer rests a second, and never on a phone (Ethan, 13 Oct). -->
-      <button type="button" class="mlabel" id="mlabel" aria-describedby="mtip" aria-expanded="false">Trace a motif <span class="mq" aria-hidden="true">?</span></button>
+      <button type="button" class="mlabel" id="mlabel" aria-describedby="mtip" aria-expanded="false">Trace A Motif <span class="mq" aria-hidden="true">?</span></button>
       <div class="mtip" id="mtip" role="tooltip" hidden>A motif is a Hebrew or Greek word, not a group. A passage belongs to one group but carries as many motifs as it has words. The second number is how many verses in the whole Bible use that word: shared with four is evidence, shared with four hundred is vocabulary.</div>
       <div id="motifs"></div>
     </div>
     <div class="canvas">
-      <button class="reset floating" id="reset">Show everything again</button>
+      <button class="reset floating" id="reset">Show Everything Again</button>
       <svg id="net" role="img" aria-label="Network of New Testament passages about tax and tithe"></svg>
       <div class="readout" id="readout" aria-live="polite"></div>
       <div class="zoom">
@@ -1255,6 +1255,16 @@ const MO_IDS = Object.fromEntries(
         .map(([k,o]) => [k, new Set(o.nodes.split(' '))]));
 let query='', picked=null, hovered=null;
 
+// Ethan's rule for titles and labels: Title Case, every word, "and" as "&".
+// Display only: group, motif and link-kind names stay as the CSVs write them,
+// because search and the Word Study read the plain names.
+function titleCase(s){
+  return String(s).split(/(\s+)/).map(w=>{ const ps=w.split('-'); return ps.map(p=>{
+    const m=p.match(/^([^\p{L}\p{N}]*)(.*?)([^\p{L}\p{N}]*)$/su);
+    return ps.length===1 && /^and$/i.test(m[2]) ? m[1]+'&'+m[3] : m[1]+m[2].charAt(0).toUpperCase()+m[2].slice(1)+m[3];
+  }).join('-'); }).join('');
+}
+
 // Selection toggles by identity, so a fresh {kind:'cluster'} per click would
 // make a second click fail to deselect. Same reason bookFocus exists.
 const clusterFocus = Object.fromEntries(
@@ -1269,7 +1279,7 @@ function build(host, map, set, kind){
     else if(kind==='wa'){ mark.className='swatch'; mark.style.borderTopColor=`var(${o.v})`; }
     else { mark.className='swatch'; mark.style.borderTopColor='var(--ink-3)';
            if(o.dash) mark.style.borderTopStyle = o.dash==='7 4' ? 'dashed' : 'dotted'; }
-    const txt=document.createElement('span'); txt.textContent=o.name;
+    const txt=document.createElement('span'); txt.textContent=titleCase(o.name);
     // Until now the rail named eighteen groups and explained none of them.
     if(o.note) lab.title = o.name + ' \u2014 ' + o.note;
     if(kind==='cl'){
@@ -1314,7 +1324,7 @@ build(document.getElementById('types'),TY,onTy,'ty');
     const lab=document.createElement('label'); lab.className='row'; lab.tabIndex=0;
     const cb=document.createElement('input'); cb.type='checkbox'; cb.checked=false;
     const txt=document.createElement('span'); txt.className='mn';
-    txt.textContent=o.name;
+    txt.textContent=titleCase(o.name);
     const sc=document.createElement('span'); sc.className='scope';
     sc.textContent=MO_IDS[k].size+' / '+o.scope;
     lab.title=o.note+'  This corpus: '+MO_IDS[k].size+' passages. Whole Bible: '+o.scope+' verses.';
@@ -1413,15 +1423,15 @@ function showReadout(f){
   let main, kind;
   if(isBook(f)){
     const c=nodes.filter(n=>n.book===f.book).length;
-    main=f.book; kind=c===1 ? '1 passage' : c+' passages';
+    main=f.book; kind=c===1 ? '1 Passage' : c+' Passages';
   } else if(isCluster(f)){
     const c=nodes.filter(n=>n.cl===f.cl).length;
-    main=CL[f.cl].name; kind=c===1 ? '1 passage' : c+' passages';
+    main=titleCase(CL[f.cl].name); kind=c===1 ? '1 Passage' : c+' Passages';
   } else if(isEdge(f)){
     main=`${f.s.ref}  →  ${f.t.ref}`;
-    kind=`${TY[f.ty].name} · ${WA[f.wa].name}`;
+    kind=titleCase(`${TY[f.ty].name} · ${WA[f.wa].name}`);
   } else {
-    main=f.ref; kind=CL[f.cl].name;
+    main=f.ref; kind=titleCase(CL[f.cl].name);
   }
   readout.textContent=main;
   const k=document.createElement('span'); k.className='rk'; k.textContent=kind;
@@ -1548,12 +1558,12 @@ function chapterLink(n){
   a.target='_blank'; a.rel='noopener noreferrer';
   a.textContent=n.ref;
   a.title=`${n.ref} on Bible Hub — every major translation of this verse, side by side`;
-  const s=document.createElement('span'); s.className='ext'; s.textContent='compare ↗';
+  const s=document.createElement('span'); s.className='ext'; s.textContent='Compare ↗';
   const g=document.createElement('a'); g.className='chap';
   g.href='https://www.biblegateway.com/passage/?search='
         + encodeURIComponent(n.book+' '+n.chap) + '&version=NRSVUE';
   g.target='_blank'; g.rel='noopener noreferrer';
-  g.textContent=`read ${n.book} ${n.chap} in full ↗`;
+  g.textContent=`Read ${n.book} ${n.chap} In Full ↗`;
   g.title=`Open the whole of ${n.book} ${n.chap} on Bible Gateway (NRSVUE)`;
   return [a,s,g];
 }
@@ -1580,7 +1590,7 @@ function renderEmpty(){
 function renderNode(n){
   const h=document.createElement('p'); h.className='ref';
   h.append(...chapterLink(n));
-  const tg=document.createElement('span'); tg.className='tag'; tg.textContent=CL[n.cl].name;
+  const tg=document.createElement('span'); tg.className='tag'; tg.textContent=titleCase(CL[n.cl].name);
   panel.append(h,tg);
   const full = (window.NRSV||{})[n.ref];
   if(hasStudy(n)){
@@ -1608,7 +1618,7 @@ function renderNode(n){
   const mine=edges.filter(e=>e.s===n||e.t===n)
     .filter(e=>onWa.has(e.wa)&&onTy.has(e.ty));
   const h3=document.createElement('h3');
-  h3.textContent = mine.length===1 ? '1 connection' : mine.length+' connections';
+  h3.textContent = mine.length===1 ? '1 Connection' : mine.length+' Connections';
   panel.append(h3);
   mine.sort((a,b)=>['states','supports','spec'].indexOf(a.wa)-['states','supports','spec'].indexOf(b.wa));
   mine.forEach(e=>{
@@ -1619,7 +1629,7 @@ function renderNode(n){
   });
 }
 
-const JOIN = {lex:'shares wording with', ref:'cites', con:'connects to'};
+const JOIN = {lex:'Shares Wording With', ref:'Cites', con:'Connects To'};
 function renderEdge(e){
   const h=document.createElement('p'); h.className='ref';
   h.append(...chapterLink(e.s));
@@ -1627,13 +1637,13 @@ function renderEdge(e){
   h.append(ar);
   h.append(...chapterLink(e.t));
   const tg=document.createElement('span'); tg.className='tag';
-  tg.textContent = TY[e.ty].name+' · '+WA[e.wa].name;
+  tg.textContent = titleCase(TY[e.ty].name+' · '+WA[e.wa].name);
   panel.append(h,tg);
   if(e.note){
     const g=document.createElement('p'); g.className='gist'; g.textContent=e.note;
     panel.append(g);
   }
-  const h3=document.createElement('h3'); h3.textContent='Both ends'; panel.append(h3);
+  const h3=document.createElement('h3'); h3.textContent='Both Ends'; panel.append(h3);
   [e.s,e.t].forEach(n=> panel.append(linkRow(n.ref, n.gist, null, ()=>select(n))));
 }
 
@@ -1641,7 +1651,7 @@ function renderBook(f){
   const own = nodes.filter(n=>n.book===f.book).sort((a,b)=>a.chap-b.chap||a.vers-b.vers);
   const h=document.createElement('p'); h.className='ref'; h.textContent=f.book;
   const tg=document.createElement('span'); tg.className='tag';
-  tg.textContent = own.length===1 ? '1 passage' : own.length+' passages';
+  tg.textContent = own.length===1 ? '1 Passage' : own.length+' Passages';
   panel.append(h,tg);
   const h3=document.createElement('h3'); h3.textContent='Passages'; panel.append(h3);
   own.forEach(n=> panel.append(linkRow(n.ref, n.gist, null, ()=>select(n))));
@@ -1651,9 +1661,9 @@ function renderCluster(f){
   const o = CL[f.cl];
   const own = nodes.filter(n=>n.cl===f.cl)
                    .sort((a,b)=> a.ord-b.ord || a.chap-b.chap || a.vers-b.vers);
-  const h=document.createElement('p'); h.className='ref'; h.textContent=o.name;
+  const h=document.createElement('p'); h.className='ref'; h.textContent=titleCase(o.name);
   const tg=document.createElement('span'); tg.className='tag';
-  tg.textContent = own.length===1 ? '1 passage' : own.length+' passages';
+  tg.textContent = own.length===1 ? '1 Passage' : own.length+' Passages';
   panel.append(h,tg);
   if(o.note){
     const g=document.createElement('p'); g.className='gist'; g.textContent=o.note;

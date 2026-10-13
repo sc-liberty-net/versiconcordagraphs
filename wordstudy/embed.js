@@ -116,7 +116,7 @@ mark.q{background:var(--sunk); color:var(--ink); border-radius:3px; padding:0 2p
   function reading(id) {
     const v = vById.get(id);
     if (!v) return "";
-    return `<p class="ws-reading"><span class="ws-label">This project's literal English · a draft, not yet reviewed</span>${v.en.map(s =>
+    return `<p class="ws-reading"><span class="ws-label">This Project's Literal English · A Draft, Not Yet Reviewed</span>${v.en.map(s =>
         typeof s === "string" ? esc(s)
         : s.w ? `<button class="ws-e" type="button" data-id="${s.w[0]}">${esc(s.t)}</button>`
         : `<span class="ws-sup" title="${esc(s.sup)}" tabindex="0">${esc(s.t)}</span>`).join("")}</p>
@@ -166,7 +166,7 @@ mark.q{background:var(--sunk); color:var(--ink); border-radius:3px; padding:0 2p
     const x = w.lxx;
     if (!x) return "";
     const flag = x.fit < 0.7 && !x.fixed ? '<span class="ws-flag">Loose match between Swete\'s word and the dictionary data. Read the dictionary form as a guess.</span>' : "";
-    return `<section class="ws-lxx"><h3>In the Septuagint</h3>
+    return `<section class="ws-lxx"><h3>In The Septuagint</h3>
       ${flag}
       <p class="ws-lxx-g" lang="grc">${esc(x.greek)}</p>
       <p class="ws-lxx-d">Dictionary form <b lang="grc">${esc(x.lemma)}</b>${x.gloss ? `, ${esc(x.gloss)}` : ""}${x.strong ? ` <span class="ws-mono">${esc(x.strong)}</span>` : ""}</p>
@@ -190,7 +190,7 @@ mark.q{background:var(--sunk); color:var(--ink); border-radius:3px; padding:0 2p
       }
     }));
     if (!hits.length) return "";
-    return `<section class="ws-links"><h3>Same Greek word in other passages</h3><ul>${hits.join("")}</ul></section>`;
+    return `<section class="ws-links"><h3>Same Greek Word In Other Passages</h3><ul>${hits.join("")}</ul></section>`;
   }
 
   function study(id) {
@@ -201,13 +201,13 @@ mark.q{background:var(--sunk); color:var(--ink); border-radius:3px; padding:0 2p
     const seg = v.en.find(s => s.w && s.w.includes(id));
     const covers = seg && seg.w.length > 1 ? `<p class="ws-covers">"${esc(seg.t)}" translates ${seg.w.length} words:
       ${seg.w.map(x => { const o = byId.get(x).w; return `<button class="ws-btn" type="button" data-ws-goto="${x}" aria-current="${x === id}"><span lang="${heb ? "he" : "grc"}">${esc(o.orig)}</span> ${esc(o.lgloss)}</button>`; }).join("")}</p>` : "";
-    const renders = w.render.map(r => `<tr${r.ours ? ' class="ours"' : ""}><td>${esc(r.t)}</td><td>${r.r ? esc(r.r) : '<span class="none">not rendered</span>'}</td></tr>`).join("");
-    const built = heb && w.built && w.built.length > 1 ? `<section class="ws-built"><h3>Built from</h3><ol>${w.built.map(p =>
+    const renders = w.render.map(r => `<tr${r.ours ? ' class="ours"' : ""}><td>${esc(r.ours ? "This Edition (Draft)" : r.t)}</td><td>${r.r ? esc(r.r) : '<span class="none">not rendered</span>'}</td></tr>`).join("");
+    const built = heb && w.built && w.built.length > 1 ? `<section class="ws-built"><h3>Built From</h3><ol>${w.built.map(p =>
       `<li class="${p.main ? "main" : ""}"><span class="h" lang="he">${esc(p.heb)}</span><span>${esc(p.eng)}<span class="m">${esc(p.gram)}</span></span></li>`).join("")}</ol></section>` : "";
     return `
       <div class="ws-bar">
         <span class="ws-pos">${esc(v.ref)}, word ${i + 1} of ${v.words.length}</span>
-        <button class="ws-btn" type="button" data-ws-back>Back to the passage</button>
+        <button class="ws-btn" type="button" data-ws-back>Back To The Passage</button>
         <button class="ws-btn" type="button" data-ws-step="-1" aria-label="Previous word"${i ? "" : " disabled"}>Prev</button>
         <button class="ws-btn" type="button" data-ws-step="1" aria-label="Next word"${i < v.words.length - 1 ? "" : " disabled"}>Next</button>
       </div>
@@ -216,10 +216,10 @@ mark.q{background:var(--sunk); color:var(--ink); border-radius:3px; padding:0 2p
           <p class="ws-orig" lang="${heb ? "he" : "grc"}" ${heb ? 'dir="rtl"' : ""}>${esc(w.orig)}</p>
           <p class="ws-lemma">Dictionary form <b lang="${heb ? "he" : "grc"}">${esc(w.lemma)}</b>, ${esc(w.lgloss)}</p>
           <dl class="ws-facts">
-            <dt>Sounds like</dt><dd class="ws-mono">${esc(w.tr)}</dd>
+            <dt>Sounds Like</dt><dd class="ws-mono">${esc(w.tr)}</dd>
             <dt>Grammar</dt><dd>${esc(w.gram)}</dd>
             <dt>Strong's</dt><dd class="ws-mono">${esc(w.strong)}</dd>
-            <dt>In the Bible</dt><dd>${countText(w)}</dd>
+            <dt>In The Bible</dt><dd>${countText(w)}</dd>
             ${w.trForm ? `<dt>KJV's Greek</dt><dd>The Textus Receptus reads <span lang="grc">${esc(w.trForm)}</span>${w.trGloss ? `, "${esc(w.trGloss)}"` : ""}</dd>`
               : w.trMoved ? "<dt>KJV's Greek</dt><dd>The Textus Receptus has this word in another position</dd>"
               : w.notTR ? "<dt>KJV's Greek</dt><dd>Not in the Textus Receptus, the Greek text the KJV translated</dd>" : ""}
@@ -227,13 +227,13 @@ mark.q{background:var(--sunk); color:var(--ink); border-radius:3px; padding:0 2p
           ${covers}
         </div>
         <section class="ws-draft">
-          <h3>In this verse</h3>
-          <span class="ws-badge">Draft by Claude, not yet reviewed</span>
+          <h3>In This Verse</h3>
+          <span class="ws-badge">Draft By Claude, Not Yet Reviewed</span>
           <p class="ws-sense">${esc(w.sense)}</p>
           <ul class="ws-syn" aria-label="Closest English">${w.syn.map(s => `<li>${esc(s)}</li>`).join("")}</ul>
           ${w.note ? `<p class="ws-note">${wrapHeb(esc(w.note))}</p>` : ""}
         </section>
-        <section class="ws-renders"><h3>How the translations render it</h3><table>${renders}</table></section>
+        <section class="ws-renders"><h3>How The Translations Render It</h3><table>${renders}</table></section>
         ${built}
         ${lxxHTML(w)}
         ${linksHTML(v, w)}
