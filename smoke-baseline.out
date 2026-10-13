@@ -62,4 +62,34 @@ motif treasure lights: 14
 motif treasure dims edges: 214
 motif unticked restores to: 0
 search "tithe" hides: 176
+wordstudy.js present: True
+study desktop passages: 184
+study desktop empty note: Each passage opens in this project's own liter
+study desktop reading: Woe to you, scribes and Pharisees, hypoc
+study desktop kjv: King James VersionWoe unto you, scribes 
+study desktop words: 34
+study desktop summary: True
+study desktop connections: 12
+study desktop hover tip: καὶ, and and Select for the full study
+study desktop word pos: Matthew 23:23, word 4 of 37
+study desktop word orig: καὶ
+study desktop word lexicons: 2
+study desktop word credit: True
+study desktop word overflowX: 0
+study desktop back to passage: True
+study desktop console errors: 0
+study phone passages: 184
+study phone empty note: Each passage opens in this project's own liter
+study phone reading: Woe to you, scribes and Pharisees, hypoc
+study phone kjv: King James VersionWoe unto you, scribes 
+study phone words: 34
+study phone summary: True
+study phone connections: 12
+study phone word pos: Matthew 23:23, word 4 of 37
+study phone word orig: καὶ
+study phone word lexicons: 2
+study phone word credit: True
+study phone word overflowX: 0
+study phone back to passage: True
+study phone console errors: 0
 fatal: 0

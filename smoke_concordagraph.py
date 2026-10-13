@@ -24,7 +24,9 @@ output. Sizes are rounded to the nearest 10 px to keep sub-pixel noise out.
 
 ISOLATION. The page is copied to a temporary directory WITHOUT verses.js, so
 what runs is the published page - references and summaries only - not the local
-copy that has the NRSV payload beside it.
+copy that has the NRSV payload beside it. That first pass also has no
+wordstudy.js, so it checks the page's fallback. A second copy, with wordstudy.js
+and still without verses.js, checks the Word Study at desktop and phone width.
 
     python smoke_concordagraph.py                     # defaults to concordagraph.html
     python smoke_concordagraph.py --page other.html
@@ -50,6 +52,10 @@ from playwright.sync_api import sync_playwright
 tmp = tempfile.mkdtemp(prefix='concordagraph-smoke-')
 shutil.copy(args.page, os.path.join(tmp, 'index.html'))
 url = 'file:///' + os.path.join(tmp, 'index.html').replace('\\', '/')
+# a second copy, with the Word Study beside it (filled in near the end)
+tmp2 = tempfile.mkdtemp(prefix='concordagraph-smoke-ws-')
+shutil.copy(args.page, os.path.join(tmp2, 'index.html'))
+url2 = 'file:///' + os.path.join(tmp2, 'index.html').replace('\\', '/')
 
 errors, fatal = [], []
 
@@ -352,9 +358,87 @@ try:
             return n;
         }'''))
 
+        # --- the Word Study, with wordstudy.js beside the page ----------------
+        # Everything above ran without it, which is the page's fallback. Here
+        # a second copy carries it, at desktop width and at phone width.
+        ws_src = os.path.join(os.path.dirname(os.path.abspath(args.page)), 'wordstudy.js')
+        P('wordstudy.js present', os.path.exists(ws_src))
+        if not os.path.exists(ws_src):
+            fatal.append('wordstudy.js missing: run wordstudy/build.py')
+        else:
+            shutil.copy(ws_src, os.path.join(tmp2, 'wordstudy.js'))
+            for vlabel, vargs in (('desktop', dict(viewport={'width': 1400, 'height': 900})),
+                                  ('phone', dict(viewport={'width': 390, 'height': 844},
+                                                 is_mobile=True, has_touch=True))):
+                ctx = browser.new_context(**vargs)
+                wp = ctx.new_page()
+                werr = []
+                wp.on('console', lambda m: werr.append(m.text) if m.type == 'error' else None)
+                wp.on('pageerror', lambda e: werr.append('pageerror: %s' % e))
+                wp.goto(url2, wait_until='load')
+                wp.wait_for_timeout(1500)
+                pre = 'study %s ' % vlabel
+                P(pre + 'passages', ev(wp, '() => window.WS ? WS.count : "NONE"'))
+                P(pre + 'empty note', ev(wp,
+                    '() => (document.querySelector(".panel .note")||{}).textContent?.slice(0,46) || "NONE"'))
+                st = ev(wp, '''() => {
+                    const n = [...document.querySelectorAll('.node')]
+                        .find(g => g.getAttribute('aria-label') === 'Matthew 23:23');
+                    if (!n) return {found: false};
+                    n.dispatchEvent(new MouseEvent('click', {bubbles: true, cancelable: true}));
+                    return {
+                        found: true,
+                        reading: (document.querySelector('.ws-reading')||{}).textContent?.slice(58, 98) || 'NONE',
+                        kjv: (document.querySelector('.ws-kjv')||{}).textContent?.slice(0, 40) || 'NONE',
+                        words: document.querySelectorAll('.ws-e').length,
+                        summary: !!document.querySelector('.panel .gist-sm'),
+                        connections: document.querySelectorAll('.panel .link').length
+                    };
+                }''')
+                for k in ('reading', 'kjv', 'words', 'summary', 'connections'):
+                    P(pre + k, pick(st, k))
+                w = wp.locator('.ws-e').nth(3)
+                if not vargs.get('has_touch'):
+                    # hover synonyms: a real pointer, since the tooltip listens for mouseover
+                    try:
+                        w.hover(timeout=5000); wp.wait_for_timeout(150)
+                    except Exception as exc:
+                        P(pre + 'hover failed', str(exc).splitlines()[0][:60])
+                    P(pre + 'hover tip', ev(wp, '''() => { const t = document.querySelector('.ws-tip');
+                        return t && !t.hidden ? t.textContent.replace(/\\s+/g, ' ').trim() : 'hidden'; }'''))
+                try:
+                    (w.tap if vargs.get('has_touch') else w.click)(timeout=5000)
+                    wp.wait_for_timeout(150)
+                except Exception as exc:
+                    P(pre + 'select failed', str(exc).splitlines()[0][:60])
+                sd = ev(wp, '''() => ({
+                    pos: (document.querySelector('.ws-pos')||{}).textContent || 'NONE',
+                    orig: (document.querySelector('.ws-orig')||{}).textContent || 'NONE',
+                    lexicons: document.querySelectorAll('.ws-lex details').length,
+                    credit: !!document.querySelector('.ws-credit'),
+                    overflowX: document.documentElement.scrollWidth - innerWidth
+                })''')
+                for k in ('pos', 'orig', 'lexicons', 'credit', 'overflowX'):
+                    P(pre + 'word ' + k, pick(sd, k))
+                back = ev(wp, '''() => {
+                    const b = document.querySelector('[data-ws-back]');
+                    if (!b) return 'NONE';
+                    b.click();
+                    return !!document.querySelector('.ws-reading');
+                }''')
+                P(pre + 'back to passage', back)
+                real2 = [e for e in werr if 'verses.js' not in e and 'Failed to load resource' not in e]
+                P(pre + 'console errors', len(real2))
+                for e in real2:
+                    fatal.append('%s: %s' % (vlabel, e))
+                if pick(st, 'words') in (0, 'MISSING') or pick(sd, 'orig') in ('NONE', 'MISSING'):
+                    fatal.append('the Word Study did not open at %s width' % vlabel)
+                ctx.close()
+
         browser.close()
 finally:
     shutil.rmtree(tmp, ignore_errors=True)
+    shutil.rmtree(tmp2, ignore_errors=True)
 
 P('fatal', len(fatal))
 for f in fatal:

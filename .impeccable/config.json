@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "wordstudy/embed.js"
+        ],
+        "createdAt": "2026-10-13T01:45:43.275Z",
+        "reason": "Claude: .ws-draft copies template.html's existing .draft rule (border-left 3px), the Word Study's established mark for unreviewed draft text; kept for consistency between the two pages"
+      }
+    ]
+  }
+}

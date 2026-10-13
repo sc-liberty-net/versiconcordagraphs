@@ -13,7 +13,7 @@ From this folder:
 ```
 python extract.py     # data/<id>.json and digest/<id>.txt for every corpus node (reads, never edits, corpus_nodes.csv)
 python check.py       # every authored/<id>.json against GUIDE.md's rules; must end "184 of 184 drafts pass"
-python build.py       # word-study.html; must report 184 of 184 verses
+python build.py       # word-study.html and ../wordstudy.js; must report 184 of 184 verses
 python test_page.py   # runs the page in Chromium, renders all 3,269 word panels; must end "PASSED"
 ```
 
@@ -28,6 +28,7 @@ python test_page.py   # runs the page in Chromium, renders all 3,269 word panels
 | `lexfix.json` | Corrections to the lexicon data: wrong-homonym entries hidden, mis-tagged dictionary forms fixed. Shown on the page |
 | `sources.py` | Readers for STEPBible, Gesenius, BDB, Thayer, Swete, the translations; Greek and Hebrew grammar decoders (Hebrew by STEP's own TEHMC key) |
 | `extract.py`, `build.py`, `check.py`, `test_page.py`, `template.html` | The pipeline |
+| `embed.js` | The passage reading and word study inside the concordagraph; `build.py` prefixes it with the data to make `../wordstudy.js`. Its study functions follow `template.html`: keep the two in step |
 | `data/`, `digest/`, `word-study.html` | Generated; not committed (see Licences) |
 
 ## Decisions already made
@@ -59,9 +60,16 @@ python test_page.py   # runs the page in Chromium, renders all 3,269 word panels
 - The Strong's-tagged KJV (`../bible-sources/english/eng-kjv2006/`) is downloaded but not yet used:
   it could supply the KJV rendering of each word automatically, and the KJV's italic words.
 
-## Embedding it in the concordagraph (not started)
+## In the concordagraph (built 12 Oct)
 
-Facts the work will need, checked 12 Oct:
+Clicking a passage in `../concordagraph.html` shows our literal English with the KJV beneath and the
+summary below; hovering a word shows its synonyms; selecting a word swaps the panel to its full study
+("Back to the passage" returns). The data and code are `../wordstudy.js` (Ethan chose a separate file
+over inlining, 12 Oct), loaded deferred with `onerror`, so without it the page shows summaries as before.
+`../smoke_concordagraph.py` checks both: its first pass runs without `wordstudy.js`, its second with it,
+at 1400x900 and 390x844.
+
+Facts the work needed, checked 12 Oct:
 - `../concordagraph.html` (104 KB) shows a passage in `renderNode(n)`; it already reads optional
   local verse text from `verses.js` through `<script src="verses.js" onerror="void 0">`.
 - Concordagraph node ids are this module's slug plus the bare id (`tithe:k1`); Word Study ids are bare (`k1`).

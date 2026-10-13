@@ -74,3 +74,8 @@ source: C:/Users/ethan/AppData/Local/Temp/ui.out -> smoke-baseline.out
 cause: second UI pass: clicking a group name shows its passages in the panel, select-all and clear buttons above the group list, the opening view backed off by a 0.86 fit margin, and the header paragraph moved into an About dialog. Zoom floor moves 0.3271 to 0.2812 because the margin applies to the floor as well - the two are the same view by design.
 moved: 5 changed, 14 new, 0 gone (0 allowed, not counted)
 source: C:/Users/ethan/AppData/Local/Temp/ui2.out -> smoke-baseline.out
+
+## 2026-10-12 - baseline refreshed: smoke-baseline.out
+cause: Word Study in the concordagraph (12 Oct 2026): a passage shows this project's literal English with the KJV beneath, hover synonyms and the full word study on click. 30 new lines from a second smoke pass that loads the page with wordstudy.js at 1400x900 and 390x844; no existing line moved (the first pass, without wordstudy.js, is the page's fallback).
+moved: 0 changed, 30 new, 0 gone (0 allowed, not counted)
+source: C:\Users\ethan\AppData\Local\Temp/claude/C--Users-ethan-Desktop-Biblography/4247ac7d-27d5-45cb-9f65-2e89e9d758c8/scratchpad/new.out -> smoke-baseline.out

@@ -39,12 +39,16 @@ sys.stdout.reconfigure(encoding='utf-8', errors='replace')
 SKILL = os.path.expanduser(r'~\.claude\skills\smoke-gate\scripts')
 BASELINE = 'smoke-baseline.out'
 PAGE = 'concordagraph.html'
+STUDY = os.path.join('wordstudy', 'embed.js')   # the Word Study's markup lives here, not in PAGE
 
 
 def run(label, cmd, capture_to=None):
     print('== %s' % label)
+    # The helpers inherit the cp1252 console too, and the Word Study's lines carry Greek
+    # and Hebrew: smoke_diff.py died on a UnicodeEncodeError printing the line that moved.
     out = subprocess.run(cmd, capture_output=True, text=True,
-                         encoding='utf-8', errors='replace')
+                         encoding='utf-8', errors='replace',
+                         env=dict(os.environ, PYTHONIOENCODING='utf-8'))
     text = (out.stdout or '') + (out.returncode and (out.stderr or '') or '')
     if capture_to:
         open(capture_to, 'w', encoding='utf-8', newline='\n').write(out.stdout or '')
@@ -71,7 +75,7 @@ if run('2/3  gate every printed line',
 
 if run('3/3  lint the suite\'s selectors',
        [sys.executable, os.path.join(SKILL, 'dead_selector_lint.py'),
-        'smoke_concordagraph.py', PAGE]):
+        'smoke_concordagraph.py', PAGE, STUDY]):
     sys.exit('FAILED: the suite holds a selector the page cannot satisfy.')
 
 os.remove(tmp)
