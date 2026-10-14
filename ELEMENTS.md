@@ -22,10 +22,11 @@ broken selector. On a phone the graph and the panel sit below the sidebar, so th
 | N2 | sidebar | Navigation rail | `.rail` | `concordagraph.html` | Search and filters; on a phone it stacks above the graph |
 | C17 | sidebar headings | Heading | `.rail .grp h2` | `concordagraph.html` | "Find A Passage", "Groups", "How Strong Is The Link", "What Kind Of Link" |
 | T1 | passage search | Search input | `#q` | `concordagraph.html` | Filters passages by reference or summary text |
-| A2 | select all groups button | Button | `#clAll` | `concordagraph.html` | |
-| A3 | clear groups button | Button | `#clNone` | `concordagraph.html` | |
-| S1 | group tick boxes | Checkbox | `#clusters .row input` | `concordagraph.html` | One per group; hides or shows its passages |
-| A4 | group name buttons | Button | `#clusters .gname` | `concordagraph.html` | Clicking a name selects the group and lists its passages; title-attribute hints only |
+| A2 | select all groups button | Button | `#clAll` | `concordagraph.html` | view: main; view: p-groups |
+| A3 | clear groups button | Button | `#clNone` | `concordagraph.html` | view: main; view: p-groups |
+| A14 | groups fold | Accordion | `#grpGroups > summary` | `concordagraph.html` | "Groups (20)"; open on desktop, closed by default on phones (14 Oct) |
+| S1 | group tick boxes | Checkbox | `#clusters .row input` | `concordagraph.html` | One per group; hides or shows its passages; view: main; view: p-groups |
+| A4 | group name buttons | Button | `#clusters .gname` | `concordagraph.html` | Clicking a name selects the group and lists its passages; hover or focus shows "Show →", the selected group's row stays marked (14 Oct); view: main; view: p-groups |
 | S2 | link strength filters | Checkbox | `#warrants` | `concordagraph.html` | The Text Says It / Supports It / My Speculation; view: p-rail; view: rail |
 | S3 | link kind filters | Checkbox | `#types` | `concordagraph.html` | Shared Wording / Cites / Same Idea; view: p-rail; view: rail |
 | A11 | motif bar | Button group | `.motifbar` | `concordagraph.html` | Strip above the graph; view: main; view: p-graph |
@@ -90,6 +91,7 @@ Only when the page itself never shows an element at one width, its Notes say `wi
 
 | View | Steps | Width | Notes |
 |---|---|---|---|
+| p-groups | `click #grpGroups > summary; wait 150` | phone | the groups fold opened |
 | p-rail | `eval document.getElementById('warrants').scrollIntoView()` | phone | lower half of the sidebar |
 | p-graph | `eval document.querySelector('.stage').scrollIntoView(); click #zfit; wait 200` | phone | the whole graph, turned, below the sidebar |
 | p-sheet | `eval select(nodes.find(n => n.ref === 'Matthew 23:23')); wait 300; eval sheetFull(true); wait 400; eval document.querySelector('.ws-trnote').scrollIntoView()` | phone | the bottom sheet at full height, scrolled to the notes under the reading |
