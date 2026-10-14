@@ -32,10 +32,10 @@ broken selector. On a phone the graph and the panel sit below the sidebar, so th
 | A5 | motif help button | Button | `#mlabel` | `concordagraph.html` | "Trace A Motif ?"; hover, focus or tap shows M1; view: main; view: p-graph |
 | S4 | motif chips | Chip | `#motifs .row` | `concordagraph.html` | One per Hebrew/Greek word; ticking dims passages without it; view: main; view: p-graph |
 | M1 | motif tooltip | Tooltip | `#mtip` | `concordagraph.html` | view: motiftip |
-| G1 | graph | Map view area | `svg#net` | `concordagraph.html` | Arc diagram in Bible order; pans and zooms; view: main; view: p-graph |
+| G1 | graph | Map view area | `svg#net` | `concordagraph.html` | Arc diagram in Bible order; pans and zooms. On phones (under 768px) it is turned to run down the screen, Genesis at the top; view: main; view: p-graph |
 | G2 | passage dots | Map marker | `.node circle` | `concordagraph.html` | Coloured by group; click selects; view: main; view: p-graph |
 | G3 | connection arcs | Connection line | `path.edge` | `concordagraph.html` | Colour = how strong, dash = what kind; view: main; view: p-graph |
-| G4 | book labels | Map label | `.booklab` | `concordagraph.html` | Click selects the book; view: main; view: p-graph |
+| G4 | book labels | Map label | `.booklab` | `concordagraph.html` | Click selects the book. Stay 11.5px on screen at any zoom; drop out where they would overlap (13 Oct); view: main; view: p-graph |
 | G5 | testament marker | Map label | `.eralab` | `concordagraph.html` | "New Testament begins"; view: main; view: p-graph |
 | A6 | show everything button | Button | `#reset` | `concordagraph.html` | Clears selection, search and filters; view: main; view: p-graph |
 | G6 | zoom buttons | Zoom controls | `.zoom` | `concordagraph.html` | +, −, fit; view: main; view: p-graph |
