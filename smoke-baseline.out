@@ -13,8 +13,10 @@ rail kinds: 3
 rail group lens hidden: True
 header: 244 passages across 38 books, joined by 299 connections — drawn 
 title: Concordagraph - Taxes & Tithes
-graph bbox w: 2490
-graph bbox h: 1480
+graph bbox w: 2530
+graph bbox h: 1540
+book labels shown at fit: 20
+book label height on screen px: 24
 NRSV payload present: False
 empty panel note: This copy shows references and summaries. To r
 panel found node: True

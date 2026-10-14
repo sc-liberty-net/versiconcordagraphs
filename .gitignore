@@ -24,3 +24,6 @@ desktop.ini
 # Public-domain translation bulk downloads (fetch_translations.py). ~90 MB,
 # and regenerable, so not committed. translations.json is the small extract.
 translations-data/
+
+# elementalist overview pictures: local only, rebuilt by each /elementalist run
+elementalist/

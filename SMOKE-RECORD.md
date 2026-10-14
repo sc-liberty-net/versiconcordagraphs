@@ -99,3 +99,8 @@ source: C:\Users\ethan\AppData\Local\Temp/claude/C--Users-ethan-Desktop-Biblogra
 cause: Word Study readings drafted for the 60 passages added 13 Oct (kings, empires, inheritance, Deuteronomy 14:22-28, Malachi 3:10): wordstudy.js now carries 244 of 244. Only the two 'study ... passages' lines move.
 moved: 2 changed, 0 new, 0 gone (0 allowed, not counted)
 source: C:\Users\ethan\AppData\Local\Temp/claude/C--Users-ethan-Desktop-Biblography/4247ac7d-27d5-45cb-9f65-2e89e9d758c8/scratchpad/new5.out -> smoke-baseline.out
+
+## 2026-10-13 - baseline refreshed: smoke-baseline.out
+cause: Ethan's G4 (book labels), 13 Oct: labels counter-scaled to stay 11.5px on screen at any zoom and thinned where they would overlap (20 of 38 at the fitted desktop view; old page: all 38 at an 8px box). Fit now measures the graph without the labels (graphBBox), so the zoom lines do not move; the suite's own bbox includes the screen-size labels and grows 2490x1480 -> 2530x1540. Two new lines, red on the previous page.
+moved: 2 changed, 2 new, 0 gone (0 allowed, not counted)
+source: C:\Users\ethan\AppData\Local\Temp/claude/C--Users-ethan-Desktop-Biblography/4247ac7d-27d5-45cb-9f65-2e89e9d758c8/scratchpad/new6.out -> smoke-baseline.out

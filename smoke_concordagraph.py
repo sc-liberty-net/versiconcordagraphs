@@ -154,6 +154,18 @@ try:
         if pick(box, 'w') in (0, 'MISSING') or pick(box, 'h') in (0, 'MISSING'):
             fatal.append('graph bbox is empty')
 
+        # --- book labels are readable at the fitted zoom (Ethan's G4, 13 Oct) --
+        # They were drawn in graph units and opened at about 3 px. Counter-scaled
+        # now, and thinned where they would overlap.
+        bl = ev(page, '''() => {
+            const shown = [...document.querySelectorAll('.booklab')]
+                .filter(l => getComputedStyle(l).display !== 'none');
+            return {shown: shown.length,
+                    px: shown.length ? Math.round(shown[0].getBoundingClientRect().height) : 0};
+        }''')
+        P('book labels shown at fit', pick(bl, 'shown'))
+        P('book label height on screen px', pick(bl, 'px'))
+
         # --- the published copy must not show verse text ----------------------
         P('NRSV payload present', ev(page, '() => typeof window.NRSV !== "undefined"'))
         P('empty panel note', ev(page,

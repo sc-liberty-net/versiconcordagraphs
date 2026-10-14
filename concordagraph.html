@@ -188,7 +188,8 @@ button.reset:hover{background:var(--sunk)}
 .seg button:last-child{border-right:0}
 .seg button[aria-pressed="true"]{background:var(--ink-2); color:var(--surface)}
 .hint{font-size:12.5px; color:var(--ink-3); line-height:1.45; margin:8px 0 0}
-.booklab{font-family:Archivo,sans-serif; font-size:10.5px; fill:var(--ink-2)}
+.booklab{font-family:Archivo,sans-serif; font-size:11.5px; fill:var(--ink-2)}
+.booklab.thin:not(.sel){display:none}
 .tick{stroke:var(--line); stroke-width:1}
 .era{stroke:var(--ink-3); stroke-width:1; stroke-dasharray:3 4}
 .eralab{font-family:Archivo,sans-serif; font-size:34px; font-weight:600; letter-spacing:.02em; fill:var(--ink-2)}.node text{font-family:Spectral,Georgia,serif; font-size:11.5px; fill:var(--ink); pointer-events:auto; cursor:pointer}
@@ -1237,6 +1238,7 @@ const bookFocus = {};
     tk.setAttribute('class','tick'); gAxis.append(tk);
     const lb=document.createElementNS(NS,'text');
     lb.setAttribute('class','booklab');
+    lb.dataset.x=mid; lb.dataset.y=BASE_Y+89;   // apply() places it, at screen size
     lb.setAttribute('transform',`translate(${mid},${BASE_Y+89}) rotate(-45)`);
     lb.setAttribute('text-anchor','end'); lb.textContent=ABBR[b];
     const bf = bookFocus[b] = {kind:'book', book:b};
@@ -1331,7 +1333,32 @@ place(true);
 
 // ---- viewport --------------------------------------------------------------
 let vx=0, vy=0, vs=1;
-function apply(){ gRoot.setAttribute('transform',`translate(${vx},${vy}) scale(${vs})`); }
+function apply(){ gRoot.setAttribute('transform',`translate(${vx},${vy}) scale(${vs})`); placeBookLabels(); }
+// Book labels are counter-scaled so they stay the same size on screen at any
+// zoom. Drawn in the graph's own units they shrank with it: the fitted view
+// opens at about a quarter scale, which put 10.5-unit text at roughly 3 px, and
+// half that on a phone (the arcs had the same fault; see HAZARDS.md). At
+// screen size the 38 labels cannot all fit at the fitted zoom, so, walking left
+// to right, a label drops out (.thin) when it would sit closer than LABEL_GAP
+// px to the last one shown, and returns as you zoom in. A selected book's label
+// shows regardless (CSS), and the readout names any book on hover.
+const LABEL_GAP = 18;
+let labelVs = null;
+function placeBookLabels(){
+  const inv = 1/vs, thin = labelVs!==vs;
+  let last = -Infinity;
+  BOOKS.forEach(b=>{
+    const lb=bookLabels[b]; if(!lb) return;
+    const x=+lb.dataset.x;
+    lb.setAttribute('transform',`translate(${x},${lb.dataset.y}) scale(${inv}) rotate(-45)`);
+    if(thin){
+      const show = x*vs - last >= LABEL_GAP;
+      lb.classList.toggle('thin', !show);
+      if(show) last = x*vs;
+    }
+  });
+  labelVs = vs;
+}
 // The floor on zoom. Below this the graph is smaller than the window and you
 // are looking at empty canvas around a shrinking blob - there is nothing to
 // see further out, so the control should not go there. MIN_PAD is the
@@ -1343,14 +1370,26 @@ const MIN_PAD = 90;
 // breathing room, applied to BOTH the opening view and the zoom floor so the
 // two stay the same thing: as far out as there is anything to see.
 const FIT_MARGIN = 0.86;
+// The graph's extent without the book labels. The labels are counter-scaled
+// (placeBookLabels), so in graph units they grow as you zoom out; measuring
+// them would make "fit" depend on the zoom it was pressed at. MIN_PAD leaves
+// room for them on screen instead.
+function graphBBox(){
+  let x0=Infinity, y0=Infinity, x1=-Infinity, y1=-Infinity;
+  const add=b=>{ if(!b.width && !b.height) return;
+    x0=Math.min(x0,b.x); y0=Math.min(y0,b.y); x1=Math.max(x1,b.x+b.width); y1=Math.max(y1,b.y+b.height); };
+  [gEdge,gNode].forEach(g=>add(g.getBBox()));
+  if(gAxis.style.display!=='none') gAxis.querySelectorAll(':scope > :not(.booklab)').forEach(el=>add(el.getBBox()));
+  return x0===Infinity ? {x:0,y:0,width:0,height:0} : {x:x0, y:y0, width:x1-x0, height:y1-y0};
+}
 function fitScale(){
-  const bb=gRoot.getBBox(), r=svg.getBoundingClientRect();
+  const bb=graphBBox(), r=svg.getBoundingClientRect();
   if(!bb.width || !bb.height) return minScale;
   return Math.min(r.width/(bb.width+MIN_PAD), r.height/(bb.height+MIN_PAD)) * FIT_MARGIN;
 }
 function clamp(s){ return Math.max(minScale, s); }
 function fit(){
-  const bb=gRoot.getBBox(), r=svg.getBoundingClientRect();
+  const bb=graphBBox(), r=svg.getBoundingClientRect();
   minScale = fitScale();
   vs = minScale;
   vx=(r.width-bb.width*vs)/2-bb.x*vs; vy=(r.height-bb.height*vs)/2-bb.y*vs; apply();
