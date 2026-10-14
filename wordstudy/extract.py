@@ -203,6 +203,13 @@ for nd in nodes:
         t2 = TRANSLATIONS.get(f"{book} {ch}:{vs + jps_shift}", {}).get("JPS")
         if t2:
             tr["JPS"] = t2
+    # The JPS also numbers 1 Kings 4:21-5:18 as the Hebrew does: 4:21-34 is its 5:1-14, 5:1-18 its 5:15-32.
+    jps_kings = {4: (21, 34, lambda v: (5, v - 20)), 5: (1, 18, lambda v: (5, v + 14))}.get(ch) if book == "1 Kings" else None
+    if jps_kings and jps_kings[0] <= vs <= jps_kings[1]:
+        jc, jv = jps_kings[2](vs)
+        t2 = TRANSLATIONS.get(f"1 Kings {jc}:{jv}", {}).get("JPS")
+        if t2:
+            tr["JPS"] = t2
     if book == "Haggai" and ch == 2:  # Geneva and Douay-Rheims start chapter 2 a verse early: their 2:9 is our 2:8
         for k in ("Geneva1599", "DRC"):
             t2 = TRANSLATIONS.get(f"Haggai 2:{vs + 1}", {}).get(k)
@@ -218,6 +225,13 @@ for nd in nodes:
          "words": words, "tr_extra": tr_extra}
     if lang == "H" and (book, ch, vs) in LXX_ABSENT:
         v["lxx_ref"], v["lxx"] = lxx_ref(book, ch, vs), None
+    elif lang == "H" and book == "Deuteronomy" and ch == 14 and 20 <= vs <= 29:
+        # Swete's digital Deuteronomy 14 runs one verse behind from 14:20 to the end of the chapter, and
+        # every one of those numbers exists, so the fallback below never fires for 14:20-28: its 14:21 is
+        # the Hebrew 14:22 (checked 13 Oct). Recorded as shifted, exactly as the fallback records 14:29.
+        v["lxx_ref"] = lxx_ref(book, ch, vs)
+        prev = lxx_ref(book, ch, vs - 1)
+        v["lxx"], v["lxx_shifted"] = LXX.get(prev), prev
     elif lang == "H":
         v["lxx_ref"] = lxx_ref(book, ch, vs)
         v["lxx"] = LXX.get(v["lxx_ref"])

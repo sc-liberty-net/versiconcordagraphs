@@ -1,0 +1,58 @@
+{
+ "id": "in13",
+ "en": [
+  {"t": "The LORD", "w": ["01"]}, " ",
+  {"t": "is", "sup": "Supplied in English. The Hebrew sets the name and what is said of it side by side, with no verb."}, " ",
+  {"t": "the share of", "w": ["02"]}, " ",
+  {"t": "my portion", "w": ["03"]}, " ",
+  {"t": "and my cup", "w": ["04"]}, "; ",
+  {"t": "you", "w": ["05"]}, " ",
+  {"t": "are holding fast", "w": ["06"]}, " ",
+  {"t": "my lot", "w": ["07"]}, "."
+ ],
+ "words": {
+  "01": {"s": ["the LORD", "Yahweh", "Jehovah", "HaShem"],
+         "r": "The personal name of Israel's God, named as the psalmist's portion.",
+         "n": "The translations show four traditions for the name: 'the Lord', the BSB's small capitals (LORD), 'Jehovah' in the ASV and YLT, and the JPS's 'HaShem' ('the Name'). The JPS turns the line into an address: 'O HaShem'.",
+         "t": ["The Lord", "The Lord", "The Lord", "HaShem", "Jehovah", "Jehovah", "The LORD"]},
+  "02": {"s": ["share", "allotted part", "portion"],
+         "r": "The part measured out to someone; here, the LORD himself is that part.",
+         "n": "Gesenius gives 'a part, a portion', especially of food, and as a second sense 'a lot', the same as חֵלֶק. Because this study keeps 'portion' for חֵלֶק, the next word, this one is rendered 'share' so that the two Hebrew words stay apart. The BSB does not render it separately.",
+         "t": ["the portion", "the portion", "the portion", "the portion", "the portion", "the portion", null]},
+  "03": {"s": ["portion", "share", "lot in life"],
+         "r": "What falls to the psalmist as his own.",
+         "n": "BDB gives 'portion, tract, territory', and among its senses 'chosen portion', which is the BSB's 'my chosen portion'. Most of the older translations say 'inheritance' here; that likely follows the Greek, which has κληρονομία, 'inheritance', for this word.",
+         "t": ["of mine inheritance", "of mine inheritance", "of my inheritance", "of mine inheritance", "of mine inheritance", "of my share", "my chosen portion"]},
+  "04": {"s": ["cup", "my cup to drink"],
+         "r": "The cup that is handed to him, standing for what life gives him.",
+         "n": "The cup as a picture of one's lot is a reasonable reading of the parallel with 'portion', not something the lexicons here state.",
+         "t": ["and of my cup", "and of my cup", "and of my cup", "and of my cup", "and of my cup", "and of my cup", "and my cup"]},
+  "05": {"s": ["you", "you yourself"],
+         "r": "The LORD, now spoken to directly.",
+         "n": "Hebrew does not need the pronoun with a participle, so its presence gives the 'you' some weight. The YLT's doubled 'Thou--Thou' tries to show that emphasis.",
+         "t": ["thou", "thou", "it is thou", "Thou", "Thou", "Thou--Thou", "You"]},
+  "06": {"s": ["are holding fast", "uphold", "support", "maintain", "keep secure"],
+         "r": "God keeps a firm hold on what has been allotted to him.",
+         "n": "A participle: ongoing holding, not a single act. Gesenius gives first 'to take hold of', and then 'to hold up, to support', noting that God is very often said to sustain a person or thing. The DRC's 'wilt restore' matches the Greek ἀποκαθιστῶν, 'restoring'.",
+         "t": ["maintainest", "shalt mainteine", "wilt restore ... to me", "maintainest", "maintainest", "dost uphold", "have made ... secure"]},
+  "07": {"s": ["lot", "allotment", "what falls to me"],
+         "r": "The share assigned to him, as land was assigned by lot.",
+         "n": "Gesenius says it is properly a little pebble, κλῆρος, especially one used for casting lots. BDB adds that it is used especially of land assigned by lot. The Greek word κλῆρος is the root of κληρονομία, 'inheritance'.",
+         "t": ["my lot", "my lot", "my inheritance", "my lot", "my lot", "my lot", "my lot"]}
+ },
+ "lxx": {
+  "_extra": {
+   "0": "Στηλογραφία (an inscription): part of the psalm's title, which Swete's text prints with this verse; nothing in this verse's Hebrew answers to it.",
+   "1": "τῷ (to, of): part of the psalm's title.",
+   "2": "Δαυείδ (David): part of the psalm's title.",
+   "20": "ἐμοί (to me): added by the Greek translators with 'restoring my inheritance'; nothing in the Hebrew answers to it."
+  },
+  "01": {"i": [3], "m": 3, "n": "The Greek translators wrote κύριος, 'Lord', for the divine name."},
+  "02": {"i": [4, 5], "m": 5, "n": "μερίς, 'portion', the word this study renders 'portion' in the Greek New Testament."},
+  "03": {"i": [6, 7, 8], "m": 7, "n": "κληρονομία, 'inheritance', for חֵלֶק. This is where the older English 'portion of mine inheritance' comes from."},
+  "04": {"i": [9, 10, 11, 12], "m": 11},
+  "05": {"i": [13, 14], "m": 13, "n": "σὺ εἶ, 'you are': the Greek adds the verb."},
+  "06": {"i": [15, 16], "m": 16, "n": "ἀποκαθίστημι, 'to restore': 'you are the one restoring my inheritance to me'. The Greek reads a different sense from the Hebrew 'holding fast', and the DRC's English matches it."},
+  "07": {"i": [17, 18, 19], "m": 18, "n": "Again κληρονομία, 'inheritance', this time for גּוֹרָל, 'lot'."}
+ }
+}

@@ -1,0 +1,782 @@
+{
+ "id": "dt2",
+ "en": [
+  {
+   "t": "And you shall eat",
+   "w": [
+    "01"
+   ]
+  },
+  " ",
+  {
+   "t": "before",
+   "w": [
+    "02"
+   ]
+  },
+  " ",
+  {
+   "t": "the LORD",
+   "w": [
+    "03"
+   ]
+  },
+  " ",
+  {
+   "t": "your God",
+   "w": [
+    "04"
+   ]
+  },
+  ", ",
+  {
+   "t": "in the place",
+   "w": [
+    "05"
+   ]
+  },
+  " ",
+  {
+   "t": "that",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "he will choose",
+   "w": [
+    "07"
+   ]
+  },
+  " ",
+  {
+   "t": "to make his name dwell",
+   "w": [
+    "08",
+    "09"
+   ]
+  },
+  " ",
+  {
+   "t": "there",
+   "w": [
+    "10"
+   ]
+  },
+  ", ",
+  {
+   "t": "the tithe of",
+   "w": [
+    "11"
+   ]
+  },
+  " ",
+  {
+   "t": "your grain",
+   "w": [
+    "12"
+   ]
+  },
+  ", ",
+  {
+   "t": "your new wine",
+   "w": [
+    "13"
+   ]
+  },
+  ", ",
+  {
+   "t": "and your fresh oil",
+   "w": [
+    "14"
+   ]
+  },
+  ", ",
+  {
+   "t": "and the firstborn of",
+   "w": [
+    "15"
+   ]
+  },
+  " ",
+  {
+   "t": "your herd",
+   "w": [
+    "16"
+   ]
+  },
+  " ",
+  {
+   "t": "and your flock",
+   "w": [
+    "17"
+   ]
+  },
+  ", ",
+  {
+   "t": "so that",
+   "w": [
+    "18"
+   ]
+  },
+  " ",
+  {
+   "t": "you may learn",
+   "w": [
+    "19"
+   ]
+  },
+  " ",
+  {
+   "t": "to fear",
+   "w": [
+    "20",
+    "21"
+   ]
+  },
+  " ",
+  {
+   "t": "the LORD",
+   "w": [
+    "22"
+   ]
+  },
+  " ",
+  {
+   "t": "your God",
+   "w": [
+    "23"
+   ]
+  },
+  " ",
+  {
+   "t": "all",
+   "w": [
+    "24"
+   ]
+  },
+  " ",
+  {
+   "t": "the days",
+   "w": [
+    "25"
+   ]
+  },
+  "."
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "and you shall eat",
+    "and you are to eat",
+    "then you shall eat"
+   ],
+   "r": "The one who gives the tithe eats it himself, at the sanctuary.",
+   "n": "A perfect with 'and', which carries on the command of the verse before: 'you shall eat'. YLT renders the perfect form literally, 'thou hast eaten'.",
+   "t": [
+    "And thou shalt eat",
+    "And thou shalt eate",
+    "And thou shalt eat",
+    "And thou shalt eat",
+    "And thou shalt eat",
+    "and thou hast eaten",
+    "And you are to eat"
+   ]
+  },
+  "02": {
+   "s": [
+    "before",
+    "in the presence of",
+    "in front of"
+   ],
+   "r": "In the LORD's presence, at his sanctuary.",
+   "n": "Literally 'to the face of': the brief's lexicon lists face, presence, and, as an adverb of place, before.",
+   "t": [
+    "before",
+    "before",
+    "before",
+    "before",
+    "before",
+    "before",
+    "in the presence of"
+   ]
+  },
+  "03": {
+   "s": [
+    "the LORD",
+    "Yahweh",
+    "Jehovah",
+    "HaShem"
+   ],
+   "r": "The personal name of Israel's God.",
+   "t": [
+    "the Lord",
+    "the Lord",
+    "the Lord",
+    "HaShem",
+    "Jehovah",
+    "Jehovah",
+    "the LORD"
+   ]
+  },
+  "04": {
+   "s": [
+    "your God"
+   ],
+   "r": "Your own God.",
+   "n": "The form is plural but the meaning is singular.",
+   "t": [
+    "thy God",
+    "thy God",
+    "thy God",
+    "thy G-d",
+    "thy God",
+    "thy God",
+    "your God"
+   ]
+  },
+  "05": {
+   "s": [
+    "in the place",
+    "at the place",
+    "at the site"
+   ],
+   "r": "The one sanctuary the LORD will name.",
+   "t": [
+    "in the place",
+    "in the place",
+    "in the place",
+    "in the place",
+    "in the place",
+    "in the place",
+    "at the place"
+   ]
+  },
+  "06": {
+   "s": [
+    "that",
+    "which",
+    "where"
+   ],
+   "r": "Introduces the description of the place.",
+   "t": [
+    "which",
+    "which",
+    "which",
+    "which",
+    "which",
+    "where",
+    null
+   ]
+  },
+  "07": {
+   "s": [
+    "he will choose",
+    "he chooses",
+    "he shall select"
+   ],
+   "r": "The LORD, not the worshipper, picks the place.",
+   "t": [
+    "he shall choose",
+    "he shall chose",
+    "he shall choose",
+    "He shall choose",
+    "he shall choose",
+    "He doth choose",
+    "He will choose"
+   ]
+  },
+  "08": {
+   "s": [
+    "to make dwell",
+    "to settle",
+    "to cause to dwell",
+    "to establish"
+   ],
+   "r": "To settle his name in that place as its home.",
+   "n": "The brief's lexicon gives this stem the sense 'to make or cause to dwell'; the root is used of dwelling, and of a tent or tabernacle, which YLT's 'to tabernacle' echoes. The KJV says 'to place'.",
+   "t": [
+    "to place",
+    "to cause ... to dwell",
+    null,
+    "to cause ... to dwell",
+    "to cause ... to dwell",
+    "to cause ... to tabernacle",
+    "as a dwelling for"
+   ]
+  },
+  "09": {
+   "s": [
+    "his name",
+    "his Name"
+   ],
+   "r": "The LORD's name, standing for his presence among them.",
+   "n": "BDB notes the name used of the place of worship. The DRC reads 'that his name may be called upon therein'.",
+   "t": [
+    "his name",
+    "his Name",
+    "his name",
+    "His name",
+    "his name",
+    "His name",
+    "His Name"
+   ]
+  },
+  "10": {
+   "s": [
+    "there"
+   ],
+   "r": "At that chosen place.",
+   "t": [
+    "there",
+    "there",
+    "therein",
+    "there",
+    "there",
+    null,
+    null
+   ]
+  },
+  "11": {
+   "s": [
+    "the tithe of",
+    "the tenth of"
+   ],
+   "r": "The tenth set aside under the law of the verse before.",
+   "n": "Gesenius: tithes, and he cites this verse. Our register renders this word 'tithe'; the BSB says 'a tenth'.",
+   "t": [
+    "the tithe of",
+    "the tithe of",
+    "the tithe of",
+    "the tithe of",
+    "the tithe of",
+    "the tithe of",
+    "a tenth of"
+   ]
+  },
+  "12": {
+   "s": [
+    "your grain",
+    "your corn",
+    "your cereal"
+   ],
+   "r": "The grain harvest.",
+   "n": "Gesenius: corn; BDB: corn, grain. 'Corn' in older English means grain in general.",
+   "t": [
+    "thy corn",
+    "thy corne",
+    "thy corn",
+    "thy corn",
+    "thy grain",
+    "thy corn",
+    "your grain"
+   ]
+  },
+  "13": {
+   "s": [
+    "your new wine",
+    "your fresh wine",
+    "your must"
+   ],
+   "r": "The wine of the year, freshly pressed.",
+   "n": "Gesenius: must, new wine. Hebrew has no 'and' before this word.",
+   "t": [
+    "of thy wine",
+    "of thy wine",
+    "and thy wine",
+    "of thy wine",
+    "of thy new wine",
+    "of thy new wine",
+    "new wine"
+   ]
+  },
+  "14": {
+   "s": [
+    "and your fresh oil",
+    "and your oil",
+    "and your new oil"
+   ],
+   "r": "The olive oil of the year.",
+   "n": "Gesenius: oil, especially fresh and new, often joined with the word for new wine, and he cites this verse.",
+   "t": [
+    "and of thine oil",
+    "and of thine oyle",
+    "and thy oil",
+    "and of thine oil",
+    "and of thine oil",
+    "and of thine oil",
+    "and oil"
+   ]
+  },
+  "15": {
+   "s": [
+    "and the firstborn of",
+    "and the firstlings of"
+   ],
+   "r": "The first young born to the cattle and the flock.",
+   "n": "Gesenius: first-born, whether of men or of animals.",
+   "t": [
+    "and the firstlings of",
+    "and the first borne of",
+    "and the firstborn of",
+    "and the firstlings of",
+    "and the firstlings of",
+    "and the firstlings of",
+    "and the firstborn of"
+   ]
+  },
+  "16": {
+   "s": [
+    "your herd",
+    "your cattle",
+    "your oxen"
+   ],
+   "r": "Your larger livestock.",
+   "n": "BDB: cattle, herd, mostly collective. The Hebrew is singular; the KJV and BSB make it plural.",
+   "t": [
+    "thy herds",
+    "thy kine",
+    "thy herds",
+    "thy herd",
+    "thy herd",
+    "thy herd",
+    "your herds"
+   ]
+  },
+  "17": {
+   "s": [
+    "and your flock",
+    "and your sheep and goats",
+    "and your flocks"
+   ],
+   "r": "Your sheep and goats.",
+   "n": "Gesenius: a collective noun, flocks, small cattle, that is, sheep and goats.",
+   "t": [
+    "and of thy flocks",
+    "and of thy sheepe",
+    "and thy sheep",
+    "and of thy flock",
+    "and of thy flock",
+    "and of thy flock",
+    "and flocks"
+   ]
+  },
+  "18": {
+   "s": [
+    "so that",
+    "in order that"
+   ],
+   "r": "Gives the purpose of eating the tithe there.",
+   "t": [
+    "that",
+    "that",
+    "that",
+    "that",
+    "that",
+    "so that",
+    "so that"
+   ]
+  },
+  "19": {
+   "s": [
+    "you may learn",
+    "you will learn",
+    "you may be trained"
+   ],
+   "r": "Eating before the LORD teaches the giver to fear him.",
+   "n": "Gesenius gives the root sense as to chastise, and so to discipline, to train. A reasonable reading is that the yearly meal before the LORD is itself the lesson.",
+   "t": [
+    "thou mayest learn",
+    "thou maiest learne",
+    "thou mayst learn",
+    "thou mayest learn",
+    "thou mayest learn",
+    "thou dost learn",
+    "you may learn"
+   ]
+  },
+  "20": {
+   "s": [
+    "to fear",
+    "to revere",
+    "to stand in awe of"
+   ],
+   "r": "To hold the LORD in reverent awe.",
+   "n": "The brief's lexicon lists fear, revere, stand in awe of, and fear, reverence, honour, respect.",
+   "t": [
+    "to fear",
+    "to feare",
+    "to fear",
+    "to fear",
+    "to fear",
+    "to fear",
+    "to fear"
+   ]
+  },
+  "21": {
+   "s": [
+    "(object marker)"
+   ],
+   "r": "Marks the LORD as the one to be feared.",
+   "n": "The object marker has no English equivalent; it is counted here with 'to fear'.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "22": {
+   "s": [
+    "the LORD",
+    "Yahweh",
+    "Jehovah",
+    "HaShem"
+   ],
+   "r": "The personal name of Israel's God.",
+   "t": [
+    "the Lord",
+    "the Lord",
+    "the Lord",
+    "HaShem",
+    "Jehovah",
+    "Jehovah",
+    "the LORD"
+   ]
+  },
+  "23": {
+   "s": [
+    "your God"
+   ],
+   "r": "Your own God.",
+   "t": [
+    "thy God",
+    "thy God",
+    "thy God",
+    "thy G-d",
+    "thy God",
+    "thy God",
+    "your God"
+   ]
+  },
+  "24": {
+   "s": [
+    "all",
+    "every one of"
+   ],
+   "r": "Joins with 'the days' to mean always.",
+   "t": [
+    "always",
+    "alway",
+    "at all times",
+    "always",
+    "always",
+    "all",
+    "always"
+   ]
+  },
+  "25": {
+   "s": [
+    "the days",
+    "the time"
+   ],
+   "r": "Every day of life: always.",
+   "n": "'All the days' is the Hebrew idiom for always, which most translations say. YLT keeps 'all the days'.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    "the days",
+    null
+   ]
+  }
+ },
+ "lxx": {
+  "_extra": {
+   "2": "αὐτὸ (it): the Greek adds an object, the tithe.",
+   "17": "οἴσετε (you shall bring): the Greek adds 'you shall bring there' before the list of tithes."
+  },
+  "01": {
+   "i": [
+    0,
+    1
+   ],
+   "m": 1,
+   "lemma": "ἐσθίω",
+   "strong": "G2068",
+   "n": "Dictionary form supplied by hand: the matched data gives φάγω."
+  },
+  "03": {
+   "i": [
+    8
+   ],
+   "m": 8,
+   "n": "In the Greek 'the LORD your God' is the subject of 'chooses', and there is no 'before': 'in the place which the LORD your God chooses'."
+  },
+  "04": {
+   "i": [
+    9,
+    10,
+    11
+   ],
+   "m": 10
+  },
+  "05": {
+   "i": [
+    3,
+    4,
+    5
+   ],
+   "m": 5
+  },
+  "06": {
+   "i": [
+    6
+   ],
+   "m": 6,
+   "lemma": "ὅς",
+   "strong": "G3739",
+   "n": "Dictionary form supplied by hand: the matched data gives ἄν. Printed ᾦἂν in our Greek text, evidently ᾧ ἂν, 'which ever'."
+  },
+  "07": {
+   "i": [
+    7
+   ],
+   "m": 7
+  },
+  "08": {
+   "i": [
+    12
+   ],
+   "m": 12,
+   "n": "ἐπικληθῆναι, 'to be called upon': the Greek says 'for his name to be called upon there' where the Hebrew says 'to make his name dwell'. The DRC's 'that his name may be called upon' agrees with this Greek."
+  },
+  "09": {
+   "i": [
+    13,
+    14,
+    15
+   ],
+   "m": 14
+  },
+  "10": {
+   "i": [
+    16
+   ],
+   "m": 16
+  },
+  "11": {
+   "i": [
+    18,
+    19
+   ],
+   "m": 19,
+   "n": "τὰ ἐπιδέκατα, 'the tenths'."
+  },
+  "12": {
+   "i": [
+    20,
+    21,
+    22
+   ],
+   "m": 21
+  },
+  "13": {
+   "i": [
+    23,
+    24,
+    25,
+    26
+   ],
+   "m": 25,
+   "n": "The Greek adds 'and' before this word."
+  },
+  "14": {
+   "i": [
+    27,
+    28,
+    29,
+    30
+   ],
+   "m": 29
+  },
+  "15": {
+   "i": [
+    31,
+    32
+   ],
+   "m": 32
+  },
+  "16": {
+   "i": [
+    33,
+    34,
+    35
+   ],
+   "m": 34
+  },
+  "17": {
+   "i": [
+    36,
+    37,
+    38,
+    39
+   ],
+   "m": 38
+  },
+  "18": {
+   "i": [
+    40
+   ],
+   "m": 40
+  },
+  "19": {
+   "i": [
+    41
+   ],
+   "m": 41,
+   "lemma": "μανθάνω",
+   "strong": "G3129",
+   "n": "Dictionary form supplied by hand: the matched data gives none."
+  },
+  "20": {
+   "i": [
+    42
+   ],
+   "m": 42
+  },
+  "22": {
+   "i": [
+    43
+   ],
+   "m": 43
+  },
+  "23": {
+   "i": [
+    44,
+    45,
+    46
+   ],
+   "m": 45
+  },
+  "24": {
+   "i": [
+    47
+   ],
+   "m": 47
+  },
+  "25": {
+   "i": [
+    48,
+    49
+   ],
+   "m": 49
+  }
+ }
+}

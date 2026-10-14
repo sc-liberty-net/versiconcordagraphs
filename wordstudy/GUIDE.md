@@ -145,6 +145,25 @@ Use these unless the context makes them wrong; if you depart, say why in a note.
 | פָּדָה | redeem | |
 | נַחֲלָה | inheritance | |
 
+Added 13 Oct 2026, for the kings, empires and inheritance passages:
+
+| Original | Our English | Not |
+|---|---|---|
+| מִנְחָה where STEPBible tags it H4503I (tribute to a ruler) | tribute, with a note that the word is the one rendered "offering" elsewhere | |
+| מִדָּה, מִנְדָּה (Aramaic) | tribute | tax |
+| בְּלוֹ (Aramaic) | duty | tax, custom |
+| הֲלָךְ (Aramaic) | road toll, with a note that the Greek τέλος is "toll" elsewhere | |
+| סֵבֶל | burden-labour | |
+| עֹנֶשׁ | fine | tribute |
+| נָגַשׂ | press, drive; the participle: taskmaster | exact (kept for the creditor verb נָשָׁה) |
+| עָרַךְ (of a levy) | assess | |
+| חֵלֶק | portion | share, unless the context is a division |
+| נָחַל | inherit, take as an inheritance | possess |
+| אֲחֻזָּה | holding | possession |
+| κληρονομία, κληρονόμος, κληρονομέω | inheritance, heir, inherit | |
+| μερίς | portion | |
+| οὐσία | property | goods, substance |
+
 **People and God**
 
 | Original | Our English |

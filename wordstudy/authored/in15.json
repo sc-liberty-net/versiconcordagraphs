@@ -1,0 +1,60 @@
+{
+ "id": "in15",
+ "en": [
+  {"t": "A good", "w": ["01"]}, " ",
+  {"t": "man", "sup": "Supplied in English. The Hebrew has the adjective alone, 'a good (one)'."}, " ",
+  {"t": "leaves an inheritance", "w": ["02"]}, " to ",
+  {"t": "sons of", "w": ["03"]}, " ",
+  {"t": "sons", "w": ["04"]}, ", ",
+  {"t": "and stored up", "w": ["05"]}, " ",
+  {"t": "for the righteous", "w": ["06"]}, " is ",
+  {"t": "the wealth of", "w": ["07"]}, " ",
+  {"t": "the sinner", "w": ["08"]}, "."
+ ],
+ "words": {
+  "01": {"s": ["good", "upright", "kind"],
+         "r": "A man good in character, set against the sinner.",
+         "n": "Gesenius lists both a physical sense, good of its kind, and a moral one, 'good, kind, upright'; the moral sense fits here.",
+         "t": ["A good man", "The good man", "The good man", "A good man", "A good man", "A good man", "A good man"]},
+  "02": {"s": ["leaves an inheritance", "causes to inherit", "hands down", "bequeaths"],
+         "r": "He passes on what he has, so that it reaches his grandchildren.",
+         "n": "The verb is נָחַל, which this study renders 'inherit'; this form is causative, 'causes to inherit', as the YLT keeps it. Gesenius and BDB give the plain verb as to receive or take something as a possession. 'Leaves an inheritance' is the natural English for the causative.",
+         "t": ["leaveth an inheritance", "shall giue inheritance", "leaveth heirs", "leaveth an inheritance", "leaveth an inheritance", "causeth ... to inherit", "leaves an inheritance"]},
+  "03": {"s": ["sons of", "children of"],
+         "r": "With the next word, 'sons of sons': grandchildren.",
+         "n": "BDB gives 'son', and notes that the plural can take in male and female; hence 'children's children' in most translations. The DRC rewords the phrase as 'heirs, sons, and grandsons'.",
+         "t": ["children", "children", "sons", "children", "children", "sons", "children"]},
+  "04": {"s": ["sons", "children"],
+         "r": "The second generation after him.",
+         "t": ["his children’s", "his childrens", "grandsons", "his children's", "his children’s", "sons'", "his children’s"]},
+  "05": {"s": ["and stored up", "and laid up", "and kept hidden", "and treasured"],
+         "r": "The sinner's wealth is set aside, in the end, for someone else.",
+         "n": "A passive participle. Gesenius gives first 'to hide, to conceal', then 'to lay up, to store up'.",
+         "t": ["and ... is laid up", "and ... is layde vp", "and ... is kept", "and ... is laid up", "And ... is laid up", "And laid up", "but ... is passed"]},
+  "06": {"s": ["for the righteous", "for the just", "for the upright"],
+         "r": "The one who is in the right, who ends up with the wealth.",
+         "n": "Gesenius gives 'just, righteous'. The older translations say 'the just'.",
+         "t": ["for the just", "for the iust", "for the just", "for the righteous", "for the righteous", "for the righteous", "to the righteous"]},
+  "07": {"s": ["wealth", "riches", "substance", "means"],
+         "r": "What the sinner has gathered.",
+         "n": "Gesenius gives first 'strength, power, might', and then forces or an army; BDB lists 'strength, efficiency, wealth, army'. Here it is wealth, as the brief's lexicon says.",
+         "t": ["the wealth of", "the riches of", "the substance of", "the wealth of", "the wealth of", "wealth", "wealth"]},
+  "08": {"s": ["sinner", "wrongdoer", "the one who sins"],
+         "r": "The man who goes wrong, set against the good man of the first line.",
+         "n": "A participle, 'one who sins'. Gesenius says the verb properly means to miss, to err from the mark, as an archer does.",
+         "t": ["the sinner", "the sinner", "the sinner", "the sinner", "the sinner", "the sinner's", "the sinner’s"]}
+ },
+ "lxx": {
+  "_extra": {
+   "1": "ἀνὴρ (man): added by the Greek translators, as English adds 'man'."
+  },
+  "01": {"i": [0], "m": 0},
+  "02": {"i": [2], "m": 2, "n": "κληρονομέω, the verb this study renders 'inherit' in the New Testament: 'a good man will make sons of sons inherit'."},
+  "03": {"i": [3], "m": 3},
+  "04": {"i": [4], "m": 4},
+  "05": {"i": [5, 6], "m": 5, "n": "θησαυρίζω, 'store up treasure'."},
+  "06": {"i": [7], "m": 7, "n": "Plural in the Greek: 'for the righteous ones'."},
+  "07": {"i": [8], "m": 8, "n": "πλοῦτος, 'wealth, riches'."},
+  "08": {"i": [9], "m": 9, "n": "Plural in the Greek, and a different word: ἀσεβής, 'ungodly', where the Hebrew has 'sinner'."}
+ }
+}

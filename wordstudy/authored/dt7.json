@@ -1,0 +1,381 @@
+{
+ "id": "dt7",
+ "en": [
+  {
+   "t": "At the end of",
+   "w": [
+    "01"
+   ]
+  },
+  " ",
+  {
+   "t": "three",
+   "w": [
+    "02"
+   ]
+  },
+  " ",
+  {
+   "t": "years",
+   "w": [
+    "03"
+   ]
+  },
+  " ",
+  {
+   "t": "you shall bring out",
+   "w": [
+    "04"
+   ]
+  },
+  " ",
+  {
+   "t": "all",
+   "w": [
+    "06",
+    "05"
+   ]
+  },
+  " ",
+  {
+   "t": "the tithe of",
+   "w": [
+    "07"
+   ]
+  },
+  " ",
+  {
+   "t": "your produce",
+   "w": [
+    "08"
+   ]
+  },
+  " ",
+  {
+   "t": "in that year",
+   "w": [
+    "09",
+    "10"
+   ]
+  },
+  ", ",
+  {
+   "t": "and you shall deposit",
+   "w": [
+    "11"
+   ]
+  },
+  " ",
+  {
+   "t": "it",
+   "sup": "Supplied in English. The Hebrew verb has no object; the tithe is understood."
+  },
+  " ",
+  {
+   "t": "in your gates",
+   "w": [
+    "12"
+   ]
+  },
+  "."
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "at the end of",
+    "at the close of",
+    "after"
+   ],
+   "r": "When three years have run their course.",
+   "n": "Literally 'from the end of'. BDB lists the sense 'at the end of a certain time'.",
+   "t": [
+    "At the end of",
+    "At the end of",
+    null,
+    "At the end of",
+    "At the end of",
+    "At the end of",
+    "At the end of"
+   ]
+  },
+  "02": {
+   "s": [
+    "three"
+   ],
+   "r": "The tithe cycle is three years.",
+   "n": "The JPS, ASV and BSB say 'every three years'; the DRC 'the third year'.",
+   "t": [
+    "three",
+    "three",
+    "The third",
+    "every three",
+    "every three",
+    "three",
+    "every three"
+   ]
+  },
+  "03": {
+   "s": [
+    "years"
+   ],
+   "r": "Counted in years.",
+   "t": [
+    "years",
+    "yeere",
+    "year",
+    "years",
+    "years",
+    "years",
+    "years"
+   ]
+  },
+  "04": {
+   "s": [
+    "you shall bring out",
+    "you shall bring forth",
+    "you shall take out"
+   ],
+   "r": "The tithe is brought out from the year's store.",
+   "n": "The causative form of the verb 'go out': 'cause to go out', so 'bring out'. The DRC says 'separate another tithe'.",
+   "t": [
+    "thou shalt bring forth",
+    "thou shalt bring foorth",
+    "thou shalt separate",
+    "thou shalt bring forth",
+    "thou shalt bring forth",
+    "thou dost bring out",
+    "bring"
+   ]
+  },
+  "05": {
+   "s": [
+    "(object marker)"
+   ],
+   "r": "Marks the tithe as what is brought out.",
+   "n": "The object marker has no English equivalent; it is counted here with 'all'.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "06": {
+   "s": [
+    "all",
+    "the whole of"
+   ],
+   "r": "The whole tithe of that year, not part of it.",
+   "t": [
+    "all",
+    "all",
+    "all",
+    "all",
+    "all",
+    "all",
+    "all"
+   ]
+  },
+  "07": {
+   "s": [
+    "the tithe of",
+    "the tenth of"
+   ],
+   "r": "The tenth of the harvest.",
+   "n": "Gesenius: tithes, and he cites this verse, and notes 'the year of tithe', every third year. Our register renders this word 'tithe'; the BSB says 'a tenth'.",
+   "t": [
+    "the tithe of",
+    "the tithes of",
+    "another tithe of",
+    "the tithe of",
+    "the tithe of",
+    "the tithe of",
+    "a tenth of"
+   ]
+  },
+  "08": {
+   "s": [
+    "your produce",
+    "your yield",
+    "your crops",
+    "your increase"
+   ],
+   "r": "What your land has yielded.",
+   "n": "Gesenius: produce, as of the earth. The older English versions say 'increase'.",
+   "t": [
+    "thine increase",
+    "thine increase",
+    "things that grow to thee",
+    "thine increase",
+    "thine increase",
+    "thine increase",
+    "your produce"
+   ]
+  },
+  "09": {
+   "s": [
+    "in the year",
+    "for the year"
+   ],
+   "r": "Only that year's harvest is tithed for this purpose.",
+   "t": [
+    "year",
+    "of ... yeere",
+    "time",
+    "even in ... year",
+    "in ... year",
+    "in ... year",
+    "for ... year"
+   ]
+  },
+  "10": {
+   "s": [
+    "that",
+    "the same"
+   ],
+   "r": "Points to the third year just named.",
+   "n": "The pronoun 'he, it' with the article, used as 'that'.",
+   "t": [
+    "the same",
+    "the same",
+    "at that",
+    "the same",
+    "the same",
+    "that",
+    "that"
+   ]
+  },
+  "11": {
+   "s": [
+    "and you shall deposit",
+    "and you shall lay up",
+    "and you shall set down",
+    "and you shall store"
+   ],
+   "r": "The tithe is stored in the town, not carried to the sanctuary.",
+   "n": "The causative of the verb 'rest': 'cause to rest', so set down, deposit; the brief's lexicon lists 'to lay or set down, deposit'. A perfect with 'and', continuing the instruction; YLT keeps the form, 'hast placed it'.",
+   "t": [
+    "and shalt lay it up",
+    "and lay it vp",
+    "and shalt lay it up",
+    "and shall lay it up",
+    "and shalt lay it up",
+    "and hast placed it",
+    "and lay it up"
+   ]
+  },
+  "12": {
+   "s": [
+    "in your gates",
+    "within your gates",
+    "in your towns"
+   ],
+   "r": "In your own town.",
+   "n": "The brief's lexicon notes that 'gate' can stand for the space inside the gate, and so for the city or town. The next verse names who eats this stored tithe.",
+   "t": [
+    "within thy gates",
+    "within thy gates",
+    "within thy gates",
+    "within thy gates",
+    "within thy gates",
+    "within thy gates",
+    "within your gates"
+   ]
+  }
+ },
+ "lxx": {
+  "01": {
+   "i": [
+    0
+   ],
+   "m": 0,
+   "n": "μετά, 'after', for 'at the end of'."
+  },
+  "02": {
+   "i": [
+    1
+   ],
+   "m": 1
+  },
+  "03": {
+   "i": [
+    2
+   ],
+   "m": 2,
+   "lemma": "ἔτος",
+   "strong": "G2094",
+   "n": "Dictionary form supplied by hand: the matched data gives none. Printed ἤ in our Greek text, evidently ἔτη, 'years'."
+  },
+  "04": {
+   "i": [
+    3
+   ],
+   "m": 3,
+   "lemma": "ἐκφέρω",
+   "strong": "G1627",
+   "n": "Dictionary form supplied by hand: the matched data gives none."
+  },
+  "06": {
+   "i": [
+    4
+   ],
+   "m": 4
+  },
+  "07": {
+   "i": [
+    5,
+    6
+   ],
+   "m": 6,
+   "n": "τὸ ἐπιδέκατον, 'the tenth'."
+  },
+  "08": {
+   "i": [
+    7,
+    8,
+    9
+   ],
+   "m": 8,
+   "lemma": "γένημα",
+   "strong": "G1081",
+   "n": "Dictionary form supplied by hand: the matched data gives γέννημα. γένημα means produce."
+  },
+  "09": {
+   "i": [
+    10,
+    11,
+    12
+   ],
+   "m": 12
+  },
+  "10": {
+   "i": [
+    13
+   ],
+   "m": 13
+  },
+  "11": {
+   "i": [
+    14,
+    15
+   ],
+   "m": 14,
+   "lemma": "τίθημι",
+   "strong": "G5087",
+   "n": "Dictionary form supplied by hand: the matched data gives none. θήσεις αὐτό, 'you shall put it', supplies the object the Hebrew leaves unstated."
+  },
+  "12": {
+   "i": [
+    16,
+    17,
+    18,
+    19
+   ],
+   "m": 18,
+   "n": "The Greek says 'in your cities' for 'in your gates'."
+  }
+ }
+}

@@ -1,0 +1,751 @@
+{
+ "id": "dt3",
+ "en": [
+  {
+   "t": "And if",
+   "w": [
+    "01"
+   ]
+  },
+  " ",
+  {
+   "t": "the way",
+   "w": [
+    "04"
+   ]
+  },
+  " ",
+  {
+   "t": "is too great",
+   "w": [
+    "02"
+   ]
+  },
+  " ",
+  {
+   "t": "for you",
+   "w": [
+    "03"
+   ]
+  },
+  ", ",
+  {
+   "t": "so that",
+   "w": [
+    "05"
+   ]
+  },
+  " ",
+  {
+   "t": "you are not able",
+   "w": [
+    "07",
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "to carry it",
+   "w": [
+    "08"
+   ]
+  },
+  ", ",
+  {
+   "t": "because",
+   "w": [
+    "09"
+   ]
+  },
+  " ",
+  {
+   "t": "the place",
+   "w": [
+    "12"
+   ]
+  },
+  " ",
+  {
+   "t": "is too far",
+   "w": [
+    "10"
+   ]
+  },
+  " ",
+  {
+   "t": "from you",
+   "w": [
+    "11"
+   ]
+  },
+  " ",
+  {
+   "t": "that",
+   "w": [
+    "13"
+   ]
+  },
+  " ",
+  {
+   "t": "the LORD",
+   "w": [
+    "15"
+   ]
+  },
+  " ",
+  {
+   "t": "your God",
+   "w": [
+    "16"
+   ]
+  },
+  " ",
+  {
+   "t": "will choose",
+   "w": [
+    "14"
+   ]
+  },
+  " ",
+  {
+   "t": "to put",
+   "w": [
+    "17"
+   ]
+  },
+  " ",
+  {
+   "t": "his name",
+   "w": [
+    "18"
+   ]
+  },
+  " ",
+  {
+   "t": "there",
+   "w": [
+    "19"
+   ]
+  },
+  ", ",
+  {
+   "t": "when",
+   "w": [
+    "20"
+   ]
+  },
+  " ",
+  {
+   "t": "the LORD",
+   "w": [
+    "22"
+   ]
+  },
+  " ",
+  {
+   "t": "your God",
+   "w": [
+    "23"
+   ]
+  },
+  " ",
+  {
+   "t": "blesses you",
+   "w": [
+    "21"
+   ]
+  },
+  ","
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "and if",
+    "and when",
+    "but if"
+   ],
+   "r": "Opens the case of the worshipper who lives far away.",
+   "n": "The particle is the common word for 'that, for, when'; the brief's lexicon also gives 'if'.",
+   "t": [
+    "And if",
+    "And if",
+    "But when",
+    "And if",
+    "And if",
+    "And when",
+    "But if"
+   ]
+  },
+  "02": {
+   "s": [
+    "is too great",
+    "is too long",
+    "is too much"
+   ],
+   "r": "The journey is more than the worshipper can manage.",
+   "n": "The verb means to be or become great, many, much. With 'from you' after it, it compares: greater than you can manage, so 'too great for you'.",
+   "t": [
+    "be too long",
+    "be too long",
+    null,
+    "be too long",
+    "be too long",
+    "is too much",
+    "is too great"
+   ]
+  },
+  "03": {
+   "s": [
+    "for you",
+    "than you can manage"
+   ],
+   "r": "Measures the journey against the traveller.",
+   "n": "Literally 'from you': Hebrew compares with 'from', 'than'.",
+   "t": [
+    "for thee",
+    "for thee",
+    null,
+    "for thee",
+    "for thee",
+    "for thee",
+    "for you"
+   ]
+  },
+  "04": {
+   "s": [
+    "the way",
+    "the journey",
+    "the distance",
+    "the road"
+   ],
+   "r": "The journey to the chosen place.",
+   "n": "Gesenius gives the first sense as a going, and so a journey. The BSB says 'the distance'.",
+   "t": [
+    "the way",
+    "the way",
+    "the way",
+    "the way",
+    "the way",
+    "the way",
+    "the distance"
+   ]
+  },
+  "05": {
+   "s": [
+    "so that",
+    "for",
+    "because"
+   ],
+   "r": "Says what follows from the long journey.",
+   "t": [
+    "so that",
+    "so that",
+    null,
+    "so that",
+    "so that",
+    "that",
+    null
+   ]
+  },
+  "06": {
+   "s": [
+    "not"
+   ],
+   "r": "Negates being able.",
+   "t": [
+    "not",
+    "not",
+    "not",
+    "not",
+    "not",
+    "not",
+    null
+   ]
+  },
+  "07": {
+   "s": [
+    "you are able",
+    "you can",
+    "you have the strength"
+   ],
+   "r": "Whether the worshipper can manage the load.",
+   "t": [
+    "thou art ... able",
+    "thou art ... able",
+    "thou canst",
+    "thou art ... able",
+    "thou art ... able",
+    "thou art ... able",
+    null
+   ]
+  },
+  "08": {
+   "s": [
+    "to carry it",
+    "to bring it",
+    "to transport it"
+   ],
+   "r": "To carry the tithe all the way to the sanctuary.",
+   "n": "The 'it' is singular and refers back to the tithe of the verse before. The DRC says 'carry all these things thither'.",
+   "t": [
+    "to carry it",
+    "to cary it",
+    "carry all these things thither",
+    "to carry it",
+    "to carry it",
+    "to carry it",
+    "to carry that"
+   ]
+  },
+  "09": {
+   "s": [
+    "because",
+    "for",
+    "when"
+   ],
+   "r": "Gives the reason the journey is too long.",
+   "n": "The KJV reads it as a second condition, 'or if'.",
+   "t": [
+    "or if",
+    "because",
+    null,
+    "because",
+    "because",
+    "when",
+    "because"
+   ]
+  },
+  "10": {
+   "s": [
+    "is too far",
+    "is far",
+    "is distant"
+   ],
+   "r": "The sanctuary lies far from where the worshipper lives.",
+   "n": "BDB: be, or become, far, distant.",
+   "t": [
+    "be too far",
+    "is farre",
+    "are far off",
+    "is too far",
+    "is too far",
+    "is too far off",
+    "is too far away"
+   ]
+  },
+  "11": {
+   "s": [
+    "from you",
+    "away from you"
+   ],
+   "r": "Measures the distance from the worshipper.",
+   "t": [
+    "from thee",
+    "from thee",
+    null,
+    "from thee",
+    "from thee",
+    "from thee",
+    null
+   ]
+  },
+  "12": {
+   "s": [
+    "the place",
+    "the site"
+   ],
+   "r": "The one sanctuary the LORD will choose.",
+   "t": [
+    "the place",
+    "the place",
+    "the place",
+    "the place",
+    "the place",
+    "the place",
+    "the place"
+   ]
+  },
+  "13": {
+   "s": [
+    "that",
+    "which",
+    "where"
+   ],
+   "r": "Introduces the description of the place.",
+   "t": [
+    "which",
+    "where",
+    "which",
+    "which",
+    "which",
+    "which",
+    "where"
+   ]
+  },
+  "14": {
+   "s": [
+    "will choose",
+    "chooses",
+    "shall select"
+   ],
+   "r": "The LORD, not the worshipper, picks the place.",
+   "t": [
+    "shall choose",
+    "shall chose",
+    "shall choose",
+    "shall choose",
+    "shall choose",
+    "doth choose",
+    "will choose"
+   ]
+  },
+  "15": {
+   "s": [
+    "the LORD",
+    "Yahweh",
+    "Jehovah",
+    "HaShem"
+   ],
+   "r": "The personal name of Israel's God.",
+   "t": [
+    "the Lord",
+    "the Lord",
+    "the Lord",
+    "HaShem",
+    "Jehovah",
+    "Jehovah",
+    "the LORD"
+   ]
+  },
+  "16": {
+   "s": [
+    "your God"
+   ],
+   "r": "Your own God.",
+   "n": "The form is plural but the meaning is singular.",
+   "t": [
+    "thy God",
+    "thy God",
+    "thy God",
+    "thy G-d",
+    "thy God",
+    "thy God",
+    "your God"
+   ]
+  },
+  "17": {
+   "s": [
+    "to put",
+    "to set",
+    "to place"
+   ],
+   "r": "To set his name in that place.",
+   "n": "Gesenius: to put, to set, to place. The verse before uses a different verb here, 'to make dwell'.",
+   "t": [
+    "to set",
+    "to set",
+    null,
+    "to set",
+    "to set",
+    "to put",
+    "to put"
+   ]
+  },
+  "18": {
+   "s": [
+    "his name",
+    "his Name"
+   ],
+   "r": "The LORD's name, standing for his presence.",
+   "t": [
+    "his name",
+    "his Name",
+    null,
+    "His name",
+    "his name",
+    "His name",
+    "His Name"
+   ]
+  },
+  "19": {
+   "s": [
+    "there"
+   ],
+   "r": "At that chosen place.",
+   "t": [
+    "there",
+    null,
+    null,
+    "there",
+    "there",
+    "there",
+    null
+   ]
+  },
+  "20": {
+   "s": [
+    "when",
+    "because",
+    "for"
+   ],
+   "r": "Ties the case to the LORD's blessing on the harvest.",
+   "n": "The same particle as at the start of the verse. 'When' follows most translations; a reasonable alternative, which the BSB takes, is that the blessing is the reason the load is too great to carry.",
+   "t": [
+    "when",
+    "when",
+    "and",
+    "when",
+    "when",
+    "when",
+    null
+   ]
+  },
+  "21": {
+   "s": [
+    "blesses you",
+    "will bless you",
+    "has blessed you"
+   ],
+   "r": "The LORD gives a large harvest.",
+   "n": "An imperfect, 'he will bless you'. The KJV, DRC and BSB make it past, 'has blessed'.",
+   "t": [
+    "hath blessed thee",
+    "shall blesse thee",
+    "he hath blessed thee",
+    "shall bless thee",
+    "shall bless thee",
+    "doth bless thee",
+    "has blessed you"
+   ]
+  },
+  "22": {
+   "s": [
+    "the LORD",
+    "Yahweh",
+    "Jehovah",
+    "HaShem"
+   ],
+   "r": "The personal name of Israel's God.",
+   "t": [
+    "the Lord",
+    "the Lord",
+    null,
+    "HaShem",
+    "Jehovah",
+    "Jehovah",
+    "the LORD"
+   ]
+  },
+  "23": {
+   "s": [
+    "your God"
+   ],
+   "r": "Your own God.",
+   "t": [
+    "thy God",
+    "thy God",
+    null,
+    "thy G-d",
+    "thy God",
+    "thy God",
+    "your God"
+   ]
+  }
+ },
+ "lxx": {
+  "_extra": {
+   "21": "ἑ: a stray letter in our Greek text, evidently the start of the next word, ἐκλέξηται."
+  },
+  "01": {
+   "i": [
+    0,
+    1
+   ],
+   "m": 0,
+   "lemma": "ἐάν",
+   "strong": "G1437",
+   "n": "Dictionary form supplied by hand: the matched data gives none. ἐὰν δὲ, 'but if'."
+  },
+  "02": {
+   "i": [
+    2,
+    3
+   ],
+   "m": 2,
+   "lemma": "μακράν",
+   "strong": "G3112",
+   "n": "Dictionary form supplied by hand: the matched data gives none. The Greek says 'if the way is far from you' where the Hebrew says 'too great for you'."
+  },
+  "03": {
+   "i": [
+    4,
+    5
+   ],
+   "m": 4,
+   "lemma": "ἀπό",
+   "strong": "G0575",
+   "n": "Dictionary form supplied by hand: the matched data gives none."
+  },
+  "04": {
+   "i": [
+    6,
+    7
+   ],
+   "m": 7,
+   "lemma": "ὁδός",
+   "strong": "G3598",
+   "n": "Dictionary form supplied by hand: the matched data gives none."
+  },
+  "05": {
+   "i": [
+    8
+   ],
+   "m": 8,
+   "n": "καὶ, 'and', where the Hebrew has 'so that'."
+  },
+  "06": {
+   "i": [
+    9
+   ],
+   "m": 9,
+   "lemma": "μή",
+   "strong": "G3361",
+   "n": "Dictionary form supplied by hand: the matched data gives none."
+  },
+  "07": {
+   "i": [
+    10
+   ],
+   "m": 10,
+   "lemma": "δύναμαι",
+   "strong": "G1410",
+   "n": "Dictionary form supplied by hand: the matched data gives none."
+  },
+  "08": {
+   "i": [
+    11,
+    12
+   ],
+   "m": 11,
+   "lemma": "ἀναφέρω",
+   "strong": "G0399",
+   "n": "Dictionary form supplied by hand: the matched data gives none. The Greek object is plural, αὐτά, 'them'."
+  },
+  "09": {
+   "i": [
+    13
+   ],
+   "m": 13,
+   "lemma": "ὅτι",
+   "strong": "G3754",
+   "n": "Dictionary form supplied by hand: the matched data gives none."
+  },
+  "10": {
+   "i": [
+    14
+   ],
+   "m": 14,
+   "lemma": "μακράν",
+   "strong": "G3112",
+   "n": "Dictionary form supplied by hand: the matched data gives none."
+  },
+  "11": {
+   "i": [
+    15,
+    16
+   ],
+   "m": 15,
+   "lemma": "ἀπό",
+   "strong": "G0575",
+   "n": "Dictionary form supplied by hand: the matched data gives none."
+  },
+  "12": {
+   "i": [
+    17,
+    18
+   ],
+   "m": 18
+  },
+  "13": {
+   "i": [
+    19,
+    20
+   ],
+   "m": 19
+  },
+  "14": {
+   "i": [
+    22
+   ],
+   "m": 22
+  },
+  "15": {
+   "i": [
+    23
+   ],
+   "m": 23
+  },
+  "16": {
+   "i": [
+    24,
+    25,
+    26
+   ],
+   "m": 25
+  },
+  "17": {
+   "i": [
+    27
+   ],
+   "m": 27,
+   "n": "ἐπικληθῆναι, 'to be called upon', as in the verse before, where the Hebrew here says 'to put'."
+  },
+  "18": {
+   "i": [
+    28,
+    29,
+    30
+   ],
+   "m": 29
+  },
+  "19": {
+   "i": [
+    31
+   ],
+   "m": 31
+  },
+  "20": {
+   "i": [
+    32
+   ],
+   "m": 32,
+   "lemma": "ὅτι",
+   "strong": "G3754",
+   "n": "Dictionary form supplied by hand: the matched data gives none. ὅτι, 'because': the Greek reads the blessing as the reason."
+  },
+  "21": {
+   "i": [
+    33,
+    34
+   ],
+   "m": 33,
+   "lemma": "εὐλογέω",
+   "strong": "G2127",
+   "n": "Dictionary form supplied by hand: the matched data gives none."
+  },
+  "22": {
+   "i": [
+    35
+   ],
+   "m": 35
+  },
+  "23": {
+   "i": [
+    36,
+    37,
+    38
+   ],
+   "m": 37
+  }
+ }
+}

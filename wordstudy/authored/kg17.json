@@ -1,0 +1,42 @@
+{
+ "id": "kg17",
+ "en": [
+  {"t": "A king", "w": ["01"]}, " ",
+  {"t": "by justice", "w": ["02"]}, " ",
+  {"t": "establishes", "w": ["03"]}, " ",
+  {"t": "a land", "w": ["04"]}, ", ",
+  {"t": "but a man of", "w": ["05"]}, " ",
+  {"t": "contributions", "w": ["06"]}, " ",
+  {"t": "tears it down", "w": ["07"]}, "."
+ ],
+ "words": {
+  "01": {"s": ["a king", "a ruler"], "r": "Any king: the proverb speaks of kingship in general.",
+         "t": ["The king", "A King", "A ... king", "The king", "The king", "A king", "a king"]},
+  "02": {"s": ["by justice", "through justice", "by just judgment", "by right"], "r": "Fair judgment is the king's means of holding the land together.",
+         "n": "Gesenius gives first 'judgment', the act of judging; BDB adds 'justice, right, rectitude'. The DRC turns the phrase into an adjective, 'a just king', as the Greek does.",
+         "t": ["by judgment", "by iudgement", "just", "by justice", "by justice", "by judgment", "By justice"]},
+  "03": {"s": ["establishes", "makes stand", "steadies", "upholds", "keeps standing"], "r": "Justice keeps the country standing firm.",
+         "n": "The causative form of the verb 'to stand': literally, 'makes a land stand'. The BSB's 'brings stability to' says the same at more length.",
+         "t": ["establisheth", "mainteineth", "setteth up", "establisheth", "establisheth", "establisheth", "brings stability to"]},
+  "04": {"s": ["a land", "a country", "the land"], "r": "The country the king rules.",
+         "t": ["the land", "ye countrey", "the land", "the land", "the land", "a land", "the land"]},
+  "05": {"s": ["but a man of", "but one given to", "and a man of"], "r": "Sets a second kind of ruler against the first.",
+         "n": "The 'and' here sets up a contrast, so 'but'. 'A man of' something is a Hebrew way to say a man marked by it.",
+         "t": ["but he that", "but a man", "a ... man", "but he that", "But he that", "And one", "but a man"]},
+  "06": {"s": ["contributions", "levies", "exactions", "gifts"], "r": "Payments he takes from the people, whether gifts or levies.",
+         "n": "Our register renders this word 'contribution'. Gesenius gives 'an oblation, offering, gift' and cites this verse as a judge 'who loves gifts'; the BSB reads it as 'tribute' a ruler takes, and the JPS and ASV as 'gifts' he exacts. Whether the word means bribes or levies here is the translators' choice; the Hebrew says only 'a man of contributions'.",
+         "t": ["receiveth gifts", "receiuing giftes", "covetous", "exacteth gifts", "exacteth gifts", "receiving gifts", "who exacts tribute"]},
+  "07": {"s": ["tears it down", "overthrows it", "ruins it", "pulls it down"], "r": "Such a ruler wrecks the land the just king keeps standing.",
+         "n": "Gesenius: to pull down, to destroy, a verb of tearing down. It answers 'makes stand' in the first line: one king raises the land, the other pulls it down.",
+         "t": ["overthroweth it", "destroyeth it", "shall destroy it", "overthroweth it", "overthroweth it", "throweth it down", "demolishes it"]}
+ },
+ "lxx": {
+  "01": {"i": [0], "m": 0, "lemma": "βασιλεύς", "strong": "G0935", "n": "The brief gives no dictionary form for this verse's Greek; βασιλεύς is king."},
+  "02": {"i": [1], "m": 1, "lemma": "δίκαιος", "strong": "G1342", "n": "δίκαιος, 'just': the Greek reads 'a just king' for 'a king by justice', and the DRC follows it."},
+  "03": {"i": [2], "m": 2, "lemma": "ἀνίστημι", "strong": "G0450", "n": "ἀνίστημι, to raise up, set up."},
+  "04": {"i": [3], "m": 3, "lemma": "χώρα", "strong": "G5561", "n": "χώρα, country, land."},
+  "05": {"i": [4, 5], "m": 4, "lemma": "ἀνήρ", "strong": "G0435", "n": "ἀνήρ, man, with δέ, 'but'."},
+  "06": {"i": [6], "m": 6, "lemma": "παράνομος", "n": "παράνομος, lawless: the Greek says nothing of gifts or levies, only 'a lawless man'."},
+  "07": {"i": [7], "m": 7, "lemma": "κατασκάπτω", "strong": "G2679", "n": "κατασκάπτω, to dig down, raze."}
+ }
+}

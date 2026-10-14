@@ -69,7 +69,7 @@ motif treasure dims edges: 290
 motif unticked restores to: 0
 search "tithe" hides: 231
 wordstudy.js present: True
-study desktop passages: 184
+study desktop passages: 244
 study desktop empty note: Each passage opens in this project's own liter
 study desktop reading: Woe to you, scribes and Pharisees, hypoc
 study desktop kjv: King James VersionWoe unto you, scribes 
@@ -85,7 +85,7 @@ study desktop word overflowX: 0
 study desktop back to passage: True
 study desktop console errors: 0
 study phone motif tip on tap: shown
-study phone passages: 184
+study phone passages: 244
 study phone empty note: Each passage opens in this project's own liter
 study phone reading: Woe to you, scribes and Pharisees, hypoc
 study phone kjv: King James VersionWoe unto you, scribes 

@@ -1,0 +1,38 @@
+{
+ "id": "em12",
+ "en": [
+  "And ",
+  {"t": "King", "w": ["02"]}, " ",
+  {"t": "Ahasuerus", "w": ["03"]}, " ",
+  {"t": "laid", "w": ["01"]}, " ",
+  {"t": "a levy", "w": ["04"]}, " ",
+  {"t": "on", "w": ["05"]}, " ",
+  {"t": "the land", "w": ["06"]}, " ",
+  {"t": "and the coastlands of", "w": ["07"]}, " ",
+  {"t": "the sea", "w": ["08"]}, "."
+ ],
+ "words": {
+  "01": {"s": ["laid", "imposed", "put", "set"], "r": "The king imposed the levy on his empire.",
+         "n": "Gesenius: to put, to set, to place. The 'and' that begins the verse is part of this word.",
+         "t": ["And ... laid", "And ... layd", "And ... made", "And ... laid", "And ... laid", "And ... setteth", "Now ... imposed"]},
+  "02": {"s": ["King", "the king"], "r": "The Persian king.",
+         "n": "Literally 'the king Ahasuerus', as the KJV keeps it.",
+         "t": ["the king", "the King", "king", "the king", "the king", "the king", "King"]},
+  "03": {"s": ["Ahasuerus", "Xerxes"], "r": "The Persian king of the book of Esther.",
+         "n": "Gesenius: apparently the Hebrew form of the name Xerxes, which the BSB uses.",
+         "t": ["Ahasuerus", "Ahashuerosh", "Assuerus", "Ahasuerus", "Ahasuerus", "Ahasuerus", "Xerxes"]},
+  "04": {"s": ["a levy", "tribute", "forced labour", "compulsory service"], "r": "A compulsory charge laid on the king's subjects.",
+         "n": "The lexicons differ. Gesenius gives 'tribute'; BDB gives a body of forced labourers, formed by levy upon the people, and the brief's lexicon lists forced service, tribute and levy. Our register renders this word 'forced labour' or 'levy'; 'levy' is used here because the verse does not say whether labour or payment was taken, where every translation here says 'tribute'.",
+         "t": ["a tribute", "a tribute", "tributary", "a tribute", "a tribute", "a tribute", "tribute"]},
+  "05": {"s": ["on", "upon"], "r": "The levy falls on the whole realm.",
+         "t": ["upon", "vpon", null, "upon", "upon", "on", "throughout"]},
+  "06": {"s": ["the land", "the mainland", "the country"], "r": "The king's lands on the continent.",
+         "n": "Set beside 'the coastlands of the sea', 'the land' most likely means the mainland of the empire; that is a reading of the pair, not a stated sense.",
+         "t": ["the land", "the land", "all the land", "the land", "the land", "the land", "the land"]},
+  "07": {"s": ["and the coastlands of", "and the islands of", "and the shores of"], "r": "The farthest coasts the king ruled.",
+         "n": "BDB: coast, region; the brief's lexicon: coast, island, shore. The KJV's 'isles' is narrower than the word, which takes in coasts as well. There is no 'upon' here in the Hebrew; most translations repeat it.",
+         "t": ["and upon the isles of", "and vpon the yles of", "and all the islands of", "and upon the isles of", "and upon the isles of", "and the isles of", "even to its farthest shores"]},
+  "08": {"s": ["the sea"], "r": "The sea along whose coasts the empire reached.",
+         "t": ["the sea", "the sea", "the sea", "the sea", "the sea", "the sea", null]}
+ }
+}

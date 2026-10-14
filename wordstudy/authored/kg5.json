@@ -1,0 +1,39 @@
+{
+ "id": "kg5",
+ "en": [
+  {"t": "Your flock", "w": ["01"]}, " ",
+  {"t": "he will tithe", "w": ["02"]}, ", ",
+  {"t": "and you yourselves", "w": ["03"]}, " ",
+  {"t": "will be", "w": ["04"]}, " ",
+  {"t": "slaves", "w": ["06"]}, " ",
+  {"t": "to him", "w": ["05"]}, "."
+ ],
+ "words": {
+  "01": {"s": ["your flock", "your flocks", "your sheep and goats", "your small livestock"], "r": "The sheep and goats each family keeps.",
+         "n": "Gesenius: a collective noun, flocks, small cattle, that is, sheep and goats. It is singular in form, 'your flock', and stands first for emphasis, as 'your seed' does in 1 Samuel 8:15.",
+         "t": ["of your sheep", "of your sheepe", "Your flocks", "of your flocks", "of your flocks", "your flock", "of your flocks"]},
+  "02": {"s": ["he will tithe", "he will take a tenth of", "he will take the tithe of"], "r": "The king will take one tenth of the flock for himself.",
+         "n": "Gesenius: to decimate, that is, to take the tenth part of produce, to tithe, citing this verse and 1 Sa. 8:15; this plain form means to take the tenth, while another form means to give it. So the tithing here is the king's taking.",
+         "t": ["He will take the tenth", "He will take the tenth", "he will tithe", "He will take the tenth", "He will take the tenth", "he doth tithe", "He will take a tenth"]},
+  "03": {"s": ["and you yourselves", "and you", "and as for you"], "r": "After the produce, the people themselves.",
+         "n": "The pronoun is written out, for emphasis: not only your goods, but you. The BSB shows this with 'you yourselves'.",
+         "t": ["and ye", "and ye", "and you", "and ye", "and ye", "and ye", "and you yourselves"]},
+  "04": {"s": ["will be", "will become", "shall be"], "r": "What they will become under the king.",
+         "t": ["shall be", "shall be", "shall be", "shall be", "shall be", "are", "will become"]},
+  "05": {"s": ["to him", "his"], "r": "They will belong to the king.",
+         "n": "Literally 'to him', the Hebrew way of saying 'his'.",
+         "t": ["his", "his", "his", "his", "his", "to him", "his"]},
+  "06": {"s": ["slaves", "servants", "subjects", "bondmen"], "r": "The whole people will be the king's slaves.",
+         "n": "Gesenius: a servant, among the Hebrews commonly a slave, and he notes the word is applied to a whole people when subject and tributary to another. Here the whole people, not court officials, so 'slaves', as in the BSB. Literally 'for slaves', as YLT has it.",
+         "t": ["servants", "seruants", "servants", "servants", "servants", "for servants", "slaves"]}
+ },
+ "lxx": {
+  "_extra": {"0": "καὶ (and): added by the Greek translators; nothing in the Hebrew answers to it."},
+  "01": {"i": [1, 2, 3], "m": 2, "n": "ποίμνιον, flock, plural in the Greek."},
+  "02": {"i": [4], "m": 4, "n": "ἀποδεκατόω, to tithe, take a tenth: the same verb the Greek uses in 1 Samuel 8:15."},
+  "03": {"i": [5, 6], "m": 6},
+  "04": {"i": [7], "m": 7},
+  "05": {"i": [8], "m": 8},
+  "06": {"i": [9], "m": 9, "n": "δοῦλος, slave."}
+ }
+}

@@ -1,0 +1,438 @@
+{
+ "id": "dt4",
+ "en": [
+  {
+   "t": "Then you shall exchange",
+   "w": [
+    "01"
+   ]
+  },
+  " ",
+  {
+   "t": "it",
+   "sup": "Supplied in English. The Hebrew verb has no object; the tithe of the verses before is understood."
+  },
+  " ",
+  {
+   "t": "for silver",
+   "w": [
+    "02"
+   ]
+  },
+  ", ",
+  {
+   "t": "and bind up",
+   "w": [
+    "03"
+   ]
+  },
+  " ",
+  {
+   "t": "the silver",
+   "w": [
+    "04"
+   ]
+  },
+  " ",
+  {
+   "t": "in your hand",
+   "w": [
+    "05"
+   ]
+  },
+  ", ",
+  {
+   "t": "and go",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "to",
+   "w": [
+    "07"
+   ]
+  },
+  " ",
+  {
+   "t": "the place",
+   "w": [
+    "08"
+   ]
+  },
+  " ",
+  {
+   "t": "that",
+   "w": [
+    "09",
+    "13"
+   ]
+  },
+  " ",
+  {
+   "t": "the LORD",
+   "w": [
+    "11"
+   ]
+  },
+  " ",
+  {
+   "t": "your God",
+   "w": [
+    "12"
+   ]
+  },
+  " ",
+  {
+   "t": "will choose",
+   "w": [
+    "10"
+   ]
+  },
+  "."
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "then you shall exchange",
+    "then you shall give",
+    "then you shall sell",
+    "then you shall turn"
+   ],
+   "r": "The worshipper who lives far off trades the tithed produce for silver.",
+   "n": "The verb is the ordinary word for 'give'; the brief's lexicon lists 'sell' and 'exchange' among its senses. A perfect with 'and', carrying on from the 'if' of the verse before: 'then you shall'. YLT renders the form literally, 'thou hast given it'.",
+   "t": [
+    "Then shalt thou turn it",
+    "Then shalt thou make it",
+    "Thou shalt sell them all, and turn them",
+    "then shalt thou turn it",
+    "then shalt thou turn it",
+    "then thou hast given it",
+    "then exchange it"
+   ]
+  },
+  "02": {
+   "s": [
+    "for silver",
+    "into silver",
+    "for money"
+   ],
+   "r": "Silver, the medium of exchange.",
+   "n": "Our register renders this word 'silver'. Gesenius: silver, so called from its pale colour; the brief's lexicon gives silver, money. The translations all say 'money'.",
+   "t": [
+    "into money",
+    "in money",
+    "into money",
+    "into money",
+    "into money",
+    "in money",
+    "for money"
+   ]
+  },
+  "03": {
+   "s": [
+    "and bind up",
+    "and tie up",
+    "and wrap up",
+    "and secure"
+   ],
+   "r": "The silver is tied up safely for the journey.",
+   "n": "Gesenius gives 'to bind together, into a bundle or roll' and cites this verse. The Geneva and BSB say 'take', the DRC 'carry'.",
+   "t": [
+    "and bind up",
+    "and take",
+    "and shalt carry it",
+    "and bind up",
+    "and bind up",
+    "and hast bound up",
+    "take"
+   ]
+  },
+  "04": {
+   "s": [
+    "the silver",
+    "the money"
+   ],
+   "r": "The silver received for the tithe.",
+   "n": "The same word as before, now with 'the': the silver just received.",
+   "t": [
+    "the money",
+    "the money",
+    null,
+    "the money",
+    "the money",
+    "the money",
+    "the money"
+   ]
+  },
+  "05": {
+   "s": [
+    "in your hand",
+    "in your grasp"
+   ],
+   "r": "Carried with you.",
+   "t": [
+    "in thine hand",
+    "in thine hand",
+    "in thy hand",
+    "in thy hand",
+    "in thy hand",
+    "in thy hand",
+    "in your hand"
+   ]
+  },
+  "06": {
+   "s": [
+    "and go",
+    "and travel",
+    "and walk"
+   ],
+   "r": "The worshipper still makes the journey, with silver in place of produce.",
+   "n": "A perfect with 'and', continuing the instruction. YLT keeps the perfect form, 'and gone'.",
+   "t": [
+    "and shalt go",
+    "and goe",
+    "and shalt go",
+    "and shalt go",
+    "and shalt go",
+    "and gone",
+    "and go"
+   ]
+  },
+  "07": {
+   "s": [
+    "to",
+    "toward"
+   ],
+   "r": "Gives the destination.",
+   "t": [
+    "unto",
+    "vnto",
+    "to",
+    "unto",
+    "unto",
+    "unto",
+    "to"
+   ]
+  },
+  "08": {
+   "s": [
+    "the place",
+    "the site"
+   ],
+   "r": "The one sanctuary the LORD will choose.",
+   "t": [
+    "the place",
+    "the place",
+    "the place",
+    "the place",
+    "the place",
+    "the place",
+    "the place"
+   ]
+  },
+  "09": {
+   "s": [
+    "that",
+    "which",
+    "where"
+   ],
+   "r": "Introduces the description of the place.",
+   "n": "Hebrew says 'which ... will choose in it'; English needs only 'that'.",
+   "t": [
+    "which",
+    "which",
+    "which",
+    "which",
+    "which",
+    "which",
+    null
+   ]
+  },
+  "10": {
+   "s": [
+    "will choose",
+    "chooses",
+    "shall select"
+   ],
+   "r": "The LORD, not the worshipper, picks the place.",
+   "n": "YLT says 'doth fix'.",
+   "t": [
+    "shall choose",
+    "shall chose",
+    "shall choose",
+    "shall choose",
+    "shall choose",
+    "doth fix",
+    "will choose"
+   ]
+  },
+  "11": {
+   "s": [
+    "the LORD",
+    "Yahweh",
+    "Jehovah",
+    "HaShem"
+   ],
+   "r": "The personal name of Israel's God.",
+   "t": [
+    "the Lord",
+    "the Lord",
+    "the Lord",
+    "HaShem",
+    "Jehovah",
+    "Jehovah",
+    "the LORD"
+   ]
+  },
+  "12": {
+   "s": [
+    "your God"
+   ],
+   "r": "Your own God.",
+   "n": "The form is plural but the meaning is singular. The DRC leaves it out.",
+   "t": [
+    "thy God",
+    "thy God",
+    null,
+    "thy G-d",
+    "thy God",
+    "thy God",
+    "your God"
+   ]
+  },
+  "13": {
+   "s": [
+    "(in it)"
+   ],
+   "r": "Points back to the place: 'which he chooses, in it'.",
+   "n": "'In it', a pronoun that repeats the place after the verb. English does not need it, so it is counted with 'that'; YLT's 'on which' reflects it.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    "on",
+    null
+   ]
+  }
+ },
+ "lxx": {
+  "_extra": {
+   "2": "αὐτὰ (them): the Greek supplies the object, the tithes, which the Hebrew leaves unstated."
+  },
+  "01": {
+   "i": [
+    0,
+    1
+   ],
+   "m": 1,
+   "lemma": "ἀποδίδωμι",
+   "strong": "G0591",
+   "n": "Dictionary form supplied by hand: the matched data gives none. ἀποδίδωμι is the verb our register renders 'give back'; of goods, as here, it means to sell."
+  },
+  "02": {
+   "i": [
+    3
+   ],
+   "m": 3,
+   "lemma": "ἀργύριον",
+   "strong": "G0694",
+   "n": "Dictionary form supplied by hand: the matched data gives none. ἀργύριον is the word our register renders 'silver'."
+  },
+  "03": {
+   "i": [
+    4,
+    5
+   ],
+   "m": 5,
+   "lemma": "λαμβάνω",
+   "strong": "G2983",
+   "n": "Dictionary form supplied by hand: the matched data gives none. λήμψῃ, 'you shall take', where the Hebrew says 'bind up'; the Geneva's and BSB's 'take' agree with this Greek."
+  },
+  "04": {
+   "i": [
+    6,
+    7
+   ],
+   "m": 7,
+   "lemma": "ἀργύριον",
+   "strong": "G0694",
+   "n": "Dictionary form supplied by hand: the matched data gives none."
+  },
+  "05": {
+   "i": [
+    8,
+    9,
+    10,
+    11
+   ],
+   "m": 10,
+   "lemma": "χείρ",
+   "strong": "G5495",
+   "n": "Dictionary form supplied by hand: the matched data gives none. The Greek says 'in your hands', plural."
+  },
+  "06": {
+   "i": [
+    12,
+    13
+   ],
+   "m": 13,
+   "lemma": "πορεύομαι",
+   "strong": "G4198",
+   "n": "Dictionary form supplied by hand: the matched data gives none."
+  },
+  "07": {
+   "i": [
+    14
+   ],
+   "m": 14,
+   "lemma": "εἰς",
+   "strong": "G1519",
+   "n": "Dictionary form supplied by hand: the matched data gives none."
+  },
+  "08": {
+   "i": [
+    15,
+    16
+   ],
+   "m": 16
+  },
+  "09": {
+   "i": [
+    17,
+    18
+   ],
+   "m": 17
+  },
+  "10": {
+   "i": [
+    19
+   ],
+   "m": 19
+  },
+  "11": {
+   "i": [
+    20
+   ],
+   "m": 20
+  },
+  "12": {
+   "i": [
+    21,
+    22,
+    23
+   ],
+   "m": 22
+  },
+  "13": {
+   "i": [
+    24
+   ],
+   "m": 24,
+   "n": "αὐτόν, 'it', the place: the Greek keeps the Hebrew's pronoun as the object of 'choose'."
+  }
+ }
+}

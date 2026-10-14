@@ -1,0 +1,658 @@
+{
+ "id": "dt5",
+ "en": [
+  {
+   "t": "And you shall give",
+   "w": [
+    "01"
+   ]
+  },
+  " ",
+  {
+   "t": "the silver",
+   "w": [
+    "02"
+   ]
+  },
+  " ",
+  {
+   "t": "for all",
+   "w": [
+    "03"
+   ]
+  },
+  " ",
+  {
+   "t": "that",
+   "w": [
+    "04"
+   ]
+  },
+  " ",
+  {
+   "t": "your soul",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "desires",
+   "w": [
+    "05"
+   ]
+  },
+  ", ",
+  {
+   "t": "for cattle",
+   "w": [
+    "07"
+   ]
+  },
+  " ",
+  {
+   "t": "and for sheep",
+   "w": [
+    "08"
+   ]
+  },
+  " ",
+  {
+   "t": "and for wine",
+   "w": [
+    "09"
+   ]
+  },
+  " ",
+  {
+   "t": "and for strong drink",
+   "w": [
+    "10"
+   ]
+  },
+  " ",
+  {
+   "t": "and for all",
+   "w": [
+    "11"
+   ]
+  },
+  " ",
+  {
+   "t": "that",
+   "w": [
+    "12"
+   ]
+  },
+  " ",
+  {
+   "t": "your soul",
+   "w": [
+    "14"
+   ]
+  },
+  " ",
+  {
+   "t": "asks of you",
+   "w": [
+    "13"
+   ]
+  },
+  "; ",
+  {
+   "t": "and you shall eat",
+   "w": [
+    "15"
+   ]
+  },
+  " ",
+  {
+   "t": "there",
+   "w": [
+    "16"
+   ]
+  },
+  " ",
+  {
+   "t": "before",
+   "w": [
+    "17"
+   ]
+  },
+  " ",
+  {
+   "t": "the LORD",
+   "w": [
+    "18"
+   ]
+  },
+  " ",
+  {
+   "t": "your God",
+   "w": [
+    "19"
+   ]
+  },
+  ", ",
+  {
+   "t": "and you shall rejoice",
+   "w": [
+    "20"
+   ]
+  },
+  ", ",
+  {
+   "t": "you",
+   "w": [
+    "21"
+   ]
+  },
+  " ",
+  {
+   "t": "and your household",
+   "w": [
+    "22"
+   ]
+  },
+  "."
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "and you shall give",
+    "and you shall spend",
+    "and you shall exchange",
+    "and you shall pay"
+   ],
+   "r": "At the sanctuary the silver is spent on food and drink for the feast.",
+   "n": "The same verb, 'give', as at the start of the verse before, where it is the produce that is given for silver; here the silver is given for food. A perfect with 'and', continuing the instruction; YLT keeps the form, 'thou hast given'.",
+   "t": [
+    "And thou shalt bestow",
+    "And thou shalt bestowe",
+    "And thou shalt buy",
+    "And thou shalt bestow",
+    "and thou shalt bestow",
+    "and thou hast given",
+    "Then you may spend"
+   ]
+  },
+  "02": {
+   "s": [
+    "the silver",
+    "the money"
+   ],
+   "r": "The silver carried from home in place of the tithe.",
+   "n": "Our register renders this word 'silver'. The brief's lexicon gives silver, money; the translations all say 'money'.",
+   "t": [
+    "that money",
+    "the money",
+    "with the same money",
+    "the money",
+    "the money",
+    "the money",
+    "the money"
+   ]
+  },
+  "03": {
+   "s": [
+    "for all",
+    "for whatever",
+    "for anything"
+   ],
+   "r": "Opens a free choice of what to buy.",
+   "n": "'For' here is the preposition of price, as with each item that follows.",
+   "t": [
+    "for whatsoever",
+    "for whatsoeuer",
+    "whatsoever",
+    "for whatsoever",
+    "for whatsoever",
+    "for any thing",
+    "on anything"
+   ]
+  },
+  "04": {
+   "s": [
+    "that",
+    "which"
+   ],
+   "r": "Introduces what the worshipper desires.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    "which",
+    null
+   ]
+  },
+  "05": {
+   "s": [
+    "desires",
+    "craves",
+    "longs for",
+    "wants"
+   ],
+   "r": "Whatever the worshipper has an appetite for.",
+   "n": "The brief's lexicon gives this stem the sense 'to desire, crave (food and drink)'. The KJV says 'lusteth after'.",
+   "t": [
+    "lusteth after",
+    "desireth",
+    "pleaseth",
+    "desireth",
+    "desireth",
+    "desireth",
+    "desire"
+   ]
+  },
+  "06": {
+   "s": [
+    "your soul",
+    "your appetite",
+    "you",
+    "your heart"
+   ],
+   "r": "The worshipper's own desire.",
+   "n": "Our register renders this word 'soul'; STEP glosses it here 'appetite', and BDB lists desire and appetite among its senses. The Geneva says 'heart'; the DRC and BSB simply 'you'.",
+   "t": [
+    "thy soul",
+    "thine heart",
+    "thee",
+    "thy soul",
+    "thy soul",
+    "thy soul",
+    "you"
+   ]
+  },
+  "07": {
+   "s": [
+    "for cattle",
+    "for oxen",
+    "for the herd"
+   ],
+   "r": "Beef for the feast.",
+   "n": "Gesenius: an ox, whether bull or cow. Like the other foods in the list, it comes with 'for' and the article.",
+   "t": [
+    "for oxen",
+    "whether it be oxe",
+    "either of the herds",
+    "for oxen",
+    "for oxen",
+    "for oxen",
+    "cattle"
+   ]
+  },
+  "08": {
+   "s": [
+    "and for sheep",
+    "and for the flock",
+    "and for sheep and goats"
+   ],
+   "r": "Mutton or goat for the feast.",
+   "n": "Gesenius: a collective noun, flocks, small cattle, that is, sheep and goats.",
+   "t": [
+    "or for sheep",
+    "or sheepe",
+    "or of sheep",
+    "or for sheep",
+    "or for sheep",
+    "and for sheep",
+    "sheep"
+   ]
+  },
+  "09": {
+   "s": [
+    "and for wine"
+   ],
+   "r": "Wine to drink at the feast.",
+   "t": [
+    "or for wine",
+    "or wine",
+    "wine also",
+    "or for wine",
+    "or for wine",
+    "and for wine",
+    "wine"
+   ]
+  },
+  "10": {
+   "s": [
+    "and for strong drink",
+    "and for beer",
+    "and for intoxicating drink"
+   ],
+   "r": "Fermented drink, permitted for the feast.",
+   "n": "Gesenius: strong drink, intoxicating liquor, whether wine or a drink made like wine from barley or honey. The 'and' in the list is the Hebrew's; most translations say 'or'.",
+   "t": [
+    "or for strong drink",
+    "or strong drinke",
+    "and strong drink",
+    "or for strong drink",
+    "or for strong drink",
+    "and for strong drink",
+    "strong drink"
+   ]
+  },
+  "11": {
+   "s": [
+    "and for all",
+    "and for whatever",
+    "and for anything"
+   ],
+   "r": "Closes the list by leaving the choice open again.",
+   "t": [
+    "or for whatsoever",
+    "or whatsoeuer",
+    "and all",
+    "or for whatsoever",
+    "or for whatsoever",
+    "and for any thing",
+    "or anything"
+   ]
+  },
+  "12": {
+   "s": [
+    "that",
+    "which"
+   ],
+   "r": "Introduces what the worshipper asks for.",
+   "t": [
+    null,
+    null,
+    "that",
+    null,
+    null,
+    "which",
+    null
+   ]
+  },
+  "13": {
+   "s": [
+    "asks of you",
+    "asks",
+    "requests of you",
+    "wishes"
+   ],
+   "r": "The worshipper's appetite makes its request.",
+   "n": "The verb is 'ask', with 'you' as its object: the soul asks you. The KJV, Geneva and DRC say 'desireth' again; the JPS and ASV keep 'asketh of thee'.",
+   "t": [
+    "desireth",
+    "desireth",
+    "desireth",
+    "asketh of thee",
+    "asketh of thee",
+    "asketh",
+    "wish"
+   ]
+  },
+  "14": {
+   "s": [
+    "your soul",
+    "your appetite",
+    "you",
+    "your heart"
+   ],
+   "r": "The worshipper's own desire.",
+   "n": "The same word as earlier in the verse; STEP glosses it here 'appetite'.",
+   "t": [
+    "thy soul",
+    "thine heart",
+    "thy soul",
+    "thy soul",
+    "thy soul",
+    "thy soul",
+    "you"
+   ]
+  },
+  "15": {
+   "s": [
+    "and you shall eat",
+    "and you shall feast",
+    "and you are to eat"
+   ],
+   "r": "The worshipper eats the feast bought with the tithe.",
+   "n": "A perfect with 'and', continuing the instruction; YLT keeps the form, 'thou hast eaten'.",
+   "t": [
+    "and thou shalt eat",
+    "and shalt eate it",
+    "and thou shalt eat",
+    "and thou shalt eat",
+    "and thou shalt eat",
+    "and thou hast eaten",
+    "You are to feast"
+   ]
+  },
+  "16": {
+   "s": [
+    "there"
+   ],
+   "r": "At the chosen place.",
+   "t": [
+    "there",
+    "there",
+    null,
+    "there",
+    "there",
+    "there",
+    "there"
+   ]
+  },
+  "17": {
+   "s": [
+    "before",
+    "in the presence of"
+   ],
+   "r": "In the LORD's presence, at his sanctuary.",
+   "t": [
+    "before",
+    "before",
+    "before",
+    "before",
+    "before",
+    "before",
+    "in the presence of"
+   ]
+  },
+  "18": {
+   "s": [
+    "the LORD",
+    "Yahweh",
+    "Jehovah",
+    "HaShem"
+   ],
+   "r": "The personal name of Israel's God.",
+   "t": [
+    "the Lord",
+    "the Lord",
+    "the Lord",
+    "HaShem",
+    "Jehovah",
+    "Jehovah",
+    "the LORD"
+   ]
+  },
+  "19": {
+   "s": [
+    "your God"
+   ],
+   "r": "Your own God.",
+   "n": "The form is plural but the meaning is singular.",
+   "t": [
+    "thy God",
+    "thy God",
+    "thy God",
+    "thy G-d",
+    "thy God",
+    "thy God",
+    "your God"
+   ]
+  },
+  "20": {
+   "s": [
+    "and you shall rejoice",
+    "and you shall be glad",
+    "and you shall celebrate"
+   ],
+   "r": "The tithe meal is a time of joy.",
+   "n": "BDB: rejoice, be glad, and it lists a religious use. The DRC says 'shalt feast'.",
+   "t": [
+    "and thou shalt rejoice",
+    "and reioyce",
+    "and shalt feast",
+    "and thou shalt rejoice",
+    "and thou shalt rejoice",
+    "and thou hast rejoiced",
+    "and rejoice"
+   ]
+  },
+  "21": {
+   "s": [
+    "you",
+    "you yourself"
+   ],
+   "r": "The worshipper, named first among those who rejoice.",
+   "n": "The pronoun is written out as a separate word, singular.",
+   "t": [
+    "thou",
+    "both thou",
+    "thou",
+    "thou",
+    "thou",
+    "thou",
+    null
+   ]
+  },
+  "22": {
+   "s": [
+    "and your household",
+    "and your house",
+    "and your family"
+   ],
+   "r": "The whole household shares the feast.",
+   "n": "Literally 'your house'; BDB notes the word used of the house as containing a family, and of the household.",
+   "t": [
+    "and thine household",
+    "and thine household",
+    "and thy house",
+    "and thy household",
+    "and thy household",
+    "and thy house",
+    "with your household"
+   ]
+  }
+ },
+ "lxx": {
+  "_extra": {
+   "0": "καὶ (and): printed twice in our Greek text; this first one has no Hebrew counterpart."
+  },
+  "01": {
+   "i": [
+    1,
+    2
+   ],
+   "m": 2,
+   "lemma": "δίδωμι",
+   "strong": "G1325",
+   "n": "Dictionary form supplied by hand: the matched data gives none. δώσεις, 'you shall give'."
+  },
+  "02": {
+   "i": [
+    3
+   ],
+   "m": 3,
+   "n": "ἀργύριον, without the article, is the word our register renders 'silver'."
+  },
+  "03": {
+   "i": [
+    4,
+    5
+   ],
+   "m": 5
+  },
+  "04": {
+   "i": [
+    6,
+    7
+   ],
+   "m": 6,
+   "n": "The second word, printed ἐόν in our Greek text, is evidently ἐὰν, 'ever': 'whatever'."
+  },
+  "05": {
+   "i": [
+    8
+   ],
+   "m": 8,
+   "n": "ἐπιθυμέω, 'desire, long for'. Our Greek text has nothing for the list that follows in the Hebrew (cattle, sheep, wine, strong drink, and all that your soul asks): it goes straight on to 'and you shall eat'."
+  },
+  "06": {
+   "i": [
+    9,
+    10,
+    11
+   ],
+   "m": 10
+  },
+  "15": {
+   "i": [
+    12,
+    13
+   ],
+   "m": 13,
+   "lemma": "ἐσθίω",
+   "strong": "G2068",
+   "n": "Dictionary form supplied by hand: the matched data gives φάγω."
+  },
+  "16": {
+   "i": [
+    14
+   ],
+   "m": 14
+  },
+  "17": {
+   "i": [
+    15
+   ],
+   "m": 15
+  },
+  "18": {
+   "i": [
+    16
+   ],
+   "m": 16
+  },
+  "19": {
+   "i": [
+    17,
+    18,
+    19
+   ],
+   "m": 18
+  },
+  "20": {
+   "i": [
+    20,
+    21
+   ],
+   "m": 21
+  },
+  "21": {
+   "i": [
+    22
+   ],
+   "m": 22
+  },
+  "22": {
+   "i": [
+    23,
+    24,
+    25,
+    26
+   ],
+   "m": 25,
+   "lemma": "οἶκος",
+   "strong": "G3624",
+   "n": "Dictionary form supplied by hand: the word is printed υἱός, 'son', in our Greek text, but the matched data gives οἶκος, 'house', which answers to the Hebrew. The first word, printed κα, is καὶ cut short."
+  }
+ }
+}

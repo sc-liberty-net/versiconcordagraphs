@@ -1,0 +1,330 @@
+{
+ "id": "dt1",
+ "en": [
+  {
+   "t": "You shall surely tithe",
+   "w": [
+    "02",
+    "01"
+   ]
+  },
+  " ",
+  {
+   "t": "all",
+   "w": [
+    "04",
+    "03"
+   ]
+  },
+  " ",
+  {
+   "t": "the produce of",
+   "w": [
+    "05"
+   ]
+  },
+  " ",
+  {
+   "t": "your seed",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "that comes out of",
+   "w": [
+    "07"
+   ]
+  },
+  " ",
+  {
+   "t": "the field",
+   "w": [
+    "08"
+   ]
+  },
+  " ",
+  {
+   "t": "year",
+   "w": [
+    "09"
+   ]
+  },
+  " ",
+  {
+   "t": "by year",
+   "w": [
+    "10"
+   ]
+  },
+  "."
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "surely",
+    "fully",
+    "without fail",
+    "be sure to"
+   ],
+   "r": "Strengthens the command: the tithe is to be given in full.",
+   "n": "The verb is doubled: an infinitive of 'tithe' stands before the finite verb, a Hebrew way of stressing it. Our 'surely' renders this first form. The Geneva and DRC do not render it.",
+   "t": [
+    "truly",
+    null,
+    null,
+    "surely",
+    "surely",
+    "certainly",
+    "be sure to"
+   ]
+  },
+  "02": {
+   "s": [
+    "you shall tithe",
+    "you shall give a tenth of",
+    "you shall set aside a tenth of"
+   ],
+   "r": "Each Israelite is to give a tenth of what his fields produce.",
+   "n": "The brief's lexicon gives this stem the sense 'to give a tithe'. Gesenius: PIEL, to give the tenth part, and he cites this verse for the thing tithed as the object. The 'you' is singular, addressed to each Israelite.",
+   "t": [
+    "Thou shalt ... tithe",
+    "Thou shalt giue the tithe of",
+    "thou shalt set aside the tithes of",
+    "Thou shalt ... tithe",
+    "Thou shalt ... tithe",
+    "Thou dost ... tithe",
+    "You must ... set aside a tenth of"
+   ]
+  },
+  "03": {
+   "s": [
+    "(object marker)"
+   ],
+   "r": "Marks what follows as the thing tithed.",
+   "n": "The object marker has no English equivalent; it is counted here with 'all'.",
+   "t": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "04": {
+   "s": [
+    "all",
+    "the whole of",
+    "every part of"
+   ],
+   "r": "None of the produce is left out.",
+   "t": [
+    "all",
+    "all",
+    "all",
+    "all",
+    "all",
+    "all",
+    "all"
+   ]
+  },
+  "05": {
+   "s": [
+    "the produce of",
+    "the yield of",
+    "the crop of",
+    "the increase of"
+   ],
+   "r": "What the land yields from what was sown.",
+   "n": "Gesenius: produce, as of the earth; BDB: product, revenue. The older English versions say 'increase'.",
+   "t": [
+    "the increase of",
+    "the increase of",
+    "thy fruits",
+    "the increase of",
+    "the increase of",
+    "the increase of",
+    "the produce"
+   ]
+  },
+  "06": {
+   "s": [
+    "your seed",
+    "your sowing",
+    "what you sow"
+   ],
+   "r": "The grain and crops you have sown.",
+   "n": "Gesenius gives the first sense as sowing, and then seed. The DRC and BSB do not render the word.",
+   "t": [
+    "thy seed",
+    "thy seede",
+    null,
+    "thy seed",
+    "thy seed",
+    "thy seed",
+    null
+   ]
+  },
+  "07": {
+   "s": [
+    "that comes out of",
+    "that comes forth from",
+    "that grows from",
+    "that is produced by"
+   ],
+   "r": "What grows up out of the field.",
+   "n": "A participle with the article, 'the one coming out'. Hebrew has no 'of' here: the field follows the verb directly. Most translations turn it round to 'that the field brings forth'.",
+   "t": [
+    "that ... bringeth forth",
+    "that commeth foorth of",
+    "that ... bringeth forth",
+    "that which is brought forth in",
+    "that which cometh forth from",
+    "which ... is bringing forth",
+    "brought forth"
+   ]
+  },
+  "08": {
+   "s": [
+    "the field",
+    "the land",
+    "the open country"
+   ],
+   "r": "The farmland that is sown.",
+   "n": "The DRC says 'the earth', the BSB 'your fields'.",
+   "t": [
+    "the field",
+    "the fielde",
+    "the earth",
+    "the field",
+    "the field",
+    "the field",
+    "your fields"
+   ]
+  },
+  "09": {
+   "s": [
+    "year",
+    "every year",
+    "each year"
+   ],
+   "r": "The tithe is due every year.",
+   "n": "Gesenius cites this verse for the doubled form 'year year', meaning yearly.",
+   "t": [
+    "year",
+    "yeere",
+    "Every year",
+    "year",
+    "year",
+    "year",
+    "each year"
+   ]
+  },
+  "10": {
+   "s": [
+    "by year",
+    "after year"
+   ],
+   "r": "Completes 'year by year'.",
+   "n": "Hebrew simply repeats the word, 'year year'; English needs 'by'.",
+   "t": [
+    "by year",
+    "by yeere",
+    null,
+    "by year",
+    "by year",
+    "by year",
+    null
+   ]
+  }
+ },
+ "lxx": {
+  "01": {
+   "i": [
+    0
+   ],
+   "m": 0,
+   "lemma": "δεκάτη",
+   "strong": "G1181",
+   "n": "Dictionary form supplied by hand: the matched data gives none. The Greek renders the doubled verb as 'a tenth you shall tithe', using δεκάτη, the word our register renders 'tenth'."
+  },
+  "02": {
+   "i": [
+    1
+   ],
+   "m": 1,
+   "lemma": "ἀποδεκατόω",
+   "strong": "G0586",
+   "n": "Dictionary form supplied by hand: the matched data gives none. ἀποδεκατόω, 'tithe, take a tenth', the verb used for tithing in the New Testament."
+  },
+  "04": {
+   "i": [
+    2
+   ],
+   "m": 2
+  },
+  "05": {
+   "i": [
+    3
+   ],
+   "m": 3,
+   "lemma": "γένημα",
+   "strong": "G1081",
+   "n": "Dictionary form supplied by hand: the matched data gives θνησιμαῖος, which is wrong here. γένημα means produce."
+  },
+  "06": {
+   "i": [
+    4,
+    5,
+    6
+   ],
+   "m": 5,
+   "lemma": "σπέρμα",
+   "strong": "G4690",
+   "n": "Dictionary form supplied by hand: the matched data gives none."
+  },
+  "07": {
+   "i": [
+    7,
+    8
+   ],
+   "m": 8,
+   "lemma": "γένημα",
+   "strong": "G1081",
+   "n": "Dictionary form supplied by hand: the matched data gives none. The Greek says 'the produce of your field' where the Hebrew says 'that comes out of the field'."
+  },
+  "08": {
+   "i": [
+    9,
+    10,
+    11
+   ],
+   "m": 10,
+   "lemma": "ἀγρός",
+   "strong": "G0068",
+   "n": "Dictionary form supplied by hand: the matched data gives none. The Greek adds 'your'."
+  },
+  "09": {
+   "i": [
+    12
+   ],
+   "m": 12,
+   "lemma": "ἐνιαυτός",
+   "strong": "G1763",
+   "n": "Dictionary form supplied by hand: the matched data gives ἐν, which is wrong here."
+  },
+  "10": {
+   "i": [
+    13,
+    14
+   ],
+   "m": 14,
+   "lemma": "ἐνιαυτός",
+   "strong": "G1763",
+   "n": "Dictionary form supplied by hand: the matched data gives αὐτός, which is wrong here. ἐνιαυτὸν κατ’ ἐνιαυτόν, 'year by year'."
+  }
+ }
+}

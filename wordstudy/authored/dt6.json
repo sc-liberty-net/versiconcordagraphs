@@ -1,0 +1,344 @@
+{
+ "id": "dt6",
+ "en": [
+  {
+   "t": "And the Levite",
+   "w": [
+    "01"
+   ]
+  },
+  " ",
+  {
+   "t": "who",
+   "w": [
+    "02"
+   ]
+  },
+  " ",
+  {
+   "t": "is in your gates",
+   "w": [
+    "03"
+   ]
+  },
+  ", ",
+  {
+   "t": "you shall not forsake him",
+   "w": [
+    "05",
+    "04"
+   ]
+  },
+  ", ",
+  {
+   "t": "because",
+   "w": [
+    "06"
+   ]
+  },
+  " ",
+  {
+   "t": "he has",
+   "w": [
+    "08"
+   ]
+  },
+  " ",
+  {
+   "t": "no",
+   "w": [
+    "07"
+   ]
+  },
+  " ",
+  {
+   "t": "portion",
+   "w": [
+    "09"
+   ]
+  },
+  " ",
+  {
+   "t": "and inheritance",
+   "w": [
+    "10"
+   ]
+  },
+  " ",
+  {
+   "t": "with you",
+   "w": [
+    "11"
+   ]
+  },
+  "."
+ ],
+ "words": {
+  "01": {
+   "s": [
+    "and the Levite",
+    "and the Levites",
+    "as for the Levite"
+   ],
+   "r": "A member of the tribe of Levi, set apart for the sanctuary.",
+   "n": "BDB notes that with the article the word can stand as a collective, for Levites as a class. The Levite is named first, ahead of the verb, to put him in focus; YLT says 'As to the Levite'.",
+   "t": [
+    "And the Levite",
+    "And the Leuite",
+    "And the Levite",
+    "And the Levite",
+    "And the Levite",
+    "As to the Levite",
+    "And ... the Levite"
+   ]
+  },
+  "02": {
+   "s": [
+    "who",
+    "that"
+   ],
+   "r": "Introduces where the Levite lives.",
+   "t": [
+    "that",
+    "that",
+    "that",
+    "that",
+    "that",
+    "who",
+    null
+   ]
+  },
+  "03": {
+   "s": [
+    "is in your gates",
+    "is within your gates",
+    "lives in your towns"
+   ],
+   "r": "Living in your town.",
+   "n": "Hebrew has no 'is' here; the clause is verbless. The brief's lexicon notes that 'gate' can stand for the space inside the gate, and so for the city or town.",
+   "t": [
+    "is within thy gates",
+    "is within thy gates",
+    "is within thy gates",
+    "is within thy gates",
+    "is within thy gates",
+    "is within thy gates",
+    "within your gates"
+   ]
+  },
+  "04": {
+   "s": [
+    "not",
+    "do not"
+   ],
+   "r": "Forbids leaving the Levite out.",
+   "n": "'Not' with the imperfect: a lasting prohibition.",
+   "t": [
+    "not",
+    "not",
+    "not",
+    "not",
+    "not",
+    "not",
+    "do not"
+   ]
+  },
+  "05": {
+   "s": [
+    "forsake him",
+    "abandon him",
+    "neglect him",
+    "leave him out"
+   ],
+   "r": "Do not leave the Levite without a share in the tithe feast.",
+   "n": "The brief's lexicon gives leave, abandon, forsake, neglect; STEP glosses this occurrence 'neglect', as the BSB does. The 'him' is a suffix on the verb.",
+   "t": [
+    "thou shalt ... forsake him",
+    "shalt thou ... forsake",
+    "beware thou forsake him",
+    "thou shalt ... forsake him",
+    "thou shalt ... forsake him",
+    "thou dost ... forsake him",
+    "neglect"
+   ]
+  },
+  "06": {
+   "s": [
+    "because",
+    "for",
+    "since"
+   ],
+   "r": "Gives the reason the Levite must not be left out.",
+   "t": [
+    "for",
+    "for",
+    "because",
+    "for",
+    "for",
+    "for",
+    "since"
+   ]
+  },
+  "07": {
+   "s": [
+    "no",
+    "not",
+    "there is not"
+   ],
+   "r": "Denies that he holds any share of land.",
+   "n": "Gesenius gives the word's base sense as nothing, emptiness, and notes that it often includes the verb 'to be': 'there is not'.",
+   "t": [
+    "no",
+    "neither",
+    "no other",
+    "no",
+    "no",
+    "no",
+    "no"
+   ]
+  },
+  "08": {
+   "s": [
+    "he has",
+    "to him",
+    "belonging to him"
+   ],
+   "r": "Marks the Levite as the one who lacks the share.",
+   "n": "Literally 'there is not to him a portion': Hebrew has no verb 'have' and uses 'to' with the owner instead.",
+   "t": [
+    "he hath",
+    "he hath",
+    "he hath",
+    "he hath",
+    "he hath",
+    "he hath",
+    "he has"
+   ]
+  },
+  "09": {
+   "s": [
+    "portion",
+    "share",
+    "part",
+    "allotment"
+   ],
+   "r": "A share of the land, such as the other tribes received.",
+   "n": "The brief's lexicon lists portion, share, and a tract or parcel of land; BDB gives portion, tract, territory.",
+   "t": [
+    "part",
+    "part",
+    "part",
+    "portion",
+    "portion",
+    "portion",
+    "portion"
+   ]
+  },
+  "10": {
+   "s": [
+    "inheritance",
+    "possession",
+    "heritage"
+   ],
+   "r": "Land held by a family and passed down within it.",
+   "n": "Gesenius gives the first sense as taking possession, occupation; the brief's lexicon gives possession, property, inheritance, heritage. The DRC says 'possession'.",
+   "t": [
+    "nor inheritance",
+    "nor inheritance",
+    "possession",
+    "nor inheritance",
+    "nor inheritance",
+    "and inheritance",
+    "or inheritance"
+   ]
+  },
+  "11": {
+   "s": [
+    "with you",
+    "among you",
+    "alongside you"
+   ],
+   "r": "Alongside the landholding Israelite addressed by the law.",
+   "n": "The 'you' is singular, as through the whole verse. The DRC reads 'in thy possession'.",
+   "t": [
+    "with thee",
+    "with thee",
+    "in thy",
+    "with thee",
+    "with thee",
+    "with thee",
+    "among you"
+   ]
+  }
+ },
+ "lxx": {
+  "01": {
+   "i": [
+    0,
+    1,
+    2
+   ],
+   "m": 2,
+   "n": "Our Greek text has nothing for the Hebrew's 'you shall not forsake him'."
+  },
+  "02": {
+   "i": [
+    3
+   ],
+   "m": 3,
+   "n": "The Greek uses the article, 'the one in your cities', where the Hebrew has 'who'."
+  },
+  "03": {
+   "i": [
+    4,
+    5,
+    6,
+    7
+   ],
+   "m": 6,
+   "n": "The Greek says 'in your cities' for 'in your gates'."
+  },
+  "06": {
+   "i": [
+    8
+   ],
+   "m": 8
+  },
+  "07": {
+   "i": [
+    9,
+    10
+   ],
+   "m": 9,
+   "n": "οὐκ ἔστιν, 'there is not', matches the Hebrew idiom exactly."
+  },
+  "08": {
+   "i": [
+    11
+   ],
+   "m": 11
+  },
+  "09": {
+   "i": [
+    12
+   ],
+   "m": 12,
+   "n": "μερίς is the word our register renders 'portion'."
+  },
+  "10": {
+   "i": [
+    13,
+    14
+   ],
+   "m": 14,
+   "n": "κλῆρος means a lot, and so a share assigned by lot."
+  },
+  "11": {
+   "i": [
+    15,
+    16
+   ],
+   "m": 15
+  }
+ }
+}

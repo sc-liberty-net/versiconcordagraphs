@@ -1,0 +1,53 @@
+{
+ "id": "kg3",
+ "en": [
+  {"t": "And your fields", "w": ["02", "01"]}, " ",
+  {"t": "and your vineyards", "w": ["04", "03"]}, " ",
+  {"t": "and your olive groves", "w": ["05"]}, ", ",
+  {"t": "the best", "w": ["06"]}, ", ",
+  {"t": "he will take", "w": ["07"]}, ", ",
+  {"t": "and give", "w": ["08"]}, " ",
+  {"t": "to his servants", "w": ["09"]}, "."
+ ],
+ "words": {
+  "01": {"s": ["and", "and also"], "r": "Joins this verse to the list of what the king will take; the object marker points to 'your fields'.",
+         "n": "The Hebrew is 'and' with the small word that marks a definite direct object, which has no English equivalent; both are counted here with 'your fields'.",
+         "t": ["And", "And", "And", "And", "And", "and", null]},
+  "02": {"s": ["your fields", "your farmland", "your land"], "r": "The ploughed land of each family.",
+         "n": "Gesenius gives the first sense as a plain, a level tract, and then a field. The list stands first, before its verb, so the stress falls on what is taken.",
+         "t": ["your fields", "your fieldes", "your fields", "your fields", "your fields", "your fields", "your fields"]},
+  "03": {"s": ["and"], "r": "Adds the next item; the object marker again points to it.",
+         "n": "'And' with the object marker, as before 'your fields'.",
+         "t": ["and", "and", "and", "and", "and", "and", "and"]},
+  "04": {"s": ["your vineyards"], "r": "The vines each family tends.",
+         "n": "Gesenius gives the first sense as a field set with plants of nobler quality, cultivated as a garden or orchard, and notes the phrase 'a vineyard of olives' for an olive yard.",
+         "t": ["your vineyards", "your vineyardes", "your vineyards", "your vineyards", "your vineyards", "your vineyards", "vineyards"]},
+  "05": {"s": ["your olive groves", "your olive trees", "your oliveyards"], "r": "The olive trees that give each family its oil.",
+         "n": "The Hebrew says simply 'your olives'; BDB: olive tree, olive. The Geneva says 'Oliue trees'.",
+         "t": ["and your oliveyards", "and your ... Oliue trees", "and your ... oliveyards", "and your oliveyards", "and your oliveyards", "and your olive-yards", "and olive groves"]},
+  "06": {"s": ["the best", "the good ones", "the finest", "the choicest"], "r": "The king takes the best land, not the poorest.",
+         "n": "Literally 'the good ones'; Gesenius notes the physical sense, good as in fertile land. It may describe all three items or only the olives: the KJV reads all three ('even the best of them'), the Geneva and DRC only the olives.",
+         "t": ["even the best of them", "best", "best", "even the best of them", "even the best of them", "the best", "the best of"]},
+  "07": {"s": ["he will take", "he will seize", "he will confiscate"], "r": "The king will take the land from its owners.",
+         "n": "The same common verb for 'take' that runs through Samuel's list.",
+         "t": ["he will take", "he will take", "he will take", "he will take", "he will take", "he doth take", "He will take"]},
+  "08": {"s": ["and give", "and hand over", "and grant"], "r": "He passes the land on to his own men.",
+         "n": "A perfect with 'and', carrying on the future before it; YLT renders it literally, 'hath given'. Gesenius: to give, followed by 'to' of the person. The Hebrew gives no object; most translations add 'them'.",
+         "t": ["and give them", "and giue them", "and give them", "and give them", "and give them", "and hath given", "and give them"]},
+  "09": {"s": ["servants", "officials", "courtiers", "slaves"], "r": "The king's men who serve him at court.",
+         "n": "The word means a slave or servant; Gesenius notes that it is applied to the servants of a king, that is, his ministers. Here the context is royal service, so 'servants' rather than 'slaves'.",
+         "t": ["to his servants", "to his seruants", "to his servants", "to his servants", "to his servants", "to his servants", "to his servants"]}
+ },
+ "lxx": {
+  "_extra": {"7": "ἃς: a feminine relative pronoun where the article τοὺς would be expected; likely a slip in the text as given, with nothing in the Hebrew answering to it."},
+  "01": {"i": [0, 1], "m": 0},
+  "02": {"i": [2, 3], "m": 2, "n": "ἀγρός, field."},
+  "03": {"i": [4, 5], "m": 4},
+  "04": {"i": [6, 8], "m": 6, "n": "ἀμπελών, vineyard."},
+  "05": {"i": [9, 10, 11, 12], "m": 11, "n": "ἐλαιών, olive grove."},
+  "06": {"i": [13, 14], "m": 14, "n": "ἀγαθός, good."},
+  "07": {"i": [15], "m": 15},
+  "08": {"i": [16, 17], "m": 17},
+  "09": {"i": [18, 19, 20], "m": 19, "n": "δοῦλος, slave."}
+ }
+}
