@@ -119,3 +119,8 @@ source: C:\Users\ethan\AppData\Local\Temp/claude/C--Users-ethan-Desktop-Biblogra
 cause: Bottom-sheet tap leak, 13 Oct: two taps on the sheet handle opened a word's study, because the handle snapped away before the tap's click fired. Fixed in 6e0b788 (taps act on click). New line reads True on e384610 (the leaking version) and False now.
 moved: 0 changed, 1 new, 0 gone (0 allowed, not counted)
 source: C:\Users\ethan\AppData\Local\Temp/claude/C--Users-ethan-Desktop-Biblography/4247ac7d-27d5-45cb-9f65-2e89e9d758c8/scratchpad/new9.out -> smoke-baseline.out
+
+## 2026-10-14 - baseline refreshed: smoke-baseline.out
+cause: Ethan's A4 (group names), 14 Oct: group rows lose their hover text by design (20 -> 0; it showed only after a still pointer and never on a phone, and the panel shows a group's note on click). The name shows 'Show ->' on hover and focus, and the selected group's row is marked. The groups fold away on phones (closed by default), open on desktop. Three new lines, which read NONE / 0 / NONE on the previous page.
+moved: 1 changed, 3 new, 0 gone (0 allowed, not counted)
+source: C:\Users\ethan\AppData\Local\Temp/claude/C--Users-ethan-Desktop-Biblography/4247ac7d-27d5-45cb-9f65-2e89e9d758c8/scratchpad/new10.out -> smoke-baseline.out

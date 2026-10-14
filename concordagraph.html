@@ -87,6 +87,26 @@ h1{font-family:Spectral,Georgia,serif; font-weight:600; font-size:26px; margin:0
 .gname{cursor:pointer; border-bottom:1px dotted var(--line)}
 .gname:hover{color:var(--ink); border-bottom-color:var(--ink-3)}
 .gname:focus-visible{outline:2px solid var(--focus); outline-offset:2px; border-radius:2px}
+/* The name selects the group; the tick box only hides or shows it. Say so on
+   hover and focus, and keep the selected group's row marked (A4, 14 Oct). */
+/* Out of the text flow, so names do not wrap to make room for it: it floats
+   at the row's right edge, over the count, only while shown. */
+#clusters .row{position:relative}
+.gname::after{content:'Show \2192'; position:absolute; right:0; top:50%; transform:translateY(-50%);
+  padding:0 4px; background:var(--surface); white-space:nowrap; pointer-events:none;
+  font-size:11.5px; font-weight:500; color:var(--ink-2); opacity:0; transition:opacity .12s}
+#clusters .row.picked .gname::after{background:var(--sunk)}
+#clusters .row:hover .gname::after, .gname:focus-visible::after{opacity:1}
+#clusters .row.picked{background:var(--sunk); border-radius:6px; box-shadow:-6px 0 0 var(--sunk), 6px 0 0 var(--sunk)}
+#clusters .row.picked .gname{color:var(--ink); font-weight:600; border-bottom-color:transparent}
+.grpfold > summary{display:flex; align-items:baseline; gap:6px; cursor:pointer; list-style:none; margin:0 0 9px}
+.grpfold > summary::-webkit-details-marker{display:none}
+.grpfold > summary h2{margin:0}
+.grpfold > summary::after{content:'\25BE'; margin-left:auto; color:var(--ink-3); font-size:12px}
+.grpfold:not([open]) > summary::after{content:'\25B8'}
+.gcount{font-size:12px; color:var(--ink-3); font-variant-numeric:tabular-nums}
+.grpfold > summary:focus-visible{outline:2px solid var(--focus); outline-offset:2px; border-radius:3px}
+@media (prefers-reduced-motion:reduce){ .gname::after{transition:none} }
 
 .main{display:flex; flex:1; min-height:0}
 .rail{width:236px; flex:none; border-right:1px solid var(--line); overflow-y:auto; padding:16px 16px 40px; background:var(--surface)}
@@ -374,14 +394,16 @@ path.edge.ehov{opacity:1; stroke-width:3; stroke-opacity:1}
       <h2>Find A Passage</h2>
       <input type="search" id="q" placeholder="Matthew 22, tithe, widow…" autocomplete="off">
     </div>
-    <div class="grp">
-      <h2>Groups</h2>
+    <!-- Folds away on phones, closed by default there (Ethan's A4, 14 Oct), so the
+         graph is not twenty rows down the page. Open on desktop. -->
+    <details class="grp grpfold" id="grpGroups" open>
+      <summary><h2>Groups</h2><span class="gcount" id="gcount"></span></summary>
       <div class="bulk">
         <button type="button" id="clAll">Select All</button>
         <button type="button" id="clNone">Clear</button>
       </div>
       <div id="clusters"></div>
-    </div>
+    </details>
     <div class="grp">
       <h2>How Strong Is The Link</h2>
       <div id="warrants"></div>
@@ -1539,6 +1561,7 @@ function titleCase(s){
 const clusterFocus = Object.fromEntries(
   Object.keys(CL).map(k => [k, {kind:'cluster', cl:k}]));
 
+const clusterRows = {};   // group key -> its row, so draw() can mark the selected one
 function build(host, map, set, kind){
   Object.entries(map).forEach(([k,o])=>{
     const lab=document.createElement('label'); lab.className='row'; lab.tabIndex=0;
@@ -1549,14 +1572,17 @@ function build(host, map, set, kind){
     else { mark.className='swatch'; mark.style.borderTopColor='var(--ink-3)';
            if(o.dash) mark.style.borderTopStyle = o.dash==='7 4' ? 'dashed' : 'dotted'; }
     const txt=document.createElement('span'); txt.textContent=titleCase(o.name);
-    // Until now the rail named eighteen groups and explained none of them.
-    if(o.note) lab.title = o.name + ' \u2014 ' + o.note;
+    // Groups no longer carry hover text (A4, 14 Oct): it appeared only after a
+    // still pointer and never on a phone, and the panel shows a group's note
+    // once its name is clicked. The other filters keep theirs.
+    if(o.note && kind!=='cl') lab.title = o.name + ' \u2014 ' + o.note;
     if(kind==='cl'){
       // The row is a <label>, so any click inside it toggles the checkbox.
       // The NAME has to do something else - select the group and show its
       // passages - so it stops the event before the label sees it.
       txt.className='gname'; txt.tabIndex=0; txt.setAttribute('role','button');
-      txt.title='Show the passages in ' + o.name;
+      txt.setAttribute('aria-label','Show the passages in ' + titleCase(o.name));
+      clusterRows[k] = lab;
       const pick=ev=>{ ev.preventDefault(); ev.stopPropagation();
                        select(clusterFocus[k]); };
       txt.addEventListener('click',pick);
@@ -1572,6 +1598,8 @@ function build(host, map, set, kind){
   });
 }
 build(document.getElementById('clusters'),CL,onCl,'cl');
+document.getElementById('gcount').textContent = '(' + Object.keys(CL).length + ')';
+if(matchMedia('(max-width:767px)').matches) document.getElementById('grpGroups').removeAttribute('open');
 (function bulkGroups(){
   const setAll = on => {
     document.querySelectorAll('#clusters input[type=checkbox]').forEach(c=>{
@@ -1732,6 +1760,7 @@ function motifIds(){
 function draw(){
   const f=focused(), near=litNodes(f);
   const mo=motifIds();
+  for(const k in clusterRows) clusterRows[k].classList.toggle('picked', isCluster(picked) && picked.cl===k);
   nodes.forEach(n=>{
     const ok=matches(n);
     n.el.classList.toggle('hide',!ok);

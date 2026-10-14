@@ -328,6 +328,15 @@ try:
         if pick(gr, 'rows') in (0, 'MISSING') or pick(gr, 'tickUnchanged') is not True:
             fatal.append('clicking a group name did not show its passages cleanly')
 
+        # --- the selected group's row is marked; groups start open on desktop -
+        P('groups fold open on desktop', ev(page,
+            '() => { const d = document.getElementById("grpGroups"); return d ? d.open : "NONE"; }'))
+        P('selected group row marked', ev(page, '''() => {
+            select(clusterFocus.anchor);
+            const n = document.querySelectorAll('#clusters .row.picked').length;
+            select(clusterFocus.anchor);
+            return n; }'''))
+
         # --- hovering an arc keeps a selection lit (Ethan, 13 Oct) -------------
         # With a group selected, reaching for its arcs crossed others, and each
         # one swapped the group's highlight for its own two ends. A real pointer,
@@ -439,6 +448,8 @@ try:
                     }''')
                     for k in ('turned', 'taller', 'zoom', 'labels'):
                         P('phone graph %s' % k, pick(tg, k))
+                    P('phone groups folded', ev(wp,
+                        '() => { const d = document.getElementById("grpGroups"); return d ? !d.open : "NONE"; }'))
                     # the motif explanation, by tap: a title attribute never showed on a phone
                     try:
                         wp.locator('#mlabel').tap(timeout=5000)
