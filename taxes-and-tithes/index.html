@@ -87,6 +87,26 @@ h1{font-family:Spectral,Georgia,serif; font-weight:600; font-size:26px; margin:0
 .gname{cursor:pointer; border-bottom:1px dotted var(--line)}
 .gname:hover{color:var(--ink); border-bottom-color:var(--ink-3)}
 .gname:focus-visible{outline:2px solid var(--focus); outline-offset:2px; border-radius:2px}
+/* The name selects the group; the tick box only hides or shows it. Say so on
+   hover and focus, and keep the selected group's row marked (A4, 14 Oct). */
+/* Out of the text flow, so names do not wrap to make room for it: it floats
+   at the row's right edge, over the count, only while shown. */
+#clusters .row{position:relative}
+.gname::after{content:'Show \2192'; position:absolute; right:0; top:50%; transform:translateY(-50%);
+  padding:0 4px; background:var(--surface); white-space:nowrap; pointer-events:none;
+  font-size:11.5px; font-weight:500; color:var(--ink-2); opacity:0; transition:opacity .12s}
+#clusters .row.picked .gname::after{background:var(--sunk)}
+#clusters .row:hover .gname::after, .gname:focus-visible::after{opacity:1}
+#clusters .row.picked{background:var(--sunk); border-radius:6px; box-shadow:-6px 0 0 var(--sunk), 6px 0 0 var(--sunk)}
+#clusters .row.picked .gname{color:var(--ink); font-weight:600; border-bottom-color:transparent}
+.grpfold > summary{display:flex; align-items:baseline; gap:6px; cursor:pointer; list-style:none; margin:0 0 9px}
+.grpfold > summary::-webkit-details-marker{display:none}
+.grpfold > summary h2{margin:0}
+.grpfold > summary::after{content:'\25BE'; margin-left:auto; color:var(--ink-3); font-size:12px}
+.grpfold:not([open]) > summary::after{content:'\25B8'}
+.gcount{font-size:12px; color:var(--ink-3); font-variant-numeric:tabular-nums}
+.grpfold > summary:focus-visible{outline:2px solid var(--focus); outline-offset:2px; border-radius:3px}
+@media (prefers-reduced-motion:reduce){ .gname::after{transition:none} }
 
 .main{display:flex; flex:1; min-height:0}
 .rail{width:236px; flex:none; border-right:1px solid var(--line); overflow-y:auto; padding:16px 16px 40px; background:var(--surface)}
@@ -95,9 +115,12 @@ h1{font-family:Spectral,Georgia,serif; font-weight:600; font-size:26px; margin:0
 svg#net{display:block; width:100%; height:100%; touch-action:none; cursor:grab}
 svg#net.drag{cursor:grabbing}
 .panel{
-  width:320px; flex:none; border-left:1px solid var(--line); background:var(--surface);
+  /* Grows with the window (Ethan's C2, 13 Oct): 320px was cramped for the word
+     study while the graph beside it had room to spare. */
+  width:clamp(320px, 28vw, 440px); flex:none; border-left:1px solid var(--line); background:var(--surface);
   overflow-y:auto; padding:18px 18px 44px;
 }
+.sheetbar{display:none}
 .grp{margin-bottom:20px}
 .grp h2{font-family:Archivo; font-size:12px; font-weight:600; letter-spacing:.04em; color:var(--ink-3); margin:0 0 9px; text-transform:none}
 input[type=search]{
@@ -188,7 +211,8 @@ button.reset:hover{background:var(--sunk)}
 .seg button:last-child{border-right:0}
 .seg button[aria-pressed="true"]{background:var(--ink-2); color:var(--surface)}
 .hint{font-size:12.5px; color:var(--ink-3); line-height:1.45; margin:8px 0 0}
-.booklab{font-family:Archivo,sans-serif; font-size:10.5px; fill:var(--ink-2)}
+.booklab{font-family:Archivo,sans-serif; font-size:11.5px; fill:var(--ink-2)}
+.booklab.thin:not(.sel){display:none}
 .tick{stroke:var(--line); stroke-width:1}
 .era{stroke:var(--ink-3); stroke-width:1; stroke-dasharray:3 4}
 .eralab{font-family:Archivo,sans-serif; font-size:34px; font-weight:600; letter-spacing:.02em; fill:var(--ink-2)}.node text{font-family:Spectral,Georgia,serif; font-size:11.5px; fill:var(--ink); pointer-events:auto; cursor:pointer}
@@ -258,6 +282,41 @@ path.edge.ehov{opacity:1; stroke-width:3; stroke-opacity:1}
   .panel{width:auto; border-left:0; border-top:1px solid var(--line)}
   .stage{height:62vh; flex:none}
 }
+/* Phones: the graph is turned to run down the screen, so give it more height. */
+@media (max-width:767px){
+  .stage{height:80vh}
+  /* The panel is a bottom sheet (Ethan's C2, 13 Oct): selecting something
+     slides it up over the lower half, the graph still in view above it. The
+     handle switches half and full; Close (or Escape) clears the selection. */
+  .panel{
+    position:fixed; left:0; right:0; bottom:0; z-index:15; width:auto;
+    height:55vh; max-height:none; padding:0 18px 32px;
+    border:0; border-top:1px solid var(--line); border-radius:16px 16px 0 0;
+    box-shadow:0 -8px 28px rgba(0,0,0,.18);
+    transform:translateY(105%); transition:transform .3s cubic-bezier(.16,1,.3,1);   /* half/full snaps: animating height thrashes layout */
+  }
+  .panel.open{transform:none}
+  .panel.full{height:88vh}
+  /* Room to scroll the graph up above the open sheet. .wrap grows with its
+     content here: at its desktop height of 100% the content overflowed it, and
+     a spacer after it landed inside that overflow instead of below it. */
+  .wrap{height:auto}
+  body.sheet-open::after{content:''; display:block; height:55vh}
+  .sheetbar{
+    display:flex; align-items:center; justify-content:space-between; gap:12px;
+    position:sticky; top:0; z-index:1; margin:0 -18px 12px; padding:6px 12px 6px 18px;
+    background:var(--surface); border-bottom:1px solid var(--line); touch-action:none;
+  }
+  .sheetbar .grab{
+    flex:1; height:30px; border:0; background:none; cursor:grab; display:grid; place-items:center;
+  }
+  .sheetbar .grab::before{content:''; width:44px; height:5px; border-radius:3px; background:var(--line)}
+  .sheetbar .sheetx{
+    flex:none; padding:5px 13px; border:1px solid var(--line); border-radius:99px;
+    background:var(--paper); color:var(--ink-2); font:inherit; font-size:13px; cursor:pointer;
+  }
+}
+@media (max-width:767px) and (prefers-reduced-motion:reduce){ .panel{transition:none} }
 </style>
 </head>
 <body>
@@ -335,14 +394,16 @@ path.edge.ehov{opacity:1; stroke-width:3; stroke-opacity:1}
       <h2>Find A Passage</h2>
       <input type="search" id="q" placeholder="Matthew 22, tithe, widow…" autocomplete="off">
     </div>
-    <div class="grp">
-      <h2>Groups</h2>
+    <!-- Folds away on phones, closed by default there (Ethan's A4, 14 Oct), so the
+         graph is not twenty rows down the page. Open on desktop. -->
+    <details class="grp grpfold" id="grpGroups" open>
+      <summary><h2>Groups</h2><span class="gcount" id="gcount"></span></summary>
       <div class="bulk">
         <button type="button" id="clAll">Select All</button>
         <button type="button" id="clNone">Clear</button>
       </div>
       <div id="clusters"></div>
-    </div>
+    </details>
     <div class="grp">
       <h2>How Strong Is The Link</h2>
       <div id="warrants"></div>
@@ -1216,30 +1277,48 @@ nodes.forEach(n=>{
   n.el=g; n.circle=c; n.label=t; gNode.append(g);
 });
 
+// ---- orientation -----------------------------------------------------------
+// On a phone (narrower than 768px) the whole arc diagram is turned 90 degrees
+// clockwise (Ethan, 13 Oct): Genesis at the top, the books running down the
+// screen, arcs bulging to the right, text kept upright. The canon's long axis
+// then lies along the phone's long side, and you scroll down through the
+// Bible. rot() maps the horizontal layout onto the turned one, and arcs are
+// squeezed sideways so the longest still fit the phone's width. Turning the
+// phone to landscape (768px or wider) puts it back.
+const VERT_MQ = matchMedia('(max-width: 767px)');
+let VERT = VERT_MQ.matches;
+const ARC_SQUEEZE_V = 0.55;
+const rot = (x,y) => VERT ? [BASE_Y-y, x] : [x, y];
+function axisLine(cls, x1, y1, x2, y2){
+  const l=document.createElementNS(NS,'line'), [a,b]=rot(x1,y1), [c,d]=rot(x2,y2);
+  l.setAttribute('x1',a); l.setAttribute('y1',b); l.setAttribute('x2',c); l.setAttribute('y2',d);
+  l.setAttribute('class',cls); gAxis.append(l); return l;
+}
+
 // ---- book axis, drawn only in canonical mode -------------------------------
 const bookLabels = {};
 // One stable focus object per book. Selection toggles by identity, so a fresh
-// {kind:'book'} per event would make a second click fail to deselect.
+// {kind:'book'} per event would make a second click fail to deselect. Kept
+// across a rebuild of the axis for the same reason.
 const bookFocus = {};
-(function buildAxis(){
-  const spine=document.createElementNS(NS,'line');
-  spine.setAttribute('x1',X0-14); spine.setAttribute('y1',BASE_Y);
-  spine.setAttribute('x2',X1+14); spine.setAttribute('y2',BASE_Y);
-  spine.setAttribute('class','tick'); gAxis.append(spine);
+function buildAxis(){
+  gAxis.replaceChildren();
+  const apex = MAX_APEX * (VERT ? ARC_SQUEEZE_V : 1);
+  axisLine('tick', X0-14, BASE_Y, X1+14, BASE_Y);
   const groups={};
   canon.forEach(n=>{ (groups[n.book] ||= []).push(n.ax); });
   BOOKS.forEach(b=>{
     const xs=groups[b]; if(!xs) return;
     const lo=Math.min(...xs), hi=Math.max(...xs), mid=(lo+hi)/2;
-    const tk=document.createElementNS(NS,'line');
-    tk.setAttribute('x1',lo-5); tk.setAttribute('y1',BASE_Y+78);
-    tk.setAttribute('x2',hi+5); tk.setAttribute('y2',BASE_Y+78);
-    tk.setAttribute('class','tick'); gAxis.append(tk);
+    axisLine('tick', lo-5, BASE_Y+78, hi+5, BASE_Y+78);
     const lb=document.createElementNS(NS,'text');
     lb.setAttribute('class','booklab');
-    lb.setAttribute('transform',`translate(${mid},${BASE_Y+89}) rotate(-45)`);
+    const [px,py]=rot(mid, BASE_Y+89);
+    lb.dataset.x=px; lb.dataset.y=py;   // apply() places it, at screen size
+    lb.dataset.s=mid;                   // where it sits along the spine, for thinning
+    lb.setAttribute('transform',`translate(${px},${py})`);
     lb.setAttribute('text-anchor','end'); lb.textContent=ABBR[b];
-    const bf = bookFocus[b] = {kind:'book', book:b};
+    const bf = bookFocus[b] ||= {kind:'book', book:b};
     lb.addEventListener('pointerenter',()=>hover(bf));
     lb.addEventListener('pointerleave',()=>hover(null));
     lb.addEventListener('click',()=>select(bf));
@@ -1256,41 +1335,47 @@ const bookFocus = {};
   if(first){
     const prev=canon[canon.indexOf(first)-1];
     const x=prev ? (prev.ax+first.ax)/2 : first.ax-8;
-    const sep=document.createElementNS(NS,'line');
-    sep.setAttribute('x1',x); sep.setAttribute('y1',BASE_Y-MAX_APEX-24);
-    sep.setAttribute('x2',x); sep.setAttribute('y2',BASE_Y+81);
-    sep.setAttribute('class','era'); gAxis.append(sep);
+    axisLine('era', x, BASE_Y-apex-24, x, BASE_Y+81);
     const el=document.createElementNS(NS,'text');
-    el.setAttribute('class','eralab'); el.setAttribute('x',x+6);
-    el.setAttribute('y',BASE_Y-MAX_APEX-24); el.textContent='New Testament begins';
+    el.setAttribute('class','eralab');
+    // Horizontal: beside the top of the divider. Turned: above its right-hand end.
+    const [ex,ey]=VERT ? rot(x-10, BASE_Y-apex-24) : rot(x+6, BASE_Y-apex-24);
+    el.setAttribute('x',ex); el.setAttribute('y',ey);
+    if(VERT) el.setAttribute('text-anchor','end');
+    el.textContent='New Testament begins';
     gAxis.append(el);
   }
-  gAxis.style.display='none';
-})();
+}
+buildAxis();
+gAxis.style.display='none';
 
 // ---- placement -------------------------------------------------------------
 let mode='canon';
 
 function place(arcs){
   nodes.forEach(n=>{
-    n.circle.setAttribute('cx',n.x); n.circle.setAttribute('cy',n.y);
+    const [px,py]=rot(n.x,n.y);
+    n.circle.setAttribute('cx',px); n.circle.setAttribute('cy',py);
     if(arcs){
       n.label.setAttribute('x',0); n.label.setAttribute('y',0);
-      n.label.setAttribute('transform',`translate(${n.x},${n.y+n.r+7}) rotate(-90)`);
+      // Below the dot, reading downward; turned, to the left of it, upright.
+      n.label.setAttribute('transform', VERT ? `translate(${px-n.r-7},${py+3.5})`
+                                             : `translate(${px},${py+n.r+7}) rotate(-90)`);
       n.label.setAttribute('text-anchor','end');
     } else {
       n.label.removeAttribute('transform'); n.label.removeAttribute('text-anchor');
-      n.label.setAttribute('x',n.x+n.r+4); n.label.setAttribute('y',n.y+3.5);
+      n.label.setAttribute('x',px+n.r+4); n.label.setAttribute('y',py+3.5);
     }
   });
+  const P=(x,y)=>rot(x,y).join(' ');
   edges.forEach(e=>{
     let d;
     if(arcs){
       const [a,b] = e.s.x<=e.t.x ? [e.s,e.t] : [e.t,e.s];
-      const hh = arcH(e);
-      d = `M ${a.x} ${a.y} C ${a.x} ${a.y-hh}, ${b.x} ${b.y-hh}, ${b.x} ${b.y}`;
+      const hh = arcH(e) * (VERT ? ARC_SQUEEZE_V : 1);
+      d = `M ${P(a.x,a.y)} C ${P(a.x,a.y-hh)}, ${P(b.x,b.y-hh)}, ${P(b.x,b.y)}`;
     } else {
-      d = `M ${e.s.x} ${e.s.y} L ${e.t.x} ${e.t.y}`;
+      d = `M ${P(e.s.x,e.s.y)} L ${P(e.t.x,e.t.y)}`;
     }
     e.el.setAttribute('d',d);
     e.hit.setAttribute('d',d);          // the hit stroke tracks the drawn one
@@ -1331,7 +1416,34 @@ place(true);
 
 // ---- viewport --------------------------------------------------------------
 let vx=0, vy=0, vs=1;
-function apply(){ gRoot.setAttribute('transform',`translate(${vx},${vy}) scale(${vs})`); }
+function apply(){ gRoot.setAttribute('transform',`translate(${vx},${vy}) scale(${vs})`); placeBookLabels(); }
+// Book labels are counter-scaled so they stay the same size on screen at any
+// zoom. Drawn in the graph's own units they shrank with it: the fitted view
+// opens at about a quarter scale, which put 10.5-unit text at roughly 3 px, and
+// half that on a phone (the arcs had the same fault; see HAZARDS.md). At
+// screen size the 38 labels cannot all fit at the fitted zoom, so, walking left
+// to right, a label drops out (.thin) when it would sit closer than LABEL_GAP
+// px to the last one shown, and returns as you zoom in. A selected book's label
+// shows regardless (CSS), and the readout names any book on hover.
+// Turned (VERT), the labels are upright and stacked down the spine, so they
+// need less room between them than tilted ones.
+let labelVs = null;
+function placeBookLabels(){
+  const inv = 1/vs, thin = labelVs!==vs, gap = VERT ? 15 : 18;
+  const turn = VERT ? 'translate(0,4)' : 'rotate(-45)';
+  let last = -Infinity;
+  BOOKS.forEach(b=>{
+    const lb=bookLabels[b]; if(!lb) return;
+    lb.setAttribute('transform',`translate(${lb.dataset.x},${lb.dataset.y}) scale(${inv}) ${turn}`);
+    if(thin){
+      const s = +lb.dataset.s * vs;
+      const show = s - last >= gap;
+      lb.classList.toggle('thin', !show);
+      if(show) last = s;
+    }
+  });
+  labelVs = vs;
+}
 // The floor on zoom. Below this the graph is smaller than the window and you
 // are looking at empty canvas around a shrinking blob - there is nothing to
 // see further out, so the control should not go there. MIN_PAD is the
@@ -1343,19 +1455,48 @@ const MIN_PAD = 90;
 // breathing room, applied to BOTH the opening view and the zoom floor so the
 // two stay the same thing: as far out as there is anything to see.
 const FIT_MARGIN = 0.86;
+// The graph's extent without the book labels. The labels are counter-scaled
+// (placeBookLabels), so in graph units they grow as you zoom out; measuring
+// them would make "fit" depend on the zoom it was pressed at. MIN_PAD leaves
+// room for them on screen instead.
+function graphBBox(){
+  let x0=Infinity, y0=Infinity, x1=-Infinity, y1=-Infinity;
+  const add=b=>{ if(!b.width && !b.height) return;
+    x0=Math.min(x0,b.x); y0=Math.min(y0,b.y); x1=Math.max(x1,b.x+b.width); y1=Math.max(y1,b.y+b.height); };
+  [gEdge,gNode].forEach(g=>add(g.getBBox()));
+  if(gAxis.style.display!=='none') gAxis.querySelectorAll(':scope > :not(.booklab)').forEach(el=>add(el.getBBox()));
+  return x0===Infinity ? {x:0,y:0,width:0,height:0} : {x:x0, y:y0, width:x1-x0, height:y1-y0};
+}
+// Turned, Genesis sits at the top edge, where the "Show Everything Again"
+// button floats; TOP_V keeps a band clear for it.
+const TOP_V = 56;
 function fitScale(){
-  const bb=gRoot.getBBox(), r=svg.getBoundingClientRect();
+  const bb=graphBBox(), r=svg.getBoundingClientRect();
   if(!bb.width || !bb.height) return minScale;
-  return Math.min(r.width/(bb.width+MIN_PAD), r.height/(bb.height+MIN_PAD)) * FIT_MARGIN;
+  return Math.min(r.width/(bb.width+MIN_PAD), (r.height-(VERT?TOP_V:0))/(bb.height+MIN_PAD)) * FIT_MARGIN;
 }
 function clamp(s){ return Math.max(minScale, s); }
-function fit(){
-  const bb=gRoot.getBBox(), r=svg.getBoundingClientRect();
+// fit(true) is the opening view. On a phone that is the graph fitted to the
+// screen's width, starting at Genesis, to be dragged down through; the fit
+// button and the zoom floor stay the whole graph at once.
+function fit(opening){
+  const bb=graphBBox(), r=svg.getBoundingClientRect();
   minScale = fitScale();
   vs = minScale;
-  vx=(r.width-bb.width*vs)/2-bb.x*vs; vy=(r.height-bb.height*vs)/2-bb.y*vs; apply();
+  if(VERT && opening===true && bb.width){
+    vs = Math.max(minScale, r.width/(bb.width+MIN_PAD) * FIT_MARGIN);
+    vx=(r.width-bb.width*vs)/2-bb.x*vs; vy=TOP_V+8-bb.y*vs; apply();
+    return;
+  }
+  const top = VERT ? TOP_V : 0;
+  vx=(r.width-bb.width*vs)/2-bb.x*vs; vy=top+(r.height-top-bb.height*vs)/2-bb.y*vs; apply();
 }
 window.addEventListener('resize',fit);
+VERT_MQ.addEventListener('change', e=>{
+  VERT = e.matches;
+  buildAxis(); labelVs = null;
+  place(mode==='canon'); draw(); fit(true);
+});
 document.getElementById('zin').onclick=()=>{vs=clamp(vs*1.25);apply()};
 document.getElementById('zout').onclick=()=>{vs=clamp(vs/1.25);apply()};
 document.getElementById('zfit').onclick=fit;
@@ -1420,6 +1561,7 @@ function titleCase(s){
 const clusterFocus = Object.fromEntries(
   Object.keys(CL).map(k => [k, {kind:'cluster', cl:k}]));
 
+const clusterRows = {};   // group key -> its row, so draw() can mark the selected one
 function build(host, map, set, kind){
   Object.entries(map).forEach(([k,o])=>{
     const lab=document.createElement('label'); lab.className='row'; lab.tabIndex=0;
@@ -1430,14 +1572,17 @@ function build(host, map, set, kind){
     else { mark.className='swatch'; mark.style.borderTopColor='var(--ink-3)';
            if(o.dash) mark.style.borderTopStyle = o.dash==='7 4' ? 'dashed' : 'dotted'; }
     const txt=document.createElement('span'); txt.textContent=titleCase(o.name);
-    // Until now the rail named eighteen groups and explained none of them.
-    if(o.note) lab.title = o.name + ' \u2014 ' + o.note;
+    // Groups no longer carry hover text (A4, 14 Oct): it appeared only after a
+    // still pointer and never on a phone, and the panel shows a group's note
+    // once its name is clicked. The other filters keep theirs.
+    if(o.note && kind!=='cl') lab.title = o.name + ' \u2014 ' + o.note;
     if(kind==='cl'){
       // The row is a <label>, so any click inside it toggles the checkbox.
       // The NAME has to do something else - select the group and show its
       // passages - so it stops the event before the label sees it.
       txt.className='gname'; txt.tabIndex=0; txt.setAttribute('role','button');
-      txt.title='Show the passages in ' + o.name;
+      txt.setAttribute('aria-label','Show the passages in ' + titleCase(o.name));
+      clusterRows[k] = lab;
       const pick=ev=>{ ev.preventDefault(); ev.stopPropagation();
                        select(clusterFocus[k]); };
       txt.addEventListener('click',pick);
@@ -1453,6 +1598,8 @@ function build(host, map, set, kind){
   });
 }
 build(document.getElementById('clusters'),CL,onCl,'cl');
+document.getElementById('gcount').textContent = '(' + Object.keys(CL).length + ')';
+if(matchMedia('(max-width:767px)').matches) document.getElementById('grpGroups').removeAttribute('open');
 (function bulkGroups(){
   const setAll = on => {
     document.querySelectorAll('#clusters input[type=checkbox]').forEach(c=>{
@@ -1613,6 +1760,7 @@ function motifIds(){
 function draw(){
   const f=focused(), near=litNodes(f);
   const mo=motifIds();
+  for(const k in clusterRows) clusterRows[k].classList.toggle('picked', isCluster(picked) && picked.cl===k);
   nodes.forEach(n=>{
     const ok=matches(n);
     n.el.classList.toggle('hide',!ok);
@@ -1660,7 +1808,8 @@ function openWord(id){
   const moved = picked!==n;
   picked = n; studyWord = id; render();
   if(moved) draw();
-  if(matchMedia('(max-width:900px)').matches) panel.scrollIntoView({block:'start'});
+  if(PHONE_MQ.matches) sheetFull(true);            // the bottom sheet: a study wants the room
+  else if(matchMedia('(max-width:900px)').matches) panel.scrollIntoView({block:'start'});
   else panel.scrollTop = 0;
 }
 panel.addEventListener('click', e=>{
@@ -1823,8 +1972,55 @@ function renderCluster(f){
   own.forEach(n=> panel.append(linkRow(n.ref, n.gist, null, ()=>select(n))));
 }
 
+// ---- the panel as a bottom sheet on phones ---------------------------------
+// The bar is made once and put back at the top of the panel on every render,
+// so its listeners survive render()'s innerHTML reset. CSS hides it above
+// 767px, where the panel is an ordinary column.
+const PHONE_MQ = matchMedia('(max-width:767px)');
+const sheetBar = document.createElement('div'); sheetBar.className='sheetbar';
+sheetBar.innerHTML='<button type="button" class="grab" aria-label="Make the panel taller or shorter"></button>'
+                  +'<button type="button" class="sheetx">Close</button>';
+function sheetFull(on){ panel.classList.toggle('full', on); }
+function sheetClose(){ picked=null; studyWord=null; panel.classList.remove('full'); render(); draw(); }
+sheetBar.querySelector('.sheetx').addEventListener('click', sheetClose);
+(function grabHandle(){
+  const g=sheetBar.querySelector('.grab');
+  // A tap is handled on 'click', not on pointerup. The sheet's height snaps,
+  // so changing it on pointerup moved the handle out from under the finger
+  // before the tap's click fired, and that click landed on whatever word now
+  // sat there, opening its study. The click reaches the handle first.
+  let y0=null, moved=false, dragged=false;
+  // Capture, so a drag that leaves the 30px handle still reports its moves and
+  // its release. (HAZARDS.md warns against capture on the graph, where it steals
+  // the click meant for an arc; here the click belongs to the handle anyway.)
+  g.addEventListener('pointerdown', e=>{ y0=e.clientY; moved=false; dragged=false; g.setPointerCapture(e.pointerId); });
+  g.addEventListener('pointermove', e=>{ if(y0!==null && Math.abs(e.clientY-y0)>8) moved=true; });
+  g.addEventListener('pointerup', e=>{
+    if(y0===null) return;
+    const dy=e.clientY-y0; y0=null;
+    if(!moved) return;                                                // a tap: see 'click'
+    dragged=true;
+    if(dy < -30) sheetFull(true);                                     // dragged up
+    else if(dy > 30){ if(panel.classList.contains('full')) sheetFull(false); else sheetClose(); }
+  });
+  g.addEventListener('click', ()=>{
+    if(dragged){ dragged=false; return; }
+    sheetFull(!panel.classList.contains('full'));
+  });
+})();
+document.addEventListener('keydown', e=>{
+  if(e.key==='Escape' && PHONE_MQ.matches && panel.classList.contains('open')
+     && document.getElementById('about').hidden) sheetClose();
+});
+
 function render(){
   panel.innerHTML='';
+  panel.append(sheetBar);
+  const open = !!picked;
+  panel.classList.toggle('open', open);
+  if(!open) panel.classList.remove('full');
+  document.body.classList.toggle('sheet-open', open && PHONE_MQ.matches);
+  panel.scrollTop = 0;
   if(!picked) return renderEmpty();
   if(isBook(picked)) return renderBook(picked);
   if(isCluster(picked)) return renderCluster(picked);
@@ -1860,7 +2056,7 @@ function render(){
 })();
 
 render(); draw();
-requestAnimationFrame(fit);
+requestAnimationFrame(()=>fit(true));
 </script>
 </body>
 </html>
