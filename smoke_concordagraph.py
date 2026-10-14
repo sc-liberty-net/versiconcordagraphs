@@ -427,6 +427,18 @@ try:
                 wp.wait_for_timeout(1500)
                 pre = 'study %s ' % vlabel
                 if vargs.get('has_touch'):
+                    # the graph runs down the screen on a phone (Ethan, 13 Oct)
+                    tg = ev(wp, '''() => {
+                        const shown = [...document.querySelectorAll('.booklab')]
+                            .filter(l => getComputedStyle(l).display !== 'none');
+                        const b = document.querySelector('#net g').getBBox();
+                        return {turned: typeof VERT !== 'undefined' ? VERT : 'NONE',
+                                taller: b.height > b.width,
+                                zoom: Math.round(vs * 100) / 100,
+                                labels: shown.length};
+                    }''')
+                    for k in ('turned', 'taller', 'zoom', 'labels'):
+                        P('phone graph %s' % k, pick(tg, k))
                     # the motif explanation, by tap: a title attribute never showed on a phone
                     try:
                         wp.locator('#mlabel').tap(timeout=5000)

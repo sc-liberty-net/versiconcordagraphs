@@ -86,6 +86,10 @@ study desktop word credit: True
 study desktop word overflowX: 0
 study desktop back to passage: True
 study desktop console errors: 0
+phone graph turned: True
+phone graph taller: True
+phone graph zoom: 0.37
+phone graph labels: 23
 study phone motif tip on tap: shown
 study phone passages: 244
 study phone empty note: Each passage opens in this project's own liter

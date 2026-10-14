@@ -104,3 +104,8 @@ source: C:\Users\ethan\AppData\Local\Temp/claude/C--Users-ethan-Desktop-Biblogra
 cause: Ethan's G4 (book labels), 13 Oct: labels counter-scaled to stay 11.5px on screen at any zoom and thinned where they would overlap (20 of 38 at the fitted desktop view; old page: all 38 at an 8px box). Fit now measures the graph without the labels (graphBBox), so the zoom lines do not move; the suite's own bbox includes the screen-size labels and grows 2490x1480 -> 2530x1540. Two new lines, red on the previous page.
 moved: 2 changed, 2 new, 0 gone (0 allowed, not counted)
 source: C:\Users\ethan\AppData\Local\Temp/claude/C--Users-ethan-Desktop-Biblography/4247ac7d-27d5-45cb-9f65-2e89e9d758c8/scratchpad/new6.out -> smoke-baseline.out
+
+## 2026-10-13 - baseline refreshed: smoke-baseline.out
+cause: Ethan, 13 Oct: on phones (under 768px) the graph is turned 90 degrees clockwise, Genesis at the top, arcs bulging right and squeezed to 0.55, text upright; it opens fitted to the width at Genesis (zoom 0.37 against 0.13 before, 23 labels against 13), the fit button shows it whole. Four new phone lines, which read NONE/False/0.13/13 on the previous page. No desktop line moved.
+moved: 0 changed, 4 new, 0 gone (0 allowed, not counted)
+source: C:\Users\ethan\AppData\Local\Temp/claude/C--Users-ethan-Desktop-Biblography/4247ac7d-27d5-45cb-9f65-2e89e9d758c8/scratchpad/new7.out -> smoke-baseline.out

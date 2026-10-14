@@ -259,6 +259,10 @@ path.edge.ehov{opacity:1; stroke-width:3; stroke-opacity:1}
   .panel{width:auto; border-left:0; border-top:1px solid var(--line)}
   .stage{height:62vh; flex:none}
 }
+/* Phones: the graph is turned to run down the screen, so give it more height. */
+@media (max-width:767px){
+  .stage{height:80vh}
+}
 </style>
 </head>
 <body>
@@ -1217,31 +1221,48 @@ nodes.forEach(n=>{
   n.el=g; n.circle=c; n.label=t; gNode.append(g);
 });
 
+// ---- orientation -----------------------------------------------------------
+// On a phone (narrower than 768px) the whole arc diagram is turned 90 degrees
+// clockwise (Ethan, 13 Oct): Genesis at the top, the books running down the
+// screen, arcs bulging to the right, text kept upright. The canon's long axis
+// then lies along the phone's long side, and you scroll down through the
+// Bible. rot() maps the horizontal layout onto the turned one, and arcs are
+// squeezed sideways so the longest still fit the phone's width. Turning the
+// phone to landscape (768px or wider) puts it back.
+const VERT_MQ = matchMedia('(max-width: 767px)');
+let VERT = VERT_MQ.matches;
+const ARC_SQUEEZE_V = 0.55;
+const rot = (x,y) => VERT ? [BASE_Y-y, x] : [x, y];
+function axisLine(cls, x1, y1, x2, y2){
+  const l=document.createElementNS(NS,'line'), [a,b]=rot(x1,y1), [c,d]=rot(x2,y2);
+  l.setAttribute('x1',a); l.setAttribute('y1',b); l.setAttribute('x2',c); l.setAttribute('y2',d);
+  l.setAttribute('class',cls); gAxis.append(l); return l;
+}
+
 // ---- book axis, drawn only in canonical mode -------------------------------
 const bookLabels = {};
 // One stable focus object per book. Selection toggles by identity, so a fresh
-// {kind:'book'} per event would make a second click fail to deselect.
+// {kind:'book'} per event would make a second click fail to deselect. Kept
+// across a rebuild of the axis for the same reason.
 const bookFocus = {};
-(function buildAxis(){
-  const spine=document.createElementNS(NS,'line');
-  spine.setAttribute('x1',X0-14); spine.setAttribute('y1',BASE_Y);
-  spine.setAttribute('x2',X1+14); spine.setAttribute('y2',BASE_Y);
-  spine.setAttribute('class','tick'); gAxis.append(spine);
+function buildAxis(){
+  gAxis.replaceChildren();
+  const apex = MAX_APEX * (VERT ? ARC_SQUEEZE_V : 1);
+  axisLine('tick', X0-14, BASE_Y, X1+14, BASE_Y);
   const groups={};
   canon.forEach(n=>{ (groups[n.book] ||= []).push(n.ax); });
   BOOKS.forEach(b=>{
     const xs=groups[b]; if(!xs) return;
     const lo=Math.min(...xs), hi=Math.max(...xs), mid=(lo+hi)/2;
-    const tk=document.createElementNS(NS,'line');
-    tk.setAttribute('x1',lo-5); tk.setAttribute('y1',BASE_Y+78);
-    tk.setAttribute('x2',hi+5); tk.setAttribute('y2',BASE_Y+78);
-    tk.setAttribute('class','tick'); gAxis.append(tk);
+    axisLine('tick', lo-5, BASE_Y+78, hi+5, BASE_Y+78);
     const lb=document.createElementNS(NS,'text');
     lb.setAttribute('class','booklab');
-    lb.dataset.x=mid; lb.dataset.y=BASE_Y+89;   // apply() places it, at screen size
-    lb.setAttribute('transform',`translate(${mid},${BASE_Y+89}) rotate(-45)`);
+    const [px,py]=rot(mid, BASE_Y+89);
+    lb.dataset.x=px; lb.dataset.y=py;   // apply() places it, at screen size
+    lb.dataset.s=mid;                   // where it sits along the spine, for thinning
+    lb.setAttribute('transform',`translate(${px},${py})`);
     lb.setAttribute('text-anchor','end'); lb.textContent=ABBR[b];
-    const bf = bookFocus[b] = {kind:'book', book:b};
+    const bf = bookFocus[b] ||= {kind:'book', book:b};
     lb.addEventListener('pointerenter',()=>hover(bf));
     lb.addEventListener('pointerleave',()=>hover(null));
     lb.addEventListener('click',()=>select(bf));
@@ -1258,41 +1279,47 @@ const bookFocus = {};
   if(first){
     const prev=canon[canon.indexOf(first)-1];
     const x=prev ? (prev.ax+first.ax)/2 : first.ax-8;
-    const sep=document.createElementNS(NS,'line');
-    sep.setAttribute('x1',x); sep.setAttribute('y1',BASE_Y-MAX_APEX-24);
-    sep.setAttribute('x2',x); sep.setAttribute('y2',BASE_Y+81);
-    sep.setAttribute('class','era'); gAxis.append(sep);
+    axisLine('era', x, BASE_Y-apex-24, x, BASE_Y+81);
     const el=document.createElementNS(NS,'text');
-    el.setAttribute('class','eralab'); el.setAttribute('x',x+6);
-    el.setAttribute('y',BASE_Y-MAX_APEX-24); el.textContent='New Testament begins';
+    el.setAttribute('class','eralab');
+    // Horizontal: beside the top of the divider. Turned: above its right-hand end.
+    const [ex,ey]=VERT ? rot(x-10, BASE_Y-apex-24) : rot(x+6, BASE_Y-apex-24);
+    el.setAttribute('x',ex); el.setAttribute('y',ey);
+    if(VERT) el.setAttribute('text-anchor','end');
+    el.textContent='New Testament begins';
     gAxis.append(el);
   }
-  gAxis.style.display='none';
-})();
+}
+buildAxis();
+gAxis.style.display='none';
 
 // ---- placement -------------------------------------------------------------
 let mode='canon';
 
 function place(arcs){
   nodes.forEach(n=>{
-    n.circle.setAttribute('cx',n.x); n.circle.setAttribute('cy',n.y);
+    const [px,py]=rot(n.x,n.y);
+    n.circle.setAttribute('cx',px); n.circle.setAttribute('cy',py);
     if(arcs){
       n.label.setAttribute('x',0); n.label.setAttribute('y',0);
-      n.label.setAttribute('transform',`translate(${n.x},${n.y+n.r+7}) rotate(-90)`);
+      // Below the dot, reading downward; turned, to the left of it, upright.
+      n.label.setAttribute('transform', VERT ? `translate(${px-n.r-7},${py+3.5})`
+                                             : `translate(${px},${py+n.r+7}) rotate(-90)`);
       n.label.setAttribute('text-anchor','end');
     } else {
       n.label.removeAttribute('transform'); n.label.removeAttribute('text-anchor');
-      n.label.setAttribute('x',n.x+n.r+4); n.label.setAttribute('y',n.y+3.5);
+      n.label.setAttribute('x',px+n.r+4); n.label.setAttribute('y',py+3.5);
     }
   });
+  const P=(x,y)=>rot(x,y).join(' ');
   edges.forEach(e=>{
     let d;
     if(arcs){
       const [a,b] = e.s.x<=e.t.x ? [e.s,e.t] : [e.t,e.s];
-      const hh = arcH(e);
-      d = `M ${a.x} ${a.y} C ${a.x} ${a.y-hh}, ${b.x} ${b.y-hh}, ${b.x} ${b.y}`;
+      const hh = arcH(e) * (VERT ? ARC_SQUEEZE_V : 1);
+      d = `M ${P(a.x,a.y)} C ${P(a.x,a.y-hh)}, ${P(b.x,b.y-hh)}, ${P(b.x,b.y)}`;
     } else {
-      d = `M ${e.s.x} ${e.s.y} L ${e.t.x} ${e.t.y}`;
+      d = `M ${P(e.s.x,e.s.y)} L ${P(e.t.x,e.t.y)}`;
     }
     e.el.setAttribute('d',d);
     e.hit.setAttribute('d',d);          // the hit stroke tracks the drawn one
@@ -1342,19 +1369,21 @@ function apply(){ gRoot.setAttribute('transform',`translate(${vx},${vy}) scale($
 // to right, a label drops out (.thin) when it would sit closer than LABEL_GAP
 // px to the last one shown, and returns as you zoom in. A selected book's label
 // shows regardless (CSS), and the readout names any book on hover.
-const LABEL_GAP = 18;
+// Turned (VERT), the labels are upright and stacked down the spine, so they
+// need less room between them than tilted ones.
 let labelVs = null;
 function placeBookLabels(){
-  const inv = 1/vs, thin = labelVs!==vs;
+  const inv = 1/vs, thin = labelVs!==vs, gap = VERT ? 15 : 18;
+  const turn = VERT ? 'translate(0,4)' : 'rotate(-45)';
   let last = -Infinity;
   BOOKS.forEach(b=>{
     const lb=bookLabels[b]; if(!lb) return;
-    const x=+lb.dataset.x;
-    lb.setAttribute('transform',`translate(${x},${lb.dataset.y}) scale(${inv}) rotate(-45)`);
+    lb.setAttribute('transform',`translate(${lb.dataset.x},${lb.dataset.y}) scale(${inv}) ${turn}`);
     if(thin){
-      const show = x*vs - last >= LABEL_GAP;
+      const s = +lb.dataset.s * vs;
+      const show = s - last >= gap;
       lb.classList.toggle('thin', !show);
-      if(show) last = x*vs;
+      if(show) last = s;
     }
   });
   labelVs = vs;
@@ -1382,19 +1411,36 @@ function graphBBox(){
   if(gAxis.style.display!=='none') gAxis.querySelectorAll(':scope > :not(.booklab)').forEach(el=>add(el.getBBox()));
   return x0===Infinity ? {x:0,y:0,width:0,height:0} : {x:x0, y:y0, width:x1-x0, height:y1-y0};
 }
+// Turned, Genesis sits at the top edge, where the "Show Everything Again"
+// button floats; TOP_V keeps a band clear for it.
+const TOP_V = 56;
 function fitScale(){
   const bb=graphBBox(), r=svg.getBoundingClientRect();
   if(!bb.width || !bb.height) return minScale;
-  return Math.min(r.width/(bb.width+MIN_PAD), r.height/(bb.height+MIN_PAD)) * FIT_MARGIN;
+  return Math.min(r.width/(bb.width+MIN_PAD), (r.height-(VERT?TOP_V:0))/(bb.height+MIN_PAD)) * FIT_MARGIN;
 }
 function clamp(s){ return Math.max(minScale, s); }
-function fit(){
+// fit(true) is the opening view. On a phone that is the graph fitted to the
+// screen's width, starting at Genesis, to be dragged down through; the fit
+// button and the zoom floor stay the whole graph at once.
+function fit(opening){
   const bb=graphBBox(), r=svg.getBoundingClientRect();
   minScale = fitScale();
   vs = minScale;
-  vx=(r.width-bb.width*vs)/2-bb.x*vs; vy=(r.height-bb.height*vs)/2-bb.y*vs; apply();
+  if(VERT && opening===true && bb.width){
+    vs = Math.max(minScale, r.width/(bb.width+MIN_PAD) * FIT_MARGIN);
+    vx=(r.width-bb.width*vs)/2-bb.x*vs; vy=TOP_V+8-bb.y*vs; apply();
+    return;
+  }
+  const top = VERT ? TOP_V : 0;
+  vx=(r.width-bb.width*vs)/2-bb.x*vs; vy=top+(r.height-top-bb.height*vs)/2-bb.y*vs; apply();
 }
 window.addEventListener('resize',fit);
+VERT_MQ.addEventListener('change', e=>{
+  VERT = e.matches;
+  buildAxis(); labelVs = null;
+  place(mode==='canon'); draw(); fit(true);
+});
 document.getElementById('zin').onclick=()=>{vs=clamp(vs*1.25);apply()};
 document.getElementById('zout').onclick=()=>{vs=clamp(vs/1.25);apply()};
 document.getElementById('zfit').onclick=fit;
@@ -1899,7 +1945,7 @@ function render(){
 })();
 
 render(); draw();
-requestAnimationFrame(fit);
+requestAnimationFrame(()=>fit(true));
 </script>
 </body>
 </html>
