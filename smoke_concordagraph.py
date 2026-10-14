@@ -479,6 +479,18 @@ try:
                         ? 'sheet ' + (r.top < innerHeight - 40 ? 'on screen' : 'off screen')
                         : 'column ' + Math.round(r.width) + 'px';
                 }'''))
+                if vargs.get('has_touch'):
+                    # tapping the sheet handle twice (full, then half) must not
+                    # open a word: the tap's click once leaked through to the word
+                    # that moved under the finger (13 Oct)
+                    try:
+                        for _ in range(2):
+                            wp.locator('.sheetbar .grab').tap(timeout=5000)
+                            wp.wait_for_timeout(350)
+                    except Exception as exc:
+                        P(pre + 'sheet handle tap failed', str(exc).splitlines()[0][:60])
+                    P(pre + 'sheet handle taps open a word', ev(wp, '() => !!document.querySelector(".ws-pos")'))
+                    ev(wp, '() => { const b = document.querySelector("[data-ws-back]"); if (b) b.click(); }')
                 w = wp.locator('.ws-e').nth(3)
                 if not vargs.get('has_touch'):
                     # hover synonyms: a real pointer, since the tooltip listens for mouseover

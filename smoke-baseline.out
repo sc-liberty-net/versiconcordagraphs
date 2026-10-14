@@ -100,6 +100,7 @@ study phone words: 34
 study phone summary: True
 study phone connections: 12
 study phone panel: sheet on screen
+study phone sheet handle taps open a word: False
 study phone word pos: Matthew 23:23, word 4 of 37
 study phone word orig: καὶ
 study phone word lexicons: 2

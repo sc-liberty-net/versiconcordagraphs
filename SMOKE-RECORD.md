@@ -114,3 +114,8 @@ source: C:\Users\ethan\AppData\Local\Temp/claude/C--Users-ethan-Desktop-Biblogra
 cause: Ethan's C2 (detail panel), 13 Oct: the panel grows with the window, clamp(320px, 28vw, 440px), 392px at 1400 (was 320), so the graph is 72px narrower and every zoom line scales by 772/844 (0.2816 -> 0.2575); the suite's bbox grows slightly with the counter-scaled labels at the smaller zoom. On phones the panel is a bottom sheet. Two new lines (desktop panel column 392px; phone panel sheet on screen), which read 320px / column 390px on the previous page.
 moved: 7 changed, 2 new, 0 gone (0 allowed, not counted)
 source: C:\Users\ethan\AppData\Local\Temp/claude/C--Users-ethan-Desktop-Biblography/4247ac7d-27d5-45cb-9f65-2e89e9d758c8/scratchpad/new8.out -> smoke-baseline.out
+
+## 2026-10-13 - baseline refreshed: smoke-baseline.out
+cause: Bottom-sheet tap leak, 13 Oct: two taps on the sheet handle opened a word's study, because the handle snapped away before the tap's click fired. Fixed in 6e0b788 (taps act on click). New line reads True on e384610 (the leaking version) and False now.
+moved: 0 changed, 1 new, 0 gone (0 allowed, not counted)
+source: C:\Users\ethan\AppData\Local\Temp/claude/C--Users-ethan-Desktop-Biblography/4247ac7d-27d5-45cb-9f65-2e89e9d758c8/scratchpad/new9.out -> smoke-baseline.out
