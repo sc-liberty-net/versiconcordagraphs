@@ -1956,15 +1956,27 @@ function sheetClose(){ picked=null; studyWord=null; panel.classList.remove('full
 sheetBar.querySelector('.sheetx').addEventListener('click', sheetClose);
 (function grabHandle(){
   const g=sheetBar.querySelector('.grab');
-  let y0=null, moved=false;
-  g.addEventListener('pointerdown', e=>{ y0=e.clientY; moved=false; });
+  // A tap is handled on 'click', not on pointerup. The sheet's height snaps,
+  // so changing it on pointerup moved the handle out from under the finger
+  // before the tap's click fired, and that click landed on whatever word now
+  // sat there, opening its study. The click reaches the handle first.
+  let y0=null, moved=false, dragged=false;
+  // Capture, so a drag that leaves the 30px handle still reports its moves and
+  // its release. (HAZARDS.md warns against capture on the graph, where it steals
+  // the click meant for an arc; here the click belongs to the handle anyway.)
+  g.addEventListener('pointerdown', e=>{ y0=e.clientY; moved=false; dragged=false; g.setPointerCapture(e.pointerId); });
   g.addEventListener('pointermove', e=>{ if(y0!==null && Math.abs(e.clientY-y0)>8) moved=true; });
   g.addEventListener('pointerup', e=>{
     if(y0===null) return;
     const dy=e.clientY-y0; y0=null;
-    if(!moved) return sheetFull(!panel.classList.contains('full'));   // a tap toggles
+    if(!moved) return;                                                // a tap: see 'click'
+    dragged=true;
     if(dy < -30) sheetFull(true);                                     // dragged up
     else if(dy > 30){ if(panel.classList.contains('full')) sheetFull(false); else sheetClose(); }
+  });
+  g.addEventListener('click', ()=>{
+    if(dragged){ dragged=false; return; }
+    sheetFull(!panel.classList.contains('full'));
   });
 })();
 document.addEventListener('keydown', e=>{
