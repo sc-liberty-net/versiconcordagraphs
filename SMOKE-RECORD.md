@@ -124,3 +124,8 @@ source: C:\Users\ethan\AppData\Local\Temp/claude/C--Users-ethan-Desktop-Biblogra
 cause: Ethan's A4 (group names), 14 Oct: group rows lose their hover text by design (20 -> 0; it showed only after a still pointer and never on a phone, and the panel shows a group's note on click). The name shows 'Show ->' on hover and focus, and the selected group's row is marked. The groups fold away on phones (closed by default), open on desktop. Three new lines, which read NONE / 0 / NONE on the previous page.
 moved: 1 changed, 3 new, 0 gone (0 allowed, not counted)
 source: C:\Users\ethan\AppData\Local\Temp/claude/C--Users-ethan-Desktop-Biblography/4247ac7d-27d5-45cb-9f65-2e89e9d758c8/scratchpad/new10.out -> smoke-baseline.out
+
+## 2026-10-14 - baseline refreshed: smoke-baseline.out
+cause: Phone checklist fixes F1/F3/F6, 14 Oct: a finger drag left the click-swallow flag set and ate the next tap (now cleared on every press); a touch tap that misses selects the nearest passage within 22px (it used to select an arc); the readout no longer stays lit after a tap (cleared on touch lift, and focus lights it only for keyboard focus). Three new phone lines, which read False / an arc / True on the previous page. No desktop line moved.
+moved: 0 changed, 3 new, 0 gone (0 allowed, not counted)
+source: C:\Users\ethan\AppData\Local\Temp/claude/C--Users-ethan-Desktop-Biblography/4247ac7d-27d5-45cb-9f65-2e89e9d758c8/scratchpad/new11.out -> smoke-baseline.out

@@ -450,6 +450,44 @@ try:
                         P('phone graph %s' % k, pick(tg, k))
                     P('phone groups folded', ev(wp,
                         '() => { const d = document.getElementById("grpGroups"); return d ? !d.open : "NONE"; }'))
+                    # real touch (CDP): a finger drag on the graph, then two taps
+                    # on a dot (the first after a drag may produce no click in
+                    # emulation), then a near miss 12px off a dot. A drag once left
+                    # the click-swallow flag set, eating the next tap (14 Oct).
+                    try:
+                        cdp = wp.context.new_cdp_session(wp)
+                        T = lambda kind, pts: cdp.send('Input.dispatchTouchEvent', {'type': kind,
+                            'touchPoints': [{'x': x, 'y': y, 'id': i} for i, (x, y) in enumerate(pts)]})
+                        ev(wp, "() => document.querySelector('.stage').scrollIntoView()")
+                        wp.wait_for_timeout(300)
+                        sx, sy = ev(wp, "() => { const r = document.querySelector('svg#net').getBoundingClientRect(); return [r.left + r.width * 0.8, r.top + r.height * 0.5]; }")
+                        T('touchStart', [(sx, sy)])
+                        for k in range(1, 10):
+                            T('touchMove', [(sx - 3 * k, sy - 8 * k)])
+                        T('touchEnd', [])
+                        wp.wait_for_timeout(300)
+                        d = ev(wp, '''() => { const st = document.querySelector('svg#net').getBoundingClientRect();
+                            const c = nodes.map(n => ({n, r: n.circle.getBoundingClientRect()}))
+                                .filter(o => o.r.top > st.top + 80 && o.r.bottom < st.top + 300);
+                            const o = c[Math.floor(c.length / 2)];
+                            return {x: o.r.left + o.r.width / 2, y: o.r.top + o.r.height / 2}; }''')
+                        for _ in range(2):
+                            T('touchStart', [(d['x'], d['y'])]); T('touchEnd', [])
+                            wp.wait_for_timeout(400)
+                            if ev(wp, '() => !!picked'):
+                                break
+                        P(pre + 'tap after a drag selects', ev(wp, '() => !!picked'))
+                        ev(wp, '() => { picked = null; render(); draw(); }')
+                        wp.wait_for_timeout(400)
+                        T('touchStart', [(d['x'] + 12, d['y'])]); T('touchEnd', [])
+                        wp.wait_for_timeout(400)
+                        P(pre + 'near-miss tap selects', ev(wp,
+                            "() => !picked ? 'nothing' : picked.ref ? 'a passage' : picked.s ? 'an arc' : 'other'"))
+                        P(pre + 'readout lit after a tap', ev(wp, "() => document.getElementById('readout').classList.contains('on')"))
+                        ev(wp, '() => { picked = null; render(); draw(); }')
+                        wp.wait_for_timeout(400)
+                    except Exception as exc:
+                        P(pre + 'touch probe failed', str(exc).splitlines()[0][:60])
                     # the motif explanation, by tap: a title attribute never showed on a phone
                     try:
                         wp.locator('#mlabel').tap(timeout=5000)

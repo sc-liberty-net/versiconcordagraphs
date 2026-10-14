@@ -1250,7 +1250,9 @@ edges.forEach(e=>{
   h.setAttribute('aria-label',`${e.s.ref} to ${e.t.ref} — ${TY[e.ty].name}, ${WA[e.wa].name}`);
   h.addEventListener('keydown',ev=>{
     if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();select(e);}});
-  h.addEventListener('focus',()=>hover(e));
+  // Keyboard focus only (:focus-visible): a tap focuses too, and lit the
+  // readout with no pointerleave ever to clear it.
+  h.addEventListener('focus',()=>{ if(h.matches(':focus-visible')) hover(e); });
   h.addEventListener('blur',()=>hover(null));
   e.hit=h; gHit.append(h);
 });
@@ -1272,7 +1274,7 @@ nodes.forEach(n=>{
   g.addEventListener('keydown',ev=>{if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();select(n);}});
   g.addEventListener('pointerenter',()=>hover(n));
   g.addEventListener('pointerleave',()=>hover(null));
-  g.addEventListener('focus',()=>hover(n));      // keyboard gets the same readout
+  g.addEventListener('focus',()=>{ if(g.matches(':focus-visible')) hover(n); });   // keyboard gets the same readout
   g.addEventListener('blur',()=>hover(null));
   n.el=g; n.circle=c; n.label=t; gNode.append(g);
 });
@@ -1326,7 +1328,7 @@ function buildAxis(){
     lb.setAttribute('aria-label',`${b} — all passages in this book`);
     lb.addEventListener('keydown',ev=>{
       if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();select(bf);}});
-    lb.addEventListener('focus',()=>hover(bf));
+    lb.addEventListener('focus',()=>{ if(lb.matches(':focus-visible')) hover(bf); });
     lb.addEventListener('blur',()=>hover(null));
     gAxis.append(lb);
     bookLabels[b]=lb;
@@ -1527,6 +1529,29 @@ window.addEventListener('pointerup',()=>{
 });
 svg.addEventListener('click',e=>{
   if(swallowClick){ swallowClick=false; e.stopPropagation(); e.preventDefault(); }
+}, true);
+// A finger drag never produces the trailing click a mouse drag does, so the
+// flag above used to wait and eat the NEXT tap: on a phone every pan cost a
+// tap on a passage (phone checklist, 14 Oct). Any new press clears it; a mouse
+// drag's own click still arrives before the next press, and is still swallowed.
+let lastPointer='mouse';
+window.addEventListener('pointerdown', e=>{ swallowClick=false; lastPointer=e.pointerType; }, true);
+// Touch only: the readout is lit by pointerenter, and a lifted finger never
+// sends pointerleave, so it stayed lit after every tap.
+window.addEventListener('pointerup', e=>{ if(e.pointerType==='touch' && hovered) hover(null); });
+// Touch only: dots are 1.5 to 5 px across on a phone and a fingertip is ~40,
+// so a tap that misses selects the nearest passage within TOUCH_SLOP px.
+const TOUCH_SLOP = 22;
+svg.addEventListener('click', e=>{
+  if(lastPointer!=='touch' || e.defaultPrevented || e.target.closest('.node')) return;
+  let best=null, bd=TOUCH_SLOP;
+  nodes.forEach(n=>{
+    if(n.el.classList.contains('hide')) return;
+    const r=n.circle.getBoundingClientRect();
+    const d=Math.hypot(r.left+r.width/2-e.clientX, r.top+r.height/2-e.clientY);
+    if(d<bd){ bd=d; best=n; }
+  });
+  if(best){ e.stopPropagation(); e.preventDefault(); select(best); }
 }, true);
 svg.addEventListener('wheel',e=>{e.preventDefault();const k=e.deltaY<0?1.1:1/1.1;const r=svg.getBoundingClientRect();
   const mx=e.clientX-r.left, my=e.clientY-r.top;
@@ -1981,7 +2006,21 @@ const sheetBar = document.createElement('div'); sheetBar.className='sheetbar';
 sheetBar.innerHTML='<button type="button" class="grab" aria-label="Make the panel taller or shorter"></button>'
                   +'<button type="button" class="sheetx">Close</button>';
 function sheetFull(on){ panel.classList.toggle('full', on); }
-function sheetClose(){ picked=null; studyWord=null; panel.classList.remove('full'); render(); draw(); }
+// Closing the sheet put keyboard focus on <body> (its Close button is rebuilt
+// by render()); it now goes back to whatever was selected, without lighting it.
+function focusTarget(f){
+  if(!f) return null;
+  if(isBook(f)) return bookLabels[f.book];
+  if(isCluster(f)) return clusterRows[f.cl] && clusterRows[f.cl].querySelector('.gname');
+  if(isEdge(f)) return f.hit;
+  return f.el;
+}
+function sheetClose(){
+  const was=picked;
+  picked=null; studyWord=null; panel.classList.remove('full'); render(); draw();
+  const t=focusTarget(was);
+  if(t){ t.focus({preventScroll:true}); hover(null); }
+}
 sheetBar.querySelector('.sheetx').addEventListener('click', sheetClose);
 (function grabHandle(){
   const g=sheetBar.querySelector('.grab');

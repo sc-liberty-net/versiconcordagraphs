@@ -94,6 +94,9 @@ phone graph taller: True
 phone graph zoom: 0.37
 phone graph labels: 23
 phone groups folded: True
+study phone tap after a drag selects: True
+study phone near-miss tap selects: a passage
+study phone readout lit after a tap: False
 study phone motif tip on tap: shown
 study phone passages: 244
 study phone empty note: Each passage opens in this project's own liter
