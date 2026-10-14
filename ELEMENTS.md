@@ -53,9 +53,9 @@ broken selector. On a phone the graph and the panel sit below the sidebar, so th
 | A7 | word buttons | Button | `.ws-e` | `wordstudy/embed.js` | Hover shows M11, click opens the study. Built on open; view: passage |
 | C5 | King James text | Quote | `.ws-kjv` | `wordstudy/embed.js` | Built on open; view: passage |
 | M5 | Textus Receptus note | Alert | `.ws-trnote` | `wordstudy/embed.js` | Only where the KJV's Greek differs. Built on open; view: passage; view: p-sheet |
-| M6 | word hint | new: Body text | `.ws-hint` | `wordstudy/embed.js` | "Select any word…". Built on open; view: passage; view: p-sheet |
+| M6 | word hint | Body text | `.ws-hint` | `wordstudy/embed.js` | "Select any word…". Built on open; view: passage; view: p-sheet |
 | C7 | local NRSV verse | Quote | `.panel blockquote.verse` | `concordagraph.html` | Only on this machine, from verses.js; never published. Built on open; view: passage; view: p-sheet |
-| C6 | passage summary | new: Body text | `.panel .gist-sm` | `concordagraph.html` | Built on open; view: passage-lower |
+| C6 | passage summary | Body text | `.panel .gist-sm` | `concordagraph.html` | Built on open; view: passage-lower |
 | C18 | connections heading | Heading | `.panel h3` | `concordagraph.html` | "12 Connections". Built on open; view: passage-lower |
 | C8 | connection list | List | `.panel .link` | `concordagraph.html` | Each row selects that arc. Built on open; view: passage-lower |
 | M11 | word tooltip | Tooltip | `.ws-tip` | `wordstudy/embed.js` | Hover synonyms; the page shows it only on hover-capable screens, so width: desktop; built on open; view: hovertip |
