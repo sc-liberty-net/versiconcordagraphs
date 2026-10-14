@@ -40,8 +40,10 @@ broken selector. On a phone the graph and the panel sit below the sidebar, so th
 | A6 | show everything button | Button | `#reset` | `concordagraph.html` | Clears selection, search and filters; view: main; view: p-graph |
 | G6 | zoom buttons | Zoom controls | `.zoom` | `concordagraph.html` | +, −, fit; view: main; view: p-graph |
 | M2 | graph readout | Tooltip | `#readout` | `concordagraph.html` | Names whatever is under the pointer, below the graph; view: readout |
-| C2 | detail panel | Drawer | `#panel` | `concordagraph.html` | Right-hand panel; on a phone it sits below the graph; view: main; view: p-panel |
-| M3 | panel start note | Empty state | `.panel .empty` | `concordagraph.html` | "Pick a passage…" with the reading note below it; view: main; view: p-panel |
+| C2 | detail panel | Drawer | `#panel` | `concordagraph.html` | Right-hand panel, 320 to 440px wide with the window; on a phone a bottom sheet that slides up once something is selected (13 Oct); view: main; view: passage |
+| A12 | sheet handle | Drag handle | `.sheetbar .grab` | `concordagraph.html` | Tap or drag: half or full height. The page's CSS shows the sheet bar only under 768px, so width: phone; view: passage |
+| A13 | sheet close button | Button | `.sheetbar .sheetx` | `concordagraph.html` | Clears the selection and drops the sheet; width: phone (as A12); view: passage |
+| M3 | panel start note | Empty state | `.panel .empty` | `concordagraph.html` | "Pick a passage…" with the reading note below it. On a phone the sheet opens only once something is selected, so this never shows there: width: desktop |
 | C3 | passage reference | Heading | `.panel .ref` | `concordagraph.html` | Built on open; view: passage |
 | N3 | compare link | Link | `.panel .ref a:not(.chap)` | `concordagraph.html` | The reference itself; opens Bible Hub. Built on open; view: passage |
 | N4 | chapter link | Link | `.panel .ref .chap` | `concordagraph.html` | "Read … In Full ↗", Bible Gateway. Built on open; view: passage |
@@ -49,9 +51,9 @@ broken selector. On a phone the graph and the panel sit below the sidebar, so th
 | C4 | our English reading | Quote | `.ws-reading` | `wordstudy/embed.js` | The literal draft; every word is a button (A7). Built on open; view: passage |
 | A7 | word buttons | Button | `.ws-e` | `wordstudy/embed.js` | Hover shows M11, click opens the study. Built on open; view: passage |
 | C5 | King James text | Quote | `.ws-kjv` | `wordstudy/embed.js` | Built on open; view: passage |
-| M5 | Textus Receptus note | Alert | `.ws-trnote` | `wordstudy/embed.js` | Only where the KJV's Greek differs. Built on open; view: passage |
-| M6 | word hint | new: Body text | `.ws-hint` | `wordstudy/embed.js` | "Select any word…". Built on open; view: passage |
-| C7 | local NRSV verse | Quote | `.panel blockquote.verse` | `concordagraph.html` | Only on this machine, from verses.js; never published. Built on open; view: passage |
+| M5 | Textus Receptus note | Alert | `.ws-trnote` | `wordstudy/embed.js` | Only where the KJV's Greek differs. Built on open; view: passage; view: p-sheet |
+| M6 | word hint | new: Body text | `.ws-hint` | `wordstudy/embed.js` | "Select any word…". Built on open; view: passage; view: p-sheet |
+| C7 | local NRSV verse | Quote | `.panel blockquote.verse` | `concordagraph.html` | Only on this machine, from verses.js; never published. Built on open; view: passage; view: p-sheet |
 | C6 | passage summary | new: Body text | `.panel .gist-sm` | `concordagraph.html` | Built on open; view: passage-lower |
 | C18 | connections heading | Heading | `.panel h3` | `concordagraph.html` | "12 Connections". Built on open; view: passage-lower |
 | C8 | connection list | List | `.panel .link` | `concordagraph.html` | Each row selects that arc. Built on open; view: passage-lower |
@@ -89,8 +91,8 @@ Only when the page itself never shows an element at one width, its Notes say `wi
 | View | Steps | Width | Notes |
 |---|---|---|---|
 | p-rail | `eval document.getElementById('warrants').scrollIntoView()` | phone | lower half of the sidebar |
-| p-graph | `eval document.querySelector('.stage').scrollIntoView()` | phone | the graph, below the sidebar |
-| p-panel | `eval document.getElementById('panel').scrollIntoView()` | phone | the panel, below the graph |
+| p-graph | `eval document.querySelector('.stage').scrollIntoView(); click #zfit; wait 200` | phone | the whole graph, turned, below the sidebar |
+| p-sheet | `eval select(nodes.find(n => n.ref === 'Matthew 23:23')); wait 300; eval sheetFull(true); wait 400; eval document.querySelector('.ws-trnote').scrollIntoView()` | phone | the bottom sheet at full height, scrolled to the notes under the reading |
 | motiftip | `eval document.querySelector('.motifbar').scrollIntoView(); click #mlabel; wait 150` | all | the motif explanation, pinned open |
 | readout | `eval document.querySelector('.stage').scrollIntoView(); eval hover(nodes.find(n => n.ref === 'Matthew 23:23')); wait 150` | all | hover readout under the graph |
 | passage | `eval select(nodes.find(n => n.ref === 'Matthew 23:23')); wait 300; eval document.getElementById('panel').scrollIntoView()` | all | a Greek passage with a Textus Receptus note |
