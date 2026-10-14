@@ -95,9 +95,12 @@ h1{font-family:Spectral,Georgia,serif; font-weight:600; font-size:26px; margin:0
 svg#net{display:block; width:100%; height:100%; touch-action:none; cursor:grab}
 svg#net.drag{cursor:grabbing}
 .panel{
-  width:320px; flex:none; border-left:1px solid var(--line); background:var(--surface);
+  /* Grows with the window (Ethan's C2, 13 Oct): 320px was cramped for the word
+     study while the graph beside it had room to spare. */
+  width:clamp(320px, 28vw, 440px); flex:none; border-left:1px solid var(--line); background:var(--surface);
   overflow-y:auto; padding:18px 18px 44px;
 }
+.sheetbar{display:none}
 .grp{margin-bottom:20px}
 .grp h2{font-family:Archivo; font-size:12px; font-weight:600; letter-spacing:.04em; color:var(--ink-3); margin:0 0 9px; text-transform:none}
 input[type=search]{
@@ -262,7 +265,38 @@ path.edge.ehov{opacity:1; stroke-width:3; stroke-opacity:1}
 /* Phones: the graph is turned to run down the screen, so give it more height. */
 @media (max-width:767px){
   .stage{height:80vh}
+  /* The panel is a bottom sheet (Ethan's C2, 13 Oct): selecting something
+     slides it up over the lower half, the graph still in view above it. The
+     handle switches half and full; Close (or Escape) clears the selection. */
+  .panel{
+    position:fixed; left:0; right:0; bottom:0; z-index:15; width:auto;
+    height:55vh; max-height:none; padding:0 18px 32px;
+    border:0; border-top:1px solid var(--line); border-radius:16px 16px 0 0;
+    box-shadow:0 -8px 28px rgba(0,0,0,.18);
+    transform:translateY(105%); transition:transform .3s cubic-bezier(.16,1,.3,1), height .3s cubic-bezier(.16,1,.3,1);
+  }
+  .panel.open{transform:none}
+  .panel.full{height:88vh}
+  /* Room to scroll the graph up above the open sheet. .wrap grows with its
+     content here: at its desktop height of 100% the content overflowed it, and
+     a spacer after it landed inside that overflow instead of below it. */
+  .wrap{height:auto}
+  body.sheet-open::after{content:''; display:block; height:55vh}
+  .sheetbar{
+    display:flex; align-items:center; justify-content:space-between; gap:12px;
+    position:sticky; top:0; z-index:1; margin:0 -18px 12px; padding:6px 12px 6px 18px;
+    background:var(--surface); border-bottom:1px solid var(--line); touch-action:none;
+  }
+  .sheetbar .grab{
+    flex:1; height:30px; border:0; background:none; cursor:grab; display:grid; place-items:center;
+  }
+  .sheetbar .grab::before{content:''; width:44px; height:5px; border-radius:3px; background:var(--line)}
+  .sheetbar .sheetx{
+    flex:none; padding:5px 13px; border:1px solid var(--line); border-radius:99px;
+    background:var(--paper); color:var(--ink-2); font:inherit; font-size:13px; cursor:pointer;
+  }
 }
+@media (max-width:767px) and (prefers-reduced-motion:reduce){ .panel{transition:none} }
 </style>
 </head>
 <body>
@@ -1745,7 +1779,8 @@ function openWord(id){
   const moved = picked!==n;
   picked = n; studyWord = id; render();
   if(moved) draw();
-  if(matchMedia('(max-width:900px)').matches) panel.scrollIntoView({block:'start'});
+  if(PHONE_MQ.matches) sheetFull(true);            // the bottom sheet: a study wants the room
+  else if(matchMedia('(max-width:900px)').matches) panel.scrollIntoView({block:'start'});
   else panel.scrollTop = 0;
 }
 panel.addEventListener('click', e=>{
@@ -1908,8 +1943,43 @@ function renderCluster(f){
   own.forEach(n=> panel.append(linkRow(n.ref, n.gist, null, ()=>select(n))));
 }
 
+// ---- the panel as a bottom sheet on phones ---------------------------------
+// The bar is made once and put back at the top of the panel on every render,
+// so its listeners survive render()'s innerHTML reset. CSS hides it above
+// 767px, where the panel is an ordinary column.
+const PHONE_MQ = matchMedia('(max-width:767px)');
+const sheetBar = document.createElement('div'); sheetBar.className='sheetbar';
+sheetBar.innerHTML='<button type="button" class="grab" aria-label="Make the panel taller or shorter"></button>'
+                  +'<button type="button" class="sheetx">Close</button>';
+function sheetFull(on){ panel.classList.toggle('full', on); }
+function sheetClose(){ picked=null; studyWord=null; panel.classList.remove('full'); render(); draw(); }
+sheetBar.querySelector('.sheetx').addEventListener('click', sheetClose);
+(function grabHandle(){
+  const g=sheetBar.querySelector('.grab');
+  let y0=null, moved=false;
+  g.addEventListener('pointerdown', e=>{ y0=e.clientY; moved=false; });
+  g.addEventListener('pointermove', e=>{ if(y0!==null && Math.abs(e.clientY-y0)>8) moved=true; });
+  g.addEventListener('pointerup', e=>{
+    if(y0===null) return;
+    const dy=e.clientY-y0; y0=null;
+    if(!moved) return sheetFull(!panel.classList.contains('full'));   // a tap toggles
+    if(dy < -30) sheetFull(true);                                     // dragged up
+    else if(dy > 30){ if(panel.classList.contains('full')) sheetFull(false); else sheetClose(); }
+  });
+})();
+document.addEventListener('keydown', e=>{
+  if(e.key==='Escape' && PHONE_MQ.matches && panel.classList.contains('open')
+     && document.getElementById('about').hidden) sheetClose();
+});
+
 function render(){
   panel.innerHTML='';
+  panel.append(sheetBar);
+  const open = !!picked;
+  panel.classList.toggle('open', open);
+  if(!open) panel.classList.remove('full');
+  document.body.classList.toggle('sheet-open', open && PHONE_MQ.matches);
+  panel.scrollTop = 0;
   if(!picked) return renderEmpty();
   if(isBook(picked)) return renderBook(picked);
   if(isCluster(picked)) return renderCluster(picked);

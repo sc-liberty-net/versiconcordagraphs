@@ -470,6 +470,15 @@ try:
                 }''')
                 for k in ('reading', 'kjv', 'words', 'summary', 'connections'):
                     P(pre + k, pick(st, k))
+                # the panel: grows with the window on desktop; a bottom sheet on a
+                # phone that is on screen once something is selected (C2, 13 Oct)
+                wp.wait_for_timeout(400)
+                P(pre + 'panel', ev(wp, '''() => {
+                    const p = document.getElementById('panel'), r = p.getBoundingClientRect();
+                    return getComputedStyle(p).position === 'fixed'
+                        ? 'sheet ' + (r.top < innerHeight - 40 ? 'on screen' : 'off screen')
+                        : 'column ' + Math.round(r.width) + 'px';
+                }'''))
                 w = wp.locator('.ws-e').nth(3)
                 if not vargs.get('has_touch'):
                     # hover synonyms: a real pointer, since the tooltip listens for mouseover

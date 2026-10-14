@@ -109,3 +109,8 @@ source: C:\Users\ethan\AppData\Local\Temp/claude/C--Users-ethan-Desktop-Biblogra
 cause: Ethan, 13 Oct: on phones (under 768px) the graph is turned 90 degrees clockwise, Genesis at the top, arcs bulging right and squeezed to 0.55, text upright; it opens fitted to the width at Genesis (zoom 0.37 against 0.13 before, 23 labels against 13), the fit button shows it whole. Four new phone lines, which read NONE/False/0.13/13 on the previous page. No desktop line moved.
 moved: 0 changed, 4 new, 0 gone (0 allowed, not counted)
 source: C:\Users\ethan\AppData\Local\Temp/claude/C--Users-ethan-Desktop-Biblography/4247ac7d-27d5-45cb-9f65-2e89e9d758c8/scratchpad/new7.out -> smoke-baseline.out
+
+## 2026-10-13 - baseline refreshed: smoke-baseline.out
+cause: Ethan's C2 (detail panel), 13 Oct: the panel grows with the window, clamp(320px, 28vw, 440px), 392px at 1400 (was 320), so the graph is 72px narrower and every zoom line scales by 772/844 (0.2816 -> 0.2575); the suite's bbox grows slightly with the counter-scaled labels at the smaller zoom. On phones the panel is a bottom sheet. Two new lines (desktop panel column 392px; phone panel sheet on screen), which read 320px / column 390px on the previous page.
+moved: 7 changed, 2 new, 0 gone (0 allowed, not counted)
+source: C:\Users\ethan\AppData\Local\Temp/claude/C--Users-ethan-Desktop-Biblography/4247ac7d-27d5-45cb-9f65-2e89e9d758c8/scratchpad/new8.out -> smoke-baseline.out

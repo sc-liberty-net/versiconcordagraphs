@@ -13,8 +13,8 @@ rail kinds: 3
 rail group lens hidden: True
 header: 244 passages across 38 books, joined by 299 connections — drawn 
 title: Concordagraph - Taxes & Tithes
-graph bbox w: 2530
-graph bbox h: 1540
+graph bbox w: 2540
+graph bbox h: 1550
 book labels shown at fit: 20
 book label height on screen px: 24
 NRSV payload present: False
@@ -30,11 +30,11 @@ kinds on that pair: con,lex
 distinct arc lanes on that pair: 2
 filter hid: 25
 filter restored: 0
-zoom floor: 0.2816
-zoom fitted: 0.2816
-zoom afterButtons: 0.2816
-zoom afterWheel: 0.2816
-zoom zoomedIn: 0.3519
+zoom floor: 0.2575
+zoom fitted: 0.2575
+zoom afterButtons: 0.2575
+zoom afterWheel: 0.2575
+zoom zoomedIn: 0.3219
 page heading: Taxes, Tithes, & Tribute
 arrangement group hidden: True
 reset sits over the canvas: True
@@ -78,6 +78,7 @@ study desktop kjv: King James VersionWoe unto you, scribes
 study desktop words: 34
 study desktop summary: True
 study desktop connections: 12
+study desktop panel: column 392px
 study desktop hover tip: καὶ, and and Select for the full study
 study desktop word pos: Matthew 23:23, word 4 of 37
 study desktop word orig: καὶ
@@ -98,6 +99,7 @@ study phone kjv: King James VersionWoe unto you, scribes
 study phone words: 34
 study phone summary: True
 study phone connections: 12
+study phone panel: sheet on screen
 study phone word pos: Matthew 23:23, word 4 of 37
 study phone word orig: καὶ
 study phone word lexicons: 2
