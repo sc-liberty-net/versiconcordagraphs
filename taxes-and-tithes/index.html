@@ -143,7 +143,15 @@ button.reset:hover{background:var(--sunk)}
 .motifbar .mlabel{
   font-family:Archivo,sans-serif; font-size:11.5px; font-weight:600;
   letter-spacing:.04em; color:var(--ink-3); cursor:help; flex:none;
+  appearance:none; border:0; background:none; padding:2px 0; text-align:left;
 }
+.motifbar .mlabel:hover{color:var(--ink)}
+.motifbar .mq{display:inline-grid; place-items:center; width:15px; height:15px; margin-left:3px;
+  border:1px solid currentColor; border-radius:50%; font-size:10px; line-height:1}
+.motifbar{position:relative}
+.mtip{position:absolute; left:14px; top:calc(100% - 4px); z-index:5; width:min(360px, calc(100% - 28px));
+  background:var(--ink); color:var(--surface); border-radius:8px; padding:9px 12px;
+  font-size:13px; line-height:1.45; box-shadow:0 6px 20px rgba(0,0,0,.25)}
 #motifs{display:flex; flex-wrap:wrap; gap:6px}
 #motifs .row{
   display:inline-flex; align-items:center; gap:6px; padding:3px 11px;
@@ -241,6 +249,8 @@ button.reset:hover{background:var(--sunk)}
    and the dashes constant however far out you are. */
 .edge, .hit{vector-effect:non-scaling-stroke}
 path.esel{stroke-width:4; stroke-opacity:1}
+/* the arc under the pointer while something is selected: full strength, even if dimmed */
+path.edge.ehov{opacity:1; stroke-width:3; stroke-opacity:1}
 .booklab.sel{font-weight:600; fill:var(--ink)}
 @media (max-width:900px){
   .main{flex-direction:column}
@@ -263,10 +273,10 @@ path.esel{stroke-width:4; stroke-opacity:1}
 <div class="scrim" id="scrim" hidden></div>
 <div class="about" id="about" role="dialog" aria-modal="true" aria-labelledby="aboutH" hidden>
   <button type="button" class="x" id="aboutX" aria-label="Close">&times;</button>
-  <h2 id="aboutH">About this concordagraph</h2>
+  <h2 id="aboutH">About This Concordagraph</h2>
   <p class="sub" id="hSub"></p>
 
-  <h3>How to read it</h3>
+  <h3>How To Read It</h3>
   <p>Every dot is a passage; every arc is a claim that two passages are connected.
      An arc says two things about itself, and both are visible without clicking.</p>
   <p><b>What kind of link.</b> A solid line means the two passages share wording.
@@ -279,7 +289,7 @@ path.esel{stroke-width:4; stroke-opacity:1}
      every connection the same way launders one reader's speculation into settled
      reference, and there is no way to tell afterwards which was which.</p>
 
-  <h3>Groups and motifs are different axes</h3>
+  <h3>Groups &amp; Motifs Are Different Axes</h3>
   <p>A <b>group</b> is a topic, and a passage belongs to exactly one. A
      <b>motif</b> is a Hebrew or Greek word, and a passage carries as many as it
      has words &mdash; so a motif cuts across groups by construction. The number
@@ -287,7 +297,7 @@ path.esel{stroke-width:4; stroke-opacity:1}
      shared with four verses is evidence, one shared with four hundred is
      vocabulary.</p>
 
-  <h3>The Versiconcordagraphs project</h3>
+  <h3>The Versiconcordagraphs Project</h3>
   <p>A <b>concordagraph</b> is a traversable network of source references in
      which the nodes are locatable citations and every edge carries both a type
      and a warrant. This page is one of them. Each topic lives on its own branch
@@ -298,7 +308,7 @@ path.esel{stroke-width:4; stroke-opacity:1}
      resolve, an edge points at a missing passage, or a warrant tier is
      misspelled.</p>
 
-  <h3>No copyrighted scripture text</h3>
+  <h3>No Copyrighted Scripture Text</h3>
   <p>These pages carry verse references and summaries written for this project,
      never the wording of a copyrighted translation. Where the Word Study is
      present, a passage also shows this project's own literal English &mdash; a
@@ -316,29 +326,29 @@ path.esel{stroke-width:4; stroke-opacity:1}
     <div class="grp hide">
       <h2>Arrangement</h2>
       <div class="seg">
-        <button id="mGroup" aria-pressed="false">By group</button>
-        <button id="mCanon" aria-pressed="true">Bible order</button>
+        <button id="mGroup" aria-pressed="false">By Group</button>
+        <button id="mCanon" aria-pressed="true">Bible Order</button>
       </div>
       <p class="hint" id="modeHint"></p>
     </div>
     <div class="grp">
-      <h2>Find a passage</h2>
+      <h2>Find A Passage</h2>
       <input type="search" id="q" placeholder="Matthew 22, tithe, widow…" autocomplete="off">
     </div>
     <div class="grp">
       <h2>Groups</h2>
       <div class="bulk">
-        <button type="button" id="clAll">Select all</button>
+        <button type="button" id="clAll">Select All</button>
         <button type="button" id="clNone">Clear</button>
       </div>
       <div id="clusters"></div>
     </div>
     <div class="grp">
-      <h2>How strong is the link</h2>
+      <h2>How Strong Is The Link</h2>
       <div id="warrants"></div>
     </div>
     <div class="grp">
-      <h2>What kind of link</h2>
+      <h2>What Kind Of Link</h2>
       <div id="types"></div>
     </div>
     <div class="grp">
@@ -346,11 +356,14 @@ path.esel{stroke-width:4; stroke-opacity:1}
   </div>
   <div class="stage">
     <div class="motifbar">
-      <span class="mlabel" title="A motif is a Hebrew or Greek word, not a group. A passage belongs to one group but carries as many motifs as it has words. The second number is how many verses in the whole Bible use that word: shared with four is evidence, shared with four hundred is vocabulary.">Trace a motif</span>
+      <!-- A real tooltip, not a title attribute: a title shows only after the
+           pointer rests a second, and never on a phone (Ethan, 13 Oct). -->
+      <button type="button" class="mlabel" id="mlabel" aria-describedby="mtip" aria-expanded="false">Trace A Motif <span class="mq" aria-hidden="true">?</span></button>
+      <div class="mtip" id="mtip" role="tooltip" hidden>A motif is a Hebrew or Greek word, not a group. A passage belongs to one group but carries as many motifs as it has words. The second number is how many verses in the whole Bible use that word: shared with four is evidence, shared with four hundred is vocabulary.</div>
       <div id="motifs"></div>
     </div>
     <div class="canvas">
-      <button class="reset floating" id="reset">Show everything again</button>
+      <button class="reset floating" id="reset">Show Everything Again</button>
       <svg id="net" role="img" aria-label="Network of New Testament passages about tax and tithe"></svg>
       <div class="readout" id="readout" aria-live="polite"></div>
       <div class="zoom">
@@ -374,21 +387,32 @@ const MOD = "tithe";
 const MODS = {
   tithe:{title:"Taxes, Tithes, & Tribute"},
 };
-const META = {nodes:184,edges:223,books:26};
-const BOOKS = ["Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy", "Ruth", "1 Samuel", "Nehemiah", "Psalm", "Ezekiel", "Amos", "Haggai", "Zechariah", "Malachi", "Matthew", "Mark", "Luke", "John", "Acts", "Romans", "1 Corinthians", "2 Corinthians", "1 Timothy", "Hebrews", "James", "1 Peter"];
+const META = {nodes:244,edges:299,books:38};
+const BOOKS = ["Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy", "Joshua", "Ruth", "1 Samuel", "2 Samuel", "1 Kings", "2 Kings", "Ezra", "Nehemiah", "Esther", "Psalm", "Proverbs", "Jeremiah", "Lamentations", "Ezekiel", "Daniel", "Amos", "Micah", "Haggai", "Zechariah", "Malachi", "Matthew", "Mark", "Luke", "John", "Acts", "Romans", "1 Corinthians", "2 Corinthians", "Galatians", "1 Timothy", "Hebrews", "James", "1 Peter"];
 const ABBR = {
   "Genesis":"Gen",
   "Exodus":"Exod",
   "Leviticus":"Lev",
   "Numbers":"Num",
   "Deuteronomy":"Deut",
+  "Joshua":"Josh",
   "Ruth":"Ruth",
   "1 Samuel":"1 Sam",
+  "2 Samuel":"2 Sam",
+  "1 Kings":"1 Kgs",
+  "2 Kings":"2 Kgs",
+  "Ezra":"Ezra",
   "Nehemiah":"Neh",
+  "Esther":"Esth",
   "Psalm":"Ps",
+  "Proverbs":"Prov",
+  "Jeremiah":"Jer",
+  "Lamentations":"Lam",
   "Ezekiel":"Ezek",
+  "Daniel":"Dan",
   "Amos":"Amos",
-  "Haggai":"Hagg",
+  "Micah":"Mic",
+  "Haggai":"Hag",
   "Zechariah":"Zech",
   "Malachi":"Mal",
   "Matthew":"Matt",
@@ -399,6 +423,7 @@ const ABBR = {
   "Romans":"Rom",
   "1 Corinthians":"1 Cor",
   "2 Corinthians":"2 Cor",
+  "Galatians":"Gal",
   "1 Timothy":"1 Tim",
   "Hebrews":"Heb",
   "James":"Jas",
@@ -406,8 +431,10 @@ const ABBR = {
 };
 const CL = {
   anchor:{name:"Tithe statutes",light:"#7C8B96",dark:"#93A3AE",role:"",note:"The laws that command a tenth, and say whose it is."},
+  inherit:{name:"Portion and inheritance",light:"#AB4998",dark:"#CE8CC1",role:"",note:"Land held by family and tribe; the Levites, who were given none, and the tithe given them instead; and the kings who took it."},
   bridge:{name:"The temple tax",light:"#B4553C",dark:"#D97B60",role:"hub",note:"The half-shekel levy for the temple, and the one scene where anyone reasons about paying it."},
   imperial:{name:"Imperial tax",light:"#2F6B84",dark:"#6FA8C4",role:"",note:"Rome and the empires before it: census, tribute, and whether paying is lawful."},
+  kings:{name:"Kings and their levies",light:"#6749AB",dark:"#9B7BE0",role:"",note:"Israel's own kings and what they took: Samuel's warning, Solomon's levies and forced labour, and the revolt they provoked."},
   collector:{name:"Tax collectors",light:"#7E6E9B",dark:"#A392C4",role:"",note:"The trade, the men who worked it, and how they were treated."},
   critique:{name:"Tithing weighed",light:"#6E8A5E",dark:"#93B182",role:"",note:"The two woes and a boast, where tithing is set against the weightier matters and found lighter."},
   hebrews:{name:"The Hebrews 7 argument",light:"#9A8352",dark:"#C2A86E",role:"",note:"The argument of Hebrews 7: Melchizedek outranks Levi, so the priesthood changes and the law with it."},
@@ -446,7 +473,7 @@ const N = [
   ["tithe:e1","Exodus 30:13","anchor","A half-shekel census payment, the same from rich and poor alike.","tithe"],
   ["tithe:m1","Malachi 3:8","anchor","Withholding tithes and offerings named as robbing God.","tithe"],
   ["tithe:a1","Amos 4:4","anchor","Israel summoned to Bethel to transgress, tithes listed among the offerings.","tithe"],
-  ["tithe:s1","1 Samuel 8:15","anchor","The king will take a tenth of grain and vineyards for his officers and courtiers.","tithe"],
+  ["tithe:s1","1 Samuel 8:15","kings","The king will take a tenth of grain and vineyards for his officers and courtiers.","tithe"],
   ["tithe:t1","Matthew 17:24","bridge","Collectors of the temple tax ask Peter whether his teacher pays it.","tithe"],
   ["tithe:t2","Matthew 17:25","bridge","Jesus asks from whom kings take toll or tribute — their children, or others.","tithe"],
   ["tithe:t3","Matthew 17:26","bridge","Peter answers 'from others', and Jesus concludes the children are free.","tithe"],
@@ -621,6 +648,66 @@ const N = [
   ["tithe:p10","Matthew 25:18","entrusted","The third slave digs a hole and buries what he was given.","tithe"],
   ["tithe:z10","Matthew 27:3","price","Remorse, and the silver carried back to the priests.","tithe"],
   ["tithe:y9","Acts 3:6","purse","No coin to give; what he has is given instead.","tithe"],
+  ["tithe:kg1","Deuteronomy 17:17","kings","The law limits the king: no hoard of silver and gold of his own.","tithe"],
+  ["tithe:kg2","1 Samuel 8:11","kings","Samuel's warning opens: your sons will be conscripted as runners for the royal chariots.","tithe"],
+  ["tithe:kg3","1 Samuel 8:14","kings","The choicest farmland, vineyards and olive groves will be confiscated for the king's courtiers.","tithe"],
+  ["tithe:kg4","1 Samuel 8:16","kings","He will take servants and the best livestock for his own work.","tithe"],
+  ["tithe:kg5","1 Samuel 8:17","kings","A tenth of the flocks as well, and the people themselves become his slaves.","tithe"],
+  ["tithe:kg6","1 Samuel 8:18","kings","On that day the people will plead to be rid of their chosen king, and get no answer from the LORD.","tithe"],
+  ["tithe:kg7","2 Samuel 8:2","kings","David's conquest turns Moab into a people who pay him tribute.","tithe"],
+  ["tithe:kg8","1 Kings 4:7","kings","Twelve district officers each feed Solomon's court for one month a year.","tithe"],
+  ["tithe:kg9","1 Kings 5:13","kings","Solomon drafts thirty thousand Israelites into a labour levy.","tithe"],
+  ["tithe:kg10","1 Kings 9:15","kings","The forced labour behind the temple, the palace and the fortified cities.","tithe"],
+  ["tithe:kg11","1 Kings 10:15","kings","Solomon's yearly gold, before the takings from merchants, traders and governors are counted.","tithe"],
+  ["tithe:kg12","1 Kings 12:4","kings","The tribes ask Rehoboam to lighten the heavy yoke his father put on them.","tithe"],
+  ["tithe:kg13","1 Kings 12:14","kings","Rehoboam answers that he will make the yoke heavier still.","tithe"],
+  ["tithe:kg14","1 Kings 12:18","kings","The overseer of the labour gangs is stoned, and the king flees to Jerusalem.","tithe"],
+  ["tithe:kg15","2 Kings 15:20","kings","Menahem raises fifty shekels from every wealthy man to buy off Assyria.","tithe"],
+  ["tithe:kg16","2 Kings 23:35","kings","Jehoiakim assesses the land, each by his means, to meet Pharaoh's demand.","tithe"],
+  ["tithe:kg17","Proverbs 29:4","kings","Justice steadies a country; a ruler who extracts levies wrecks it.","tithe"],
+  ["tithe:kg18","Jeremiah 22:13","kings","Woe to the king who builds his palace on the unpaid work of his neighbours.","tithe"],
+  ["tithe:kg19","Ezekiel 45:9","kings","The princes are told to stop their violence and stop driving the people off their land.","tithe"],
+  ["tithe:em1","Genesis 47:20","imperial","Famine forces Egypt to sell its land, and all of it becomes Pharaoh's.","tithe"],
+  ["tithe:em2","Genesis 47:24","imperial","The terms: a fifth of every harvest to Pharaoh, four fifths kept for seed and food.","tithe"],
+  ["tithe:em3","Genesis 47:26","imperial","Joseph makes Pharaoh's fifth a standing law; only the priests' land is exempt.","tithe"],
+  ["tithe:em4","Exodus 1:11","imperial","Egypt sets gang bosses over Israel and builds Pharaoh's store cities with their forced work.","tithe"],
+  ["tithe:em5","2 Kings 17:3","imperial","Hoshea submits to Assyria and pays it tribute.","tithe"],
+  ["tithe:em6","2 Kings 17:4","imperial","He stops the yearly payment and looks to Egypt, and Assyria imprisons him.","tithe"],
+  ["tithe:em7","2 Kings 18:14","imperial","Hezekiah admits fault and pays Assyria's demand: 300 talents of silver","tithe"],
+  ["tithe:em8","2 Kings 23:33","imperial","Pharaoh Neco deposes Jehoahaz and lays a levy of silver and gold on Judah.","tithe"],
+  ["tithe:em9","Ezra 4:13","imperial","Opponents warn Persia that a rebuilt Jerusalem will stop paying tribute, duty and toll.","tithe"],
+  ["tithe:em10","Ezra 7:24","imperial","Persia forbids any tribute, duty or toll on the temple's priests and servants.","tithe"],
+  ["tithe:em11","Nehemiah 9:37","imperial","The land's harvest goes to foreign kings, who rule even over the people's bodies and herds.","tithe"],
+  ["tithe:em12","Esther 10:1","imperial","Xerxes lays a levy on his whole empire, out to the farthest coasts.","tithe"],
+  ["tithe:em13","Daniel 11:20","imperial","A coming ruler sends out an exactor to enrich his kingdom, and soon falls.","tithe"],
+  ["tithe:in1","Numbers 18:20","inherit","Aaron is told he will hold no land: the LORD is his share and his inheritance.","tithe"],
+  ["tithe:in2","Numbers 18:23","inherit","The Levites serve at the tent and receive no inheritance among the tribes.","tithe"],
+  ["tithe:in3","Numbers 18:24","inherit","In place of land, the Levites are assigned Israel's tithe as what they inherit.","tithe"],
+  ["tithe:in4","Numbers 27:8","inherit","When a man dies without a son, his inheritance passes to his daughter.","tithe"],
+  ["tithe:in5","Numbers 36:7","inherit","Tribal holdings may not be transferred between tribes; each keeps its ancestral land.","tithe"],
+  ["tithe:in6","Deuteronomy 10:9","inherit","Levi is left out of the land-sharing; God himself is the tribe's holding.","tithe"],
+  ["tithe:in7","Deuteronomy 18:1","inherit","The Levitical priests hold no land and live on the offerings made by fire.","tithe"],
+  ["tithe:in8","Joshua 13:14","inherit","When the land is divided, Levi alone gets none; the offerings are its inheritance.","tithe"],
+  ["tithe:in9","Ezekiel 44:28","inherit","In the restored temple the priests again hold no property: the LORD is theirs.","tithe"],
+  ["tithe:in10","1 Kings 21:3","inherit","Naboth refuses to give King Ahab the vineyard his fathers left him.","tithe"],
+  ["tithe:in11","Ezekiel 46:18","inherit","The prince may not seize the people's inheritance; he must provide for his sons from his own.","tithe"],
+  ["tithe:in12","Micah 2:2","inherit","Land-grabbers want fields and take them, stripping families of house and holding.","tithe"],
+  ["tithe:in13","Psalm 16:5","inherit","The psalmist calls the LORD his share and his cup.","tithe"],
+  ["tithe:in14","Lamentations 3:24","inherit","With everything lost, the poet still names the LORD as his share, and hopes.","tithe"],
+  ["tithe:in15","Proverbs 13:22","inherit","A good man leaves an inheritance to his grandchildren.","tithe"],
+  ["tithe:in16","Luke 12:13","inherit","A man in the crowd asks Jesus to make his brother split the inheritance.","tithe"],
+  ["tithe:in17","Luke 12:14","inherit","Jesus refuses to act as judge or arbiter between them.","tithe"],
+  ["tithe:in18","Luke 15:12","inherit","The younger son asks for his share of the estate, and the father divides it.","tithe"],
+  ["tithe:in19","1 Peter 1:4","inherit","An inheritance kept in heaven that cannot decay, spoil or fade.","tithe"],
+  ["tithe:in20","Galatians 4:7","inherit","The believer's status changes from slave to son, and a son inherits.","tithe"],
+  ["tithe:dt1","Deuteronomy 14:22","anchor","Set aside a tenth of the field's yield every year.","tithe"],
+  ["tithe:dt2","Deuteronomy 14:23","anchor","The giver eats the tithe before the LORD at the chosen place, to learn to fear him.","tithe"],
+  ["tithe:dt3","Deuteronomy 14:24","anchor","If the chosen place is too far to carry the produce there,","tithe"],
+  ["tithe:dt4","Deuteronomy 14:25","anchor","turn the tithe into silver and carry the silver instead.","tithe"],
+  ["tithe:dt5","Deuteronomy 14:26","anchor","Spend it on whatever you like, wine and strong drink included, and feast with your household.","tithe"],
+  ["tithe:dt6","Deuteronomy 14:27","anchor","Do not forget the Levite in your town, who has no land of his own.","tithe"],
+  ["tithe:dt7","Deuteronomy 14:28","anchor","Every third year the whole tithe of the harvest is stored in the towns.","tithe"],
+  ["tithe:ml1","Malachi 3:10","anchor","Bring the whole tithe to the storehouse, and test whether heaven opens in blessing.","tithe"],
 ];
 const E = [
   ["tithe:t1","tithe:e1","ref","supports","The half-shekel of Exodus is the statutory ancestor of the tax being collected here."],
@@ -846,6 +933,82 @@ const E = [
   ["tithe:z10","tithe:z9","con","states","The price agreed, then carried back."],
   ["tithe:z10","tithe:v12","con","states","Brought back to the priests, and refused by the treasury."],
   ["tithe:y9","tithe:y2","con","supports","A fellowship that sold what it had, and an apostle with no coin on him."],
+  ["tithe:s1","tithe:g1","con","supports","The tenth Abram gave freely to a priest-king, here taken by a king."],
+  ["tithe:s1","tithe:m1","con","supports","Two claimants to one fraction: the king takes the tenth; Malachi says withholding it robs God."],
+  ["tithe:kg5","tithe:t2","con","supports","Samuel's answer to Jesus' question: the king takes from his own people, until they are his slaves."],
+  ["tithe:kg5","tithe:t3","con","spec","Under Samuel's king the people become slaves; in Jesus' answer the sons go free."],
+  ["tithe:kg5","tithe:l2","con","supports","The tenth of the flock: holy to the LORD in Leviticus, claimed by the king in Samuel."],
+  ["tithe:kg2","tithe:kg3","con","states","Samuel's list of what the king will take, continued."],
+  ["tithe:kg3","tithe:s1","con","states","Samuel's list of what the king will take, continued."],
+  ["tithe:s1","tithe:kg4","con","states","Samuel's list of what the king will take, continued."],
+  ["tithe:kg4","tithe:kg5","con","states","Samuel's list of what the king will take, continued."],
+  ["tithe:kg5","tithe:kg6","con","states","The list ends in the outcry it predicts."],
+  ["tithe:kg1","tithe:s1","con","supports","The law limits the king; Samuel describes a king without limits."],
+  ["tithe:kg1","tithe:kg11","con","supports","The law forbade the king a hoard of gold; Solomon's revenue is the hoard."],
+  ["tithe:kg8","tithe:s1","con","supports","Officers drawing the court's food from the land, as Samuel said the king's men would."],
+  ["tithe:kg9","tithe:kg10","lex","states","The same word for the labour levy, and what it built."],
+  ["tithe:kg10","tithe:kg14","lex","states","The same forced labour; its overseer is killed when the kingdom breaks."],
+  ["tithe:kg6","tithe:kg12","con","supports","The outcry Samuel foretold, made to Solomon's son."],
+  ["tithe:kg12","tithe:kg13","con","states","The request, and the refusal."],
+  ["tithe:kg13","tithe:kg14","con","states","The heavier yoke, answered with stones."],
+  ["tithe:kg17","tithe:kg13","con","supports","The proverb played out: the heavy levy tears the kingdom apart."],
+  ["tithe:kg15","tithe:kg16","con","supports","Kings raising an empire's price from their own people, each by his wealth."],
+  ["tithe:kg18","tithe:w2","con","supports","A king who keeps back pay breaks the law that protects the hired worker."],
+  ["tithe:kg18","tithe:w4","con","supports","Wages held back, crying out against those who held them."],
+  ["tithe:kg19","tithe:kg3","con","supports","The seizing of land Samuel foresaw, ordered stopped."],
+  ["tithe:kg7","tithe:em5","lex","supports","The same word for tribute: Israel's king collects it from Moab, a later king pays it to Assyria."],
+  ["tithe:em1","tithe:em2","con","states","Joseph's arrangement with Egypt, continued."],
+  ["tithe:em2","tithe:em3","con","states","Joseph's arrangement with Egypt, made law."],
+  ["tithe:em3","tithe:s1","con","supports","A fifth of the harvest for Pharaoh; a tenth for Israel's king."],
+  ["tithe:em3","tithe:em10","con","supports","Two empires exempt the priests: Pharaoh's keep their land, Persia's temple staff pay no toll."],
+  ["tithe:em10","tithe:t3","con","spec","Persia exempts the temple's servants from toll; Jesus says the sons are free."],
+  ["tithe:em9","tithe:em10","lex","states","The same three levies, tribute, duty and toll: feared lost, then waived for the temple."],
+  ["tithe:em4","tithe:kg9","lex","supports","The forced labour Israel suffered in Egypt, imposed by Solomon on Israel."],
+  ["tithe:em5","tithe:em6","con","states","The tribute paid, then withheld."],
+  ["tithe:em7","tithe:kg15","con","supports","Israel's and Judah's kings each buy off Assyria with silver."],
+  ["tithe:kg16","tithe:em8","con","states","Neco's levy, and how Jehoiakim raised it from the land."],
+  ["tithe:em11","tithe:i23","con","supports","The harvest going to foreign kings; families borrowing against their land to meet the royal levy."],
+  ["tithe:em12","tithe:i1","con","supports","An emperor reaching his whole empire, with a levy and with a registration."],
+  ["tithe:em13","tithe:c11","con","supports","An empire's exactor, and the instruction given to the collectors: no more than is set."],
+  ["tithe:in1","tithe:n1","con","states","No land for the Levites, so the tithe is given instead."],
+  ["tithe:in2","tithe:in3","con","states","No inheritance among the tribes, and what is given in its place."],
+  ["tithe:in3","tithe:n1","lex","states","The tithe named as the Levites' inheritance, twice in four verses."],
+  ["tithe:in6","tithe:in1","ref","supports","Deuteronomy recalls the promise of Numbers 18: the LORD is Levi's inheritance."],
+  ["tithe:in7","tithe:in6","lex","states","No share and no inheritance: the same rule for Levi, restated."],
+  ["tithe:in8","tithe:in7","lex","states","The rule carried out when the land is divided."],
+  ["tithe:in9","tithe:in1","lex","supports","Ezekiel restates the Levitical rule for the restored temple."],
+  ["tithe:d1","tithe:in6","lex","states","The third-year tithe is for the Levite because he has no share or inheritance."],
+  ["tithe:dt6","tithe:in6","lex","states","The same reason given: the Levite has no share or inheritance."],
+  ["tithe:h3","tithe:in3","ref","supports","Hebrews' commandment that the Levites collect the tithe is this one."],
+  ["tithe:in10","tithe:kg3","con","supports","The king who takes the best vineyards meets a man who will not sell his."],
+  ["tithe:in10","tithe:in11","con","supports","Ezekiel forbids the prince what Ahab did."],
+  ["tithe:in11","tithe:kg19","con","states","Ezekiel's charter for the prince: no violence, no seizing the people's land."],
+  ["tithe:in12","tithe:in10","con","supports","Fields coveted and seized, as Ahab seized Naboth's."],
+  ["tithe:in4","tithe:in5","con","supports","Inheritance kept in the family line, and in the tribe."],
+  ["tithe:in5","tithe:r6","con","supports","Land stays with its family: by tribe here, by the jubilee there."],
+  ["tithe:in13","tithe:in1","lex","supports","The priests' portion claimed by a worshipper: the LORD as one's share."],
+  ["tithe:in14","tithe:in13","lex","supports","The LORD as one's share, said out of loss."],
+  ["tithe:in15","tithe:in4","con","supports","An inheritance kept for the generations that follow."],
+  ["tithe:in16","tithe:in17","con","states","The request, and the refusal."],
+  ["tithe:in17","tithe:v10","con","supports","Refusing to divide an estate, Jesus turns the talk to where treasure is kept."],
+  ["tithe:in18","tithe:c13","con","states","The parable of the two sons is told to an audience of tax collectors and sinners."],
+  ["tithe:in19","tithe:f7","con","supports","The same letter sets an imperishable inheritance against perishable silver and gold."],
+  ["tithe:in19","tithe:k5","con","supports","Wealth kept in heaven, out of reach of decay."],
+  ["tithe:in20","tithe:t3","con","spec","A son, not a slave, and so an heir; the sons are free."],
+  ["tithe:in20","tithe:kg5","con","spec","Slaves of the king in Samuel; sons and heirs in Paul."],
+  ["tithe:dt1","tithe:dt2","con","states","The tithe law of Deuteronomy 14, continued."],
+  ["tithe:dt2","tithe:dt3","con","states","The tithe law of Deuteronomy 14, continued."],
+  ["tithe:dt3","tithe:dt4","con","states","The tithe law of Deuteronomy 14, continued."],
+  ["tithe:dt4","tithe:dt5","con","states","The tithe law of Deuteronomy 14, continued."],
+  ["tithe:dt5","tithe:dt6","con","states","The tithe law of Deuteronomy 14, continued."],
+  ["tithe:dt6","tithe:dt7","con","states","The tithe law of Deuteronomy 14, continued."],
+  ["tithe:dt7","tithe:d1","con","states","The third-year tithe, and who eats it."],
+  ["tithe:dt1","tithe:l1","con","supports","Two statements of the yearly tithe of the field."],
+  ["tithe:dt2","tithe:n1","con","supports","Here the giver eats the tithe; in Numbers it goes to the Levites. Two rules to reconcile."],
+  ["tithe:dt4","tithe:x1","con","spec","Tithe turned into money for the journey; the exchange trade later filled the temple court."],
+  ["tithe:ml1","tithe:m1","con","states","Malachi's charge of robbery, then the command."],
+  ["tithe:ml1","tithe:n1","con","supports","The tithe feeds the house of God, as Numbers assigned it to its servants."],
+  ["tithe:ml1","tithe:dt7","lex","states","The tenth laid up in store: in the towns, in the storehouse."],
 ];
 // </corpus>
 
@@ -1242,6 +1405,16 @@ const MO_IDS = Object.fromEntries(
         .map(([k,o]) => [k, new Set(o.nodes.split(' '))]));
 let query='', picked=null, hovered=null;
 
+// Ethan's rule for titles and labels: Title Case, every word, "and" as "&".
+// Display only: group, motif and link-kind names stay as the CSVs write them,
+// because search and the Word Study read the plain names.
+function titleCase(s){
+  return String(s).split(/(\s+)/).map(w=>{ const ps=w.split('-'); return ps.map(p=>{
+    const m=p.match(/^([^\p{L}\p{N}]*)(.*?)([^\p{L}\p{N}]*)$/su);
+    return ps.length===1 && /^and$/i.test(m[2]) ? m[1]+'&'+m[3] : m[1]+m[2].charAt(0).toUpperCase()+m[2].slice(1)+m[3];
+  }).join('-'); }).join('');
+}
+
 // Selection toggles by identity, so a fresh {kind:'cluster'} per click would
 // make a second click fail to deselect. Same reason bookFocus exists.
 const clusterFocus = Object.fromEntries(
@@ -1256,7 +1429,7 @@ function build(host, map, set, kind){
     else if(kind==='wa'){ mark.className='swatch'; mark.style.borderTopColor=`var(${o.v})`; }
     else { mark.className='swatch'; mark.style.borderTopColor='var(--ink-3)';
            if(o.dash) mark.style.borderTopStyle = o.dash==='7 4' ? 'dashed' : 'dotted'; }
-    const txt=document.createElement('span'); txt.textContent=o.name;
+    const txt=document.createElement('span'); txt.textContent=titleCase(o.name);
     // Until now the rail named eighteen groups and explained none of them.
     if(o.note) lab.title = o.name + ' \u2014 ' + o.note;
     if(kind==='cl'){
@@ -1301,7 +1474,7 @@ build(document.getElementById('types'),TY,onTy,'ty');
     const lab=document.createElement('label'); lab.className='row'; lab.tabIndex=0;
     const cb=document.createElement('input'); cb.type='checkbox'; cb.checked=false;
     const txt=document.createElement('span'); txt.className='mn';
-    txt.textContent=o.name;
+    txt.textContent=titleCase(o.name);
     const sc=document.createElement('span'); sc.className='scope';
     sc.textContent=MO_IDS[k].size+' / '+o.scope;
     lab.title=o.note+'  This corpus: '+MO_IDS[k].size+' passages. Whole Bible: '+o.scope+' verses.';
@@ -1342,7 +1515,11 @@ function focused(){
   // selection to compare it against. The readout still names the arc either
   // way, so nothing becomes undiscoverable. Passages and book labels are
   // discrete targets and keep highlighting on hover as before.
-  if(isEdge(hovered) && !picked) return null;
+  // Once something IS selected, arc hover must not replace it either: reaching
+  // for a lit arc means crossing others, and each one swapped the selection's
+  // highlight for its own two ends (Ethan, 13 Oct). The hovered arc is drawn
+  // full-strength instead (.ehov) and the readout names it.
+  if(isEdge(hovered)) return picked;
   return hovered || picked;
 }
 
@@ -1396,15 +1573,15 @@ function showReadout(f){
   let main, kind;
   if(isBook(f)){
     const c=nodes.filter(n=>n.book===f.book).length;
-    main=f.book; kind=c===1 ? '1 passage' : c+' passages';
+    main=f.book; kind=c===1 ? '1 Passage' : c+' Passages';
   } else if(isCluster(f)){
     const c=nodes.filter(n=>n.cl===f.cl).length;
-    main=CL[f.cl].name; kind=c===1 ? '1 passage' : c+' passages';
+    main=titleCase(CL[f.cl].name); kind=c===1 ? '1 Passage' : c+' Passages';
   } else if(isEdge(f)){
     main=`${f.s.ref}  →  ${f.t.ref}`;
-    kind=`${TY[f.ty].name} · ${WA[f.wa].name}`;
+    kind=titleCase(`${TY[f.ty].name} · ${WA[f.wa].name}`);
   } else {
-    main=f.ref; kind=CL[f.cl].name;
+    main=f.ref; kind=titleCase(CL[f.cl].name);
   }
   readout.textContent=main;
   const k=document.createElement('span'); k.className='rk'; k.textContent=kind;
@@ -1457,6 +1634,7 @@ function draw(){
     e.el.classList.toggle('dim', ok && ((f ? !litEdge(e,f) : false)
                           || (mo ? !(mo.has(e.s.id) && mo.has(e.t.id)) : false)));
     e.el.classList.toggle('esel', e===picked);
+    e.el.classList.toggle('ehov', e===hovered && !!picked);
   });
   for(const b in bookLabels){
     bookLabels[b].classList.toggle('mag', isBook(f) && f.book===b);
@@ -1530,12 +1708,12 @@ function chapterLink(n){
   a.target='_blank'; a.rel='noopener noreferrer';
   a.textContent=n.ref;
   a.title=`${n.ref} on Bible Hub — every major translation of this verse, side by side`;
-  const s=document.createElement('span'); s.className='ext'; s.textContent='compare ↗';
+  const s=document.createElement('span'); s.className='ext'; s.textContent='Compare ↗';
   const g=document.createElement('a'); g.className='chap';
   g.href='https://www.biblegateway.com/passage/?search='
         + encodeURIComponent(n.book+' '+n.chap) + '&version=NRSVUE';
   g.target='_blank'; g.rel='noopener noreferrer';
-  g.textContent=`read ${n.book} ${n.chap} in full ↗`;
+  g.textContent=`Read ${n.book} ${n.chap} In Full ↗`;
   g.title=`Open the whole of ${n.book} ${n.chap} on Bible Gateway (NRSVUE)`;
   return [a,s,g];
 }
@@ -1562,7 +1740,7 @@ function renderEmpty(){
 function renderNode(n){
   const h=document.createElement('p'); h.className='ref';
   h.append(...chapterLink(n));
-  const tg=document.createElement('span'); tg.className='tag'; tg.textContent=CL[n.cl].name;
+  const tg=document.createElement('span'); tg.className='tag'; tg.textContent=titleCase(CL[n.cl].name);
   panel.append(h,tg);
   const full = (window.NRSV||{})[n.ref];
   if(hasStudy(n)){
@@ -1590,7 +1768,7 @@ function renderNode(n){
   const mine=edges.filter(e=>e.s===n||e.t===n)
     .filter(e=>onWa.has(e.wa)&&onTy.has(e.ty));
   const h3=document.createElement('h3');
-  h3.textContent = mine.length===1 ? '1 connection' : mine.length+' connections';
+  h3.textContent = mine.length===1 ? '1 Connection' : mine.length+' Connections';
   panel.append(h3);
   mine.sort((a,b)=>['states','supports','spec'].indexOf(a.wa)-['states','supports','spec'].indexOf(b.wa));
   mine.forEach(e=>{
@@ -1601,7 +1779,7 @@ function renderNode(n){
   });
 }
 
-const JOIN = {lex:'shares wording with', ref:'cites', con:'connects to'};
+const JOIN = {lex:'Shares Wording With', ref:'Cites', con:'Connects To'};
 function renderEdge(e){
   const h=document.createElement('p'); h.className='ref';
   h.append(...chapterLink(e.s));
@@ -1609,13 +1787,13 @@ function renderEdge(e){
   h.append(ar);
   h.append(...chapterLink(e.t));
   const tg=document.createElement('span'); tg.className='tag';
-  tg.textContent = TY[e.ty].name+' · '+WA[e.wa].name;
+  tg.textContent = titleCase(TY[e.ty].name+' · '+WA[e.wa].name);
   panel.append(h,tg);
   if(e.note){
     const g=document.createElement('p'); g.className='gist'; g.textContent=e.note;
     panel.append(g);
   }
-  const h3=document.createElement('h3'); h3.textContent='Both ends'; panel.append(h3);
+  const h3=document.createElement('h3'); h3.textContent='Both Ends'; panel.append(h3);
   [e.s,e.t].forEach(n=> panel.append(linkRow(n.ref, n.gist, null, ()=>select(n))));
 }
 
@@ -1623,7 +1801,7 @@ function renderBook(f){
   const own = nodes.filter(n=>n.book===f.book).sort((a,b)=>a.chap-b.chap||a.vers-b.vers);
   const h=document.createElement('p'); h.className='ref'; h.textContent=f.book;
   const tg=document.createElement('span'); tg.className='tag';
-  tg.textContent = own.length===1 ? '1 passage' : own.length+' passages';
+  tg.textContent = own.length===1 ? '1 Passage' : own.length+' Passages';
   panel.append(h,tg);
   const h3=document.createElement('h3'); h3.textContent='Passages'; panel.append(h3);
   own.forEach(n=> panel.append(linkRow(n.ref, n.gist, null, ()=>select(n))));
@@ -1633,9 +1811,9 @@ function renderCluster(f){
   const o = CL[f.cl];
   const own = nodes.filter(n=>n.cl===f.cl)
                    .sort((a,b)=> a.ord-b.ord || a.chap-b.chap || a.vers-b.vers);
-  const h=document.createElement('p'); h.className='ref'; h.textContent=o.name;
+  const h=document.createElement('p'); h.className='ref'; h.textContent=titleCase(o.name);
   const tg=document.createElement('span'); tg.className='tag';
-  tg.textContent = own.length===1 ? '1 passage' : own.length+' passages';
+  tg.textContent = own.length===1 ? '1 Passage' : own.length+' Passages';
   panel.append(h,tg);
   if(o.note){
     const g=document.createElement('p'); g.className='gist'; g.textContent=o.note;
@@ -1653,6 +1831,19 @@ function render(){
   if(isEdge(picked)) return renderEdge(picked);
   renderNode(picked);
 }
+// ---- the motif explanation: hover or focus shows it, a tap or click pins it --
+(function motifTip(){
+  const b=document.getElementById('mlabel'), t=document.getElementById('mtip');
+  let pinned=false;
+  const show=on=>{ t.hidden=!on; b.setAttribute('aria-expanded', String(on)); };
+  b.addEventListener('mouseenter',()=>show(true));
+  b.addEventListener('mouseleave',()=>{ if(!pinned) show(false); });
+  b.addEventListener('focus',()=>show(true));
+  b.addEventListener('blur',()=>{ pinned=false; show(false); });
+  b.addEventListener('click',()=>{ pinned=!pinned; show(pinned); });
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape' && !t.hidden){ pinned=false; show(false); } });
+})();
+
 // ---- the About panel -------------------------------------------------------
 (function about(){
   const dlg=document.getElementById('about'), scrim=document.getElementById('scrim'),
