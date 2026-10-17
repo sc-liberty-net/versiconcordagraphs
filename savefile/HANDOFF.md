@@ -174,6 +174,17 @@ Still open, and not part of this ruling: whether that affirmation binds after th
 change of priesthood argued in Hebrews 7. What the sentence means and what it
 obliges now are two decisions, and only the first is made.
 
+*16 Oct follow-up:* the second is now made too. **The affirmation survives Hebrews
+7:12.** Settled by Ethan, answering QUESTIONS.md Q10: that is what Jesus is doing,
+and he will not correct him. Reading 1 (lapsed with the law) is rejected; how it
+survives — reading 3, reading 2, or both — he has left open. The three `con`/`spec`
+edges from `k1` are unchanged: this is a judgement, not a textual warrant, and must
+not be used to promote any of them.
+
+**Summaries that reuse NRSV wording get rewritten.** Settled 16 Oct by Ethan,
+answering QUESTIONS.md Q2. 24 of 244 share a run of five or more words with their
+verse at the time of the ruling.
+
 **Ids are namespaced from `module.json` at build time; a bare id gets the module
 prefix, an id already containing a colon passes through.** Settled 20 Sept. The
 original plan prefixed everything unconditionally, which would have made a

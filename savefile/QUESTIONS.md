@@ -47,7 +47,19 @@ summary shares **no** content word with its verse.
 Room task 54.
 </details>
 
-**Q10 · Does the affirmation in Matthew 23:23 survive Hebrews 7:12?**
+**~~Q10 · Does the affirmation in Matthew 23:23 survive Hebrews 7:12?~~
+ANSWERED 16 October 2026 — it survives.**
+
+Ethan's ruling, in his words: that is what Jesus is doing, and far be it from him to
+correct him. He is not yet sure what the surviving affirmation implies in light of
+Hebrews 7:12, and said so. That rejects reading 1 (lapsed with the law) and leaves
+open whether reading 3 (Hebrews retires the collector, not the tenth), reading 2 (a
+principle outliving its statute), or both describe how it survives. The three `spec`
+edges stay as drawn: the ruling is a judgement, not something a text states, so no
+edge is promoted. Recorded in `HANDOFF.md`.
+
+<details><summary>The question as it stood</summary>
+
 Opened 25 September 2026, the moment Q1 was answered. Q1 settled what the woes
 *mean* — tithing is affirmed as a lighter matter of the law. It did not settle what
 that affirmation *obliges now*, and the two are different questions. Jesus speaks
@@ -107,8 +119,15 @@ Matthew 23:23 now has eleven connections and reaches `hebrews` for the first tim
 **The question itself stays open.** What was settled is how the corpus represents
 it, not which reading is true. That is still Ethan's, and it is the one place here
 where the answer is a theological judgement rather than a measurement. Room task 66.
+</details>
 
-**Q2 · Should the 22 summaries that reuse NRSV wording be rewritten?**
+**~~Q2 · Should the 22 summaries that reuse NRSV wording be rewritten?~~
+ANSWERED 16 October 2026 — yes.** Recounted the same day at 244 nodes: **24 of 244**
+now share a run of five or more words with their verse (longest nine: `q4`, `i5`,
+`h2`, `b6`). Rewriting them is the next corpus job.
+
+<details><summary>The question as it stood</summary>
+
 22 of 151 contain a run of five or more consecutive words lifted from the verse; the
 longest are nine ("Is it lawful to pay taxes to the emperor?", "the patriarch gave him
 a tenth of the spoils"). `../CLAUDE.md` says summaries are paraphrase, never NRSV
@@ -117,6 +136,7 @@ but these are the files that ship, and the README's claim that the page is share
 *because* it carries only references and summaries is less clean than it reads.
 *Needs:* Ethan. Rewriting a summary is an editorial act on his own argument. Room
 task 51.
+</details>
 
 ---
 
