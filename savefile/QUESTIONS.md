@@ -149,6 +149,13 @@ Until it lands, any group name that is not a single lowercase word ships a blank
 on a green build.
 *Needs:* Ethan's go-ahead. Room task 57, and it blocks Q6.
 
+*16 Oct, probed on a scratch copy* (cluster `market` renamed `money changers`):
+`build_graph.py` exits 0 and writes the broken page; `smoke_concordagraph.py` exits 1
+with every count at zero and a console error. So it ships blank only if the smoke step
+is skipped. Separately, `extract_corpus.py`'s cluster regex already matches **0** of 20
+clusters on the current page: it predates the `note:` field, so the recovery tool has
+been dropping the cluster table regardless of quoting.
+
 **~~Q4 · `i3`, `c4`, `c13` carry no connection at all — connect, remove, or keep?~~
 ANSWERED 25 September 2026 — connect. All three.**
 
