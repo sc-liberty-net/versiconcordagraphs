@@ -270,12 +270,12 @@ for b in BOOKS:
 out.append('};')
 out.append('const CL = {')
 for k, name, lt, dk, role, note in CLUSTERS:
-    out.append(f'  {k}:{{name:{j(name)},light:{j(lt)},dark:{j(dk)},'
+    out.append(f'  {j(k)}:{{name:{j(name)},light:{j(lt)},dark:{j(dk)},'
                f'role:{j(role)},note:{j(note)}}},')
 out.append('};')
-# The key is quoted here deliberately. The cluster table above emits {k}: bare,
-# which ships a blank page for any key that is not a single lowercase word -
-# that is QUESTIONS.md Q3, still open. New code should not repeat it.
+# Keys are quoted, here and in the cluster table above. A bare key shipped a
+# blank page for any key that was not a single lowercase word (QUESTIONS.md Q3,
+# fixed 17 Oct 2026). extract_corpus.py reads both forms.
 out.append('const MO = {')
 for k, name, ids, scope, note in MOTIFS:
     qualified = ' '.join(f'{SLUG}:{i}' if ':' not in i else i for i in ids)

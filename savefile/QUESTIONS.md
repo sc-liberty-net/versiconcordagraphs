@@ -142,7 +142,19 @@ task 51.
 
 ## Blocking a second concordagraph
 
-**Q3 · Fix the unquoted cluster key now?**
+**~~Q3 · Fix the unquoted cluster key now?~~ ANSWERED 17 October 2026 — yes, done.**
+`build_graph.py` now quotes every cluster key (the page's 20 group lines are the only
+change to the built page; all four done-list steps pass). `extract_corpus.py` now reads
+the tables as JSON rather than field by field, writes the `note` column, takes `--out`
+so a test never overwrites the real CSVs, and refuses instead of writing a partial
+cluster table. Proved both ways: the `money changers` probe went from a blank page
+(smoke exit 1) to a full one (smoke exit 0); the recovery tool went from 0 clusters
+to 20, and a round trip reproduces the edge and cluster CSVs exactly. The node CSV
+round trip differs in one row, `em7`, which is a separate corpus defect (an unquoted
+comma) logged in the Room. Recorded in `HANDOFF.md`.
+
+<details><summary>The question as it stood</summary>
+
 Two lines: emit `{j(k)}` in `build_graph.py`, and widen `extract_corpus.py`'s cluster
 regex to accept a quoted key. Left undone because it is live code and he was away.
 Until it lands, any group name that is not a single lowercase word ships a blank page
@@ -155,6 +167,7 @@ with every count at zero and a console error. So it ships blank only if the smok
 is skipped. Separately, `extract_corpus.py`'s cluster regex already matches **0** of 20
 clusters on the current page: it predates the `note:` field, so the recovery tool has
 been dropping the cluster table regardless of quoting.
+</details>
 
 **~~Q4 · `i3`, `c4`, `c13` carry no connection at all — connect, remove, or keep?~~
 ANSWERED 25 September 2026 — connect. All three.**

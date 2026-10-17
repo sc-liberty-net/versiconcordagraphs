@@ -16,7 +16,9 @@ an agent's work is in `QUESTIONS.md` instead.
 
 ## Blocking a second concordagraph
 
-**1 · Quote the cluster key.**
+**~~1 · Quote the cluster key.~~ DONE 17 October 2026** — see `QUESTIONS.md` Q3.
+
+**1 · Quote the cluster key.** (as it stood)
 `build_graph.py` emits cluster keys unquoted into a JS object literal; any key that is
 not a bare identifier ships a blank page on a green build. Two lines — emit `{j(k)}`,
 and widen `extract_corpus.py`'s cluster regex to accept a quoted key. Stops at Ethan's

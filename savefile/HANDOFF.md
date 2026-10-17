@@ -185,6 +185,12 @@ not be used to promote any of them.
 answering QUESTIONS.md Q2. 24 of 244 share a run of five or more words with their
 verse at the time of the ruling.
 
+**Cluster keys are quoted in the built page, and `extract_corpus.py` reads the page
+as JSON.** Settled 17 Oct by Ethan, answering QUESTIONS.md Q3. Any key is now safe,
+not just one lowercase word. The recovery tool had been silently returning no
+clusters since the `note` column was added; it now refuses rather than writing a
+partial table, and takes `--out` so it can be tested without touching the real CSVs.
+
 **Ids are namespaced from `module.json` at build time; a bare id gets the module
 prefix, an id already containing a colon passes through.** Settled 20 Sept. The
 original plan prefixed everything unconditionally, which would have made a
