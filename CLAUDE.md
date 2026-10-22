@@ -8,6 +8,24 @@ Hebrew sources and references: consult it alongside BDB for any claim about
 what a Hebrew word means, reading its pages on demand as that file
 describes.
 
+## Where It Ships
+
+Local `main` holds this topic, Taxes, Tithes, & Tribute. A ship pushes it to three
+places, never with force:
+
+- `versicon` (github.com/DrugsForRobots/versiconcordagraphs, private): `main` → its `taxes-and-tithes` branch.
+- `liberty` (github.com/sc-liberty-net/versiconcordagraphs, **public**): `main` → its `taxes-and-tithes` branch.
+- `preserve` (github.com/DrugsForRobots/taxes-tithes-tribute, private): `main` → its `main`.
+  This repo holds this topic and nothing else. It is the preservation copy, made
+  22 Oct 2026 in case the multi-topic repos are ever merged or scrambled. Never push
+  another topic into it, and never delete it.
+
+The live page is the public repo's `gh-pages` branch, folder `taxes-and-tithes/`:
+take a fresh clone into the scratchpad, copy `concordagraph.html` in as `index.html`
+(and `wordstudy.js` when it has changed), commit, push, wait for the Pages build, then
+check https://sc-liberty-net.github.io/versiconcordagraphs/taxes-and-tithes/ at desktop
+and phone width.
+
 ## Never
 
 - **Never add a verse reference from memory.** Every reference must resolve in

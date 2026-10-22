@@ -77,6 +77,10 @@ github.com/DrugsForRobots/versiconcordagraphs and, since 25 September, the
 `gh-pages` branch at
 https://sc-liberty-net.github.io/versiconcordagraphs/taxes-and-tithes/.
 
+*22 Oct 2026:* a third, private repo, github.com/DrugsForRobots/taxes-tithes-tribute,
+holds this topic alone on its `main`, as a preservation copy. `../CLAUDE.md`, "Where It
+Ships", lists all three.
+
 **Anything committed here is now public.** The whole history was scanned before the
 repo went public and no verse-text file was ever committed; keep it that way.
 
