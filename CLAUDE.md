@@ -22,7 +22,8 @@ places, never with force:
 
 The live page is the public repo's `gh-pages` branch, folder `taxes-and-tithes/`:
 take a fresh clone into the scratchpad, copy `concordagraph.html` in as `index.html`
-(and `wordstudy.js` when it has changed), commit, push, wait for the Pages build, then
+(and `wordstudy.js` when it has changed, and the `icons/` folder when `make_icons.py`
+has rewritten it), commit, push, wait for the Pages build, then
 check https://sc-liberty-net.github.io/versiconcordagraphs/taxes-and-tithes/ at desktop
 and phone width.
 

@@ -44,6 +44,7 @@ what will tell you.
 | `index-baseline.json` | The counts the index is reconciled against. Counts only, no scripture — commit it. |
 | `attach_verses.py` | Generates `verses.js` so the page shows full verse text. |
 | `extract_corpus.py` | Pulls the corpus back out of the HTML into CSVs. Recovery tool. |
+| `make_icons.py` | Writes the favicon, home-screen icons and link preview card into `icons/`. The card's arcs are read from the built page, so rerun it after a corpus change. |
 | `make_findings.py` | Regenerates `findings.pdf`. |
 | `findings.pdf` | The substantive results, warrant-tagged. |
 | `lexicon.md` | Coined vocabulary. |

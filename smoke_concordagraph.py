@@ -259,6 +259,22 @@ try:
 
         # --- the chrome -------------------------------------------------------
         P('page heading', ev(page, '() => document.getElementById("hTitle").textContent'))
+        # --- icons and the link preview card (22 Oct): every file the head links to
+        # exists beside the page, and the card is the 1200 x 630 the tags promise
+        heads = ev(page, '''() => [...document.querySelectorAll('link[rel~="icon"], link[rel="apple-touch-icon"], link[rel="manifest"]')]
+            .map(l => l.getAttribute('href'))''')
+        base = os.path.dirname(os.path.abspath(args.page))
+        missing = [h for h in (heads if isinstance(heads, list) else []) if not os.path.isfile(os.path.join(base, h))]
+        P('head icon links', '%d linked, %s' % (len(heads) if isinstance(heads, list) else 0,
+                                               'all present' if not missing else 'missing ' + ', '.join(missing)))
+        card = os.path.join(base, 'icons', 'og-card.png')
+        if os.path.isfile(card):
+            with open(card, 'rb') as f:
+                hdr = f.read(24)
+            P('preview card size', '%dx%d' % (int.from_bytes(hdr[16:20], 'big'), int.from_bytes(hdr[20:24], 'big')))
+        else:
+            P('preview card size', 'MISSING')
+        P('preview card tag', ev(page, '''() => (document.querySelector('meta[property="og:image"]')||{}).content || "NONE"'''))
         P('first rail section', ev(page,
             '() => (document.querySelector(".rail .grp h2")||{}).textContent || "NONE"'))
         P('reset sits over the canvas', ev(page,

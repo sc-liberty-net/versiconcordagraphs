@@ -36,6 +36,9 @@ zoom afterButtons: 0.2575
 zoom afterWheel: 0.2575
 zoom zoomedIn: 0.3219
 page heading: Taxes, Tithes, & Tribute
+head icon links: 4 linked, all present
+preview card size: 1200x630
+preview card tag: https://sc-liberty-net.github.io/versiconcordagraphs/taxes-and-tithes/icons/og-card.png
 first rail section: Find A Passage
 reset sits over the canvas: True
 testament brackets: Old Testament / New Testament below book names: true
