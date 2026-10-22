@@ -144,3 +144,8 @@ source: C:/Users/ethan/AppData/Local/Temp/claude/C--Users-ethan-Desktop-Biblogra
 cause: Ethan, 22 Oct: favicon, home-screen icons and link preview card added (make_icons.py writes icons/). Three new lines: every icon the head links exists beside the page, the card is 1200x630, and the og:image tag names the live folder. Proved: a copy of the page without icons/ reports all four missing and the card MISSING; the previous page reports 0 linked and NONE.
 moved: 0 changed, 3 new, 0 gone (0 allowed, not counted)
 source: C:/Users/ethan/AppData/Local/Temp/claude/C--Users-ethan-Desktop-Biblography/17e8bdf6-db9e-4e8a-bb09-e91292949cb3/scratchpad/new14.out -> smoke-baseline.out
+
+## 2026-10-22 - baseline refreshed: smoke-baseline.out
+cause: Audit F3, 22 Oct: the desktop pass counted console errors only right after load, so a handler that threw during the probes (wheel, filters, groups, About) went unseen and the run passed. New line counts errors raised during the probes and makes each one fatal. Proved: a copy whose wheel handler throws after its first call printed 'console errors during the probes: 2' and exited 1; the real page prints 0 and exits 0.
+moved: 0 changed, 1 new, 0 gone (0 allowed, not counted)
+source: C:/Users/ethan/AppData/Local/Temp/claude/C--Users-ethan-Desktop-Biblography/17e8bdf6-db9e-4e8a-bb09-e91292949cb3/scratchpad/new15.out -> smoke-baseline.out

@@ -1135,7 +1135,10 @@ document.getElementById('hSub').textContent =
 // now refuses to write if a cited book cannot be placed.
 const NT_FIRST = "Matthew";
 nodes.forEach(n=>{
-  const m = n.ref.match(/^((?:[1-4] )?[A-Za-z]+) (\d+):(\d+)$/);
+  // Book names may run to several words (Song of Solomon); a one-word pattern
+  // returned null for them and blanked the page (audit, 22 Oct). build_graph.py
+  // refuses any reference this pattern cannot read.
+  const m = n.ref.match(/^((?:[1-4] )?[A-Za-z]+(?: [A-Za-z]+)*) (\d+):(\d+)$/);
   n.book = m[1]; n.chap = +m[2]; n.vers = +m[3];
   n.ord = BOOKS.indexOf(n.book);
 });

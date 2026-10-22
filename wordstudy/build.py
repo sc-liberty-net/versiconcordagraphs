@@ -15,6 +15,10 @@ LEXFIX = {k: v for k, v in json.load(open(os.path.join(os.path.dirname(os.path.a
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 nodes = list(csv.DictReader(open(os.path.join(ROOT, "corpus_nodes.csv"), encoding="utf-8")))
+# Summaries come from the corpus, not from data/<id>.json: data/ is written by extract.py
+# and keeps whatever summary the corpus had then. On 21 Oct the 24 summaries rewritten
+# off the NRSV were still shipping in their old wording inside wordstudy.js (audit, 22 Oct).
+GIST = {n["id"]: n["gist"] for n in nodes}
 clusters = list(csv.DictReader(open(os.path.join(ROOT, "corpus_clusters.csv"), encoding="utf-8")))
 
 drafted = [n["id"] for n in nodes if os.path.exists(os.path.join(HERE, "authored", n["id"] + ".json"))]
@@ -89,7 +93,7 @@ for vid in passing:
                      "shifted": bool(v.get("lxx_shifted")), "extra": list((lx.get("_extra") or {}).values())}
     kjv = next((t["text"] for t in v["translations"] if t["key"] == "KJV"), "")
     verses.append({"id": vid, "ref": v["ref"], "lang": v["lang"], "cluster": v["cluster"], "group": v["clusterKey"],
-                   "gist": v["gist"], "en": en, "kjv": kjv, "lxx": lxx_verse, "trNote": a.get("tr_note"),
+                   "gist": GIST[vid], "en": en, "kjv": kjv, "lxx": lxx_verse, "trNote": a.get("tr_note"),
                    "trExtra": v.get("tr_extra") or [],
                    "translations": [{"t": t["t"], "r": t["text"]} for t in v["translations"]], "words": words})
 

@@ -77,6 +77,7 @@ motif treasure lights: 14
 motif treasure dims edges: 290
 motif unticked restores to: 0
 search "tithe" hides: 231
+console errors during the probes: 0
 wordstudy.js present: True
 study desktop passages: 244
 study desktop empty note: Each passage opens in this project's own liter

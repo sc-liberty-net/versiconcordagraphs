@@ -442,6 +442,17 @@ try:
             return n;
         }'''))
 
+        # --- errors raised by anything above, not just by loading -------------
+        # The load-time count ran before any probe touched the page, so a
+        # handler that threw on every wheel turn or filter click went unseen
+        # and the run passed (audit, 22 Oct). Count everything since load.
+        after = [e for e in errors if 'verses.js' not in e
+                 and 'Failed to load resource' not in e][len(real):]
+        P('console errors during the probes', len(after))
+        for e in after:
+            P('console error', e[:150])
+            fatal.append('desktop probes: %s' % e)
+
         # --- the Word Study, with wordstudy.js beside the page ----------------
         # Everything above ran without it, which is the page's fallback. Here
         # a second copy carries it, at desktop width and at phone width.

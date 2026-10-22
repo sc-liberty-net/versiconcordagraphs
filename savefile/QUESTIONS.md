@@ -129,6 +129,10 @@ now share a run of five or more words with their verse (longest nine: `q4`, `i5`
 re-quoted so its summary is no longer cut off at the comma. **0 of 244** now share a
 five-word run with the NRSV; the check-by-eye list fell from 13 to 12 (`v3` now shares a
 word with its verse; `i5` was rewritten again for the same reason).
+*22 Oct, correction:* that count covered the corpus, not `wordstudy.js`, which kept the
+summaries extract.py had copied into `wordstudy/data/` and so shipped 25 old ones, 5 with
+NRSV runs, to the live site until today (found by the audit). `wordstudy/build.py` now
+takes summaries from `corpus_nodes.csv`; the rebuilt file matches it on all 244.
 
 <details><summary>The question as it stood</summary>
 
