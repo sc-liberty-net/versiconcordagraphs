@@ -205,19 +205,12 @@ button.reset:hover{background:var(--sunk)}
 .node circle{cursor:pointer}
 .node:focus{outline:none}
 .node:focus-visible circle,.node.sel circle{stroke:var(--ink); stroke-width:1.25}
-.seg{display:flex; border:1px solid var(--line); border-radius:7px; overflow:hidden}
-.seg button{
-  flex:1; padding:7px 8px; border:0; background:var(--paper); color:var(--ink-2);
-  font:inherit; font-size:13px; cursor:pointer; border-right:1px solid var(--line);
-}
-.seg button:last-child{border-right:0}
-.seg button[aria-pressed="true"]{background:var(--ink-2); color:var(--surface)}
-.hint{font-size:12.5px; color:var(--ink-3); line-height:1.45; margin:8px 0 0}
 .booklab{font-family:Archivo,sans-serif; font-size:11.5px; fill:var(--ink-2)}
 .booklab.thin:not(.sel){display:none}
 .tick{stroke:var(--line); stroke-width:1}
 .era{stroke:var(--ink-3); stroke-width:1; stroke-dasharray:3 4}
-.eralab{font-family:Archivo,sans-serif; font-size:34px; font-weight:600; letter-spacing:.02em; fill:var(--ink-2)}.node text{font-family:Spectral,Georgia,serif; font-size:11.5px; fill:var(--ink); pointer-events:auto; cursor:pointer}
+.tbracket{fill:none; stroke:var(--ink-3); stroke-width:1.25; vector-effect:non-scaling-stroke}
+.tlab{font-family:Archivo,sans-serif; font-size:13px; font-weight:600; letter-spacing:.04em; fill:var(--ink-2)}.node text{font-family:Spectral,Georgia,serif; font-size:11.5px; fill:var(--ink); pointer-events:auto; cursor:pointer}
 .dim{opacity:.12}
 .hide{display:none}
 
@@ -384,14 +377,6 @@ path.edge.ehov{opacity:1; stroke-width:3; stroke-opacity:1}
 </div>
 <div class="main">
   <div class="rail">
-    <div class="grp hide">
-      <h2>Arrangement</h2>
-      <div class="seg">
-        <button id="mGroup" aria-pressed="false">By Group</button>
-        <button id="mCanon" aria-pressed="true">Bible Order</button>
-      </div>
-      <p class="hint" id="modeHint"></p>
-    </div>
     <div class="grp">
       <h2>Find A Passage</h2>
       <input type="search" id="q" placeholder="Matthew 22, tithe, widow…" autocomplete="off">
@@ -1092,12 +1077,11 @@ const TY = {
   con:{name:"Same idea", dash:"1.5 4"}
 };
 
-// The "by group" arrangement is HIDDEN, not removed. Everything behind it is
-// still here and still runs — the relax() layout, each node's gx/gy, the group
-// hint, setMode('group'). Flip this to true to put the control back.
-const SHOW_GROUP_LENS = false;
+// The "by group" network arrangement was removed on 21 Oct (Ethan): hidden since
+// 20 Sept, it showed a tangle rather than a finding, and its layout cost 60 ms
+// on every load (about 250 ms on a mid phone). Bible order is the only layout.
 
-const nodes = N.map(([id,ref,cl,gist,mod])=>({id,ref,cl,gist,mod,x:0,y:0,vx:0,vy:0}));
+const nodes = N.map(([id,ref,cl,gist,mod])=>({id,ref,cl,gist,mod,x:0,y:0}));
 const byId = Object.fromEntries(nodes.map(n=>[n.id,n]));
 const edges = E.map(([s,t,ty,wa,note])=>({s:byId[s],t:byId[t],ty,wa,note}));
 const deg = {}; edges.forEach(e=>{deg[e.s.id]=(deg[e.s.id]||0)+1; deg[e.t.id]=(deg[e.t.id]||0)+1});
@@ -1125,50 +1109,7 @@ document.getElementById('hSub').textContent =
   + 'its kind and how much weight the text puts behind it. Click a passage, an arc or a '
   + 'book label to read what it connects to.';
 
-// ---- layout: cluster anchors, then relax -----------------------------------
-const order = Object.keys(CL);
-const W=1180, H=880;
-const anchors = {};
-order.forEach((k,i)=>{
-  const ang = (i/order.length)*Math.PI*2 - Math.PI/2;
-  const rad = k===HUB ? 0 : 320;               // the hub cluster sits in the middle
-  anchors[k] = {x: W/2 + Math.cos(ang)*rad*1.28, y: H/2 + Math.sin(ang)*rad};
-});
-nodes.forEach((n,i)=>{
-  const a = anchors[n.cl];
-  n.x = a.x + Math.cos(i*2.4)*70; n.y = a.y + Math.sin(i*2.4)*70;
-});
-function relax(steps){
-  for(let s=0;s<steps;s++){
-    for(let i=0;i<nodes.length;i++){
-      const a=nodes[i];
-      for(let j=i+1;j<nodes.length;j++){
-        const b=nodes[j];
-        let dx=b.x-a.x, dy=b.y-a.y, d2=dx*dx+dy*dy||0.01;
-        if(d2<30000){
-          const f=900/d2, d=Math.sqrt(d2);
-          const fx=dx/d*f, fy=dy/d*f;
-          a.vx-=fx; a.vy-=fy; b.vx+=fx; b.vy+=fy;
-        }
-      }
-    }
-    edges.forEach(e=>{
-      const dx=e.t.x-e.s.x, dy=e.t.y-e.s.y, d=Math.hypot(dx,dy)||0.01;
-      const f=(d-110)*0.012;
-      e.s.vx+=dx/d*f; e.s.vy+=dy/d*f; e.t.vx-=dx/d*f; e.t.vy-=dy/d*f;
-    });
-    nodes.forEach(n=>{
-      const a=anchors[n.cl];
-      n.vx+=(a.x-n.x)*0.020; n.vy+=(a.y-n.y)*0.020;
-      n.vx*=0.80; n.vy*=0.80;
-      n.x+=n.vx; n.y+=n.vy;
-    });
-  }
-}
-relax(420);
-nodes.forEach(n=>{ n.gx=n.x; n.gy=n.y; });
-
-// ---- layout 2: canonical order along a baseline ----------------------------
+// ---- layout: canonical order along a baseline ------------------------------
 // BOOKS and ABBR are GENERATED into the corpus block above, in the order the
 // NRSV itself puts them, derived from the verse index. They used to be
 // hardcoded here as eighteen books, which the corpus outgrew: seven cited
@@ -1304,7 +1245,7 @@ function axisLine(cls, x1, y1, x2, y2){
   l.setAttribute('class',cls); gAxis.append(l); return l;
 }
 
-// ---- book axis, drawn only in canonical mode -------------------------------
+// ---- book axis ----------------------------------------------------------------
 const bookLabels = {};
 // One stable focus object per book. Selection toggles by identity, so a fresh
 // {kind:'book'} per event would make a second click fail to deselect. Kept
@@ -1345,87 +1286,68 @@ function buildAxis(){
     const prev=canon[canon.indexOf(first)-1];
     const x=prev ? (prev.ax+first.ax)/2 : first.ax-8;
     axisLine('era', x, BASE_Y-apex-24, x, BASE_Y+81);
-    const el=document.createElementNS(NS,'text');
-    el.setAttribute('class','eralab');
-    // Horizontal: beside the top of the divider. Turned: above its right-hand end.
-    const [ex,ey]=VERT ? rot(x-10, BASE_Y-apex-24) : rot(x+6, BASE_Y-apex-24);
-    el.setAttribute('x',ex); el.setAttribute('y',ey);
-    if(VERT) el.setAttribute('text-anchor','end');
-    el.textContent='New Testament begins';
-    gAxis.append(el);
   }
+  // Two brackets past the book names, one per testament (Ethan, 21 Oct), in place
+  // of a "New Testament begins" label that floated beside the top of the divider.
+  // They run the length of each testament along the spine; how far out they sit
+  // is in screen pixels (placeTestaments), because the book names they clear are
+  // drawn at screen size.
+  const ntOrd = BOOKS.indexOf(NT_FIRST), span = {};
+  canon.forEach(n=>{ const k = n.ord>=ntOrd ? 'nt' : 'ot';
+    const s = span[k] ||= [Infinity,-Infinity];
+    s[0]=Math.min(s[0],n.ax); s[1]=Math.max(s[1],n.ax); });
+  testaments = [['ot','Old Testament'],['nt','New Testament']].filter(([k])=>span[k]).map(([k,name])=>{
+    const g=document.createElementNS(NS,'g'); g.setAttribute('class','testament '+k);
+    const path=document.createElementNS(NS,'path'); path.setAttribute('class','tbracket');
+    const text=document.createElementNS(NS,'text'); text.setAttribute('class','tlab');
+    text.setAttribute('text-anchor','middle'); text.textContent=name;
+    g.append(path,text); gAxis.append(g);
+    return {path, text, lo:span[k][0]-5, hi:span[k][1]+5};
+  });
+}
+let testaments = [];
+// Book names reach about 30 px past their anchor (tilted) or 42 px (upright, at
+// the hover size); each bracket sits just beyond, its arms pointing back at the
+// spine and its name on the far side.
+function placeTestaments(){
+  const inv = 1/vs, off = (VERT ? 50 : 36)*inv, arm = 7*inv, gap = (VERT ? 7 : 17)*inv;
+  const y = BASE_Y + 89 + off, P = (a,b)=>rot(a,b).join(' ');
+  testaments.forEach(t=>{
+    const lo = t.lo + 3*inv, hi = t.hi - 3*inv;   // a visible break where the two meet
+    t.path.setAttribute('d', `M ${P(lo,y-arm)} L ${P(lo,y)} L ${P(hi,y)} L ${P(hi,y-arm)}`);
+    const [tx,ty] = rot((lo+hi)/2, y+gap);
+    t.text.setAttribute('transform', `translate(${tx},${ty}) scale(${inv})${VERT ? ' rotate(-90)' : ''}`);
+  });
 }
 buildAxis();
-gAxis.style.display='none';
 
 // ---- placement -------------------------------------------------------------
-let mode='canon';
-
-function place(arcs){
+function place(){
   nodes.forEach(n=>{
     const [px,py]=rot(n.x,n.y);
     n.circle.setAttribute('cx',px); n.circle.setAttribute('cy',py);
-    if(arcs){
-      n.label.setAttribute('x',0); n.label.setAttribute('y',0);
-      // Below the dot, reading downward; turned, to the left of it, upright.
-      n.label.setAttribute('transform', VERT ? `translate(${px-n.r-7},${py+3.5})`
-                                             : `translate(${px},${py+n.r+7}) rotate(-90)`);
-      n.label.setAttribute('text-anchor','end');
-    } else {
-      n.label.removeAttribute('transform'); n.label.removeAttribute('text-anchor');
-      n.label.setAttribute('x',px+n.r+4); n.label.setAttribute('y',py+3.5);
-    }
+    n.label.setAttribute('x',0); n.label.setAttribute('y',0);
+    // Below the dot, reading downward; turned, to the left of it, upright.
+    n.label.setAttribute('transform', VERT ? `translate(${px-n.r-7},${py+3.5})`
+                                           : `translate(${px},${py+n.r+7}) rotate(-90)`);
+    n.label.setAttribute('text-anchor','end');
   });
   const P=(x,y)=>rot(x,y).join(' ');
   edges.forEach(e=>{
-    let d;
-    if(arcs){
-      const [a,b] = e.s.x<=e.t.x ? [e.s,e.t] : [e.t,e.s];
-      const hh = arcH(e) * (VERT ? ARC_SQUEEZE_V : 1);
-      d = `M ${P(a.x,a.y)} C ${P(a.x,a.y-hh)}, ${P(b.x,b.y-hh)}, ${P(b.x,b.y)}`;
-    } else {
-      d = `M ${P(e.s.x,e.s.y)} L ${P(e.t.x,e.t.y)}`;
-    }
+    const [a,b] = e.s.x<=e.t.x ? [e.s,e.t] : [e.t,e.s];
+    const hh = arcH(e) * (VERT ? ARC_SQUEEZE_V : 1);
+    const d = `M ${P(a.x,a.y)} C ${P(a.x,a.y-hh)}, ${P(b.x,b.y-hh)}, ${P(b.x,b.y)}`;
     e.el.setAttribute('d',d);
     e.hit.setAttribute('d',d);          // the hit stroke tracks the drawn one
   });
 }
 
-const hint=document.getElementById('modeHint');
-const HINTS={
-  group:'Distance and angle mean nothing here — only which group a node belongs to, and its size, which tracks how many connections it has.',
-  canon:'Left to right is the order of the books. An arc\u2019s width and height both track how far the connection reaches across the canon.'
-};
-function setMode(next){
-  if(next==='group' && !SHOW_GROUP_LENS) return;   // hidden lens stays unreachable
-  if(next===mode) return;
-  mode=next;
-  document.getElementById('mGroup').setAttribute('aria-pressed',String(mode==='group'));
-  document.getElementById('mCanon').setAttribute('aria-pressed',String(mode==='canon'));
-  hint.textContent=HINTS[mode];
-  gAxis.style.display = mode==='canon' ? '' : 'none';
-  const from=nodes.map(n=>({x:n.x,y:n.y}));
-  const to=nodes.map(n=> mode==='canon' ? {x:n.ax,y:n.ay} : {x:n.gx,y:n.gy});
-  const t0=performance.now(), dur=matchMedia('(prefers-reduced-motion: reduce)').matches?0:520;
-  (function step(now){
-    const k=dur? Math.min(1,(now-t0)/dur) : 1;
-    const e=k<.5 ? 4*k*k*k : 1-Math.pow(-2*k+2,3)/2;
-    nodes.forEach((n,i)=>{ n.x=from[i].x+(to[i].x-from[i].x)*e; n.y=from[i].y+(to[i].y-from[i].y)*e; });
-    place(k===1 && mode==='canon');
-    if(k<1) requestAnimationFrame(step); else fit();
-  })(performance.now());
-}
-document.getElementById('mGroup').onclick=()=>setMode('group');
-document.getElementById('mCanon').onclick=()=>setMode('canon');
-if(!SHOW_GROUP_LENS) document.getElementById('mGroup').classList.add('hide');
-hint.textContent=HINTS.canon;
 nodes.forEach(n=>{ n.x=n.ax; n.y=n.ay; });
-gAxis.style.display='';
-place(true);
+place();
 
 // ---- viewport --------------------------------------------------------------
 let vx=0, vy=0, vs=1;
-function apply(){ gRoot.setAttribute('transform',`translate(${vx},${vy}) scale(${vs})`); placeBookLabels(); }
+function apply(){ gRoot.setAttribute('transform',`translate(${vx},${vy}) scale(${vs})`); placeBookLabels(); placeTestaments(); }
 // Book labels are counter-scaled so they stay the same size on screen at any
 // zoom. Drawn in the graph's own units they shrank with it: the fitted view
 // opens at about a quarter scale, which put 10.5-unit text at roughly 3 px, and
@@ -1473,16 +1395,21 @@ function graphBBox(){
   const add=b=>{ if(!b.width && !b.height) return;
     x0=Math.min(x0,b.x); y0=Math.min(y0,b.y); x1=Math.max(x1,b.x+b.width); y1=Math.max(y1,b.y+b.height); };
   [gEdge,gNode].forEach(g=>add(g.getBBox()));
-  if(gAxis.style.display!=='none') gAxis.querySelectorAll(':scope > :not(.booklab)').forEach(el=>add(el.getBBox()));
+  // The testament brackets are placed in screen pixels too, so they are left out for the same reason.
+  gAxis.querySelectorAll(':scope > :not(.booklab):not(.testament)').forEach(el=>add(el.getBBox()));
   return x0===Infinity ? {x:0,y:0,width:0,height:0} : {x:x0, y:y0, width:x1-x0, height:y1-y0};
 }
 // Turned, Genesis sits at the top edge, where the "Show Everything Again"
 // button floats; TOP_V keeps a band clear for it.
 const TOP_V = 56;
+// The testament brackets and their names sit past the book names, on the left
+// when turned and below otherwise; AX_ROOM keeps that band on screen.
+const axRoom = () => VERT ? 72 : 56;
 function fitScale(){
   const bb=graphBBox(), r=svg.getBoundingClientRect();
   if(!bb.width || !bb.height) return minScale;
-  return Math.min(r.width/(bb.width+MIN_PAD), (r.height-(VERT?TOP_V:0))/(bb.height+MIN_PAD)) * FIT_MARGIN;
+  return Math.min((r.width-(VERT?axRoom():0))/(bb.width+MIN_PAD),
+                  (r.height-(VERT?TOP_V:axRoom()))/(bb.height+MIN_PAD)) * FIT_MARGIN;
 }
 function clamp(s){ return Math.max(minScale, s); }
 // fit(true) is the opening view. On a phone that is the graph fitted to the
@@ -1492,19 +1419,19 @@ function fit(opening){
   const bb=graphBBox(), r=svg.getBoundingClientRect();
   minScale = fitScale();
   vs = minScale;
+  const left = VERT ? axRoom() : 0, top = VERT ? TOP_V : 0, bottom = VERT ? 0 : axRoom();
   if(VERT && opening===true && bb.width){
-    vs = Math.max(minScale, r.width/(bb.width+MIN_PAD) * FIT_MARGIN);
-    vx=(r.width-bb.width*vs)/2-bb.x*vs; vy=TOP_V+8-bb.y*vs; apply();
+    vs = Math.max(minScale, (r.width-left)/(bb.width+MIN_PAD) * FIT_MARGIN);
+    vx=left+(r.width-left-bb.width*vs)/2-bb.x*vs; vy=TOP_V+8-bb.y*vs; apply();
     return;
   }
-  const top = VERT ? TOP_V : 0;
-  vx=(r.width-bb.width*vs)/2-bb.x*vs; vy=top+(r.height-top-bb.height*vs)/2-bb.y*vs; apply();
+  vx=left+(r.width-left-bb.width*vs)/2-bb.x*vs; vy=top+(r.height-top-bottom-bb.height*vs)/2-bb.y*vs; apply();
 }
 window.addEventListener('resize',fit);
 VERT_MQ.addEventListener('change', e=>{
   VERT = e.matches;
   buildAxis(); labelVs = null;
-  place(mode==='canon'); draw(); fit(true);
+  place(); draw(); fit(true);
 });
 document.getElementById('zin').onclick=()=>{vs=clamp(vs*1.25);apply()};
 document.getElementById('zout').onclick=()=>{vs=clamp(vs/1.25);apply()};
@@ -1680,7 +1607,7 @@ document.getElementById('reset').onclick=()=>{
   document.querySelectorAll('#motifs input[type=checkbox]').forEach(c=>{
     if(c.checked){ c.checked=false; c.dispatchEvent(new Event('change')); }});
   document.getElementById('q').value=''; query=''; picked=null; hovered=null;
-  setMode('canon'); render(); draw(); fit();   // render() too, or the panel keeps the cleared selection
+  render(); draw(); fit();   // render() too, or the panel keeps the cleared selection
 };
 
 function matches(n){

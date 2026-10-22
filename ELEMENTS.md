@@ -40,7 +40,7 @@ broken selector. On a phone the graph and the panel sit below the sidebar, so th
 | G2 | passage dots | Map marker | `.node circle` | `concordagraph.html` | Coloured by group; click selects; view: main; view: p-graph |
 | G3 | connection arcs | Connection line | `path.edge` | `concordagraph.html` | Colour = how strong, dash = what kind; view: main; view: p-graph |
 | G4 | book labels | Map label | `.booklab` | `concordagraph.html` | Click selects the book. Stay 11.5px on screen at any zoom; drop out where they would overlap (13 Oct); view: main; view: p-graph |
-| G5 | testament marker | Map label | `.eralab` | `concordagraph.html` | "New Testament begins"; view: main; view: p-graph |
+| G5 | testament brackets | Map label | `.testament` | `concordagraph.html` | "Old Testament" and "New Testament", a bracket each past the book names, below them on desktop and to their left on phones; replaced the "New Testament begins" label (21 Oct); view: main; view: p-graph |
 | A6 | show everything button | Button | `#reset` | `concordagraph.html` | Clears selection, search and filters; view: main; view: p-graph |
 | G6 | zoom buttons | Zoom controls | `.zoom` | `concordagraph.html` | +, −, fit; view: main; view: p-graph |
 | M2 | graph readout | Tooltip | `#readout` | `concordagraph.html` | Names whatever is under the pointer, below the graph; view: readout |

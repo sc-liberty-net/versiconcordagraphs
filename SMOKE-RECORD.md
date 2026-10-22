@@ -134,3 +134,8 @@ source: C:\Users\ethan\AppData\Local\Temp/claude/C--Users-ethan-Desktop-Biblogra
 cause: Ethan, 21 Oct: How Strong Is The Link, What Kind Of Link and the motifs now fold like the groups (open on desktop, closed on phones), with counts. Three new lines; they read NONE on the previous page. The phone motif-tip tap still reads shown: it went to hidden once the folds made the phone page short (a tap at the page bottom nudged the scroll and the click missed), and the help button now acts on touchend.
 moved: 0 changed, 3 new, 0 gone (0 allowed, not counted)
 source: C:/Users/ethan/AppData/Local/Temp/claude/C--Users-ethan-Desktop-Biblography/17e8bdf6-db9e-4e8a-bb09-e91292949cb3/scratchpad/new11.out -> smoke-baseline.out
+
+## 2026-10-21 - baseline refreshed: smoke-baseline.out
+cause: Ethan, 21 Oct: (1) the hidden 'by group' network view and its Arrangement control removed (relax() cost ~60 ms per load, ~250 ms at 4x throttle): 'rail group lens hidden' and 'arrangement group hidden' gone, 'rail group lens gone' and 'first rail section: Find A Passage' new. (2) Old/New Testament brackets past the book names replace the 'New Testament begins' label: 'era label font-size' gone, two bracket lines new (both read NONE on the previous page). The brackets are drawn at screen offsets, so graph bbox h grows 1550 -> 1650 at the fitted zoom; fit() now reserves 72 px for them on a phone, so the phone graph opens at zoom 0.30 (was 0.37) with 22 book names shown (was 23). Desktop zoom unchanged.
+moved: 3 changed, 4 new, 3 gone (0 allowed, not counted)
+source: C:/Users/ethan/AppData/Local/Temp/claude/C--Users-ethan-Desktop-Biblography/17e8bdf6-db9e-4e8a-bb09-e91292949cb3/scratchpad/new12.out -> smoke-baseline.out

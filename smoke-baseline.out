@@ -10,11 +10,11 @@ drawn ticks: 39
 rail clusters: 20
 rail warrants: 3
 rail kinds: 3
-rail group lens hidden: True
+rail group lens gone: True
 header: 244 passages across 38 books, joined by 299 connections — drawn 
 title: Concordagraph - Taxes & Tithes
 graph bbox w: 2540
-graph bbox h: 1550
+graph bbox h: 1650
 book labels shown at fit: 20
 book label height on screen px: 24
 NRSV payload present: False
@@ -36,9 +36,9 @@ zoom afterButtons: 0.2575
 zoom afterWheel: 0.2575
 zoom zoomedIn: 0.3219
 page heading: Taxes, Tithes, & Tribute
-arrangement group hidden: True
+first rail section: Find A Passage
 reset sits over the canvas: True
-era label font-size: 34px
+testament brackets: Old Testament / New Testament below book names: true
 arc stroke-width states: 1.7
 groups carrying a note: 20
 group row tooltips: 0
@@ -93,9 +93,10 @@ study desktop back to passage: True
 study desktop console errors: 0
 phone graph turned: True
 phone graph taller: True
-phone graph zoom: 0.37
-phone graph labels: 23
+phone graph zoom: 0.3
+phone graph labels: 22
 phone groups folded: True
+phone testament brackets inside the screen width: True
 phone link and motif folds folded: true true true
 study phone tap after a drag selects: True
 study phone near-miss tap selects: a passage

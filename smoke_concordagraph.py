@@ -134,11 +134,12 @@ try:
             clusters: document.querySelectorAll('#clusters .row').length,
             warrants: document.querySelectorAll('#warrants .row').length,
             kinds: document.querySelectorAll('#types .row').length,
-            groupLensHidden: document.getElementById('mGroup').classList.contains('hide')
+            // the network arrangement and its control were removed on 21 Oct
+            groupLensGone: typeof relax === 'undefined' && typeof setMode === 'undefined'
         })''')
         for k in ('clusters', 'warrants', 'kinds'):
             P('rail %s' % k, pick(rail, k))
-        P('rail group lens hidden', pick(rail, 'groupLensHidden'))
+        P('rail group lens gone', pick(rail, 'groupLensGone'))
 
         # --- the header writes itself from the generated counts ---------------
         P('header', ev(page, '() => document.getElementById("hSub").textContent.slice(0,64)'))
@@ -258,12 +259,18 @@ try:
 
         # --- the chrome -------------------------------------------------------
         P('page heading', ev(page, '() => document.getElementById("hTitle").textContent'))
-        P('arrangement group hidden', ev(page,
-            '() => document.querySelector(".grp").classList.contains("hide")'))
+        P('first rail section', ev(page,
+            '() => (document.querySelector(".rail .grp h2")||{}).textContent || "NONE"'))
         P('reset sits over the canvas', ev(page,
             '() => !!document.querySelector(".canvas > .reset.floating")'))
-        P('era label font-size', ev(page,
-            '() => getComputedStyle(document.querySelector(".eralab")).fontSize'))
+        # the testament brackets replaced the "New Testament begins" label (21 Oct):
+        # two of them, named, and both below the book names rather than over the arcs
+        P('testament brackets', ev(page, '''() => {
+            const t = [...document.querySelectorAll('.testament .tlab')];
+            const books = [...document.querySelectorAll('.booklab:not(.thin)')]
+                .map(l => l.getBoundingClientRect().bottom);
+            const below = t.every(x => x.getBoundingClientRect().top > Math.max(...books));
+            return t.map(x => x.textContent).join(' / ') + (t.length ? ' below book names: ' + below : 'NONE'); }'''))
         P('arc stroke-width states', ev(page,
             '() => { const e = edges.find(x => x.wa === "states");'
             ' return e && e.el.getAttribute("stroke-width"); }'))
@@ -454,6 +461,10 @@ try:
                         P('phone graph %s' % k, pick(tg, k))
                     P('phone groups folded', ev(wp,
                         '() => { const d = document.getElementById("grpGroups"); return d ? !d.open : "NONE"; }'))
+                    P('phone testament brackets inside the screen width', ev(wp, '''() => {
+                        const t = [...document.querySelectorAll('.testament')];
+                        return t.length ? t.every(g => { const r = g.getBoundingClientRect();
+                            return r.left >= 0 && r.right <= innerWidth; }) : 'NONE'; }'''))
                     P('phone link and motif folds folded', ev(wp,
                         '() => ["grpWarrants","grpTypes","grpMotifs"].map(i => { const d = document.getElementById(i); return d ? !d.open : "NONE"; }).join(" ")'))
                     # real touch (CDP): a finger drag on the graph, then two taps
