@@ -52,12 +52,12 @@ def emblem(rounded=True):
 CARD = """<!doctype html><html><head><meta charset="utf-8">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@600&family=Archivo:wght@400;600&display=swap">
 <style>
-html,body{margin:0;width:1200px;height:630px;overflow:hidden;background:#EEF0F2}
+html,body{margin:0;width:1200px;height:630px;overflow:hidden;background:#1B2228}
 .t{position:absolute;left:72px;top:64px;width:900px}
-.k{display:flex;align-items:center;gap:16px;font:600 17px Archivo,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#5C6B76}
-.k svg{width:56px;height:56px}
-h1{font:600 80px/1.05 Spectral,Georgia,serif;color:#36454F;margin:22px 0 14px}
-p{font:400 25px/1.4 Archivo,sans-serif;color:#4E5D68;margin:0;width:820px}
+.k{display:flex;align-items:center;gap:16px;font:600 17px Archivo,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#96A4AD}
+.k svg{width:56px;height:56px;box-shadow:0 0 0 1px #3C4750;border-radius:12px}
+h1{font:600 80px/1.05 Spectral,Georgia,serif;color:#ECEFF1;margin:22px 0 14px}
+p{font:400 25px/1.4 Archivo,sans-serif;color:#B4C0C8;margin:0;width:820px}
 svg.arcs{position:absolute;left:0;top:0}
 </style></head><body>
 <svg class="arcs" width="1200" height="630" id="a"></svg>
@@ -69,7 +69,7 @@ const D = __DATA__, NS = 'http://www.w3.org/2000/svg', a = document.getElementBy
 const L = 56, R = 1144, Y = 560, lo = Math.min(...D.xs), hi = Math.max(...D.xs);
 const X = x => L + (x - lo) / (hi - lo) * (R - L);
 const el = (n, at) => { const e = document.createElementNS(NS, n); for (const k in at) e.setAttribute(k, at[k]); a.append(e); return e; };
-const style = {spec: ['#8A8F96', 1.3, '1.5 4'], supports: ['#98620F', 1.7, ''], states: ['#14493A', 2.1, '']};
+const style = {spec: ['#8A9199', 1.3, '1.5 4'], supports: ['#E0A552', 1.7, ''], states: ['#5FBF9F', 2.1, '']};
 for (const w of ['spec', 'supports', 'states']) for (const [s, t, wa] of D.edges) {
   if (wa !== w) continue;
   const x1 = X(Math.min(s, t)), x2 = X(Math.max(s, t)), h = 12 + Math.sqrt(x2 - x1) * 7.4;
@@ -77,12 +77,12 @@ for (const w of ['spec', 'supports', 'states']) for (const [s, t, wa] of D.edges
   el('path', {d: `M ${x1} ${Y} C ${x1} ${Y - h}, ${x2} ${Y - h}, ${x2} ${Y}`, fill: 'none', stroke: c,
               'stroke-width': sw, 'stroke-dasharray': dash, 'stroke-opacity': w === 'spec' ? .7 : .85});
 }
-el('line', {x1: L - 8, y1: Y, x2: R + 8, y2: Y, stroke: '#5C6B76', 'stroke-width': 1.5});
-for (const x of D.xs) el('circle', {cx: X(x), cy: Y, r: 1.6, fill: '#36454F'});
+el('line', {x1: L - 8, y1: Y, x2: R + 8, y2: Y, stroke: '#96A4AD', 'stroke-width': 1.5});
+for (const x of D.xs) el('circle', {cx: X(x), cy: Y, r: 1.6, fill: '#ECEFF1'});
 const nt = X(D.nt) - 6;
 for (const [x1, x2, name] of [[L, nt - 6, 'Old Testament'], [nt + 6, R, 'New Testament']]) {
-  el('path', {d: `M ${x1} ${Y + 14} v 8 H ${x2} v -8`, fill: 'none', stroke: '#5C6B76', 'stroke-width': 1.5});
-  const tx = el('text', {x: (x1 + x2) / 2, y: Y + 48, 'text-anchor': 'middle', fill: '#4E5D68',
+  el('path', {d: `M ${x1} ${Y + 14} v 8 H ${x2} v -8`, fill: 'none', stroke: '#96A4AD', 'stroke-width': 1.5});
+  const tx = el('text', {x: (x1 + x2) / 2, y: Y + 48, 'text-anchor': 'middle', fill: '#B4C0C8',
                          'font-family': 'Archivo, sans-serif', 'font-size': 17, 'font-weight': 600});
   tx.textContent = name;
 }
