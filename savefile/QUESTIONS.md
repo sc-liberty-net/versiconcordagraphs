@@ -270,6 +270,14 @@ accept that it never lints clean?**
 It was built before any procedure existed. Backfilling a ledger would forge exactly
 the evidence such a check exists to provide.
 *Needs:* Ethan, and only once a skill with a ledger actually exists. Parked.
+*22 Oct, what record exists:* the 93 passages added from 25 Sept on are each covered
+by a commit message saying what was added and why, and by the session transcripts. The
+original 151 are not. The corpus files are dated 20 Sept 04:12, and the earliest Claude
+Code session in this folder (archived, "Bible study research pipeline setup") began at
+04:24 that morning by reading a `CLAUDE.md`, `README.md` and `DESIGN.md` that already
+existed. No transcript on this computer mentions the work before that. Ethan remembers
+several iterations across several sessions; if they happened in claude.ai chats rather
+than Claude Code, his claude.ai history is the record.
 
 ---
 
