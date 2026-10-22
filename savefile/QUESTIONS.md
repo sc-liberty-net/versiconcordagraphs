@@ -256,6 +256,14 @@ tithes and 2 in wages, union 7, an argument existing in neither reading. Two pag
 side by side with a shared co-citation list may simply be better.
 *Needs:* Ethan, after someone builds module two and the eight-line co-citation
 reporter. The honest answer comes from looking, not arguing. Depends on Q3.
+*22 Oct:* Q3 is fixed. Ethan has picked module two, and it is not Wages: **words,
+speech, the tongue, swords, the word of God, good and evil, the double edge, the forked
+tongue.** Sources: `Gemini Convos/Hypothesis-Review.txt` (finding five: *distomos* only
+in Hebrews 4:12, Revelation 1:16 and 2:12; the Septuagint's *rhomphaia* for Eden's sword
+in Genesis 3:24, the same word as the sword from Christ's mouth in Revelation),
+`Gemini Convos/THREADS-HANDOFF.md` item 9, and the 77 page images in
+`Gemini Convos/Swords & Words/`. Gemini's agreement is not evidence (the review says
+so); every reference still has to resolve in `verses.json`.
 
 **Q7 · The first module can never have an honest discovery ledger — exempt it, or
 accept that it never lints clean?**
