@@ -125,6 +125,10 @@ where the answer is a theological judgement rather than a measurement. Room task
 ANSWERED 16 October 2026 — yes.** Recounted the same day at 244 nodes: **24 of 244**
 now share a run of five or more words with their verse (longest nine: `q4`, `i5`,
 `h2`, `b6`). Rewriting them is the next corpus job.
+*21 Oct: done.* All 24 rewritten from the public-domain BSB, plus `em7` (2 Kings 18:14)
+re-quoted so its summary is no longer cut off at the comma. **0 of 244** now share a
+five-word run with the NRSV; the check-by-eye list fell from 13 to 12 (`v3` now shares a
+word with its verse; `i5` was rewritten again for the same reason).
 
 <details><summary>The question as it stood</summary>
 
