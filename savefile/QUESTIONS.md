@@ -283,7 +283,14 @@ than Claude Code, his claude.ai history is the record.
 
 ## Blocking nothing yet, but it will fester
 
-**Q8 · "Versicon" means two incompatible things and nobody has reconciled them.**
+**~~Q8 · "Versicon" means two incompatible things and nobody has reconciled them.~~
+ANSWERED 22 October 2026 — both senses stand, and the project says so.** Ethan's call:
+no renaming. `lexicon.md` and `DESIGN.md` each gain a dated note: in the Lexiconomicon
+the versicon is the verse index (here, `verses.json`); in this project it is a topic
+module; context says which. The register entry is untouched.
+
+<details><summary>The question as it stood</summary>
+
 The Lexiconomicon — where the word is filed — defines a versicon as *the addressable
 index itself*: a fixed corpus converted once into a unit-addressable form so every
 citation is retrieved rather than recalled. That is `verses.json`. This project's
@@ -294,6 +301,7 @@ have no name.
 *Needs:* Ethan, as register-keeper. Note the register's entry is `archived`, so the
 word is not in force in conversation either way. Whichever wins, the loser's
 documents need a dated correction rather than a silent edit.
+</details>
 
 **~~Q9 · How do the branches of `versiconcordagraphs` relate to `main`?~~
 ANSWERED 22 October 2026 — every topic stays on its own branch, permanently.**

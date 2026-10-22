@@ -5,6 +5,11 @@ its connections, its groups, and the graph built from them. This module
 (tax, tithe and tribute) is the first. The long-term goal is to compile many
 versicons into a Master Versicon.
 
+*Note, 22 Oct 2026:* in the Lexiconomicon, *versicon* means the verse index itself;
+in that sense this project has one versicon, `verses.json`. This document uses the
+word for a topic module. Both senses stand; the context says which. See
+`lexicon.md`.
+
 Three decisions had to be made before the second versicon existed, because
 each one was cheap then and expensive to retrofit. **All three are settled and
 implemented.** What follows is what was decided, and where the decision

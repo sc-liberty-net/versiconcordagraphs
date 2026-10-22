@@ -125,3 +125,10 @@ one.
 **Why the distinction matters:** a *concordagraph* is the rendering; a
 *versicon* is the thing rendered. The same versicon could be drawn as a graph,
 an arc diagram, or a table without ceasing to be itself.
+
+**Two senses (added 22 Oct 2026, Ethan's call on QUESTIONS.md Q8):** in the
+Lexiconomicon, *versicon* means the verse index itself: a fixed text converted
+once into a unit-addressable index, so every citation is retrieved rather than
+recalled. In that sense this project has one versicon, `verses.json`. This
+project uses the word for a topic module. Both senses stand; the context says
+which.
