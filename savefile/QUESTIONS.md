@@ -287,11 +287,23 @@ have no name.
 word is not in force in conversation either way. Whichever wins, the loser's
 documents need a dated correction rather than a silent edit.
 
-**Q9 · How do the branches of `versiconcordagraphs` relate to `main`?**
+**~~Q9 · How do the branches of `versiconcordagraphs` relate to `main`?~~
+ANSWERED 22 October 2026 — every topic stays on its own branch, permanently.**
+Ethan's ruling: each concordagraph keeps its own independent, isolated branch. Only
+when there are enough of them to warrant it does `main` get a compiled, full-spectrum
+version, and even then **the topic branches must remain**: they are the unique
+projects, and none may be deleted or merged away. Deployment is unaffected: each
+branch builds its own page, which is copied into its own folder on `gh-pages`, as
+`taxes-and-tithes/` is now. The repo's README on `main` states the one-topic rule but
+not the must-remain clause yet. Recorded in `HANDOFF.md`.
+
+<details><summary>The question as it stood</summary>
+
 Deferred deliberately on 22 Sept. `main` holds the branch rule and nothing else; each
 topic is an independent branch with unrelated history. The live question is whether
 they ever compile, which is Q6 in another costume.
 *Needs:* Ethan, after Q6.
+</details>
 
 ---
 

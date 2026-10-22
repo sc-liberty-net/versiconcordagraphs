@@ -191,6 +191,12 @@ not just one lowercase word. The recovery tool had been silently returning no
 clusters since the `note` column was added; it now refuses rather than writing a
 partial table, and takes `--out` so it can be tested without touching the real CSVs.
 
+**Every concordagraph lives on its own branch, permanently.** Settled 22 Oct by Ethan,
+answering QUESTIONS.md Q9. Branches stay independent and isolated. A compiled
+full-spectrum version may one day occupy `main`, but only once there are enough topics
+to warrant it, and **the topic branches must remain** even then: never delete one,
+never merge one away. Each branch's page deploys into its own folder on `gh-pages`.
+
 **Ids are namespaced from `module.json` at build time; a bare id gets the module
 prefix, an id already containing a colon passes through.** Settled 20 Sept. The
 original plan prefixed everything unconditionally, which would have made a
