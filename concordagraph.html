@@ -160,9 +160,11 @@ button.reset:hover{background:var(--sunk)}
 .empty{color:var(--ink-2); font-size:14px}
 .note{font-size:12.5px; color:var(--ink-3); line-height:1.5; margin-top:22px; border-top:1px solid var(--line); padding-top:12px}
 .zoom{position:absolute; right:12px; bottom:12px; display:flex; gap:6px}.motifbar{
-  display:flex; align-items:center; gap:10px; flex-wrap:wrap;
   padding:9px 14px; border-bottom:1px solid var(--line); background:var(--surface);
 }
+.mbody{display:flex; align-items:center; gap:10px; flex-wrap:wrap}
+.motifbar > summary h2{font-family:Archivo; font-size:12px; font-weight:600; letter-spacing:.04em; color:var(--ink-3)}
+.motifbar:not([open]) > summary{margin-bottom:0}
 .motifbar .mlabel{
   font-family:Archivo,sans-serif; font-size:11.5px; font-weight:600;
   letter-spacing:.04em; color:var(--ink-3); cursor:help; flex:none;
@@ -404,25 +406,30 @@ path.edge.ehov{opacity:1; stroke-width:3; stroke-opacity:1}
       </div>
       <div id="clusters"></div>
     </details>
-    <div class="grp">
-      <h2>How Strong Is The Link</h2>
+    <!-- The link filters and the motifs fold like the groups (Ethan, 21 Oct):
+         open on desktop, closed by default on phones. -->
+    <details class="grp grpfold" id="grpWarrants" open>
+      <summary><h2>How Strong Is The Link</h2><span class="gcount" id="wcount"></span></summary>
       <div id="warrants"></div>
-    </div>
-    <div class="grp">
-      <h2>What Kind Of Link</h2>
+    </details>
+    <details class="grp grpfold" id="grpTypes" open>
+      <summary><h2>What Kind Of Link</h2><span class="gcount" id="tcount"></span></summary>
       <div id="types"></div>
-    </div>
+    </details>
     <div class="grp">
     </div>
   </div>
   <div class="stage">
-    <div class="motifbar">
-      <!-- A real tooltip, not a title attribute: a title shows only after the
-           pointer rests a second, and never on a phone (Ethan, 13 Oct). -->
-      <button type="button" class="mlabel" id="mlabel" aria-describedby="mtip" aria-expanded="false">Trace A Motif <span class="mq" aria-hidden="true">?</span></button>
-      <div class="mtip" id="mtip" role="tooltip" hidden>A motif is a Hebrew or Greek word, not a group. A passage belongs to one group but carries as many motifs as it has words. The second number is how many verses in the whole Bible use that word: shared with four is evidence, shared with four hundred is vocabulary.</div>
-      <div id="motifs"></div>
-    </div>
+    <details class="motifbar grpfold" id="grpMotifs" open>
+      <summary><h2>Motifs</h2><span class="gcount" id="mcount"></span></summary>
+      <div class="mbody">
+        <!-- A real tooltip, not a title attribute: a title shows only after the
+             pointer rests a second, and never on a phone (Ethan, 13 Oct). -->
+        <button type="button" class="mlabel" id="mlabel" aria-describedby="mtip" aria-expanded="false">Trace A Motif <span class="mq" aria-hidden="true">?</span></button>
+        <div class="mtip" id="mtip" role="tooltip" hidden>A motif is a Hebrew or Greek word, not a group. A passage belongs to one group but carries as many motifs as it has words. The second number is how many verses in the whole Bible use that word: shared with four is evidence, shared with four hundred is vocabulary.</div>
+        <div id="motifs"></div>
+      </div>
+    </details>
     <div class="canvas">
       <button class="reset floating" id="reset">Show Everything Again</button>
       <svg id="net" role="img" aria-label="Network of New Testament passages about tax and tithe"></svg>
@@ -1635,12 +1642,18 @@ if(matchMedia('(max-width:767px)').matches) document.getElementById('grpGroups')
 })();
 build(document.getElementById('warrants'),WA,onWa,'wa');
 build(document.getElementById('types'),TY,onTy,'ty');
+document.getElementById('wcount').textContent = '(' + Object.keys(WA).length + ')';
+document.getElementById('tcount').textContent = '(' + Object.keys(TY).length + ')';
+// Every fold starts closed on a phone, so the graph is not a page of filters down.
+if(matchMedia('(max-width:767px)').matches)
+  ['grpWarrants','grpTypes','grpMotifs'].forEach(id=>document.getElementById(id).removeAttribute('open'));
 
 (function buildMotifs(){
   const host = document.getElementById('motifs');
   if(!host) return;
   const keys = Object.keys(MO_IDS);
-  if(!keys.length){ host.parentElement.classList.add('hide'); return; }
+  document.getElementById('mcount').textContent = '(' + keys.length + ')';
+  if(!keys.length){ host.closest('.motifbar').classList.add('hide'); return; }
   keys.forEach(k=>{
     const o = MO[k];
     const lab=document.createElement('label'); lab.className='row'; lab.tabIndex=0;
@@ -2076,6 +2089,14 @@ function render(){
   b.addEventListener('focus',()=>show(true));
   b.addEventListener('blur',()=>{ pinned=false; show(false); });
   b.addEventListener('click',()=>{ pinned=!pinned; show(pinned); });
+  // A finger is handled on touchend, not by the click that follows it. With the
+  // filters folded the phone page is short, so a reader at the graph is at the
+  // very bottom; the tap's focus nudged the page 18px and the click landed beside
+  // the button (21 Oct). Cancelling touchend also cancels that focus and click.
+  b.addEventListener('touchend',e=>{ e.preventDefault(); pinned=!pinned; show(pinned); });
+  document.addEventListener('touchstart',e=>{ if(pinned && !b.contains(e.target)){ pinned=false; show(false); } });
+  // The tip sits just under the bar; with the motifs folded there is nothing to explain.
+  document.getElementById('grpMotifs').addEventListener('toggle',e=>{ if(!e.target.open){ pinned=false; show(false); } });
   document.addEventListener('keydown',e=>{ if(e.key==='Escape' && !t.hidden){ pinned=false; show(false); } });
 })();
 

@@ -331,6 +331,10 @@ try:
         # --- the selected group's row is marked; groups start open on desktop -
         P('groups fold open on desktop', ev(page,
             '() => { const d = document.getElementById("grpGroups"); return d ? d.open : "NONE"; }'))
+        P('link and motif folds open on desktop', ev(page,
+            '() => ["grpWarrants","grpTypes","grpMotifs"].map(i => { const d = document.getElementById(i); return d ? d.open : "NONE"; }).join(" ")'))
+        P('fold counts', ev(page,
+            '() => ["gcount","wcount","tcount","mcount"].map(i => (document.getElementById(i)||{}).textContent || "NONE").join(" ")'))
         P('selected group row marked', ev(page, '''() => {
             select(clusterFocus.anchor);
             const n = document.querySelectorAll('#clusters .row.picked').length;
@@ -450,6 +454,8 @@ try:
                         P('phone graph %s' % k, pick(tg, k))
                     P('phone groups folded', ev(wp,
                         '() => { const d = document.getElementById("grpGroups"); return d ? !d.open : "NONE"; }'))
+                    P('phone link and motif folds folded', ev(wp,
+                        '() => ["grpWarrants","grpTypes","grpMotifs"].map(i => { const d = document.getElementById(i); return d ? !d.open : "NONE"; }).join(" ")'))
                     # real touch (CDP): a finger drag on the graph, then two taps
                     # on a dot (the first after a drag may produce no click in
                     # emulation), then a near miss 12px off a dot. A drag once left
@@ -489,7 +495,10 @@ try:
                     except Exception as exc:
                         P(pre + 'touch probe failed', str(exc).splitlines()[0][:60])
                     # the motif explanation, by tap: a title attribute never showed on a phone
+                    # the motifs start folded on a phone (21 Oct): open them as a reader would
                     try:
+                        wp.locator('#grpMotifs > summary').tap(timeout=5000)
+                        wp.wait_for_timeout(100)
                         wp.locator('#mlabel').tap(timeout=5000)
                         wp.wait_for_timeout(100)
                     except Exception as exc:

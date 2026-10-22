@@ -57,6 +57,8 @@ group group panel rows: 25
 group group lights: 25
 group second click deselects: True
 groups fold open on desktop: True
+link and motif folds open on desktop: true true true
+fold counts: (20) (3) (3) (10)
 selected group row marked: 1
 arc hover: group lit before: 119/60
 arc hover: hovering an arc: True
@@ -94,6 +96,7 @@ phone graph taller: True
 phone graph zoom: 0.37
 phone graph labels: 23
 phone groups folded: True
+phone link and motif folds folded: true true true
 study phone tap after a drag selects: True
 study phone near-miss tap selects: a passage
 study phone readout lit after a tap: False

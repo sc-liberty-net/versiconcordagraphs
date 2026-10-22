@@ -129,3 +129,8 @@ source: C:\Users\ethan\AppData\Local\Temp/claude/C--Users-ethan-Desktop-Biblogra
 cause: Phone checklist fixes F1/F3/F6, 14 Oct: a finger drag left the click-swallow flag set and ate the next tap (now cleared on every press); a touch tap that misses selects the nearest passage within 22px (it used to select an arc); the readout no longer stays lit after a tap (cleared on touch lift, and focus lights it only for keyboard focus). Three new phone lines, which read False / an arc / True on the previous page. No desktop line moved.
 moved: 0 changed, 3 new, 0 gone (0 allowed, not counted)
 source: C:\Users\ethan\AppData\Local\Temp/claude/C--Users-ethan-Desktop-Biblography/4247ac7d-27d5-45cb-9f65-2e89e9d758c8/scratchpad/new11.out -> smoke-baseline.out
+
+## 2026-10-21 - baseline refreshed: smoke-baseline.out
+cause: Ethan, 21 Oct: How Strong Is The Link, What Kind Of Link and the motifs now fold like the groups (open on desktop, closed on phones), with counts. Three new lines; they read NONE on the previous page. The phone motif-tip tap still reads shown: it went to hidden once the folds made the phone page short (a tap at the page bottom nudged the scroll and the click missed), and the help button now acts on touchend.
+moved: 0 changed, 3 new, 0 gone (0 allowed, not counted)
+source: C:/Users/ethan/AppData/Local/Temp/claude/C--Users-ethan-Desktop-Biblography/17e8bdf6-db9e-4e8a-bb09-e91292949cb3/scratchpad/new11.out -> smoke-baseline.out

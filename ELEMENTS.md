@@ -20,18 +20,21 @@ broken selector. On a phone the graph and the panel sit below the sidebar, so th
 | C1 | page title | Heading | `#hTitle` | `concordagraph.html` | Written from module.json by the script |
 | A1 | about button | Button | `#aboutBtn` | `concordagraph.html` | Opens the About dialog (C16) |
 | N2 | sidebar | Navigation rail | `.rail` | `concordagraph.html` | Search and filters; on a phone it stacks above the graph |
-| C17 | sidebar headings | Heading | `.rail .grp h2` | `concordagraph.html` | "Find A Passage", "Groups", "How Strong Is The Link", "What Kind Of Link" |
+| C17 | sidebar headings | Heading | `.rail .grp h2` | `concordagraph.html` | "Find A Passage", "Groups", "How Strong Is The Link", "What Kind Of Link"; all but the first are fold labels (21 Oct) |
 | T1 | passage search | Search input | `#q` | `concordagraph.html` | Filters passages by reference or summary text |
 | A2 | select all groups button | Button | `#clAll` | `concordagraph.html` | view: main; view: p-groups |
 | A3 | clear groups button | Button | `#clNone` | `concordagraph.html` | view: main; view: p-groups |
 | A14 | groups fold | Accordion | `#grpGroups > summary` | `concordagraph.html` | "Groups (20)"; open on desktop, closed by default on phones (14 Oct) |
 | S1 | group tick boxes | Checkbox | `#clusters .row input` | `concordagraph.html` | One per group; hides or shows its passages; view: main; view: p-groups |
 | A4 | group name buttons | Button | `#clusters .gname` | `concordagraph.html` | Clicking a name selects the group and lists its passages; hover or focus shows "Show →", the selected group's row stays marked (14 Oct); view: main; view: p-groups |
+| A15 | link strength fold | Accordion | `#grpWarrants > summary` | `concordagraph.html` | "How Strong Is The Link (3)"; open on desktop, closed by default on phones (21 Oct); view: main; view: p-rail |
 | S2 | link strength filters | Checkbox | `#warrants` | `concordagraph.html` | The Text Says It / Supports It / My Speculation; view: p-rail; view: rail |
+| A16 | link kind fold | Accordion | `#grpTypes > summary` | `concordagraph.html` | "What Kind Of Link (3)"; open on desktop, closed by default on phones (21 Oct); view: main; view: p-rail |
 | S3 | link kind filters | Checkbox | `#types` | `concordagraph.html` | Shared Wording / Cites / Same Idea; view: p-rail; view: rail |
-| A11 | motif bar | Button group | `.motifbar` | `concordagraph.html` | Strip above the graph; view: main; view: p-graph |
-| A5 | motif help button | Button | `#mlabel` | `concordagraph.html` | "Trace A Motif ?"; hover, focus or tap shows M1; view: main; view: p-graph |
-| S4 | motif chips | Chip | `#motifs .row` | `concordagraph.html` | One per Hebrew/Greek word; ticking dims passages without it; view: main; view: p-graph |
+| A11 | motif bar | Button group | `.motifbar` | `concordagraph.html` | Strip above the graph, now a fold (A17); view: main; view: p-graph |
+| A17 | motifs fold | Accordion | `#grpMotifs > summary` | `concordagraph.html` | "Motifs (10)"; open on desktop, closed by default on phones (21 Oct); view: main; view: p-graph |
+| A5 | motif help button | Button | `#mlabel` | `concordagraph.html` | "Trace A Motif ?"; hover, focus or tap shows M1; a tap acts on touchend (21 Oct); view: main; view: p-motifs |
+| S4 | motif chips | Chip | `#motifs .row` | `concordagraph.html` | One per Hebrew/Greek word; ticking dims passages without it; view: main; view: p-motifs |
 | M1 | motif tooltip | Tooltip | `#mtip` | `concordagraph.html` | view: motiftip |
 | G1 | graph | Map view area | `svg#net` | `concordagraph.html` | Arc diagram in Bible order; pans and zooms. On phones (under 768px) it is turned to run down the screen, Genesis at the top; view: main; view: p-graph |
 | G2 | passage dots | Map marker | `.node circle` | `concordagraph.html` | Coloured by group; click selects; view: main; view: p-graph |
@@ -92,10 +95,11 @@ Only when the page itself never shows an element at one width, its Notes say `wi
 | View | Steps | Width | Notes |
 |---|---|---|---|
 | p-groups | `click #grpGroups > summary; wait 150` | phone | the groups fold opened |
-| p-rail | `eval document.getElementById('warrants').scrollIntoView()` | phone | lower half of the sidebar |
+| p-rail | `click #grpWarrants > summary; click #grpTypes > summary; wait 150; eval document.getElementById('warrants').scrollIntoView()` | phone | lower half of the sidebar, both link folds opened |
+| p-motifs | `click #grpMotifs > summary; wait 150; eval document.querySelector('.motifbar').scrollIntoView()` | phone | the motifs fold opened |
 | p-graph | `eval document.querySelector('.stage').scrollIntoView(); click #zfit; wait 200` | phone | the whole graph, turned, below the sidebar |
 | p-sheet | `eval select(nodes.find(n => n.ref === 'Matthew 23:23')); wait 300; eval sheetFull(true); wait 400; eval document.querySelector('.ws-trnote').scrollIntoView()` | phone | the bottom sheet at full height, scrolled to the notes under the reading |
-| motiftip | `eval document.querySelector('.motifbar').scrollIntoView(); click #mlabel; wait 150` | all | the motif explanation, pinned open |
+| motiftip | `eval document.getElementById('grpMotifs').open = true; eval document.querySelector('.motifbar').scrollIntoView(); click #mlabel; wait 150` | all | the motif explanation, pinned open |
 | readout | `eval document.querySelector('.stage').scrollIntoView(); eval hover(nodes.find(n => n.ref === 'Matthew 23:23')); wait 150` | all | hover readout under the graph |
 | passage | `eval select(nodes.find(n => n.ref === 'Matthew 23:23')); wait 300; eval document.getElementById('panel').scrollIntoView()` | all | a Greek passage with a Textus Receptus note |
 | hovertip | `eval select(nodes.find(n => n.ref === 'Matthew 23:23')); wait 300; eval document.querySelectorAll('.ws-e')[3].dispatchEvent(new MouseEvent('mouseover', {bubbles: true})); wait 150` | desktop | hover synonyms on a word |
