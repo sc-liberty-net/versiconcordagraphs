@@ -28,6 +28,13 @@ scan:
    (n counts from 0). The lexicon's printed pages are Roman numerals, from I
    (the letter Aleph, image n20) to DCCCLXXXIV (image n903).
    **Image n = printed page + 19.** Checked: n470 is page CCCCLI.
+   Never read that numeral off a crop. It is printed at the top centre, so the
+   left and right crops each show only part of it, and a half-seen run of X's or
+   C's is a guess: the reader miscounted 34 times across six runs, carrying each
+   wrong reading forward for pages (90–94 read LXXXI for LXXI; 420–429 dropped a
+   C). `python gesenius_pages.py pages` now checks every transcript's header
+   against the arithmetic, `done` refuses to log a page whose header disagrees,
+   and `test_page_numbers.py` holds all 34 slips as fixtures.
 2. **Finding the page.** Pages run in Hebrew alphabetical order. The
    running heads at the top of each page give its first and last word
    (n470 reads מדי–מה). Start from an estimate — page ≈ Strong's Hebrew

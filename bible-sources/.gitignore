@@ -14,6 +14,7 @@
 !gesenius_pages.py
 !parse_gesenius.py
 !align_lxx.py
+!test_page_numbers.py
 # Gesenius page transcripts, PROGRESS.md and runs.jsonl: our own work from a
 # public-domain book, and small.
 !lexicons/

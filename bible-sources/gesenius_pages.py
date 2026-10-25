@@ -2,7 +2,9 @@
 
     python gesenius_pages.py status          next unread page, and totals so far
     python gesenius_pages.py prepare N [N…]  fetch images at full resolution, cut 4 crops each
-    python gesenius_pages.py check N         check transcript N (headwords, citations)
+    python gesenius_pages.py check N         check transcript N (page number, headwords, citations)
+    python gesenius_pages.py pages           every transcript's page number against the arithmetic;
+                                             exits non-zero if any is wrong
     python gesenius_pages.py run COUNT [PER_RUN]
                                              transcribe the next COUNT unread pages with the
                                              lean reader, PER_RUN pages per run (default 1),
@@ -47,6 +49,82 @@ def label(n):
 
 def transcript(n):
     return TRANSCRIPT / f'n{n:03d}.txt'
+
+
+# ---------------------------------------------------------------- page number
+# The reader miscounted repeated letters in the printed numeral 34 times across
+# six runs: images 90-94 read LXXXI for LXXI, 295-298 CCLXXXVI for CCLXXVI,
+# 420-429 dropped a C (CCCI for CCCCI), 535-539 and 585-589 gained an X, 670-674
+# gained a C. Each run carried the wrong reading forward until the next batch.
+# The cause is in the crops, not the reader: the numeral sits at the top centre
+# of the page, so the left and right crops each show only part of it ("LV" plus
+# "VI"), and a half-seen run of X's or C's is a guess. The arithmetic is exact --
+# image = printed page + 19 -- so the numeral never needed to be read at all.
+EXEMPT = {
+    20: 'the opening page prints no running heads',
+    896: 'the Grammatical and Analytical Index opens here and prints no numeral',
+}
+
+
+def page_field(first_line):
+    """The page-number field of a RUNNING HEADS line, or None if there is none."""
+    if not first_line.startswith('RUNNING HEADS:'):
+        return None
+    parts = first_line[len('RUNNING HEADS:'):].split('|')
+    return parts[1].strip() if len(parts) >= 3 else None
+
+
+def page_number_issue(n, first_line):
+    """None when the header's page number is right, else a line saying why not.
+
+    Takes the line rather than the file so it can be tested against the 34 real
+    slips without writing a transcript: see test_page_numbers.py.
+    """
+    field = page_field(first_line)
+    if field is None:
+        return (f'image {n}: the first line is not a RUNNING HEADS line with '
+                f'three |-separated fields')
+    got = field.strip()
+    while True:                       # a doubt marker and a printed stop are
+        stripped = got                # decoration, not a different number
+        for suffix in ('[?]', '.'):
+            if stripped.endswith(suffix):
+                stripped = stripped[:-len(suffix)].strip()
+        if stripped == got:
+            break
+        got = stripped
+    want = label(n)
+    if got in ('', '[none]'):
+        if n in EXEMPT:
+            return None
+        return (f'image {n}: the page-number field is empty, but the scan prints '
+                f'{want}')
+    if got != want:
+        return (f'image {n}: the header says {field.strip()!r}, the page is {want} '
+                f'(image {n} - {OFFSET}). Read the numeral off the arithmetic, not '
+                f'the crop: it is split across the left and right halves.')
+    return None
+
+
+def page_numbers(quiet=False):
+    """Every transcript's header against label(n). Returns the problems."""
+    bad = []
+    for n in range(FIRST, LAST + 1):
+        p = transcript(n)
+        if not p.exists():
+            continue
+        first = p.read_text(encoding='utf-8').splitlines()
+        issue = page_number_issue(n, first[0] if first else '')
+        if issue:
+            bad.append(issue)
+    if not quiet:
+        checked = sum(1 for n in range(FIRST, LAST + 1) if transcript(n).exists())
+        for x in bad:
+            print(' ', x)
+        print(f'{checked} transcripts checked, {len(bad)} page number(s) wrong'
+              + (f', {len(EXEMPT)} image(s) exempt: '
+                 + ', '.join(f'{k} ({v})' for k, v in EXEMPT.items()) if not bad else ''))
+    return bad
 
 
 # ---------------------------------------------------------------- prepare
@@ -191,8 +269,11 @@ def check(n, quiet=False):
                         misses.append(f'{part} {book} {m.group(2)}:{m.group(3)} (not in verse)')
     unsure = text.count('[?]')
     entries = sum(1 for line in text.splitlines() if HEB.match(line.lstrip('[(* ')))
+    lines = text.splitlines()
+    issue = page_number_issue(n, lines[0] if lines else '')
     if not quiet:
         print(f'image {n} (page {label(n)}): {entries} entry lines, {unsure} [?]')
+        print('  page no.  :', issue or f'{label(n)} as printed')
         print('  headwords :', hw)
         print('  citations :', ct)
         for x in misses:
@@ -230,6 +311,13 @@ def done(n, tokens, seconds):
         sys.exit(f'no transcript for image {n}; nothing logged')
     if any(r['image'] == n for r in rows()):
         sys.exit(f'image {n} is already logged')
+    # Refuse here rather than only warning in check(): this is where a page stops
+    # being a file and becomes a logged fact, and a wrong numeral carried forward
+    # six times before anyone noticed. Correct the transcript's first line, then
+    # run this again.
+    issue = page_number_issue(n, transcript(n).read_text(encoding='utf-8').splitlines()[0])
+    if issue:
+        sys.exit(f'not logged -- {issue}')
     entries, unsure, hw, ct = check(n, quiet=True)
     TRANSCRIPT.mkdir(parents=True, exist_ok=True)
     if not PROGRESS.exists():
@@ -313,6 +401,8 @@ if __name__ == '__main__':
             prepare(int(a))
     elif cmd == 'check':
         check(int(sys.argv[2]))
+    elif cmd == 'pages':
+        sys.exit(1 if page_numbers() else 0)
     elif cmd == 'run':
         run(int(sys.argv[2]), int(sys.argv[3]) if len(sys.argv) > 3 else 1)
     elif cmd == 'done':
