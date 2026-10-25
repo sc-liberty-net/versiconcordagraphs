@@ -58,6 +58,19 @@ principle outliving its statute), or both describe how it survives. The three `s
 edges stay as drawn: the ruling is a judgement, not something a text states, so no
 edge is promoted. Recorded in `HANDOFF.md`.
 
+**How it survives — answered 25 October 2026** (argued through 13 October in the session
+"Biblography — study-layer pilot", confirmed for the record today). Ethan's position:
+**reading 3, with reading 2 as its consequence.** Hebrews 7 retires the Levitical
+collector, not the giving; Paul's collection is what giving looks like after that change.
+In his words: **giving binds; the tenth is a target, arguably a minimum expected, but by
+no means the limit, and not compelled** — "each should give according to their heart".
+What God values is the giving and its purpose, mercy and justice above sacrifice, not the
+exact proportion. Supporting passages he named or accepted: the widow's two lepta (Mark
+12:41–44, Luke 21:1–4 — measured by what the gift costs the giver, not its size), 2
+Corinthians 9:6–7 (sow bountifully, give as purposed, "not grudgingly, or of necessity"),
+and Hosea 6:6 as quoted in Matthew 9:13 and 12:7. Reading 1 is rejected. The three edges
+stay at `spec`: this is a judgement, not something a text states. Room task 66.
+
 <details><summary>The question as it stood</summary>
 
 Opened 25 September 2026, the moment Q1 was answered. Q1 settled what the woes
