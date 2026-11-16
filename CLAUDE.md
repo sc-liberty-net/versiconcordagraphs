@@ -6,6 +6,22 @@ Read `READING.md` for what the corpus shows so far. The taxes-and-tithes topic l
 `..\Biblography` and Swords & Words in `..\Swords & Words`, each on its own branch; do
 not edit either from here.
 
+## Where It Ships
+
+This folder's branch `kings-and-the-kingdom` is pushed, never with force, to:
+
+- `versicon` (github.com/DrugsForRobots/versiconcordagraphs, private): its `kings-and-the-kingdom` branch.
+- `liberty` (github.com/sc-liberty-net/versiconcordagraphs, **public**): its `kings-and-the-kingdom` branch.
+
+No `preserve` repo exists for this topic yet.
+
+The live page is the public repo's `gh-pages` branch, folder `kings-and-the-kingdom/`:
+take a fresh clone into the scratchpad, copy `concordagraph.html` in as `index.html` and
+the `icons/` folder beside it, keep the root `index.html` card's counts current, commit,
+push, wait for the Pages build, then check
+https://sc-liberty-net.github.io/versiconcordagraphs/kings-and-the-kingdom/ at desktop
+and phone width. Run `python check_page.py` first; never publish on a red.
+
 **Overlaps (Ethan, 16 Nov 2026).** Where this topic meets another, record it for the
 future merge: a cross-topic connection in `corpus_edges.csv` with the other topic's
 prefix (`tithe:kg2`, `sword:x4`), tagged like any other. Then run `python overlaps.py`,

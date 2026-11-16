@@ -1,0 +1,77 @@
+console errors: 0
+META: {"books": 46, "edges": 215, "nodes": 216}
+corpus N length: 216
+corpus E length: 215
+drawn nodes: 216
+drawn arcs: 215
+drawn hits: 215
+drawn labels: 46
+drawn ticks: 47
+rail clusters: 14
+rail warrants: 3
+rail kinds: 3
+rail motifs: 0
+group names: The First Violence | Asking For A King | Decrees Of The Enthroned | Conquest & Its Cruelty | The Sword Comes Home | Chariots, Horses & Trust | God Over The Kings | How Man Rules: Oppression | Not So Among You | Vengeance | Swords Into Plowshares | Authority, Obedience & Limits | The Kingdom No Army Stops | Not Of This World
+header: 216 passages across 46 books, joined by 215 connections — drawn 
+title: Concordagraph - Kings & The Kingdom
+page heading: Kings & The Kingdom
+graph bbox w: 2500
+graph bbox h: 1410
+book labels shown at fit: 24
+book label height on screen px: 24
+NRSV payload present: False
+panel found node: True
+panel ref: John 18:36
+panel verse href: https://biblehub.com/john/18-36.htm
+panel chapter href: https://www.biblegateway.com/passage/?search=John%2018&version=NRSVUE
+panel connections: 8
+panel heading: 8 Connections
+filter hid: 15
+filter restored: 0
+zoom floor: 0.2575
+zoom fitted: 0.2575
+zoom afterButtons: 0.2575
+zoom afterWheel: 0.2575
+zoom zoomedIn: 0.3219
+zoom keyIn: True
+zoom keyFit: True
+head icon links: 4 linked, all present
+preview card size: 1200x630
+preview card tag: https://sc-liberty-net.github.io/versiconcordagraphs/kings-and-the-kingdom/icons/og-card.png
+preview url tag: https://sc-liberty-net.github.io/versiconcordagraphs/kings-and-the-kingdom/
+reset sits over the canvas: True
+testament brackets: Old Testament / New Testament
+gesture hint on desktop: hidden
+about opens: True
+about closes on click-off: True
+about closes on X: True
+about sections: 4
+group found: True
+group clear hides: 216
+group select all hides: 0
+group name click leaves tick alone: True
+group panel tag: 12 Passages
+group panel rows: 12
+group lights: 12
+group second click deselects: True
+search "sword" hides: 202
+desktop overflowX: 0
+console errors during the probes: 0
+phone graph turned: True
+phone graph taller: True
+phone gesture hint on first visit: Pinch to zoom · Drag to move · Tap a dot
+phone zoom button size px: 44x44 44x44 44x44
+phone overflowX: 0
+phone one-finger drag moves the graph: True
+phone gesture hint after first touch: hidden
+phone pinch out zoom ratio: 4.0
+phone pinch keeps the point under the fingers: True
+phone pinch selects nothing: True
+phone pinch in zooms out: True
+phone pinch stops at the floor: True
+phone tap selects: True
+phone sheet: sheet on screen
+phone near-miss tap selects: a passage
+phone height-only resize keeps the zoom: True
+phone console errors: 0
+fatal: 0

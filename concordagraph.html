@@ -219,6 +219,21 @@ button.reset:hover{background:var(--sunk)}
   color:var(--ink-2); font-size:16px; line-height:1; cursor:pointer;
 }
 .zoom button:hover{background:var(--sunk)}
+/* Fingers: controls at least 44 px (Apple's and WCAG's touch-target size),
+   and clear of the home bar on phones with no bottom bezel. */
+@media (pointer:coarse){
+  .zoom{gap:8px; right:max(12px, env(safe-area-inset-right)); bottom:max(12px, env(safe-area-inset-bottom))}
+  .zoom button{width:44px; height:44px; font-size:20px}
+  .reset.floating{min-height:44px}
+}
+.gesture-hint{
+  position:absolute; left:50%; bottom:68px; transform:translateX(-50%); z-index:3;
+  max-width:calc(100% - 32px); padding:8px 14px; border-radius:99px;
+  background:var(--ink); color:var(--surface); font:500 13px/1.3 Archivo,sans-serif;
+  box-shadow:0 4px 14px rgba(0,0,0,.22); transition:opacity .35s; white-space:nowrap;
+}
+.gesture-hint.gone{opacity:0}
+@media (prefers-reduced-motion:reduce){ .gesture-hint{transition:none} }
 .node circle{cursor:pointer}
 .node:focus{outline:none}
 .node:focus-visible circle,.node.sel circle{stroke:var(--ink); stroke-width:1.25}
@@ -441,6 +456,7 @@ path.edge.ehov{opacity:1; stroke-width:3; stroke-opacity:1}
         <button id="zout" title="Zoom out" aria-label="Zoom out">−</button>
         <button id="zfit" title="Fit to view" aria-label="Fit to view">⤢</button>
       </div>
+      <div class="gesture-hint" id="gestureHint" role="status" hidden>Pinch to zoom · Drag to move · Tap a dot</div>
     </div>
   </div>
   <div class="panel" id="panel"></div>
@@ -1327,7 +1343,11 @@ function fit(opening){
   }
   vx=left+(r.width-left-bb.width*vs)/2-bb.x*vs; vy=top+(r.height-top-bottom-bb.height*vs)/2-bb.y*vs; apply();
 }
-window.addEventListener('resize',fit);
+// Refit only when the width changes. On a phone the address bar sliding in and
+// out fires resize with a new height, and refitting then threw away the reader's
+// zoom and place every time the page scrolled (16 Nov).
+let fitW = innerWidth;
+window.addEventListener('resize',()=>{ if(innerWidth===fitW) return; fitW=innerWidth; fit(); });
 VERT_MQ.addEventListener('change', e=>{
   VERT = e.matches;
   buildAxis(); labelVs = null;
@@ -1391,6 +1411,73 @@ svg.addEventListener('wheel',e=>{e.preventDefault();const k=e.deltaY<0?1.1:1/1.1
   const mx=e.clientX-r.left, my=e.clientY-r.top;
   const want=clamp(vs*k), actual=want/vs;
   vx=mx-(mx-vx)*actual; vy=my-(my-vy)*actual; vs=want; apply();},{passive:false});
+
+// Two fingers: pinch to zoom, and move both to pan (Ethan, 16 Nov). The point
+// of the graph under the fingers' midpoint at the start stays under their
+// midpoint throughout, so the graph follows the hand. The one-finger pan above
+// stands aside while two are down; when one lifts, the other carries on
+// panning from where the graph now is. A pinch ends in no tap, so nothing is
+// selected by the fingers coming off the glass.
+const touches = new Map();
+let pinch = null, pinchEnded = 0;
+const pinchState = () => {
+  const [a, b] = [...touches.values()], r = svg.getBoundingClientRect();
+  return {d: Math.hypot(a.x-b.x, a.y-b.y) || 1, mx: (a.x+b.x)/2 - r.left, my: (a.y+b.y)/2 - r.top};
+};
+svg.addEventListener('pointerdown', e=>{
+  if(e.pointerType!=='touch') return;
+  touches.set(e.pointerId, {x:e.clientX, y:e.clientY});
+  if(touches.size===2){
+    panFrom=null; panning=false; svg.classList.remove('drag');
+    pinch = {...pinchState(), vs, vx, vy};
+  }
+});
+window.addEventListener('pointermove', e=>{
+  if(!touches.has(e.pointerId)) return;
+  touches.set(e.pointerId, {x:e.clientX, y:e.clientY});
+  if(!pinch || touches.size<2) return;
+  const now = pinchState(), want = clamp(pinch.vs * now.d / pinch.d), k = want / pinch.vs;
+  vx = now.mx - (pinch.mx - pinch.vx) * k;
+  vy = now.my - (pinch.my - pinch.vy) * k;
+  vs = want; apply();
+}, true);
+const touchUp = e=>{
+  if(!touches.delete(e.pointerId)) return;
+  if(pinch && touches.size<2){
+    pinch = null; pinchEnded = performance.now();
+    const [rest] = touches.values();
+    // After this tick: the one-finger pan's own pointerup listener runs next
+    // and clears panFrom.
+    if(rest) setTimeout(()=>{ if(touches.size===1) panFrom = {x:rest.x, y:rest.y, vx, vy}; }, 0);
+  }
+};
+window.addEventListener('pointerup', touchUp, true);
+window.addEventListener('pointercancel', touchUp, true);
+svg.addEventListener('click', e=>{
+  if(pinch || performance.now() - pinchEnded < 450){ e.stopPropagation(); e.preventDefault(); }
+}, true);
+
+// Keyboard zoom: + and - zoom about the centre, 0 fits. Not while typing.
+document.addEventListener('keydown', e=>{
+  if(e.ctrlKey || e.metaKey || e.altKey || e.target.closest('input, textarea, select')) return;
+  const id = {'+':'zin', '=':'zin', '-':'zout', '_':'zout', '0':'zfit'}[e.key];
+  if(id){ e.preventDefault(); document.getElementById(id).click(); }
+});
+
+// First visit on a touch screen: one line on how to move the graph. It goes on
+// the first touch of the graph, or after a few seconds, and is not shown again.
+(()=>{
+  if(!matchMedia('(pointer:coarse)').matches) return;
+  try{ if(localStorage.getItem('cg-gesture-hint')) return; }catch(_){}
+  const h = document.getElementById('gestureHint');
+  if(!h) return;
+  h.hidden = false;
+  const done = ()=>{ h.classList.add('gone'); setTimeout(()=>{ h.hidden = true; }, 400);
+    try{ localStorage.setItem('cg-gesture-hint', '1'); }catch(_){} };
+  svg.addEventListener('pointerdown', done, {once:true});
+  h.addEventListener('click', done);
+  setTimeout(done, 6000);
+})();
 
 // ---- filters ---------------------------------------------------------------
 const onCl=new Set(Object.keys(CL)), onWa=new Set(Object.keys(WA)), onTy=new Set(Object.keys(TY));

@@ -47,13 +47,27 @@ Tribute (`..\Biblography`); the second is Swords & Words (`..\Swords & Words`).
 - `READING.md` holds the first reading: findings F1–F10 and the test of the Hugo
   saying.
 
+## Shipped, 16 Nov (Ethan: "ship it to the appropriate repo")
+
+- Pushed to `versicon` and `liberty`, branch `kings-and-the-kingdom`, and published at
+  https://sc-liberty-net.github.io/versiconcordagraphs/kings-and-the-kingdom/, with a
+  card on the site's front page. See `../CLAUDE.md`, "Where It Ships".
+- Added for the ship, all in this folder's page only (Taxes is unchanged):
+  - favicon, home-screen icons and a preview card (`make_icons.py`). The crown emblem
+    is Claude's draft; Ethan has not chosen it;
+  - two-finger pinch zoom and pan; keyboard zoom (+, -, 0); 44 px zoom controls on
+    touch screens, clear of the home bar; a one-time gesture hint on touch screens;
+  - the view no longer refits when only the window's height changes, which on a phone
+    threw away the reader's zoom whenever the address bar slid.
+- `check_page.py` and `smoke_concordagraph.py`, baseline recorded (`SMOKE-RECORD.md`).
+  The new checks were seen to fail on the page as committed in 626d368.
+
 ## Not Done
 
 - **No `lex` links.** `lemma.py` has not been run over this corpus. Some `con` links
   may share Hebrew or Greek wording, for example the "kings of the earth" passages.
-- No `check_page.py` or smoke suite with a baseline here. The Taxes suite tests
-  Taxes-specific passages. Do not publish without one.
-- No motifs, no Word Study, no `icons/` (`make_icons.py`), no `findings.pdf`.
+- No motifs, no Word Study, no `findings.pdf`.
+- The Taxes page has none of the touch additions above.
 - Page template: the About panel still describes motifs and the Word Study, which
   this topic lacks. The Motifs bar hides itself when there are none.
 - `build_graph.py` here has 13 more book abbreviations than the Biblography copy.
