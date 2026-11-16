@@ -1,0 +1,1949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Concordagraph - Kings &amp; The Kingdom</title>
+<!-- Icons and the link preview card: written by make_icons.py into icons/ (Ethan, 22 Oct).
+     The card's address must be absolute, so it names the live page's folder. -->
+<link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="icons/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="manifest" href="icons/site.webmanifest">
+<meta name="theme-color" content="#36454F">
+<meta name="description" content="Kings &amp; The Kingdom: how man rules and how God rules, across the Bible, passage by passage. Every link names its kind and how much weight the text puts behind it.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kings &amp; The Kingdom">
+<meta property="og:description" content="How man rules and how God rules, across the Bible, passage by passage. Every link names its kind and how much weight the text puts behind it.">
+<meta property="og:url" content="https://sc-liberty-net.github.io/versiconcordagraphs/kings-and-the-kingdom/">
+<meta property="og:image" content="https://sc-liberty-net.github.io/versiconcordagraphs/kings-and-the-kingdom/icons/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Kings &amp; The Kingdom: arcs joining passages across the Old and New Testaments.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;1,400&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Chrome: theme-factory "Modern Minimalist" — Charcoal #36454f, Slate Gray
+     #708090, Light Gray #d3d3d3, White #ffffff. Four colours have to cover
+     seven tokens, so the in-between tones are derived in the same cool-grey
+     hue family. Every text pair is measured: ink 9.90:1, ink-2 6.80:1 and
+     ink-3 5.50:1 on surface (the old ink-3 was 3.65:1 and failed AA).
+     The warrant colours below and the sixteen cluster colours in
+     corpus_clusters.csv are NOT themed — they carry meaning, not style. */
+  --paper:#EEF0F2; --surface:#FFFFFF; --sunk:#D3D3D3;
+  --ink:#36454F; --ink-2:#4E5D68; --ink-3:#5C6B76; --line:#C3C9CE;
+  --focus:#36454F;
+  --states:#14493A; --supports:#98620F; --spec:#8A8F96;
+  --anchor:#7C8B96; --bridge:#B4553C; --imperial:#52707F; --collector:#7E6E9B;
+  --critique:#6E8A5E; --hebrews:#9A8352; --giving:#5F8C86; --debt:#94707A; --market:#857A6A;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+:root:not([data-theme="light"]){ @media (prefers-color-scheme:dark){
+  --paper:#1B2228; --surface:#242D34; --sunk:#151A1F;
+  --ink:#ECEFF1; --ink-2:#B4C0C8; --ink-3:#96A4AD; --line:#3C4750;
+  --focus:#C2CED6;
+  --states:#5FBF9F; --supports:#E0A552; --spec:#8A9199;
+  --anchor:#93A3AE; --bridge:#D97B60; --imperial:#7FA3B4; --collector:#A392C4;
+  --critique:#93B182; --hebrews:#C2A86E; --giving:#7FB5AE; --debt:#BE939D; --market:#A99B87;
+}}
+:root[data-theme="dark"]{
+  --paper:#1B2228; --surface:#242D34; --sunk:#151A1F;
+  --ink:#ECEFF1; --ink-2:#B4C0C8; --ink-3:#96A4AD; --line:#3C4750;
+  --focus:#C2CED6;
+  --states:#5FBF9F; --supports:#E0A552; --spec:#8A9199;
+  --anchor:#93A3AE; --bridge:#D97B60; --imperial:#7FA3B4; --collector:#A392C4;
+  --critique:#93B182; --hebrews:#C2A86E; --giving:#7FB5AE; --debt:#BE939D; --market:#A99B87;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{height:100%; scroll-padding-top:env(safe-area-inset-top,0px)}
+body{
+  margin:0; height:100%; background:var(--paper); color:var(--ink);
+  font-family:Archivo,"Helvetica Neue",Arial,sans-serif; font-size:15px; line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{display:flex; flex-direction:column; height:100%; min-height:100vh}
+header{padding:18px 22px 14px; border-bottom:1px solid var(--line)}
+h1{font-family:Spectral,Georgia,serif; font-weight:600; font-size:26px; margin:0 0 4px; letter-spacing:-.01em}
+.sub{color:var(--ink-2); font-size:14px; max-width:68ch; margin:0}header{display:flex; align-items:baseline; gap:14px}
+#aboutBtn{
+  margin-left:auto; flex:none; padding:5px 13px; border:1px solid var(--line);
+  border-radius:99px; background:var(--surface); color:var(--ink-2);
+  font:inherit; font-size:13px; cursor:pointer;
+}
+#aboutBtn:hover{border-color:var(--ink-3); color:var(--ink)}
+.scrim{position:fixed; inset:0; background:rgba(0,0,0,.34); z-index:20}
+.about{
+  position:fixed; z-index:21; top:50%; left:50%; transform:translate(-50%,-50%);
+  width:min(680px, calc(100vw - 32px)); max-height:min(82vh, 900px); overflow-y:auto;
+  background:var(--surface); border:1px solid var(--line); border-radius:12px;
+  padding:26px 30px 30px; box-shadow:0 12px 40px rgba(0,0,0,.28);
+}
+.about h2{font-family:Spectral,Georgia,serif; font-size:23px; font-weight:600; margin:0 0 14px; color:var(--ink)}
+.about h3{font-family:Archivo,sans-serif; font-size:11.5px; font-weight:600; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--ink-3); margin:22px 0 8px}
+.about p{margin:0 0 11px; font-size:14.5px; line-height:1.6; color:var(--ink)}
+.about .sub{font-size:15px; color:var(--ink-2); margin-bottom:4px}
+.about .note{font-size:13px; color:var(--ink-3); border-top:1px solid var(--line);
+  margin-top:22px; padding-top:14px}
+.about .x{
+  position:absolute; top:12px; right:14px; width:30px; height:30px; padding:0;
+  border:1px solid var(--line); border-radius:50%; background:var(--paper);
+  color:var(--ink-2); font-size:19px; line-height:1; cursor:pointer;
+}
+.about .x:hover{background:var(--sunk); color:var(--ink)}
+.bulk{display:flex; gap:6px; margin:0 0 8px}
+.bulk button{
+  flex:1; padding:4px 8px; border:1px solid var(--line); border-radius:6px;
+  background:var(--paper); color:var(--ink-2); font:inherit; font-size:12px; cursor:pointer;
+}
+.bulk button:hover{background:var(--sunk); color:var(--ink)}
+.gname{cursor:pointer; border-bottom:1px dotted var(--line)}
+.gname:hover{color:var(--ink); border-bottom-color:var(--ink-3)}
+.gname:focus-visible{outline:2px solid var(--focus); outline-offset:2px; border-radius:2px}
+/* The name selects the group; the tick box only hides or shows it. Say so on
+   hover and focus, and keep the selected group's row marked (A4, 14 Oct). */
+/* Out of the text flow, so names do not wrap to make room for it: it floats
+   at the row's right edge, over the count, only while shown. */
+#clusters .row{position:relative}
+.gname::after{content:'Show \2192'; position:absolute; right:0; top:50%; transform:translateY(-50%);
+  padding:0 4px; background:var(--surface); white-space:nowrap; pointer-events:none;
+  font-size:11.5px; font-weight:500; color:var(--ink-2); opacity:0; transition:opacity .12s}
+#clusters .row.picked .gname::after{background:var(--sunk)}
+#clusters .row:hover .gname::after, .gname:focus-visible::after{opacity:1}
+#clusters .row.picked{background:var(--sunk); border-radius:6px; box-shadow:-6px 0 0 var(--sunk), 6px 0 0 var(--sunk)}
+#clusters .row.picked .gname{color:var(--ink); font-weight:600; border-bottom-color:transparent}
+.grpfold > summary{display:flex; align-items:baseline; gap:6px; cursor:pointer; list-style:none; margin:0 0 9px}
+.grpfold > summary::-webkit-details-marker{display:none}
+.grpfold > summary h2{margin:0}
+.grpfold > summary::after{content:'\25BE'; margin-left:auto; color:var(--ink-3); font-size:12px}
+.grpfold:not([open]) > summary::after{content:'\25B8'}
+.gcount{font-size:12px; color:var(--ink-3); font-variant-numeric:tabular-nums}
+.grpfold > summary:focus-visible{outline:2px solid var(--focus); outline-offset:2px; border-radius:3px}
+@media (prefers-reduced-motion:reduce){ .gname::after{transition:none} }
+
+.main{display:flex; flex:1; min-height:0}
+.rail{width:236px; flex:none; border-right:1px solid var(--line); overflow-y:auto; padding:16px 16px 40px; background:var(--surface)}
+.stage{flex:1; min-width:0; background:var(--paper); display:flex; flex-direction:column}
+.canvas{flex:1; position:relative; min-height:0}
+svg#net{display:block; width:100%; height:100%; touch-action:none; cursor:grab}
+svg#net.drag{cursor:grabbing}
+.panel{
+  /* Grows with the window (Ethan's C2, 13 Oct): 320px was cramped for the word
+     study while the graph beside it had room to spare. */
+  width:clamp(320px, 28vw, 440px); flex:none; border-left:1px solid var(--line); background:var(--surface);
+  overflow-y:auto; padding:18px 18px 44px;
+}
+.sheetbar{display:none}
+.grp{margin-bottom:20px}
+.grp h2{font-family:Archivo; font-size:12px; font-weight:600; letter-spacing:.04em; color:var(--ink-3); margin:0 0 9px; text-transform:none}
+input[type=search]{
+  width:100%; padding:8px 10px; border:1px solid var(--line); border-radius:7px;
+  background:var(--paper); color:var(--ink); font:inherit; font-size:14px;
+}
+input[type=search]:focus-visible,button:focus-visible,.row:focus-visible{outline:2px solid var(--focus); outline-offset:2px}
+.row{display:flex; align-items:center; gap:8px; padding:3px 0; cursor:pointer; font-size:13.5px; color:var(--ink-2); user-select:none}
+.row input{accent-color:var(--ink-2); margin:0; flex:none}
+.dot{width:11px; height:11px; border-radius:50%; flex:none}
+.swatch{width:26px; height:0; border-top-width:2px; border-top-style:solid; flex:none}
+.count{margin-left:auto; color:var(--ink-3); font-size:12px; font-variant-numeric:tabular-nums}.scope{margin-left:auto; color:var(--ink-3); font-size:11.5px; font-variant-numeric:tabular-nums; flex:none}
+.row .mn{overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+#motifs .row.on{color:var(--ink); font-weight:500}
+
+button.reset{
+  width:100%; margin-top:6px; padding:7px 10px; border:1px solid var(--line); border-radius:7px;
+  background:var(--paper); color:var(--ink-2); font:inherit; font-size:13px; cursor:pointer;
+}
+button.reset:hover{background:var(--sunk)}
+.ref{font-family:Spectral,Georgia,serif; font-size:21px; font-weight:600; margin:0 0 2px}
+.tag{display:inline-block; font-size:12px; color:var(--ink-2); border:1px solid var(--line); border-radius:99px; padding:1px 9px; margin-bottom:12px}
+.gist{font-family:Spectral,Georgia,serif; font-size:16.5px; line-height:1.55; color:var(--ink); margin:0 0 18px}
+.verse{
+  font-family:Spectral,Georgia,serif; font-size:16.5px; line-height:1.6; color:var(--ink);
+  margin:0 0 10px; padding:0 0 0 13px; border-left:2px solid var(--line);
+}
+.gist-sm{font-size:13.5px; line-height:1.5; color:var(--ink-2); margin:0 0 18px}
+.panel h3{font-size:12px; font-weight:600; color:var(--ink-3); margin:0 0 8px; letter-spacing:.04em}
+.link{
+  display:block; width:100%; text-align:left; border:0; background:none; padding:7px 0;
+  border-top:1px solid var(--line); color:var(--ink); font:inherit; cursor:pointer;
+}
+.link:hover .lref{text-decoration:underline}
+.lref{font-family:Spectral,Georgia,serif; font-size:15px}
+.lmeta{display:block; font-size:12.5px; color:var(--ink-2); margin-top:1px}
+.empty{color:var(--ink-2); font-size:14px}
+.note{font-size:12.5px; color:var(--ink-3); line-height:1.5; margin-top:22px; border-top:1px solid var(--line); padding-top:12px}
+.zoom{position:absolute; right:12px; bottom:12px; display:flex; gap:6px}.motifbar{
+  padding:9px 14px; border-bottom:1px solid var(--line); background:var(--surface);
+}
+.mbody{display:flex; align-items:center; gap:10px; flex-wrap:wrap}
+.motifbar > summary h2{font-family:Archivo; font-size:12px; font-weight:600; letter-spacing:.04em; color:var(--ink-3)}
+.motifbar:not([open]) > summary{margin-bottom:0}
+.motifbar .mlabel{
+  font-family:Archivo,sans-serif; font-size:11.5px; font-weight:600;
+  letter-spacing:.04em; color:var(--ink-3); cursor:help; flex:none;
+  appearance:none; border:0; background:none; padding:2px 0; text-align:left;
+}
+.motifbar .mlabel:hover{color:var(--ink)}
+.motifbar .mq{display:inline-grid; place-items:center; width:15px; height:15px; margin-left:3px;
+  border:1px solid currentColor; border-radius:50%; font-size:10px; line-height:1}
+.motifbar{position:relative}
+.mtip{position:absolute; left:14px; top:calc(100% - 4px); z-index:5; width:min(360px, calc(100% - 28px));
+  background:var(--ink); color:var(--surface); border-radius:8px; padding:9px 12px;
+  font-size:13px; line-height:1.45; box-shadow:0 6px 20px rgba(0,0,0,.25)}
+#motifs{display:flex; flex-wrap:wrap; gap:6px}
+#motifs .row{
+  display:inline-flex; align-items:center; gap:6px; padding:3px 11px;
+  border:1px solid var(--line); border-radius:99px; background:var(--paper);
+  font-size:12.5px; color:var(--ink-2); cursor:pointer; user-select:none;
+}
+#motifs .row:hover{border-color:var(--ink-3); color:var(--ink)}
+#motifs .row input{position:absolute; opacity:0; width:0; height:0}
+#motifs .row.on{background:var(--ink-2); border-color:var(--ink-2); color:var(--surface); font-weight:500}
+#motifs .row.on .scope{color:var(--surface); opacity:.75}
+#motifs .scope{margin-left:0; font-size:11px}
+.reset.floating{
+  position:absolute; left:12px; top:12px; width:auto; margin:0; z-index:2;
+  padding:6px 12px; background:var(--surface); box-shadow:0 1px 3px rgba(0,0,0,.14);
+}
+@media (max-width:900px){
+  .motifbar{padding:8px 12px}
+  .motifbar .mlabel{width:100%}
+}
+
+.zoom button{
+  width:32px; height:32px; border:1px solid var(--line); border-radius:7px; background:var(--surface);
+  color:var(--ink-2); font-size:16px; line-height:1; cursor:pointer;
+}
+.zoom button:hover{background:var(--sunk)}
+.node circle{cursor:pointer}
+.node:focus{outline:none}
+.node:focus-visible circle,.node.sel circle{stroke:var(--ink); stroke-width:1.25}
+.booklab{font-family:Archivo,sans-serif; font-size:11.5px; fill:var(--ink-2)}
+.booklab.thin:not(.sel){display:none}
+.tick{stroke:var(--line); stroke-width:1}
+.era{stroke:var(--ink-3); stroke-width:1; stroke-dasharray:3 4}
+.tbracket{fill:none; stroke:var(--ink-3); stroke-width:1.25; vector-effect:non-scaling-stroke}
+.tlab{font-family:Archivo,sans-serif; font-size:13px; font-weight:600; letter-spacing:.04em; fill:var(--ink-2)}.node text{font-family:Spectral,Georgia,serif; font-size:11.5px; fill:var(--ink); pointer-events:auto; cursor:pointer}
+.dim{opacity:.12}
+.hide{display:none}
+
+/* Hover magnification on the spine. The label grows about its own anchor, so
+   a crowded run of references can be read one at a time without the rest
+   shifting. transform-box keeps the origin on the glyph, not the canvas. */
+.node text.mag{
+  font-size:18px; font-weight:600; fill:var(--ink);
+  paint-order:stroke; stroke:var(--paper); stroke-width:3.5px; stroke-linejoin:round;
+}
+.node.lit circle{stroke:var(--ink); stroke-width:1.25}
+.booklab{cursor:pointer}
+.booklab.mag{font-size:15px; font-weight:600; fill:var(--ink);
+  paint-order:stroke; stroke:var(--paper); stroke-width:3.5px; stroke-linejoin:round}
+.hit{stroke:transparent; stroke-width:16; fill:none; cursor:pointer}
+/* Clicking an arc must not draw a focus ring. The browser draws that ring
+   around the element's bounding box, and an arc's bounding box is an enormous
+   rectangle spanning the canvas. :focus-visible scopes it to keyboard focus,
+   where it is the only thing telling you which arc you are on — the focus
+   event handlers below cannot be relied on for that, because some engines
+   dispatch no focus events at all for SVG elements even while
+   document.activeElement updates. Clicking is covered by the selection
+   itself: .esel thickens the chosen arc. */
+.hit:focus{outline:none}
+.hit:focus-visible{outline:2px solid var(--focus); outline-offset:0}
+
+/* The readout sits outside the SVG so it never scales with the zoom. */
+.readout{
+  position:absolute; left:50%; bottom:12px; transform:translateX(-50%);
+  max-width:calc(100% - 96px); padding:7px 14px; border-radius:8px;
+  background:var(--surface); border:1px solid var(--line);
+  font-family:Spectral,Georgia,serif; font-size:19px; line-height:1.25; color:var(--ink);
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+  opacity:0; pointer-events:none; transition:opacity .12s ease;
+}
+.readout.on{opacity:1}
+.readout .rk{font-family:Archivo,sans-serif; font-size:12.5px; color:var(--ink-2); margin-left:9px}
+@media (prefers-reduced-motion:reduce){ .readout{transition:none} }
+
+/* The reference in the panel opens the chapter on Bible Gateway. */
+.ref a{color:inherit; text-decoration:none; border-bottom:1px solid var(--line)}
+.ref a:hover{border-bottom-color:var(--ink-2)}
+.ref a:focus-visible{outline:2px solid var(--focus); outline-offset:3px; border-radius:3px}
+.ref .ext{font-family:Archivo,sans-serif; font-size:11px; color:var(--ink-3); margin-left:7px; letter-spacing:.02em}
+.ref .chap{display:block; font-family:Archivo,sans-serif; font-size:12px;
+  color:var(--ink-2); margin:4px 0 2px; letter-spacing:.02em; border-bottom:0;
+  text-decoration:none}
+.ref .chap:hover{color:var(--ink); text-decoration:underline}
+.ref .arrow{display:block; font-family:Archivo,sans-serif; font-size:12px; color:var(--ink-2); margin:3px 0 1px; letter-spacing:.04em}
+/* Arc strokes are measured in SCREEN pixels, not in the drawing's own units.
+   Without this they scale with the zoom, and the graph opens fitted at roughly
+   a fifth of full size — so a 1.6-unit line was landing at under a third of a
+   pixel and the dash patterns collapsed into apparent solid lines, taking the
+   lex/ref/con distinction with them. Non-scaling-stroke keeps both the weight
+   and the dashes constant however far out you are. */
+.edge, .hit{vector-effect:non-scaling-stroke}
+path.esel{stroke-width:4; stroke-opacity:1}
+/* the arc under the pointer while something is selected: full strength, even if dimmed */
+path.edge.ehov{opacity:1; stroke-width:3; stroke-opacity:1}
+.booklab.sel{font-weight:600; fill:var(--ink)}
+@media (max-width:900px){
+  .main{flex-direction:column}
+  .rail{width:auto; border-right:0; border-bottom:1px solid var(--line); max-height:none; padding-bottom:16px}
+  .panel{width:auto; border-left:0; border-top:1px solid var(--line)}
+  .stage{height:62vh; flex:none}
+}
+/* Phones: the graph is turned to run down the screen, so give it more height. */
+@media (max-width:767px){
+  .stage{height:80vh}
+  /* The panel is a bottom sheet (Ethan's C2, 13 Oct): selecting something
+     slides it up over the lower half, the graph still in view above it. The
+     handle switches half and full; Close (or Escape) clears the selection. */
+  .panel{
+    position:fixed; left:0; right:0; bottom:0; z-index:15; width:auto;
+    height:55vh; max-height:none; padding:0 18px 32px;
+    border:0; border-top:1px solid var(--line); border-radius:16px 16px 0 0;
+    box-shadow:0 -8px 28px rgba(0,0,0,.18);
+    transform:translateY(105%); transition:transform .3s cubic-bezier(.16,1,.3,1);   /* half/full snaps: animating height thrashes layout */
+  }
+  .panel.open{transform:none}
+  .panel.full{height:88vh}
+  /* Room to scroll the graph up above the open sheet. .wrap grows with its
+     content here: at its desktop height of 100% the content overflowed it, and
+     a spacer after it landed inside that overflow instead of below it. */
+  .wrap{height:auto}
+  body.sheet-open::after{content:''; display:block; height:55vh}
+  .sheetbar{
+    display:flex; align-items:center; justify-content:space-between; gap:12px;
+    position:sticky; top:0; z-index:1; margin:0 -18px 12px; padding:6px 12px 6px 18px;
+    background:var(--surface); border-bottom:1px solid var(--line); touch-action:none;
+  }
+  .sheetbar .grab{
+    flex:1; height:30px; border:0; background:none; cursor:grab; display:grid; place-items:center;
+  }
+  .sheetbar .grab::before{content:''; width:44px; height:5px; border-radius:3px; background:var(--line)}
+  .sheetbar .sheetx{
+    flex:none; padding:5px 13px; border:1px solid var(--line); border-radius:99px;
+    background:var(--paper); color:var(--ink-2); font:inherit; font-size:13px; cursor:pointer;
+  }
+}
+@media (max-width:767px) and (prefers-reduced-motion:reduce){ .panel{transition:none} }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <!-- The title is written by the script from module.json, and the size
+       sentence inside About is written from the generated counts, so the page
+       cannot misstate its own scope. Neither is typed here. -->
+  <h1 id="hTitle">Kings &amp; The Kingdom</h1>
+  <button type="button" id="aboutBtn" aria-haspopup="dialog" aria-expanded="false">About</button>
+</header>
+
+<div class="scrim" id="scrim" hidden></div>
+<div class="about" id="about" role="dialog" aria-modal="true" aria-labelledby="aboutH" hidden>
+  <button type="button" class="x" id="aboutX" aria-label="Close">&times;</button>
+  <h2 id="aboutH">About This Concordagraph</h2>
+  <p class="sub" id="hSub"></p>
+
+  <h3>How To Read It</h3>
+  <p>Every dot is a passage; every arc is a claim that two passages are connected.
+     An arc says two things about itself, and both are visible without clicking.</p>
+  <p><b>What kind of link.</b> A solid line means the two passages share wording.
+     A dashed line means one of them cites the other. A dotted line means they
+     make the same move in different words.</p>
+  <p><b>How much weight the text puts behind it.</b> Green means the text says so
+     outright. Amber means it is a reasonable reading, but inferred. Grey means
+     it was constructed by a reader and the text does not link them.</p>
+  <p>That last distinction is the point of the whole exercise. A graph that draws
+     every connection the same way launders one reader's speculation into settled
+     reference, and there is no way to tell afterwards which was which.</p>
+
+  <h3>Groups &amp; Motifs Are Different Axes</h3>
+  <p>A <b>group</b> is a topic, and a passage belongs to exactly one. A
+     <b>motif</b> is a Hebrew or Greek word, and a passage carries as many as it
+     has words &mdash; so a motif cuts across groups by construction. The number
+     beside each motif is how many verses in the whole Bible use that word: one
+     shared with four verses is evidence, one shared with four hundred is
+     vocabulary.</p>
+
+  <h3>The Versiconcordagraphs Project</h3>
+  <p>A <b>concordagraph</b> is a traversable network of source references in
+     which the nodes are locatable citations and every edge carries both a type
+     and a warrant. This page is one of them. Each topic lives on its own branch
+     of the repository, with its own passages, its own connections and its own
+     built page; a branch is not a version of the same work.</p>
+  <p>Every reference here resolves against a verse index built and checked
+     locally. The build refuses to write the page if a reference does not
+     resolve, an edge points at a missing passage, or a warrant tier is
+     misspelled.</p>
+
+  <h3>No Copyrighted Scripture Text</h3>
+  <p>These pages carry verse references and summaries written for this project,
+     never the wording of a copyrighted translation. Where the Word Study is
+     present, a passage also shows this project's own literal English &mdash; a
+     draft, not yet reviewed &mdash; and the King James Version, which is public
+     domain; its sources and licences are credited beneath each word's study.
+     The index itself is never published. Each reference links out to Bible Hub, where every major
+     translation of that verse sits side by side, and to Bible Gateway for the
+     chapter in full.</p>
+
+  <p class="note">Source and method:
+    <a href="https://github.com/sc-liberty-net/versiconcordagraphs" target="_blank" rel="noopener noreferrer">github.com/sc-liberty-net/versiconcordagraphs</a></p>
+</div>
+<div class="main">
+  <div class="rail">
+    <div class="grp">
+      <h2>Find A Passage</h2>
+      <input type="search" id="q" placeholder="John 18, sword, king…" autocomplete="off">
+    </div>
+    <!-- Folds away on phones, closed by default there (Ethan's A4, 14 Oct), so the
+         graph is not twenty rows down the page. Open on desktop. -->
+    <details class="grp grpfold" id="grpGroups" open>
+      <summary><h2>Groups</h2><span class="gcount" id="gcount"></span></summary>
+      <div class="bulk">
+        <button type="button" id="clAll">Select All</button>
+        <button type="button" id="clNone">Clear</button>
+      </div>
+      <div id="clusters"></div>
+    </details>
+    <!-- The link filters and the motifs fold like the groups (Ethan, 21 Oct):
+         open on desktop, closed by default on phones. -->
+    <details class="grp grpfold" id="grpWarrants" open>
+      <summary><h2>How Strong Is The Link</h2><span class="gcount" id="wcount"></span></summary>
+      <div id="warrants"></div>
+    </details>
+    <details class="grp grpfold" id="grpTypes" open>
+      <summary><h2>What Kind Of Link</h2><span class="gcount" id="tcount"></span></summary>
+      <div id="types"></div>
+    </details>
+    <div class="grp">
+    </div>
+  </div>
+  <div class="stage">
+    <details class="motifbar grpfold" id="grpMotifs" open>
+      <summary><h2>Motifs</h2><span class="gcount" id="mcount"></span></summary>
+      <div class="mbody">
+        <!-- A real tooltip, not a title attribute: a title shows only after the
+             pointer rests a second, and never on a phone (Ethan, 13 Oct). -->
+        <button type="button" class="mlabel" id="mlabel" aria-describedby="mtip" aria-expanded="false">Trace A Motif <span class="mq" aria-hidden="true">?</span></button>
+        <div class="mtip" id="mtip" role="tooltip" hidden>A motif is a Hebrew or Greek word, not a group. A passage belongs to one group but carries as many motifs as it has words. The second number is how many verses in the whole Bible use that word: shared with four is evidence, shared with four hundred is vocabulary.</div>
+        <div id="motifs"></div>
+      </div>
+    </details>
+    <div class="canvas">
+      <button class="reset floating" id="reset">Show Everything Again</button>
+      <svg id="net" role="img" aria-label="Network of Bible passages about kings, force and the kingdom of God"></svg>
+      <div class="readout" id="readout" aria-live="polite"></div>
+      <div class="zoom">
+        <button id="zin" title="Zoom in" aria-label="Zoom in">+</button>
+        <button id="zout" title="Zoom out" aria-label="Zoom out">−</button>
+        <button id="zfit" title="Fit to view" aria-label="Fit to view">⤢</button>
+      </div>
+    </div>
+  </div>
+  <div class="panel" id="panel"></div>
+</div>
+</div>
+
+<script src="verses.js" onerror="void 0"></script>
+<!-- The Word Study (wordstudy/build.py writes it). Deferred: it is large, and the graph should not
+     wait for it. Without it a passage shows its summary, as before. -->
+<script src="wordstudy.js" defer onerror="void 0"></script>
+<script>
+// <corpus>  generated by build_graph.py — edit the CSVs, not this block
+const MOD = "king";
+const MODS = {
+  king:{title:"Kings & The Kingdom"},
+};
+const META = {nodes:216,edges:215,books:46};
+const BOOKS = ["Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy", "Joshua", "Judges", "1 Samuel", "2 Samuel", "1 Kings", "2 Kings", "1 Chronicles", "2 Chronicles", "Esther", "Psalm", "Proverbs", "Ecclesiastes", "Isaiah", "Jeremiah", "Lamentations", "Ezekiel", "Daniel", "Hosea", "Joel", "Amos", "Micah", "Nahum", "Habakkuk", "Zechariah", "Matthew", "Mark", "Luke", "John", "Acts", "Romans", "1 Corinthians", "2 Corinthians", "Galatians", "Ephesians", "Philippians", "Colossians", "1 Timothy", "Hebrews", "James", "1 Peter", "Revelation"];
+const ABBR = {
+  "Genesis":"Gen",
+  "Exodus":"Exod",
+  "Leviticus":"Lev",
+  "Numbers":"Num",
+  "Deuteronomy":"Deut",
+  "Joshua":"Josh",
+  "Judges":"Judg",
+  "1 Samuel":"1 Sam",
+  "2 Samuel":"2 Sam",
+  "1 Kings":"1 Kgs",
+  "2 Kings":"2 Kgs",
+  "1 Chronicles":"1 Chr",
+  "2 Chronicles":"2 Chr",
+  "Esther":"Esth",
+  "Psalm":"Ps",
+  "Proverbs":"Prov",
+  "Ecclesiastes":"Eccl",
+  "Isaiah":"Isa",
+  "Jeremiah":"Jer",
+  "Lamentations":"Lam",
+  "Ezekiel":"Ezek",
+  "Daniel":"Dan",
+  "Hosea":"Hos",
+  "Joel":"Joel",
+  "Amos":"Amos",
+  "Micah":"Mic",
+  "Nahum":"Nah",
+  "Habakkuk":"Hab",
+  "Zechariah":"Zech",
+  "Matthew":"Matt",
+  "Mark":"Mark",
+  "Luke":"Luke",
+  "John":"John",
+  "Acts":"Acts",
+  "Romans":"Rom",
+  "1 Corinthians":"1 Cor",
+  "2 Corinthians":"2 Cor",
+  "Galatians":"Gal",
+  "Ephesians":"Eph",
+  "Philippians":"Phil",
+  "Colossians":"Col",
+  "1 Timothy":"1 Tim",
+  "Hebrews":"Heb",
+  "James":"Jas",
+  "1 Peter":"1 Pet",
+  "Revelation":"Rev",
+};
+const CL = {
+  "violence":{name:"The First Violence",light:"#7C8B96",dark:"#93A3AE",role:"",note:"From Cain's field to Babel: the first killing, the first boast of revenge, the first warrior, and blood that cries out."},
+  "askking":{name:"Asking For A King",light:"#AB4998",dark:"#CE8CC1",role:"",note:"Israel asks for a king like the nations', and God reads it as being rejected himself."},
+  "decree":{name:"Decrees Of The Enthroned",light:"#2F6B84",dark:"#6FA8C4",role:"",note:"Orders given from thrones: drown the boys, bow or burn, pray to the king, destroy a people, kill the infants."},
+  "conquest":{name:"Conquest & Its Cruelty",light:"#8E2F4E",dark:"#C4708C",role:"",note:"The season when kings go to war: necks under feet, sieges, plunder, the slain, and the rules that tried to limit it."},
+  "swordhome":{name:"The Sword Comes Home",light:"#94707A",dark:"#BE939D",role:"",note:"Violence that returns on the one who used it: David's house, Ahab's blood, and those who kill by the sword."},
+  "chariot":{name:"Chariots, Horses & Trust",light:"#9A8352",dark:"#C2A86E",role:"",note:"What a king relies on, and what God says actually saves."},
+  "sovereign":{name:"God Over The Kings",light:"#6749AB",dark:"#9B7BE0",role:"",note:"Kings who boast and fall, kings God calls his servants, and the one enthroned in heaven who laughs at their plots."},
+  "oppress":{name:"How Man Rules: Oppression",light:"#857A6A",dark:"#A99B87",role:"",note:"Rule as observed under the sun: one person over another to his hurt, and the prophets' charge sheet against rulers."},
+  "servant":{name:"Not So Among You",light:"#4E8E7A",dark:"#7FC0AC",role:"",note:"Jesus' contrast with the rulers of the nations, and the servant-king who comes humble and unarmed."},
+  "vengeance":{name:"Vengeance",light:"#3F8FA0",dark:"#77C0CE",role:"",note:"Like for like, and what replaces it: vengeance left to God, enemies loved, captives fed."},
+  "plowshare":{name:"Swords Into Plowshares",light:"#7E9152",dark:"#AEC182",role:"",note:"The promised end of war, its reversal in Joel, and wisdom that is worth more than weapons."},
+  "authority":{name:"Authority, Obedience & Limits",light:"#5A6390",dark:"#8F98C4",role:"",note:"Submit to the governing authorities; obey God rather than men. The two held in tension, with those who refused a king's order."},
+  "nostop":{name:"The Kingdom No Army Stops",light:"#2F7D5E",dark:"#62B48F",role:"",note:"Gamaliel's test, the stone cut without hands, plans God frustrates, the fullness of time, and the other warfare."},
+  "hub":{name:"Not Of This World",light:"#B4553C",dark:"#D97B60",role:"hub",note:"My kingdom is not from this world: the king who declines the sword, the crown offered by force, and the Lamb who conquers."},
+};
+const MO = {
+};
+const N = [
+  ["king:h1","John 18:36","hub","Before Pilate, Jesus says his reign does not originate here; were it otherwise, his people would take up arms to stop his arrest.","king"],
+  ["king:h2","John 6:15","hub","Sensing the crowd means to seize him and crown him by force, Jesus slips away alone into the hills.","king"],
+  ["king:h3","John 18:11","hub","Jesus orders Peter to sheathe his blade: the cup his Father hands him is to be drunk, not fought off.","king"],
+  ["king:h4","Matthew 26:53","hub","Jesus reminds them he could summon over twelve legions of angels at once. He does not.","king"],
+  ["king:h5","Luke 22:51","hub","\"Enough,\" he says, and restores the wounded slave's ear with a touch.","king"],
+  ["king:h6","Matthew 4:8","hub","From a high peak the devil displays every realm on earth and all their glory.","king"],
+  ["king:h7","Matthew 4:9","hub","The price of them all: kneel and worship the tempter.","king"],
+  ["king:h8","Luke 4:6","hub","The devil claims the authority and splendour of the realms were handed to him, to give to whoever he likes.","king"],
+  ["king:h9","John 19:11","hub","Jesus tells Pilate that his power over him exists only because it was granted from above.","king"],
+  ["king:h10","Mark 15:17","hub","The soldiers dress him in purple and press a crown woven of thorns onto his head.","king"],
+  ["king:h11","John 19:19","hub","Pilate's placard on the cross names him as Jesus of Nazareth and King of the Jews.","king"],
+  ["king:h12","Revelation 1:5","hub","Jesus Christ, the trustworthy witness and first raised from death, is named ruler over earth's kings.","king"],
+  ["king:h13","Revelation 5:5","hub","An elder announces that the Lion of Judah's tribe has won the victory and may open the scroll.","king"],
+  ["king:h14","Revelation 5:6","hub","What John then sees is not a lion but a Lamb, standing, bearing the marks of slaughter.","king"],
+  ["king:h15","Luke 22:49","hub","As the arrest begins, his companions ask whether they should strike with their swords.","king"],
+  ["king:v1","Genesis 4:8","violence","Cain lures Abel out into the open country and kills him there.","king"],
+  ["king:v2","Genesis 4:10","violence","God tells Cain that the ground itself cries out to him with his brother's blood.","king"],
+  ["king:v3","Genesis 4:23","violence","Lamech boasts to his wives that he killed a man, a youth, for striking and wounding him.","king"],
+  ["king:v4","Genesis 4:24","violence","Cain's sevenfold vengeance becomes Lamech's seventy-seven.","king"],
+  ["king:v5","Genesis 6:11","violence","Before the flood, the earth is ruined in God's eyes and full of violence.","king"],
+  ["king:v6","Genesis 9:6","violence","After the flood: shed a human's blood and a human will shed yours, because humankind bears God's image.","king"],
+  ["king:v7","Genesis 10:8","violence","Nimrod, Cush's son, is the earliest man the text calls a mighty warrior.","king"],
+  ["king:v8","Genesis 11:4","violence","At Babel people resolve to raise a city with a tower into the sky, to make a name and not be scattered.","king"],
+  ["king:v9","Numbers 35:33","violence","Bloodshed defiles the land, and only the killer's own blood can atone for it.","king"],
+  ["king:v10","Matthew 18:22","violence","Jesus answers Peter: forgive not seven times, but seventy-seven.","king"],
+  ["king:v11","Matthew 23:35","violence","Jesus charges that all the innocent blood ever spilled, from Abel's to Zechariah's, will come upon that generation.","king"],
+  ["king:v12","Hebrews 12:24","violence","The sprinkled blood of Jesus speaks something better than Abel's did.","king"],
+  ["king:v13","James 4:1","violence","Quarrels and fights among believers come from desires waging war inside them.","king"],
+  ["king:v14","James 4:2","violence","Wanting and not getting, people kill; coveting and not obtaining, they fight.","king"],
+  ["king:v15","Genesis 49:5","violence","Jacob names Simeon and Levi as brothers whose swords are instruments of violence.","king"],
+  ["king:a1","Judges 8:23","askking","Gideon refuses the crown for himself and his son: the LORD is to rule Israel.","king"],
+  ["king:a2","Judges 9:8","askking","In Jotham's fable the trees set out to crown a king for themselves, and ask the olive first.","king"],
+  ["king:a3","Judges 9:15","askking","The bramble accepts: shelter in my shade, or fire will come out of me and burn the cedars.","king"],
+  ["king:a4","Judges 21:25","askking","The book closes: Israel had no king, and each did what seemed right to himself.","king"],
+  ["king:a5","1 Samuel 8:5","askking","The elders ask Samuel to give them a king to govern them, as the nations have.","king"],
+  ["king:a6","1 Samuel 8:7","askking","God tells Samuel the people are rejecting not him but God as their king.","king"],
+  ["king:a7","1 Samuel 8:20","askking","They want to be like the nations, with a king who leads them out and fights their wars.","king"],
+  ["king:a8","Hosea 8:4","askking","God says Israel set up kings and princes he never chose and never knew of.","king"],
+  ["king:a9","Deuteronomy 17:16","askking","The king must not build up horses for himself or send the people back to Egypt for them.","king"],
+  ["king:a10","Deuteronomy 17:18","askking","Once enthroned, the king is to have his own copy of the law written out before the priests.","king"],
+  ["king:a11","Deuteronomy 17:20","askking","So that he does not raise himself above his kin, or stray from the command.","king"],
+  ["king:a12","1 Samuel 15:22","askking","Samuel tells Saul that God wants obedience more than burnt offerings.","king"],
+  ["king:d1","Exodus 1:16","decree","Pharaoh orders the Hebrew midwives to kill newborn boys and spare girls.","king"],
+  ["king:d2","Exodus 1:22","decree","Pharaoh then commands all his people to throw every Hebrew boy into the Nile.","king"],
+  ["king:d3","Exodus 5:2","decree","Pharaoh asks who this LORD is that he should obey him, and refuses to release Israel.","king"],
+  ["king:d4","Daniel 3:6","decree","Nebuchadnezzar's decree: anyone who will not bow to the statue goes straight into the furnace.","king"],
+  ["king:d5","Daniel 6:7","decree","The officials press Darius to forbid, for thirty days, any prayer except to the king, on pain of the lions.","king"],
+  ["king:d6","Esther 3:13","decree","Letters go out across the empire ordering the Jews destroyed and their goods seized, on one appointed day.","king"],
+  ["king:d7","Esther 8:8","decree","The king explains that an order written in his name and sealed with his ring cannot be revoked.","king"],
+  ["king:d8","Matthew 2:16","decree","Herod, enraged at being outwitted, has every boy two and under in and around Bethlehem killed.","king"],
+  ["king:d9","Isaiah 10:1","decree","Woe to those who issue unjust decrees and write statutes that oppress.","king"],
+  ["king:d10","Isaiah 10:2","decree","Their laws deny the poor their rights and turn widows and orphans into plunder.","king"],
+  ["king:d11","1 Kings 21:7","decree","Jezebel taunts Ahab about whether he truly rules Israel and promises to get him Naboth's vineyard.","king"],
+  ["king:c1","2 Samuel 11:1","conquest","In spring, the season for kings to make war, David sends Joab to ravage Ammon, and stays home.","king"],
+  ["king:c2","Joshua 10:24","conquest","Joshua has his commanders plant their feet on five captured kings' necks.","king"],
+  ["king:c3","Judges 1:7","conquest","Adoni-bezek, maimed as he had maimed seventy kings, admits God has repaid him in kind.","king"],
+  ["king:c4","2 Kings 8:12","conquest","Elisha weeps, foreseeing Hazael burning forts, killing young men, smashing children and ripping open pregnant women.","king"],
+  ["king:c5","Amos 1:13","conquest","Ammon is condemned for slitting open Gilead's pregnant women to widen its borders.","king"],
+  ["king:c6","Isaiah 10:13","conquest","Assyria's king credits his own strength and cleverness for erasing borders, looting treasure and toppling thrones.","king"],
+  ["king:c7","2 Kings 6:28","conquest","In besieged Samaria a woman brings the king her complaint: a pact to eat their sons, one each day.","king"],
+  ["king:c8","2 Kings 6:29","conquest","She cooked her son; the next day the other mother hid hers.","king"],
+  ["king:c9","Deuteronomy 28:53","conquest","The covenant curse foretells it: under siege, parents will eat their own children.","king"],
+  ["king:c10","Lamentations 4:10","conquest","In Jerusalem's fall, tender-hearted mothers boiled their children for food.","king"],
+  ["king:c11","Deuteronomy 20:10","conquest","Before attacking a town, Israel must first offer it peace.","king"],
+  ["king:c12","Deuteronomy 20:19","conquest","In a long siege the fruit trees are not to be cut down: a tree is not an enemy.","king"],
+  ["king:c13","Joshua 7:21","conquest","Achan confesses he saw a robe, silver and gold among the spoil, wanted them, took them and buried them.","king"],
+  ["king:c14","1 Samuel 15:9","conquest","Saul spares King Agag and keeps the choicest livestock and valuables instead of destroying all of it.","king"],
+  ["king:c15","Genesis 14:23","conquest","Abram will not take even a thread or a strap of a shoe from the king of Sodom's spoils.","king"],
+  ["king:c16","Nahum 3:1","conquest","Nineveh, city of blood and lies, endlessly stuffed with plunder.","king"],
+  ["king:c17","Nahum 3:3","conquest","Charging cavalry, flashing blades, and corpses past counting that men trip over.","king"],
+  ["king:c18","Jeremiah 9:22","conquest","Bodies will lie across the fields like dung, like sheaves left behind that no one gathers.","king"],
+  ["king:c19","Ezekiel 37:2","conquest","Ezekiel is led around a valley of bones, very many and very dry.","king"],
+  ["king:c20","Ezekiel 37:9","conquest","He is told to summon breath from the four winds into the slain so that they live.","king"],
+  ["king:c21","2 Kings 25:7","conquest","Babylon kills Zedekiah's sons in front of him, blinds him, and carries him off in chains.","king"],
+  ["king:c22","Habakkuk 1:11","conquest","The Chaldeans sweep through like wind; their own strength is their god.","king"],
+  ["king:c23","Revelation 6:4","conquest","A red horse's rider is permitted to strip the earth of peace, so people slaughter each other; he is handed a great sword.","king"],
+  ["king:c24","Revelation 19:17","conquest","An angel stationed in the sun summons every bird in mid-heaven to God's great supper.","king"],
+  ["king:c25","Revelation 19:18","conquest","The menu is the flesh of kings, commanders, the mighty, horses and riders, slave and free.","king"],
+  ["king:c26","Ezekiel 39:18","conquest","Birds and beasts are invited to eat warriors' flesh and drink the princes' blood.","king"],
+  ["king:s1","2 Samuel 12:9","swordhome","Nathan charges David with killing Uriah by the Ammonite sword and taking his wife.","king"],
+  ["king:s2","2 Samuel 12:10","swordhome","Therefore the sword will never leave David's house.","king"],
+  ["king:s3","1 Chronicles 22:8","swordhome","David is barred from building God's house because he shed much blood and fought great wars.","king"],
+  ["king:s4","1 Kings 21:19","swordhome","Where the dogs lapped Naboth's blood, they will lap Ahab's.","king"],
+  ["king:s5","Revelation 13:10","swordhome","Whoever kills by the sword will be killed by it: a summons to the saints' endurance and faith.","king"],
+  ["king:s6","2 Samuel 2:26","swordhome","Abner calls to Joab: must the sword devour forever? Kin chasing kin ends in bitterness.","king"],
+  ["king:s7","Revelation 18:24","swordhome","Fallen Babylon is found holding the prophets' and saints' blood, and that of everyone slaughtered on earth.","king"],
+  ["king:s8","Revelation 17:6","swordhome","The woman is drunk on the saints' blood and the blood of Jesus' witnesses.","king"],
+  ["king:r1","Psalm 20:7","chariot","Some boast of chariots and horses; the psalmist boasts in the name of God.","king"],
+  ["king:r2","Psalm 33:16","chariot","No king is rescued by the size of his army, nor a warrior by his own strength.","king"],
+  ["king:r3","Psalm 33:17","chariot","A warhorse is a false hope; for all its power it saves no one.","king"],
+  ["king:r4","Isaiah 31:1","chariot","Woe to those who run to Egypt for horses and chariots and never seek the Holy One.","king"],
+  ["king:r5","Hosea 1:7","chariot","God will save Judah himself, not by bow, sword, battle or cavalry.","king"],
+  ["king:r6","Proverbs 21:31","chariot","Ready the horse for battle; the victory is the LORD's.","king"],
+  ["king:r7","1 Samuel 17:47","chariot","David tells Goliath that God saves without sword or spear, for the fight belongs to the LORD.","king"],
+  ["king:r8","2 Chronicles 20:15","chariot","Judah need not fear the vast army: the fight is God's, not theirs.","king"],
+  ["king:r9","Zechariah 4:6","chariot","To Zerubbabel: not by strength, not by force, but through my spirit.","king"],
+  ["king:r10","Exodus 14:14","chariot","At the sea: God will do the fighting, and Israel need only be still.","king"],
+  ["king:r11","Exodus 15:3","chariot","After the crossing, Israel sings of the LORD as a man of war.","king"],
+  ["king:r12","Psalm 144:1","chariot","David blesses God for training his hands and fingers for battle.","king"],
+  ["king:r13","Jeremiah 50:37","chariot","God's sword is against Babylon's horses, chariots, hired troops and treasure.","king"],
+  ["king:g1","Daniel 4:17","sovereign","The watchers' decree: the Most High rules over human kingdoms and gives them to whom he wills, even the lowliest.","king"],
+  ["king:g2","Daniel 4:30","sovereign","Nebuchadnezzar admires the Babylon he built by his own might for his own glory.","king"],
+  ["king:g3","Daniel 5:27","sovereign","Tekel: Belshazzar is weighed, and found too light.","king"],
+  ["king:g4","Jeremiah 27:6","sovereign","God gives the lands to Nebuchadnezzar, calling him my servant.","king"],
+  ["king:g5","Isaiah 45:1","sovereign","God calls Cyrus his anointed, whose hand he holds to bring nations down before him.","king"],
+  ["king:g6","Proverbs 8:15","sovereign","Wisdom says it is through her that kings hold their thrones and rulers make just laws.","king"],
+  ["king:g7","2 Kings 19:35","sovereign","In one night the LORD's angel kills 185,000 in Assyria's camp.","king"],
+  ["king:g8","Acts 12:23","sovereign","Herod, taking glory that was God's, is struck down by an angel and eaten by worms.","king"],
+  ["king:g9","Luke 1:52","sovereign","Mary sings that God pulls rulers off their thrones and raises the low.","king"],
+  ["king:g10","Psalm 2:2","sovereign","Earth's kings and rulers band together to oppose God and the one he anointed.","king"],
+  ["king:g11","Psalm 2:4","sovereign","The one enthroned in heaven laughs at them and holds them in scorn.","king"],
+  ["king:g12","Psalm 2:9","sovereign","The anointed will smash them with an iron rod like pottery.","king"],
+  ["king:g13","Psalm 2:10","sovereign","So the kings are told: be wise, and take warning.","king"],
+  ["king:g14","Acts 4:26","sovereign","The believers apply Psalm 2 to the plot against Jesus.","king"],
+  ["king:g15","Isaiah 14:12","sovereign","The Day Star who brought the nations down is himself felled to the earth.","king"],
+  ["king:g16","Isaiah 14:13","sovereign","He had vowed to climb to heaven and set his throne above God's stars.","king"],
+  ["king:g17","Isaiah 14:16","sovereign","Onlookers stare and ask whether this is really the one who made kingdoms shake.","king"],
+  ["king:g18","Revelation 6:15","sovereign","Kings, generals, the wealthy and the mighty hide in caves among the rocks.","king"],
+  ["king:o1","Ecclesiastes 4:1","oppress","The Teacher sees oppression everywhere: the oppressed weeping with no comforter, and power on the oppressors' side.","king"],
+  ["king:o2","Ecclesiastes 5:8","oppress","Do not be surprised by injustice in a province: every official has a higher one watching him, and those have higher still.","king"],
+  ["king:o3","Ecclesiastes 8:9","oppress","He observes how one person wields power over another to that person's harm.","king"],
+  ["king:o4","Micah 3:2","oppress","Rulers who hate good and love evil strip the skin and flesh from God's people.","king"],
+  ["king:o5","Micah 3:3","oppress","They devour them, break their bones, and cut them into pieces for the pot.","king"],
+  ["king:o6","Ezekiel 34:4","oppress","The shepherds neither healed the sick nor sought the lost, but ruled with force and harshness.","king"],
+  ["king:o7","Ezekiel 22:27","oppress","Jerusalem's officials are wolves tearing prey, shedding blood for profit.","king"],
+  ["king:o8","Proverbs 28:15","oppress","To the poor, a wicked ruler is a lion that roars or a bear on the charge.","king"],
+  ["king:o9","Proverbs 29:2","oppress","The people rejoice under the righteous and groan under the wicked.","king"],
+  ["king:o10","Jeremiah 22:3","oppress","Do justice, rescue the robbed from the oppressor, do no violence to alien, orphan or widow, shed no innocent blood.","king"],
+  ["king:o11","Micah 6:8","oppress","What God asks of a person: do justice, love kindness, walk humbly with him.","king"],
+  ["king:o12","Psalm 72:4","oppress","The prayer for the king: may he defend the poor and crush the oppressor.","king"],
+  ["king:o13","Luke 3:14","oppress","John tells soldiers not to extort by threats or false charges, and to be content with their pay.","king"],
+  ["king:o14","Isaiah 32:1","oppress","A king is promised who reigns in righteousness and princes who rule with justice.","king"],
+  ["king:n1","Matthew 20:25","servant","Jesus: the rulers of the nations lord it over their people and their great men tyrannise them.","king"],
+  ["king:n2","Matthew 20:26","servant","Not among you: here, greatness means being a servant.","king"],
+  ["king:n3","Matthew 20:28","servant","He came to serve, not be served, and to lay down his life as a ransom for many.","king"],
+  ["king:n4","Mark 10:42","servant","Mark's form: those reckoned to rule the nations lord it over them.","king"],
+  ["king:n5","Luke 22:25","servant","Luke's form: the kings of the nations dominate them and are hailed as benefactors.","king"],
+  ["king:n6","Luke 22:26","servant","The greatest must be like the youngest, the leader like a servant.","king"],
+  ["king:n7","Philippians 2:7","servant","He emptied himself, took a slave's form, and was born as a human.","king"],
+  ["king:n8","Philippians 2:8","servant","He lowered himself and obeyed all the way to dying on a cross.","king"],
+  ["king:n9","Isaiah 42:2","servant","The servant will not shout or raise his voice in the street.","king"],
+  ["king:n10","Isaiah 42:3","servant","He will not break a bruised reed or snuff out a faint wick, yet he brings justice.","king"],
+  ["king:n11","Zechariah 9:9","servant","Zion's king arrives victorious, yet humble, riding a donkey's colt.","king"],
+  ["king:n12","Zechariah 9:10","servant","He removes chariot, warhorse and bow, and speaks peace to the nations.","king"],
+  ["king:n13","Matthew 21:5","servant","Matthew cites Zechariah as Jesus rides into Jerusalem.","king"],
+  ["king:n14","Isaiah 53:7","servant","Oppressed and afflicted, he stayed silent, a lamb led to slaughter.","king"],
+  ["king:x1","Exodus 21:24","vengeance","The law of like for like: eye, tooth, hand, foot.","king"],
+  ["king:x2","Leviticus 19:18","vengeance","No revenge and no grudge against your own people; love your neighbour as yourself.","king"],
+  ["king:x3","Deuteronomy 32:35","vengeance","God claims vengeance and repayment as his own.","king"],
+  ["king:x4","Matthew 5:38","vengeance","Jesus recalls the old saying about an eye for an eye.","king"],
+  ["king:x5","Matthew 5:39","vengeance","He says not to resist the one who does evil: struck on one cheek, offer the other.","king"],
+  ["king:x6","Matthew 5:44","vengeance","Love those who are your enemies, and pray on behalf of your persecutors.","king"],
+  ["king:x7","Romans 12:17","vengeance","Paul: repay no one evil for evil.","king"],
+  ["king:x8","Romans 12:19","vengeance","Never take revenge; leave room for God's wrath, since Scripture says repayment is his.","king"],
+  ["king:x9","Romans 12:21","vengeance","Conquer evil with good, rather than be conquered by it.","king"],
+  ["king:x10","1 Peter 2:23","vengeance","Insulted, Christ did not insult back; suffering, he made no threats, but trusted the just judge.","king"],
+  ["king:x11","Luke 23:34","vengeance","On the cross Jesus asks the Father to forgive them, since they are unaware of what they do.","king"],
+  ["king:x12","Acts 7:60","vengeance","Stephen, dying under the stones, asks the Lord not to charge this sin to them.","king"],
+  ["king:x13","Luke 9:54","vengeance","James and John offer to call fire from heaven down on a Samaritan village.","king"],
+  ["king:x14","Luke 9:55","vengeance","Jesus turns and rebukes them.","king"],
+  ["king:x15","2 Kings 6:22","vengeance","Elisha refuses to let the king kill the captured Arameans: feed them and send them home.","king"],
+  ["king:x16","2 Kings 6:23","vengeance","After a great feast they go home, and the raiding bands stop coming.","king"],
+  ["king:x17","1 Samuel 24:6","vengeance","David will not lift his hand against Saul, the LORD's anointed.","king"],
+  ["king:x18","Genesis 50:20","vengeance","Joseph tells his brothers: you meant me harm, God meant it for good.","king"],
+  ["king:p1","Isaiah 2:4","plowshare","God will judge the nations; swords become plowshares, spears pruning hooks, and war is no longer learned.","king"],
+  ["king:p2","Micah 4:3","plowshare","Micah gives the same vision of nations disarmed by God's judgement.","king"],
+  ["king:p3","Joel 3:10","plowshare","The call reversed: hammer plowshares into swords, and let the weak claim to be a warrior.","king"],
+  ["king:p4","Psalm 46:9","plowshare","God ends wars to the ends of the earth, breaking bow and spear and burning shields.","king"],
+  ["king:p5","Hosea 2:18","plowshare","God will banish bow, sword and warfare from the land, and let his people rest in safety.","king"],
+  ["king:p6","Isaiah 9:6","plowshare","A child is born who bears authority on his shoulders, named Prince of Peace.","king"],
+  ["king:p7","Isaiah 9:7","plowshare","His rule and peace will grow without end, upheld by justice.","king"],
+  ["king:p8","Psalm 76:3","plowshare","There God broke the arrows, the shield and the blade.","king"],
+  ["king:p9","Matthew 24:6","plowshare","Wars and rumours of wars will come; do not be alarmed, for that is not yet the end.","king"],
+  ["king:p10","Ecclesiastes 3:8","plowshare","There is a season for war and a season for peace.","king"],
+  ["king:p11","Proverbs 16:32","plowshare","The patient outdo the mighty, and self-control beats taking a city.","king"],
+  ["king:p12","Ecclesiastes 9:18","plowshare","Wisdom beats weapons, yet one fool undoes much good.","king"],
+  ["king:p13","Ecclesiastes 9:15","plowshare","A poor wise man saved the city, and no one remembered him.","king"],
+  ["king:u1","Romans 13:1","authority","Everyone should submit to the governing authorities, since none exists apart from God.","king"],
+  ["king:u2","Romans 13:4","authority","The ruler is God's servant for good and carries the sword for a reason, executing wrath on wrongdoers.","king"],
+  ["king:u3","Acts 5:29","authority","Peter and the apostles: God must be obeyed over any human authority.","king"],
+  ["king:u4","Acts 4:19","authority","Peter and John ask the council to judge for itself whether heeding it over God is right.","king"],
+  ["king:u5","John 19:10","authority","Pilate reminds the silent Jesus that he holds power to free him or crucify him.","king"],
+  ["king:u6","Exodus 1:17","authority","The midwives fear God, disobey Pharaoh, and let the boys live.","king"],
+  ["king:u7","Daniel 3:17","authority","The three tell the king their God is able to save them from the furnace.","king"],
+  ["king:u8","Daniel 3:18","authority","And even if he does not, they will not serve his gods or bow to his statue.","king"],
+  ["king:u9","1 Timothy 2:2","authority","Pray for kings and all in high office, so that life may be quiet and peaceful.","king"],
+  ["king:u10","John 19:15","authority","The chief priests declare that the emperor is their only king.","king"],
+  ["king:k1","Acts 5:34","nostop","Gamaliel, a respected teacher of the law, has the apostles taken out for a moment.","king"],
+  ["king:k2","Acts 5:36","nostop","Theudas rose up with about four hundred men; he was killed, and his followers scattered.","king"],
+  ["king:k3","Acts 5:37","nostop","Judas of Galilee rose up in the census days; he died, and his followers dispersed.","king"],
+  ["king:k4","Acts 5:38","nostop","Gamaliel: leave these men alone, for a plan of human origin will collapse.","king"],
+  ["king:k5","Acts 5:39","nostop","If it is from God you cannot overthrow it, and you may find yourselves fighting God.","king"],
+  ["king:k6","Daniel 2:34","nostop","A stone cut without hands strikes the statue's iron-and-clay feet and shatters them.","king"],
+  ["king:k7","Daniel 2:44","nostop","God will establish a kingdom that is never destroyed, and it will end all the others.","king"],
+  ["king:k8","Daniel 7:14","nostop","The one like a son of man receives an everlasting dominion that will not pass.","king"],
+  ["king:k9","Psalm 33:10","nostop","The LORD brings the nations' counsel to nothing and frustrates the plans of peoples.","king"],
+  ["king:k10","Psalm 33:11","nostop","His counsel stands forever, his purposes for every generation.","king"],
+  ["king:k11","Proverbs 19:21","nostop","People make many plans, but God's purpose is what stands.","king"],
+  ["king:k12","Proverbs 21:30","nostop","No wisdom or counsel succeeds against the LORD.","king"],
+  ["king:k13","Isaiah 14:27","nostop","God has planned it: who can annul it, or turn back his hand?","king"],
+  ["king:k14","Mark 1:15","nostop","Jesus: the time has come to its fullness, and God's kingdom has come near.","king"],
+  ["king:k15","Galatians 4:4","nostop","When time reached its fullness, God sent his Son.","king"],
+  ["king:k16","Habakkuk 2:3","nostop","The vision awaits its appointed time; if it is slow, wait, for it will surely come.","king"],
+  ["king:k17","Isaiah 60:22","nostop","The least will become a nation; in its time, God says, he will hasten it.","king"],
+  ["king:k18","Revelation 11:15","nostop","The world's kingdom becomes the kingdom of the Lord and his Messiah, who reigns forever.","king"],
+  ["king:k19","Ephesians 6:12","nostop","The struggle is not with flesh and blood, but with rulers, authorities and cosmic powers.","king"],
+  ["king:k20","2 Corinthians 10:4","nostop","The weapons of this warfare are more than human, and they tear down strongholds.","king"],
+  ["king:k21","Colossians 2:15","nostop","Christ disarmed the rulers and powers and paraded them in his triumph.","king"],
+  ["king:k22","1 Corinthians 2:8","nostop","Had this age's rulers understood, they would never have crucified the glorious Lord.","king"],
+  ["king:k23","1 Corinthians 15:24","nostop","At the end he hands the kingdom to the Father, having abolished every ruler and power.","king"],
+  ["king:k24","Revelation 12:11","nostop","They conquered the accuser by the Lamb's blood and their testimony, not clinging to life.","king"],
+  ["king:k25","Revelation 17:14","nostop","Kings wage war against the Lamb, and he conquers them, being King of kings.","king"],
+  ["king:k26","Revelation 19:19","nostop","The beast and earth's kings gather their armies against the rider and his army.","king"],
+  ["king:k27","Luke 17:20","nostop","Asked when the kingdom comes: it does not come in a way that can be watched for.","king"],
+  ["king:k28","Luke 17:21","nostop","No one will say look here or there, for it is among you.","king"],
+  ["king:k29","Matthew 11:12","nostop","Since John the Baptist, the kingdom suffers violence, and the violent try to seize it.","king"],
+];
+const E = [
+  ["king:h1","king:h3","con","states","The same night in John: he says his followers would fight if his kingdom were from here, and when Peter does fight, he stops him."],
+  ["king:h1","king:h2","con","supports","Twice in John a kingship is pressed on him by force, by a crowd and then by the charge before Pilate, and twice he declines the means."],
+  ["king:h1","king:h9","con","supports","Both are said to Pilate: his kingdom does not come from here, and Pilate's power comes from above."],
+  ["king:h1","king:u5","con","states","The same trial: Pilate's claim to power over life and death is the setting for the answer about a kingdom not from here."],
+  ["king:h9","king:u5","con","states","Consecutive verses. Pilate claims the power to free or crucify; Jesus says that power was given."],
+  ["king:h3","king:h4","con","states","The two Gospel forms of the sword put away at the arrest; Matthew adds the angels he does not call."],
+  ["king:h15","king:h5","con","states","Luke's arrest: the disciples ask whether to strike, one does, and Jesus stops it and heals the wound."],
+  ["king:h4","king:h5","con","supports","Two responses to the drawn sword: the force he declines, and the injury he undoes."],
+  ["king:h6","king:h7","con","states","Consecutive verses: the kingdoms shown, then the price named."],
+  ["king:h6","king:h8","con","states","The same temptation in Matthew and Luke. Luke alone has the devil's claim that the authority was handed to him."],
+  ["king:h8","king:h9","con","spec","Two claims about who hands out authority, the devil's in the wilderness and Jesus' before Pilate. The texts do not set them side by side; this reading does."],
+  ["king:h8","king:g1","con","supports","The devil says the kingdoms are his to give to whoever he likes; Daniel's decree says the Most High gives them to whom he wills. The claims compete."],
+  ["king:h6","king:g1","con","spec","The offer of the kingdoms set against Daniel's claim of who gives them. A reading across the canon."],
+  ["king:h10","king:h11","con","supports","The mock king: purple and thorns from the soldiers, the title on the cross from Pilate."],
+  ["king:h11","king:u10","con","supports","The same chapter of John: the placard names him King of the Jews just after the priests claim the emperor as their only king."],
+  ["king:h12","king:k25","con","supports","Revelation's opening title for Jesus, ruler over earth's kings, is cashed out when the Lamb conquers the kings as King of kings."],
+  ["king:h13","king:h14","con","states","The elder announces a lion, and John turns and sees a slaughtered lamb. The victory is announced in one image and shown in the other."],
+  ["king:h14","king:n14","con","supports","The lamb that was slaughtered in Revelation, and Isaiah's servant led like a lamb to slaughter."],
+  ["king:h14","king:k24","con","states","Revelation's own link: the believers win by the Lamb's blood, the Lamb who won by being slaughtered."],
+  ["king:h1","king:k27","con","supports","A kingdom not from this world, and one that does not come in ways that can be watched for. Both say what the kingdom is not."],
+  ["king:h2","king:a7","con","spec","The crowd wants to make him king by force; Israel wanted a king to fight its battles. Both want a king who acts like the nations' kings."],
+  ["king:h3","king:x5","con","supports","At the arrest Jesus does what he taught: he does not resist the one doing evil."],
+  ["king:h3","king:n3","con","supports","He sheathes the sword to drink the cup, the life given as ransom of Matthew 20:28."],
+  ["king:h1","king:n1","con","supports","His kingdom does not come from here, and it is not run as the nations' rulers run theirs."],
+  ["king:h14","king:n12","con","spec","The conquering lamb and Zechariah's king who removes the chariot and the warhorse. A reading, not a citation."],
+  ["king:h5","king:x15","con","spec","Jesus heals the enemy's wound at the arrest; Elisha feeds the enemy's army. Both answer force with care."],
+  ["king:h4","king:g7","con","supports","The legions of angels Jesus does not call, and the one angel who struck Assyria's camp. The power exists; he declines it."],
+  ["king:v1","king:v2","con","states","Consecutive in the story: the killing and God's question about the blood."],
+  ["king:v3","king:v4","con","states","Lamech's song in two verses: the killing, then the boast of seventy-sevenfold revenge."],
+  ["king:v4","king:v10","con","supports","Lamech's seventy-seven for vengeance, and Jesus' seventy-seven for forgiveness. Many readers see the reversal; the Gospel does not cite Genesis."],
+  ["king:v2","king:v11","ref","states","Jesus names Abel's blood explicitly."],
+  ["king:v2","king:v12","ref","states","Hebrews names Abel's blood explicitly and sets Jesus' blood against it."],
+  ["king:v11","king:v12","con","supports","Both name Abel's blood. Matthew's is the start of a line of murdered righteous people, and Hebrews' is answered by better blood."],
+  ["king:v2","king:v9","con","supports","Blood that cries from the ground, and blood that defiles the land: both say spilled blood stays on the land."],
+  ["king:v6","king:v9","con","supports","Both put blood for blood into law: the life of the one who kills answers for the life taken."],
+  ["king:v5","king:v6","con","supports","The flood comes on an earth full of violence, and the law of blood is given immediately after it."],
+  ["king:v7","king:v8","con","supports","Nimrod's kingdom begins at Babel (Genesis 10:10), and the Babel story follows. The first warrior and the first city built to make a name."],
+  ["king:v13","king:v14","con","states","Consecutive verses: wars come from desires within, and desire unsatisfied ends in killing."],
+  ["king:v1","king:v14","con","supports","James describes what Cain did: wanting, not getting, killing."],
+  ["king:v15","king:v3","con","spec","Two family boasts of violence in Genesis, Lamech's and the brothers' swords at Shechem. The thread is drawn here."],
+  ["king:v6","king:s5","con","supports","The law that blood answers for blood, and Revelation's version: whoever kills by the sword dies by it."],
+  ["king:a5","king:a7","con","states","Both are from the same chapter: a king like the nations', who goes out and fights."],
+  ["king:a5","king:a6","con","states","God's answer to the elders' request: they have rejected him as king."],
+  ["king:a6","king:a1","con","supports","Gideon refuses to rule because God rules; in Samuel the people reverse it, and God reads their choice as rejecting him."],
+  ["king:a2","king:a3","con","states","Jotham's fable: the trees ask the useful plants first, and only the bramble accepts."],
+  ["king:a3","king:a1","con","supports","Jotham's fable is told against Abimelech, Gideon's son, who took the kingship Gideon had refused."],
+  ["king:a4","king:a5","con","spec","Judges ends with no king and each person doing what seemed right to himself; Samuel opens with the request for one. The canon's order joins them."],
+  ["king:a6","king:a8","con","supports","Hosea says the later kings were made without God's choice or knowledge. The rejection in 1 Samuel 8 continues."],
+  ["king:a9","king:a10","con","states","The law of the king in Deuteronomy 17: limits on horses and the copy of the law."],
+  ["king:a10","king:a11","con","states","The purpose of the copy: that the king not raise himself above his kin."],
+  ["king:a9","king:r4","con","supports","The king is not to send to Egypt for horses, and Isaiah condemns those who rely on Egypt's horses."],
+  ["king:a7","king:r7","con","spec","The people want a king to fight their battles; David tells Goliath that the fight belongs to God."],
+  ["king:a12","king:c14","con","states","Samuel's rebuke is about Saul's sparing of the spoil, the same chapter."],
+  ["king:d1","king:d2","con","states","Pharaoh's two orders, to the midwives in secret and then to all his people in public."],
+  ["king:d1","king:u6","con","states","The order and the refusal: the midwives fear God and disobey it."],
+  ["king:d2","king:d8","con","supports","Two kings order the killing of boys. Matthew's birth story is often read against Exodus; Matthew does not cite the Nile order directly."],
+  ["king:d3","king:d4","con","spec","Two kings who set their own word against God's: Pharaoh asks who the LORD is, Nebuchadnezzar commands worship of his statue."],
+  ["king:d4","king:u7","con","states","The furnace decree and the three men's answer to it."],
+  ["king:d4","king:u8","con","states","The decree and the refusal: they will not bow, even if God does not save them."],
+  ["king:d5","king:u3","con","supports","A law forbidding prayer to anyone but the king, and the apostles' rule that God is obeyed over men."],
+  ["king:d6","king:d7","con","states","Esther: the decree to destroy, and the rule that a sealed royal order cannot be revoked. The king cannot undo his own law, only issue another."],
+  ["king:d9","king:d10","con","states","Isaiah's woe in two verses: the unjust decree, and whom it robs."],
+  ["king:d10","king:o10","con","supports","Laws that make widows and orphans prey, and Jeremiah's command not to wrong them."],
+  ["king:d11","king:s4","con","states","Jezebel takes the vineyard by a judicial murder; Elijah's sentence on Ahab follows in the same chapter."],
+  ["king:d6","king:u1","con","spec","An empire's sealed decree to destroy a people, set against the claim that authorities are instituted by God. The tension is drawn here, not in either text."],
+  ["king:c1","king:s1","con","states","The same war: David stays home while Joab besieges Rabbah, and Uriah dies at Rabbah's wall."],
+  ["king:c2","king:c3","con","supports","Conquerors who humiliate captured kings. Adoni-bezek says God repaid him as he had done."],
+  ["king:c3","king:s5","con","supports","Adoni-bezek's own verdict, as I did, so God repaid me, is Revelation's rule applied to one man."],
+  ["king:c4","king:c5","con","states","Both name the ripping open of pregnant women as a conqueror's act, Hazael in Kings and Ammon in Amos."],
+  ["king:c6","king:g2","con","supports","Two kings who credit their own strength: Assyria's I have done it, Babylon's I have built."],
+  ["king:c6","king:c22","con","supports","Assyria credits its own hand, and the Chaldeans make their own strength their god."],
+  ["king:c7","king:c8","con","states","Consecutive verses in the siege of Samaria."],
+  ["king:c8","king:c9","con","supports","The siege of Samaria fulfils what the covenant curse foretold."],
+  ["king:c9","king:c10","con","supports","The same curse fulfilled in Jerusalem's fall."],
+  ["king:c11","king:c12","con","states","The law of war in Deuteronomy 20: offer peace first; spare the trees in a siege."],
+  ["king:c13","king:c14","con","supports","Two failures over the spoil: Achan takes it and hides it, Saul keeps the best of it."],
+  ["king:c15","king:c13","con","spec","Abram refuses a thread of the spoils; Achan covets and buries them. Set side by side here."],
+  ["king:c16","king:c17","con","states","Nahum's woe: the bloody city, then the battlefield."],
+  ["king:c17","king:c18","con","supports","Corpses beyond counting in Nahum and bodies left unburied like sheaves in Jeremiah."],
+  ["king:c19","king:c20","con","states","The valley of bones, then the breath called into the slain."],
+  ["king:c18","king:c19","con","spec","The unburied slain of Jeremiah and the valley of the slain in Ezekiel. The thread is drawn here; Ezekiel is told the bones are the whole house of Israel (37:11)."],
+  ["king:c21","king:s2","con","spec","A king made to watch his sons killed, and the sword that never leaves David's house. Two royal houses broken by the sword."],
+  ["king:c24","king:c25","con","states","Consecutive verses: the call to the birds and what they are called to eat."],
+  ["king:c25","king:c26","con","supports","Revelation's supper of the birds is built on Ezekiel's: the bodies of the mighty and the blood of princes."],
+  ["king:c23","king:p9","con","supports","The red horse takes peace from the earth, and Jesus says wars will come but are not the end."],
+  ["king:c25","king:k26","con","states","The same scene in Revelation 19: the kings gathered for war become the birds' supper."],
+  ["king:s1","king:s2","con","states","Nathan's charge and the sentence that follows from it."],
+  ["king:s2","king:s3","con","supports","The sword stays in David's house, and David is barred from building God's house because of the blood he shed."],
+  ["king:s4","king:v2","con","supports","Naboth's blood answered on Ahab, as Abel's blood cried out against Cain."],
+  ["king:s5","king:s7","con","supports","In Revelation the one who kills by the sword is killed by it, and Babylon, holding the blood of the slaughtered, falls."],
+  ["king:s7","king:s8","con","states","Both describe Babylon in Revelation as full of the saints' blood."],
+  ["king:s6","king:v1","con","spec","Abner's question about kin chasing kin, and the first killing of a brother. The thread is drawn here."],
+  ["king:r1","king:r2","con","supports","Both say a king's army and horses are not what saves."],
+  ["king:r2","king:r3","con","states","Consecutive verses: not the army, not the warhorse."],
+  ["king:r1","king:r4","con","supports","Trust in horses and chariots rather than in God is the charge in both."],
+  ["king:r4","king:r5","con","supports","Isaiah condemns relying on horses; Hosea says God will save without them."],
+  ["king:r5","king:r9","con","supports","Not by bow, sword or horses in Hosea; not by might or power in Zechariah."],
+  ["king:r6","king:r7","con","supports","Victory belongs to God in both, said by David to Goliath and in Proverbs."],
+  ["king:r7","king:r8","con","supports","The same sentence spoken over two battles: the battle is God's."],
+  ["king:r10","king:r8","con","supports","At the sea and before Jehoshaphat's battle, the people are told God fights for them."],
+  ["king:r10","king:r11","con","states","The same event: the promise that God will fight, then the song that he is a warrior."],
+  ["king:r11","king:r12","con","spec","The LORD as warrior, and the LORD who trains David's hands for war. These pull against the passages where God saves without weapons; both are in the text."],
+  ["king:r12","king:r7","con","spec","Psalm 144 thanks God for training David for war; 1 Samuel 17 has the same David say God saves without sword or spear. The tension is the text's own."],
+  ["king:r13","king:r4","con","supports","Horses and chariots, Judah's trust in Isaiah, are what God's sword is against in Jeremiah."],
+  ["king:r9","king:k20","con","supports","Not by might but by my spirit, and weapons that are not merely human."],
+  ["king:r3","king:n12","con","supports","The warhorse is a false hope, and the coming king cuts off the warhorse."],
+  ["king:g1","king:g2","con","states","The decree that God rules human kingdoms, and the boast that proves its point, in the same chapter."],
+  ["king:g2","king:g3","con","supports","Two Babylonian kings in Daniel: the boast and the verdict."],
+  ["king:g4","king:g5","con","supports","God names a foreign king his servant and another his anointed. Both are instruments; neither is the one who rules."],
+  ["king:g1","king:g4","con","supports","Daniel says God gives kingdoms to whom he will; Jeremiah shows him giving them to Nebuchadnezzar."],
+  ["king:g6","king:g1","con","supports","Kings reign through wisdom in Proverbs, and by the Most High's grant in Daniel."],
+  ["king:g7","king:g8","con","supports","Two angels strike a king's power: Assyria's army in a night and Herod's body in public."],
+  ["king:g8","king:g2","con","supports","Herod takes God's glory and falls; Nebuchadnezzar takes credit for Babylon and falls."],
+  ["king:g9","king:g1","con","supports","God brings down the powerful and lifts the lowly, and he sets the lowliest over kingdoms."],
+  ["king:g10","king:g11","con","states","Psalm 2: the kings rage, and heaven laughs."],
+  ["king:g11","king:g12","con","states","Psalm 2 continues: the anointed breaks them."],
+  ["king:g12","king:g13","con","states","Psalm 2 ends with the warning to the kings: be wise."],
+  ["king:g10","king:g14","ref","states","Acts 4 quotes Psalm 2 and applies it to the plot against Jesus."],
+  ["king:g15","king:g16","con","states","Isaiah 14's taunt: the fall and the boast that caused it."],
+  ["king:g16","king:g17","con","states","The same taunt: the one who would sit above the stars is stared at in his grave."],
+  ["king:g16","king:v8","con","supports","Babel's tower reaching heaven and the king who would climb above God's stars. Both build upward to make a name."],
+  ["king:g15","king:g9","con","supports","The one who brought nations down is brought down; God pulls rulers off their thrones."],
+  ["king:g18","king:g17","con","spec","The kings who hide in caves in Revelation and the fallen king the dead stare at. Drawn here."],
+  ["king:o1","king:o3","con","supports","The Teacher's two observations: oppressors hold power, and one person rules another to his hurt."],
+  ["king:o2","king:o3","con","supports","A chain of officials each over another, and power used by one person over another to his harm."],
+  ["king:o4","king:o5","con","states","Micah's charge in two verses: the rulers who strip and devour the people."],
+  ["king:o5","king:o7","con","supports","Rulers who eat the people in Micah, officials who tear them as wolves in Ezekiel."],
+  ["king:o6","king:o7","con","supports","Ezekiel's two pictures of rulers: shepherds who rule by force, officials who prey like wolves."],
+  ["king:o8","king:o9","con","supports","Two proverbs on rule: the wicked ruler is a beast to the poor, and the people groan under him."],
+  ["king:o10","king:o11","con","supports","Do justice and do no violence, in Jeremiah to the king, and in Micah to every person."],
+  ["king:o12","king:o14","con","supports","The king as he should be: defender of the poor, reigning in righteousness."],
+  ["king:o6","king:n1","con","spec","Shepherds who ruled by force and the nations' rulers who lord it over them. Jesus does not cite Ezekiel."],
+  ["king:o13","king:x5","con","spec","John tells soldiers not to extort; Jesus tells his hearers not to resist the evildoer. Two teachings about force, to different people."],
+  ["king:o3","king:n1","con","supports","One person over another to his hurt, and rulers who lord it over the nations: the same observation, made centuries apart."],
+  ["king:o12","king:n10","con","supports","The king who defends the poor, and the servant who will not break the bruised reed."],
+  ["king:n1","king:n2","con","states","Consecutive verses: the rulers of the nations, then not so among you."],
+  ["king:n2","king:n3","con","states","The reason given: he himself came to serve."],
+  ["king:n1","king:n4","con","states","The same saying in Matthew and Mark."],
+  ["king:n1","king:n5","con","states","The same saying in Matthew and Luke. Luke sets it at the Last Supper and adds the title benefactors."],
+  ["king:n5","king:n6","con","states","Luke's form continues: the leader as one who serves."],
+  ["king:n7","king:n8","con","states","The Philippians hymn: emptied, then humbled to the cross."],
+  ["king:n3","king:n8","con","supports","The Son of Man gives his life; the one in God's form obeys to death."],
+  ["king:n9","king:n10","con","states","Isaiah 42: no shouting, no breaking of the reed, and justice all the same."],
+  ["king:n11","king:n12","con","states","Zechariah 9: the king arrives on a donkey, and removes the instruments of war."],
+  ["king:n11","king:n13","ref","states","Matthew quotes Zechariah 9:9 at the entry into Jerusalem."],
+  ["king:n14","king:u5","con","spec","The servant is silent before his shearers, and Jesus is silent before Pilate. John does not cite Isaiah here."],
+  ["king:n12","king:p1","con","supports","The king removes chariot and bow, and the nations hammer swords into farm tools: the same end of war, by different hands."],
+  ["king:n6","king:a11","con","supports","The leader as a servant, and the king who must not raise himself above his kin."],
+  ["king:x1","king:x4","ref","states","Jesus quotes the eye-for-eye law."],
+  ["king:x4","king:x5","con","states","Consecutive verses: you have heard, but I say."],
+  ["king:x5","king:x6","con","supports","The Sermon's two answers to an enemy: do not resist and love."],
+  ["king:x2","king:x6","con","supports","Love of neighbour in Leviticus is extended to love of enemy in Matthew."],
+  ["king:x3","king:x8","ref","states","Paul quotes Deuteronomy 32:35."],
+  ["king:x7","king:x8","con","states","Romans 12: repay no one evil; leave room for God's wrath."],
+  ["king:x8","king:x9","con","states","Romans 12 ends: overcome evil with good."],
+  ["king:x10","king:x11","con","supports","Peter describes Christ suffering without threat, and Luke shows him praying for those who crucify him."],
+  ["king:x11","king:x12","con","states","Luke wrote both. Stephen dies as Jesus died, praying for those killing him."],
+  ["king:x13","king:x14","con","states","Consecutive verses: the request for fire and the rebuke."],
+  ["king:x15","king:x16","con","states","Elisha's feast for the enemy army, and its result: the raids stop."],
+  ["king:x16","king:x9","con","supports","Evil overcome with good: the raiding army fed, and the raids end."],
+  ["king:x15","king:x6","con","supports","Elisha feeds the captured enemy; Jesus says to love the enemy."],
+  ["king:x17","king:x3","con","supports","David spares Saul and leaves judgement to God."],
+  ["king:x18","king:x8","con","spec","Joseph does not take revenge on his brothers, and God turns the harm to good. Paul does not cite Joseph."],
+  ["king:x1","king:v4","con","spec","Like for like limits revenge; Lamech's seventy-seven had no limit. Many readers take the law as a curb on revenge; the text does not say so."],
+  ["king:x13","king:a3","con","spec","The fire the disciples want to call down, and the bramble king's threat of fire. The thread is drawn here."],
+  ["king:x3","king:r10","con","supports","God takes vengeance, and God fights for his people. In both, the force belongs to God and not to them."],
+  ["king:p1","king:p2","con","states","Isaiah and Micah share almost the same oracle word for word."],
+  ["king:p1","king:p3","con","supports","Joel reverses the plowshares oracle, turning tools into weapons for the day of judgement."],
+  ["king:p4","king:p5","con","supports","God breaks the bow and ends war in both."],
+  ["king:p4","king:p8","con","supports","Two psalms of God breaking the weapons: bow and spear, arrows and sword."],
+  ["king:p6","king:p7","con","states","Isaiah 9: the child's names and his peace without end."],
+  ["king:p6","king:n11","con","supports","The Prince of Peace and the humble king on the donkey, two pictures of a king without warfare."],
+  ["king:p10","king:p9","con","spec","A season for war, and wars that must come but are not the end. The thread is drawn here."],
+  ["king:p11","king:p12","con","supports","Self-control beats taking a city; wisdom beats weapons."],
+  ["king:p12","king:p13","con","states","The same passage: the poor wise man saved the city, and wisdom beats weapons."],
+  ["king:p13","king:p11","con","supports","A city saved by wisdom; a city taken by force is worth less than self-control."],
+  ["king:u1","king:u2","con","states","Romans 13: authorities instituted by God; the ruler bears the sword as God's servant."],
+  ["king:u3","king:u4","con","states","Two answers to the same council in Acts: we must obey God."],
+  ["king:u1","king:u3","con","supports","The two sayings held in tension. Romans tells everyone to submit; Acts says God is obeyed first when the two conflict. Neither cancels the other in the text."],
+  ["king:u5","king:u1","con","supports","Pilate's power was given from above, and every authority exists by God's appointment. Both affirm the grant; neither says it is used well."],
+  ["king:u6","king:u8","con","supports","The midwives and the three men in the furnace both refuse a king's order to God's honour."],
+  ["king:u7","king:u8","con","states","Consecutive verses: God can save us, and even if he does not."],
+  ["king:u9","king:u1","con","supports","Praying for kings and submitting to them in Paul's letters."],
+  ["king:u2","king:x8","con","supports","In Romans 12 vengeance is God's, and in Romans 13 the ruler executes God's wrath. Paul places the sword with the ruler and not with the believer."],
+  ["king:u10","king:a6","con","spec","The priests' only king is the emperor, and Israel had rejected God as king. A reading across the canon; John does not cite Samuel."],
+  ["king:k1","king:k4","con","states","Gamaliel's counsel in Acts 5."],
+  ["king:k2","king:k3","con","states","Gamaliel's two examples: movements that rose by force and scattered when their leader died."],
+  ["king:k4","king:k5","con","states","The test in two halves: of human origin it fails, of God it cannot be overthrown."],
+  ["king:k3","king:k4","con","states","The examples lead to the counsel: leave them alone."],
+  ["king:k5","king:k12","con","supports","No counsel succeeds against the LORD, and a work of God cannot be overthrown."],
+  ["king:k9","king:k10","con","states","Psalm 33: the nations' plans frustrated and God's counsel standing."],
+  ["king:k10","king:k11","con","supports","God's counsel stands and his purpose is established."],
+  ["king:k11","king:k13","con","supports","God's purpose stands, and who can turn back his hand?"],
+  ["king:k6","king:k7","con","states","Daniel 2: the stone, then its meaning, a kingdom that ends the others."],
+  ["king:k7","king:k8","con","supports","Daniel 2's kingdom never destroyed, and Daniel 7's dominion that will not pass."],
+  ["king:k6","king:k5","con","spec","A stone cut without hands, and a work not of human origin. Gamaliel does not cite Daniel; the link is drawn here."],
+  ["king:k14","king:k15","con","supports","Mark's time fulfilled, and Paul's time come to its fullness."],
+  ["king:k15","king:k16","con","supports","An appointed time that will not delay, and a time that came to fullness."],
+  ["king:k16","king:k17","con","supports","The vision awaits its time, and in its time God will hasten it."],
+  ["king:k8","king:k18","con","supports","An everlasting dominion given to one like a son of man, and the world's kingdom become the Messiah's."],
+  ["king:k19","king:k20","con","supports","The struggle is not against flesh and blood, and its weapons are not merely human."],
+  ["king:k21","king:k22","con","supports","The rulers who crucified him, unknowing, and the rulers disarmed at the cross."],
+  ["king:k22","king:k23","con","supports","Paul twice in 1 Corinthians: rulers of this age who did not understand, and every ruler destroyed at the end."],
+  ["king:k24","king:k25","con","supports","The Lamb conquers, and those with him conquer by his blood and their testimony."],
+  ["king:k25","king:k26","con","supports","Kings gathered for war against the Lamb or the rider in Revelation 17 and 19."],
+  ["king:k27","king:k28","con","states","Luke 17: not observed; among you."],
+  ["king:k29","king:k27","con","spec","A kingdom the violent try to seize, and a kingdom that cannot be watched for or pointed to. The saying in Matthew 11:12 is disputed; the link is a reading."],
+  ["king:k3","king:a7","con","spec","Judas of Galilee rose up at the census; Israel asked for a king to fight. Two attempts to win freedom by force. Drawn here."],
+  ["king:k2","king:h2","con","spec","Theudas gathered four hundred and died; the crowd wanted to make Jesus king and he withdrew. Gamaliel's examples are the kind of movement Jesus refused to lead."],
+  ["king:k18","king:g10","con","supports","The kings of Psalm 2 rage against God and his anointed; the kingdom becomes the anointed's in Revelation 11. Revelation 11:18 alludes to the raging nations."],
+  ["king:k23","king:g9","con","supports","Every ruler destroyed at the end, and rulers brought down from thrones."],
+  ["king:k20","king:u2","con","spec","The ruler's sword and the believer's weapons that are not merely human, two kinds of force Paul names in two letters."],
+  ["king:k12","king:g1","con","supports","No counsel against the LORD, and the Most High rules over human kingdoms."],
+  ["king:h1","king:k7","con","supports","A kingdom not from this world, and the kingdom the God of heaven sets up, which ends the others."],
+  ["king:h1","king:k5","con","spec","His kingdom does not fight, and Gamaliel says a work of God need not be fought for, since it cannot be overthrown. Drawn here."],
+];
+// </corpus>
+
+// Not generated — build_graph.py must not touch these.
+const WA = {
+  states:  {name:"The text says it", v:"--states"},
+  supports:{name:"The text supports it", v:"--supports"},
+  spec:    {name:"My speculation", v:"--spec"}
+};
+const TY = {
+  lex:{name:"Shared wording", dash:""},
+  ref:{name:"One cites the other", dash:"7 4"},
+  con:{name:"Same idea", dash:"1.5 4"}
+};
+
+// The "by group" network arrangement was removed on 21 Oct (Ethan): hidden since
+// 20 Sept, it showed a tangle rather than a finding, and its layout cost 60 ms
+// on every load (about 250 ms on a mid phone). Bible order is the only layout.
+
+const nodes = N.map(([id,ref,cl,gist,mod])=>({id,ref,cl,gist,mod,x:0,y:0}));
+const byId = Object.fromEntries(nodes.map(n=>[n.id,n]));
+const edges = E.map(([s,t,ty,wa,note])=>({s:byId[s],t:byId[t],ty,wa,note}));
+const deg = {}; edges.forEach(e=>{deg[e.s.id]=(deg[e.s.id]||0)+1; deg[e.t.id]=(deg[e.t.id]||0)+1});
+
+// Reference is identity: the same verse may appear once per module, each with
+// its own cluster and its own summary. byRef groups those readings; with one
+// module active every bucket holds exactly one node.
+const byRef = {};
+nodes.forEach(n=>{ (byRef[n.ref] = byRef[n.ref] || []).push(n); });
+const activeMods = [...new Set(nodes.map(n=>n.mod))];
+
+// The centre of the layout is a ROLE, not a cluster called "bridge". A module
+// that names its hub something else still gets a centre; one that marks none
+// gets a ring with nothing in the middle.
+const HUB = Object.keys(CL).find(k=>CL[k].role==='hub') || null;
+
+// The header states the corpus's size, so it is written from the generated
+// counts rather than typed. It had drifted to "Eighty-nine passages ... in the
+// New Testament" against 151 passages across 25 books, 46 of them Old
+// Testament.
+document.getElementById('hTitle').textContent = (MODS[MOD]||{}).title || 'Concordagraph';
+document.getElementById('hSub').textContent =
+  `${META.nodes} passages across ${META.books} books, joined by ${META.edges} connections — `
+  + 'drawn from the NRSV and verified against a chapter-and-verse index. Every link names '
+  + 'its kind and how much weight the text puts behind it. Click a passage, an arc or a '
+  + 'book label to read what it connects to.';
+
+// ---- layout: canonical order along a baseline ------------------------------
+// BOOKS and ABBR are GENERATED into the corpus block above, in the order the
+// NRSV itself puts them, derived from the verse index. They used to be
+// hardcoded here as eighteen books, which the corpus outgrew: seven cited
+// books were absent, indexOf returned -1 for each, and their twelve nodes
+// sorted ahead of Genesis with no tick or label on the axis. build_graph.py
+// now refuses to write if a cited book cannot be placed.
+const NT_FIRST = "Matthew";
+nodes.forEach(n=>{
+  // Book names may run to several words (Song of Solomon); a one-word pattern
+  // returned null for them and blanked the page (audit, 22 Oct). build_graph.py
+  // refuses any reference this pattern cannot read.
+  const m = n.ref.match(/^((?:[1-4] )?[A-Za-z]+(?: [A-Za-z]+)*) (\d+):(\d+)$/);
+  n.book = m[1]; n.chap = +m[2]; n.vers = +m[3];
+  n.ord = BOOKS.indexOf(n.book);
+});
+const CANON_W = 2600;
+const BASE_Y = 520, X0 = 70, X1 = CANON_W - 70;
+const canon = nodes.slice().sort((a,b)=> a.ord-b.ord || a.chap-b.chap || a.vers-b.vers);
+canon.forEach((n,i)=>{
+  n.ax = X0 + (X1-X0) * (canon.length>1 ? i/(canon.length-1) : .5);
+  n.ay = BASE_Y;
+});
+// Two arcs that share a stretch of baseline and sit at the same height trace
+// the same curve. Walk the edges shortest-reach first and lift each one until
+// its apex clears every arc it overlaps, so no two ever lie on top of another.
+const ARC_BASE=44, ARC_K=0.55, ARC_STEP=14, ARC_GAP=11;
+(function assignLanes(){
+  const placed=[];
+  edges.slice().sort((a,b)=>Math.abs(a.s.ax-a.t.ax)-Math.abs(b.s.ax-b.t.ax))
+    .forEach(e=>{
+      const lo=Math.min(e.s.ax,e.t.ax), hi=Math.max(e.s.ax,e.t.ax), span=hi-lo;
+      let lane=0, apex;
+      for(;lane<=40;lane++){
+        apex=0.75*(ARC_BASE+span*ARC_K+lane*ARC_STEP);
+        if(!placed.some(p=>!(hi<p.lo||lo>p.hi) && Math.abs(apex-p.apex)<ARC_GAP)) break;
+      }
+      e.lane=lane; placed.push({lo,hi,apex});
+    });
+})();
+const arcH = e => ARC_BASE + Math.abs(e.s.ax-e.t.ax)*ARC_K + e.lane*ARC_STEP;
+const MAX_APEX = Math.max(0, ...edges.map(e=>arcH(e)*0.75));
+
+// ---- render ----------------------------------------------------------------
+const svg = document.getElementById('net');
+const NS='http://www.w3.org/2000/svg';
+const gRoot = document.createElementNS(NS,'g');
+const gAxis = document.createElementNS(NS,'g');
+const gEdge = document.createElementNS(NS,'g');
+const gHit  = document.createElementNS(NS,'g');   // invisible wide strokes, so a
+const gNode = document.createElementNS(NS,'g');   // 1px arc is actually hoverable
+gRoot.append(gAxis,gEdge,gHit,gNode); svg.append(gRoot);
+
+const css = getComputedStyle(document.documentElement);
+const col = v => css.getPropertyValue(v).trim();
+
+const darkQ = matchMedia('(prefers-color-scheme: dark)');
+function isDark(){
+  const t=document.documentElement.getAttribute('data-theme');
+  return t==='dark' || (t!=='light' && darkQ.matches);
+}
+function clCol(k){ return isDark() ? CL[k].dark : CL[k].light; }
+function repaint(){
+  nodes.forEach(n=>n.circle.setAttribute('fill', clCol(n.cl)));
+  document.querySelectorAll('#clusters .dot').forEach((d,i)=>{
+    d.style.background = clCol(Object.keys(CL)[i]);
+  });
+}
+darkQ.addEventListener('change', repaint);
+
+edges.forEach(e=>{
+  const p=document.createElementNS(NS,'path');
+  p.setAttribute('class','edge');
+  p.setAttribute('fill','none');
+  p.setAttribute('stroke',`var(${WA[e.wa].v})`);
+  // Screen pixels, because of non-scaling-stroke above. The three tiers stay
+  // ranked by weight and by opacity, which is what carries the warrant.
+  p.setAttribute('stroke-width', e.wa==='states'?1.7:e.wa==='supports'?1.35:1.05);
+  p.setAttribute('stroke-opacity', e.wa==='states'?.9:e.wa==='supports'?.75:.6);
+  if(TY[e.ty].dash) p.setAttribute('stroke-dasharray',TY[e.ty].dash);
+  p.setAttribute('stroke-linecap','round');
+  e.el=p; gEdge.append(p);
+
+  const h=document.createElementNS(NS,'path');
+  h.setAttribute('class','hit');
+  h.addEventListener('pointerenter',()=>hover(e));
+  h.addEventListener('pointerleave',()=>hover(null));
+  h.addEventListener('click',()=>select(e));
+  h.tabIndex=0; h.setAttribute('role','button');
+  h.setAttribute('aria-label',`${e.s.ref} to ${e.t.ref} — ${TY[e.ty].name}, ${WA[e.wa].name}`);
+  h.addEventListener('keydown',ev=>{
+    if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();select(e);}});
+  // Keyboard focus only (:focus-visible): a tap focuses too, and lit the
+  // readout with no pointerleave ever to clear it.
+  h.addEventListener('focus',()=>{ if(h.matches(':focus-visible')) hover(e); });
+  h.addEventListener('blur',()=>hover(null));
+  e.hit=h; gHit.append(h);
+});
+
+nodes.forEach(n=>{
+  const g=document.createElementNS(NS,'g'); g.setAttribute('class','node');
+  const r = n.cl===HUB ? 9.5 : 4.5 + Math.min(4,(deg[n.id]||1)*0.7);
+  n.r = r;
+  const c=document.createElementNS(NS,'circle');
+  c.setAttribute('r',r);
+  c.setAttribute('fill', clCol(n.cl));
+  c.setAttribute('stroke','var(--paper)'); c.setAttribute('stroke-width',1.5);
+  const t=document.createElementNS(NS,'text');
+  n.abbr=n.ref.replace(/^(\d )?(\w{3})\w*/, (m,a,b)=>(a||'')+b);
+  t.textContent=n.abbr;
+  g.append(c,t); g.tabIndex=0; g.setAttribute('role','button');
+  g.setAttribute('aria-label',n.ref);
+  g.addEventListener('click',()=>select(n));
+  g.addEventListener('keydown',ev=>{if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();select(n);}});
+  g.addEventListener('pointerenter',()=>hover(n));
+  g.addEventListener('pointerleave',()=>hover(null));
+  g.addEventListener('focus',()=>{ if(g.matches(':focus-visible')) hover(n); });   // keyboard gets the same readout
+  g.addEventListener('blur',()=>hover(null));
+  n.el=g; n.circle=c; n.label=t; gNode.append(g);
+});
+
+// ---- orientation -----------------------------------------------------------
+// On a phone (narrower than 768px) the whole arc diagram is turned 90 degrees
+// clockwise (Ethan, 13 Oct): Genesis at the top, the books running down the
+// screen, arcs bulging to the right, text kept upright. The canon's long axis
+// then lies along the phone's long side, and you scroll down through the
+// Bible. rot() maps the horizontal layout onto the turned one, and arcs are
+// squeezed sideways so the longest still fit the phone's width. Turning the
+// phone to landscape (768px or wider) puts it back.
+const VERT_MQ = matchMedia('(max-width: 767px)');
+let VERT = VERT_MQ.matches;
+const ARC_SQUEEZE_V = 0.55;
+const rot = (x,y) => VERT ? [BASE_Y-y, x] : [x, y];
+function axisLine(cls, x1, y1, x2, y2){
+  const l=document.createElementNS(NS,'line'), [a,b]=rot(x1,y1), [c,d]=rot(x2,y2);
+  l.setAttribute('x1',a); l.setAttribute('y1',b); l.setAttribute('x2',c); l.setAttribute('y2',d);
+  l.setAttribute('class',cls); gAxis.append(l); return l;
+}
+
+// ---- book axis ----------------------------------------------------------------
+const bookLabels = {};
+// One stable focus object per book. Selection toggles by identity, so a fresh
+// {kind:'book'} per event would make a second click fail to deselect. Kept
+// across a rebuild of the axis for the same reason.
+const bookFocus = {};
+function buildAxis(){
+  gAxis.replaceChildren();
+  const apex = MAX_APEX * (VERT ? ARC_SQUEEZE_V : 1);
+  axisLine('tick', X0-14, BASE_Y, X1+14, BASE_Y);
+  const groups={};
+  canon.forEach(n=>{ (groups[n.book] ||= []).push(n.ax); });
+  BOOKS.forEach(b=>{
+    const xs=groups[b]; if(!xs) return;
+    const lo=Math.min(...xs), hi=Math.max(...xs), mid=(lo+hi)/2;
+    axisLine('tick', lo-5, BASE_Y+78, hi+5, BASE_Y+78);
+    const lb=document.createElementNS(NS,'text');
+    lb.setAttribute('class','booklab');
+    const [px,py]=rot(mid, BASE_Y+89);
+    lb.dataset.x=px; lb.dataset.y=py;   // apply() places it, at screen size
+    lb.dataset.s=mid;                   // where it sits along the spine, for thinning
+    lb.setAttribute('transform',`translate(${px},${py})`);
+    lb.setAttribute('text-anchor','end'); lb.textContent=ABBR[b];
+    const bf = bookFocus[b] ||= {kind:'book', book:b};
+    lb.addEventListener('pointerenter',()=>hover(bf));
+    lb.addEventListener('pointerleave',()=>hover(null));
+    lb.addEventListener('click',()=>select(bf));
+    lb.tabIndex=0; lb.setAttribute('role','button');
+    lb.setAttribute('aria-label',`${b} — all passages in this book`);
+    lb.addEventListener('keydown',ev=>{
+      if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();select(bf);}});
+    lb.addEventListener('focus',()=>{ if(lb.matches(':focus-visible')) hover(bf); });
+    lb.addEventListener('blur',()=>hover(null));
+    gAxis.append(lb);
+    bookLabels[b]=lb;
+  });
+  const first=canon.find(n=>n.book===NT_FIRST);
+  if(first){
+    const prev=canon[canon.indexOf(first)-1];
+    const x=prev ? (prev.ax+first.ax)/2 : first.ax-8;
+    axisLine('era', x, BASE_Y-apex-24, x, BASE_Y+81);
+  }
+  // Two brackets past the book names, one per testament (Ethan, 21 Oct), in place
+  // of a "New Testament begins" label that floated beside the top of the divider.
+  // They run the length of each testament along the spine; how far out they sit
+  // is in screen pixels (placeTestaments), because the book names they clear are
+  // drawn at screen size.
+  const ntOrd = BOOKS.indexOf(NT_FIRST), span = {};
+  canon.forEach(n=>{ const k = n.ord>=ntOrd ? 'nt' : 'ot';
+    const s = span[k] ||= [Infinity,-Infinity];
+    s[0]=Math.min(s[0],n.ax); s[1]=Math.max(s[1],n.ax); });
+  testaments = [['ot','Old Testament'],['nt','New Testament']].filter(([k])=>span[k]).map(([k,name])=>{
+    const g=document.createElementNS(NS,'g'); g.setAttribute('class','testament '+k);
+    const path=document.createElementNS(NS,'path'); path.setAttribute('class','tbracket');
+    const text=document.createElementNS(NS,'text'); text.setAttribute('class','tlab');
+    text.setAttribute('text-anchor','middle'); text.textContent=name;
+    g.append(path,text); gAxis.append(g);
+    return {path, text, lo:span[k][0]-5, hi:span[k][1]+5};
+  });
+}
+let testaments = [];
+// Book names reach about 30 px past their anchor (tilted) or 42 px (upright, at
+// the hover size); each bracket sits just beyond, its arms pointing back at the
+// spine and its name on the far side.
+function placeTestaments(){
+  const inv = 1/vs, off = (VERT ? 50 : 36)*inv, arm = 7*inv, gap = (VERT ? 7 : 17)*inv;
+  const y = BASE_Y + 89 + off, P = (a,b)=>rot(a,b).join(' ');
+  testaments.forEach(t=>{
+    const lo = t.lo + 3*inv, hi = t.hi - 3*inv;   // a visible break where the two meet
+    t.path.setAttribute('d', `M ${P(lo,y-arm)} L ${P(lo,y)} L ${P(hi,y)} L ${P(hi,y-arm)}`);
+    const [tx,ty] = rot((lo+hi)/2, y+gap);
+    t.text.setAttribute('transform', `translate(${tx},${ty}) scale(${inv})${VERT ? ' rotate(-90)' : ''}`);
+  });
+}
+buildAxis();
+
+// ---- placement -------------------------------------------------------------
+function place(){
+  nodes.forEach(n=>{
+    const [px,py]=rot(n.x,n.y);
+    n.circle.setAttribute('cx',px); n.circle.setAttribute('cy',py);
+    n.label.setAttribute('x',0); n.label.setAttribute('y',0);
+    // Below the dot, reading downward; turned, to the left of it, upright.
+    n.label.setAttribute('transform', VERT ? `translate(${px-n.r-7},${py+3.5})`
+                                           : `translate(${px},${py+n.r+7}) rotate(-90)`);
+    n.label.setAttribute('text-anchor','end');
+  });
+  const P=(x,y)=>rot(x,y).join(' ');
+  edges.forEach(e=>{
+    const [a,b] = e.s.x<=e.t.x ? [e.s,e.t] : [e.t,e.s];
+    const hh = arcH(e) * (VERT ? ARC_SQUEEZE_V : 1);
+    const d = `M ${P(a.x,a.y)} C ${P(a.x,a.y-hh)}, ${P(b.x,b.y-hh)}, ${P(b.x,b.y)}`;
+    e.el.setAttribute('d',d);
+    e.hit.setAttribute('d',d);          // the hit stroke tracks the drawn one
+  });
+}
+
+nodes.forEach(n=>{ n.x=n.ax; n.y=n.ay; });
+place();
+
+// ---- viewport --------------------------------------------------------------
+let vx=0, vy=0, vs=1;
+function apply(){ gRoot.setAttribute('transform',`translate(${vx},${vy}) scale(${vs})`); placeBookLabels(); placeTestaments(); }
+// Book labels are counter-scaled so they stay the same size on screen at any
+// zoom. Drawn in the graph's own units they shrank with it: the fitted view
+// opens at about a quarter scale, which put 10.5-unit text at roughly 3 px, and
+// half that on a phone (the arcs had the same fault; see HAZARDS.md). At
+// screen size the 38 labels cannot all fit at the fitted zoom, so, walking left
+// to right, a label drops out (.thin) when it would sit closer than LABEL_GAP
+// px to the last one shown, and returns as you zoom in. A selected book's label
+// shows regardless (CSS), and the readout names any book on hover.
+// Turned (VERT), the labels are upright and stacked down the spine, so they
+// need less room between them than tilted ones.
+let labelVs = null;
+function placeBookLabels(){
+  const inv = 1/vs, thin = labelVs!==vs, gap = VERT ? 15 : 18;
+  const turn = VERT ? 'translate(0,4)' : 'rotate(-45)';
+  let last = -Infinity;
+  BOOKS.forEach(b=>{
+    const lb=bookLabels[b]; if(!lb) return;
+    lb.setAttribute('transform',`translate(${lb.dataset.x},${lb.dataset.y}) scale(${inv}) ${turn}`);
+    if(thin){
+      const s = +lb.dataset.s * vs;
+      const show = s - last >= gap;
+      lb.classList.toggle('thin', !show);
+      if(show) last = s;
+    }
+  });
+  labelVs = vs;
+}
+// The floor on zoom. Below this the graph is smaller than the window and you
+// are looking at empty canvas around a shrinking blob - there is nothing to
+// see further out, so the control should not go there. MIN_PAD is the
+// breathing room: the fitted view leaves a little margin, and the floor is
+// that same view.
+let minScale = 0.05;
+const MIN_PAD = 90;
+// The fitted scale put the graph hard against the window edge. This is the
+// breathing room, applied to BOTH the opening view and the zoom floor so the
+// two stay the same thing: as far out as there is anything to see.
+const FIT_MARGIN = 0.86;
+// The graph's extent without the book labels. The labels are counter-scaled
+// (placeBookLabels), so in graph units they grow as you zoom out; measuring
+// them would make "fit" depend on the zoom it was pressed at. MIN_PAD leaves
+// room for them on screen instead.
+function graphBBox(){
+  let x0=Infinity, y0=Infinity, x1=-Infinity, y1=-Infinity;
+  const add=b=>{ if(!b.width && !b.height) return;
+    x0=Math.min(x0,b.x); y0=Math.min(y0,b.y); x1=Math.max(x1,b.x+b.width); y1=Math.max(y1,b.y+b.height); };
+  [gEdge,gNode].forEach(g=>add(g.getBBox()));
+  // The testament brackets are placed in screen pixels too, so they are left out for the same reason.
+  gAxis.querySelectorAll(':scope > :not(.booklab):not(.testament)').forEach(el=>add(el.getBBox()));
+  return x0===Infinity ? {x:0,y:0,width:0,height:0} : {x:x0, y:y0, width:x1-x0, height:y1-y0};
+}
+// Turned, Genesis sits at the top edge, where the "Show Everything Again"
+// button floats; TOP_V keeps a band clear for it.
+const TOP_V = 56;
+// The testament brackets and their names sit past the book names, on the left
+// when turned and below otherwise; AX_ROOM keeps that band on screen.
+const axRoom = () => VERT ? 72 : 56;
+function fitScale(){
+  const bb=graphBBox(), r=svg.getBoundingClientRect();
+  if(!bb.width || !bb.height) return minScale;
+  return Math.min((r.width-(VERT?axRoom():0))/(bb.width+MIN_PAD),
+                  (r.height-(VERT?TOP_V:axRoom()))/(bb.height+MIN_PAD)) * FIT_MARGIN;
+}
+function clamp(s){ return Math.max(minScale, s); }
+// fit(true) is the opening view. On a phone that is the graph fitted to the
+// screen's width, starting at Genesis, to be dragged down through; the fit
+// button and the zoom floor stay the whole graph at once.
+function fit(opening){
+  const bb=graphBBox(), r=svg.getBoundingClientRect();
+  minScale = fitScale();
+  vs = minScale;
+  const left = VERT ? axRoom() : 0, top = VERT ? TOP_V : 0, bottom = VERT ? 0 : axRoom();
+  if(VERT && opening===true && bb.width){
+    vs = Math.max(minScale, (r.width-left)/(bb.width+MIN_PAD) * FIT_MARGIN);
+    vx=left+(r.width-left-bb.width*vs)/2-bb.x*vs; vy=TOP_V+8-bb.y*vs; apply();
+    return;
+  }
+  vx=left+(r.width-left-bb.width*vs)/2-bb.x*vs; vy=top+(r.height-top-bottom-bb.height*vs)/2-bb.y*vs; apply();
+}
+window.addEventListener('resize',fit);
+VERT_MQ.addEventListener('change', e=>{
+  VERT = e.matches;
+  buildAxis(); labelVs = null;
+  place(); draw(); fit(true);
+});
+document.getElementById('zin').onclick=()=>{vs=clamp(vs*1.25);apply()};
+document.getElementById('zout').onclick=()=>{vs=clamp(vs/1.25);apply()};
+document.getElementById('zfit').onclick=fit;
+// Panning must not call svg.setPointerCapture on pointerdown. Capturing the
+// pointer retargets the following click to the <svg>, so a click on an arc or
+// a book label never reaches that element's own handler — which is exactly how
+// selecting them broke. Instead: remember where the press started, begin
+// panning only once the pointer has actually moved, and track the drag on
+// window so it survives leaving the SVG. A press that never moves stays a
+// click; a press that does move pans, and its trailing click is swallowed.
+const DRAG_SLOP = 4;
+let panFrom=null, panning=false, swallowClick=false;
+svg.addEventListener('pointerdown',e=>{
+  if(e.target.closest('.node')) return;          // nodes are for selecting, not panning
+  panFrom={x:e.clientX, y:e.clientY, vx, vy};
+});
+window.addEventListener('pointermove',e=>{
+  if(!panFrom) return;
+  if(!panning){
+    if(Math.hypot(e.clientX-panFrom.x, e.clientY-panFrom.y) < DRAG_SLOP) return;
+    panning=true; svg.classList.add('drag');
+  }
+  vx=panFrom.vx+(e.clientX-panFrom.x); vy=panFrom.vy+(e.clientY-panFrom.y); apply();
+});
+window.addEventListener('pointerup',()=>{
+  if(panning) swallowClick=true;
+  panFrom=null; panning=false; svg.classList.remove('drag');
+});
+svg.addEventListener('click',e=>{
+  if(swallowClick){ swallowClick=false; e.stopPropagation(); e.preventDefault(); }
+}, true);
+// A finger drag never produces the trailing click a mouse drag does, so the
+// flag above used to wait and eat the NEXT tap: on a phone every pan cost a
+// tap on a passage (phone checklist, 14 Oct). Any new press clears it; a mouse
+// drag's own click still arrives before the next press, and is still swallowed.
+let lastPointer='mouse';
+window.addEventListener('pointerdown', e=>{ swallowClick=false; lastPointer=e.pointerType; }, true);
+// Touch only: the readout is lit by pointerenter, and a lifted finger never
+// sends pointerleave, so it stayed lit after every tap.
+window.addEventListener('pointerup', e=>{ if(e.pointerType==='touch' && hovered) hover(null); });
+// Touch only: dots are 1.5 to 5 px across on a phone and a fingertip is ~40,
+// so a tap that misses selects the nearest passage within TOUCH_SLOP px.
+const TOUCH_SLOP = 22;
+svg.addEventListener('click', e=>{
+  if(lastPointer!=='touch' || e.defaultPrevented || e.target.closest('.node')) return;
+  let best=null, bd=TOUCH_SLOP;
+  nodes.forEach(n=>{
+    if(n.el.classList.contains('hide')) return;
+    const r=n.circle.getBoundingClientRect();
+    const d=Math.hypot(r.left+r.width/2-e.clientX, r.top+r.height/2-e.clientY);
+    if(d<bd){ bd=d; best=n; }
+  });
+  if(best){ e.stopPropagation(); e.preventDefault(); select(best); }
+}, true);
+svg.addEventListener('wheel',e=>{e.preventDefault();const k=e.deltaY<0?1.1:1/1.1;const r=svg.getBoundingClientRect();
+  const mx=e.clientX-r.left, my=e.clientY-r.top;
+  const want=clamp(vs*k), actual=want/vs;
+  vx=mx-(mx-vx)*actual; vy=my-(my-vy)*actual; vs=want; apply();},{passive:false});
+
+// ---- filters ---------------------------------------------------------------
+const onCl=new Set(Object.keys(CL)), onWa=new Set(Object.keys(WA)), onTy=new Set(Object.keys(TY));
+// Motifs are a different kind of control and start EMPTY on purpose. The three
+// sets above are filters: everything ticked, unticking hides. This one is an
+// emphasis: nothing ticked, ticking dims whatever does not carry the word. A
+// node belongs to one cluster but carries any number of motifs, so a motif
+// cannot restrict the way a cluster does without hiding most of the graph.
+const onMo = new Set();
+const MO_IDS = Object.fromEntries(
+  Object.entries(typeof MO !== 'undefined' ? MO : {})
+        .map(([k,o]) => [k, new Set(o.nodes.split(' '))]));
+let query='', picked=null, hovered=null;
+
+// Ethan's rule for titles and labels: Title Case, every word, "and" as "&".
+// Display only: group, motif and link-kind names stay as the CSVs write them,
+// because search and the Word Study read the plain names.
+function titleCase(s){
+  return String(s).split(/(\s+)/).map(w=>{ const ps=w.split('-'); return ps.map(p=>{
+    const m=p.match(/^([^\p{L}\p{N}]*)(.*?)([^\p{L}\p{N}]*)$/su);
+    return ps.length===1 && /^and$/i.test(m[2]) ? m[1]+'&'+m[3] : m[1]+m[2].charAt(0).toUpperCase()+m[2].slice(1)+m[3];
+  }).join('-'); }).join('');
+}
+
+// Selection toggles by identity, so a fresh {kind:'cluster'} per click would
+// make a second click fail to deselect. Same reason bookFocus exists.
+const clusterFocus = Object.fromEntries(
+  Object.keys(CL).map(k => [k, {kind:'cluster', cl:k}]));
+
+const clusterRows = {};   // group key -> its row, so draw() can mark the selected one
+function build(host, map, set, kind){
+  Object.entries(map).forEach(([k,o])=>{
+    const lab=document.createElement('label'); lab.className='row'; lab.tabIndex=0;
+    const cb=document.createElement('input'); cb.type='checkbox'; cb.checked=true;
+    const mark=document.createElement('span');
+    if(kind==='cl'){ mark.className='dot'; mark.style.background=clCol(k); }
+    else if(kind==='wa'){ mark.className='swatch'; mark.style.borderTopColor=`var(${o.v})`; }
+    else { mark.className='swatch'; mark.style.borderTopColor='var(--ink-3)';
+           if(o.dash) mark.style.borderTopStyle = o.dash==='7 4' ? 'dashed' : 'dotted'; }
+    const txt=document.createElement('span'); txt.textContent=titleCase(o.name);
+    // Groups no longer carry hover text (A4, 14 Oct): it appeared only after a
+    // still pointer and never on a phone, and the panel shows a group's note
+    // once its name is clicked. The other filters keep theirs.
+    if(o.note && kind!=='cl') lab.title = o.name + ' \u2014 ' + o.note;
+    if(kind==='cl'){
+      // The row is a <label>, so any click inside it toggles the checkbox.
+      // The NAME has to do something else - select the group and show its
+      // passages - so it stops the event before the label sees it.
+      txt.className='gname'; txt.tabIndex=0; txt.setAttribute('role','button');
+      txt.setAttribute('aria-label','Show the passages in ' + titleCase(o.name));
+      clusterRows[k] = lab;
+      const pick=ev=>{ ev.preventDefault(); ev.stopPropagation();
+                       select(clusterFocus[k]); };
+      txt.addEventListener('click',pick);
+      txt.addEventListener('keydown',ev=>{
+        if(ev.key==='Enter'||ev.key===' '){ pick(ev); }});
+    }
+    lab.append(cb,mark,txt);
+    if(kind==='cl'){ const c=document.createElement('span'); c.className='count';
+      c.textContent=nodes.filter(n=>n.cl===k).length; lab.append(c); }
+    cb.addEventListener('change',()=>{cb.checked?set.add(k):set.delete(k);draw()});
+    lab.addEventListener('keydown',e=>{if(e.key==='Enter'){cb.checked=!cb.checked;cb.dispatchEvent(new Event('change'));}});
+    host.append(lab);
+  });
+}
+build(document.getElementById('clusters'),CL,onCl,'cl');
+document.getElementById('gcount').textContent = '(' + Object.keys(CL).length + ')';
+if(matchMedia('(max-width:767px)').matches) document.getElementById('grpGroups').removeAttribute('open');
+(function bulkGroups(){
+  const setAll = on => {
+    document.querySelectorAll('#clusters input[type=checkbox]').forEach(c=>{
+      if(c.checked!==on){ c.checked=on; c.dispatchEvent(new Event('change')); }});
+  };
+  document.getElementById('clAll').onclick  = ()=> setAll(true);
+  document.getElementById('clNone').onclick = ()=> setAll(false);
+})();
+build(document.getElementById('warrants'),WA,onWa,'wa');
+build(document.getElementById('types'),TY,onTy,'ty');
+document.getElementById('wcount').textContent = '(' + Object.keys(WA).length + ')';
+document.getElementById('tcount').textContent = '(' + Object.keys(TY).length + ')';
+// Every fold starts closed on a phone, so the graph is not a page of filters down.
+if(matchMedia('(max-width:767px)').matches)
+  ['grpWarrants','grpTypes','grpMotifs'].forEach(id=>document.getElementById(id).removeAttribute('open'));
+
+(function buildMotifs(){
+  const host = document.getElementById('motifs');
+  if(!host) return;
+  const keys = Object.keys(MO_IDS);
+  document.getElementById('mcount').textContent = '(' + keys.length + ')';
+  if(!keys.length){ host.closest('.motifbar').classList.add('hide'); return; }
+  keys.forEach(k=>{
+    const o = MO[k];
+    const lab=document.createElement('label'); lab.className='row'; lab.tabIndex=0;
+    const cb=document.createElement('input'); cb.type='checkbox'; cb.checked=false;
+    const txt=document.createElement('span'); txt.className='mn';
+    txt.textContent=titleCase(o.name);
+    const sc=document.createElement('span'); sc.className='scope';
+    sc.textContent=MO_IDS[k].size+' / '+o.scope;
+    lab.title=o.note+'  This corpus: '+MO_IDS[k].size+' passages. Whole Bible: '+o.scope+' verses.';
+    lab.append(cb,txt,sc);
+    cb.addEventListener('change',()=>{
+      cb.checked?onMo.add(k):onMo.delete(k);
+      lab.classList.toggle('on',cb.checked);
+      draw();
+    });
+    lab.addEventListener('keydown',e=>{if(e.key==='Enter'){cb.checked=!cb.checked;cb.dispatchEvent(new Event('change'));}});
+    host.append(lab);
+  });
+})();
+
+document.getElementById('q').addEventListener('input',e=>{query=e.target.value.toLowerCase().trim();draw()});
+document.getElementById('reset').onclick=()=>{
+  document.querySelectorAll('.rail input[type=checkbox]').forEach(c=>{if(!c.checked){c.checked=true;c.dispatchEvent(new Event('change'))}});
+  document.querySelectorAll('#motifs input[type=checkbox]').forEach(c=>{
+    if(c.checked){ c.checked=false; c.dispatchEvent(new Event('change')); }});
+  document.getElementById('q').value=''; query=''; picked=null; hovered=null;
+  render(); draw(); fit();   // render() too, or the panel keeps the cleared selection
+};
+
+function matches(n){
+  if(!onCl.has(n.cl)) return false;
+  if(query && !(n.ref.toLowerCase().includes(query)||n.gist.toLowerCase().includes(query))) return false;
+  return true;
+}
+// ---- focus: hover and selection share one treatment ------------------------
+// A hover wins while it lasts, otherwise the click-selection stands. Pointing
+// at something therefore previews exactly what selecting it would show.
+function focused(){
+  // While nothing is selected, hovering an ARC must not re-light the graph.
+  // Sweeping the pointer across a dense arc field crosses dozens of 12px hit
+  // strokes and the empty canvas between them, and every crossing was toggling
+  // a full lit/dim pass over 151 nodes and 170 edges — which reads as flicker,
+  // not as feedback. So arc hover only drives the highlight once there is a
+  // selection to compare it against. The readout still names the arc either
+  // way, so nothing becomes undiscoverable. Passages and book labels are
+  // discrete targets and keep highlighting on hover as before.
+  // Once something IS selected, arc hover must not replace it either: reaching
+  // for a lit arc means crossing others, and each one swapped the selection's
+  // highlight for its own two ends (Ethan, 13 Oct). The hovered arc is drawn
+  // full-strength instead (.ehov) and the readout names it.
+  if(isEdge(hovered)) return picked;
+  return hovered || picked;
+}
+
+// A node lights itself and its neighbours; an arc lights its two ends; a book
+// lights every passage in it, and theirs.
+// A focus is a book ({kind:'book'}), an edge (has .s and .t) or a node. The
+// kind tag is not decoration: nodes carry their own .book property, so testing
+// f.book would read every node hover as a hover on its whole book.
+const isBook = f => !!f && f.kind==='book';
+// A group focus is {kind:'cluster', cl:key}. Nodes carry their own .cl, so the
+// kind tag matters here for the same reason it does for books: without it,
+// every node focus would read as a focus on its whole group.
+const isCluster = f => !!f && f.kind==='cluster';
+const isEdge = f => !!f && !!f.s && !!f.t;
+
+function litNodes(f){
+  if(!f) return null;
+  if(isBook(f)){
+    const ids=new Set(nodes.filter(n=>n.book===f.book).map(n=>n.id));
+    edges.forEach(e=>{ if(ids.has(e.s.id)||ids.has(e.t.id)){ ids.add(e.s.id); ids.add(e.t.id); } });
+    return ids;
+  }
+  if(isCluster(f)){
+    const ids=new Set(nodes.filter(n=>n.cl===f.cl).map(n=>n.id));
+    edges.forEach(e=>{ if(ids.has(e.s.id)||ids.has(e.t.id)){ ids.add(e.s.id); ids.add(e.t.id); } });
+    return ids;
+  }
+  if(isEdge(f)) return new Set([f.s.id, f.t.id]);
+  return new Set([f.id, ...edges.filter(e=>e.s===f||e.t===f)
+                               .map(e=> e.s===f ? e.t.id : e.s.id)]);
+}
+function litEdge(e,f){
+  if(!f) return true;
+  if(isBook(f)) return e.s.book===f.book || e.t.book===f.book;
+  if(isCluster(f)) return e.s.cl===f.cl || e.t.cl===f.cl;
+  if(isEdge(f)) return e===f;
+  return e.s===f || e.t===f;
+}
+// The thing itself, as opposed to what it reaches — this gets the outline.
+function isCore(n,f){
+  if(!f) return false;
+  if(isBook(f)) return n.book===f.book;
+  if(isCluster(f)) return n.cl===f.cl;
+  if(isEdge(f)) return n===f.s || n===f.t;
+  return n===f;
+}
+
+const readout=document.getElementById('readout');
+function showReadout(f){
+  if(!f){ readout.classList.remove('on'); readout.textContent=''; return; }
+  let main, kind;
+  if(isBook(f)){
+    const c=nodes.filter(n=>n.book===f.book).length;
+    main=f.book; kind=c===1 ? '1 Passage' : c+' Passages';
+  } else if(isCluster(f)){
+    const c=nodes.filter(n=>n.cl===f.cl).length;
+    main=titleCase(CL[f.cl].name); kind=c===1 ? '1 Passage' : c+' Passages';
+  } else if(isEdge(f)){
+    main=`${f.s.ref}  →  ${f.t.ref}`;
+    kind=titleCase(`${TY[f.ty].name} · ${WA[f.wa].name}`);
+  } else {
+    main=f.ref; kind=titleCase(CL[f.cl].name);
+  }
+  readout.textContent=main;
+  const k=document.createElement('span'); k.className='rk'; k.textContent=kind;
+  readout.append(k);
+  readout.classList.add('on');
+}
+function hover(f){
+  hovered=f; showReadout(f);
+  // Do NOT re-append the hovered node to lift it above its neighbours. SVG has
+  // no z-index, so that was the obvious way to raise the magnified label — but
+  // detaching and re-inserting the group happens under the cursor, and the
+  // browser then never synthesises the click at all: pointerdown, mousedown,
+  // pointerup and mouseup all arrive on the circle and no click follows. That
+  // is what stopped passages being selectable. The label's paper-coloured halo
+  // (paint-order:stroke) keeps it readable over its neighbours instead, and the
+  // readout below the spine carries the full reference regardless.
+  draw();
+}
+
+// A node carries a motif if any TICKED motif lists it. With none ticked this is
+// null and nothing is dimmed on that account, which is why the set starts empty.
+function motifIds(){
+  if(!onMo.size) return null;
+  const s = new Set();
+  onMo.forEach(k => MO_IDS[k].forEach(id => s.add(id)));
+  return s;
+}
+
+function draw(){
+  const f=focused(), near=litNodes(f);
+  const mo=motifIds();
+  for(const k in clusterRows) clusterRows[k].classList.toggle('picked', isCluster(picked) && picked.cl===k);
+  nodes.forEach(n=>{
+    const ok=matches(n);
+    n.el.classList.toggle('hide',!ok);
+    n.el.classList.toggle('dim', ok && ((near ? !near.has(n.id) : false)
+                                        || (mo ? !mo.has(n.id) : false)));
+    n.el.classList.toggle('sel', isCore(n,picked));
+    n.el.classList.toggle('lit', ok && isCore(n,f));
+    // Magnified, the label spells the reference out; the spine is too crowded
+    // to carry the full form at rest, which is the whole reason to magnify it.
+    const mag = n===hovered;
+    n.label.classList.toggle('mag', mag);
+    const want = mag ? n.ref : n.abbr;
+    if(n.label.textContent!==want) n.label.textContent=want;
+  });
+  edges.forEach(e=>{
+    const ok = onWa.has(e.wa) && onTy.has(e.ty) && matches(e.s) && matches(e.t);
+    e.el.classList.toggle('hide',!ok);
+    e.hit.classList.toggle('hide',!ok);
+    e.el.classList.toggle('dim', ok && ((f ? !litEdge(e,f) : false)
+                          || (mo ? !(mo.has(e.s.id) && mo.has(e.t.id)) : false)));
+    e.el.classList.toggle('esel', e===picked);
+    e.el.classList.toggle('ehov', e===hovered && !!picked);
+  });
+  for(const b in bookLabels){
+    bookLabels[b].classList.toggle('mag', isBook(f) && f.book===b);
+    bookLabels[b].classList.toggle('sel', isBook(picked) && picked.book===b);
+  }
+}
+
+// ---- detail panel ----------------------------------------------------------
+const panel=document.getElementById('panel');
+// A passage, an arc or a book can all be selected, and all three toggle off
+// when picked again. draw() already treats the three alike; the panel below
+// is what differs.
+function select(f){ picked = (picked===f ? null : f); studyWord = null; render(); draw(); }
+
+// The Word Study (wordstudy.js, when present). A passage shows its reading; selecting a word in it
+// swaps the panel to that word's study until the passage is picked again or "Back" is pressed.
+let studyWord = null;
+const bareId = n => n.id.slice(n.id.indexOf(':')+1);
+function hasStudy(n){ return !!(window.WS && WS.has(bareId(n))); }
+function openWord(id){
+  const v = WS.verseOf(id); if(!v) return;
+  const n = nodes.find(x=>bareId(x)===v); if(!n) return;
+  const moved = picked!==n;
+  picked = n; studyWord = id; render();
+  if(moved) draw();
+  if(PHONE_MQ.matches) sheetFull(true);            // the bottom sheet: a study wants the room
+  else if(matchMedia('(max-width:900px)').matches) panel.scrollIntoView({block:'start'});
+  else panel.scrollTop = 0;
+}
+panel.addEventListener('click', e=>{
+  if(!window.WS) return;
+  const w = e.target.closest('.ws-e, [data-ws-goto]');
+  if(w){ openWord(w.dataset.id || w.dataset.wsGoto); return; }
+  const s = e.target.closest('[data-ws-step]');
+  if(s){ const next = WS.step(studyWord, +s.dataset.wsStep); if(next) openWord(next); return; }
+  if(e.target.closest('[data-ws-back]')){ studyWord = null; render(); panel.scrollTop = 0; }
+});
+document.addEventListener('wordstudy:ready', ()=>render());
+
+// Two links per reference, because they answer two different questions.
+//
+// The reference itself opens Bible Hub's VERSE page, which stacks every major
+// translation of that one verse. That is the page you want when the question
+// is what the English is doing — and in this corpus it often is: one Greek
+// word can arrive as two English words (Matthew 17:25 and 22:17 are both
+// κῆνσος, rendered "tribute" and "taxes"), and two Greek words can arrive as
+// one (Matthew 22:17 and Romans 13:6 read alike in English and share no Greek
+// at all). A single translation cannot show either.
+//
+// Beneath it, a link to the whole CHAPTER on Bible Gateway, for reading the
+// verse in its context. Bible Gateway offers no way to scroll to or highlight
+// one verse from a URL — its verse ids are opaque per-version numbers
+// (en-NRSVUE-23888) and it does not style :target — so the chapter is the
+// honest unit there. Note it no longer serves plain NRSV; NRSV redirects to
+// NRSVUE.
+//
+// Bible Hub slugs are the book lowercased with spaces as underscores, with a
+// few of its own spellings. Every book this corpus cites was checked against
+// a live request; BIBLEHUB_SLUG holds the ones that differ.
+//
+// NOT named HUB: that identifier is already taken further up for the hub
+// CLUSTER, and reusing it threw "Identifier 'HUB' has already been declared"
+// at parse time, which killed the whole script and left the page blank.
+const BIBLEHUB_SLUG = {'Psalm':'psalms', 'Song of Solomon':'songs'};
+function hubSlug(book){
+  return BIBLEHUB_SLUG[book] || book.toLowerCase().replace(/ /g,'_');
+}
+
+function chapterLink(n){
+  const a=document.createElement('a');
+  a.href='https://biblehub.com/'+hubSlug(n.book)+'/'+n.chap+'-'+n.vers+'.htm';
+  a.target='_blank'; a.rel='noopener noreferrer';
+  a.textContent=n.ref;
+  a.title=`${n.ref} on Bible Hub — every major translation of this verse, side by side`;
+  const s=document.createElement('span'); s.className='ext'; s.textContent='Compare ↗';
+  const g=document.createElement('a'); g.className='chap';
+  g.href='https://www.biblegateway.com/passage/?search='
+        + encodeURIComponent(n.book+' '+n.chap) + '&version=NRSVUE';
+  g.target='_blank'; g.rel='noopener noreferrer';
+  g.textContent=`Read ${n.book} ${n.chap} In Full ↗`;
+  g.title=`Open the whole of ${n.book} ${n.chap} on Bible Gateway (NRSVUE)`;
+  return [a,s,g];
+}
+function linkRow(ref, meta, colourVar, onClick){
+  const b=document.createElement('button'); b.className='link';
+  const r=document.createElement('span'); r.className='lref'; r.textContent=ref;
+  const m=document.createElement('span'); m.className='lmeta'; m.textContent=meta;
+  if(colourVar) m.style.color=`var(${colourVar})`;
+  b.append(r,m); b.onclick=onClick;
+  return b;
+}
+function renderEmpty(){
+  const p=document.createElement('p'); p.className='empty';
+  p.textContent='Pick a passage, an arc or a book on the graph to see what it connects to and why.';
+  const note=document.createElement('p'); note.className='note';
+  note.textContent = window.WS
+    ? 'Each passage opens in this project\'s own literal English, a draft not yet reviewed, with the King James beneath it. Select any word for the Hebrew or Greek behind it. Line color shows how much weight the text puts behind a link; line style shows what kind of link it is. Dotted grey lines are my own readings and carry no textual claim.'
+    : window.NRSV
+    ?'Verse text is read from verses.js on this machine. Line color shows how much weight the text puts behind a link; line style shows what kind of link it is. Dotted grey lines are my own readings and carry no textual claim.'
+    : 'This copy shows references and summaries. To read full verses here, run attach_verses.py against your own index and drop verses.js beside this file. Line color shows how much weight the text puts behind a link; line style shows what kind of link it is. Dotted grey lines are my own readings and carry no textual claim.';
+  panel.append(p,note);
+}
+
+function renderNode(n){
+  const h=document.createElement('p'); h.className='ref';
+  h.append(...chapterLink(n));
+  const tg=document.createElement('span'); tg.className='tag'; tg.textContent=titleCase(CL[n.cl].name);
+  panel.append(h,tg);
+  const full = (window.NRSV||{})[n.ref];
+  if(hasStudy(n)){
+    if(studyWord && WS.verseOf(studyWord)===bareId(n)){
+      const s=document.createElement('div'); s.innerHTML=WS.study(studyWord);
+      panel.append(s);
+      return;
+    }
+    const r=document.createElement('div'); r.innerHTML=WS.reading(bareId(n));
+    panel.append(r);
+    if(full){
+      const q=document.createElement('blockquote'); q.className='verse'; q.textContent=full;
+      panel.append(q);
+    }
+    const g2=document.createElement('p'); g2.className='gist-sm'; g2.textContent=n.gist;
+    panel.append(g2);
+  } else if(full){
+    const q=document.createElement('blockquote'); q.className='verse'; q.textContent=full;
+    const g2=document.createElement('p'); g2.className='gist-sm'; g2.textContent=n.gist;
+    panel.append(q,g2);
+  } else {
+    const g=document.createElement('p'); g.className='gist'; g.textContent=n.gist;
+    panel.append(g);
+  }
+  const mine=edges.filter(e=>e.s===n||e.t===n)
+    .filter(e=>onWa.has(e.wa)&&onTy.has(e.ty));
+  const h3=document.createElement('h3');
+  h3.textContent = mine.length===1 ? '1 Connection' : mine.length+' Connections';
+  panel.append(h3);
+  mine.sort((a,b)=>['states','supports','spec'].indexOf(a.wa)-['states','supports','spec'].indexOf(b.wa));
+  mine.forEach(e=>{
+    const other = e.s===n ? e.t : e.s;
+    panel.append(linkRow(other.ref,
+      TY[e.ty].name+' · '+WA[e.wa].name + (e.note? ' — '+e.note : ''),
+      WA[e.wa].v, ()=>select(e)));   // clicking a connection selects the ARC
+  });
+}
+
+const JOIN = {lex:'Shares Wording With', ref:'Cites', con:'Connects To'};
+function renderEdge(e){
+  const h=document.createElement('p'); h.className='ref';
+  h.append(...chapterLink(e.s));
+  const ar=document.createElement('span'); ar.className='arrow'; ar.textContent=JOIN[e.ty];
+  h.append(ar);
+  h.append(...chapterLink(e.t));
+  const tg=document.createElement('span'); tg.className='tag';
+  tg.textContent = titleCase(TY[e.ty].name+' · '+WA[e.wa].name);
+  panel.append(h,tg);
+  if(e.note){
+    const g=document.createElement('p'); g.className='gist'; g.textContent=e.note;
+    panel.append(g);
+  }
+  const h3=document.createElement('h3'); h3.textContent='Both Ends'; panel.append(h3);
+  [e.s,e.t].forEach(n=> panel.append(linkRow(n.ref, n.gist, null, ()=>select(n))));
+}
+
+function renderBook(f){
+  const own = nodes.filter(n=>n.book===f.book).sort((a,b)=>a.chap-b.chap||a.vers-b.vers);
+  const h=document.createElement('p'); h.className='ref'; h.textContent=f.book;
+  const tg=document.createElement('span'); tg.className='tag';
+  tg.textContent = own.length===1 ? '1 Passage' : own.length+' Passages';
+  panel.append(h,tg);
+  const h3=document.createElement('h3'); h3.textContent='Passages'; panel.append(h3);
+  own.forEach(n=> panel.append(linkRow(n.ref, n.gist, null, ()=>select(n))));
+}
+
+function renderCluster(f){
+  const o = CL[f.cl];
+  const own = nodes.filter(n=>n.cl===f.cl)
+                   .sort((a,b)=> a.ord-b.ord || a.chap-b.chap || a.vers-b.vers);
+  const h=document.createElement('p'); h.className='ref'; h.textContent=titleCase(o.name);
+  const tg=document.createElement('span'); tg.className='tag';
+  tg.textContent = own.length===1 ? '1 Passage' : own.length+' Passages';
+  panel.append(h,tg);
+  if(o.note){
+    const g=document.createElement('p'); g.className='gist'; g.textContent=o.note;
+    panel.append(g);
+  }
+  const h3=document.createElement('h3'); h3.textContent='Passages'; panel.append(h3);
+  own.forEach(n=> panel.append(linkRow(n.ref, n.gist, null, ()=>select(n))));
+}
+
+// ---- the panel as a bottom sheet on phones ---------------------------------
+// The bar is made once and put back at the top of the panel on every render,
+// so its listeners survive render()'s innerHTML reset. CSS hides it above
+// 767px, where the panel is an ordinary column.
+const PHONE_MQ = matchMedia('(max-width:767px)');
+const sheetBar = document.createElement('div'); sheetBar.className='sheetbar';
+sheetBar.innerHTML='<button type="button" class="grab" aria-label="Make the panel taller or shorter"></button>'
+                  +'<button type="button" class="sheetx">Close</button>';
+function sheetFull(on){ panel.classList.toggle('full', on); }
+// Closing the sheet put keyboard focus on <body> (its Close button is rebuilt
+// by render()); it now goes back to whatever was selected, without lighting it.
+function focusTarget(f){
+  if(!f) return null;
+  if(isBook(f)) return bookLabels[f.book];
+  if(isCluster(f)) return clusterRows[f.cl] && clusterRows[f.cl].querySelector('.gname');
+  if(isEdge(f)) return f.hit;
+  return f.el;
+}
+function sheetClose(){
+  const was=picked;
+  picked=null; studyWord=null; panel.classList.remove('full'); render(); draw();
+  const t=focusTarget(was);
+  if(t){ t.focus({preventScroll:true}); hover(null); }
+}
+sheetBar.querySelector('.sheetx').addEventListener('click', sheetClose);
+(function grabHandle(){
+  const g=sheetBar.querySelector('.grab');
+  // A tap is handled on 'click', not on pointerup. The sheet's height snaps,
+  // so changing it on pointerup moved the handle out from under the finger
+  // before the tap's click fired, and that click landed on whatever word now
+  // sat there, opening its study. The click reaches the handle first.
+  let y0=null, moved=false, dragged=false;
+  // Capture, so a drag that leaves the 30px handle still reports its moves and
+  // its release. (HAZARDS.md warns against capture on the graph, where it steals
+  // the click meant for an arc; here the click belongs to the handle anyway.)
+  g.addEventListener('pointerdown', e=>{ y0=e.clientY; moved=false; dragged=false; g.setPointerCapture(e.pointerId); });
+  g.addEventListener('pointermove', e=>{ if(y0!==null && Math.abs(e.clientY-y0)>8) moved=true; });
+  g.addEventListener('pointerup', e=>{
+    if(y0===null) return;
+    const dy=e.clientY-y0; y0=null;
+    if(!moved) return;                                                // a tap: see 'click'
+    dragged=true;
+    if(dy < -30) sheetFull(true);                                     // dragged up
+    else if(dy > 30){ if(panel.classList.contains('full')) sheetFull(false); else sheetClose(); }
+  });
+  g.addEventListener('click', ()=>{
+    if(dragged){ dragged=false; return; }
+    sheetFull(!panel.classList.contains('full'));
+  });
+})();
+document.addEventListener('keydown', e=>{
+  if(e.key==='Escape' && PHONE_MQ.matches && panel.classList.contains('open')
+     && document.getElementById('about').hidden) sheetClose();
+});
+
+function render(){
+  panel.innerHTML='';
+  panel.append(sheetBar);
+  const open = !!picked;
+  panel.classList.toggle('open', open);
+  if(!open) panel.classList.remove('full');
+  document.body.classList.toggle('sheet-open', open && PHONE_MQ.matches);
+  panel.scrollTop = 0;
+  if(!picked) return renderEmpty();
+  if(isBook(picked)) return renderBook(picked);
+  if(isCluster(picked)) return renderCluster(picked);
+  if(isEdge(picked)) return renderEdge(picked);
+  renderNode(picked);
+}
+// ---- the motif explanation: hover or focus shows it, a tap or click pins it --
+(function motifTip(){
+  const b=document.getElementById('mlabel'), t=document.getElementById('mtip');
+  let pinned=false;
+  const show=on=>{ t.hidden=!on; b.setAttribute('aria-expanded', String(on)); };
+  b.addEventListener('mouseenter',()=>show(true));
+  b.addEventListener('mouseleave',()=>{ if(!pinned) show(false); });
+  b.addEventListener('focus',()=>show(true));
+  b.addEventListener('blur',()=>{ pinned=false; show(false); });
+  b.addEventListener('click',()=>{ pinned=!pinned; show(pinned); });
+  // A finger is handled on touchend, not by the click that follows it. With the
+  // filters folded the phone page is short, so a reader at the graph is at the
+  // very bottom; the tap's focus nudged the page 18px and the click landed beside
+  // the button (21 Oct). Cancelling touchend also cancels that focus and click.
+  b.addEventListener('touchend',e=>{ e.preventDefault(); pinned=!pinned; show(pinned); });
+  document.addEventListener('touchstart',e=>{ if(pinned && !b.contains(e.target)){ pinned=false; show(false); } });
+  // The tip sits just under the bar; with the motifs folded there is nothing to explain.
+  document.getElementById('grpMotifs').addEventListener('toggle',e=>{ if(!e.target.open){ pinned=false; show(false); } });
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape' && !t.hidden){ pinned=false; show(false); } });
+})();
+
+// ---- the About panel -------------------------------------------------------
+(function about(){
+  const dlg=document.getElementById('about'), scrim=document.getElementById('scrim'),
+        btn=document.getElementById('aboutBtn'), x=document.getElementById('aboutX');
+  function show(on){
+    dlg.hidden=!on; scrim.hidden=!on;
+    btn.setAttribute('aria-expanded', String(on));
+    if(on) x.focus(); else btn.focus();
+  }
+  btn.onclick=()=>show(true);
+  x.onclick=()=>show(false);
+  scrim.onclick=()=>show(false);
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape' && !dlg.hidden) show(false); });
+})();
+
+render(); draw();
+requestAnimationFrame(()=>fit(true));
+</script>
+</body>
+</html>
