@@ -54,7 +54,7 @@ Tribute (`..\Biblography`); the second is Swords & Words (`..\Swords & Words`).
   card on the site's front page. See `../CLAUDE.md`, "Where It Ships".
 - Added for the ship, all in this folder's page only (Taxes is unchanged):
   - favicon, home-screen icons and a preview card (`make_icons.py`). The crown emblem
-    is Claude's draft; Ethan has not chosen it;
+    was Claude's draft; Ethan chose to keep it (16 Nov);
   - two-finger pinch zoom and pan; keyboard zoom (+, -, 0); 44 px zoom controls on
     touch screens, clear of the home bar; a one-time gesture hint on touch screens;
   - the view no longer refits when only the window's height changes, which on a phone
