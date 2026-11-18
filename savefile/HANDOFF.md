@@ -71,7 +71,8 @@ Tribute (`..\Biblography`); the second is Swords & Words (`..\Swords & Words`).
 - Both side columns resize by dragging their inner edges (desktop and tablet widths;
   hidden at 900 px and below, where the columns stack). Double-click or Home resets an
   edge; arrow keys move a focused edge. Widths are kept per reader in localStorage.
-- Not yet published: the live page is behind until the next ship.
+- Shipped 18 Nov: pushed to `versicon` and `liberty` (b1abdf8), live page gh-pages
+  a4dd166, checked at desktop and phone width.
 
 ## Not Done
 
