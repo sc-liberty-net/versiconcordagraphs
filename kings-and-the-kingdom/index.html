@@ -126,7 +126,7 @@ h1{font-family:Spectral,Georgia,serif; font-weight:600; font-size:26px; margin:0
 @media (prefers-reduced-motion:reduce){ .gname::after{transition:none} }
 
 .main{display:flex; flex:1; min-height:0}
-.rail{width:236px; flex:none; border-right:1px solid var(--line); overflow-y:auto; padding:16px 16px 40px; background:var(--surface)}
+.rail{width:var(--rail-w, 236px); flex:none; border-right:1px solid var(--line); overflow-y:auto; padding:16px 16px 40px; background:var(--surface)}
 .stage{flex:1; min-width:0; background:var(--paper); display:flex; flex-direction:column}
 .canvas{flex:1; position:relative; min-height:0}
 svg#net{display:block; width:100%; height:100%; touch-action:none; cursor:grab}
@@ -134,9 +134,31 @@ svg#net.drag{cursor:grabbing}
 .panel{
   /* Grows with the window (Ethan's C2, 13 Oct): 320px was cramped for the word
      study while the graph beside it had room to spare. */
-  width:clamp(320px, 28vw, 440px); flex:none; border-left:1px solid var(--line); background:var(--surface);
+  width:var(--panel-w, clamp(320px, 28vw, 440px)); flex:none; border-left:1px solid var(--line); background:var(--surface);
   overflow-y:auto; padding:18px 18px 44px;
 }
+/* Back: the panel's own history (Ethan, 18 Nov). A sticky bar of no height, so
+   the button stays in the top right corner as the panel scrolls. */
+.backbar{position:sticky; top:0; z-index:2; height:0; display:flex; justify-content:flex-end; align-items:flex-start}
+.backbtn{
+  display:inline-flex; align-items:center; gap:5px; padding:5px 12px; border:1px solid var(--line);
+  border-radius:99px; background:var(--surface); color:var(--ink-2); font:inherit; font-size:13px;
+  cursor:pointer; box-shadow:0 1px 3px rgba(0,0,0,.14); white-space:nowrap;
+}
+.backbtn:hover{background:var(--sunk); color:var(--ink)}
+.backbtn:focus-visible{outline:2px solid var(--focus); outline-offset:2px}
+.backbtn[hidden]{display:none}
+.panel.has-back .ref{padding-right:84px}
+/* Drag handles on the edges of the two side columns (Ethan, 18 Nov). The
+   element has no width; its ::before is the 10px strip the pointer grabs. */
+.gutter{flex:none; width:0; position:relative; z-index:6; outline:none}
+.gutter::before{content:''; position:absolute; top:0; bottom:0; left:-5px; width:10px; cursor:col-resize; touch-action:none}
+.gutter::after{content:''; position:absolute; top:0; bottom:0; left:-1px; width:3px; background:var(--focus); opacity:0; transition:opacity .15s; pointer-events:none}
+.gutter:hover::after, .gutter.drag::after, .gutter:focus-visible::after{opacity:.55}
+body.resizing, body.resizing *{cursor:col-resize !important; user-select:none}
+@media (pointer:coarse){ .gutter::before{left:-12px; width:24px} }
+@media (max-width:900px){ .gutter{display:none} }
+@media (prefers-reduced-motion:reduce){ .gutter::after{transition:none} }
 .sheetbar{display:none}
 .grp{margin-bottom:20px}
 .grp h2{font-family:Archivo; font-size:12px; font-weight:600; letter-spacing:.04em; color:var(--ink-3); margin:0 0 9px; text-transform:none}
@@ -338,6 +360,8 @@ path.edge.ehov{opacity:1; stroke-width:3; stroke-opacity:1}
     flex:1; height:30px; border:0; background:none; cursor:grab; display:grid; place-items:center;
   }
   .sheetbar .grab::before{content:''; width:44px; height:5px; border-radius:3px; background:var(--line)}
+  .sheetbar .backbtn{box-shadow:none; background:var(--paper); padding:5px 13px}
+  .panel.has-back .ref{padding-right:0}
   .sheetbar .sheetx{
     flex:none; padding:5px 13px; border:1px solid var(--line); border-radius:99px;
     background:var(--paper); color:var(--ink-2); font:inherit; font-size:13px; cursor:pointer;
@@ -1593,7 +1617,7 @@ document.getElementById('reset').onclick=()=>{
   document.querySelectorAll('.rail input[type=checkbox]').forEach(c=>{if(!c.checked){c.checked=true;c.dispatchEvent(new Event('change'))}});
   document.querySelectorAll('#motifs input[type=checkbox]').forEach(c=>{
     if(c.checked){ c.checked=false; c.dispatchEvent(new Event('change')); }});
-  document.getElementById('q').value=''; query=''; picked=null; hovered=null;
+  document.getElementById('q').value=''; query=''; remember(picked); picked=null; hovered=null;
   render(); draw(); fit();   // render() too, or the panel keeps the cleared selection
 };
 
@@ -1747,7 +1771,31 @@ const panel=document.getElementById('panel');
 // A passage, an arc or a book can all be selected, and all three toggle off
 // when picked again. draw() already treats the three alike; the panel below
 // is what differs.
-function select(f){ picked = (picked===f ? null : f); studyWord = null; render(); draw(); }
+// Back (Ethan, 18 Nov): every time the panel moves off something, that thing is
+// kept, newest last, and the Back button returns to it.
+const backStack = [];
+function remember(f){
+  if(!f || backStack[backStack.length-1]===f) return;
+  backStack.push(f); if(backStack.length>50) backStack.shift();
+}
+function select(f){
+  const next = (picked===f ? null : f);
+  if(next!==picked) remember(picked);
+  picked = next; studyWord = null; render(); draw();
+}
+function goBack(){
+  if(!backStack.length) return;
+  picked = backStack.pop(); studyWord = null; render(); draw();
+  (backStack.length ? backBtn : panel).focus({preventScroll:true});
+}
+const nameOf = f => isBook(f) ? f.book : isCluster(f) ? titleCase(CL[f.cl].name)
+                  : isEdge(f) ? f.s.ref+' – '+f.t.ref : f.ref;
+const backBar = document.createElement('div'); backBar.className='backbar';
+const backBtn = document.createElement('button');
+backBtn.type='button'; backBtn.className='backbtn'; backBtn.innerHTML='<span aria-hidden="true">←</span> Back';
+backBtn.addEventListener('click', goBack);
+backBar.append(backBtn);
+panel.tabIndex = -1;
 
 // The Word Study (wordstudy.js, when present). A passage shows its reading; selecting a word in it
 // swaps the panel to that word's study until the passage is picked again or "Back" is pressed.
@@ -1944,6 +1992,7 @@ function focusTarget(f){
 }
 function sheetClose(){
   const was=picked;
+  remember(picked);
   picked=null; studyWord=null; panel.classList.remove('full'); render(); draw();
   const t=focusTarget(was);
   if(t){ t.focus({preventScroll:true}); hover(null); }
@@ -1982,6 +2031,16 @@ document.addEventListener('keydown', e=>{
 function render(){
   panel.innerHTML='';
   panel.append(sheetBar);
+  const back = backStack.length>0;
+  backBtn.hidden = !back;
+  panel.classList.toggle('has-back', back);
+  if(back){
+    const to = 'Back to '+nameOf(backStack[backStack.length-1]);
+    backBtn.setAttribute('aria-label', to); backBtn.title = to;
+  }
+  // In the phone's sheet the button sits in the sheet's own bar, beside Close.
+  if(PHONE_MQ.matches) sheetBar.insertBefore(backBtn, sheetBar.querySelector('.sheetx'));
+  else { backBar.append(backBtn); panel.append(backBar); }
   const open = !!picked;
   panel.classList.toggle('open', open);
   if(!open) panel.classList.remove('full');
@@ -2027,6 +2086,97 @@ function render(){
   x.onclick=()=>show(false);
   scrim.onclick=()=>show(false);
   document.addEventListener('keydown',e=>{ if(e.key==='Escape' && !dlg.hidden) show(false); });
+})();
+
+// ---- the side columns' widths, dragged by their edges (Ethan, 18 Nov) ---------
+// Like the desktop app's side panels: grab the edge, drag, let go. Double-click
+// an edge to put it back; arrow keys move a focused edge. Kept per reader.
+(function panelWidths(){
+  const main=document.querySelector('.main'), rail=document.querySelector('.rail');
+  const KEY='cg-panel-widths', STAGE_MIN=320;
+  const LIM={rail:[180,480], panel:[280,760]};
+  const VAR={rail:'--rail-w', panel:'--panel-w'};
+  const el={rail, panel};
+  let saved={};
+  try{ saved=JSON.parse(localStorage.getItem(KEY)||'{}')||{}; }catch(_){ saved={}; }
+  const store=()=>{ try{ localStorage.setItem(KEY, JSON.stringify(saved)); }catch(_){} };
+  const width=side=>el[side].getBoundingClientRect().width;
+  const g={};
+  function limit(side, w){
+    const other = width(side==='rail' ? 'panel' : 'rail');
+    const max = Math.max(LIM[side][0], Math.min(LIM[side][1], innerWidth-other-STAGE_MIN));
+    return Math.round(Math.max(LIM[side][0], Math.min(max, w)));
+  }
+  function set(side, w){
+    w = limit(side, w);
+    main.style.setProperty(VAR[side], w+'px');
+    g[side].setAttribute('aria-valuenow', w);
+    return w;
+  }
+  function unset(side){
+    main.style.removeProperty(VAR[side]); delete saved[side]; store();
+    g[side].setAttribute('aria-valuenow', Math.round(width(side)));
+  }
+  // The graph keeps its place while a column moves; if it was showing the
+  // whole graph, it refits so it still does.
+  let raf=0;
+  function settle(){
+    cancelAnimationFrame(raf);
+    raf=requestAnimationFrame(()=>{
+      if(vs <= minScale*1.001) fit();
+      else { minScale=fitScale(); vs=clamp(vs); apply(); }
+    });
+  }
+  function make(side, label){
+    const d=document.createElement('div');
+    d.className='gutter'; d.tabIndex=0;
+    d.setAttribute('role','separator'); d.setAttribute('aria-orientation','vertical');
+    d.setAttribute('aria-label', label);
+    d.setAttribute('aria-valuemin', LIM[side][0]); d.setAttribute('aria-valuemax', LIM[side][1]);
+    d.title='Drag to resize · double-click to reset';
+    const dir = side==='rail' ? 1 : -1;          // the panel grows as its edge moves left
+    let x0=null, w0=0;
+    d.addEventListener('pointerdown', e=>{
+      if(e.button!==0) return;
+      e.preventDefault();
+      x0=e.clientX; w0=width(side);
+      d.setPointerCapture(e.pointerId); d.classList.add('drag'); document.body.classList.add('resizing');
+    });
+    d.addEventListener('pointermove', e=>{
+      if(x0===null) return;
+      set(side, w0+dir*(e.clientX-x0)); settle();
+    });
+    const end=()=>{
+      if(x0===null) return;
+      x0=null; d.classList.remove('drag'); document.body.classList.remove('resizing');
+      saved[side]=Math.round(width(side)); store(); settle();
+    };
+    d.addEventListener('pointerup', end);
+    d.addEventListener('pointercancel', end);
+    d.addEventListener('dblclick', ()=>{ unset(side); settle(); });
+    d.addEventListener('keydown', e=>{
+      const step = e.shiftKey ? 64 : 16;
+      let w=null;
+      if(e.key==='ArrowLeft')  w=width(side)-dir*step;
+      if(e.key==='ArrowRight') w=width(side)+dir*step;
+      if(e.key==='Home') { e.preventDefault(); unset(side); settle(); return; }
+      if(w===null) return;
+      e.preventDefault();
+      saved[side]=set(side, w); store(); settle();
+    });
+    return d;
+  }
+  g.rail=make('rail', 'Resize the filters column');
+  g.panel=make('panel', 'Resize the details panel');
+  rail.after(g.rail); panel.before(g.panel);
+  function restore(){
+    for(const side of ['rail','panel']){
+      if(saved[side]) set(side, saved[side]);
+      else g[side].setAttribute('aria-valuenow', Math.round(width(side)));
+    }
+  }
+  restore();
+  window.addEventListener('resize', restore);
 })();
 
 render(); draw();
