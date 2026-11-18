@@ -13,4 +13,6 @@ the check pass.
 - Two-finger pinch zoom and pan on the graph (16 Nov 2026). check: pinchState  in: concordagraph.html
 - Every feature of the Taxes concordagraph that applies to this topic (16 Nov 2026).
 - Mobile touch practice: 44 px controls on touch screens (16 Nov 2026). check: width:44px; height:44px  in: concordagraph.html
+- A Back button in the top right of the details panel returns to the last thing shown there (18 Nov 2026). check: backStack  in: concordagraph.html
+- Both side columns resize by dragging their edges, as in the Claude desktop app (18 Nov 2026). check: className='gutter'  in: concordagraph.html
 - The crown emblem on the favicon, icons and card (16 Nov 2026). check: M21.5 21.5 L19.5 9.5  in: icons/favicon.svg

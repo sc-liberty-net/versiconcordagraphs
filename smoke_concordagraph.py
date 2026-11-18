@@ -281,6 +281,71 @@ try:
             q.value = ''; q.dispatchEvent(new Event('input'));
             return n;
         }'''))
+        # --- Back in the panel (Ethan, 18 Nov) ---------------------------------
+        bk = ev(page, '''() => {
+            const btn = () => document.querySelector('.panel .backbtn');
+            const shown = () => !!btn() && !btn().hidden && btn().offsetParent !== null;
+            picked = null; backStack.length = 0; render(); draw();
+            const before = shown();
+            const n = [...document.querySelectorAll('.node')]
+                .find(g => g.getAttribute('aria-label') === '%s');
+            n.dispatchEvent(new MouseEvent('click', {bubbles: true}));
+            const afterOne = shown();
+            document.querySelector('.panel .link').click();
+            const second = (picked && picked.s ? 'the arc ' : '') + nameOf(picked);
+            const label = btn().getAttribute('aria-label');
+            const pr = panel.getBoundingClientRect(), br = btn().getBoundingClientRect();
+            const corner = pr.right - br.right < 40 && br.top - pr.top < 30;
+            btn().click();
+            const back = (document.querySelector('.panel .ref a') || {}).textContent;
+            const afterBack = shown();
+            picked = null; backStack.length = 0; render(); draw();
+            return {before, afterOne, second, label, corner, back, afterBack};
+        }''' % HUB_REF, {})
+        for key, label in (('before', 'shown before anything'), ('afterOne', 'shown after one pick'),
+                           ('second', 'second panel'), ('label', 'label'),
+                           ('corner', 'in the top right corner'), ('back', 'returns to'),
+                           ('afterBack', 'shown after going back to the first')):
+            P('back %s' % label, pick(bk, key))
+        if pick(bk, 'back') != HUB_REF or pick(bk, 'corner') is not True or pick(bk, 'before') is not False:
+            fatal.append('the Back button did not return to the last panel')
+
+        # --- the side columns resize by their edges (Ethan, 18 Nov) -----------
+        try:
+            W = lambda sel: ev(page, '(s) => Math.round(document.querySelector(s).getBoundingClientRect().width)', arg=sel)
+            gut = ev(page, '''() => [...document.querySelectorAll('.gutter')].map(g => {
+                const r = g.getBoundingClientRect(); return [r.left, r.top + r.height / 2]; })''')
+            P('resize edges', len(gut) if isinstance(gut, list) else gut)
+            r0, p0 = W('.rail'), W('.panel')
+
+            def drag(x, y, dx):
+                page.mouse.move(x, y); page.mouse.down()
+                page.mouse.move(x + dx, y, steps=6); page.mouse.up()
+                page.wait_for_timeout(150)
+            drag(gut[0][0], gut[0][1], 100)
+            drag(gut[1][0], gut[1][1], -100)
+            r1, p1 = W('.rail'), W('.panel')
+            P('resize filters column grew by', r1 - r0)
+            P('resize details panel grew by', p1 - p0)
+            P('resize graph still fills the middle', ev(page,
+                '() => Math.round(document.querySelector(".stage").getBoundingClientRect().width) > 300'))
+            page.reload(wait_until='load'); page.wait_for_timeout(1000)
+            P('resize kept after reload', W('.rail') == r1 and W('.panel') == p1)
+            gut = ev(page, '''() => [...document.querySelectorAll('.gutter')].map(g => {
+                const r = g.getBoundingClientRect(); return [r.left, r.top + r.height / 2]; })''')
+            drag(gut[0][0], gut[0][1], 2000)
+            P('resize filters column stops at', W('.rail'))
+            for i in (0, 1):
+                gut = ev(page, '''() => [...document.querySelectorAll('.gutter')].map(g => {
+                    const r = g.getBoundingClientRect(); return [r.left, r.top + r.height / 2]; })''')
+                page.mouse.dblclick(gut[i][0], gut[i][1]); page.wait_for_timeout(150)
+            P('resize double-click restores', W('.rail') == r0 and W('.panel') == p0)
+            if r1 - r0 != 100 or p1 - p0 != 100:
+                fatal.append('dragging a column edge did not resize it')
+        except Exception as exc:
+            P('resize probe failed', str(exc).splitlines()[0][:80])
+            fatal.append('column resize probe failed')
+
         P('desktop overflowX', ev(page, '() => document.documentElement.scrollWidth - innerWidth'))
 
         after = real_errors(errors)[len(real):]
@@ -382,7 +447,19 @@ try:
                 return getComputedStyle(p).position === 'fixed'
                     ? 'sheet ' + (r.top < innerHeight - 40 ? 'on screen' : 'off screen')
                     : 'column ' + Math.round(r.width) + 'px'; }'''))
-            ev(wp, '() => { picked = null; render(); draw(); }')
+            pb = ev(wp, '''() => {
+                const first = picked;
+                document.querySelector('.panel .link').click();
+                const b = document.querySelector('.sheetbar .backbtn');
+                const r = b && b.getBoundingClientRect();
+                const ok = !!b && !b.hidden && r.width >= 40;
+                if (ok) b.click();
+                return ok && picked === first;
+            }''')
+            P(pre + 'back in the sheet bar', pb)
+            if pb is not True:
+                fatal.append('the Back button is missing from the phone sheet')
+            ev(wp, '() => { picked = null; backStack.length = 0; render(); draw(); }')
             wp.wait_for_timeout(400)
             T('touchStart', [(d['x'] + 12, d['y'])]); T('touchEnd', [])
             wp.wait_for_timeout(500)

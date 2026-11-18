@@ -62,6 +62,17 @@ Tribute (`..\Biblography`); the second is Swords & Words (`..\Swords & Words`).
 - `check_page.py` and `smoke_concordagraph.py`, baseline recorded (`SMOKE-RECORD.md`).
   The new checks were seen to fail on the page as committed in 626d368.
 
+## Added 18 Nov (Ethan): Back and Resizable Columns
+
+- A Back button in the top right of the details panel. Each time the panel moves
+  off something (a new pick, a connection, Close, Show Everything Again), that thing
+  is kept, newest last, and Back returns to it. On phones it sits in the sheet's bar
+  beside Close.
+- Both side columns resize by dragging their inner edges (desktop and tablet widths;
+  hidden at 900 px and below, where the columns stack). Double-click or Home resets an
+  edge; arrow keys move a focused edge. Widths are kept per reader in localStorage.
+- Not yet published: the live page is behind until the next ship.
+
 ## Not Done
 
 - **No `lex` links.** `lemma.py` has not been run over this corpus. Some `con` links

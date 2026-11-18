@@ -55,6 +55,20 @@ group panel rows: 12
 group lights: 12
 group second click deselects: True
 search "sword" hides: 202
+back shown before anything: False
+back shown after one pick: False
+back second panel: the arc John 18:36 – John 18:11
+back label: Back to John 18:36
+back in the top right corner: True
+back returns to: John 18:36
+back shown after going back to the first: False
+resize edges: 2
+resize filters column grew by: 100
+resize details panel grew by: 100
+resize graph still fills the middle: True
+resize kept after reload: True
+resize filters column stops at: 480
+resize double-click restores: True
 desktop overflowX: 0
 console errors during the probes: 0
 phone graph turned: True
@@ -71,6 +85,7 @@ phone pinch in zooms out: True
 phone pinch stops at the floor: True
 phone tap selects: True
 phone sheet: sheet on screen
+phone back in the sheet bar: True
 phone near-miss tap selects: a passage
 phone height-only resize keeps the zoom: True
 phone console errors: 0
