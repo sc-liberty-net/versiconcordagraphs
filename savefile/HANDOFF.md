@@ -87,6 +87,9 @@ From a review of the live page (O1–O8):
 - O6: phone: a picked passage or arc is moved into the strip above the sheet.
 - O7: phone: less space between the folded filters and the graph.
 - O8: Compare and Read In Full in a link colour (`--link`), a size up.
+- Shipped 21 Nov: pushed to `versicon` and `liberty` (5375007), live page gh-pages
+  ce48f79, checked at 1400 px and 375 px (216 passages, no sideways scroll, no page
+  errors, 16 chips on John 18:36, phone names hidden at the fitted view).
 
 ## Not Done
 
