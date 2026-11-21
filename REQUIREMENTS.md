@@ -15,4 +15,9 @@ the check pass.
 - Mobile touch practice: 44 px controls on touch screens (16 Nov 2026). check: width:44px; height:44px  in: concordagraph.html
 - A Back button in the top right of the details panel returns to the last thing shown there (18 Nov 2026). check: backStack  in: concordagraph.html
 - Both side columns resize by dragging their edges, as in the Claude desktop app (18 Nov 2026). check: className='gutter'  in: concordagraph.html
+- Connection rows: kind and strength as two chips, the note in body ink, not coloured text (20 Nov 2026). check: className='lchips'  in: concordagraph.html
+- Phone: passage names on the spine hidden until zoom makes them readable (20 Nov 2026). check: tinylab  in: concordagraph.html
+- Touch screens: filter rows, headers, buttons and search at least 44 px (20 Nov 2026). check: .grpfold > summary{min-height:44px  in: concordagraph.html
+- Phone: a picked passage or arc is moved above the sheet (20 Nov 2026). check: function keepInView  in: concordagraph.html
+- Compare and Read In Full links in a link colour, a size up (20 Nov 2026). check: --link:#8DBEE0  in: concordagraph.html
 - The crown emblem on the favicon, icons and card (16 Nov 2026). check: M21.5 21.5 L19.5 9.5  in: icons/favicon.svg

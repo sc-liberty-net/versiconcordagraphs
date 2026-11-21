@@ -74,6 +74,20 @@ Tribute (`..\Biblography`); the second is Swords & Words (`..\Swords & Words`).
 - Shipped 18 Nov: pushed to `versicon` and `liberty` (b1abdf8), live page gh-pages
   a4dd166, checked at desktop and phone width.
 
+## Added 20 Nov (Ethan, "Do all eight"): Readability Pass
+
+From a review of the live page (O1–O8):
+- O1–O2: connection rows show the kind and strength as two chips; the note is in
+  body ink, not green or orange text.
+- O3: dropped. The review said the arcs were faint at rest; they are not. The haze
+  is the intended dimming while something is selected.
+- O4: phone, turned graph: passage names hidden until zoom makes them about 8 px.
+- O5: touch screens: filter rows, headers, buttons and search at least 44 px;
+  search at 16 px so iOS does not zoom.
+- O6: phone: a picked passage or arc is moved into the strip above the sheet.
+- O7: phone: less space between the folded filters and the graph.
+- O8: Compare and Read In Full in a link colour (`--link`), a size up.
+
 ## Not Done
 
 - **No `lex` links.** `lemma.py` has not been run over this corpus. Some `con` links

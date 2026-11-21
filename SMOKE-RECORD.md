@@ -16,3 +16,8 @@ icons, the preview card and pinch all went red there, and the zoom buttons read 
 cause: Back button in the details panel and draggable edges on both side columns (Ethan, 18 Nov): 15 new probe lines, no existing line moved. Proved against HEAD 92bdd6f, where the Back and resize probes went red.
 moved: 0 changed, 15 new, 0 gone (0 allowed, not counted)
 source: C:/Users/ethan/AppData/Local/Temp/claude/0262951ad32e9d6c/8e68c5ec-effc-4133-93b4-9c1eba11a9d1/scratchpad/new.out -> smoke-baseline.out
+
+## 2026-11-20 - baseline refreshed: smoke-baseline.out
+cause: Readability pass O1-O8 (Ethan, 20 Nov): connection chips and body-ink notes, hidden passage names at the phone's fitted view, 44px touch filters, picked passage kept above the sheet, link-coloured Compare/Read. 8 new lines, none moved. Red on the committed page (HEAD 59012dc).
+moved: 0 changed, 8 new, 0 gone (0 allowed, not counted)
+source: C:/Users/ethan/AppData/Local/Temp/claude/0262951ad32e9d6c/8e68c5ec-effc-4133-93b4-9c1eba11a9d1/scratchpad/new.out -> smoke-baseline.out

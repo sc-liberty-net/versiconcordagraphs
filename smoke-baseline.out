@@ -62,6 +62,10 @@ back label: Back to John 18:36
 back in the top right corner: True
 back returns to: John 18:36
 back shown after going back to the first: False
+panel connection chips: 16
+panel connection note in body ink: True
+panel compare link size: 12.5px
+panel read in full link size: 13px
 resize edges: 2
 resize filters column grew by: 100
 resize details panel grew by: 100
@@ -76,6 +80,9 @@ phone graph taller: True
 phone gesture hint on first visit: Pinch to zoom · Drag to move · Tap a dot
 phone zoom button size px: 44x44 44x44 44x44
 phone overflowX: 0
+phone passage names shown at the fitted view: 0
+phone filter header height px: 44
+phone search font size: 16px
 phone one-finger drag moves the graph: True
 phone gesture hint after first touch: hidden
 phone pinch out zoom ratio: 4.0
@@ -85,6 +92,7 @@ phone pinch in zooms out: True
 phone pinch stops at the floor: True
 phone tap selects: True
 phone sheet: sheet on screen
+phone low passage brought above the sheet: True
 phone back in the sheet bar: True
 phone near-miss tap selects: a passage
 phone height-only resize keeps the zoom: True

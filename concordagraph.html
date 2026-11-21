@@ -35,7 +35,7 @@
      corpus_clusters.csv are NOT themed — they carry meaning, not style. */
   --paper:#EEF0F2; --surface:#FFFFFF; --sunk:#D3D3D3;
   --ink:#36454F; --ink-2:#4E5D68; --ink-3:#5C6B76; --line:#C3C9CE;
-  --focus:#36454F;
+  --focus:#36454F; --link:#2C6390;
   --states:#14493A; --supports:#98620F; --spec:#8A8F96;
   --anchor:#7C8B96; --bridge:#B4553C; --imperial:#52707F; --collector:#7E6E9B;
   --critique:#6E8A5E; --hebrews:#9A8352; --giving:#5F8C86; --debt:#94707A; --market:#857A6A;
@@ -45,7 +45,7 @@
 :root:not([data-theme="light"]){ @media (prefers-color-scheme:dark){
   --paper:#1B2228; --surface:#242D34; --sunk:#151A1F;
   --ink:#ECEFF1; --ink-2:#B4C0C8; --ink-3:#96A4AD; --line:#3C4750;
-  --focus:#C2CED6;
+  --focus:#C2CED6; --link:#8DBEE0;
   --states:#5FBF9F; --supports:#E0A552; --spec:#8A9199;
   --anchor:#93A3AE; --bridge:#D97B60; --imperial:#7FA3B4; --collector:#A392C4;
   --critique:#93B182; --hebrews:#C2A86E; --giving:#7FB5AE; --debt:#BE939D; --market:#A99B87;
@@ -53,7 +53,7 @@
 :root[data-theme="dark"]{
   --paper:#1B2228; --surface:#242D34; --sunk:#151A1F;
   --ink:#ECEFF1; --ink-2:#B4C0C8; --ink-3:#96A4AD; --line:#3C4750;
-  --focus:#C2CED6;
+  --focus:#C2CED6; --link:#8DBEE0;
   --states:#5FBF9F; --supports:#E0A552; --spec:#8A9199;
   --anchor:#93A3AE; --bridge:#D97B60; --imperial:#7FA3B4; --collector:#A392C4;
   --critique:#93B182; --hebrews:#C2A86E; --giving:#7FB5AE; --debt:#BE939D; --market:#A99B87;
@@ -196,6 +196,14 @@ button.reset:hover{background:var(--sunk)}
 .link:hover .lref{text-decoration:underline}
 .lref{font-family:Spectral,Georgia,serif; font-size:15px}
 .lmeta{display:block; font-size:12.5px; color:var(--ink-2); margin-top:1px}
+/* A connection row (Ethan, 20 Nov): the kind and the strength as two small
+   chips, the strength's colour on its swatch only, and the note in body ink.
+   The note was the whole line in green or orange, which tired the eye. */
+.lchips{display:flex; flex-wrap:wrap; gap:5px; margin:4px 0 4px}
+.chip{display:inline-flex; align-items:center; gap:5px; padding:0 8px; border:1px solid var(--line);
+  border-radius:99px; font-size:11.5px; line-height:19px; color:var(--ink-2); white-space:nowrap}
+.chip .sw{width:12px; height:0; border-top:2px solid; flex:none}
+.lnote{display:block; font-size:13.5px; line-height:1.5; color:var(--ink)}
 .empty{color:var(--ink-2); font-size:14px}
 .note{font-size:12.5px; color:var(--ink-3); line-height:1.5; margin-top:22px; border-top:1px solid var(--line); padding-top:12px}
 .zoom{position:absolute; right:12px; bottom:12px; display:flex; gap:6px}.motifbar{
@@ -244,6 +252,12 @@ button.reset:hover{background:var(--sunk)}
 /* Fingers: controls at least 44 px (Apple's and WCAG's touch-target size),
    and clear of the home bar on phones with no bottom bezel. */
 @media (pointer:coarse){
+  /* The filters too (Ethan, 20 Nov): rows were 27px, tick boxes 13px. */
+  .row{min-height:44px}
+  .row input{width:20px; height:20px}
+  .grpfold > summary{min-height:44px; align-items:center; margin-bottom:0}
+  .bulk button{min-height:44px}
+  input[type=search]{min-height:44px; font-size:16px}   /* 16px: iOS zooms the page on a smaller input */
   .zoom{gap:8px; right:max(12px, env(safe-area-inset-right)); bottom:max(12px, env(safe-area-inset-bottom))}
   .zoom button{width:44px; height:44px; font-size:20px}
   .reset.floating{min-height:44px}
@@ -265,6 +279,7 @@ button.reset:hover{background:var(--sunk)}
 .era{stroke:var(--ink-3); stroke-width:1; stroke-dasharray:3 4}
 .tbracket{fill:none; stroke:var(--ink-3); stroke-width:1.25; vector-effect:non-scaling-stroke}
 .tlab{font-family:Archivo,sans-serif; font-size:13px; font-weight:600; letter-spacing:.04em; fill:var(--ink-2)}.node text{font-family:Spectral,Georgia,serif; font-size:11.5px; fill:var(--ink); pointer-events:auto; cursor:pointer}
+svg.tinylab .node text:not(.mag){display:none}
 .dim{opacity:.12}
 .hide{display:none}
 
@@ -308,11 +323,13 @@ button.reset:hover{background:var(--sunk)}
 .ref a{color:inherit; text-decoration:none; border-bottom:1px solid var(--line)}
 .ref a:hover{border-bottom-color:var(--ink-2)}
 .ref a:focus-visible{outline:2px solid var(--focus); outline-offset:3px; border-radius:3px}
-.ref .ext{font-family:Archivo,sans-serif; font-size:11px; color:var(--ink-3); margin-left:7px; letter-spacing:.02em}
-.ref .chap{display:block; font-family:Archivo,sans-serif; font-size:12px;
-  color:var(--ink-2); margin:4px 0 2px; letter-spacing:.02em; border-bottom:0;
+/* Compare and Read In Full in a link colour, a size up (Ethan, 20 Nov): they
+   were 11-12px grey and easy to miss. */
+.ref .ext{font-family:Archivo,sans-serif; font-size:12.5px; font-weight:500; color:var(--link); margin-left:8px; letter-spacing:.02em}
+.ref .chap{display:block; font-family:Archivo,sans-serif; font-size:13px; font-weight:500;
+  color:var(--link); margin:5px 0 3px; letter-spacing:.02em; border-bottom:0;
   text-decoration:none}
-.ref .chap:hover{color:var(--ink); text-decoration:underline}
+.ref .chap:hover{text-decoration:underline}
 .ref .arrow{display:block; font-family:Archivo,sans-serif; font-size:12px; color:var(--ink-2); margin:3px 0 1px; letter-spacing:.04em}
 /* Arc strokes are measured in SCREEN pixels, not in the drawing's own units.
    Without this they scale with the zoom, and the graph opens fitted at roughly
@@ -334,6 +351,10 @@ path.edge.ehov{opacity:1; stroke-width:3; stroke-opacity:1}
 /* Phones: the graph is turned to run down the screen, so give it more height. */
 @media (max-width:767px){
   .stage{height:80vh}
+  /* Less space between the folded filters and the graph (Ethan, 20 Nov). */
+  .rail{padding-bottom:6px}
+  .rail > .grp{margin-bottom:6px}
+  .rail > .grp:empty{display:none}
   /* The panel is a bottom sheet (Ethan's C2, 13 Oct): selecting something
      slides it up over the lower half, the graph still in view above it. The
      handle switches half and full; Close (or Escape) clears the selection. */
@@ -1287,7 +1308,12 @@ place();
 
 // ---- viewport --------------------------------------------------------------
 let vx=0, vy=0, vs=1;
-function apply(){ gRoot.setAttribute('transform',`translate(${vx},${vy}) scale(${vs})`); placeBookLabels(); placeTestaments(); }
+function apply(){
+  gRoot.setAttribute('transform',`translate(${vx},${vy}) scale(${vs})`); placeBookLabels(); placeTestaments();
+  // Phone, turned: the passage names along the spine are hidden until zoom makes
+  // them readable (Ethan, 20 Nov). At the fitted view they were 4px tall, noise.
+  svg.classList.toggle('tinylab', VERT && 11.5*vs < 8);
+}
 // Book labels are counter-scaled so they stay the same size on screen at any
 // zoom. Drawn in the graph's own units they shrank with it: the fitted view
 // opens at about a quarter scale, which put 10.5-unit text at roughly 3 px, and
@@ -1781,11 +1807,26 @@ function remember(f){
 function select(f){
   const next = (picked===f ? null : f);
   if(next!==picked) remember(picked);
-  picked = next; studyWord = null; render(); draw();
+  picked = next; studyWord = null; render(); draw(); keepInView(picked);
+}
+// Phone: the sheet covers the lower half, so a passage or arc picked there was
+// hidden by its own details (Ethan, 20 Nov). Bring it into the strip above.
+function keepInView(f){
+  if(!PHONE_MQ.matches || !f) return;
+  const pts = isEdge(f) ? [f.s, f.t] : (f.circle ? [f] : null);
+  if(!pts) return;
+  const st = document.querySelector('.stage').getBoundingClientRect();
+  if(st.top > 8) window.scrollBy(0, st.top);
+  const room = innerHeight*0.45 - 16;            // the sheet is 55vh
+  const ys = pts.map(n=>{ const r=n.circle.getBoundingClientRect(); return r.top+r.height/2; });
+  const top = Math.min(...ys), bot = Math.max(...ys);
+  if(top >= 64 && bot <= room) return;
+  const want = (bot-top) > room-80 ? 64 - top : (64+room)/2 - (top+bot)/2;
+  vy += want; apply();
 }
 function goBack(){
   if(!backStack.length) return;
-  picked = backStack.pop(); studyWord = null; render(); draw();
+  picked = backStack.pop(); studyWord = null; render(); draw(); keepInView(picked);
   (backStack.length ? backBtn : panel).focus({preventScroll:true});
 }
 const nameOf = f => isBook(f) ? f.book : isCluster(f) ? titleCase(CL[f.cl].name)
@@ -1874,6 +1915,20 @@ function linkRow(ref, meta, colourVar, onClick){
   b.append(r,m); b.onclick=onClick;
   return b;
 }
+function connRow(ref, e, onClick){
+  const b=document.createElement('button'); b.className='link';
+  const r=document.createElement('span'); r.className='lref'; r.textContent=ref;
+  const cs=document.createElement('span'); cs.className='lchips';
+  const kind=document.createElement('span'); kind.className='chip'; kind.textContent=titleCase(TY[e.ty].name);
+  const wa=document.createElement('span'); wa.className='chip';
+  const sw=document.createElement('span'); sw.className='sw'; sw.style.borderTopColor=`var(${WA[e.wa].v})`;
+  wa.append(sw, titleCase(WA[e.wa].name));
+  cs.append(kind, wa);
+  b.append(r, cs);
+  if(e.note){ const m=document.createElement('span'); m.className='lnote'; m.textContent=e.note; b.append(m); }
+  b.onclick=onClick;
+  return b;
+}
 function renderEmpty(){
   const p=document.createElement('p'); p.className='empty';
   p.textContent='Pick a passage, an arc or a book on the graph to see what it connects to and why.';
@@ -1922,9 +1977,7 @@ function renderNode(n){
   mine.sort((a,b)=>['states','supports','spec'].indexOf(a.wa)-['states','supports','spec'].indexOf(b.wa));
   mine.forEach(e=>{
     const other = e.s===n ? e.t : e.s;
-    panel.append(linkRow(other.ref,
-      TY[e.ty].name+' · '+WA[e.wa].name + (e.note? ' — '+e.note : ''),
-      WA[e.wa].v, ()=>select(e)));   // clicking a connection selects the ARC
+    panel.append(connRow(other.ref, e, ()=>select(e)));   // clicking a connection selects the ARC
   });
 }
 

@@ -310,6 +310,27 @@ try:
         if pick(bk, 'back') != HUB_REF or pick(bk, 'corner') is not True or pick(bk, 'before') is not False:
             fatal.append('the Back button did not return to the last panel')
 
+        # --- readability of the panel (Ethan, 20 Nov) --------------------------
+        rd = ev(page, '''() => {
+            const n = [...document.querySelectorAll('.node')]
+                .find(g => g.getAttribute('aria-label') === '%s');
+            n.dispatchEvent(new MouseEvent('click', {bubbles: true}));
+            const note = document.querySelector('.panel .lnote'), gist = document.querySelector('.panel .gist');
+            const out = {
+                chips: document.querySelectorAll('.panel .link .chip').length,
+                noteInBodyInk: !!note && !!gist && getComputedStyle(note).color === getComputedStyle(gist).color,
+                compareSize: getComputedStyle(document.querySelector('.ref .ext')).fontSize,
+                readSize: getComputedStyle(document.querySelector('.ref .chap')).fontSize
+            };
+            picked = null; backStack.length = 0; render(); draw();
+            return out;
+        }''' % HUB_REF, {})
+        for key, label in (('chips', 'connection chips'), ('noteInBodyInk', 'connection note in body ink'),
+                           ('compareSize', 'compare link size'), ('readSize', 'read in full link size')):
+            P('panel %s' % label, pick(rd, key))
+        if pick(rd, 'chips') in (0, 'MISSING') or pick(rd, 'noteInBodyInk') is not True:
+            fatal.append('connection rows lost their chips or their body-ink note')
+
         # --- the side columns resize by their edges (Ethan, 18 Nov) -----------
         try:
             W = lambda sel: ev(page, '(s) => Math.round(document.querySelector(s).getBoundingClientRect().width)', arg=sel)
@@ -375,6 +396,15 @@ try:
         P(pre + 'zoom button size px', ev(wp,
             '() => [...document.querySelectorAll(".zoom button")].map(b => Math.round(b.getBoundingClientRect().width) + "x" + Math.round(b.getBoundingClientRect().height)).join(" ")'))
         P(pre + 'overflowX', ev(wp, '() => document.documentElement.scrollWidth - innerWidth'))
+        ph = ev(wp, '''() => ({
+            names: [...document.querySelectorAll('.node text')].filter(t => getComputedStyle(t).display !== 'none').length,
+            summary: Math.round(document.querySelector('.grpfold > summary').getBoundingClientRect().height),
+            search: getComputedStyle(document.getElementById('q')).fontSize })''')
+        P(pre + 'passage names shown at the fitted view', pick(ph, 'names'))
+        P(pre + 'filter header height px', pick(ph, 'summary'))
+        P(pre + 'search font size', pick(ph, 'search'))
+        if pick(ph, 'names') != 0 or not isinstance(pick(ph, 'summary'), int) or pick(ph, 'summary') < 44:
+            fatal.append('phone: unreadable passage names shown, or filter headers under 44px')
         try:
             cdp = wp.context.new_cdp_session(wp)
             T = lambda kind, pts: cdp.send('Input.dispatchTouchEvent', {'type': kind,
@@ -447,6 +477,19 @@ try:
                 return getComputedStyle(p).position === 'fixed'
                     ? 'sheet ' + (r.top < innerHeight - 40 ? 'on screen' : 'off screen')
                     : 'column ' + Math.round(r.width) + 'px'; }'''))
+            # a passage picked low on the screen is brought up above the sheet
+            low = ev(wp, '''() => {
+                picked = null; render(); draw();
+                const c = nodes.filter(n => { const r = n.circle.getBoundingClientRect();
+                    return r.top > innerHeight * 0.7 && r.bottom < innerHeight - 20; });
+                if (!c.length) return 'no passage low on screen';
+                c[0].el.dispatchEvent(new MouseEvent('click', {bubbles: true}));
+                const r = picked.circle.getBoundingClientRect(), y = r.top + r.height / 2;
+                return y > 0 && y < innerHeight * 0.45;
+            }''')
+            P(pre + 'low passage brought above the sheet', low)
+            if low is not True:
+                fatal.append('phone: a picked passage stayed under the sheet')
             pb = ev(wp, '''() => {
                 const first = picked;
                 document.querySelector('.panel .link').click();
